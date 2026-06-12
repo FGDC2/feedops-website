@@ -345,15 +345,191 @@
     }
 
     .agent-panel.image-panel {
-      background: #fff;
+      background: transparent;
       border: 0;
-      box-shadow: 0 22px 60px rgba(17, 24, 39, .10);
+      box-shadow: none;
     }
 
     .agent-panel.image-panel img {
       display: block;
       width: 100%;
       height: auto;
+    }
+
+    .hero-system-card {
+      width: 100%;
+      padding: 38px 30px 28px;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 22px 60px rgba(17, 24, 39, .10);
+    }
+
+    .hero-signal-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      padding: 8px 0 34px;
+      border-bottom: 1px solid #e3e8ef;
+    }
+
+    .hero-signal {
+      min-width: 0;
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .hero-signal + .hero-signal {
+      border-left: 1px solid #dce2ea;
+      padding-left: 22px;
+    }
+
+    .hero-icon-box {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: #eefaf5;
+      color: #0aa04f;
+    }
+
+    .hero-icon-box.orange {
+      background: #fff3e2;
+      color: #ef9500;
+    }
+
+    .hero-icon-box.purple {
+      background: #f1edff;
+      color: #6555df;
+    }
+
+    .hero-icon-box svg,
+    .hero-side-icon svg,
+    .hero-chip-icon svg {
+      width: 30px;
+      height: 30px;
+      stroke: currentColor;
+      stroke-width: 2.5;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .hero-signal strong {
+      display: block;
+      color: #0f172a;
+      font-size: 18px;
+      line-height: 1.15;
+      font-weight: 850;
+    }
+
+    .hero-signal span {
+      display: block;
+      margin-top: 5px;
+      color: #4a5568;
+      font-size: 14px;
+      line-height: 1.35;
+      font-weight: 650;
+    }
+
+    .hero-feature-list {
+      display: grid;
+    }
+
+    .hero-feature {
+      display: grid;
+      grid-template-columns: 118px minmax(0, 1fr) 56px;
+      gap: 24px;
+      align-items: center;
+      min-height: 114px;
+      border-bottom: 1px solid #e3e8ef;
+    }
+
+    .hero-side {
+      display: inline-grid;
+      grid-template-columns: 34px 1fr;
+      gap: 12px;
+      align-items: center;
+      color: #0aa04f;
+      font-weight: 850;
+    }
+
+    .hero-side-icon {
+      display: grid;
+      place-items: center;
+      color: #0aa04f;
+    }
+
+    .hero-feature h3 {
+      margin: 0;
+      color: #0f172a;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .hero-feature p {
+      margin: 8px 0 0;
+      color: #4a5568;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .hero-number {
+      width: 48px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: #eef8f2;
+      color: #0aa04f;
+      font-size: 30px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .hero-chip-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      padding-top: 24px;
+    }
+
+    .hero-chip {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 14px;
+      align-items: center;
+      padding: 18px;
+      border: 1px solid #e3e8ef;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .hero-chip-icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #eef8f2;
+      color: #0aa04f;
+    }
+
+    .hero-chip strong {
+      display: block;
+      color: #0f172a;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    .hero-chip span {
+      display: block;
+      margin-top: 5px;
+      color: #4a5568;
+      font-size: 13px;
+      line-height: 1.35;
     }
 
     .panel-top {
@@ -1281,6 +1457,36 @@
         font-size: 13px;
       }
 
+      .hero-system-card {
+        padding: 24px 18px 20px;
+        border-radius: 8px;
+      }
+
+      .hero-signal-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding-bottom: 22px;
+      }
+
+      .hero-signal + .hero-signal {
+        border-left: 0;
+        padding-left: 0;
+      }
+
+      .hero-feature {
+        grid-template-columns: 1fr 48px;
+        gap: 14px;
+        padding: 20px 0;
+      }
+
+      .hero-side {
+        grid-column: 1 / -1;
+      }
+
+      .hero-chip-row {
+        grid-template-columns: 1fr;
+      }
+
       h1 {
         font-size: 38px;
       }
@@ -1367,7 +1573,6 @@
         <a href="#channels">Channels</a>
         <a href="#workflow">Playbook</a>
         <a href="#seo-faq">FAQ</a>
-        <a href="../learning/index.html">Learning</a>
       </div>
       <div class="nav-actions">
         <a class="nav-login" href="https://app.feedops.com/feed_ops" target="_blank" rel="noopener">Login</a>
@@ -1394,7 +1599,23 @@
         </div>
 
         <aside class="agent-panel image-panel" aria-label="FeedOps AI product feed optimization">
-          <img src="../_assets/feedops-ai-product-feed-hero.png?v=2" alt="FeedOps AI product feed optimization">
+          <div class="hero-system-card">
+            <div class="hero-signal-row">
+              <div class="hero-signal"><span class="hero-icon-box purple" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span><strong>Support</strong><span>guided or done-for-you</span></span></div>
+              <div class="hero-signal"><span class="hero-icon-box orange" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><span><strong>Audit</strong><span>detect channel issues</span></span></div>
+              <div class="hero-signal"><span class="hero-icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9"/><path d="M2 20h20"/><path d="m9 11 2 2 4-4"/></svg></span><span><strong>Access</strong><span>use the platform</span></span></div>
+            </div>
+            <div class="hero-feature-list">
+              <div class="hero-feature"><div class="hero-side"><span class="hero-side-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20h8"/><path d="M12 16v4"/></svg></span><span>Software</span></div><div><h3>Full platform access</h3><p>Customers can use the same audits, rules, workflows, and optimization tools.</p></div><div class="hero-number">1</div></div>
+              <div class="hero-feature"><div class="hero-side"><span class="hero-side-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg></span><span>Service</span></div><div><h3>Guided expert support</h3><p>Use the platform yourself with expert guidance, training, and troubleshooting.</p></div><div class="hero-number">2</div></div>
+              <div class="hero-feature"><div class="hero-side"><span class="hero-side-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 9.8 8.8 4 11l5.8 2.2L12 19l2.2-5.8L20 11l-5.8-2.2Z"/><path d="M19 3v4"/><path d="M21 5h-4"/></svg></span><span>Playbooks</span></div><div><h3>Custom AI enrichment</h3><p>Improve titles, product types, highlights, details, colors, sizes, and patterns.</p></div><div class="hero-number">3</div></div>
+              <div class="hero-feature"><div class="hero-side"><span class="hero-side-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m22 10-10-5-10 5 10 5 10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></span><span>Learn</span></div><div><h3>Done-for-you feed management</h3><p>Ask FeedOps experts to manage approvals, errors, rules, sync, and optimization.</p></div><div class="hero-number">4</div></div>
+            </div>
+            <div class="hero-chip-row">
+              <div class="hero-chip"><span class="hero-chip-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></span><span><strong>Flexible support</strong><span>Self-serve, guided, or managed</span></span></div>
+              <div class="hero-chip"><span class="hero-chip-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6Z"/><circle cx="12" cy="12" r="3"/></svg></span><span><strong>No black box</strong><span>Full platform visibility</span></span></div>
+            </div>
+          </div>
         </aside>
       </div>
     </section>
@@ -1489,9 +1710,9 @@
 
         <div class="channel-grid">
           <div class="channel-list">
-            <div class="channel">Shopping and performance media <span>updates, approvals, titles, product types, diagnostics</span></div>
-            <div class="channel">Paid social and creative-led feeds <span>feed rules and richer product context for ad platforms</span></div>
-            <div class="channel">Marketplaces and retail media <span>taxonomy, variants, orders, shipping data, details</span></div>
+            <div class="channel">Shopping and performance media <span>updates, approvals, titles, product types, custom labels, diagnostics</span></div>
+            <div class="channel">Paid social and creative-led feeds <span>feed rules, promotions, and richer product context for ad platforms</span></div>
+            <div class="channel">Marketplaces and retail media <span>taxonomy, variants, orders, shipping rate tables, shipping data, details</span></div>
             <div class="channel">AI-powered discovery surfaces <span>clearer product context and richer attributes</span></div>
           </div>
           <div class="quote">
@@ -1712,7 +1933,7 @@
     <section class="outcome">
       <div class="outcome-box">
         <div>
-          <p class="section-kicker">The repositioning</p>
+          <p class="section-kicker">The FeedOps difference</p>
           <h2>FeedOps gives you the platform, the playbooks, and the people.</h2>
           <p class="section-lede">Use it yourself, work with guided support, or ask FeedOps to manage it for you. Automated updates. Feed rules. Order sync alerts and fixes. Product approval support. Feed audits. AI enrichment. Structured experiments across every media channel and marketplace.</p>
         </div>
