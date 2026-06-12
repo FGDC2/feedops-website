@@ -1,16 +1,36 @@
 <!doctype html>
-<html lang="en-AU" data-region-root="true">
+<html lang="en-AU">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Product Feed Optimisation Software + Expert Feed Management | FeedOps</title>
   <meta name="description" content="FeedOps is a service-backed product feed management and product feed optimisation system with full platform access, guided expert support, automated updates, feed rules, feed audits, AI enrichment, order sync alerts, and fixes.">
   <link rel="canonical" href="https://feedops.com/">
-  <link rel="alternate" hreflang="en-AU" href="https://feedops.com/">
-  <link rel="alternate" hreflang="en-GB" href="https://feedops.com/uk/">
-  <link rel="alternate" hreflang="en-US" href="https://feedops.com/us/">
   <link rel="alternate" hreflang="x-default" href="https://feedops.com/">
+  <meta property="og:image" content="https://feedops.com/_assets/ai-product-feed-optimisation.png">
+  <meta property="og:image:alt" content="AI product feed optimisation workflow showing raw product data enriched by AI and published to channels">
+  <meta name="twitter:image" content="https://feedops.com/_assets/ai-product-feed-optimisation.png">
   <link rel="icon" href="./_assets/feedops.com/wp-content/uploads/2022/05/Feedops-staggered-logo_Final-2-60x60.png" sizes="32x32">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "name": "AI product feed optimisation",
+      "caption": "AI product feed optimisation workflow showing raw product data enriched, validated, optimised, and published to shopping and marketplace channels.",
+      "description": "FeedOps AI product feed optimisation visual showing raw product data transformed by an AI engine into an optimised product feed for Google Shopping, Shopify, Amazon, Meta Catalog, and other channels.",
+      "contentUrl": "https://feedops.com/_assets/ai-product-feed-optimisation.png",
+      "thumbnailUrl": "https://feedops.com/_assets/ai-product-feed-optimisation.png",
+      "encodingFormat": "image/png",
+      "width": 1672,
+      "height": 941,
+      "inLanguage": "en-AU",
+      "publisher": {
+        "@type": "Organization",
+        "name": "FeedOps",
+        "url": "https://feedops.com/"
+      }
+    }
+  </script>
   <style>
     :root {
       --ink: #111827;
@@ -49,6 +69,18 @@
     img {
       max-width: 100%;
       display: block;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
 
     .site-header {
@@ -100,45 +132,6 @@
       display: flex;
       align-items: center;
       gap: 14px;
-    }
-
-    .language-picker {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      min-height: 40px;
-      padding: 0 34px 0 16px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: #fff;
-      color: #404a59;
-      box-shadow: 0 10px 28px rgba(17, 24, 39, .05);
-    }
-
-    .language-picker::after {
-      content: "";
-      position: absolute;
-      right: 14px;
-      width: 7px;
-      height: 7px;
-      border-right: 2px solid #5c6675;
-      border-bottom: 2px solid #5c6675;
-      transform: translateY(-2px) rotate(45deg);
-      pointer-events: none;
-    }
-
-    .language-control {
-      min-width: 72px;
-      border: 0;
-      appearance: none;
-      background: transparent;
-      color: #101820;
-      font: inherit;
-      font-size: 14px;
-      font-weight: 850;
-      outline: none;
-      cursor: pointer;
     }
 
     .mode-option {
@@ -1240,6 +1233,61 @@
       font-size: clamp(31px, 4vw, 48px);
     }
 
+    .visual-proof {
+      padding: 76px 0;
+      background: #f6f8fb;
+    }
+
+    .visual-proof-inner {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      display: grid;
+      gap: 24px;
+      padding: 42px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 18px 45px rgba(17, 24, 39, .08);
+    }
+
+    .visual-proof-copy {
+      max-width: 860px;
+    }
+
+    .visual-proof h2 {
+      margin: 0;
+      font-size: clamp(31px, 4vw, 48px);
+    }
+
+    .visual-proof figure {
+      margin: 0;
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1672 / 703;
+      border-radius: 8px;
+      box-shadow: 0 18px 45px rgba(17, 24, 39, .08);
+    }
+
+    .visual-proof img {
+      display: block;
+      width: 100%;
+      height: auto;
+      position: absolute;
+      inset: 0;
+      border-radius: 0;
+      box-shadow: none;
+      transform: translateY(-25.3%);
+    }
+
+    .visual-proof-lede {
+      max-width: 900px;
+      margin: 0;
+    }
+
+    .visual-proof-cta {
+      justify-self: start;
+    }
+
     .faq-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1425,15 +1473,6 @@
         gap: 8px;
       }
 
-      .language-picker {
-        width: 100%;
-        justify-content: space-between;
-      }
-
-      .language-control {
-        min-width: 0;
-      }
-
       .mode-option {
         padding: 0 8px;
         font-size: 12px;
@@ -1553,13 +1592,6 @@
             <a class="mode-option" href="./agency.html">Media agency <span class="mode-badge">AGENCY</span></a>
             <a class="mode-option" href="./founders-mum.html">No jargon</a>
           </div>
-                    <label class="language-picker" title="Region">
-            <select class="language-control" aria-label="Region" data-region-select>
-              <option value="en-AU" data-region-url="./index.html" selected>🇦🇺 AU</option>
-              <option value="en-GB" data-region-url="./uk/index.html">🇬🇧 UK</option>
-              <option value="en-US" data-region-url="./us/index.html">🇺🇸 US</option>
-            </select>
-          </label>
         </div>
       </div>
     </div>
@@ -1957,14 +1989,24 @@
       </div>
     </section>
 
-    <section class="outcome">
-      <div class="outcome-box">
-        <div>
+    <section class="visual-proof" aria-labelledby="ai-product-feed-optimisation-title">
+      <div class="visual-proof-inner">
+        <div class="visual-proof-copy">
           <p class="section-kicker">The FeedOps difference</p>
-          <h2>FeedOps gives you the platform, the playbooks, and the people.</h2>
-          <p class="section-lede">Use it yourself, work with guided support, or ask FeedOps to manage it for you. Automated updates. Feed rules. Order sync alerts and fixes. Product approval support. Feed audits. AI enrichment. Structured experiments across every media channel and marketplace.</p>
+          <h2 id="ai-product-feed-optimisation-title">FeedOps gives you the platform, the playbooks, and the people.</h2>
         </div>
-        <a class="button primary" href="mailto:hello@feedops.com?subject=FeedOps%20demo">Book a demo</a>
+        <figure itemscope itemtype="https://schema.org/ImageObject">
+          <meta itemprop="name" content="AI product feed optimisation">
+          <meta itemprop="description" content="FeedOps AI product feed optimisation workflow showing raw product data enriched, validated, optimised, and published to shopping and marketplace channels.">
+          <meta itemprop="contentUrl" content="https://feedops.com/_assets/ai-product-feed-optimisation.png">
+          <meta itemprop="encodingFormat" content="image/png">
+          <meta itemprop="width" content="1672">
+          <meta itemprop="height" content="941">
+          <img src="./_assets/ai-product-feed-optimisation.png" width="1672" height="941" loading="lazy" decoding="async" alt="AI product feed optimisation workflow showing raw product data enriched by AI and published to Google Shopping, Shopify, Amazon, Meta Catalog, and more channels" itemprop="contentUrl">
+          <span class="sr-only" itemprop="caption">AI product feed optimisation: enrich, optimise, validate, and publish better product data to every channel.</span>
+        </figure>
+        <p class="section-lede visual-proof-lede">Use it yourself, work with guided support, or ask FeedOps to manage it for you. Automated updates. Feed rules. Order sync alerts and fixes. Product approval support. Feed audits. AI enrichment. Structured experiments across every media channel and marketplace.</p>
+        <a class="button primary visual-proof-cta" href="mailto:hello@feedops.com?subject=FeedOps%20demo">Book a demo</a>
       </div>
     </section>
   </main>
@@ -2020,48 +2062,5 @@
       </div>
     </div>
   </footer>
-  <script>
-    (() => {
-      const select = document.querySelector("[data-region-select]");
-      if (!select) return;
-
-      const readStoredRegion = () => {
-        try { return localStorage.getItem("feedops-region"); } catch { return null; }
-      };
-
-      const writeStoredRegion = (region) => {
-        try { localStorage.setItem("feedops-region", region); } catch {}
-      };
-
-      const detectRegion = () => {
-        const language = (navigator.language || "en-AU").toLowerCase();
-        if (language.startsWith("en-us")) return "en-US";
-        if (language.startsWith("en-gb")) return "en-GB";
-        return "en-AU";
-      };
-
-      const selectedOption = () => select.options[select.selectedIndex];
-      const goToSelectedRegion = () => {
-        const option = selectedOption();
-        if (!option || !option.dataset.regionUrl) return;
-        writeStoredRegion(select.value);
-        window.location.href = option.dataset.regionUrl + window.location.hash;
-      };
-
-      const userAgent = navigator.userAgent || "";
-      const isSearchCrawler = /bot|crawl|spider|slurp|bingpreview/i.test(userAgent);
-      const storedRegion = readStoredRegion();
-      const targetRegion = storedRegion || detectRegion();
-      const targetOption = [...select.options].find((option) => option.value === targetRegion);
-
-      if (targetOption) select.value = targetRegion;
-      if (!isSearchCrawler && !storedRegion && document.documentElement.dataset.regionRoot === "true" && targetRegion !== document.documentElement.lang && targetOption) {
-        window.location.replace(targetOption.dataset.regionUrl + window.location.hash);
-        return;
-      }
-
-      select.addEventListener("change", goToSelectedRegion);
-    })();
-  </script>
 </body>
 </html>
