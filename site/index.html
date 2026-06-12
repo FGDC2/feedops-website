@@ -153,16 +153,6 @@
       color: #fff;
     }
 
-    .mode-badge {
-      padding: 2px 6px;
-      border-radius: 999px;
-      background: rgba(254, 207, 38, .28);
-      color: #111;
-      font-size: 10px;
-      font-weight: 900;
-      letter-spacing: .05em;
-    }
-
     .nav {
       width: min(1180px, calc(100% - 40px));
       height: 76px;
@@ -1288,6 +1278,82 @@
       justify-self: start;
     }
 
+    .pricing-fit {
+      padding: 76px 0;
+      background:
+        linear-gradient(120deg, rgba(28, 140, 111, .11), transparent 42%),
+        #fff;
+    }
+
+    .pricing-inner {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(360px, 1fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .pricing-copy,
+    .pricing-panel {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 18px 45px rgba(17, 24, 39, .08);
+    }
+
+    .pricing-copy {
+      padding: 40px;
+    }
+
+    .pricing-copy h2 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(31px, 4vw, 48px);
+      line-height: 1.06;
+      letter-spacing: 0;
+    }
+
+    .pricing-copy p {
+      max-width: 760px;
+      margin: 20px 0 0;
+      color: #354052;
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    .pricing-copy .button {
+      margin-top: 28px;
+    }
+
+    .pricing-panel {
+      display: grid;
+      gap: 14px;
+      padding: 22px;
+    }
+
+    .fit-card {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--soft);
+    }
+
+    .fit-card strong {
+      display: block;
+      color: #101820;
+      font-size: 16px;
+      line-height: 1.25;
+    }
+
+    .fit-card span {
+      display: block;
+      margin-top: 8px;
+      color: #526070;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
     .faq-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1407,7 +1473,8 @@
       .hero-inner,
       .audit-layout,
       .channel-grid,
-      .outcome-box {
+      .outcome-box,
+      .pricing-inner {
         grid-template-columns: 1fr;
       }
 
@@ -1588,9 +1655,9 @@
         <div class="mode-controls">
           <div class="mode-options">
             <a class="mode-option active" href="./index.html" aria-current="page">Performance expert</a>
-            <a class="mode-option" href="./executive.html">Executive mode <span class="mode-badge">CEO</span></a>
-            <a class="mode-option" href="./agency.html">Media agency <span class="mode-badge">AGENCY</span></a>
-            <a class="mode-option" href="./founders-mum.html">No jargon</a>
+            <a class="mode-option" href="./executive.html">Executive mode</a>
+            <a class="mode-option" href="./agency.html">Media agency</a>
+            <a class="mode-option" href="./founders-mum.html">Founder’s Mum</a>
           </div>
         </div>
       </div>
@@ -1604,6 +1671,7 @@
         <a href="#operations">Operations</a>
         <a href="#channels">Channels</a>
         <a href="#workflow">Playbook</a>
+        <a href="#pricing">Pricing</a>
         <a href="#seo-faq">FAQ</a>
       </div>
       <div class="nav-actions">
@@ -1934,6 +2002,24 @@
         </figure>
         <div class="audit-cta-row">
           <a class="button primary" href="mailto:hello@feedops.com?subject=Free%20Google%20Shopping%20Feed%20Audit">Book a free Google Shopping Feed Audit</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-fit" id="pricing" aria-labelledby="pricing-title">
+      <div class="pricing-inner">
+        <div class="pricing-copy">
+          <p class="section-kicker">Fit & investment</p>
+          <h2 id="pricing-title">FeedOps is priced for the gap between ecommerce, SEO, and media.</h2>
+          <p>We do not publish a generic price because the work depends on your catalogue, channels, support model, and how much feed responsibility you want us to carry. The better question is whether feed problems are already costing more than structured support would.</p>
+          <p>If you are spending $5k+ a month on ads, relying on marketplace orders, or watching Merchant Center issues sit in no-man’s-land between ecommerce, SEO, and your media agency, FeedOps is usually affordable relative to the leakage.</p>
+          <a class="button primary" href="mailto:hello@feedops.com?subject=FeedOps%20fit%20and%20investment">Talk through fit</a>
+        </div>
+        <div class="pricing-panel" aria-label="FeedOps pricing fit signals">
+          <div class="fit-card"><strong>Ad spend needs clean data</strong><span>When paid media depends on product feeds, weak titles, missing attributes, and channel errors quietly waste budget.</span></div>
+          <div class="fit-card"><strong>Marketplace revenue is below potential</strong><span>If products are live but orders are softer than expected, feed quality, approvals, and category data may be holding visibility back.</span></div>
+          <div class="fit-card"><strong>Merchant Center has no clear owner</strong><span>FeedOps fills the operational gap when feed problems bounce between ecommerce, SEO, developers, and agencies.</span></div>
+          <div class="fit-card"><strong>You need a support model, not just software</strong><span>Use the platform yourself, get guided help, or ask FeedOps experts to manage the feed work with you.</span></div>
         </div>
       </div>
     </section>
