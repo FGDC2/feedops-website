@@ -1,0 +1,32 @@
+{
+  "source": "https://feedops.com/",
+  "output": "/Users/frankgrasso/Documents/Website/site",
+  "pages": 500,
+  "assets": 2346,
+  "failures": [
+    {
+      "url": "http://./",
+      "error": "Command failed: curl --location --silent --show-error --compressed --max-time 10 --user-agent Mozilla/5.0 (compatible; LocalWebsiteImporter/1.0) http://./\ncurl: (6) Could not resolve host: .\n"
+    },
+    {
+      "url": "https://.../wallet.jpg",
+      "error": "Command failed: curl --location --silent --show-error --compressed --max-time 10 --user-agent Mozilla/5.0 (compatible; LocalWebsiteImporter/1.0) https://.../wallet.jpg\ncurl: (6) Could not resolve host: ...\n"
+    },
+    {
+      "url": "https://feedops.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffeedops.com%2F5-quick-wins-to-optimize-your-product-feed%2F",
+      "error": "Command failed: curl --location --silent --show-error --compressed --max-time 10 --user-agent Mozilla/5.0 (compatible; LocalWebsiteImporter/1.0) https://feedops.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffeedops.com%2F5-quick-wins-to-optimize-your-product-feed%2F\ncurl: (28) Operation timed out after 10004 milliseconds with 0 bytes received\n"
+    },
+    {
+      "url": "http://home/",
+      "error": "Command failed: curl --location --silent --show-error --compressed --max-time 10 --user-agent Mozilla/5.0 (compatible; LocalWebsiteImporter/1.0) http://home/\ncurl: (6) Could not resolve host: home\n"
+    },
+    {
+      "url": "https://feedops.com/wp-content/uploads/2025/01/Optimize-for-better-d-Relevance-and-Lowering-CPC.png",
+      "error": "Command failed: curl --location --silent --show-error --compressed --max-time 10 --user-agent Mozilla/5.0 (compatible; LocalWebsiteImporter/1.0) https://feedops.com/wp-content/uploads/2025/01/Optimize-for-better-d-Relevance-and-Lowering-CPC.png\ncurl: (28) Operation timed out after 10001 milliseconds with 830148 out of 2532357 bytes received\n"
+    },
+    {
+      "url": "http://www.feedops.com/contact-us/",
+      "error": "Command failed: curl --location --silent --show-error --compressed --max-time 10 --user-agent Mozilla/5.0 (compatible; LocalWebsiteImporter/1.0) http://www.feedops.com/contact-us/\ncurl: (28) Operation timed out after 9727 milliseconds with 0 bytes received\n"
+    }
+  ]
+}

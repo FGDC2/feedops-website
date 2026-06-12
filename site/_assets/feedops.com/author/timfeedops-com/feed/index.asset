@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Tim Campbell, Author at FeedOps</title>
+	<atom:link href="https://feedops.com/author/timfeedops-com/feed/" rel="self" type="application/rss+xml" />
+	<link></link>
+	<description></description>
+	<lastBuildDate>Sat, 04 Nov 2023 10:56:07 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.9.4</generator>
+
+<image>
+	<url>https://feedops.com/wp-content/uploads/2022/05/Feedops-staggered-logo_Final-2-60x60.png</url>
+	<title>Tim Campbell, Author at FeedOps</title>
+	<link></link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Dynamic remarketing disapprovals: the silent ROAS killer</title>
+		<link>https://feedops.com/dynamic-remarketing-disapprovals/</link>
+					<comments>https://feedops.com/dynamic-remarketing-disapprovals/#respond</comments>
+		
+		<dc:creator><![CDATA[Tim Campbell]]></dc:creator>
+		<pubDate>Sat, 28 Oct 2023 04:56:44 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://feedops.com/?p=2379</guid>
+
+					<description><![CDATA[<p>Dynamic remarketing is a crucial component of any e-commerce strategy. Yet many dynamic remarketing campaigns are held back because products are disapproved from showing in dynamic remarketing channels. In this article, you will learn how fixing dynamic remarketing disapprovals can help to improve your Return on Ad Spend (ROAS).</p>
+<p>The post <a href="https://feedops.com/dynamic-remarketing-disapprovals/">Dynamic remarketing disapprovals: the silent ROAS killer</a> appeared first on <a href="https://feedops.com">FeedOps</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[		<div data-elementor-type="wp-post" data-elementor-id="2379" class="elementor elementor-2379" data-elementor-post-type="post">
+				<div class="elementor-element elementor-element-645fdcc7 e-flex e-con-boxed e-con e-parent" data-id="645fdcc7" data-element_type="container" data-e-type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-b60b39 elementor-widget elementor-widget-text-editor" data-id="b60b39" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p></p>
+<h2 id="h-introduction" class="wp-block-heading">Introduction</h2>
+<p></p>
+<p>Dynamic remarketing is a crucial component of any e-commerce strategy. Yet many dynamic remarketing campaigns are held back because products are disapproved from showing in dynamic remarketing channels. In this article, you will learn how fixing dynamic remarketing disapprovals can help to improve your Return on Ad Spend (ROAS).</p>
+<p></p>
+<h2 id="h-what-is-dynamic-remarketing" class="wp-block-heading">What is dynamic remarketing</h2>
+<p></p>
+<p>Dynamic remarketing (sometimes called dynamic retargeting) shows customers display ads for products that they have previously viewed on your website. Dynamic remarketing campaigns are typically very efficient, advertising to qualified prospects who have already viewed a specific product. They fulfil the role of &#8220;closer&#8221;, helping to get potential sales over the line. As a result, they are a vital part of achieving a consistently high Return on Ad Spend (ROAS). This is why most channels have some form of dynamic remarketing, and Google and Microsoft have built it directly into their shopping campaigns.</p>
+<p></p>
+<p>Yet many advertisers are unaware that large swathes of their products are ineligible to show in dynamic remarketing channels. When Google Merchant Center and other ad platforms disapprove your products for dynamic remarketing, it directly impacts sales and Return on Ad Spend (ROAS).</p>
+<p></p>
+<p>Here&#8217;s a closer look at the common problems and solutions related to fixing dynamic remarketing product disapprovals.</p>
+<p></p>
+<h2 id="h-common-problems-leading-to-dynamic-remarketing-product-disapprovals" class="wp-block-heading">Common problems leading to dynamic remarketing product disapprovals</h2>
+<p></p>
+<p><a href="https://support.google.com/merchants/answer/143465?hl=en#">Google</a>, <a href="https://www.facebook.com/business/help/488043719226449?id=434838534925385">Meta</a> and <a href="https://about.ads.microsoft.com/en-us/policies/home">Microsoft</a> all have their own policies around what products can and cannot be used in personalised advertising. These policies fall into a number of broad categories as follows:</p>
+<p></p>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p></p>
+<ul class="wp-block-list">
+<li style="list-style-type: none;">
+<ul></ul>
+</li>
+</ul>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li><strong>Legal restrictions:</strong> All ads must comply with local laws. These can restrict what products can be advertised and to whom.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li><strong>Personal hardships:</strong> Ads shouldn&#8217;t target people in ways that exploit personal difficulties. This may include issues related to health, financial hardship, interpersonal relationships and more.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li><strong>Sexual interests:</strong> Most platforms restrict (or exclude) promotion of products that are targeted at particular sexual interests or experiences.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<p></p>
+</blockquote>
+<p></p>
+<p>This list is not exhaustive, and the exact details will be different on each ad platform.</p>
+<p></p>
+<h2 id="h-fixing-dynamic-remarketing-product-disapprovals" class="wp-block-heading">Fixing dynamic remarketing product disapprovals</h2>
+<p></p>
+<p>To start getting your products approved for dynamic remarketing, create a list of products that have been disapproved. In Google Merchant Center, for example, you can go to Products &gt; Diagnostics, then set the Destination filter for the table to be &#8220;Dynamic Remarketing&#8221;.</p>
+<p></p>
+<p>For each of the errors, review the list of products against the relevant policy. Depending on the product and the policy, you may:</p>
+<p></p>
+<ol class="wp-block-list">
+<li style="list-style-type: none;">
+<ol></ol>
+</li>
+</ol>
+<ol>
+<li style="list-style-type: none;">
+<ol>
+<li><strong>Request a review:</strong> Google&#8217;s automatic detection systems are far from perfect. As a result, products are often flagged incorrectly. This is generally your biggest opportunity for improving performance. If you are confident your product meets the policy, you can often request a review from Google. This will usually take a few days.</li><li><strong style="background-color: transparent; text-align: var(--text-align);">Reword your product:</strong><span style="background-color: transparent; text-align: var(--text-align);"> Sometimes you can adjust your product data to avoid violating the relevant policy. For example, you might remove certain trigger words from your product description, or reword in such a way that it is clearer what the product is.</span></li><li><strong style="background-color: transparent; text-align: var(--text-align);">Remove from your feed:</strong><span style="background-color: transparent; text-align: var(--text-align);"> Finally, if your product clearly violates the policy and you cannot reword it to comply, you can exclude it from your feed. While leaving them there usually does not hurt, removing them can help to reduce the noise and spot products that have been incorrectly disapproved.</span></li></ol></li></ol>
+<p></p>
+<p></p>
+<h2 id="h-conclusion" class="wp-block-heading">Conclusion</h2>
+<p></p>
+<p>Product disapprovals in dynamic remarketing can negatively impact your e-commerce business. They can result in decreased sales and less efficient ad spend. However, with a little bit of effort spent fixing dynamic remarketing disapprovals, you can improve the efficiency of your advertising.</p>
+<p></p>								</div>
+					</div>
+				</div>
+				</div>
+		<p>The post <a href="https://feedops.com/dynamic-remarketing-disapprovals/">Dynamic remarketing disapprovals: the silent ROAS killer</a> appeared first on <a href="https://feedops.com">FeedOps</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://feedops.com/dynamic-remarketing-disapprovals/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Product Data Export from FeedOps</title>
+		<link>https://feedops.com/product-data-export-from-feedops/</link>
+		
+		<dc:creator><![CDATA[Tim Campbell]]></dc:creator>
+		<pubDate>Mon, 12 Sep 2022 02:31:03 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://feedops.com/?p=512</guid>
+
+					<description><![CDATA[<p>FeedOps helps you get your product data where it needs to be. Our new export to Google Sheet feature gives you even more flexibility.</p>
+<p>The post <a href="https://feedops.com/product-data-export-from-feedops/">Product Data Export from FeedOps</a> appeared first on <a href="https://feedops.com">FeedOps</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[		<div data-elementor-type="wp-post" data-elementor-id="512" class="elementor elementor-512" data-elementor-post-type="post">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-0514554 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="0514554" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-710eb55" data-id="710eb55" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-08421e6 elementor-widget elementor-widget-heading" data-id="08421e6" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">New Feature: Export to Google Sheet</h2>				</div>
+				<div class="elementor-element elementor-element-05564c0 elementor-widget elementor-widget-text-editor" data-id="05564c0" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>FeedOps is dedicated to helping you get your product data where it needs to go, in the format it needs to be.</p><p>Today we have released a new feature that allows you to export a view of your product data to a Google Sheet, giving you more flexibility than ever before in how you access your data.</p>								</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-34936ef" data-id="34936ef" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-b690b09 elementor-widget elementor-widget-image" data-id="b690b09" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+															<img fetchpriority="high" decoding="async" width="800" height="445" src="https://feedops.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-12-at-11.33.10-am-1024x570.png" class="attachment-large size-large wp-image-514" alt="" srcset="https://feedops.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-12-at-11.33.10-am-1024x570.png 1024w, https://feedops.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-12-at-11.33.10-am-300x167.png 300w, https://feedops.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-12-at-11.33.10-am-768x428.png 768w, https://feedops.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-12-at-11.33.10-am.png 1149w" sizes="(max-width: 800px) 100vw, 800px" />															</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-54acd07 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="54acd07" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-86ac016" data-id="86ac016" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-fd1d815 elementor-widget elementor-widget-heading" data-id="fd1d815" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">How to Export your Product Data</h2>				</div>
+				<div class="elementor-element elementor-element-0ce9926 elementor-widget elementor-widget-text-editor" data-id="0ce9926" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>Exporting your product data is as easy.</p><p>1. Go to Channel &gt; Products</p><p>2. Apply any filters you would like to</p><p>3. Select any columns you want included in the export</p><p>4. Click the &#8220;Export&#8221; button</p><p>In a couple of minutes you will see a new tab open in your browser showing the Google Sheet with your exported data.</p><p>Please note, if you have your browser configured to block popups your export sheet may not appear automatically. You can either enable popups for app.feedops.com, or manually click on the link the success message.</p>								</div>
+				<div class="elementor-element elementor-element-99dcaf3 elementor-widget elementor-widget-image" data-id="99dcaf3" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+												<figure class="wp-caption">
+										<img decoding="async" width="800" height="86" src="https://feedops.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-12-at-11.46.17-am-1024x110.png" class="attachment-large size-large wp-image-516" alt="" srcset="https://feedops.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-12-at-11.46.17-am-1024x110.png 1024w, https://feedops.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-12-at-11.46.17-am-300x32.png 300w, https://feedops.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-12-at-11.46.17-am-768x82.png 768w, https://feedops.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-12-at-11.46.17-am.png 1186w" sizes="(max-width: 800px) 100vw, 800px" />											<figcaption class="widget-image-caption wp-caption-text">If the popup is blocked, you can manually access your export by clicking the link in your success message.</figcaption>
+										</figure>
+									</div>
+				<div class="elementor-element elementor-element-e3deb7c elementor-widget elementor-widget-image" data-id="e3deb7c" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+												<figure class="wp-caption">
+										<img decoding="async" width="800" height="159" src="https://feedops.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-12-at-11.47.19-am-1024x203.png" class="attachment-large size-large wp-image-515" alt="" srcset="https://feedops.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-12-at-11.47.19-am-1024x203.png 1024w, https://feedops.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-12-at-11.47.19-am-300x60.png 300w, https://feedops.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-12-at-11.47.19-am-768x153.png 768w, https://feedops.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-12-at-11.47.19-am.png 1198w" sizes="(max-width: 800px) 100vw, 800px" />											<figcaption class="widget-image-caption wp-caption-text">Some browsers (e.g. Chrome) allow you to disable popup blocking for individual sites.</figcaption>
+										</figure>
+									</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-c7f596b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c7f596b" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d758204" data-id="d758204" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-b40480e elementor-widget elementor-widget-heading" data-id="b40480e" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Some Examples</h2>				</div>
+				<div class="elementor-element elementor-element-f058bca elementor-widget elementor-widget-text-editor" data-id="f058bca" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>This feature opens up a range of new opportunities for you in understanding and sharing your product data. Here are some simple examples:</p>
+<ul>
+<li>List products that have been recently added or edited</li><li>Cross check custom labels against internal systems</li><li>Produce a list of image URLs and focus keywords related to a product or product category</li><li>&#8230; and many more.</li>
+</ul>								</div>
+				<div class="elementor-element elementor-element-cfb9ac4 elementor-widget elementor-widget-heading" data-id="cfb9ac4" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Other changes</h2>				</div>
+				<div class="elementor-element elementor-element-6a1e262 elementor-widget elementor-widget-text-editor" data-id="6a1e262" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>One other minor change with this release is that you enable and disable categories in a new location. To enable a new category, go to Website &gt; Connect, and click Select Website Categories.</p>								</div>
+				<div class="elementor-element elementor-element-bae82f5 elementor-widget elementor-widget-image" data-id="bae82f5" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+															<img loading="lazy" decoding="async" width="800" height="314" src="https://feedops.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-14-at-9.42.43-am-1024x402.png" class="attachment-large size-large wp-image-518" alt="" srcset="https://feedops.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-14-at-9.42.43-am-1024x402.png 1024w, https://feedops.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-14-at-9.42.43-am-300x118.png 300w, https://feedops.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-14-at-9.42.43-am-768x301.png 768w, https://feedops.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-14-at-9.42.43-am-1536x603.png 1536w, https://feedops.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-14-at-9.42.43-am-2048x803.png 2048w" sizes="(max-width: 800px) 100vw, 800px" />															</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		<p>The post <a href="https://feedops.com/product-data-export-from-feedops/">Product Data Export from FeedOps</a> appeared first on <a href="https://feedops.com">FeedOps</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Make the most of your product data optimization time</title>
+		<link>https://feedops.com/sync-your-feeds-and-check-whats-new/</link>
+		
+		<dc:creator><![CDATA[Tim Campbell]]></dc:creator>
+		<pubDate>Mon, 29 Aug 2022 07:00:38 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://feedops.com/?p=498</guid>
+
+					<description><![CDATA[<p>At FeedOps we are constantly innovating to help you get the best results with the least effort. Today we have released a number of new features to help you do just that.</p>
+<p>The post <a href="https://feedops.com/sync-your-feeds-and-check-whats-new/">Make the most of your product data optimization time</a> appeared first on <a href="https://feedops.com">FeedOps</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[		<div data-elementor-type="wp-post" data-elementor-id="498" class="elementor elementor-498" data-elementor-post-type="post">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-260a47d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="260a47d" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-66959b6" data-id="66959b6" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-11c6b2a elementor-widget__width-auto elementor-widget elementor-widget-image" data-id="11c6b2a" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+															<img loading="lazy" decoding="async" width="800" height="441" src="https://feedops.com/wp-content/uploads/2022/08/Screen-Shot-2022-08-29-at-4.15.38-pm-1-1024x564.png" class="attachment-large size-large wp-image-504" alt="" srcset="https://feedops.com/wp-content/uploads/2022/08/Screen-Shot-2022-08-29-at-4.15.38-pm-1-1024x564.png 1024w, https://feedops.com/wp-content/uploads/2022/08/Screen-Shot-2022-08-29-at-4.15.38-pm-1-300x165.png 300w, https://feedops.com/wp-content/uploads/2022/08/Screen-Shot-2022-08-29-at-4.15.38-pm-1-768x423.png 768w, https://feedops.com/wp-content/uploads/2022/08/Screen-Shot-2022-08-29-at-4.15.38-pm-1.png 1146w" sizes="(max-width: 800px) 100vw, 800px" />															</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-7800e131" data-id="7800e131" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-5dfdd92 elementor-widget elementor-widget-heading" data-id="5dfdd92" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">New filters for availability, date added and date edited</h2>				</div>
+				<div class="elementor-element elementor-element-4149e211 elementor-widget elementor-widget-text-editor" data-id="4149e211" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p></p>
+<p></p>
+<p></p>
+<p>Time to optimize product data can be hard to come by, so it is important that we focus our effort on the products most likely to deliver a profitable result. To assist with this, FeedOps now allows you to filter products based on:</p>
+<p></p>
+<p></p>
+<ul class="wp-block-list">
+<li>Whether they are in stock</li>
+<li>When they were added to the website</li>
+<li>When they were last edited</li>
+</ul>
+<p></p>
+<p></p>
+<p>This allows you to focus on optimizing the products that are currently ready to sell instead of products that may not be back in stock until next month&#8230; if ever! You can also narrow your focus down to products that have been added to the website since the last time you did an optimization sweep, and so avoid going over products you have already optimized again.</p>
+<p></p>								</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-c5954c4 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c5954c4" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2cee816" data-id="2cee816" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-938b458 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="938b458" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-71dc256" data-id="71dc256" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-c428cc4 elementor-widget elementor-widget-heading" data-id="c428cc4" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Sync Optimizations Across Channels</h2>				</div>
+				<div class="elementor-element elementor-element-8dee617 elementor-widget elementor-widget-text-editor" data-id="8dee617" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>FeedOps supports a number of different channels, including Google, Microsoft and Facebook. In many cases, optimizations you make in one channel are relevant to other channels. Rather than repeat that optimization work, FeedOps now allows you to configure one channel to mirror another.</p>
+<p>For example, Google and Microsoft are both search engine based, and the best practice for titles and descriptions are very similar. So, to get your Microsoft feed to use optimizations from your Google feed, you can go to Channel &gt; Products and select the Microsoft channel, then click the settings button.</p>
+<p>From there, you can select &#8220;Use optimizations from another feed&#8221; and choose Google from the dropdown menu.</p>
+<p>From now on, any changes you make to optimize your Google feed will automatically be applied to your Microsoft feed as well.</p>								</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-5598d05" data-id="5598d05" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-aa0c27d elementor-widget elementor-widget-image" data-id="aa0c27d" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+															<img loading="lazy" decoding="async" width="800" height="373" src="https://feedops.com/wp-content/uploads/2022/08/Screen-Shot-2022-08-29-at-4.22.03-pm-1-1024x477.png" class="attachment-large size-large wp-image-506" alt="" srcset="https://feedops.com/wp-content/uploads/2022/08/Screen-Shot-2022-08-29-at-4.22.03-pm-1-1024x477.png 1024w, https://feedops.com/wp-content/uploads/2022/08/Screen-Shot-2022-08-29-at-4.22.03-pm-1-300x140.png 300w, https://feedops.com/wp-content/uploads/2022/08/Screen-Shot-2022-08-29-at-4.22.03-pm-1-768x358.png 768w, https://feedops.com/wp-content/uploads/2022/08/Screen-Shot-2022-08-29-at-4.22.03-pm-1.png 1181w" sizes="(max-width: 800px) 100vw, 800px" />															</div>
+				<div class="elementor-element elementor-element-39fa5e1 elementor-widget elementor-widget-image" data-id="39fa5e1" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+															<img loading="lazy" decoding="async" width="800" height="534" src="https://feedops.com/wp-content/uploads/2022/08/Screen-Shot-2022-08-29-at-4.25.41-pm-2.png" class="attachment-large size-large wp-image-508" alt="" srcset="https://feedops.com/wp-content/uploads/2022/08/Screen-Shot-2022-08-29-at-4.25.41-pm-2.png 801w, https://feedops.com/wp-content/uploads/2022/08/Screen-Shot-2022-08-29-at-4.25.41-pm-2-300x200.png 300w, https://feedops.com/wp-content/uploads/2022/08/Screen-Shot-2022-08-29-at-4.25.41-pm-2-768x513.png 768w" sizes="(max-width: 800px) 100vw, 800px" />															</div>
+					</div>
+		</div>
+					</div>
+		</section>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-9bc0245 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="9bc0245" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d0c7d13" data-id="d0c7d13" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-32d900a elementor-widget elementor-widget-heading" data-id="32d900a" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Conclusion</h2>				</div>
+				<div class="elementor-element elementor-element-06dd3f4 elementor-widget elementor-widget-text-editor" data-id="06dd3f4" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>These new FeedOps features make it faster and easier than ever to build a product data optimization workflow that lines up with the goals you want to achieve.</p>								</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		<p>The post <a href="https://feedops.com/sync-your-feeds-and-check-whats-new/">Make the most of your product data optimization time</a> appeared first on <a href="https://feedops.com">FeedOps</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

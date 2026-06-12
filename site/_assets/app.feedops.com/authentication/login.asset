@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html class='env-production'>
+<head>
+<meta charset='utf-8'>
+<meta content='Dynamic Creative Pty Ltd' name='author'>
+<meta content='chrome=1' http-equiv='X-UA-Compatible'>
+<link rel="icon" type="image/x-icon" href="/assets/favicon-084f2eab73e8e67a1339f742267f493b4a44bd013dcc57f834d25ac6df33b7c1.ico" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="/assets/application-d776134a4e56c08e7f2dd31a8e29eead2576b8286bf39ba35c10b21beec29530.js"></script>
+<link rel="stylesheet" href="/assets/application-1d773daa31cacd37ee58d398f48987b7fb4df488f6ec396037103c6cdca846d5.css" media="screen" />
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="sb-7mRZPP5WsqkxfCrTuLmm-CeCxUXQdLvTuXRWDiApgsAAauA0d5EySzoHm2zyQzGiF8dwWc6g2fD49yozXbw" />
+<title>FeedOps — Login</title>
+</head>
+<body class='login-page' data-action='new' data-controller='sessions'>
+<div class='jumbotron signup'>
+<h1 class='h1-responsive center'>Sign In To Dynamic Creative</h1>
+<a href="/authentication/auth/google_oauth2"><img src="/assets/ad_champion/btn_google_signin_dark_normal_web-8e56c55db58786c9367c6793a2cd337be06997557593832db84ae09f83dd8976.png" />
+</a>
+</div>
+
+<footer>
+<small>
+©
+2026
+<a href="//www.feedops.com">FeedOps Pty Ltd</a>
+</small>
+</footer>
+</body>
+</html>

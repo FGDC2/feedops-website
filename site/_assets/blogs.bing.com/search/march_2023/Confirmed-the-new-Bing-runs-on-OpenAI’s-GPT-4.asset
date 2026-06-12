@@ -1,0 +1,485 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head id="head">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta content="Congratulations to our partners at Open AI for their release of GPT-4 today.&amp;nbsp;We are happy to confirm that the new Bing is running on GPT-4, which" name="description" />
+    <meta content="Bing, GPT-4, OpenAI" name="keywords" />
+    <title>Confirmed: the new Bing runs on OpenAI&#x2019;s GPT-4 | Bing Search Blog</title>
+    <link rel="stylesheet" href="/Content/Styles/style.css?v=qzetIzIh24remJlWCiPwREpMPSTBCkSDoy7dJBCzJsE" type="text/css" />
+    
+    <meta http-equiv="X-UA-Compatible" content="requiresActiveX=false" />
+    <meta charset="UTF-8">
+    <meta name="msvalidate.01" content="D9C74A34AE7E105AA3B7F18FBC09D848" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=3.0">
+    <meta http-equiv="content-language" content="en-US">
+
+    <link rel="shortcut icon" href="/content/images/favicon.ico" />
+    <script src="/Scripts/jquery-1.11.3.js" type="text/javascript"></script>
+    <script type='text/javascript' src='/Scripts/jquery-migrate-1.2.1.js'></script>
+    <script type='text/javascript' src='/Scripts/modernizr.js'></script>
+    <meta property="og:url" content="https://blogs.bing.com/search/march_2023/Confirmed-the-new-Bing-runs-on-OpenAI%E2%80%99s-GPT-4" />
+        <meta property='og:title' content='Confirmed: the new Bing runs on OpenAI&#x2019;s GPT-4' />
+        <meta property='og:description' content='Congratulations to our partners at Open AI for their release of GPT-4 today.&amp;nbsp;We are happy to confirm that the new Bing is running on GPT-4, which we&amp;rsquo;ve customized for search. If you&amp;rsquo;ve used the new Bing preview at any time in the last five weeks, you&amp;rsquo;ve already experienced an early version of this powerful model. As OpenAI makes updates to GPT-4 and beyond, Bing benefits&#x2026;' />
+            <meta property='og:image' content='https://blogs.bing.com:443/getattachment/8b0d856c-dff5-4995-9380-5f44b554d569/3-14postteaser2.png' />
+    <script src=https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js></script>
+        <link rel="canonical" href="https://blogs.bing.com/search/march_2023/Confirmed-the-new-Bing-runs-on-OpenAI%E2%80%99s-GPT-4" />
+
+    
+    <script type="text/javascript" src="/kentico.resource/abtest/kenticoabtestlogger/en-us/conversionlogger.js" async></script>
+    <script type="text/javascript" src="/kentico.resource/activities/kenticoactivitylogger/logger.js?pageIdentifier=14360" async></script>
+    <script type="text/javascript" src="/kentico.resource/webanalytics/logger.js?Culture=en-US&amp;HttpStatus=200&amp;Value=0" async></script>
+    <link href="/_content/Kentico.Content.Web.Rcl/Content/Bundles/Public/systemPageComponents.min.css" rel="stylesheet" />
+
+
+<script type="text/javascript">!function(T,l,y){var S=T.location,k="script",D="instrumentationKey",C="ingestionendpoint",I="disableExceptionTracking",E="ai.device.",b="toLowerCase",w="crossOrigin",N="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"5",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[b](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,u,p,l;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][b]()]=i[1])}if(!e[C]){var r=e.endpointsuffix,o=r?e.location:null;e[C]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[D]||d[D]||"",u=s[C],p=u?u+"/v2/track":d.endpointUrl,(l=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=p,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),l.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,p)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:N,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(N,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(l,p))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(k);n.src=h;var e=y[w];return!e&&""!==e||"undefined"==n[w]||(n[w]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(k)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[I]&&!0!==s[I]){var c="onerror";t(["_"+c]);var u=T[c];T[c]=function(e,t,n,a,i){var r=u&&u(e,t,n,a,i);return!0!==r&&m["_"+c]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);function a(){y.onInit&&y.onInit(n)}(T[t]=n).queue&&0===n.queue.length?(n.queue.push(a),n.trackPageView({})):a()}(window,document,{
+src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js", // The SDK URL Source
+crossOrigin: "anonymous", 
+cfg: { // Application Insights Configuration
+    connectionString: 'InstrumentationKey=9ac20686-f88e-405d-9ec6-be7f5cd0899b;IngestionEndpoint=https://eastus-5.in.applicationinsights.azure.com/;LiveEndpoint=https://eastus.livediagnostics.monitor.azure.com/;ApplicationId=8b668ed1-9cd9-48e1-b891-226f4966d60b'
+}});</script></head>
+<body class=" single single-post single-format-standard group-blog">
+    <div id="page" class="hfeed site">
+        <a class="skip-content-link" href="#content">Skip to content</a>
+        <div class="site-header-wrap">
+            <div id="cookie-banner" class="CookieConsentContainer">
+            </div>
+            <script type="text/javascript">
+                function onConsentChanged(categoryPreferences) {
+                    console.log("onConsentChanged", categoryPreferences);
+                }
+
+                window.WcpConsent && WcpConsent.init("en-US", "cookie-banner", function (err, _siteConsent) {
+                    if (!err) {
+                        siteConsent = _siteConsent;  //siteConsent is used to get the current consent
+                        if (!siteConsent.isConsentRequired) {
+                            $('.manage-cookies').hide();
+                        } else {
+                        }
+                    } else {
+                        console.log("Error initializing WcpConsent: " + err);
+                    }
+                }, onConsentChanged, WcpConsent.themes.light);
+
+            </script>
+            <header id="masthead" class="site-header" role="banner">
+                <div class="site-branding">
+                    <div class="site-title"><a href="/" rel="home"><img class="bing-logo" src="/content/images/MicrosoftBingBlogs_SingleLine.png" alt="Blogs" /></a></div>
+                </div>
+                <a href="#togglemenu" class="header-mobile-dropdown-toggle">Menu</a>
+                <div class="header-mobile-dropdown">
+                    <div id="header-sidebar" class="sidebar">
+                        <p>This is a place devoted to giving you deeper insight into the news, trends, people and technology behind Bing.</p>
+                    </div>
+                    
+                    <div class="header-search">
+                        <div class="search-form">
+                            <label>
+                                <span class="screen-reader-text">Search for</span>
+                                <input id="searchField" type="search" class="search-field" name="searchtext">
+                            </label>
+                            <input id="searchButton" type="submit" class="search-submit" value="Search">
+                        </div>
+                    </div>
+                    <nav id="site-navigation" class="main-navigation" role="navigation">
+
+                        <div class="menu-primary-menu-container">
+                            <ul id="menu-primary-menu" class="menu" role="menubar">
+                                
+
+
+<li class="blogs menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children" role="none">
+    <a href="#" role="menuitem">Blogs</a>
+    <ul class="sub-menu" role="menu">
+        <li role="none" class="menu-item menu-item-type-custom menu-item-object-custom ">
+            <a href="/" role="menuitem">Home</a>
+        </li>
+                <li role="none" class="menu-item menu-item-type-custom menu-item-object-custom ">
+                    <a role="menuitem" href="/search">Search</a>
+                </li>
+                <li role="none" class="menu-item menu-item-type-custom menu-item-object-custom ">
+                    <a role="menuitem" href="/maps">Maps</a>
+                </li>
+                <li role="none" class="menu-item menu-item-type-custom menu-item-object-custom ">
+                    <a role="menuitem" href="/webmaster">Webmaster</a>
+                </li>
+                <li role="none" class="menu-item menu-item-type-custom menu-item-object-custom ">
+                    <a role="menuitem" href="/search-quality-insights">Search Quality Insights</a>
+                </li>
+                <li role="none" class="menu-item menu-item-type-custom menu-item-object-custom ">
+                    <a role="menuitem" href="/jobs">Jobs</a>
+                </li>
+                <li role="none" class="menu-item menu-item-type-custom menu-item-object-custom ">
+                    <a role="menuitem" href="/Engineering-Blog">Engineering Blog</a>
+                </li>
+    </ul>
+</li>
+
+                                
+
+
+<li class="regions menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children" role="none">
+    <a href="#" role="menuitem">Regions</a>
+    <ul class="sub-menu" role="menu">
+                <li role="none" class="menu-item menu-item-type-custom menu-item-object-custom ">
+                    <a role="menuitem" href="/australia">Australia</a>
+                </li>
+                <li role="none" class="menu-item menu-item-type-custom menu-item-object-custom ">
+                    <a role="menuitem" href="/canada">Canada</a>
+                </li>
+                <li role="none" class="menu-item menu-item-type-custom menu-item-object-custom ">
+                    <a role="menuitem" href="/china">China</a>
+                </li>
+                <li role="none" class="menu-item menu-item-type-custom menu-item-object-custom ">
+                    <a role="menuitem" href="/france">France</a>
+                </li>
+                <li role="none" class="menu-item menu-item-type-custom menu-item-object-custom ">
+                    <a role="menuitem" href="/germany">Germany</a>
+                </li>
+                <li role="none" class="menu-item menu-item-type-custom menu-item-object-custom ">
+                    <a role="menuitem" href="/india">India</a>
+                </li>
+                <li role="none" class="menu-item menu-item-type-custom menu-item-object-custom ">
+                    <a role="menuitem" href="/japan">Japan</a>
+                </li>
+                <li role="none" class="menu-item menu-item-type-custom menu-item-object-custom ">
+                    <a role="menuitem" href="/uk">UK</a>
+                </li>
+    </ul>
+</li>
+
+                            </ul>
+                        </div>
+                    </nav>
+                    <nav id="site-utility-navigation" class="utility-navigation" role="navigation">
+                        <div class="social-links" role="group" aria-labelledby="followus">
+                            <span id="followus" class="social-links-text">Follow us:</span>
+                            <ul>
+                                <li><a class="social-link-facebook" href="http://facebook.com/Bing" target="_blank" aria-label="Facebook"><span class="sprite icon-fb"></span></a></li>
+                                <li><a class="social-link-twitter" href="http://twitter.com/bing" target="_blank" aria-label="Twitter"><span class="sprite icon-twitter"></span></a></li>
+                                <li><a class="social-link-linkedin" href="http://www.linkedin.com/company/microsoft" target="_blank" aria-label="LinkedIn"><span class="sprite icon-linkedin"></span></a></li>
+                                <li><a class="social-link-pinterest" href="http://www.pinterest.com/bingteam" target="_blank" aria-label="Pinterest"><span class="sprite icon-pinterest"></span></a></li>
+                                <li><a class="social-link-instagram" href="http://instagram.com/bing" target="_blank" aria-label="Instagram"><span class="sprite icon-instagram"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-utility-nav-container">
+                            <ul id="menu-utility-nav" class="menu">
+                                <li class="menu-item"><a href="/search/feed">Subscribe RSS</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- #site-navigation -->
+                </div>
+            </header>
+            <!-- #masthead -->
+        </div>
+        
+
+
+
+<div id="content" class="site-content">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+            <article id="post-85393" class="col-16 post-85393 post type-post status-publish format-standard has-post-thumbnail hentry">
+                <header class="entry-header">
+                    <div class="entry-meta">
+                        <time class="entry-date published" datetime="2023-03-14T14:54:42.0000000">
+                            <div class="date-wrap"><span class="month">March</span><span class="date">14</span><span class="year">2023</span></div>
+                        </time>
+                    </div>
+                    <!-- .entry-meta -->
+                    <h1 class="entry-title"><a>Confirmed: the new Bing runs on OpenAI&#x2019;s GPT-4</a></h1>
+                </header>
+                <!-- .entry-header -->
+                <div class="entry-content col-11">
+                    Congratulations to our partners at Open AI for their <a href="https://openai.com/product/gpt-4" target="_blank">release of GPT-4 today.&nbsp;</a><br />
+<br />
+We are happy to confirm that the new Bing is running on GPT-4, which we&rsquo;ve customized for search. If you&rsquo;ve used the new Bing preview at any time in the last five weeks, you&rsquo;ve already experienced an early version of this powerful model. As OpenAI makes updates to GPT-4 and beyond, Bing benefits from those improvements. Along with our own updates based on community feedback, you can be assured that you have the most comprehensive copilot features available.<br />
+&nbsp;
+<div style="text-align: center;"><img alt="Bing-GPT-Final-small-v2.png" src="/getattachment/search/march_2023/Confirmed-the-new-Bing-runs-on-OpenAI’s-GPT-4/Bing-GPT-Final-small-v2.png" style="vertical-align: middle;" title="Bing-GPT-Final-small-v2.png" /></div>
+<br />
+If you want to experience GPT-4, sign up for the <a href="http://bing.com/new" target="_blank">new Bing preview</a>. Once you&rsquo;re in you&rsquo;ll be able to use the new Bing to Search, Answer, Chat, and Create at Bing.com.<br />
+<br />
+- Yusuf Mehdi<br />
+&nbsp;
+                </div>
+                <!-- .entry-content -->
+                <footer class="entry-meta">
+<div id='tag-wrap'><h3>Tags</h3><ul class='tag-list'><li><a href='/search?tagname=Bing&groupid=10'>Bing</a></li><li><a href='/search?tagname=GPT-4&groupid=10'>GPT-4</a></li><li><a href='/search?tagname=OpenAI&groupid=10'>OpenAI</a></li></ul></div>                </footer>
+                <!-- .entry-meta -->
+            </article>
+            <!-- #post-## -->
+            <div class="back-to-top-wrap"><a href="#" class="back-to-top">Back to<br/>Top</a></div>
+            
+
+
+<div class="related-posts-bar">
+    <h4>Related Stories</h4>
+    <ul class="related-posts-list">
+            <li class="col-4 related-post">
+                    <a aria-label="Related Stories, Keeping Trusted Content Visible in an AI-Powered Search World" href="/search/May-2026/Keeping-Trusted-Content-Visible-in-an-AI-Powered-Search-World" class="related-post-link" title="Keeping Trusted Content Visible in an AI-Powered Search World">
+                            <img width="304" height="158" src="/Content/images/clear_304x158.png" class="center-background related-post-thumb wp-post-image" style="background-image:url('/getattachment/ad52fcb2-7049-4583-b7ab-2aa1ae380864/lifepreserver2-png.jpg&&maxsidesize=600');" alt="" />
+                        <h3>Keeping Trusted Content Visible in an AI-Powered Search World</h3>
+                    </a>
+                <span class="post-info">5/13/2026 — Bing Team</span>
+            </li>
+            <li class="col-4 related-post">
+                    <a aria-label="Related Stories, Evolving role of the index: From ranking pages to supporting answers" href="/search/May-2026/Evolving-role-of-the-index-From-ranking-pages-to-supporting-answers" class="related-post-link" title="Evolving role of the index: From ranking pages to supporting answers">
+                            <img width="304" height="158" src="/Content/images/clear_304x158.png" class="center-background related-post-thumb wp-post-image" style="background-image:url('/getattachment/0fc2a58c-a14d-4225-8137-c890a0ddc410/OIG3-alJTVYl.png&&maxsidesize=600');" alt="" />
+                        <h3>Evolving role of the index: From ranking pages to supporting answers</h3>
+                    </a>
+                <span class="post-info">5/6/2026 — Bing Team</span>
+            </li>
+            <li class="col-4 related-post">
+                    <a aria-label="Related Stories, Create videos with your words for free &#x2013; Introducing Bing Video Creator" href="/search/June-2025/Introducing-Bing-Video-Creator" class="related-post-link" title="Create videos with your words for free &#x2013; Introducing Bing Video Creator">
+                            <img width="304" height="158" src="/Content/images/clear_304x158.png" class="center-background related-post-thumb wp-post-image" style="background-image:url('/getattachment/09937583-b5d4-43a4-8486-afca50314b29/Introducing-Bing-Video-Creator.png&&maxsidesize=600');" alt="" />
+                        <h3>Create videos with your words for free &#x2013; Introducing Bing Video Creator</h3>
+                    </a>
+                <span class="post-info">6/2/2025 — Bing Team</span>
+            </li>
+    </ul>
+</div>
+
+        </main>
+	</div> <!-- #primary -->
+</div> <!-- #content-->
+        <footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="footer-widgets">
+        <div class="footer-widget-col col-4">
+            <h3 class="widget-title">Links for Bing</h3>
+            <ul>
+                <li><a aria-label="Links for Bing, Explore Bing" href="https://www.microsoft.com/en-us/bing?ep=140&es=31&form=MA13FV">Explore Bing</a></li>
+                <li><a aria-label="Links for Bing, Bing AI Tips" href="https://www.microsoft.com/en-us/bing/do-more-with-ai?form=MA13KP">Bing AI Tips</a></li>
+                <li><a aria-label="Links for Bing, Bing Rewards" href="http://www.bing.com/rewards">Bing Rewards</a></li>
+                <li><a aria-label="Links for Bing, Bing Help" href="http://go.microsoft.com/fwlink/?LinkID=617349">Bing Help</a></li>
+                <li><a aria-label="Links for Bing, Bing Ads" href="http://www.bingads.com?s_cid=en-us_search_bing_blog_footer_BAHP">Bing Ads</a></li>
+            </ul>
+        </div>
+        <div class="footer-widget-col col-4">
+            <h3 class="widget-title">Other Microsoft links</h3>
+            <ul>
+                <li><a aria-label="Other Microsoft links, Official Microsoft Blog" href="http://blogs.technet.com/b/microsoft_blog/">Official Microsoft Blog</a></li>
+                <li><a aria-label="Other Microsoft links, About Microsoft" href="https://www.microsoft.com/en-us/about">About Microsoft</a></li>
+                <li><a aria-label="Other Microsoft links, Microsoft AI" href="https://www.microsoft.com/en-us/ai">Microsoft AI</a></li>
+                <li><a aria-label="Other Microsoft links, Microsoft News" href="https://news.microsoft.com/source/">Microsoft News</a></li>
+                <li><a aria-label="Other Microsoft links, Diversity and Inclusion" href="https://www.microsoft.com/en-us/diversity/default.aspx">Diversity and Inclusion</a></li>
+            </ul>
+        </div>
+        <div class="footer-widget-col col-4">
+            <h3 class="widget-title">Other product blogs</h3>
+            <ul>
+                <li><a aria-label="Other product blogs, Bing Ads Blog" href="http://blog.bingads.com?s_cid=en-us_search_bing_blog_footer_BABlog">Bing Ads Blog</a></li>
+                <li><a aria-label="Other product blogs, Skype Blog" href="http://blogs.skype.com/">Skype Blog</a></li>
+                <li><a aria-label="Other product blogs, Windows Blog" href="http://blogs.windows.com/">Windows Blog</a></li>
+                <li><a aria-label="Other product blogs, M365 Blog" href="https://www.microsoft.com/en-us/microsoft-365/blog/">M365 Blog</a></li>
+                <li><a aria-label="Other product blogs, Xbox Wire" href="http://news.xbox.com/">Xbox Wire</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="menu-footer-container">
+        <ul id="menu-footer" class="footer-menu">
+            <li id="menu-item-4" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4"><a href="http://azure.microsoft.com/en-us/">Powered by Azure</a></li>
+            <li id="menu-item-5" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5"><a href="http://windows.microsoft.com/en-us/windows/microsoft-services-agreement">Legal</a></li>
+            <li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6"><a href="https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks">Trademarks</a></li>
+            <li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a href="http://www.microsoft.com/privacystatement/en-us/bing/default.aspx">Privacy Statement</a></li>
+            <li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="https://go.microsoft.com/fwlink/?linkid=2259814">Consumer Health Privacy</a></li>
+            <li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9 manage-cookies"><a href="javascript:void(0);" onclick="siteConsent.manageConsent();">Manage Cookies</a></li>
+        </ul>
+    </div>
+    <div class="footer-logo">
+        <img src="/content/images/footer-logo.png" alt="Microsoft">
+        <p>© 2026 Microsoft Corporation. All Rights Reserved.</p>
+    </div>
+    <!-- .footer-logo -->
+</footer>
+        <!-- #colophon -->
+    </div>
+
+    <script type='text/javascript' src='/Scripts/navigation.js'></script>
+    <script type='text/javascript' src='/Scripts/skip-link-focus-fix.js'></script>
+    <script type='text/javascript' src='/Scripts/bing-main.js?v=5eFSDJsvxMO7UGi-ppputbMMUtsUEGlFRnitF8vxBgA'></script>
+    <script type='text/javascript' src='/Scripts/mobile-menu.js'></script>
+    <script type='text/javascript' src='/Scripts/jquery.bxslider.js'></script>
+    <script type='text/javascript' src='/Scripts/home.js'></script>
+
+    <script type='text/javascript'>
+        const currentUrl = window.location.href;
+        const currentUrlWithoutQuerystring = currentUrl.split('?')[0];
+        const currentUrlPath = currentUrlWithoutQuerystring.replace(/^https?:\/\//, '').replace(/\/$/, '').split('/');
+
+        let baseUrl = '';
+        let subUrl = ''
+        
+        if (currentUrlPath.length > 1 && currentUrlPath[1] == '404') {
+            subUrl = '/home/search';
+        }
+        else if (currentUrlPath.length > 1) {
+            subUrl = '/' + currentUrlPath[1] + '/search';
+        }
+        else {
+            subUrl = '/home/search';
+        }
+
+        let searchBaseUrl = baseUrl + subUrl;
+        $(document).ready(function () {
+            // There could be multiple forms
+            $(".search-form").each(function (index, element) {
+                let form$ = $(element);
+                
+                // Function to perform search
+                function performSearch(e) {
+                    e.preventDefault();
+                    let searchInput = form$.find(".search-field").val();
+                    let searchUrl = searchBaseUrl + "?searchtext=" + encodeURIComponent(searchInput);
+                    window.location.href = searchUrl;
+                }
+                
+                // Handle search button click
+                form$.find(".search-submit").on("click", performSearch);
+                
+                // Handle Enter key press on search field
+                form$.find(".search-field").on("keypress", function (e) {
+                    if (e.which === 13) { // Enter key
+                        performSearch(e);
+                    }
+                });
+            });
+        });
+
+    </script>
+
+    <script type="text/javascript">
+        var consent = siteConsent.getConsent();
+        if (consent.SocialMedia) {
+            loadSocial(addTabIndex);
+        }
+
+        function loadSocial(callback) { 
+            document.write("<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=65aed4fe1d58d500121373dc&product=sticky-share-buttons' async = 'async'><\/script>");
+            callback();
+        }
+
+        function addTabIndex() {
+            setTimeout(function () {
+                var buttons = document.getElementsByClassName('st-btn');
+                for (const btn of buttons) {
+                    btn.setAttribute('tabindex', '0');
+                    btn.setAttribute('role', 'button');
+                }
+                document.querySelectorAll(".st-btn").forEach(btn => {
+                    btn.addEventListener("keydown", (e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                            e.preventDefault();
+                            btn.click(); // simulate mouse click
+                        }
+                    });
+                });
+            }, 1500);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const makeGIFInteractive = (el) => {
+                el.setAttribute("tabindex", "0");
+                el.setAttribute("role", "button");
+                el.setAttribute("data-gif-enhanced", "true");
+
+                // Default state: playing
+                el.dataset.state = "playing";
+                el.setAttribute("data-state", "playing");
+                el.setAttribute("aria-pressed", "true");
+                el.setAttribute("aria-label", "Pause GIF animation");
+
+                const pauseGIF = (img) => {
+                    const placeholder = document.createElement("div");
+                    placeholder.style.width = img.width + "px";
+                    placeholder.style.height = img.height + "px";
+                    placeholder.style.background = "#ccc center/cover no-repeat";
+                    placeholder.innerText = "GIF animation paused";
+                    placeholder.setAttribute("tabindex", "0");
+                    placeholder.setAttribute("role", "button");
+                    placeholder.setAttribute("class", "image-placeholder");
+
+                    // ARIA for paused state
+                    placeholder.dataset.state = "paused";
+                    placeholder.setAttribute("aria-pressed", "false");
+                    placeholder.setAttribute("aria-label", "Resume GIF animation");
+
+                    placeholder.addEventListener("click", () => resumeGIF(img, placeholder));
+                    placeholder.addEventListener("keydown", (e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                            e.preventDefault();
+                            resumeGIF(img, placeholder);
+                        }
+                    });
+
+                    img.replaceWith(placeholder);
+                    placeholder.focus();
+                };
+
+                const resumeGIF = (oldImg, placeholder) => {
+                    const newImg = oldImg.cloneNode(true); // reload to restart animation
+                    placeholder.replaceWith(newImg);
+                    makeGIFInteractive(newImg); // re-enhance the fresh element
+                    newImg.focus();
+                };
+
+                const toggle = (e) => {
+                    console.log('toggle');
+                    if (el.dataset.state === "playing") {
+                        el.dataset.state = "paused";
+                        pauseGIF(el);
+                    }
+                    // no explicit else — resume handled by placeholder
+                };
+
+                el.addEventListener("click", toggle);
+                el.addEventListener("keydown", (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        toggle();
+                    }
+                });
+            };
+
+            document
+                .querySelectorAll("img[src*='.gif']")
+                .forEach(makeGIFInteractive);
+        });
+
+
+
+
+    </script>
+    <!-- Script for MS-internal Web Analytics -->
+    <script type="text/JavaScript">
+        var consent = siteConsent.getConsent();
+        if (consent.Analytics) {
+            var varSegmentation = 0;
+            var varClickTracking = 1;
+            var varCustomerTracking = 1;
+            var varAutoFirePV = 1;
+            var Route = "50456";
+            var Ctrl = "";
+            document.write("<script type='text/javascript' src='" + (window.location.protocol) + "//c.microsoft.com/ms.js'" + "'><\/script>");
+        }
+    </script>
+    <noscript><img alt="" width="1" height="1" src="http://c.microsoft.com/trans_pixel.aspx" /></noscript>
+
+    <script src="/_content/Kentico.Content.Web.Rcl/Scripts/jquery-3.5.1.js"></script>
+<script src="/_content/Kentico.Content.Web.Rcl/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script type="text/javascript">
+window.kentico = window.kentico || {};
+window.kentico.builder = {}; 
+window.kentico.builder.useJQuery = true;</script><script src="/Content/Bundles/Public/pageComponents.min.js"></script>
+<script src="/_content/Kentico.Content.Web.Rcl/Content/Bundles/Public/systemFormComponents.min.js"></script>
+
+    
+
+</body>
+</html>
