@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Executive Commerce Data System | FeedOps</title>
-  <meta name="description" content="FeedOps helps ecommerce leaders reduce product data risk, protect channel revenue, and make commerce data ready for media, marketplaces, and AI discovery.">
+  <title>Product Feed Management Growth System | FeedOps</title>
+  <meta name="description" content="FeedOps turns product feed management into a managed growth system for ecommerce teams, combining feed operations, AI product data optimisation, Google Shopping support, and expert feed management.">
   <link rel="icon" href="./_assets/feedops.com/wp-content/uploads/2022/05/Feedops-staggered-logo_Final-2-60x60.png" sizes="32x32">
   <style>
     :root {
@@ -89,6 +89,7 @@
       display: flex;
       align-items: center;
       gap: 14px;
+      margin-left: auto;
     }
 
     .mode-option {
@@ -102,12 +103,104 @@
       color: #404a59;
       font-size: 13px;
       font-weight: 820;
+      text-align: center;
       white-space: nowrap;
     }
 
     .mode-option.active {
       background: #101820;
       color: #fff;
+    }
+
+    .mode-usecase {
+      position: relative;
+      min-height: 38px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .mode-usecase summary {
+      min-height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 0 2px;
+      color: #313946;
+      font-size: 13px;
+      font-weight: 820;
+      white-space: nowrap;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .mode-usecase summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .mode-usecase summary::after {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: rotate(45deg) translateY(-2px);
+      opacity: .72;
+    }
+
+    .mode-usecase[open] summary::after {
+      transform: rotate(225deg) translate(-1px, -1px);
+    }
+
+    .usecase-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      z-index: 20;
+      width: 390px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 18px 44px rgba(17, 24, 39, .14);
+    }
+
+    .usecase-menu strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #5c6675;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .usecase-menu a {
+      display: block;
+      padding: 8px 0;
+      color: #273244;
+      font-size: 13px;
+      font-weight: 760;
+      line-height: 1.25;
+    }
+
+    .usecase-menu a:hover {
+      color: #101820;
+    }
+
+    .mode-login {
+      min-height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 2px;
+      color: #313946;
+      font-size: 13px;
+      font-weight: 820;
+      white-space: nowrap;
     }
 
     .nav {
@@ -190,50 +283,37 @@
     }
 
     .executive-hero {
-      min-height: calc(100vh - 120px);
+      position: relative;
+      overflow: hidden;
       display: grid;
       align-items: center;
-      padding: 82px 0 78px;
+      padding: 86px 0 74px;
       background:
-        radial-gradient(circle at 16% 20%, rgba(254, 207, 38, .2), transparent 28%),
-        linear-gradient(140deg, #ffffff 0%, #f7f9fc 52%, #eef5f2 100%);
+        linear-gradient(120deg, rgba(254, 207, 38, .18), transparent 28%),
+        linear-gradient(160deg, #ffffff 0%, #f6f8fb 58%, #eef5f2 100%);
     }
 
     .hero-inner {
       width: min(1180px, calc(100% - 40px));
       margin: 0 auto;
       display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(380px, .82fr);
-      gap: 58px;
+      grid-template-columns: minmax(0, .96fr) minmax(460px, .94fr);
+      gap: 44px;
       align-items: center;
     }
 
     .eyebrow {
       width: fit-content;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 12px;
-      border: 1px solid rgba(28, 140, 111, .28);
-      border-radius: 999px;
-      background: rgba(28, 140, 111, .08);
-      color: #176e58;
+      color: #5c6675;
       font-size: 13px;
-      font-weight: 850;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
       margin: 0 0 22px;
     }
 
-    .eyebrow::before {
-      content: "";
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 0 5px rgba(28, 140, 111, .14);
-    }
-
     h1 {
-      max-width: 850px;
+      max-width: 820px;
       margin: 0;
       font-size: clamp(40px, 5.2vw, 64px);
       line-height: 1.04;
@@ -242,10 +322,10 @@
     }
 
     .hero-copy {
-      max-width: 720px;
-      margin: 28px 0 0;
-      color: #354052;
-      font-size: clamp(18px, 2.1vw, 23px);
+      max-width: 710px;
+      margin: 26px 0 0;
+      color: #394252;
+      font-size: clamp(18px, 2.2vw, 23px);
       line-height: 1.45;
     }
 
@@ -256,122 +336,737 @@
       margin: 34px 0 0;
     }
 
-    .executive-points {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      max-width: 820px;
-      margin: 44px 0 0;
-    }
-
-    .executive-point {
-      border-left: 3px solid var(--yellow);
-      padding-left: 14px;
-      color: #263142;
+    .hero-action-note {
+      max-width: 430px;
+      margin: 14px 0 0;
+      color: #536072;
       font-size: 15px;
-      font-weight: 760;
+      font-weight: 720;
+      line-height: 1.42;
     }
 
-    .control-panel {
-      border: 1px solid rgba(216, 222, 232, .95);
-      border-radius: 8px;
+    .management-panel {
       overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
       background: #fff;
       box-shadow: var(--shadow);
     }
 
-    .panel-top {
+    .management-panel-head {
       display: flex;
       justify-content: space-between;
       gap: 18px;
       align-items: center;
-      padding: 20px 22px;
+      padding: 28px 32px;
       border-bottom: 1px solid var(--line);
-      background: #fbfcfe;
+      background: #fff;
     }
 
-    .panel-title {
-      font-size: 15px;
-      font-weight: 900;
+    .management-panel-head h2 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 31px;
+      line-height: 1.1;
+      letter-spacing: 0;
     }
 
-    .panel-state {
+    .management-panel-head span {
       color: #176e58;
-      font-size: 13px;
-      font-weight: 850;
+      font-size: 21px;
+      font-weight: 900;
       white-space: nowrap;
     }
 
-    .panel-body {
-      display: grid;
-      gap: 16px;
-      padding: 22px;
+    .management-panel-body {
+      padding: 34px 32px 32px;
     }
 
-    .risk-row {
+    .management-row {
       display: grid;
-      grid-template-columns: 138px 1fr auto;
-      gap: 14px;
+      grid-template-columns: minmax(165px, .85fr) minmax(150px, 1fr) minmax(92px, auto);
+      gap: 22px;
       align-items: center;
-      padding: 15px;
-      border: 1px solid var(--line);
+      min-height: 96px;
+      padding: 22px 26px;
+      border: 1px solid #cfd8e6;
       border-radius: 8px;
-      background: var(--soft);
+      background: #f4f7fb;
     }
 
-    .risk-row b {
-      color: #222c3b;
-      font-size: 14px;
+    .management-row + .management-row {
+      margin-top: 22px;
     }
 
-    .risk-track {
-      height: 10px;
+    .management-row strong {
+      color: #253044;
+      font-size: 25px;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .management-row span {
+      color: #176e58;
+      font-size: 22px;
+      font-weight: 900;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .management-bar {
+      height: 18px;
       overflow: hidden;
       border-radius: 999px;
-      background: #dfe6ef;
+      background: #dce6f0;
     }
 
-    .risk-track span {
+    .management-bar i {
       display: block;
+      width: var(--bar, 82%);
       height: 100%;
       border-radius: inherit;
       background: linear-gradient(90deg, var(--yellow), var(--green));
     }
 
-    .risk-row small {
-      color: #176e58;
-      font-size: 12px;
-      font-weight: 900;
-      text-align: right;
-    }
-
-    .executive-summary {
+    .management-cards {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      padding: 0 22px 22px;
+      gap: 18px;
+      margin-top: 32px;
     }
 
-    .summary-card {
-      min-height: 116px;
-      padding: 16px;
+    .management-card {
+      min-height: 210px;
+      padding: 26px;
       border-radius: 8px;
       background: #101820;
       color: #fff;
     }
 
-    .summary-card strong {
+    .management-card strong {
       display: block;
+      color: #fff;
+      font-size: 25px;
+      line-height: 1.12;
+    }
+
+    .management-card p {
+      margin: 16px 0 0;
+      color: #c8d3df;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .hero-placeholder {
+      min-height: 520px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .72);
+      box-shadow: var(--shadow);
+    }
+
+
+    .section {
+      scroll-margin-top: 116px;
+      padding: 88px 0;
+      background: #fff;
+    }
+
+    .section-inner {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .section-kicker {
+      margin: 0 0 14px;
+      color: #596575;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .section h2,
+    .dark-band h2,
+    .fit-section h2 {
+      max-width: 830px;
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(34px, 4.4vw, 56px);
+      line-height: 1.06;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    .section-lede {
+      max-width: 790px;
+      margin: 20px 0 0;
+      color: #465365;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    .operating-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 42px;
+    }
+
+    .exec-card {
+      min-height: 230px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .exec-card::before {
+      content: "";
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      margin-bottom: 28px;
+      border-radius: 7px;
+      background: var(--yellow);
+      color: #111;
+      font-weight: 900;
+    }
+
+    .exec-card.owner::before { content: "1"; }
+    .exec-card.visibility::before { content: "2"; }
+    .exec-card.control::before { content: "3"; }
+    .exec-card.scale::before { content: "4"; }
+
+    .exec-card strong {
+      display: block;
+      color: var(--ink);
+      font-size: 21px;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    .exec-card p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .exec-card ul,
+    .handoff-list,
+    .fit-list {
+      padding: 0;
+      margin: 22px 0 0;
+      list-style: none;
+    }
+
+    .exec-card li,
+    .handoff-list li,
+    .fit-list li {
+      position: relative;
+      padding-left: 18px;
+      color: #2e3949;
       font-size: 14px;
+      font-weight: 760;
+      line-height: 1.45;
+    }
+
+    .exec-card li + li,
+    .handoff-list li + li,
+    .fit-list li + li {
+      margin-top: 10px;
+    }
+
+    .exec-card li::before,
+    .handoff-list li::before,
+    .fit-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .62em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent, var(--yellow));
+    }
+
+    .exec-card li::before {
+      background: var(--yellow);
+    }
+
+    .gap-section {
+      scroll-margin-top: 116px;
+      padding: 88px 0;
+      background:
+        linear-gradient(130deg, rgba(254, 207, 38, .18), transparent 31%),
+        linear-gradient(120deg, #f6f9fc 0%, #ffffff 50%, #edf5f1 100%);
+    }
+
+    .gap-layout {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(380px, .78fr);
+      gap: 48px;
+      align-items: center;
+    }
+
+    .gap-copy h2 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(34px, 4.4vw, 56px);
+      line-height: 1.06;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    .gap-copy p {
+      max-width: 720px;
+      margin: 22px 0 0;
+      color: #465365;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    .scale-flow {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .scale-step {
+      position: relative;
+      min-height: 238px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 16px 34px rgba(17, 24, 39, .08);
+    }
+
+    .scale-step::before {
+      content: attr(data-step);
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 34px;
+      border-radius: 7px;
+      background: var(--yellow);
+      color: #101820;
+      font-size: 16px;
+      font-weight: 920;
+    }
+
+    .scale-step strong {
+      display: block;
+      color: var(--ink);
+      font-size: 23px;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .scale-step p {
+      margin: 14px 0 0;
+      color: #536072;
+      font-size: 15px;
+      line-height: 1.48;
+    }
+
+    .scale-step.expand {
+      background:
+        linear-gradient(135deg, rgba(254, 207, 38, .16), transparent 40%),
+        #fff;
+    }
+
+    .handoff-panel {
+      padding: 24px;
+      border-radius: 8px;
+      background: #101820;
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .handoff-panel h3 {
+      margin: 0;
+      color: var(--yellow);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .handoff-row {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 18px;
+      align-items: start;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255,255,255,.14);
+    }
+
+    .handoff-row:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .handoff-row strong {
+      color: #fff;
+      font-size: 16px;
       line-height: 1.2;
     }
 
-    .summary-card span {
+    .handoff-row span {
+      color: #c7d1dc;
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    .responsibility-section {
+      border-top: 1px solid rgba(216, 222, 232, .82);
+      border-bottom: 1px solid rgba(216, 222, 232, .82);
+      background: #f6f8fb;
+    }
+
+    .responsibility-head {
+      display: grid;
+      grid-template-columns: minmax(0, .96fr) minmax(320px, .44fr);
+      gap: 34px;
+      align-items: end;
+    }
+
+    .responsibility-note {
+      padding: 22px;
+      border-radius: 8px;
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(254, 207, 38, .16), transparent 38%),
+        #101820;
+      box-shadow: 0 18px 42px rgba(17, 24, 39, .12);
+    }
+
+    .responsibility-note strong {
       display: block;
-      margin-top: 8px;
-      color: #c2ccd8;
+      color: var(--yellow);
       font-size: 13px;
-      line-height: 1.35;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .responsibility-note span {
+      display: block;
+      margin-top: 10px;
+      color: #dce5ef;
+      font-size: 15px;
+      font-weight: 720;
+      line-height: 1.45;
+    }
+
+    .responsibility-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 42px;
+    }
+
+    .responsibility-card {
+      min-height: 230px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: none;
+    }
+
+    .responsibility-card span {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      margin-bottom: 28px;
+      border-radius: 7px;
+      background: var(--yellow);
+      color: #111;
+      font-weight: 900;
+    }
+
+    .responsibility-card strong {
+      display: block;
+      color: var(--ink);
+      font-size: 21px;
+      line-height: 1.15;
+    }
+
+    .responsibility-card p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .architecture-section {
+      color: #fff;
+      background: #101820;
+    }
+
+    .architecture-section h2 {
+      color: #fff;
+    }
+
+    .architecture-section .section-kicker {
+      color: var(--yellow);
+    }
+
+    .architecture-section .section-lede {
+      color: #bfccd9;
+    }
+
+    .architecture-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 42px;
+    }
+
+    .architecture-card {
+      min-height: 250px;
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+    }
+
+    .architecture-card span {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      margin-bottom: 28px;
+      border-radius: 7px;
+      background: var(--yellow);
+      color: #111;
+      font-weight: 900;
+    }
+
+    .architecture-card strong {
+      display: block;
+      color: #fff;
+      font-size: 21px;
+      line-height: 1.15;
+    }
+
+    .architecture-card p {
+      margin: 12px 0 0;
+      color: #bfccd9;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .architecture-sources {
+      display: grid;
+      gap: 0;
+      margin-top: 32px;
+      padding: 0 24px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 8px;
+      background: #101820;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, .18);
+    }
+
+    .architecture-source-row {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 28px;
+      align-items: center;
+      padding: 20px 0;
+      border-top: 1px solid rgba(255,255,255,.16);
+    }
+
+    .architecture-source-row:first-child {
+      border-top: 0;
+    }
+
+    .architecture-source-row strong {
+      color: #fff;
+      font-size: 17px;
+      line-height: 1.15;
+    }
+
+    .architecture-source-row span {
+      color: #d7e0eb;
+      font-size: 17px;
+      font-weight: 720;
+      line-height: 1.42;
+    }
+
+    .dark-band {
+      scroll-margin-top: 116px;
+      padding: 88px 0;
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(254, 207, 38, .13), transparent 34%),
+        #101820;
+    }
+
+    .dark-band h2 {
+      color: #fff;
+    }
+
+    .dark-band .section-kicker {
+      color: var(--yellow);
+    }
+
+    .dark-band .section-lede {
+      color: #bfccd9;
+    }
+
+    .channel-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 50px;
+      align-items: start;
+      margin-top: 44px;
+    }
+
+    .channel-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .channel {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .15);
+      color: #e8eef5;
+      font-weight: 750;
+    }
+
+    .channel span {
+      color: #aeb9c5;
+      font-weight: 650;
+    }
+
+    .destination-cloud {
+      margin-top: 46px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255, 255, 255, .15);
+    }
+
+    .destination-cloud h3 {
+      margin: 0;
+      color: #fff;
+      font-size: 22px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .destination-cloud p {
+      max-width: 760px;
+      margin: 10px 0 0;
+      color: #c2ccd8;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .destination-grid {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .destination {
+      min-height: 52px;
+      display: grid;
+      place-items: center;
+      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, .13);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .06);
+      color: #eef5fb;
+      font-size: 13px;
+      font-weight: 820;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    .quote {
+      padding: 30px;
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .06);
+    }
+
+    .quote p {
+      margin: 0;
+      font-size: clamp(23px, 3vw, 34px);
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    .quote small {
+      display: block;
+      margin-top: 20px;
+      color: #c2ccd8;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .fit-section {
+      scroll-margin-top: 116px;
+      padding: 88px 0;
+      background:
+        linear-gradient(120deg, #ffffff 0%, #f7f9fc 54%, #eff5fb 100%);
+    }
+
+    .fit-layout {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, .92fr) minmax(380px, .72fr);
+      gap: 48px;
+      align-items: center;
+    }
+
+    .fit-copy p {
+      max-width: 740px;
+      margin: 22px 0 0;
+      color: #465365;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    .fit-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .fit-panel {
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .fit-panel h3 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 27px;
+      line-height: 1.14;
+      letter-spacing: 0;
+    }
+
+    .fit-list li::before {
+      background: var(--green);
     }
 
     .site-footer {
@@ -455,13 +1150,29 @@
         grid-template-columns: 1fr;
       }
 
-      .control-panel {
+      .management-panel {
         max-width: 660px;
       }
 
-      .executive-points,
-      .executive-summary {
+      .operating-grid,
+      .responsibility-grid,
+      .architecture-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .responsibility-head,
+      .gap-layout,
+      .channel-grid,
+      .fit-layout {
         grid-template-columns: 1fr;
+      }
+
+      .destination-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .architecture-source-row {
+        grid-template-columns: 220px 1fr;
       }
 
       .footer-top {
@@ -498,6 +1209,28 @@
         gap: 8px;
       }
 
+      .mode-usecase {
+        align-self: stretch;
+      }
+
+      .mode-usecase summary {
+        justify-content: flex-end;
+        min-height: 28px;
+      }
+
+      .usecase-menu {
+        position: static;
+        width: 100%;
+        margin-top: 8px;
+        grid-template-columns: 1fr;
+        box-shadow: 0 12px 30px rgba(17, 24, 39, .10);
+      }
+
+      .mode-login {
+        align-self: flex-end;
+        min-height: 28px;
+      }
+
       .mode-option {
         padding: 0 8px;
         font-size: 12px;
@@ -505,19 +1238,25 @@
 
       .nav {
         height: 68px;
+        gap: 10px;
       }
 
       .logo {
-        width: 122px;
+        width: 104px;
       }
 
       .nav-cta {
-        min-height: 40px;
-        padding: 0 13px;
-        font-size: 13px;
+        width: 168px;
+        min-height: 44px;
+        padding: 0 8px;
+        white-space: normal;
+        text-align: center;
+        font-size: 12px;
+        line-height: 1.12;
       }
 
       .nav-login {
+        display: none;
         font-size: 13px;
       }
 
@@ -527,15 +1266,141 @@
 
       .executive-hero {
         min-height: auto;
-        padding: 56px 0 62px;
+        padding: 52px 0 74px;
       }
 
-      .risk-row {
+      .management-panel {
+        max-width: 100%;
+      }
+
+      .management-panel-head {
+        padding: 22px;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .management-panel-head h2 {
+        font-size: 27px;
+      }
+
+      .management-panel-head span {
+        font-size: 18px;
+      }
+
+      .management-panel-body {
+        padding: 22px;
+      }
+
+      .management-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        min-height: auto;
+        padding: 20px;
+      }
+
+      .management-row strong {
+        font-size: 23px;
+      }
+
+      .management-row span {
+        text-align: left;
+        font-size: 18px;
+      }
+
+      .management-cards {
         grid-template-columns: 1fr;
       }
 
-      .risk-row small {
-        text-align: left;
+      .management-card {
+        min-height: auto;
+      }
+
+      .hero-placeholder {
+        min-height: 360px;
+      }
+
+      .section,
+      .gap-section,
+      .dark-band,
+      .fit-section {
+        padding: 58px 0;
+      }
+
+      .section-inner,
+      .gap-layout,
+      .fit-layout {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .section h2,
+      .dark-band h2,
+      .fit-section h2,
+      .gap-copy h2 {
+        font-size: 34px;
+      }
+
+      .section-lede,
+      .gap-copy p,
+      .fit-copy p {
+        font-size: 17px;
+      }
+
+      .operating-grid,
+      .responsibility-grid,
+      .architecture-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .destination-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .exec-card,
+      .responsibility-card,
+      .architecture-card {
+        min-height: auto;
+      }
+
+      .architecture-sources {
+        padding: 0 20px;
+      }
+
+      .architecture-source-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        align-items: start;
+        padding: 18px 0;
+      }
+
+      .architecture-source-row strong,
+      .architecture-source-row span {
+        font-size: 16px;
+      }
+
+      .scale-flow {
+        grid-template-columns: 1fr;
+      }
+
+      .scale-step {
+        min-height: auto;
+      }
+
+      .scale-step::before {
+        margin-bottom: 24px;
+      }
+
+      .responsibility-head {
+        gap: 24px;
+      }
+
+      .handoff-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .destination {
+        min-height: 82px;
       }
 
       .footer-top {
@@ -561,6 +1426,26 @@
             <a class="mode-option" href="./agency.html">Media agency</a>
             <a class="mode-option" href="./founders-mum.html">Founder’s Mum</a>
           </div>
+          <details class="mode-usecase">
+            <summary>Use cases</summary>
+            <div class="usecase-menu">
+              <div>
+                <strong>By channel</strong>
+                <a href="./index.html#channels">Google Shopping and PMax</a>
+                <a href="./index.html#channels">Marketplaces</a>
+                <a href="./index.html#channels">Local inventory</a>
+                <a href="./index.html#channels">Paid social and AI shopping</a>
+              </div>
+              <div>
+                <strong>By issue</strong>
+                <a href="./index.html#audit-preview">Feed errors and disapprovals</a>
+                <a href="./index.html#audit-preview">Missing attributes and weak fields</a>
+                <a href="./index.html#operations">Feed rules and mapping</a>
+                <a href="./executive.html#opportunity">Channel growth opportunity</a>
+              </div>
+            </div>
+          </details>
+          <a class="mode-login" href="https://app.feedops.com/feed_ops" target="_blank" rel="noopener">Login</a>
         </div>
       </div>
     </div>
@@ -569,14 +1454,15 @@
         <img src="./_assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo_Final-2-4.png" alt="FeedOps">
       </a>
       <div class="nav-links" aria-label="Primary links">
-        <a href="./index.html#agent">System</a>
-        <a href="./index.html#operations">Operations</a>
-        <a href="./index.html#channels">Channels</a>
-        <a href="./index.html#proof">Proof</a>
+        <a href="#accountability">Accountability</a>
+        <a href="#responsibility">Responsibility</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#channels">Channels</a>
+        <a href="#opportunity">Opportunity</a>
+        <a href="#fit">Fit</a>
       </div>
       <div class="nav-actions">
-        <a class="nav-login" href="https://app.feedops.com/feed_ops" target="_blank" rel="noopener">Login</a>
-        <a class="nav-cta" href="mailto:hello@feedops.com?subject=FeedOps%20executive%20demo">Book a demo</a>
+        <a class="nav-cta" href="mailto:hello@feedops.com?subject=FeedOps%20feed%20strategy%20call">Book a feed strategy call</a>
       </div>
     </nav>
   </header>
@@ -585,34 +1471,252 @@
     <section class="executive-hero">
       <div class="hero-inner">
         <div>
-          <h1>Turn product data into a managed growth system.</h1>
-          <p class="hero-copy">FeedOps gives ecommerce leaders an accountable operating layer for product data across media channels, marketplaces, retail media, and AI discovery. Reduce manual drag, protect channel revenue, and give teams one clear system for feed health and optimisation.</p>
+          <h1>Turn product feed management into a managed growth system.</h1>
+          <p class="hero-copy">FeedOps helps ecommerce teams keep product data approved, complete, enriched, and performance-ready across Google Shopping, marketplaces, paid social, and AI discovery without adding more internal overhead.</p>
           <div class="hero-actions">
-            <a class="button primary" href="mailto:hello@feedops.com?subject=FeedOps%20executive%20demo">Book an executive demo</a>
-            <a class="button secondary" href="./index.html">View performance expert page</a>
+            <a class="button primary" href="mailto:hello@feedops.com?subject=FeedOps%20feed%20strategy%20call">Book a feed strategy call</a>
+            <a class="button secondary" href="#accountability">See how it works</a>
           </div>
-          <div class="executive-points">
-            <div class="executive-point">Less revenue leakage from rejected, incomplete, or underperforming product data</div>
-            <div class="executive-point">One accountable system across source data, channels, support, and optimisation</div>
-            <div class="executive-point">AI-ready commerce data without asking internal teams to own every feed problem</div>
+          <p class="hero-action-note">A practical fit conversation with an opportunity review and a short platform walkthrough where it helps.</p>
+        </div>
+
+        <aside class="hero-placeholder" aria-hidden="true"></aside>
+      </div>
+    </section>
+
+    <section class="section" id="accountability">
+      <div class="section-inner">
+        <p class="section-kicker">Accountability layer</p>
+        <h2>Product feed management needs clear accountability.</h2>
+        <p class="section-lede">Performance teams need clean feeds. Executives need to know who owns feed health, where revenue is being blocked, what is being fixed, and when weak product data is creating risk across channels.</p>
+
+        <div class="operating-grid">
+          <article class="exec-card owner">
+            <strong>Clear owner</strong>
+            <p>FeedOps gives product feed management a clear owner instead of leaving issues split between ecommerce, media, technology, merchandising, and agency teams.</p>
+            <ul>
+              <li>Named responsibility for feed health</li>
+              <li>Clear escalation when revenue is blocked</li>
+              <li>Less internal debate about who fixes what</li>
+            </ul>
+          </article>
+          <article class="exec-card visibility">
+            <strong>Visible risk</strong>
+            <p>See where products are blocked, thin, out of sync, or underperforming before those issues become wasted spend, missed sales, or channel delivery problems.</p>
+            <ul>
+              <li>Approval and completeness signals</li>
+              <li>Channel readiness across destinations</li>
+              <li>Performance feedback from live traffic</li>
+            </ul>
+          </article>
+          <article class="exec-card control">
+            <strong>Operating control</strong>
+            <p>Keep commercial logic close to the business while FeedOps manages the operational detail behind rules, fixes, enrichment, testing, and channel readiness.</p>
+            <ul>
+              <li>Rules and mapping governance</li>
+              <li>Source data and channel alignment</li>
+              <li>Expert support when internal teams are stretched</li>
+            </ul>
+          </article>
+          <article class="exec-card scale">
+            <strong>Accountable cadence</strong>
+            <p>Create a repeatable rhythm for audits, fixes, enrichment, and reporting so feed work does not depend on ad hoc effort or one overloaded person.</p>
+            <ul>
+              <li>Prioritised feed actions</li>
+              <li>Regular review and improvement cycles</li>
+              <li>Better inputs for paid, organic, and marketplace teams</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section responsibility-section" id="responsibility">
+      <div class="section-inner">
+        <div class="responsibility-head">
+          <div>
+            <p class="section-kicker">Responsibility model</p>
+            <h2>Decide who carries each layer of product feed management responsibility.</h2>
+            <p class="section-lede">Once feed accountability is clear, the next question is practical: what should your team own, what should partners own, and what should FeedOps carry so product feed management keeps moving.</p>
+          </div>
+          <div class="responsibility-note">
+            <strong>Scoping principle</strong>
+            <span>FeedOps is sized around responsibility, not seats. The more operational ownership you want us to carry, the more we take off the internal team.</span>
           </div>
         </div>
 
-        <aside class="control-panel" aria-label="Executive commerce data control panel">
-          <div class="panel-top">
-            <div class="panel-title">Commerce Data Control</div>
-            <div class="panel-state">Board-ready view</div>
+        <div class="responsibility-grid">
+          <article class="responsibility-card self">
+            <span>1</span>
+            <strong>Your team operates</strong>
+            <p>Your team uses the platform to manage sources, rules, audits, enrichment workflows, channel issues, and optimisation.</p>
+          </article>
+          <article class="responsibility-card guided">
+            <span>2</span>
+            <strong>FeedOps guides</strong>
+            <p>FeedOps experts help diagnose issues, prioritise fixes, shape feed rules, and guide the team through important feed work.</p>
+          </article>
+          <article class="responsibility-card managed">
+            <span>3</span>
+            <strong>FeedOps carries</strong>
+            <p>When ownership needs to sit outside the internal team, FeedOps handles more of the feed management and optimisation workload.</p>
+          </article>
+          <article class="responsibility-card partner">
+            <span>4</span>
+            <strong>Partners stay aligned</strong>
+            <p>Agencies and partners keep their strategic role while FeedOps supports the operational layer behind better feed outcomes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section architecture-section" id="architecture">
+      <div class="section-inner">
+        <p class="section-kicker">Feed architecture</p>
+        <h2>Fit FeedOps around the feed stack you already have.</h2>
+        <p class="section-lede">FeedOps can ingest from ecommerce platforms, existing feeds, ERP data, files, APIs, and partner systems, then operate the product data layer and push cleaner feeds to the channels that matter.</p>
+
+        <div class="architecture-grid">
+          <article class="architecture-card">
+            <span>1</span>
+            <strong>Keep your existing stack</strong>
+            <p>FeedOps can sit beside the systems you already use, including current feed tools, ecommerce platforms, ERP exports, agency workflows, and custom files.</p>
+          </article>
+          <article class="architecture-card">
+            <span>2</span>
+            <strong>Make FeedOps the primary layer</strong>
+            <p>When the team needs one place to govern feed work, FeedOps can become the main operating layer for product feed management.</p>
+          </article>
+          <article class="architecture-card">
+            <span>3</span>
+            <strong>Supplement what is missing</strong>
+            <p>Use FeedOps for the pieces your current setup does not handle well: audits, enrichment, rules, support, approvals, or channel readiness.</p>
+          </article>
+        </div>
+
+        <div class="architecture-sources" aria-label="Commerce data sources and feed sources">
+          <div class="architecture-source-row"><strong>Commerce systems</strong><span>Shopify, Magento 2, Neto, WooCommerce, Ecwid, BigCommerce, Salesforce Commerce Cloud, nopCommerce, Wix</span></div>
+          <div class="architecture-source-row"><strong>Marketplace & ERP</strong><span>Marketplacer, NetSuite, partner-managed workflows, agency processes</span></div>
+          <div class="architecture-source-row"><strong>Feeds & files</strong><span>Google Shopping Feed, FeedOps Custom XML Feed, exports, APIs, apps, custom files, existing feeds</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-band" id="channels">
+      <div class="section-inner">
+        <p class="section-kicker">Every channel, same discipline</p>
+        <h2>One management and optimisation process for every media channel and marketplace.</h2>
+        <p class="section-lede">Each destination has its own rules, taxonomy, attributes, sync requirements, and performance signals. FeedOps applies the same expert-led process everywhere: manage the operational feed layer, audit the data, enrich the content, test improvements, and scale what works.</p>
+
+        <div class="channel-grid">
+          <div class="channel-list">
+            <div class="channel">Shopping and performance media <span>updates, approvals, titles, product types, custom labels, diagnostics</span></div>
+            <div class="channel">Paid social and creative-led feeds <span>feed rules, promotions, and richer product context for ad platforms</span></div>
+            <div class="channel">Marketplaces and partner channels <span>taxonomy, variants, orders, shipping rate tables, shipping data, details</span></div>
+            <div class="channel">AI-powered discovery surfaces <span>clearer product context and richer attributes</span></div>
           </div>
-          <div class="panel-body">
-            <div class="risk-row"><b>Channel health</b><div class="risk-track"><span style="width: 91%"></span></div><small>protected</small></div>
-            <div class="risk-row"><b>Data readiness</b><div class="risk-track"><span style="width: 86%"></span></div><small>improving</small></div>
-            <div class="risk-row"><b>Manual workload</b><div class="risk-track"><span style="width: 38%"></span></div><small>reduced</small></div>
+          <div class="quote">
+            <p>We live and breathe feed excellence.</p>
+            <small>Dedicated channel pages can explain the specifics. The homepage promise is simpler: FeedOps brings one repeatable management and optimisation process to every destination your product data needs to serve.</small>
           </div>
-          <div class="executive-summary">
-            <div class="summary-card"><strong>Operate</strong><span>Updates, feed rules, approvals, order sync alerts, and channel issues.</span></div>
-            <div class="summary-card"><strong>Optimise</strong><span>Audits, enrichment, experiments, and always-on improvement cadence.</span></div>
-            <div class="summary-card"><strong>Govern</strong><span>Full platform access with guided or done-for-you expert support.</span></div>
+        </div>
+
+        <div class="destination-cloud" aria-label="Supported channels and destinations">
+          <h3>Supported channels and destinations</h3>
+          <p>FeedOps supports product feeds and operational feed workflows across shopping channels, media platforms, marketplaces, affiliate destinations, and AI-powered discovery surfaces.</p>
+          <div class="destination-grid">
+            <div class="destination">Google</div>
+            <div class="destination">Google Local / LIA</div>
+            <div class="destination">Facebook</div>
+            <div class="destination">Microsoft</div>
+            <div class="destination">Bazaarvoice</div>
+            <div class="destination">Reebelo</div>
+            <div class="destination">Bunnings</div>
+            <div class="destination">Pinterest</div>
+            <div class="destination">eBay</div>
+            <div class="destination">TikTok</div>
+            <div class="destination">Amazon</div>
+            <div class="destination">MyDeal</div>
+            <div class="destination">Kogan</div>
+            <div class="destination">MySale</div>
+            <div class="destination">Decathlon</div>
+            <div class="destination">Criteo</div>
+            <div class="destination">Emarsys</div>
+            <div class="destination">Lasoo</div>
+            <div class="destination">Commission Factory</div>
+            <div class="destination">CJ Affiliate</div>
+            <div class="destination">ChatGPT</div>
+            <div class="destination">Idealo</div>
+            <div class="destination">Rakuten</div>
+            <div class="destination">Style Sourcebook</div>
+            <div class="destination">JB Hi-Fi</div>
+            <div class="destination">Kmart AU</div>
+            <div class="destination">Reddit</div>
+            <div class="destination">Myer</div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gap-section" id="opportunity">
+      <div class="gap-layout">
+        <div class="gap-copy">
+          <p class="section-kicker">Sales channel scaling</p>
+          <h2>Scale sales channels from a stronger product feed base.</h2>
+          <p>Expansion works best when the feed is already performing in your primary channel. FeedOps helps ecommerce teams improve the channel that matters most first, then prepare product data for the next destinations that fit the catalogue.</p>
+          <div class="scale-flow" aria-label="Sales channel scaling sequence">
+            <article class="scale-step primary-channel" data-step="1">
+              <strong>Feed excellence in your primary channel</strong>
+              <p>Start where performance already matters: the channel carrying the most spend, orders, or organic visibility. Improve approvals, attributes, titles, rules, and reporting before widening the channel mix.</p>
+            </article>
+            <article class="scale-step expand" data-step="2">
+              <strong>Expand into channels that fit your products</strong>
+              <p>Use stronger product data to assess and launch the next destinations: marketplaces, local inventory, affiliate feeds, paid social, or AI discovery surfaces that match the catalogue and customer journey.</p>
+            </article>
+          </div>
+        </div>
+
+        <aside class="handoff-panel" aria-label="Channel fit checklist">
+          <h3>Channel fit checklist</h3>
+          <div class="handoff-row">
+            <strong>Product fit</strong>
+            <span>Which destinations naturally match the category, product depth, variants, and buying intent.</span>
+          </div>
+          <div class="handoff-row">
+            <strong>Commercial fit</strong>
+            <span>Whether margins, price position, promotions, and inventory can support the channel economics.</span>
+          </div>
+          <div class="handoff-row">
+            <strong>Operational fit</strong>
+            <span>Whether taxonomy, shipping, stock, orders, variants, and support workflows can be managed reliably.</span>
+          </div>
+          <div class="handoff-row">
+            <strong>Growth fit</strong>
+            <span>Which channels deserve testing first, what success should look like, and how to scale what works.</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="fit-section" id="fit">
+      <div class="fit-layout">
+        <div class="fit-copy">
+          <p class="section-kicker">Fit and investment</p>
+          <h2>Pricing follows the feed responsibility you want us to carry.</h2>
+          <p>FeedOps sits between a cheap app and a heavy enterprise platform. We scope the model around catalogue complexity, channel mix, partner involvement, and how much operational responsibility you want FeedOps to own.</p>
+          <div class="fit-actions">
+            <a class="button primary" href="mailto:hello@feedops.com?subject=FeedOps%20feed%20strategy%20call">Book a feed strategy call</a>
+          </div>
+        </div>
+
+        <aside class="fit-panel" aria-label="FeedOps fit conversation">
+          <h3>What we work through on the call</h3>
+          <ul class="fit-list">
+            <li>Where feed quality is leaking revenue, approvals, or team time.</li>
+            <li>Which channels and sources need to be supported first.</li>
+            <li>What your internal team, agency, or partners should keep owning.</li>
+            <li>Whether FeedOps should guide the work or carry more of it for you.</li>
+          </ul>
         </aside>
       </div>
     </section>
