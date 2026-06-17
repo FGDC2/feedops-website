@@ -29,6 +29,7 @@
       '        <div class="footer-column">',
       '          <a href="' + href("guide/google-shopping-feed-optimization-guide/") + '">Google Shopping Feed Optimization Guide</a>',
       '          <a href="' + href("guide/google-shopping-ads-management/") + '">Google Shopping Ads Management Guide</a>',
+      '          <a href="' + href("guide/google-local-inventory-ads-performance-max/") + '">Google Local Inventory Ads Performance Max Guide</a>',
       '          <a href="' + href("google-shopping-product-title-optimization/") + '">Google Shopping Title Optimization</a>',
       '          <a href="/feedops/google-shopping-free-listings/">Google Shopping Free Listings Guide</a>',
       "        </div>",
