@@ -6,32 +6,22 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://feedops.com/platform/</loc>
-    <lastmod>2026-06-14</lastmod>
+    <loc>https://feedops.com/executive/</loc>
+    <lastmod>2026-06-16</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://feedops.com/data-sources/</loc>
-    <lastmod>2026-06-14</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feedops.com/channels/</loc>
-    <lastmod>2026-06-14</lastmod>
+    <loc>https://feedops.com/agency/</loc>
+    <lastmod>2026-06-16</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://feedops.com/pricing/</loc>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-06-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://feedops.com/free-google-shopping-feed-audit/</loc>
-    <lastmod>2026-06-14</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://feedops.com/partner-program-for-agencies/</loc>
+    <loc>https://feedops.com/company/</loc>
     <lastmod>2026-06-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -39,5 +29,35 @@
     <loc>https://feedops.com/contact-us/</loc>
     <lastmod>2026-06-14</lastmod>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://feedops.com/privacy-policy/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://feedops.com/book-live-demo/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://feedops.com/free-google-shopping-feed-audit/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://feedops.com/google-shopping-product-title-optimization/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://feedops.com/guide/google-shopping-feed-optimization-guide/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://feedops.com/feedops/google-shopping-free-listings/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <priority>0.8</priority>
   </url>
 </urlset>

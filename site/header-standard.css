@@ -1,0 +1,218 @@
+header.site-header,
+.mode-switch[aria-label="Choose FeedOps page mode"] {
+  display: none !important;
+}
+
+#feedops-standard-header.feedops-header {
+  display: block !important;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #d8dee8;
+  background: rgba(255, 255, 255, .94);
+  backdrop-filter: blur(14px);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+#feedops-standard-header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#feedops-standard-header .feedops-mode-switch {
+  border-bottom: 1px solid #d8dee8;
+  background: #f4f6f9;
+}
+
+#feedops-standard-header .feedops-mode-inner {
+  width: min(1180px, calc(100% - 40px));
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  margin: 0 auto;
+}
+
+#feedops-standard-header .feedops-mode-label {
+  color: #536072;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+#feedops-standard-header .feedops-mode-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#feedops-standard-header .feedops-mode-options {
+  display: inline-grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  padding: 4px;
+  border: 1px solid #d8dee8;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 10px 28px rgba(17, 24, 39, .06);
+}
+
+#feedops-standard-header .feedops-mode-option {
+  min-width: 150px;
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+  border-radius: 999px;
+  color: #2d3748;
+  font-size: 13px;
+  font-weight: 850;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#feedops-standard-header .feedops-mode-option:hover,
+#feedops-standard-header .feedops-mode-option.is-active,
+#feedops-standard-header .feedops-mode-login:hover {
+  background: #eef8f4;
+  color: #176e58;
+}
+
+#feedops-standard-header .feedops-mode-option.is-active {
+  box-shadow: inset 0 0 0 1px rgba(28, 140, 111, .22);
+}
+
+#feedops-standard-header .feedops-mode-login {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: #2d3748;
+  font-size: 13px;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+#feedops-standard-header .feedops-nav {
+  width: min(1180px, calc(100% - 40px));
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin: 0 auto;
+}
+
+#feedops-standard-header .feedops-logo {
+  display: flex;
+  align-items: center;
+  width: 142px;
+  flex: 0 0 auto;
+}
+
+#feedops-standard-header .feedops-logo img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+#feedops-standard-header .feedops-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  color: #313946;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+#feedops-standard-header .feedops-nav-links a:hover {
+  color: #176e58;
+}
+
+#feedops-standard-header .feedops-nav-links a.is-active {
+  color: #176e58;
+  font-weight: 850;
+}
+
+#feedops-standard-header .feedops-nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+#feedops-standard-header .feedops-nav-cta {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  border-radius: 8px;
+  background: #ffca28;
+  color: #111111;
+  font-size: 14px;
+  font-weight: 950;
+  box-shadow: 0 12px 30px rgba(254, 207, 38, .28);
+}
+
+#feedops-standard-header .feedops-nav-cta.is-active {
+  box-shadow:
+    inset 0 0 0 2px rgba(16, 24, 32, .18),
+    0 12px 30px rgba(254, 207, 38, .28);
+}
+
+@media (max-width: 980px) {
+  #feedops-standard-header .feedops-mode-inner,
+  #feedops-standard-header .feedops-nav {
+    width: min(100% - 28px, 1180px);
+    flex-wrap: wrap;
+  }
+
+  #feedops-standard-header .feedops-nav {
+    height: auto;
+    padding: 14px 0;
+  }
+
+  #feedops-standard-header .feedops-nav-links {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 16px 22px;
+  }
+}
+
+@media (max-width: 620px) {
+  #feedops-standard-header .feedops-mode-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  #feedops-standard-header .feedops-mode-controls {
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  #feedops-standard-header .feedops-mode-options {
+    width: 100%;
+    grid-template-columns: 1fr;
+    border-radius: 8px;
+  }
+
+  #feedops-standard-header .feedops-mode-option {
+    width: 100%;
+    min-width: 0;
+    border-radius: 6px;
+  }
+
+  #feedops-standard-header .feedops-mode-login {
+    width: 100%;
+  }
+
+  #feedops-standard-header .feedops-nav-cta {
+    display: none;
+  }
+}

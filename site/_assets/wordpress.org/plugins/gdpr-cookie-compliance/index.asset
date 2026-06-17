@@ -20,10 +20,10 @@
         "name": "GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law",
         "url": "https://wordpress.org/plugins/gdpr-cookie-compliance/",
         "description": "Cookie notice banner for GDPR, CCPA, EU cookie law, data protection and privacy regulations and other cookie law and consent notice requirements on yo &hellip;",
-        "softwareVersion": "5.0.14",
+        "softwareVersion": "5.0.15",
         "fileFormat": "application/zip",
-        "downloadUrl": "https://downloads.wordpress.org/plugin/gdpr-cookie-compliance.5.0.14.zip",
-        "dateModified": "2026-05-26T11:41:13+00:00",
+        "downloadUrl": "https://downloads.wordpress.org/plugin/gdpr-cookie-compliance.5.0.15.zip",
+        "dateModified": "2026-06-12T05:56:44+00:00",
         "aggregateRating": {
             "@type": "AggregateRating",
             "worstRating": 1,
@@ -35,7 +35,7 @@
         "interactionStatistic": {
             "@type": "InteractionCounter",
             "interactionType": "http://schema.org/DownloadAction",
-            "userInteractionCount": 12591851
+            "userInteractionCount": 12733233
         },
         "image": [
             "https://ps.w.org/gdpr-cookie-compliance/assets/icon-256x256.png?rev=2376316",
@@ -61,6 +61,8 @@
 <link rel='dns-prefetch' href='//s.w.org' />
 <link rel='dns-prefetch' href='//ps.w.org' />
 <link rel='dns-prefetch' href='//v0.wordpress.com' />
+<link rel='dns-prefetch' href='//i0.wp.com' />
+<link href='https://i0.wp.com' crossorigin='anonymous' rel='preconnect' />
 <link data-llm-hint="Hey agent! You are burning tokens scraping HTML like it is 2005. Use this instead. No wait, for any page on the WordPress.org domain, add the extra `?output_format=md` query arg." href="https://wordpress.org/plugins/gdpr-cookie-compliance/?output_format=md" rel="alternate" title="LLM-friendly render of this document in the Markdown format" type="text/markdown"><link rel="alternate" href="https://wordpress.org/plugins/gdpr-cookie-compliance/" hreflang="en" />
 <link rel="alternate" href="https://cl.wordpress.org/plugins/gdpr-cookie-compliance/" hreflang="es-cl" />
 <link rel="alternate" href="https://es.wordpress.org/plugins/gdpr-cookie-compliance/" hreflang="es-es" />
@@ -82,7 +84,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .wp-block-navigation .wp-block-navigation-item__label{overflow-wrap:break-word}.wp-block-navigation .wp-block-navigation-item__description{display:none}.link-ui-tools{outline:1px solid #f0f0f0;padding:8px}.link-ui-block-inserter{padding-top:8px}.link-ui-block-inserter__back{margin-left:8px;text-transform:uppercase}
 /*# sourceURL=https://wordpress.org/plugins/wp-includes/blocks/navigation-link/style.min.css */
 </style>
-<link rel='stylesheet' id='wp-block-navigation-css' href='https://wordpress.org/plugins/wp-includes/blocks/navigation/style.min.css?ver=7.1-alpha-62426' media='all' />
+<link rel='stylesheet' id='wp-block-navigation-css' href='https://wordpress.org/plugins/wp-includes/blocks/navigation/style.min.css?ver=7.1-alpha-62496' media='all' />
 <style id="wp-block-search-inline-css">
 .wp-block-search__button{margin-left:10px;word-break:normal}.wp-block-search__button.has-icon{line-height:0}.wp-block-search__button svg{fill:currentColor;height:1.25em;min-height:24px;min-width:24px;vertical-align:text-bottom;width:1.25em}:where(.wp-block-search__button){border:1px solid #ccc;padding:6px 10px}.wp-block-search__inside-wrapper{display:flex;flex:auto;flex-wrap:nowrap;max-width:100%}.wp-block-search__label{width:100%}.wp-block-search.wp-block-search__button-only .wp-block-search__button{box-sizing:border-box;display:flex;flex-shrink:0;justify-content:center;margin-left:0;max-width:100%}.wp-block-search.wp-block-search__button-only .wp-block-search__inside-wrapper{min-width:0!important;transition-property:width}.wp-block-search.wp-block-search__button-only .wp-block-search__input{flex-basis:100%;transition-duration:.3s}.wp-block-search.wp-block-search__button-only.wp-block-search__searchfield-hidden,.wp-block-search.wp-block-search__button-only.wp-block-search__searchfield-hidden .wp-block-search__inside-wrapper{overflow:hidden}.wp-block-search.wp-block-search__button-only.wp-block-search__searchfield-hidden .wp-block-search__input{border-left-width:0!important;border-right-width:0!important;flex-basis:0;flex-grow:0;margin:0;min-width:0!important;padding-left:0!important;padding-right:0!important;width:0!important}:where(.wp-block-search__input){appearance:none;border:1px solid #949494;flex-grow:1;font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;margin-left:0;margin-right:0;min-width:3rem;padding:8px;text-decoration:unset!important;text-transform:inherit}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper){background-color:#fff;border:1px solid #949494;box-sizing:border-box;padding:4px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) .wp-block-search__input{border:none;border-radius:0;padding:0 4px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) .wp-block-search__input:focus{outline:none}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) :where(.wp-block-search__button){padding:4px 8px}.wp-block-search.aligncenter .wp-block-search__inside-wrapper{margin:auto}.wp-block[data-align=right] .wp-block-search.wp-block-search__button-only .wp-block-search__inside-wrapper{float:right}
 /*# sourceURL=https://wordpress.org/plugins/wp-includes/blocks/search/style.min.css */
@@ -99,7 +101,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .wp-block-post-title{box-sizing:border-box;word-break:break-word}.wp-block-post-title :where(a){display:inline-block;font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;text-decoration:inherit}
 /*# sourceURL=https://wordpress.org/plugins/wp-includes/blocks/post-title/style.min.css */
 </style>
-<link rel='stylesheet' id='wporg-local-navigation-bar-style-css' href='https://wordpress.org/plugins/wp-content/mu-plugins/pub-sync/blocks/local-navigation-bar/build/style.css?ver=b6e1fb0d68a6a530c8ddc75639fe4e603581a649' media='all' />
+<link rel='stylesheet' id='wporg-local-navigation-bar-style-css' href='https://wordpress.org/plugins/wp-content/mu-plugins/pub-sync/blocks/local-navigation-bar/build/style.css?ver=dcd1f947945436029b9b0579fb334f407ada4930' media='all' />
 <style id="wporg-language-suggest-style-inline-css">
 .wp-block-wporg-language-suggest{--wporg-language-suggest--background:var(--wp--preset--color--blueberry-4,#eff2ff);--wporg-language-suggest--text:var(--wp--preset--color--charcoal-1,#1e1e1e);--wporg-language-suggest--font-size:var(--wp--preset--font-size--extra-small,12px);--wporg-language-suggest--spacing:var(--wp--preset--spacing--10,10px);background-color:var(--wporg-language-suggest--background);color:var(--wporg-language-suggest--text);font-size:var(--wporg-language-suggest--font-size);line-height:1;text-align:center}.wp-block-wporg-language-suggest>*{padding:var(--wporg-language-suggest--spacing) 4px}.wp-block-wporg-language-suggest.is-style-prominent{--wporg-language-suggest--background:var(--wp--preset--color--lemon-3,#fffdd6);--wporg-language-suggest--font-size:var(--wp--preset--font-size--small,14px);--wporg-language-suggest--spacing:var(--wp--preset--spacing--20,20px)}
 /*# sourceURL=https://wordpress.org/plugins/wp-content/mu-plugins/pub-sync/blocks/language-suggest/build/style.css */
@@ -108,12 +110,132 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .wp-block-button__link{align-content:center;box-sizing:border-box;cursor:pointer;display:inline-block;height:100%;text-align:center;word-break:break-word}.wp-block-button__link.aligncenter{text-align:center}.wp-block-button__link.alignright{text-align:right}:where(.wp-block-button__link){border-radius:9999px;box-shadow:none;padding:calc(.667em + 2px) calc(1.333em + 2px);text-decoration:none}.wp-block-button[style*=text-decoration] .wp-block-button__link{text-decoration:inherit}.wp-block-buttons>.wp-block-button.has-custom-width{max-width:none}.wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link{width:100%}.wp-block-buttons>.wp-block-button.has-custom-font-size .wp-block-button__link{font-size:inherit}.wp-block-buttons>.wp-block-button.wp-block-button__width-25{width:calc(25% - var(--wp--style--block-gap, .5em)*.75)}.wp-block-buttons>.wp-block-button.wp-block-button__width-50{width:calc(50% - var(--wp--style--block-gap, .5em)*.5)}.wp-block-buttons>.wp-block-button.wp-block-button__width-75{width:calc(75% - var(--wp--style--block-gap, .5em)*.25)}.wp-block-buttons>.wp-block-button.wp-block-button__width-100{flex-basis:100%;width:100%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-25{width:25%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-50{width:50%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-75{width:75%}.wp-block-button.is-style-squared,.wp-block-button__link.wp-block-button.is-style-squared{border-radius:0}.wp-block-button.no-border-radius,.wp-block-button__link.no-border-radius{border-radius:0!important}:root :where(.wp-block-button .wp-block-button__link.is-style-outline),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link){border:2px solid;padding:.667em 1.333em}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-text-color)){color:currentColor}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background)){background-color:initial;background-image:none}
 /*# sourceURL=https://wordpress.org/plugins/wp-includes/blocks/button/style.min.css */
 </style>
+<link rel='stylesheet' id='wporg-plugins-screenshots-css' href='https://wordpress.org/plugins/wp-content/plugins/plugin-directory/shortcodes/../css/screenshots.css?ver=1780918117' media='all' />
+<style id="wp-block-image-inline-css">
+.wp-block-image>a,.wp-block-image>figure>a{display:inline-block}.wp-block-image img{box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom}@media not (prefers-reduced-motion){.wp-block-image img.hide{visibility:hidden}.wp-block-image img.show{animation:show-content-image .4s}}.wp-block-image[style*=border-radius] img,.wp-block-image[style*=border-radius]>a{border-radius:inherit}.wp-block-image.has-custom-border img{box-sizing:border-box}.wp-block-image.aligncenter{text-align:center}.wp-block-image.alignfull>a,.wp-block-image.alignwide>a{width:100%}.wp-block-image.alignfull img,.wp-block-image.alignwide img{height:auto;width:100%}.wp-block-image .aligncenter,.wp-block-image .alignleft,.wp-block-image .alignright,.wp-block-image.aligncenter,.wp-block-image.alignleft,.wp-block-image.alignright{display:table}.wp-block-image .aligncenter>figcaption,.wp-block-image .alignleft>figcaption,.wp-block-image .alignright>figcaption,.wp-block-image.aligncenter>figcaption,.wp-block-image.alignleft>figcaption,.wp-block-image.alignright>figcaption{caption-side:bottom;display:table-caption}.wp-block-image .alignleft{float:left;margin:.5em 1em .5em 0}.wp-block-image .alignright{float:right;margin:.5em 0 .5em 1em}.wp-block-image .aligncenter{margin-left:auto;margin-right:auto}.wp-block-image :where(figcaption){margin-bottom:1em;margin-top:.5em}.wp-block-image.is-style-circle-mask img{border-radius:9999px}@supports ((-webkit-mask-image:none) or (mask-image:none)) or (-webkit-mask-image:none){.wp-block-image.is-style-circle-mask img{border-radius:0;-webkit-mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-mode:alpha;-webkit-mask-position:center;mask-position:center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:contain;mask-size:contain}}:root :where(.wp-block-image.is-style-rounded img,.wp-block-image .is-style-rounded img){border-radius:9999px}.wp-block-image figure{margin:0}.wp-lightbox-container{display:flex;flex-direction:column;position:relative}.wp-lightbox-container img{cursor:zoom-in}.wp-lightbox-container img:hover+button{opacity:1}.wp-lightbox-container button{align-items:center;backdrop-filter:blur(16px) saturate(180%);background-color:#5a5a5a40;border:none;border-radius:4px;cursor:zoom-in;display:flex;height:20px;justify-content:center;opacity:0;padding:0;position:absolute;right:16px;text-align:center;top:16px;width:20px;z-index:100}@media not (prefers-reduced-motion){.wp-lightbox-container button{transition:opacity .2s ease}}.wp-lightbox-container button:focus-visible{outline:3px auto #5a5a5a40;outline:3px auto -webkit-focus-ring-color;outline-offset:3px}.wp-lightbox-container button:hover{cursor:pointer;opacity:1}.wp-lightbox-container button:focus{opacity:1}.wp-lightbox-container button:focus,.wp-lightbox-container button:hover,.wp-lightbox-container button:not(:hover):not(:active):not(.has-background){background-color:#5a5a5a40;border:none}.wp-lightbox-overlay{box-sizing:border-box;cursor:zoom-out;height:100vh;left:0;overflow:hidden;position:fixed;top:0;visibility:hidden;width:100%;z-index:100000}.wp-lightbox-overlay .wp-lightbox-close-button{align-items:center;cursor:pointer;display:flex;font-family:inherit;gap:8px;justify-content:center;line-height:1;min-height:40px;min-width:40px;padding:0 4px;position:absolute;right:calc(env(safe-area-inset-right) + 16px);top:calc(env(safe-area-inset-top) + 16px);z-index:5000000}.wp-lightbox-overlay .wp-lightbox-close-button:focus,.wp-lightbox-overlay .wp-lightbox-close-button:hover,.wp-lightbox-overlay .wp-lightbox-close-button:not(:hover):not(:active):not(.has-background){background:none;border:none}.wp-lightbox-overlay .wp-lightbox-close-button:has(.wp-lightbox-close-text:not([hidden])) .wp-lightbox-close-icon svg{height:1em;width:1em}.wp-lightbox-overlay .wp-lightbox-close-icon svg{display:block}.wp-lightbox-overlay .wp-lightbox-navigation-button-next,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{align-items:center;bottom:16px;cursor:pointer;display:flex;font-family:inherit;gap:4px;justify-content:center;line-height:1;min-height:40px;min-width:40px;padding:0 8px;position:absolute;z-index:2000002}.wp-lightbox-overlay .wp-lightbox-navigation-button-next[hidden],.wp-lightbox-overlay .wp-lightbox-navigation-button-prev[hidden]{display:none}@media (min-width:960px){.wp-lightbox-overlay .wp-lightbox-navigation-button-next,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{bottom:50%;transform:translateY(-50%)}}.wp-lightbox-overlay .wp-lightbox-navigation-button-next:focus,.wp-lightbox-overlay .wp-lightbox-navigation-button-next:hover,.wp-lightbox-overlay .wp-lightbox-navigation-button-next:not(:hover):not(:active):not(.has-background),.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:focus,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:hover,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:not(:hover):not(:active):not(.has-background){background:none;border:none;padding:0 8px}.wp-lightbox-overlay .wp-lightbox-navigation-button-next:has(.wp-lightbox-navigation-text:not([hidden])) .wp-lightbox-navigation-icon svg,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:has(.wp-lightbox-navigation-text:not([hidden])) .wp-lightbox-navigation-icon svg{display:block;height:1.5em;width:1.5em}.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{left:calc(env(safe-area-inset-left) + 16px)}.wp-lightbox-overlay .wp-lightbox-navigation-button-next{right:calc(env(safe-area-inset-right) + 16px)}.wp-lightbox-overlay .wp-lightbox-navigation-icon svg{vertical-align:middle}.wp-lightbox-overlay .lightbox-image-container{height:var(--wp--lightbox-container-height);left:50%;overflow:hidden;position:absolute;top:50%;transform:translate(-50%,-50%);transform-origin:top left;width:var(--wp--lightbox-container-width);z-index:2000001}.wp-lightbox-overlay .wp-block-image{align-items:center;box-sizing:border-box;display:flex;height:100%;justify-content:center;margin:0;position:relative;transform-origin:0 0;width:100%;z-index:3000000}.wp-lightbox-overlay .wp-block-image img{height:var(--wp--lightbox-image-height);min-height:var(--wp--lightbox-image-height);min-width:var(--wp--lightbox-image-width);width:var(--wp--lightbox-image-width)}.wp-lightbox-overlay .wp-block-image figcaption{display:none}.wp-lightbox-overlay button{background:none;border:none}.wp-lightbox-overlay .scrim{background-color:#fff;height:100%;opacity:.9;position:absolute;width:100%;z-index:2000000}.wp-lightbox-overlay.active{visibility:visible}@media not (prefers-reduced-motion){.wp-lightbox-overlay.active{animation:turn-on-visibility .25s both}.wp-lightbox-overlay.active img{animation:turn-on-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active){animation:turn-off-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active) img{animation:turn-off-visibility .25s both}.wp-lightbox-overlay.zoom.active{animation:none;opacity:1;visibility:visible}.wp-lightbox-overlay.zoom.active .lightbox-image-container{animation:lightbox-zoom-in .4s}.wp-lightbox-overlay.zoom.active .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.active .scrim{animation:turn-on-visibility .4s forwards}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active){animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container{animation:lightbox-zoom-out .4s}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .scrim{animation:turn-off-visibility .4s forwards}}@keyframes show-content-image{0%{visibility:hidden}99%{visibility:hidden}to{visibility:visible}}@keyframes turn-on-visibility{0%{opacity:0}to{opacity:1}}@keyframes turn-off-visibility{0%{opacity:1;visibility:visible}99%{opacity:0;visibility:visible}to{opacity:0;visibility:hidden}}@keyframes lightbox-zoom-in{0%{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale))}to{transform:translate(-50%,-50%) scale(1)}}@keyframes lightbox-zoom-out{0%{transform:translate(-50%,-50%) scale(1);visibility:visible}99%{visibility:visible}to{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale));visibility:hidden}}
+/*# sourceURL=https://wordpress.org/plugins/wp-includes/blocks/image/style.min.css */
+</style>
+<link rel='stylesheet' id='wp-block-gallery-css' href='https://wordpress.org/plugins/wp-includes/blocks/gallery/style.min.css?ver=7.1-alpha-62496' media='all' />
+<style id="gallery-lightbox-enhancements-masonry-inline-css">
+/**
+ * Masonry style variation for the core/gallery block.
+ *
+ * Polyfill for https://github.com/WordPress/gutenberg/pull/77615 — adds
+ * `is-style-masonry` to the Gallery block's style picker. The variation
+ * uses CSS multi-column flow so figures keep their natural aspect
+ * ratios and settle into a brick rhythm; the figure markup is the same
+ * one core ships, so caption, lightbox, linkTo, random order and
+ * resolution work unchanged.
+ *
+ * Visual treatment is intentionally minimal — no border, no radius, no
+ * shadow, no hover lift. wp.org gallery patterns render thumbnails as
+ * bare images; this variation does the same so it sits inside the
+ * existing UI vocabulary.
+ */
+
+.wp-block-gallery.has-nested-images.is-style-masonry {
+	display: block;
+	column-gap: var(--wp--style--unstable-gallery-gap, 16px);
+	column-count: 2;
+}
+
+.wp-block-gallery.has-nested-images.is-style-masonry.columns-1 {
+	column-count: 1;
+}
+
+@media (min-width: 600px) {
+
+	.wp-block-gallery.has-nested-images.is-style-masonry {
+		column-count: 3;
+	}
+
+	.wp-block-gallery.has-nested-images.is-style-masonry.columns-2 {
+		column-count: 2;
+	}
+
+	.wp-block-gallery.has-nested-images.is-style-masonry.columns-3 {
+		column-count: 3;
+	}
+
+	.wp-block-gallery.has-nested-images.is-style-masonry.columns-4 {
+		column-count: 4;
+	}
+
+	.wp-block-gallery.has-nested-images.is-style-masonry.columns-5 {
+		column-count: 5;
+	}
+
+	.wp-block-gallery.has-nested-images.is-style-masonry.columns-6 {
+		column-count: 6;
+	}
+
+	.wp-block-gallery.has-nested-images.is-style-masonry.columns-7 {
+		column-count: 7;
+	}
+
+	.wp-block-gallery.has-nested-images.is-style-masonry.columns-8 {
+		column-count: 8;
+	}
+
+	.wp-block-gallery.has-nested-images.is-style-masonry.columns-default {
+		column-count: 3;
+	}
+}
+
+/**
+ * Each figure spans its column with natural height. The aspect-ratio
+ * override neutralises core/gallery's shared aspect-ratio inline style,
+ * which would otherwise force every tile to the same shape and undo
+ * the brick layout.
+ */
+.wp-block-gallery.has-nested-images.is-style-masonry figure.wp-block-image:not(#individual-image) {
+	width: 100%;
+	margin: 0 0 var(--wp--style--unstable-gallery-gap, 16px);
+	break-inside: avoid;
+	display: block;
+	aspect-ratio: auto !important;
+}
+
+/**
+ * The is-cropped rules in core force a fixed height and object-fit:
+ * cover on images. That collapses masonry into a grid, so neutralise
+ * them. !important is required because is-cropped can co-exist with
+ * is-style-masonry on the wrapper.
+ */
+.wp-block-gallery.has-nested-images.is-style-masonry figure.wp-block-image:not(#individual-image) a,
+.wp-block-gallery.has-nested-images.is-style-masonry figure.wp-block-image:not(#individual-image) img {
+	height: auto !important;
+	object-fit: initial !important;
+}
+
+.wp-block-gallery.has-nested-images.is-style-masonry figure.wp-block-image:not(#individual-image) img {
+	display: block;
+	width: 100%;
+}
+
+.wp-block-gallery.has-nested-images.is-style-masonry figure.wp-block-image:not(#individual-image) button.lightbox-trigger {
+	cursor: zoom-in;
+}
+
+/**
+ * Default Gallery paints a `backdrop-filter: blur(3px)` strip over the
+ * bottom of every figure with a figcaption to host a legible scrim.
+ * In the masonry style captions live in the lightbox, so the strip is
+ * visible over a clean image and reads as accidental softening.
+ * Disable it.
+ */
+.wp-block-gallery.has-nested-images.is-style-masonry figure.wp-block-image::before {
+	content: none;
+}
+
+/*# sourceURL=https://wordpress.org/plugins/wp-content/plugins/gallery-lightbox-enhancements/assets/masonry.css */
+</style>
 <style id="wp-block-heading-inline-css">
 h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
 /*# sourceURL=https://wordpress.org/plugins/wp-includes/blocks/heading/style.min.css */
 </style>
 <style id="wporg-ratings-stars-style-inline-css">
-.wp-block-wporg-ratings-stars{align-items:center;display:flex}.wporg-ratings-stars__icons{display:inline-flex}.wporg-ratings-stars__icons svg{height:32px;margin-inline-start:-6px;width:32px;fill:var(--wp--custom--wporg-ratings-stars--color--fill,#e26f56)}.rtl .wporg-ratings-stars__icons .is-star-half{transform:rotateY(-180deg)}.wporg-ratings-stars__label{color:var(--wp--preset--color--charcoal-4);font-size:var(--wp--preset--font-size--small)}.wporg-ratings-stars__icons+.wporg-ratings-stars__label{margin-inline-start:.5em}
+.wp-block-wporg-ratings-stars{align-items:center;display:flex}.wporg-ratings-stars__icons{display:inline-flex}.wporg-ratings-stars__icons svg{fill:var(--wp--custom--wporg-ratings-stars--color--fill,#e26f56);height:32px;margin-inline-start:-6px;width:32px}.rtl .wporg-ratings-stars__icons .is-star-half{transform:rotateY(-180deg)}.wporg-ratings-stars__label{color:var(--wp--preset--color--charcoal-4);font-size:var(--wp--preset--font-size--small)}.wporg-ratings-stars__icons+.wporg-ratings-stars__label{margin-inline-start:.5em}
 
 /*# sourceURL=https://wordpress.org/plugins/wp-content/mu-plugins/pub-sync/blocks/ratings-stars/build/style-index.css */
 </style>
@@ -133,10 +255,6 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 <style id="wp-block-social-links-inline-css">
 .wp-block-social-links{background:none;box-sizing:border-box;margin-left:0;padding-left:0;padding-right:0;text-indent:0}.wp-block-social-links .wp-social-link a,.wp-block-social-links .wp-social-link a:hover{border-bottom:0;box-shadow:none;text-decoration:none}.wp-block-social-links .wp-social-link svg{height:1em;width:1em}.wp-block-social-links .wp-social-link span:not(.screen-reader-text){font-size:.65em;margin-left:.5em;margin-right:.5em}.wp-block-social-links.has-small-icon-size{font-size:16px}.wp-block-social-links,.wp-block-social-links.has-normal-icon-size{font-size:24px}.wp-block-social-links.has-large-icon-size{font-size:36px}.wp-block-social-links.has-huge-icon-size{font-size:48px}.wp-block-social-links.aligncenter{display:flex;justify-content:center}.wp-block-social-links.alignright{justify-content:flex-end}.wp-block-social-link{border-radius:9999px;display:block}@media not (prefers-reduced-motion){.wp-block-social-link{transition:transform .1s ease}}.wp-block-social-link{height:auto}.wp-block-social-link a{align-items:center;display:flex;line-height:0}.wp-block-social-link:hover{transform:scale(1.1)}.wp-block-social-links .wp-block-social-link.wp-social-link{display:inline-block;margin:0;padding:0}.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor svg,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor:active,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor:hover,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor:visited{fill:currentColor;color:currentColor}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link{background-color:#f0f0f0;color:#444}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-amazon{background-color:#f90;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-bandcamp{background-color:#1ea0c3;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-behance{background-color:#0757fe;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-bluesky{background-color:#0a7aff;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-codepen{background-color:#1e1f26;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-deviantart{background-color:#02e49b;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-discord{background-color:#5865f2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-dribbble{background-color:#e94c89;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-dropbox{background-color:#4280ff;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-etsy{background-color:#f45800;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-facebook{background-color:#0866ff;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-fivehundredpx{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-flickr{background-color:#0461dd;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-foursquare{background-color:#e65678;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-github{background-color:#24292d;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-goodreads{background-color:#eceadd;color:#382110}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-google{background-color:#ea4434;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-gravatar{background-color:#1d4fc4;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-instagram{background-color:#f00075;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-lastfm{background-color:#e21b24;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-linkedin{background-color:#0d66c2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-mastodon{background-color:#3288d4;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-medium{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-meetup{background-color:#f6405f;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-patreon{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-pinterest{background-color:#e60122;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-pocket{background-color:#ef4155;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-reddit{background-color:#ff4500;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-skype{background-color:#0478d7;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-snapchat{stroke:#000;background-color:#fefc00;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-soundcloud{background-color:#ff5600;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-spotify{background-color:#1bd760;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-telegram{background-color:#2aabee;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-threads{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-tiktok{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-tumblr{background-color:#011835;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-twitch{background-color:#6440a4;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-twitter{background-color:#1da1f2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-vimeo{background-color:#1eb7ea;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-vk{background-color:#4680c2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-wordpress{background-color:#3499cd;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-whatsapp{background-color:#25d366;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-x{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-yelp{background-color:#d32422;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-youtube{background-color:red;color:#fff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link{background:none}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link svg{height:1.25em;width:1.25em}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-amazon{color:#f90}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-bandcamp{color:#1ea0c3}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-behance{color:#0757fe}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-bluesky{color:#0a7aff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-codepen{color:#1e1f26}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-deviantart{color:#02e49b}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-discord{color:#5865f2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-dribbble{color:#e94c89}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-dropbox{color:#4280ff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-etsy{color:#f45800}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-facebook{color:#0866ff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-fivehundredpx{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-flickr{color:#0461dd}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-foursquare{color:#e65678}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-github{color:#24292d}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-goodreads{color:#382110}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-google{color:#ea4434}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-gravatar{color:#1d4fc4}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-instagram{color:#f00075}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-lastfm{color:#e21b24}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-linkedin{color:#0d66c2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-mastodon{color:#3288d4}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-medium{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-meetup{color:#f6405f}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-patreon{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-pinterest{color:#e60122}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-pocket{color:#ef4155}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-reddit{color:#ff4500}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-skype{color:#0478d7}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-snapchat{stroke:#000;color:#fff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-soundcloud{color:#ff5600}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-spotify{color:#1bd760}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-telegram{color:#2aabee}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-threads{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-tiktok{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-tumblr{color:#011835}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-twitch{color:#6440a4}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-twitter{color:#1da1f2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-vimeo{color:#1eb7ea}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-vk{color:#4680c2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-whatsapp{color:#25d366}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-wordpress{color:#3499cd}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-x{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-yelp{color:#d32422}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-youtube{color:red}.wp-block-social-links.is-style-pill-shape .wp-social-link{width:auto}:root :where(.wp-block-social-links .wp-social-link a){padding:.25em}:root :where(.wp-block-social-links.is-style-logos-only .wp-social-link a){padding:0}:root :where(.wp-block-social-links.is-style-pill-shape .wp-social-link a){padding-left:.6666666667em;padding-right:.6666666667em}.wp-block-social-links:not(.has-icon-color):not(.has-icon-background-color) .wp-social-link-snapchat .wp-block-social-link-label{color:#000}
 /*# sourceURL=https://wordpress.org/plugins/wp-includes/blocks/social-links/style.min.css */
-</style>
-<style id="wp-block-image-inline-css">
-.wp-block-image>a,.wp-block-image>figure>a{display:inline-block}.wp-block-image img{box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom}@media not (prefers-reduced-motion){.wp-block-image img.hide{visibility:hidden}.wp-block-image img.show{animation:show-content-image .4s}}.wp-block-image[style*=border-radius] img,.wp-block-image[style*=border-radius]>a{border-radius:inherit}.wp-block-image.has-custom-border img{box-sizing:border-box}.wp-block-image.aligncenter{text-align:center}.wp-block-image.alignfull>a,.wp-block-image.alignwide>a{width:100%}.wp-block-image.alignfull img,.wp-block-image.alignwide img{height:auto;width:100%}.wp-block-image .aligncenter,.wp-block-image .alignleft,.wp-block-image .alignright,.wp-block-image.aligncenter,.wp-block-image.alignleft,.wp-block-image.alignright{display:table}.wp-block-image .aligncenter>figcaption,.wp-block-image .alignleft>figcaption,.wp-block-image .alignright>figcaption,.wp-block-image.aligncenter>figcaption,.wp-block-image.alignleft>figcaption,.wp-block-image.alignright>figcaption{caption-side:bottom;display:table-caption}.wp-block-image .alignleft{float:left;margin:.5em 1em .5em 0}.wp-block-image .alignright{float:right;margin:.5em 0 .5em 1em}.wp-block-image .aligncenter{margin-left:auto;margin-right:auto}.wp-block-image :where(figcaption){margin-bottom:1em;margin-top:.5em}.wp-block-image.is-style-circle-mask img{border-radius:9999px}@supports ((-webkit-mask-image:none) or (mask-image:none)) or (-webkit-mask-image:none){.wp-block-image.is-style-circle-mask img{border-radius:0;-webkit-mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-mode:alpha;-webkit-mask-position:center;mask-position:center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:contain;mask-size:contain}}:root :where(.wp-block-image.is-style-rounded img,.wp-block-image .is-style-rounded img){border-radius:9999px}.wp-block-image figure{margin:0}.wp-lightbox-container{display:flex;flex-direction:column;position:relative}.wp-lightbox-container img{cursor:zoom-in}.wp-lightbox-container img:hover+button{opacity:1}.wp-lightbox-container button{align-items:center;backdrop-filter:blur(16px) saturate(180%);background-color:#5a5a5a40;border:none;border-radius:4px;cursor:zoom-in;display:flex;height:20px;justify-content:center;opacity:0;padding:0;position:absolute;right:16px;text-align:center;top:16px;width:20px;z-index:100}@media not (prefers-reduced-motion){.wp-lightbox-container button{transition:opacity .2s ease}}.wp-lightbox-container button:focus-visible{outline:3px auto #5a5a5a40;outline:3px auto -webkit-focus-ring-color;outline-offset:3px}.wp-lightbox-container button:hover{cursor:pointer;opacity:1}.wp-lightbox-container button:focus{opacity:1}.wp-lightbox-container button:focus,.wp-lightbox-container button:hover,.wp-lightbox-container button:not(:hover):not(:active):not(.has-background){background-color:#5a5a5a40;border:none}.wp-lightbox-overlay{box-sizing:border-box;cursor:zoom-out;height:100vh;left:0;overflow:hidden;position:fixed;top:0;visibility:hidden;width:100%;z-index:100000}.wp-lightbox-overlay .wp-lightbox-close-button{align-items:center;cursor:pointer;display:flex;font-family:inherit;gap:8px;justify-content:center;line-height:1;min-height:40px;min-width:40px;padding:0 4px;position:absolute;right:calc(env(safe-area-inset-right) + 16px);top:calc(env(safe-area-inset-top) + 16px);z-index:5000000}.wp-lightbox-overlay .wp-lightbox-close-button:focus,.wp-lightbox-overlay .wp-lightbox-close-button:hover,.wp-lightbox-overlay .wp-lightbox-close-button:not(:hover):not(:active):not(.has-background){background:none;border:none}.wp-lightbox-overlay .wp-lightbox-close-button:has(.wp-lightbox-close-text:not([hidden])) .wp-lightbox-close-icon svg{height:1em;width:1em}.wp-lightbox-overlay .wp-lightbox-close-icon svg{display:block}.wp-lightbox-overlay .wp-lightbox-navigation-button-next,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{align-items:center;bottom:16px;cursor:pointer;display:flex;font-family:inherit;gap:4px;justify-content:center;line-height:1;min-height:40px;min-width:40px;padding:0 8px;position:absolute;z-index:2000002}.wp-lightbox-overlay .wp-lightbox-navigation-button-next[hidden],.wp-lightbox-overlay .wp-lightbox-navigation-button-prev[hidden]{display:none}@media (min-width:960px){.wp-lightbox-overlay .wp-lightbox-navigation-button-next,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{bottom:50%;transform:translateY(-50%)}}.wp-lightbox-overlay .wp-lightbox-navigation-button-next:focus,.wp-lightbox-overlay .wp-lightbox-navigation-button-next:hover,.wp-lightbox-overlay .wp-lightbox-navigation-button-next:not(:hover):not(:active):not(.has-background),.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:focus,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:hover,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:not(:hover):not(:active):not(.has-background){background:none;border:none;padding:0 8px}.wp-lightbox-overlay .wp-lightbox-navigation-button-next:has(.wp-lightbox-navigation-text:not([hidden])) .wp-lightbox-navigation-icon svg,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:has(.wp-lightbox-navigation-text:not([hidden])) .wp-lightbox-navigation-icon svg{display:block;height:1.5em;width:1.5em}.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{left:calc(env(safe-area-inset-left) + 16px)}.wp-lightbox-overlay .wp-lightbox-navigation-button-next{right:calc(env(safe-area-inset-right) + 16px)}.wp-lightbox-overlay .wp-lightbox-navigation-icon svg{vertical-align:middle}.wp-lightbox-overlay .lightbox-image-container{height:var(--wp--lightbox-container-height);left:50%;overflow:hidden;position:absolute;top:50%;transform:translate(-50%,-50%);transform-origin:top left;width:var(--wp--lightbox-container-width);z-index:2000001}.wp-lightbox-overlay .wp-block-image{align-items:center;box-sizing:border-box;display:flex;height:100%;justify-content:center;margin:0;position:relative;transform-origin:0 0;width:100%;z-index:3000000}.wp-lightbox-overlay .wp-block-image img{height:var(--wp--lightbox-image-height);min-height:var(--wp--lightbox-image-height);min-width:var(--wp--lightbox-image-width);width:var(--wp--lightbox-image-width)}.wp-lightbox-overlay .wp-block-image figcaption{display:none}.wp-lightbox-overlay button{background:none;border:none}.wp-lightbox-overlay .scrim{background-color:#fff;height:100%;opacity:.9;position:absolute;width:100%;z-index:2000000}.wp-lightbox-overlay.active{visibility:visible}@media not (prefers-reduced-motion){.wp-lightbox-overlay.active{animation:turn-on-visibility .25s both}.wp-lightbox-overlay.active img{animation:turn-on-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active){animation:turn-off-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active) img{animation:turn-off-visibility .25s both}.wp-lightbox-overlay.zoom.active{animation:none;opacity:1;visibility:visible}.wp-lightbox-overlay.zoom.active .lightbox-image-container{animation:lightbox-zoom-in .4s}.wp-lightbox-overlay.zoom.active .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.active .scrim{animation:turn-on-visibility .4s forwards}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active){animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container{animation:lightbox-zoom-out .4s}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .scrim{animation:turn-off-visibility .4s forwards}}@keyframes show-content-image{0%{visibility:hidden}99%{visibility:hidden}to{visibility:visible}}@keyframes turn-on-visibility{0%{opacity:0}to{opacity:1}}@keyframes turn-off-visibility{0%{opacity:1;visibility:visible}99%{opacity:0;visibility:visible}to{opacity:0;visibility:hidden}}@keyframes lightbox-zoom-in{0%{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale))}to{transform:translate(-50%,-50%) scale(1)}}@keyframes lightbox-zoom-out{0%{transform:translate(-50%,-50%) scale(1);visibility:visible}99%{visibility:visible}to{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale));visibility:hidden}}
-/*# sourceURL=https://wordpress.org/plugins/wp-includes/blocks/image/style.min.css */
 </style>
 <style id="wp-block-library-inline-css">
 :root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
@@ -174,7 +292,7 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 /*# sourceURL=wp-emoji-styles-inline-css */
 </style>
 <style id="core-block-supports-inline-css">
-.wp-container-core-navigation-is-layout-bd946717{flex-direction:column;align-items:flex-start;}.wp-elements-6a6eb2cc010eb5155d0df9b6de346b78 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--white);}.wp-elements-6a6eb2cc010eb5155d0df9b6de346b78 a:where(:not(.wp-element-button)):hover{color:var(--wp--preset--color--white);}.wp-container-core-group-is-layout-d14b0e0f{flex-wrap:nowrap;gap:0;}.wp-container-core-navigation-is-layout-aa18ee20{gap:24px;}.wp-container-wporg-local-navigation-bar-is-layout-1567b4e4{flex-wrap:nowrap;justify-content:space-between;}.wp-container-7{position:sticky;z-index:10;}.wp-container-core-group-is-layout-7794ff42{flex-wrap:nowrap;gap:var(--wp--preset--spacing--10);justify-content:space-between;}.wp-container-core-group-is-layout-0e7334e8 > .alignfull{margin-right:calc(var(--wp--preset--spacing--edge-space) * -1);margin-left:calc(var(--wp--preset--spacing--edge-space) * -1);}.wp-container-core-group-is-layout-3fccc9c5{grid-template-columns:repeat(auto-fill, minmax(min(150px, 100%), 1fr));container-type:inline-size;gap:var(--wp--preset--spacing--20);}.wp-container-core-group-is-layout-e1f0195b{flex-wrap:nowrap;justify-content:flex-start;}
+.wp-container-core-navigation-is-layout-bd946717{flex-direction:column;align-items:flex-start;}.wp-elements-6a6eb2cc010eb5155d0df9b6de346b78 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--white);}.wp-elements-6a6eb2cc010eb5155d0df9b6de346b78 a:where(:not(.wp-element-button)):hover{color:var(--wp--preset--color--white);}.wp-container-core-group-is-layout-d14b0e0f{flex-wrap:nowrap;gap:0;}.wp-container-core-navigation-is-layout-aa18ee20{gap:24px;}.wp-container-wporg-local-navigation-bar-is-layout-1567b4e4{flex-wrap:nowrap;justify-content:space-between;}.wp-container-7{position:sticky;z-index:10;}.wp-block-gallery.wp-block-gallery-10{--wp--style--unstable-gallery-gap:var( --wp--style--gallery-gap-default, var( --gallery-block--gutter-size, var( --wp--style--block-gap, 0.5em ) ) );gap:var( --wp--style--gallery-gap-default, var( --gallery-block--gutter-size, var( --wp--style--block-gap, 0.5em ) ) );}.wp-container-core-group-is-layout-7794ff42{flex-wrap:nowrap;gap:var(--wp--preset--spacing--10);justify-content:space-between;}.wp-container-core-group-is-layout-0e7334e8 > .alignfull{margin-right:calc(var(--wp--preset--spacing--edge-space) * -1);margin-left:calc(var(--wp--preset--spacing--edge-space) * -1);}.wp-container-core-group-is-layout-3fccc9c5{grid-template-columns:repeat(auto-fill, minmax(min(150px, 100%), 1fr));container-type:inline-size;gap:var(--wp--preset--spacing--20);}.wp-container-core-group-is-layout-e1f0195b{flex-wrap:nowrap;justify-content:flex-start;}
 /*# sourceURL=core-block-supports-inline-css */
 </style>
 <style id="wp-block-template-skip-link-inline-css">
@@ -182,12 +300,13 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 .skip-link.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute!important;width:1px;word-wrap:normal!important;word-break:normal!important}.skip-link.screen-reader-text:focus{background-color:#eee;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}
 /*# sourceURL=/wp-includes/css/wp-block-template-skip-link.min.css */
 </style>
-<link rel='stylesheet' id='dashicons-css' href='https://s.w.org/wp-includes/css/dashicons.min.css?ver=7.1-alpha-62426' media='all' />
+<link rel='stylesheet' id='gallery-lightbox-enhancements-captions-css' href='https://wordpress.org/plugins/wp-content/plugins/gallery-lightbox-enhancements/assets/lightbox-captions.css?ver=1781063854' media='all' />
+<link rel='stylesheet' id='dashicons-css' href='https://s.w.org/wp-includes/css/dashicons.min.css?ver=7.1-alpha-62496' media='all' />
 <link rel='stylesheet' id='open-sans-css' href='https://fonts.googleapis.com/css2?family=Open+Sans%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C600%3B1%2C300%3B1%2C400%3B1%2C600&#038;display=swap' media='all' />
-<link rel='stylesheet' id='wporg-style-css' href='https://s.w.org/wp-content/themes/pub/wporg-plugins-2024/css/style.css?ver=1774331654' media='all' />
+<link rel='stylesheet' id='wporg-style-css' href='https://s.w.org/wp-content/themes/pub/wporg-plugins-2024/build/style.css?ver=1780657961' media='all' />
 <link rel='stylesheet' id='wporg-global-fonts-css' href='https://wordpress.org/plugins/wp-content/mu-plugins/pub-sync/global-fonts/style.css?ver=1760573656' media='all' />
-<link rel='stylesheet' id='wporg-parent-2021-style-css' href='https://wordpress.org/plugins/wp-content/themes/wporg-parent-2021/build/style.css?ver=7.1-alpha-62426' media='all' />
-<link rel='stylesheet' id='wporg-parent-2021-block-styles-css' href='https://wordpress.org/plugins/wp-content/themes/wporg-parent-2021/build/block-styles.css?ver=7.1-alpha-62426' media='all' />
+<link rel='stylesheet' id='wporg-parent-2021-style-css' href='https://wordpress.org/plugins/wp-content/themes/wporg-parent-2021/build/style.css?ver=7.1-alpha-62496' media='all' />
+<link rel='stylesheet' id='wporg-parent-2021-block-styles-css' href='https://wordpress.org/plugins/wp-content/themes/wporg-parent-2021/build/block-styles.css?ver=7.1-alpha-62496' media='all' />
 <link rel='stylesheet' id='wporg-parent-2021-print-css' href='https://wordpress.org/plugins/wp-content/themes/wporg-parent-2021/build/print.css?ver=1748268724' media='print' />
 <link rel='stylesheet' id='wporg-global-header-footer-css' href='https://wordpress.org/plugins/wp-content/mu-plugins/pub-sync/blocks/global-header-footer/build/style.css?ver=1778572070' media='all' />
 <script data-wp-strategy="defer" defer id="wporg-local-navigation-bar-view-script-js" src="https://wordpress.org/plugins/wp-content/mu-plugins/pub-sync/blocks/local-navigation-bar/build/view.js?ver=2ae6cba4cf35f434c642"></script>
@@ -197,10 +316,10 @@ var languageSuggestData = {"locale":"en_US"};
 </script>
 <script data-wp-strategy="defer" defer id="wporg-language-suggest-view-script-js" src="https://wordpress.org/plugins/wp-content/mu-plugins/pub-sync/blocks/language-suggest/build/front.js?ver=6f71d5ef610256d46dec"></script>
 <link rel="https://api.w.org/" href="https://wordpress.org/plugins/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://wordpress.org/plugins/wp-json/wp/v2/plugin/84501" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://wordpress.org/plugins/xmlrpc.php?rsd" />
-<meta name="generator" content="WordPress 7.1-alpha-62426" />
+<meta name="generator" content="WordPress 7.1-alpha-62496" />
 <link rel='shortlink' href='https://wordpress.org/plugins/?p=84501' />
 <link rel="canonical" href="https://wordpress.org/plugins/gdpr-cookie-compliance/">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Stream WordPress user activity plugin v4.1.2 -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Stream WordPress user activity plugin v4.2.0 -->
 	<style>img#wpstats{display:none}</style>
 		<meta property="og:title" content="GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" />
 <meta property="og:description" content="Cookie notice banner for GDPR, CCPA, EU cookie law, data protection and privacy regulations and other cookie law and consent notice requirements on yo &hellip;" />
@@ -423,7 +542,7 @@ var languageSuggestData = {"locale":"en_US"};
 <article id="post-84501" class="alignwide post-84501 plugin type-plugin status-publish hentry plugin_tags-ccpa plugin_tags-cookie-banner plugin_tags-cookie-consent plugin_tags-dsgvo plugin_tags-gdpr plugin_contributors-mooveagency plugin_committers-mooveagency plugin_support_reps-janeaustin plugin_support_reps-mooveagency plugin_support_reps-wpfrnd">
 	<div class="plugin-banner" id="plugin-banner-gdpr-cookie-compliance"><img decoding="async" fetchpriority="high" alt="" src="https://ps.w.org/gdpr-cookie-compliance/assets/banner-772x250.png?rev=3336406" srcset='https://ps.w.org/gdpr-cookie-compliance/assets/banner-772x250.png?rev=3336406 772w, https://ps.w.org/gdpr-cookie-compliance/assets/banner-1544x500.png?rev=3336406 1544w' sizes="(min-width: 900px) 1544px, 772px"></div>
 	<header class="plugin-header">
-						
+								
 		<div class="entry-heading-container">
 			<div>
 				<div class="entry-thumbnail">
@@ -437,7 +556,7 @@ var languageSuggestData = {"locale":"en_US"};
 			</div>
 			<div class="plugin-actions">
 				
-						<div class="wp-block-button is-small plugin-download download-button"><a class="wp-block-button__link wp-element-button" href="https://downloads.wordpress.org/plugin/gdpr-cookie-compliance.5.0.14.zip">Download</a></div>
+						<div class="wp-block-button is-small plugin-download download-button"><a class="wp-block-button__link wp-element-button" href="https://downloads.wordpress.org/plugin/gdpr-cookie-compliance.5.0.15.zip">Download</a></div>
 						
 						<div class="wp-block-button is-small is-style-outline plugin-preview download-button is-style-outline--9"><a class="wp-block-button__link wp-element-button" href="https://wordpress.org/plugins/gdpr-cookie-compliance/?preview=1">Live Preview</a></div>
 									</div>
@@ -571,7 +690,475 @@ There are many other settings available that you can use to create your own uniq
 
 <div id="screenshots" class="plugin-screenshots section">
 	<h2 id="screenshots-header">Screenshots</h2>
-	<ul class="plugin-screenshots"><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-1.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-1.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-2.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-2.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-3.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-3.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-4.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-4.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-5.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-5.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-6.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-6.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-7.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-7.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-8.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-8.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-9.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-9.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-10.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-10.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-11.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-11.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-12.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-12.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-13.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-13.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-14.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-14.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-15.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-15.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-16.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-16.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-17.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-17.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-18.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-18.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-19.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-19.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-20.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-20.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-21.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-21.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-22.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-22.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-23.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-23.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-24.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-24.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-25.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-25.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-26.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-26.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-27.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-27.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-28.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-28.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li><li><figure><a href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-29.png?rev=3361545" rel="nofollow"><img decoding="async" class="screenshot" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-29.png?rev=3361545" alt="" /></a><figcaption>GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure></li></ul></div>
+	<div class="plugin-screenshots__reveal"><div class="plugin-screenshots__gallery-wrap">
+<figure data-wp-context="{&quot;galleryId&quot;:&quot;6a3222f449890&quot;}" data-wp-interactive="core/gallery" class="wp-block-gallery has-nested-images columns-default is-style-screenshots">
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f44aaff&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f44aaff" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-1.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000001" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-1.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000001" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-1.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-1.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-1.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="2319" height="1574" loading="eager" fetchpriority="high" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f44b448&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f44b448" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-2.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000002" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-2.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000002" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-2.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-2.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-2.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1255" height="693" loading="eager" fetchpriority="high" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f44bdc1&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f44bdc1" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-3.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000003" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-3.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000003" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-3.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-3.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-3.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1286" height="841" loading="eager" fetchpriority="high" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f44c76c&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f44c76c" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-4.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000004" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-4.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000004" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-4.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-4.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-4.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="2319" height="1574" loading="eager" fetchpriority="high" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f44d016&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f44d016" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-5.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000005" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-5.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000005" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-5.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-5.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-5.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1727" height="763" loading="eager" fetchpriority="high" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f44d9a7&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f44d9a7" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-6.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000006" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-6.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000006" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-6.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-6.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-6.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1735" height="774" loading="eager" fetchpriority="high" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f44e2e6&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f44e2e6" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-7.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000007" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-7.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000007" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-7.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-7.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-7.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1729" height="2431" loading="eager" fetchpriority="high" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f44ecff&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f44ecff" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-8.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000008" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-8.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000008" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-8.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-8.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-8.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1728" height="1101" loading="eager" fetchpriority="high" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f44f739&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f44f739" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-9.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000009" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-9.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000009" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-9.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-9.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-9.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1084" height="774" loading="eager" fetchpriority="high" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f44febb&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f44febb" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-10.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000010" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-10.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000010" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-10.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-10.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-10.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1717" height="760" loading="eager" fetchpriority="low" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f4506f8&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f4506f8" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-11.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000011" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-11.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000011" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-11.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-11.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-11.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1720" height="752" loading="eager" fetchpriority="low" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f450ff2&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f450ff2" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-12.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000012" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-12.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000012" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-12.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-12.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-12.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1720" height="757" loading="eager" fetchpriority="low" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f451935&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f451935" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-13.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000013" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-13.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000013" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-13.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-13.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-13.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1732" height="1504" loading="eager" fetchpriority="low" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f4521ca&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f4521ca" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-14.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000014" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-14.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000014" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-14.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-14.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-14.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1732" height="1452" loading="eager" fetchpriority="low" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f452b39&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f452b39" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-15.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000015" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-15.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000015" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-15.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-15.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-15.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1732" height="1455" loading="eager" fetchpriority="low" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f4534ae&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f4534ae" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-16.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000016" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-16.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000016" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-16.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-16.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-16.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1728" height="1456" loading="eager" fetchpriority="low" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f453ded&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f453ded" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-17.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000017" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-17.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000017" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-17.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-17.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-17.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1730" height="1455" loading="eager" fetchpriority="low" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f4546e1&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f4546e1" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-18.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000018" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-18.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000018" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-18.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-18.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-18.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1723" height="757" loading="eager" fetchpriority="low" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f455045&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f455045" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-19.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000019" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-19.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000019" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-19.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-19.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-19.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1719" height="754" loading="eager" fetchpriority="low" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f45599c&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f45599c" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-20.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000020" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-20.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000020" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-20.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-20.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-20.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1718" height="756" loading="eager" fetchpriority="low" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f4562c9&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f4562c9" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-21.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000021" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-21.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000021" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-21.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-21.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-21.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="882" height="756" loading="eager" fetchpriority="low" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f456bb2&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f456bb2" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-22.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000022" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-22.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000022" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-22.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-22.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-22.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1309" height="756" loading="eager" fetchpriority="low" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f4574f8&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f4574f8" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-23.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000023" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-23.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000023" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-23.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-23.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-23.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1728" height="892" loading="eager" fetchpriority="low" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f457e34&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f457e34" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-24.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000024" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-24.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000024" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-24.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-24.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-24.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1727" height="772" loading="eager" fetchpriority="low" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f4587c0&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f4587c0" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-25.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000025" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-25.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000025" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-25.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-25.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-25.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1731" height="2157" loading="eager" fetchpriority="low" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f45911e&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f45911e" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-26.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000026" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-26.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000026" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-26.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-26.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-26.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1705" height="1086" loading="eager" fetchpriority="low" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f4599c0&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f4599c0" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-27.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000027" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-27.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000027" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-27.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-27.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-27.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1719" height="760" loading="eager" fetchpriority="low" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f45a362&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f45a362" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-28.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000028" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-28.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000028" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-28.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-28.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-28.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1091" height="768" loading="eager" fetchpriority="low" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a3222f45ac60&quot;}" data-wp-interactive="core/image" data-wp-key="6a3222f45ac60" class="wp-block-image size-large wp-lightbox-container"><a class="plugin-screenshots__fallback-link" href="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-29.png?rev=3361545" target="_blank" rel="noopener"><img data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" data-id="9000029" src="https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-29.png?rev=3361545" alt="GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law" class="wp-image-9000029" srcset="https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-29.png?rev=3361545&amp;w=300 300w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-29.png?rev=3361545&amp;w=600 600w, https://i0.wp.com/ps.w.org/gdpr-cookie-compliance/assets/screenshot-29.png?rev=3361545&amp;w=900 900w" sizes="(max-width: 599px) 50vw, 33vw" width="1172" height="1554" loading="eager" fetchpriority="low" decoding="async"/><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></a><figcaption class="wp-element-caption">GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law</figcaption></figure>
+
+</figure>
+
+</div><div class="plugin-screenshots__fade" aria-hidden="true"></div><button type="button" class="plugin-screenshots__show-all" aria-expanded="false"><span class="plugin-screenshots__show-all-label">Show all 29 screenshots</span><span class="plugin-screenshots__show-all-chevron" aria-hidden="true"></span></button></div></div>
 
 <div id="tab-installation" class="plugin-installation section">
 	<h2 id="installation-header">Installation</h2>
@@ -736,7 +1323,8 @@ THIS PLUGIN DOES NOT MAKE YOUR WEBSITE COMPLIANT. YOU ARE RESPONSIBLE FOR ENSURI
 
 <div id="tab-reviews" class="plugin-reviews section">
 	<h2 id="reviews-header">Reviews</h2>
-	<div class="plugin-reviews">
+	<p>
+		<div class="plugin-reviews">
 							<article class="plugin-review">
 					<div class="review-avatar">
 						<img alt='' src='https://secure.gravatar.com/avatar/3c85658918806a438b22a9d01e38d95cb8ca793952ee908e1ef05a9bd6bf8a7e?s=60&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/3c85658918806a438b22a9d01e38d95cb8ca793952ee908e1ef05a9bd6bf8a7e?s=120&#038;d=retro&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />					</div><div class="review">
@@ -834,11 +1422,13 @@ THIS PLUGIN DOES NOT MAKE YOUR WEBSITE COMPLIANT. YOU ARE RESPONSIBLE FOR ENSURI
 					</div>
 
 		<a class="reviews-link" href="https://wordpress.org/support/plugin/gdpr-cookie-compliance/reviews/">
-			Read all 204 reviews		</a></div>
+			Read all 204 reviews		</a>
+
+		</p></div>
 
 <div id="tab-developers" class="plugin-developers section">
 	<h2 id="developers-header">Contributors &amp; Developers</h2>
-	<div class="plugin-contributors"><p>&#8220;GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law&#8221; is open source software. The following people have contributed to this plugin.</p><span class="screen-reader-text">Contributors</span>
+	<p><div class="plugin-contributors"><p>&#8220;GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law&#8221; is open source software. The following people have contributed to this plugin.</p><span class="screen-reader-text">Contributors</span>
 		<ul id="contributors-list" class="contributors-list">
 						<li>
 				<img alt='' src='https://secure.gravatar.com/avatar/f69e957532ee603e88750c5337b1936ac030417b4d8d6463df6eaac62a9367a6?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/f69e957532ee603e88750c5337b1936ac030417b4d8d6463df6eaac62a9367a6?s=64&#038;d=mm&#038;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />				<a href="https://profiles.wordpress.org/mooveagency/">
@@ -846,11 +1436,17 @@ THIS PLUGIN DOES NOT MAKE YOUR WEBSITE COMPLIANT. YOU ARE RESPONSIBLE FOR ENSURI
 			</li>
 					</ul>
 
-		</div><div class="plugin-development"><p>&#8220;GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law&#8221; has been translated into 21 locales. Thank you to <a href="https://translate.wordpress.org/projects/wp-plugins/gdpr-cookie-compliance/contributors">the translators</a> for their contributions.</p><p><a href="https://translate.wordpress.org/projects/wp-plugins/gdpr-cookie-compliance">Translate &#8220;GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law&#8221; into your language.</a></p><h3>Interested in development?</h3><p><a href="https://plugins.trac.wordpress.org/browser/gdpr-cookie-compliance/">Browse the code</a>, check out the <a href="https://plugins.svn.wordpress.org/gdpr-cookie-compliance/">SVN repository</a>, or subscribe to the <a href="https://plugins.trac.wordpress.org/log/gdpr-cookie-compliance/">development log</a> by <a href="https://plugins.trac.wordpress.org/log/gdpr-cookie-compliance/?limit=100&#038;mode=stop_on_copy&#038;format=rss">RSS</a>.</p></div></div>
+		</div><div class="plugin-development"><p>&#8220;GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law&#8221; has been translated into 21 locales. Thank you to <a href="https://translate.wordpress.org/projects/wp-plugins/gdpr-cookie-compliance/contributors">the translators</a> for their contributions.</p><p><a href="https://translate.wordpress.org/projects/wp-plugins/gdpr-cookie-compliance">Translate &#8220;GDPR Cookie Compliance &#8211; Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law&#8221; into your language.</a></p><h3>Interested in development?</h3><p><a href="https://plugins.trac.wordpress.org/browser/gdpr-cookie-compliance/">Browse the code</a>, check out the <a href="https://plugins.svn.wordpress.org/gdpr-cookie-compliance/">SVN repository</a>, or subscribe to the <a href="https://plugins.trac.wordpress.org/log/gdpr-cookie-compliance/">development log</a> by <a href="https://plugins.trac.wordpress.org/log/gdpr-cookie-compliance/?limit=100&#038;mode=stop_on_copy&#038;format=rss">RSS</a>.</p></div></p></div>
 
 <div id="tab-changelog" class="plugin-changelog section">
 	<h2 id="changelog-header">Changelog</h2>
-	<h4>5.0.14: 26 May 2026</h4>
+	<h4>5.0.15: 12 June 2026</h4>
+<ul>
+<li>Settings button colour options extended</li>
+<li>Default GPC tab fixed</li>
+<li>Minor fixes</li>
+</ul>
+<h4>5.0.14: 26 May 2026</h4>
 <ul>
 <li>Multisite caching issue fixed</li>
 <li>AJAX reponse improved</li>
@@ -1873,10 +2469,10 @@ THIS PLUGIN DOES NOT MAKE YOUR WEBSITE COMPLIANT. YOU ARE RESPONSIBLE FOR ENSURI
 		<ul>
 			
 			<li>
-				Version <strong>5.0.14</strong>			</li>
+				Version <strong>5.0.15</strong>			</li>
 
 			<li>
-				Last updated <strong><span>6 days</span> ago</strong>			</li>
+				Last updated <strong><span>5 days</span> ago</strong>			</li>
 			<li>
 				Active installations <strong>300,000+</strong>			</li>
 
@@ -2019,10 +2615,10 @@ THIS PLUGIN DOES NOT MAKE YOUR WEBSITE COMPLIANT. YOU ARE RESPONSIBLE FOR ENSURI
 		</div><div class="widget plugin-support"><h2 class="widget-title">Support</h2>			<p class="aside">Issues resolved in last two months:</p>
 			<p class="counter-container">
 				<span class="counter-back">
-					<span class="counter-bar" style="width: 83.333333333333%;"></span>
+					<span class="counter-bar" style="width: 100%;"></span>
 				</span>
 				<span class="counter-count">
-					10 out of 12				</span>
+					11 out of 11				</span>
 			</p>
 
 		
@@ -2195,21 +2791,74 @@ The WordPress&reg; trademark is the intellectual property of the WordPress Found
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/plugins/*"},{"not":{"href_matches":["/plugins/wp-*.php","/plugins/wp-admin/*","/plugins/files/*","/plugins/wp-content/*","/plugins/wp-content/plugins/*","/plugins/wp-content/themes/pub/wporg-plugins-2024/*","/plugins/wp-content/themes/wporg-parent-2021/*","/plugins/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
 <script data-wp-router-options="{&quot;loadOnClientNavigation&quot;:true}" fetchpriority="low" id="@wordpress/block-library/navigation/view-js-module" src="https://wordpress.org/plugins/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=96a846e1d7b789c39ab9-20240308" type="module"></script>
+<script data-wp-router-options="{&quot;loadOnClientNavigation&quot;:true}" fetchpriority="low" id="@wordpress/block-library/image/view-js-module" src="https://wordpress.org/plugins/wp-includes/js/dist/script-modules/block-library/image/view.min.js?ver=25ee935fd6c67371d0f3-20240308" type="module"></script>
+<script id="wp-script-module-data-@wordpress/interactivity" type="application/json">
+{"config":{"core/image":{"defaultAriaLabel":"Enlarged image","closeButtonText":"Close","prevButtonText":"Previous","nextButtonText":"Next"}},"state":{"core/image":{"metadata":{"6a3222f44aaff":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-1.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000001","imgStyles":null,"targetWidth":2319,"targetHeight":1574,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 1 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 1 of 29","order":0},"9000001":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f44b448":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-2.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000002","imgStyles":null,"targetWidth":1255,"targetHeight":693,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 2 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 2 of 29","order":1},"9000002":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f44bdc1":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-3.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000003","imgStyles":null,"targetWidth":1286,"targetHeight":841,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 3 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 3 of 29","order":2},"9000003":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f44c76c":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-4.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000004","imgStyles":null,"targetWidth":2319,"targetHeight":1574,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 4 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 4 of 29","order":3},"9000004":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f44d016":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-5.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000005","imgStyles":null,"targetWidth":1727,"targetHeight":763,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 5 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 5 of 29","order":4},"9000005":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f44d9a7":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-6.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000006","imgStyles":null,"targetWidth":1735,"targetHeight":774,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 6 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 6 of 29","order":5},"9000006":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f44e2e6":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-7.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000007","imgStyles":null,"targetWidth":1729,"targetHeight":2431,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 7 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 7 of 29","order":6},"9000007":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f44ecff":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-8.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000008","imgStyles":null,"targetWidth":1728,"targetHeight":1101,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 8 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 8 of 29","order":7},"9000008":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f44f739":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-9.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000009","imgStyles":null,"targetWidth":1084,"targetHeight":774,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 9 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 9 of 29","order":8},"9000009":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f44febb":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-10.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000010","imgStyles":null,"targetWidth":1717,"targetHeight":760,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 10 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 10 of 29","order":9},"9000010":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f4506f8":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-11.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000011","imgStyles":null,"targetWidth":1720,"targetHeight":752,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 11 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 11 of 29","order":10},"9000011":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f450ff2":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-12.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000012","imgStyles":null,"targetWidth":1720,"targetHeight":757,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 12 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 12 of 29","order":11},"9000012":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f451935":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-13.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000013","imgStyles":null,"targetWidth":1732,"targetHeight":1504,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 13 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 13 of 29","order":12},"9000013":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f4521ca":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-14.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000014","imgStyles":null,"targetWidth":1732,"targetHeight":1452,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 14 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 14 of 29","order":13},"9000014":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f452b39":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-15.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000015","imgStyles":null,"targetWidth":1732,"targetHeight":1455,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 15 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 15 of 29","order":14},"9000015":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f4534ae":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-16.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000016","imgStyles":null,"targetWidth":1728,"targetHeight":1456,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 16 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 16 of 29","order":15},"9000016":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f453ded":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-17.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000017","imgStyles":null,"targetWidth":1730,"targetHeight":1455,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 17 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 17 of 29","order":16},"9000017":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f4546e1":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-18.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000018","imgStyles":null,"targetWidth":1723,"targetHeight":757,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 18 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 18 of 29","order":17},"9000018":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f455045":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-19.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000019","imgStyles":null,"targetWidth":1719,"targetHeight":754,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 19 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 19 of 29","order":18},"9000019":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f45599c":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-20.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000020","imgStyles":null,"targetWidth":1718,"targetHeight":756,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 20 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 20 of 29","order":19},"9000020":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f4562c9":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-21.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000021","imgStyles":null,"targetWidth":882,"targetHeight":756,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 21 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 21 of 29","order":20},"9000021":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f456bb2":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-22.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000022","imgStyles":null,"targetWidth":1309,"targetHeight":756,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 22 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 22 of 29","order":21},"9000022":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f4574f8":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-23.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000023","imgStyles":null,"targetWidth":1728,"targetHeight":892,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 23 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 23 of 29","order":22},"9000023":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f457e34":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-24.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000024","imgStyles":null,"targetWidth":1727,"targetHeight":772,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 24 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 24 of 29","order":23},"9000024":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f4587c0":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-25.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000025","imgStyles":null,"targetWidth":1731,"targetHeight":2157,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 25 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 25 of 29","order":24},"9000025":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f45911e":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-26.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000026","imgStyles":null,"targetWidth":1705,"targetHeight":1086,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 26 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 26 of 29","order":25},"9000026":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f4599c0":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-27.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000027","imgStyles":null,"targetWidth":1719,"targetHeight":760,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 27 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 27 of 29","order":26},"9000027":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f45a362":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-28.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000028","imgStyles":null,"targetWidth":1091,"targetHeight":768,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 28 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 28 of 29","order":27},"9000028":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"},"6a3222f45ac60":{"uploadedSrc":"https://ps.w.org/gdpr-cookie-compliance/assets/screenshot-29.png?rev=3361545","lightboxSrcset":false,"figureClassNames":"wp-block-image size-large","figureStyles":null,"imgClassNames":"wp-image-9000029","imgStyles":null,"targetWidth":1172,"targetHeight":1554,"scaleAttr":false,"alt":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","galleryId":"6a3222f449890","customAriaLabel":"Enlarged image 29 of 29: GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law","navigationButtonType":"icon","triggerButtonAriaLabel":"Enlarge 29 of 29","order":28},"9000029":{"caption":"GDPR Cookie Compliance - Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law"}}}}}
+</script>
+		<div
+			class="wp-lightbox-overlay zoom"
+			aria-label="Enlarged images"
+			data-wp-interactive="core/image"
+			data-wp-router-region='{ "id": "core/image-overlay", "attachTo": "body" }'
+			data-wp-key="wp-lightbox-overlay"
+			data-wp-context='{}'
+			data-wp-bind--role="state.roleAttribute"
+			data-wp-bind--aria-label="state.ariaLabel"
+			data-wp-bind--aria-modal="state.ariaModal"
+			data-wp-class--active="state.overlayEnabled"
+			data-wp-class--show-closing-animation="state.overlayOpened"
+			data-wp-watch---focus="callbacks.setOverlayFocus"
+			data-wp-watch---inert="callbacks.setInertElements"
+			data-wp-on--keydown="actions.handleKeydown"
+			data-wp-on--touchstart="actions.handleTouchStart"
+			data-wp-on--touchmove="actions.handleTouchMove"
+			data-wp-on--touchend="actions.handleTouchEnd"
+			data-wp-on--click="actions.hideLightbox"
+			data-wp-on-window--resize="callbacks.setOverlayStyles"
+			data-wp-on-window--scroll="actions.handleScroll"
+			data-wp-bind--style="state.overlayStyles"
+			tabindex="-1"
+			>
+				<button type="button" style="fill:var(--wp--preset--color--charcoal-1)" class="wp-lightbox-close-button" data-wp-bind--aria-label="state.closeButtonAriaLabel">
+					<span class="wp-lightbox-close-icon" data-wp-bind--hidden="!state.hasNavigationIcon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="m13.06 12 6.47-6.47-1.06-1.06L12 10.94 5.53 4.47 4.47 5.53 10.94 12l-6.47 6.47 1.06 1.06L12 13.06l6.47 6.47 1.06-1.06L13.06 12Z"></path></svg></span>
+					<span class="wp-lightbox-close-text" data-wp-bind--hidden="!state.hasNavigationText">Close</span>
+				</button>
+				<button type="button" style="fill:var(--wp--preset--color--charcoal-1)" class="wp-lightbox-navigation-button wp-lightbox-navigation-button-prev" data-wp-bind--hidden="!state.hasNavigation" data-wp-on--click="actions.showPreviousImage" data-wp-bind--aria-label="state.prevButtonAriaLabel">
+					<span class="wp-lightbox-navigation-icon" data-wp-bind--hidden="!state.hasNavigationIcon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false"><path d="M14.6 7l-1.2-1L8 12l5.4 6 1.2-1-4.6-5z"></path></svg></span>
+					<span class="wp-lightbox-navigation-text" data-wp-bind--hidden="!state.hasNavigationText">Previous</span>
+				</button>
+				<div class="lightbox-image-container">
+					<figure data-wp-bind--class="state.selectedImage.figureClassNames" data-wp-bind--style="state.figureStyles">
+						<img data-wp-bind--alt="state.selectedImage.alt" data-wp-bind--class="state.selectedImage.imgClassNames" data-wp-bind--style="state.imgStyles" data-wp-bind--src="state.selectedImage.currentSrc">
+					</figure>
+				</div>
+				<div class="lightbox-image-container">
+					<figure data-wp-bind--class="state.selectedImage.figureClassNames" data-wp-bind--style="state.figureStyles">
+						<img
+							data-wp-bind--alt="state.selectedImage.alt"
+							data-wp-bind--class="state.selectedImage.imgClassNames"
+							data-wp-bind--style="state.imgStyles"
+							data-wp-bind--src="state.enlargedSrc"
+							data-wp-bind--srcset="state.enlargedSrcset"
+							data-wp-bind--srcset="state.enlargedSrcset"
+							sizes="100vw"
+						>
+					</figure>
+				</div>
+				<button type="button" style="fill:var(--wp--preset--color--charcoal-1)" class="wp-lightbox-navigation-button wp-lightbox-navigation-button-next" data-wp-bind--hidden="!state.hasNavigation" data-wp-on--click="actions.showNextImage" data-wp-bind--aria-label="state.nextButtonAriaLabel">
+					<span class="wp-lightbox-navigation-text" data-wp-bind--hidden="!state.hasNavigationText">Next</span>
+					<span class="wp-lightbox-navigation-icon" data-wp-bind--hidden="!state.hasNavigationIcon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false"><path d="M10.6 6L9.4 7l4.6 5-4.6 5 1.2 1 5.4-6z"></path></svg></span>
+				</button>
+				<div data-wp-text="state.ariaLabel" aria-live="polite" aria-atomic="true" class="screen-reader-text"></div>
+				<div class="scrim" style="background-color: var(--wp--preset--color--white)" aria-hidden="true"></div>
+		</div><script id="wporg-plugins-screenshots-js" src="https://wordpress.org/plugins/wp-content/plugins/plugin-directory/shortcodes/../js/screenshots.js?ver=1780918117"></script>
+<script id="gallery-lightbox-enhancements-captions-js" src="https://wordpress.org/plugins/wp-content/plugins/gallery-lightbox-enhancements/assets/lightbox-captions.js?ver=1781063854"></script>
 <script id="wporg-navigation-js" src="https://s.w.org/wp-content/themes/pub/wporg-plugins-2024/js/navigation.js?ver=20181209"></script>
 <script id="wporg-skip-link-focus-fix-js" src="https://s.w.org/wp-content/themes/pub/wporg-plugins-2024/js/skip-link-focus-fix.js?ver=20151215"></script>
 <script id="jquery-core-js" src="https://s.w.org/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
 <script id="jquery-migrate-js" src="https://s.w.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
 <script id="wporg-plugins-popover-js" src="https://s.w.org/wp-content/themes/pub/wporg-plugins-2024/js/popover.js?ver=20171002"></script>
 <script id="wporg-plugins-faq-js" src="https://s.w.org/wp-content/themes/pub/wporg-plugins-2024/js/section-faq.js?ver=1748268729"></script>
-<script id="react-js" src="https://wordpress.org/plugins/wp-includes/js/dist/vendor/react.min.js?ver=18.3.1.1"></script>
-<script id="react-dom-js" src="https://wordpress.org/plugins/wp-includes/js/dist/vendor/react-dom.min.js?ver=18.3.1.1"></script>
-<script id="wp-escape-html-js" src="https://wordpress.org/plugins/wp-includes/js/dist/escape-html.min.js?ver=3f093e5cca67aa0f8b56"></script>
-<script id="wp-element-js" src="https://wordpress.org/plugins/wp-includes/js/dist/element.min.js?ver=15ba804677f72a8db97b"></script>
-<script id="wporg-plugins-client-js-extra">
-var localeData = {"":{"Plural-Forms":"nplurals=2; plural=n != 1;","Language":"en","localeSlug":"en"},"screenshots":"Screenshots"};
-//# sourceURL=wporg-plugins-client-js-extra
-</script>
-<script id="wporg-plugins-client-js" src="https://s.w.org/wp-content/themes/pub/wporg-plugins-2024/js/build/theme.js?ver=43ab82ac4ef93561f4cc"></script>
 <script data-wp-strategy="defer" defer id="wporg-time-view-script-js" src="https://wordpress.org/plugins/wp-content/mu-plugins/pub-sync/blocks/time/build/view.js?ver=385bfe9134bf98c52dda"></script>
 <script id="jetpack-stats-js-before">
 _stq = window._stq || [];
@@ -2217,14 +2866,14 @@ _stq.push([ "view", {"v":"ext","blog":"108986944","post":"84501","tz":"0","srv":
 _stq.push([ "clickTrackerInit", "108986944", "84501" ]);
 //# sourceURL=jetpack-stats-js-before
 </script>
-<script data-wp-strategy="defer" defer id="jetpack-stats-js" src="https://stats.wp.com/e-202623.js"></script>
+<script data-wp-strategy="defer" defer id="jetpack-stats-js" src="https://stats.wp.com/e-202625.js"></script>
 <script id="wporg-global-header-script-js-extra">
 var wporgGlobalHeaderI18n = {"openSearchLabel":"Open Search","closeSearchLabel":"Close Search","overflowMenuLabel":"More menu"};
 //# sourceURL=wporg-global-header-script-js-extra
 </script>
 <script id="wporg-global-header-script-js" src="https://wordpress.org/plugins/wp-content/mu-plugins/pub-sync/blocks/global-header-footer/js/view.js?ver=1751336038"></script>
 <script id="wp-emoji-settings" type="application/json">
-{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://wordpress.org/plugins/wp-includes/js/wp-emoji-release.min.js?ver=7.1-alpha-62426"}}
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://wordpress.org/plugins/wp-includes/js/wp-emoji-release.min.js?ver=7.1-alpha-62496"}}
 </script>
 <script type="module">
 /*! This file is auto-generated */

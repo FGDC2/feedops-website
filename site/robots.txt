@@ -1,4 +1,44 @@
+# FeedOps robots.txt
+# Allow search engines and AI/LLM crawlers to crawl the public site.
+
 User-agent: *
 Allow: /
 
+# Explicitly allow common AI and LLM crawlers.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
 Sitemap: https://feedops.com/sitemap.xml
+
+# AI-readable site index:
+# https://feedops.com/llms.txt
