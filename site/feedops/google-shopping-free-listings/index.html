@@ -798,6 +798,7 @@
           <a href="#measurement">Measurement</a>
           <a href="#free-vs-paid">Free vs Paid</a>
           <a href="#mistakes">Mistakes</a>
+          <a href="#maintenance">Maintenance</a>
           <a href="#related-guides">Related Guides</a>
           <a href="#faq">FAQ</a>
         </nav>
@@ -836,6 +837,8 @@
           <p class="kicker">Why it matters</p>
           <h2>Free listings give retailers another way to reach high-intent shoppers.</h2>
           <p>Most retailers think of Google Shopping as a paid channel, but free listings can send shoppers directly to product pages when Google understands the catalog. This makes feed quality important even before a retailer spends on Performance Max or Standard Shopping campaigns.</p>
+          <p>For ecommerce teams, the value is not only the free click. Free listings create another feedback loop around product data quality. If Google can approve a product, understand the product type, match it to relevant search intent, and show it in an unpaid shopping surface, that is a useful signal that the product feed is in reasonable shape. If products are approved but receive no visibility, the issue may be demand, weak product data, poor images, missing identifiers, category confusion, or a landing page that does not give Google enough confidence.</p>
+          <p>Free listings also matter because the same product data often supports paid Shopping, Performance Max, dynamic remarketing, local inventory, and marketplace feeds. A retailer that improves titles, identifiers, images, pricing, availability, product type, and shipping data for free listings is usually strengthening the whole Shopping foundation. That is why this guide keeps tying free listings back to the feed. The free listing result is visible in Google, but the work happens inside Merchant Center and the product feed.</p>
           <div class="guide-box">
             <h3>Free listings can help with three jobs</h3>
             <ul>
@@ -844,6 +847,7 @@
               <li><strong>Feed readiness:</strong> The same fixes that support free listings also improve paid Shopping readiness.</li>
             </ul>
           </div>
+          <p>Think of free listings as the organic layer of Google Shopping. They are not a replacement for ads, and they are not guaranteed impressions. They are a way to make the catalogue more discoverable when the product data is good enough for Google to trust. For small catalogues, this can be a low-cost path to incremental traffic. For large catalogues, it can expose data quality patterns that are hard to see product by product.</p>
         </section>
 
         <section class="guide-section" id="setup">
@@ -858,16 +862,42 @@
           <p>Google needs enough information to understand the shopping experience before sending customers to product pages.</p>
           <h3>4. Upload or connect your product feed</h3>
           <p>Use Shopify, WooCommerce, Magento, a scheduled file, Google Sheet, API connection, or a feed platform such as FeedOps.</p>
+          <p>Do not treat this step as a file upload only. The feed should be a reliable connection between your catalogue and Merchant Center. If price, availability, product variants, sale price, or landing page URLs change often, the update method needs to keep up. A daily scheduled file may be fine for a simple catalogue, but a high-change catalogue may need more frequent updates, supplemental feeds, feed rules, or a feed management workflow.</p>
           <h3>5. Enable free listings</h3>
           <p>Confirm free listings are active for the right country of sale, currency, and language.</p>
           <h3>6. Fix Merchant Center diagnostics</h3>
           <p>Prioritize missing identifiers, image issues, price mismatches, availability mismatches, policy warnings, and landing page errors.</p>
+          <h3>7. Review product-level visibility</h3>
+          <p>Once products are approved, check whether they are receiving impressions and clicks. Approval is the first gate, not the final goal. A product can be active in Merchant Center and still receive little or no free listing visibility if the title is vague, identifiers are missing, images are weak, the category is unclear, or there is not enough shopper demand.</p>
+          <h3>8. Build a regular feed review rhythm</h3>
+          <p>Free listings are not a one-off setup task. Merchant Center diagnostics, product data quality, and organic Shopping performance should be reviewed regularly. New products, discontinued products, seasonal products, sale items, variant changes, and platform updates can all create feed issues that slowly reduce visibility.</p>
+        </section>
+
+        <section class="guide-section" id="eligibility">
+          <p class="kicker">Eligibility</p>
+          <h2>Merchant Center eligibility is the first SEO lever for free listings.</h2>
+          <p>Before a product can earn organic Shopping visibility, Google needs to accept the product data and trust the shopping experience. That means eligibility is the first practical SEO lever for free listings. A page can have a strong product, a good price, and real demand, but if Merchant Center sees a mismatch or missing requirement, that product may never get a chance to appear.</p>
+          <p>Start with account-level readiness. Merchant Center needs a verified and claimed domain, accurate business information, supported shipping settings, return information, and destination settings for the countries you sell into. Then move to item-level readiness. Each product should have a stable ID, accurate title, valid landing page, clear image, correct price, correct availability, and enough category and identifier data for Google to understand what the product is.</p>
+          <div class="guide-box">
+            <h3>Merchant Center checks to review first</h3>
+            <ul>
+              <li><strong>Account setup:</strong> Website claim, business details, shipping, returns, tax where applicable, and policy compliance.</li>
+              <li><strong>Destination status:</strong> Confirm products are eligible for free listings in the right target country and language.</li>
+              <li><strong>Diagnostics:</strong> Review account issues, feed issues, and item issues separately so broad blockers are not missed.</li>
+              <li><strong>Landing pages:</strong> Make sure product pages show the same price, availability, variant, currency, and condition as the feed.</li>
+              <li><strong>Product identifiers:</strong> Use correct GTINs, brands, MPNs, and identifier_exists values. Do not invent identifiers.</li>
+            </ul>
+          </div>
+          <p>When diagnostics show a large number of item warnings, separate the issues into three groups. The first group is approval blockers, such as price mismatch, unavailable landing pages, invalid images, policy violations, and missing required attributes. The second group is trust and matching issues, such as missing GTINs, weak titles, broad product types, or vague descriptions. The third group is commercial quality, such as poor images, weak variant data, missing sale prices, or shipping settings that make the listing less compelling.</p>
+          <p>This matters because not every diagnostic has the same business impact. If 500 products are disapproved because availability does not match the website, that is more urgent than a non-critical enrichment opportunity. If most products are approved but only a small group earns impressions, the priority may shift to titles, images, categories, identifiers, and product demand. Feed optimisation is part technical hygiene and part commercial judgement.</p>
         </section>
 
         <section class="guide-section" id="optimization">
           <p class="kicker">Optimization</p>
           <h2>Free listings perform better when the feed is more complete and specific.</h2>
           <p>Getting products approved is not the same as making them competitive. Use the same feed optimization mindset you would use for Shopping ads and Performance Max.</p>
+          <p>Google does not read your product page like a human merchandiser. It uses structured product data, page content, historical signals, identifiers, images, and user context to decide whether a product is relevant enough to show. The more complete and consistent the feed is, the easier it is for Google to classify the item and match it to a shopper. The more useful the listing is, the more likely the shopper is to click.</p>
+          <p>For free listings, start with clarity rather than keyword stuffing. A strong title tells Google and the shopper what the product is. A strong image makes the item easy to recognise. Accurate identifiers connect the product to known catalogue data. Product type and Google product category help classification. Price, sale price, availability, shipping, and returns help set expectations before the click.</p>
           <div class="guide-box">
             <h3>Optimization priorities</h3>
             <ul>
@@ -882,6 +912,10 @@
             <p><strong>Weak title:</strong> Women's Dress</p>
             <p><strong>Better title:</strong> Women's Cotton Summer Maxi Dress Blue Size 10</p>
           </div>
+          <p>Use the <a href="../../google-shopping-product-title-optimization/">Google Shopping Title Optimization Guide</a> when product titles are one of the main gaps. Titles should be specific enough to match intent but still readable. For apparel, that often means brand, gender, product type, material, colour, size, and style. For electronics, it may mean brand, model, capacity, compatibility, and product type. For homewares, it may mean product type, material, colour, size, and use case.</p>
+          <p>Descriptions should support the title, not repeat it. Use descriptions to explain details that help shoppers decide: material, fit, dimensions, compatibility, included accessories, use case, care instructions, and product differences. If your descriptions are duplicated across variants or copied from a supplier with little useful detail, free listings may still be eligible, but Google has less information to work with.</p>
+          <p>Images are also part of free listing optimisation. The main image should show the product clearly, without watermarks, promotional text, borders, or confusing lifestyle context. Additional images can support the shopping experience by showing alternate angles, scale, packaging, details, and use. If you sell variants, make sure the image matches the selected variant. A blue shoe image attached to a black shoe variant is not just a user experience problem; it can create trust and approval issues.</p>
+          <p>Finally, keep feed freshness under control. Free listings are unpaid, but stale data still costs money when it sends shoppers to out-of-stock products, incorrect prices, wrong variants, or broken product pages. If the feed cannot keep up with your catalogue, fix the update process before you spend too much time rewriting product copy.</p>
         </section>
 
         <section class="guide-section" id="attributes">
@@ -929,6 +963,19 @@
               </tr>
             </tbody>
           </table>
+          <h3>Attributes that usually deserve more attention</h3>
+          <p>Most retailers know the required fields, but free listing performance often improves when the optional and category-specific fields are treated with more care. Apparel products need variant attributes such as color, size, gender, age group, material, and pattern. Furniture and home products often benefit from dimensions, material, colour, and product type. Electronics may need GTIN, brand, MPN, model, capacity, compatibility, and condition. Consumables may need size, unit pricing, multipack, ingredients, or product form.</p>
+          <p>Product_type is especially useful because it gives you a retailer-controlled classification that can be more specific than Google product category. A broad Google category may tell Google that a product is in apparel, but product_type can show your internal hierarchy: Womens > Dresses > Maxi Dresses > Cotton Dresses. That structure helps reporting, feed rules, product grouping, and later paid Shopping campaign decisions.</p>
+          <div class="guide-box">
+            <h3>Feed quality examples</h3>
+            <ul>
+              <li><strong>Shoes:</strong> brand, gender, product type, colour, size, material, sport, and model can all help matching.</li>
+              <li><strong>Handbags:</strong> material, colour, size, strap type, closure, style, and product type can improve relevance.</li>
+              <li><strong>Water bottles:</strong> capacity, material, colour, insulation, lid type, BPA-free status, and use case can help shoppers decide.</li>
+              <li><strong>Appliances:</strong> brand, model, GTIN, capacity, energy rating, dimensions, colour, and installation type can matter.</li>
+            </ul>
+          </div>
+          <p>If you are not sure where to start, run a feed audit and sort by products with missing required fields, disapprovals, missing identifiers, weak titles, missing product_type, and low or no free listing visibility. The <a href="../../guide/google-shopping-feed-optimization-guide/">Google Shopping Feed Optimization Guide</a> gives a broader framework for improving these fields across paid and free Shopping surfaces.</p>
         </section>
 
         <section class="guide-section" id="measurement">
@@ -941,6 +988,58 @@
           <p>Look for Organic Google Shopping or filter by google / organic with shopping-related source platform dimensions. Track sessions, conversions, revenue, and product page engagement.</p>
           <h3>Paid Shopping readiness</h3>
           <p>When a product earns free impressions and qualified clicks, it may be a good candidate for Performance Max or Standard Shopping testing.</p>
+          <h3>Product-level reporting</h3>
+          <p>Do not stop at total clicks and impressions. Product-level reporting is where the useful feed decisions usually appear. Look for products with high impressions but low click-through rate, products with clicks but poor engagement, products with no impressions despite being eligible, and products that perform well organically but are not being supported with paid Shopping.</p>
+          <p>A product with impressions but low CTR may need a better title, better image, stronger price, clearer sale price, more compelling product data, or improved shipping and return information. A product with no impressions may have weak demand, poor matching, missing identifiers, an overly vague title, or a category problem. A product with free clicks and conversions may be a strong candidate for paid Shopping expansion.</p>
+          <div class="guide-box">
+            <h3>Useful free listing metrics</h3>
+            <ul>
+              <li><strong>Impressions:</strong> Are eligible products being surfaced at all?</li>
+              <li><strong>Clicks:</strong> Which products earn actual shopper attention?</li>
+              <li><strong>CTR:</strong> Are titles, images, price, and listing context strong enough to win clicks?</li>
+              <li><strong>Conversions and revenue:</strong> Are free listing visits turning into meaningful commercial outcomes?</li>
+              <li><strong>Product coverage:</strong> What share of the catalogue is eligible, active, and visible?</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="guide-section" id="free-vs-paid">
+          <p class="kicker">Free vs paid Shopping</p>
+          <h2>Use free listings and Shopping ads together, but measure them separately.</h2>
+          <p>Free listings and paid Shopping ads use much of the same product data, but they are not the same channel. Free listings are unpaid organic product placements. Paid Shopping ads are controlled through Google Ads campaigns such as Performance Max and Standard Shopping. Free listings can appear without bids, while paid campaigns use budgets, bidding strategies, audience signals, assets, and campaign structure.</p>
+          <p>The overlap is the feed. If the title is weak, the image is poor, identifiers are missing, or the price is out of sync, both free and paid Shopping can suffer. If the product feed is clear and complete, both channels have a better foundation. That is why free listing optimisation should not live in a separate SEO silo. It should be part of the same feed quality process used by ecommerce, media, and marketplace teams.</p>
+          <table class="template-table">
+            <thead>
+              <tr>
+                <th>Area</th>
+                <th>Free listings</th>
+                <th>Paid Shopping</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cost model</td>
+                <td>No CPC budget for the organic placement.</td>
+                <td>Uses campaign budget, bidding, and Google Ads settings.</td>
+              </tr>
+              <tr>
+                <td>Control</td>
+                <td>Less placement control; Google chooses when to show eligible products.</td>
+                <td>More commercial control through structure, bids, budgets, and targets.</td>
+              </tr>
+              <tr>
+                <td>Data dependency</td>
+                <td>Requires accurate Merchant Center product data.</td>
+                <td>Also depends heavily on the product feed and landing page quality.</td>
+              </tr>
+              <tr>
+                <td>Best use</td>
+                <td>Organic product discovery, catalogue coverage, and feed readiness signals.</td>
+                <td>Scaling priority products, revenue goals, margin goals, and campaign testing.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Use free listing data to inform paid decisions, but do not assume the same products will perform identically in ads. Free listings may reveal organic demand for products you are not actively promoting. Paid Shopping may unlock visibility for products that do not receive enough organic exposure. The <a href="../../guide/google-shopping-ads-management/">Google Shopping Ads Management Guide</a> explains how to connect feed data, product performance, custom labels, ROAS bands, and campaign structure.</p>
         </section>
 
         <section class="guide-section" id="mistakes">
@@ -954,6 +1053,27 @@
             <li>Wrong or overly broad Google product categories.</li>
             <li>Treating the product feed as set-and-forget instead of keeping it fresh.</li>
           </ul>
+          <p>Another common mistake is only looking at approved products. Approval tells you the product passed a minimum bar, but it does not prove the product is competitive. A catalogue can have thousands of approved products and still earn very little free listing traffic because the titles are vague, images are weak, identifiers are incomplete, or product categories are too broad.</p>
+          <p>Retailers also sometimes optimise only the products that already get traffic. That can improve winners, but it ignores the long tail. For large catalogues, the biggest opportunity may be products that are technically eligible but invisible. Segment products into winners, products with impressions but low CTR, products with no impressions, and products with clicks but no conversion. Each group needs a different feed response.</p>
+          <p>If a product receives no free listing visibility, check whether it is a true demand issue or a feed issue. Nobody may want the product, but Google may also be unable to classify it properly. Look at title specificity, product_type, Google product category, identifiers, image quality, variant attributes, and landing page alignment before deciding that the product simply has no organic Shopping potential.</p>
+        </section>
+
+        <section class="guide-section" id="maintenance">
+          <p class="kicker">Maintenance</p>
+          <h2>Keep free listings healthy with a repeatable feed routine.</h2>
+          <p>The strongest free listing programs have a routine. They are not built from a one-time setup and a forgotten feed connection. Schedule a weekly or fortnightly review of Merchant Center diagnostics, product coverage, top free listing products, products losing visibility, new product approvals, disapprovals, and feed changes from your ecommerce platform.</p>
+          <p>For seasonal retailers, this rhythm matters even more. New products need complete data before demand arrives. Sale products need accurate sale_price and sale_price_effective_date values. Out-of-stock products need fast availability updates. Clearance products may need different titles, product types, or custom labels to support both organic and paid decisions. A feed that is technically correct in March can be stale by June.</p>
+          <div class="guide-box">
+            <h3>Monthly free listings checklist</h3>
+            <ul>
+              <li>Review Merchant Center account, feed, and item diagnostics.</li>
+              <li>Check products with no impressions and confirm whether the issue is demand or data quality.</li>
+              <li>Improve titles and product_type for categories with weak matching.</li>
+              <li>Review image quality and variant-image alignment.</li>
+              <li>Check price, availability, sale price, shipping, and returns against live landing pages.</li>
+              <li>Compare free listing winners with paid Shopping priorities.</li>
+            </ul>
+          </div>
         </section>
 
         <section class="guide-section" id="related-guides">
