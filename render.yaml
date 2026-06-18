@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: feedops-website
+    runtime: static
+    buildCommand: echo "Static site ready"
+    staticPublishPath: ./site
+    autoDeployTrigger: commit
