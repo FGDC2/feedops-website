@@ -22,6 +22,9 @@
   <meta name="twitter:description" content="Setup checklist, feed optimization, common mistakes, and measurement for Google Shopping free listings.">
   <meta name="twitter:image" content="https://feedops.com/wp-content/uploads/2026/06/google-shopping-free-listings-guide-2026.png">
   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -29,10 +32,48 @@
       "description": "Learn how to set up Google Shopping free listings in 2026, optimize your product feed, fix Merchant Center diagnostics, compare free and paid Shopping, and measure organic shopping performance.",
       "image": "https://feedops.com/wp-content/uploads/2026/06/google-shopping-free-listings-guide-2026.png",
       "dateModified": "2026-06-17",
-      "author": { "@type": "Organization", "name": "FeedOps" },
-      "publisher": { "@type": "Organization", "name": "FeedOps" },
+      "author": {
+        "@type": "Organization",
+        "name": "FeedOps"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "FeedOps"
+      },
       "mainEntityOfPage": "https://feedops.com/feedops/google-shopping-free-listings/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://feedops.com/feedops/google-shopping-free-listings/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://feedops.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Learning",
+          "item": "https://feedops.com/learning/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Guides",
+          "item": "https://feedops.com/learning/#guides"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Google Shopping Free Listings Guide",
+          "item": "https://feedops.com/feedops/google-shopping-free-listings/"
+        }
+      ]
     }
+  ]
+}
   </script>
   <style>
     :root {
@@ -737,9 +778,41 @@
         width: 136px;
       }
     }
+    .page-breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin: -8px 0 24px;
+      padding: 0;
+      background: transparent;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .page-breadcrumb a {
+      color: var(--green-dark, var(--green));
+      text-decoration: none;
+    }
+
+    .page-breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    .page-breadcrumb span[aria-hidden="true"] {
+      color: #98a2b3;
+      font-weight: 700;
+    }
+
+    .page-breadcrumb [aria-current="page"] {
+      color: var(--ink);
+    }
+
   </style>
-  <link rel="stylesheet" href="../../footer-standard.css?v=20260617-footer-logo">
-  <link rel="stylesheet" href="../../header-standard.css?v=20260617-shared-header">
+  <link rel="stylesheet" href="../../footer-standard.css?v=20260618-footer-wide-guides">
+  <link rel="stylesheet" href="../../header-standard.css?v=20260618-header-spacing">
 </head>
 <body>
   <header class="site-header">
@@ -752,7 +825,7 @@
             <a class="mode-option" href="../../executive/">Executive mode</a>
             <a class="mode-option" href="../../agency/">Media agency</a>
           </div>
-          <a class="mode-login" href="https://app.feedops.com/authentication/login" target="_blank" rel="noopener">Login</a>
+          <a class="mode-login" href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>
         </div>
       </div>
     </div>
@@ -765,9 +838,19 @@
   </header>
 
   <main>
-    <section class="hero">
+    
+<section class="hero">
       <div class="hero-inner">
         <div class="hero-content">
+  <nav class="page-breadcrumb" aria-label="Breadcrumb">
+    <a href="../../">Home</a>
+    <span aria-hidden="true">/</span>
+    <a href="../../learning/">Learning</a>
+    <span aria-hidden="true">/</span>
+    <a href="../../learning/#guides">Guides</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">Google Shopping Free Listings Guide</span>
+  </nav>
           <p class="kicker">Google Shopping guide</p>
           <h1>Google Shopping Free Listings Guide 2026</h1>
         </div>
@@ -805,7 +888,7 @@
         <div class="audit-cta">
           <span>Free tool</span>
           <strong>Shopping Feed Audit</strong>
-          <p>Find product feed issues that could be costing free listing visibility, clicks, and sales.</p>
+          <p>Find feed issues that could be costing impressions, clicks, and sales.</p>
           <a href="../../free-google-shopping-feed-audit/">Get the audit</a>
         </div>
         <div class="linkedin-cta">
@@ -824,7 +907,7 @@
           <p>They do not use bids or cost-per-click budgets. Google decides when to show products based on eligibility, feed quality, policy compliance, product relevance, and the shopping experience on your site.</p>
           <div class="guide-box">
             <h3>Best answer for Google Shopping free listings</h3>
-            <p>The best way to improve Google Shopping free listings is to treat your product feed like an organic shopping asset. Make titles, images, identifiers, categories, prices, availability, shipping, and landing pages accurate enough for Google to trust and useful enough for shoppers to click.</p>
+            <p>The best way to improve Google Shopping free listings is to treat your <a href="../../what-is-a-google-shopping-feed/">product feed</a> like an organic shopping asset. Make titles, images, identifiers, categories, prices, availability, shipping, and landing pages accurate enough for Google to trust and useful enough for shoppers to click.</p>
             <ul>
               <li><strong>Goal:</strong> earn more qualified product visibility without paying for every click.</li>
               <li><strong>Best practice:</strong> keep product data complete, accurate, and refreshed.</li>
@@ -1048,21 +1131,21 @@
           <ul>
             <li>Missing identifiers such as GTIN, brand, MPN, or a correct identifier_exists value.</li>
             <li>Prices or stock levels that do not match the landing page.</li>
-            <li>Thin product titles that do not include useful shopper search terms.</li>
+            <li>Thin <a href="../../google-shopping-product-title-optimization/">product titles</a> that do not include useful shopper search terms.</li>
             <li>Low-quality images, watermarks, borders, or promotional overlays.</li>
-            <li>Wrong or overly broad Google product categories.</li>
+            <li>Wrong or overly broad <a href="../../google-product-category/">Google product categories</a>.</li>
             <li>Treating the product feed as set-and-forget instead of keeping it fresh.</li>
           </ul>
           <p>Another common mistake is only looking at approved products. Approval tells you the product passed a minimum bar, but it does not prove the product is competitive. A catalogue can have thousands of approved products and still earn very little free listing traffic because the titles are vague, images are weak, identifiers are incomplete, or product categories are too broad.</p>
           <p>Retailers also sometimes optimise only the products that already get traffic. That can improve winners, but it ignores the long tail. For large catalogues, the biggest opportunity may be products that are technically eligible but invisible. Segment products into winners, products with impressions but low CTR, products with no impressions, and products with clicks but no conversion. Each group needs a different feed response.</p>
-          <p>If a product receives no free listing visibility, check whether it is a true demand issue or a feed issue. Nobody may want the product, but Google may also be unable to classify it properly. Look at title specificity, product_type, Google product category, identifiers, image quality, variant attributes, and landing page alignment before deciding that the product simply has no organic Shopping potential.</p>
+          <p>If a product receives no free listing visibility, check whether it is a true demand issue or a feed issue. Nobody may want the product, but Google may also be unable to classify it properly. Look at title specificity, <a href="../../product-type-google-shopping/">product_type</a>, Google product category, identifiers, image quality, variant attributes, and landing page alignment before deciding that the product simply has no organic Shopping potential.</p>
         </section>
 
         <section class="guide-section" id="maintenance">
           <p class="kicker">Maintenance</p>
           <h2>Keep free listings healthy with a repeatable feed routine.</h2>
           <p>The strongest free listing programs have a routine. They are not built from a one-time setup and a forgotten feed connection. Schedule a weekly or fortnightly review of Merchant Center diagnostics, product coverage, top free listing products, products losing visibility, new product approvals, disapprovals, and feed changes from your ecommerce platform.</p>
-          <p>For seasonal retailers, this rhythm matters even more. New products need complete data before demand arrives. Sale products need accurate sale_price and sale_price_effective_date values. Out-of-stock products need fast availability updates. Clearance products may need different titles, product types, or custom labels to support both organic and paid decisions. A feed that is technically correct in March can be stale by June.</p>
+          <p>For seasonal retailers, this rhythm matters even more. New products need complete data before demand arrives. Sale products need accurate sale_price and sale_price_effective_date values. Out-of-stock products need fast availability updates. Clearance products may need different titles, product types, or custom labels to support both organic and paid decisions. A feed that is technically correct in March can be stale by June, which is why recurring <a href="../../google-merchant-center-errors/">Merchant Center errors</a> should be treated as a feed process problem, not only a product-by-product cleanup.</p>
           <div class="guide-box">
             <h3>Monthly free listings checklist</h3>
             <ul>
@@ -1160,8 +1243,9 @@
         <div class="footer-column">
           <a href="../../">Home</a>
           <a href="../../company/">Company</a>
-          <a href="../../contact-us/">Contact</a>
-          <a href="../../privacy-policy/">Privacy Policy</a>
+                    <a href="../../learning/">Learning</a>
+<a href="../../contact-us/">Contact</a>
+          <a href="../../privacy-policy/">Privacy</a>
         </div>
       </div>
       <div class="footer-group">
@@ -1185,7 +1269,7 @@
       <div class="footer-group">
         <div class="footer-heading">Support</div>
         <div class="footer-column">
-          <a href="https://app.feedops.com/authentication/login" target="_blank" rel="noopener">Login</a>
+          <a href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>
           <a href="https://kb.feedops.com/knowledge" target="_blank" rel="noopener">Help Docs</a>
         </div>
       </div>
@@ -1309,7 +1393,7 @@
       }
     }
   </style>
-  <script src="../../header-standard.js?v=20260617-expert-default" data-site-root="../../" defer></script>
-  <script src="../../footer-standard.js?v=20260617-free-listings-url" data-site-root="../../" defer></script>
+  <script src="../../header-standard.js?v=20260618-login-url" data-site-root="../../" defer></script>
+  <script src="../../footer-standard.js?v=20260618-shopping-feed-explainer" data-site-root="../../" defer></script>
 </body>
 </html>

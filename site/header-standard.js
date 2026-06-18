@@ -65,7 +65,7 @@
       '          <a class="feedops-mode-option" data-feedops-mode="executive" href="' + href("executive/") + '">Executive mode</a>',
       '          <a class="feedops-mode-option" data-feedops-mode="agency" href="' + href("agency/") + '">Media agency</a>',
       "        </div>",
-      '        <a class="feedops-mode-login" href="https://app.feedops.com/authentication/login" target="_blank" rel="noopener">Login</a>',
+      '        <a class="feedops-mode-login" href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
       "      </div>",
       "    </div>",
       "  </div>",

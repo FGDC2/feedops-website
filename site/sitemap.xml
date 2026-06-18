@@ -26,6 +26,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://feedops.com/learning/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://feedops.com/faq/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://feedops.com/contact-us/</loc>
     <lastmod>2026-06-14</lastmod>
     <priority>0.6</priority>
@@ -51,13 +61,53 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://feedops.com/google-merchant-center-errors/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://feedops.com/google-shopping-ads-not-showing/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://feedops.com/what-is-a-google-shopping-feed/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://feedops.com/google-shopping-graph-explained/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://feedops.com/product-type-google-shopping/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://feedops.com/google-product-category/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://feedops.com/guide/google-shopping-feed-optimization-guide/</loc>
     <lastmod>2026-06-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://feedops.com/guide/google-local-inventory-ads-performance-max/</loc>
+    <lastmod>2026-06-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://feedops.com/feedops/google-shopping-free-listings/</loc>
     <lastmod>2026-06-17</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://feedops.com/feedonomics-alternative-competitor/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>

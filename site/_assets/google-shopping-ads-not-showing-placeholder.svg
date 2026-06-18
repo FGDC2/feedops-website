@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">Google Shopping ads not showing placeholder illustration</title>
+  <desc id="desc">A placeholder dashboard illustration showing product feed diagnostics, campaign checks, and products moving from hidden to visible.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7fbff"/>
+      <stop offset="0.56" stop-color="#eff7f4"/>
+      <stop offset="1" stop-color="#fff6d8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#101820" flood-opacity=".14"/>
+    </filter>
+  </defs>
+  <rect width="1400" height="820" rx="34" fill="url(#bg)"/>
+  <path d="M0 690C210 740 420 760 630 720C820 684 1010 670 1400 722V820H0Z" fill="#ffca28" opacity=".58"/>
+  <g filter="url(#shadow)">
+    <rect x="110" y="92" width="860" height="566" rx="28" fill="#fff"/>
+    <rect x="110" y="92" width="860" height="72" rx="28" fill="#f5f8fb"/>
+    <circle cx="154" cy="128" r="12" fill="#ef4444"/>
+    <circle cx="190" cy="128" r="12" fill="#ffca28"/>
+    <circle cx="226" cy="128" r="12" fill="#1c8c6f"/>
+    <rect x="276" y="116" width="290" height="24" rx="12" fill="#d8dee8"/>
+    <rect x="144" y="204" width="780" height="72" rx="16" fill="#fff7e6" stroke="#ffca28"/>
+    <circle cx="188" cy="240" r="22" fill="#ffca28"/>
+    <path d="M188 224v22" stroke="#101820" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="188" cy="257" r="4" fill="#101820"/>
+    <rect x="230" y="220" width="270" height="16" rx="8" fill="#b6c0cc"/>
+    <rect x="230" y="248" width="420" height="12" rx="6" fill="#d8dee8"/>
+    <g transform="translate(144 324)">
+      <rect width="780" height="72" rx="16" fill="#fff" stroke="#d8dee8"/>
+      <rect x="24" y="18" width="54" height="38" rx="8" fill="#eef2f7"/>
+      <rect x="98" y="22" width="190" height="14" rx="7" fill="#b6c0cc"/>
+      <rect x="98" y="44" width="150" height="10" rx="5" fill="#d8dee8"/>
+      <circle cx="392" cy="36" r="18" fill="#fee4e2"/>
+      <path d="M392 26v15" stroke="#dc2626" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="392" cy="50" r="3" fill="#dc2626"/>
+      <rect x="448" y="25" width="140" height="22" rx="11" fill="#fee4e2"/>
+      <rect x="620" y="25" width="118" height="22" rx="11" fill="#eef8f4"/>
+    </g>
+    <g transform="translate(144 416)">
+      <rect width="780" height="72" rx="16" fill="#fff" stroke="#d8dee8"/>
+      <rect x="24" y="18" width="54" height="38" rx="8" fill="#eef2f7"/>
+      <rect x="98" y="22" width="240" height="14" rx="7" fill="#b6c0cc"/>
+      <rect x="98" y="44" width="170" height="10" rx="5" fill="#d8dee8"/>
+      <circle cx="392" cy="36" r="18" fill="#fff7e6"/>
+      <path d="M392 26v15" stroke="#f5a400" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="392" cy="50" r="3" fill="#f5a400"/>
+      <rect x="448" y="25" width="140" height="22" rx="11" fill="#fff7e6"/>
+      <rect x="620" y="25" width="118" height="22" rx="11" fill="#eef8f4"/>
+    </g>
+    <g transform="translate(144 508)">
+      <rect width="780" height="72" rx="16" fill="#fff" stroke="#d8dee8"/>
+      <rect x="24" y="18" width="54" height="38" rx="8" fill="#eef2f7"/>
+      <rect x="98" y="22" width="220" height="14" rx="7" fill="#b6c0cc"/>
+      <rect x="98" y="44" width="190" height="10" rx="5" fill="#d8dee8"/>
+      <circle cx="392" cy="36" r="18" fill="#eef8f4"/>
+      <path d="M383 36l7 7 15-18" fill="none" stroke="#15803d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="448" y="25" width="140" height="22" rx="11" fill="#eef8f4"/>
+      <rect x="620" y="25" width="118" height="22" rx="11" fill="#eef8f4"/>
+    </g>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="1010" y="172" width="270" height="330" rx="28" fill="#fff"/>
+    <circle cx="1066" cy="230" r="32" fill="#1c8c6f"/>
+    <path d="M1053 230l10 10 21-26" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="1115" y="212" width="110" height="16" rx="8" fill="#b6c0cc"/>
+    <rect x="1115" y="242" width="82" height="12" rx="6" fill="#d8dee8"/>
+    <rect x="1048" y="308" width="194" height="1" fill="#d8dee8"/>
+    <rect x="1048" y="342" width="30" height="30" rx="8" fill="#fff7e6"/>
+    <rect x="1095" y="350" width="126" height="12" rx="6" fill="#b6c0cc"/>
+    <rect x="1048" y="398" width="30" height="30" rx="8" fill="#eef8f4"/>
+    <rect x="1095" y="406" width="112" height="12" rx="6" fill="#b6c0cc"/>
+    <rect x="1048" y="454" width="30" height="30" rx="8" fill="#eef2f7"/>
+    <rect x="1095" y="462" width="132" height="12" rx="6" fill="#b6c0cc"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="940" y="560" width="250" height="86" rx="22" fill="#101820"/>
+    <circle cx="988" cy="603" r="24" fill="#ffca28"/>
+    <path d="M978 604h20m-10-10v20" stroke="#101820" stroke-width="6" stroke-linecap="round"/>
+    <rect x="1030" y="586" width="116" height="12" rx="6" fill="#ffffff" opacity=".82"/>
+    <rect x="1030" y="612" width="86" height="10" rx="5" fill="#ffffff" opacity=".48"/>
+  </g>
+</svg>

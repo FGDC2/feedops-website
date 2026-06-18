@@ -139,7 +139,7 @@
 
     .stats {
       display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
+      grid-template-columns: repeat(6, minmax(0, 1fr));
       gap: 14px;
       margin-top: 34px;
     }
@@ -351,6 +351,11 @@
       color: #475467;
     }
 
+    .status.remove {
+      background: #fee4e2;
+      color: var(--red);
+    }
+
     .status.utility {
       background: #eef8f4;
       color: var(--green-dark);
@@ -431,8 +436,8 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="../footer-standard.css?v=20260617-footer-logo">
-  <link rel="stylesheet" href="../header-standard.css?v=20260617-shared-header">
+  <link rel="stylesheet" href="../footer-standard.css?v=20260618-footer-tight-line-height">
+  <link rel="stylesheet" href="../header-standard.css?v=20260618-header-spacing">
 </head>
 <body>
   <header class="admin-header">
@@ -443,11 +448,13 @@
       </a>
       <nav class="header-links" aria-label="Admin quick links">
         <a href="../">Home</a>
+        <a href="search-decisions/">Search Decisions</a>
         <a href="../robots.txt">Robots</a>
         <a href="../sitemap.xml">Sitemap</a>
         <a href="../llms.txt">LLMS</a>
         <a href="../pricing/">Pricing</a>
         <a href="../company/">Company</a>
+        <a href="../learning/">Learning</a>
         <a href="../contact-us/">Contact</a>
       </nav>
     </div>
@@ -472,6 +479,7 @@
             <button type="button" data-filter="done">Assigned</button>
             <button type="button" data-filter="gap">Gaps</button>
             <button type="button" data-filter="noindex">Noindex</button>
+            <button type="button" data-filter="remove">Remove</button>
             <button type="button" data-filter="utility">Utility / followed</button>
           </div>
           <div class="segmented" aria-label="Priority filter">
@@ -568,13 +576,27 @@
       { url: "/agency/", keyword: "shopping feed agency", status: "done", priority: "High", updated: "2026-06-17", seo: false, geo: false, au: true, schema: false, links: false, conversion: false, gsc: false, footer: true, sitemap: true, llms: true, page: "Media agency page", notes: "Agency partner/support intent." },
       { url: "/pricing/", keyword: "FeedOps pricing", status: "done", priority: "High", updated: "2026-06-16", seo: false, geo: false, au: true, schema: false, links: false, conversion: false, gsc: false, footer: true, sitemap: true, llms: true, page: "Pricing page", notes: "Branded pricing and evaluation intent. Pricing is scoped around value, fit, and a feed strategy call." },
       { url: "/company/", keyword: "FeedOps", status: "done", priority: "Medium", updated: "2026-06-14", seo: false, geo: false, au: true, schema: false, links: false, conversion: false, gsc: false, footer: true, sitemap: true, llms: true, page: "Company page", notes: "Primary branded company page for FeedOps. Supports trust, people, origin story, and commercial credibility." },
+      { url: "/learning/", keyword: "FeedOps learning", status: "done", priority: "Medium", updated: "2026-06-18", seo: true, geo: true, au: true, schema: true, links: true, conversion: true, gsc: false, footer: true, sitemap: true, llms: true, page: "FeedOps Learning hub", notes: "Rebuilt learning hub for FeedOps guides, explainers, troubleshooting, Google Shopping feed resources, and feed audit CTA." },
+      { url: "/faq/", keyword: "FeedOps questions", status: "done", priority: "Medium", updated: "2026-06-18", seo: true, geo: true, au: true, schema: true, links: true, conversion: true, gsc: false, footer: true, sitemap: true, llms: true, page: "FeedOps questions FAQ hub", notes: "Rebuilt FAQ page covering company, platform, free audit, pricing, FeedOps Learning, guides, explainers, troubleshooting, support, and fit. Includes FAQPage schema and standard header/footer." },
       { url: "/contact-us/", keyword: "contact FeedOps", status: "done", priority: "Medium", updated: "2026-06-14", seo: false, geo: false, au: true, schema: false, links: false, conversion: false, gsc: false, footer: true, sitemap: true, llms: true, page: "Contact page", notes: "Brand/contact intent, strategy call path, HubSpot form, and client support path." },
       { url: "/privacy-policy/", keyword: "FeedOps privacy policy", status: "done", priority: "Low", updated: "2026-06-16", seo: false, geo: false, au: true, schema: false, links: false, conversion: false, gsc: false, footer: true, sitemap: true, llms: true, page: "Privacy page", notes: "Compliance and branded privacy intent." },
       { url: "/book-live-demo/", keyword: "feed strategy call", status: "done", priority: "High", updated: "2026-06-16", seo: false, geo: false, au: true, schema: false, links: false, conversion: false, gsc: false, footer: true, sitemap: true, llms: true, page: "Feed strategy call booking page", notes: "Primary conversion page for new commercial journeys. Supports product feed review, pricing fit, and next-step intent." },
       { url: "/free-google-shopping-feed-audit/", keyword: "free Google Shopping feed audit", status: "done", priority: "High", updated: "2026-06-17", seo: true, geo: true, au: true, schema: true, links: true, conversion: true, gsc: false, footer: true, sitemap: true, llms: true, page: "Free Google Shopping feed audit page", notes: "Rebuilt conversion page for automated Merchant Center product data audit, visibility gaps, zombie products, attribute completeness, and feed health. Clearly states standard Merchant Center access plus reporting and insights permissions are required." },
       { url: "/google-shopping-product-title-optimization/", keyword: "google shopping title optimization", status: "done", priority: "High", updated: "2026-06-17", seo: true, geo: true, au: true, schema: true, links: true, conversion: true, gsc: false, footer: true, sitemap: true, llms: true, page: "Google Shopping title optimization guide", notes: "New guide page for Shopping title templates, examples, AI workflows, FAQ coverage, and feed strategy CTA." },
+      { url: "/google-merchant-center-errors/", keyword: "google merchant center errors", status: "done", priority: "High", updated: "2026-06-18", seo: true, geo: true, au: true, schema: true, links: true, conversion: true, gsc: false, footer: true, sitemap: true, llms: true, page: "Google Merchant Center errors troubleshooting article", notes: "Rebuilt troubleshooting article targeting Google Merchant Center errors. Includes 10 common errors, inline Google Help references, expanded FAQs, Article and FAQ schema, global header/footer, footer troubleshooting placement, sitemap inclusion, and llms.txt citation guidance." },
+      { url: "/google-shopping-ads-not-showing/", keyword: "Google Shopping ads not showing", status: "done", priority: "High", updated: "2026-06-18", seo: true, geo: true, au: true, schema: true, links: true, conversion: true, gsc: false, footer: true, sitemap: true, llms: true, page: "Google Shopping ads not showing troubleshooting article", notes: "Rebuilt troubleshooting article from scratch for 2026. Covers Merchant Center eligibility, destinations, account linking, campaign status, listing groups, Performance Max, bidding, budgets, goals, feed quality, competitiveness, demand, FAQ schema, placeholder image, and footer troubleshooting placement." },
+      { url: "/what-is-a-google-shopping-feed/", keyword: "what is a shopping feed", status: "done", priority: "High", updated: "2026-06-18", seo: true, geo: true, au: true, schema: true, links: true, conversion: true, gsc: false, footer: true, sitemap: true, llms: true, page: "What is a shopping feed explainer", notes: "New explainer page using the Google Shopping Graph template. Covers shopping feed and Google Shopping feed definitions, Merchant Center product data, core attributes, Shopping ads, free listings, Performance Max, feed quality, product type, Google product category, structured data, common mistakes, FeedOps audit approach, FAQ schema, contextual internal links, footer explainer placement, sitemap, and llms.txt." },
+      { url: "/google-shopping-graph-explained/", keyword: "google shopping graph", status: "done", priority: "High", updated: "2026-06-18", seo: true, geo: true, au: true, schema: true, links: true, conversion: true, gsc: false, footer: true, sitemap: true, llms: true, page: "Google Shopping Graph explained article", notes: "Rebuilt from the old export into the current guide-style template. Explains Google Shopping Graph, Merchant Center feeds, product structured data, product page consistency, AI shopping discovery, common feed mistakes, readiness checklist, related guides, and FAQ schema." },
+      { url: "/product-type-google-shopping/", keyword: "product type Google Shopping", status: "done", priority: "High", updated: "2026-06-18", seo: true, geo: true, au: true, schema: true, links: true, conversion: true, gsc: false, footer: true, sitemap: true, llms: true, page: "Product type Google Shopping explainer", notes: "Rebuilt from the old export into the current explainer template. Explains the product_type attribute, Google product category differences, hierarchy formatting, campaign segmentation, reporting workflows, common mistakes, optimisation process, checklist, official Google Merchant Center references, and FAQ schema." },
+      { url: "/google-product-category/", keyword: "Google Product Category", status: "done", priority: "High", updated: "2026-06-18", seo: true, geo: true, au: true, schema: true, links: true, conversion: true, gsc: false, footer: true, sitemap: true, llms: true, page: "Google Product Category explainer", notes: "Rebuilt from the old export into the current explainer template. Explains Google's auto-assigned product category taxonomy, when to check category accuracy, when to improve product data before overriding, product_type differences, campaign structure, policy-sensitive categories, FeedOps feed-rule/manual override options, common mistakes, optimisation process, checklist, official Google Merchant Center references, and FAQ schema." },
       { url: "/guide/google-shopping-feed-optimization-guide/", keyword: "Google Shopping feed optimization", status: "done", priority: "High", updated: "2026-06-17", seo: true, geo: true, au: true, schema: true, links: true, conversion: true, gsc: false, footer: true, sitemap: true, llms: true, page: "Google Shopping feed optimization guide", notes: "Rebuilt guide page using the current guide layout. Covers titles, product types, attributes, descriptions, Merchant Center health, product-level monitoring, FAQs, and audit CTA." },
+      { url: "/guide/google-local-inventory-ads-performance-max/", keyword: "Google Local Inventory Ads Performance Max", status: "done", priority: "High", updated: "2026-06-18", seo: true, geo: true, au: true, schema: true, links: true, conversion: true, gsc: false, footer: true, sitemap: true, llms: true, page: "Google Local Inventory Ads + Performance Max guide", notes: "Active guide URL for Local Inventory Ads with Performance Max, local inventory feeds, Merchant Center validation, store codes, pickup data, store visits, official Google references, and local product troubleshooting." },
       { url: "/feedops/google-shopping-free-listings/", keyword: "Google Shopping free listings", status: "done", priority: "High", updated: "2026-06-17", seo: true, geo: true, au: true, schema: true, links: true, conversion: true, gsc: false, footer: true, sitemap: true, llms: true, page: "Google Shopping free listings guide", notes: "Active guide URL for setting up and optimising Google Shopping free listings, Merchant Center checks, feed quality, and organic Shopping performance measurement." },
+      { url: "/feedonomics-alternative-competitor/", keyword: "Feedonomics alternative", status: "done", priority: "High", updated: "2026-06-18", seo: true, geo: true, au: true, schema: true, links: true, conversion: true, gsc: true, footer: true, sitemap: true, llms: true, page: "Feedonomics alternative comparison page", notes: "Rebuilt competitor comparison page for teams evaluating FeedOps against Feedonomics. Fairly positions Feedonomics as broad full-service feed management and FeedOps as a focused Google Shopping, Merchant Center, PMax, and product-level optimisation option." },
+      { url: "/corporate-development/", keyword: "", status: "remove", priority: "Low", updated: "2026-06-18", seo: null, geo: null, au: null, schema: null, links: null, conversion: null, gsc: null, footer: false, sitemap: false, llms: false, page: "Corporate development page", notes: "User decision: remove from the active site. Do not rebuild, add to footer, sitemap, or llms.txt." },
+      { url: "/free-30-day-ai-trial/", keyword: "", status: "remove", priority: "Low", updated: "2026-06-18", seo: null, geo: null, au: null, schema: null, links: null, conversion: null, gsc: null, footer: false, sitemap: false, llms: false, page: "Free 30 day AI trial page", notes: "User decision: remove from the active site. Do not rebuild, add to footer, sitemap, or llms.txt." },
+      { url: "/map-feed-attributes/", keyword: "", status: "remove", priority: "Low", updated: "2026-06-18", seo: null, geo: null, au: null, schema: null, links: null, conversion: null, gsc: null, footer: false, sitemap: false, llms: false, page: "Map feed attributes page", notes: "User decision: remove from the active site. Do not rebuild, add to footer, sitemap, or llms.txt." },
+      { url: "/google-ads-quiz-should-you-be-running-your-own-google-ads/", keyword: "", status: "remove", priority: "Low", updated: "2026-06-18", seo: null, geo: null, au: null, schema: null, links: null, conversion: null, gsc: null, footer: false, sitemap: false, llms: false, page: "Google Ads quiz page", notes: "User decision: remove from the active site. Do not rebuild, add to footer, sitemap, or llms.txt." },
       { url: "/robots.txt", keyword: "", status: "utility", priority: "Low", updated: "2026-06-17", seo: null, geo: null, au: null, schema: null, links: null, conversion: null, gsc: null, footer: null, sitemap: true, llms: true, page: "Robots text file", notes: "Utility file for crawler access. Allows all search engines and common AI/LLM crawlers, points to the XML sitemap, and references llms.txt for AI-readable page guidance." },
       { url: "/sitemap.xml", keyword: "", status: "utility", priority: "Low", updated: "2026-06-17", seo: null, geo: null, au: null, schema: null, links: null, conversion: null, gsc: null, footer: null, sitemap: null, llms: true, page: "XML sitemap", notes: "Utility file for search engine discovery. Crawlable and followed. Includes only the done pages from this admin map." },
       { url: "/llms.txt", keyword: "", status: "utility", priority: "Low", updated: "2026-06-17", seo: null, geo: null, au: null, schema: null, links: null, conversion: null, gsc: null, footer: null, sitemap: null, llms: true, page: "LLMS text file", notes: "Utility file for AI answer engines and crawlers. Crawlable and followed. Points to the strongest FeedOps guide URLs and recommended citation targets." },
@@ -585,6 +607,7 @@
       done: "Assigned",
       gap: "Gap",
       noindex: "Noindex",
+      remove: "Remove",
       utility: "Utility / followed"
     };
 
@@ -596,7 +619,7 @@
     let priorityFilter = "all";
 
     function statusClass(status) {
-      return status === "done" ? "done" : status === "noindex" ? "noindex" : status === "utility" ? "utility" : "gap";
+      return status === "done" ? "done" : status === "noindex" ? "noindex" : status === "utility" ? "utility" : status === "remove" ? "remove" : "gap";
     }
 
     function checkCell(value, label) {
@@ -610,12 +633,14 @@
       const assigned = rows.filter(row => row.status === "done").length;
       const gaps = rows.filter(row => row.status === "gap").length;
       const noindex = rows.filter(row => row.status === "noindex").length;
+      const remove = rows.filter(row => row.status === "remove").length;
       const utility = rows.filter(row => row.status === "utility").length;
       stats.innerHTML = [
         ["URLs tracked", rows.length],
         ["Assigned keywords", assigned],
         ["Keyword gaps", gaps],
         ["Noindex", noindex],
+        ["Decided remove", remove],
         ["Utility / followed", utility]
       ].map(([label, value]) => `<div class="stat"><strong>${value}</strong><span>${label}</span></div>`).join("");
     }
@@ -683,7 +708,7 @@
     renderMajorGaps();
     renderRows();
   </script>
-  <script src="../header-standard.js?v=20260617-expert-default" data-site-root="../" defer></script>
-  <script src="../footer-standard.js?v=20260617-free-listings-url" data-site-root="../" defer></script>
+  <script src="../header-standard.js?v=20260618-login-url" data-site-root="../" defer></script>
+  <script src="../footer-standard.js?v=20260618-shopping-feed-explainer" data-site-root="../" defer></script>
 </body>
 </html>

@@ -1,19 +1,69 @@
 #feedops-standard-footer.site-footer {
-  background:
-    linear-gradient(135deg, rgba(28, 140, 111, .18), transparent 34%),
-    #101820;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  background: #101820;
   color: #ffffff;
   padding: 62px 24px 54px;
   font-family: Inter, Arial, sans-serif;
-  border-top: 4px solid #ffca28;
+  border-top: 0;
+}
+
+#feedops-standard-footer.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  height: 4px;
+  background: #ffca28;
 }
 
 #feedops-standard-footer .footer-inner {
   display: grid;
-  grid-template-columns: minmax(280px, 1.6fr) repeat(3, minmax(150px, 1fr));
-  gap: 32px;
-  max-width: 1180px;
+  grid-template-columns: minmax(360px, 1.35fr) minmax(240px, .9fr) minmax(240px, .9fr) minmax(110px, .45fr) minmax(110px, .45fr);
+  grid-template-areas:
+    "brand company platform support support"
+    "guides explainers troubleshooting comparisons comparisons";
+  column-gap: 28px;
+  row-gap: 36px;
+  width: min(1180px, calc(100% - 144px));
   margin: 0 auto;
+}
+
+#feedops-standard-footer .footer-brand {
+  grid-area: brand;
+  align-self: start;
+}
+
+#feedops-standard-footer .footer-company-column {
+  grid-area: company;
+}
+
+#feedops-standard-footer .footer-platform-column {
+  grid-area: platform;
+}
+
+#feedops-standard-footer .footer-support-column {
+  grid-area: support;
+}
+
+#feedops-standard-footer .footer-brand-guides {
+  grid-area: guides;
+}
+
+#feedops-standard-footer .footer-explainers-column {
+  grid-area: explainers;
+}
+
+#feedops-standard-footer .footer-troubleshooting-column {
+  grid-area: troubleshooting;
+}
+
+#feedops-standard-footer .footer-comparison-column {
+  grid-area: comparisons;
 }
 
 #feedops-standard-footer .footer-brand img {
@@ -67,9 +117,7 @@
 }
 
 #feedops-standard-footer .footer-brand-guides {
-  margin-top: 26px;
-  padding-top: 22px;
-  border-top: 1px solid rgba(255, 255, 255, .12);
+  align-self: start;
 }
 
 #feedops-standard-footer .footer-heading {
@@ -83,13 +131,13 @@
 
 #feedops-standard-footer .footer-column {
   display: grid;
-  gap: 10px;
+  gap: 6px;
 }
 
 #feedops-standard-footer .footer-column a {
   color: rgba(255, 255, 255, .78);
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.2;
   text-decoration: none;
   transition: color .18s ease, transform .18s ease;
 }
@@ -110,7 +158,15 @@ footer.site-footer:not(#feedops-standard-footer) {
 
 @media (max-width: 900px) {
   #feedops-standard-footer .footer-inner {
+    width: min(100%, 680px);
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "brand brand"
+      "company platform"
+      "support support"
+      "guides guides"
+      "explainers troubleshooting"
+      "comparisons comparisons";
   }
 
   #feedops-standard-footer .footer-brand {
@@ -124,6 +180,17 @@ footer.site-footer:not(#feedops-standard-footer) {
   }
 
   #feedops-standard-footer .footer-inner {
+    width: 100%;
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "brand"
+      "company"
+      "platform"
+      "support"
+      "guides"
+      "explainers"
+      "troubleshooting"
+      "comparisons";
   }
+
 }

@@ -9,9 +9,10 @@ header.site-header,
   top: 0;
   z-index: 1000;
   border-bottom: 1px solid #d8dee8;
-  background: rgba(255, 255, 255, .94);
+  background: #ffffff;
   backdrop-filter: blur(14px);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  overflow-x: hidden;
 }
 
 #feedops-standard-header a {
@@ -98,13 +99,14 @@ header.site-header,
 }
 
 #feedops-standard-header .feedops-nav {
-  width: min(1180px, calc(100% - 40px));
+  width: min(1180px, calc(100% - 198px));
   height: 76px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 28px;
   margin: 0 auto;
+  background: #ffffff;
 }
 
 #feedops-standard-header .feedops-logo {
@@ -167,7 +169,7 @@ header.site-header,
 @media (max-width: 980px) {
   #feedops-standard-header .feedops-mode-inner,
   #feedops-standard-header .feedops-nav {
-    width: min(100% - 28px, 1180px);
+    width: min(100% - 40px, 1180px);
     flex-wrap: wrap;
   }
 

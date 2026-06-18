@@ -1,5 +1,12 @@
 # FeedOps Site Style Notes
 
+## Global Layout
+
+- Every page must include the shared global header and footer unless Frank explicitly requests a page-specific exception.
+- Use `header-standard.css` and `header-standard.js` for the global header.
+- Use `footer-standard.css` and `footer-standard.js` for the global footer.
+- Do not remove the global header or footer when cleaning up exported page markup; remove only duplicate embedded/exported header or footer blocks.
+
 ## Guide Pages
 
 - Put the guide date directly under the hero image.
