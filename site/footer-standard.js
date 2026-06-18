@@ -84,6 +84,7 @@
       '      <div class="footer-heading">Comparisons</div>',
       '      <div class="footer-column">',
       '        <a href="' + href("feedonomics-alternative-competitor/") + '">Feedonomics Alternative</a>',
+      '        <a href="' + href("intelligent-reach-alternative/") + '">Intelligent Reach Alternative</a>',
       "      </div>",
       "    </div>",
       "  </div>",
