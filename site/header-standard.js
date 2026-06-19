@@ -78,7 +78,7 @@
       "  </div>",
       '  <nav class="feedops-nav" aria-label="Main navigation">',
       '    <a class="feedops-logo" href="' + href("") + '" aria-label="FeedOps home">',
-      '      <img src="' + href("assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4.png") + '" alt="FeedOps">',
+      '      <img src="' + href("assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4-300x110.png") + '" alt="FeedOps">',
       "    </a>",
       '    <button class="feedops-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="feedops-mobile-menu">',
       '      <span class="feedops-menu-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>',
