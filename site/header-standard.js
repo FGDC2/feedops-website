@@ -53,6 +53,12 @@
     }).join("");
   }
 
+  function mobileNavLinks() {
+    return navItems(currentMode()).map(function (item) {
+      return '      <a data-feedops-section="' + item[2] + '" href="' + href(item[1]) + '">' + item[0] + '</a>';
+    }).join("");
+  }
+
   function standardHeader() {
     return [
       '<header id="feedops-standard-header" class="feedops-header">',
@@ -74,6 +80,9 @@
       '    <a class="feedops-logo" href="' + href("") + '" aria-label="FeedOps home">',
       '      <img src="' + href("assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4.png") + '" alt="FeedOps">',
       "    </a>",
+      '    <button class="feedops-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="feedops-mobile-menu">',
+      '      <span class="feedops-menu-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>',
+      "    </button>",
       '    <div class="feedops-nav-links" aria-label="Primary links">',
       standardNavLinks(),
       "    </div>",
@@ -81,6 +90,24 @@
       '      <a class="feedops-nav-cta" href="' + href("book-live-demo/") + '">Book a demo</a>',
       "    </div>",
       "  </nav>",
+      '  <div class="feedops-mobile-menu" id="feedops-mobile-menu">',
+      '    <div class="feedops-mobile-panel">',
+      '      <div class="feedops-mobile-label">Explore FeedOps as</div>',
+      '      <div class="feedops-mobile-modes">',
+      '        <a class="feedops-mode-option" data-feedops-mode="expert" href="' + href("") + '">Performance expert</a>',
+      '        <a class="feedops-mode-option" data-feedops-mode="executive" href="' + href("product-feed-management/") + '">Executive mode</a>',
+      '        <a class="feedops-mode-option" data-feedops-mode="agency" href="' + href("shopping-feed-agency/") + '">Media agency</a>',
+      "      </div>",
+      '      <div class="feedops-mobile-links" aria-label="Mobile primary links">',
+      mobileNavLinks(),
+      "      </div>",
+      '      <div class="feedops-mobile-utility">',
+      '        <a href="' + href("contact-us/") + '">Contact</a>',
+      '        <a href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
+      "      </div>",
+      '      <a class="feedops-mobile-cta" href="' + href("book-live-demo/") + '">Book a demo</a>',
+      "    </div>",
+      "  </div>",
       "</header>"
     ].join("");
   }
@@ -128,6 +155,55 @@
         cta.removeAttribute("aria-current");
       }
     }
+
+    var mobileCta = header.querySelector(".feedops-mobile-cta");
+    if (mobileCta) {
+      var isMobileCtaActive = path === "/book-live-demo/";
+      mobileCta.classList.toggle("is-active", isMobileCtaActive);
+      if (isMobileCtaActive) {
+        mobileCta.setAttribute("aria-current", "page");
+      } else {
+        mobileCta.removeAttribute("aria-current");
+      }
+    }
+  }
+
+  function setMenuOpen(header, open) {
+    var button = header.querySelector(".feedops-menu-toggle");
+    var menu = header.querySelector(".feedops-mobile-menu");
+    header.classList.toggle("is-menu-open", open);
+    if (button) {
+      button.setAttribute("aria-expanded", open ? "true" : "false");
+      button.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    }
+    if (menu) menu.toggleAttribute("hidden", !open);
+  }
+
+  function bindMobileMenu() {
+    var header = document.querySelector("#feedops-standard-header");
+    if (!header) return;
+
+    var button = header.querySelector(".feedops-menu-toggle");
+    var menu = header.querySelector(".feedops-mobile-menu");
+    if (!button || !menu) return;
+
+    setMenuOpen(header, false);
+
+    button.addEventListener("click", function () {
+      setMenuOpen(header, button.getAttribute("aria-expanded") !== "true");
+    });
+
+    menu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        setMenuOpen(header, false);
+      });
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        setMenuOpen(header, false);
+      }
+    });
   }
 
   function removeOldHeaders() {
@@ -143,6 +219,7 @@
   function installHeader() {
     removeOldHeaders();
     document.body.insertAdjacentHTML("afterbegin", standardHeader());
+    bindMobileMenu();
     setActiveStates();
     window.feedopsStandardHeaderInstalled = true;
   }

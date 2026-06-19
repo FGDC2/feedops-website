@@ -67,6 +67,10 @@ const sharedFiles = [
   "llms.txt"
 ];
 
+const rootHtmlFiles = [
+  "404.html"
+];
+
 const assetPathMap = [];
 const legacyAssetAliases = [
   [
@@ -154,6 +158,10 @@ copySanitisedAssets(join(sourceRoot, "assets"), join(outputRoot, "assets"));
 
 for (const file of sharedFiles) {
   copyTextPath(join(sourceRoot, file), join(outputRoot, file));
+}
+
+for (const file of rootHtmlFiles) {
+  copyTextPath(join(sourceRoot, file), join(outputRoot, file), injectGoogleTagManager);
 }
 
 for (const page of pages) {

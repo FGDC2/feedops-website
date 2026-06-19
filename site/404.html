@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Not Found | FeedOps</title>
+  <meta name="description" content="The FeedOps page you were looking for could not be found.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="author" content="FeedOps">
+  <link rel="canonical" href="https://feedops.com/404.html">
+  <link rel="icon" href="assets/feedops.com/wp-content/uploads/2022/05/Feedops-staggered-logo-Final-2-60x60.png" sizes="32x32">
+  <style>
+    :root {
+      --ink: #101820;
+      --muted: #536072;
+      --line: #d8dee8;
+      --soft: #f4f7fb;
+      --soft-yellow: #fff7df;
+      --yellow: #ffca28;
+      --orange: #f5a400;
+      --red: #d93025;
+      --green: #1c8c6f;
+      --green-dark: #176e58;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #fff;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .not-found {
+      background:
+        linear-gradient(135deg, rgba(255, 202, 40, .18), transparent 34%),
+        linear-gradient(160deg, rgba(28, 140, 111, .10), transparent 42%),
+        linear-gradient(180deg, #fff 0%, #f6f9fd 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .not-found-inner {
+      width: min(1180px, calc(100% - 40px));
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(280px, .95fr);
+      gap: 44px;
+      align-items: center;
+      margin: 0 auto;
+      padding: 86px 0 92px;
+    }
+
+    .kicker {
+      margin: 0 0 14px;
+      color: var(--red);
+      font-size: 13px;
+      font-weight: 950;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(46px, 7vw, 84px);
+      line-height: .98;
+      letter-spacing: 0;
+    }
+
+    .lede {
+      max-width: 620px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1.55;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 18px;
+      border-radius: 8px;
+      background: var(--yellow);
+      color: #111;
+      font-size: 15px;
+      font-weight: 950;
+      text-decoration: none;
+      box-shadow: 0 12px 30px rgba(254, 207, 38, .24);
+    }
+
+    .button.secondary {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: #243041;
+      box-shadow: none;
+    }
+
+    .diagnostics-panel {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 22px 70px rgba(16, 24, 32, .08);
+    }
+
+    .diagnostics-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .diagnostics-title {
+      margin: 0;
+      color: #263343;
+      font-size: 15px;
+      font-weight: 950;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0 10px;
+      border-radius: 999px;
+      background: #fce8e6;
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 950;
+      white-space: nowrap;
+    }
+
+    .issue-card {
+      display: grid;
+      gap: 18px;
+      padding: 22px 20px 20px;
+    }
+
+    .issue-heading {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .warning-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: #fce8e6;
+      color: var(--red);
+      font-size: 24px;
+      font-weight: 950;
+    }
+
+    .issue-heading strong {
+      display: block;
+      color: var(--ink);
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .issue-heading span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .attribute-table {
+      display: grid;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .attribute-row {
+      display: grid;
+      grid-template-columns: 140px 1fr 96px;
+      gap: 12px;
+      align-items: center;
+      min-height: 48px;
+      padding: 10px 12px;
+      border-top: 1px solid var(--line);
+      color: #344054;
+      font-size: 13px;
+    }
+
+    .attribute-row:first-child {
+      border-top: 0;
+      background: #f7f9fc;
+      color: #667085;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .attribute-row.missing {
+      background: var(--soft-yellow);
+    }
+
+    .attribute-status {
+      justify-self: start;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #edf7f3;
+      color: var(--green-dark);
+      font-size: 12px;
+      font-weight: 950;
+    }
+
+    .attribute-row.missing .attribute-status {
+      background: #fce8e6;
+      color: var(--red);
+    }
+
+    .repair-path {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 10px;
+      align-items: center;
+      padding: 14px;
+      border: 1px dashed rgba(28, 140, 111, .42);
+      border-radius: 8px;
+      background: #f6fbf9;
+    }
+
+    .product-tile,
+    .feed-slot {
+      min-height: 74px;
+      padding: 12px;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
+    .product-tile {
+      border-color: #f2b8b5;
+      box-shadow: 0 12px 28px rgba(217, 48, 37, .08);
+    }
+
+    .tile-label {
+      display: inline-flex;
+      margin-bottom: 8px;
+      padding: 4px 7px;
+      border-radius: 999px;
+      background: #fce8e6;
+      color: var(--red);
+      font-size: 11px;
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .tile-line {
+      height: 8px;
+      margin-top: 7px;
+      border-radius: 999px;
+      background: #dfe5ee;
+    }
+
+    .tile-line.short {
+      width: 62%;
+    }
+
+    .repair-arrow {
+      color: var(--green-dark);
+      font-size: 24px;
+      font-weight: 950;
+    }
+
+    .feed-slot {
+      display: grid;
+      place-items: center;
+      color: var(--green-dark);
+      font-size: 13px;
+      font-weight: 950;
+      text-align: center;
+    }
+
+    @media (max-width: 780px) {
+      .not-found-inner {
+        grid-template-columns: 1fr;
+        padding: 66px 0 72px;
+      }
+
+      .lede {
+        font-size: 18px;
+      }
+
+      .attribute-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .repair-path {
+        grid-template-columns: 1fr;
+      }
+
+      .repair-arrow {
+        transform: rotate(90deg);
+        justify-self: center;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="footer-standard.css?v=20260618-footer-wide-guides">
+  <link rel="stylesheet" href="header-standard.css?v=20260620-mobile-menu">
+</head>
+<body>
+  <main>
+    <section class="not-found">
+      <div class="not-found-inner">
+        <div>
+          <p class="kicker">404 error</p>
+          <h1>URL not approved.</h1>
+          <p class="lede">This page is missing a required attribute: existence. Let’s get you back to a valid destination.</p>
+          <div class="actions">
+            <a class="button" href="./">Return to homepage</a>
+          </div>
+        </div>
+        <aside class="diagnostics-panel" aria-label="404 diagnostics">
+          <div class="diagnostics-top">
+            <p class="diagnostics-title">Landing Page diagnostics</p>
+            <span class="status-pill">Disapproved</span>
+          </div>
+          <div class="issue-card">
+            <div class="issue-heading">
+              <div class="warning-icon">!</div>
+              <div>
+                <strong>Missing landing page</strong>
+                <span>This URL could not be matched to an active page.</span>
+              </div>
+            </div>
+            <div class="attribute-table" aria-label="URL diagnostics attributes">
+              <div class="attribute-row">
+                <span>Attribute</span>
+                <span>Value</span>
+                <span>Status</span>
+              </div>
+              <div class="attribute-row">
+                <span>Title</span>
+                <span>Unknown page</span>
+                <span class="attribute-status">OK</span>
+              </div>
+              <div class="attribute-row missing">
+                <span>Link</span>
+                <span>Missing URL</span>
+                <span class="attribute-status">Error</span>
+              </div>
+              <div class="attribute-row">
+                <span>Availability</span>
+                <span>Out of index</span>
+                <span class="attribute-status">Check</span>
+              </div>
+            </div>
+            <div class="repair-path" aria-label="FeedOps repair path">
+              <div class="product-tile">
+                <span class="tile-label">Missing URL</span>
+                <div class="tile-line"></div>
+                <div class="tile-line short"></div>
+              </div>
+              <div class="repair-arrow" aria-hidden="true">→</div>
+              <div class="feed-slot">404 error</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <script src="cookie-consent.js" defer></script>
+  <script src="header-standard.js?v=20260620-mobile-menu" data-site-root="" defer></script>
+  <script src="footer-standard.js?v=20260619-google-shopping-feed-audit" data-site-root="" defer></script>
+</body>
+</html>
