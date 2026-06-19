@@ -52,7 +52,7 @@
       '        <a href="' + href("shopping-feed-agency/") + '">Shopping Feed Agency</a>',
       '        <a href="' + href("pricing/") + '">Pricing Model</a>',
       '        <a href="' + href("book-live-demo/") + '">Strategy Call</a>',
-      '        <a href="' + href("free-google-shopping-feed-audit/") + '">Google Feed Audit</a>',
+      '        <a href="' + href("free-google-shopping-feed-audit/") + '">Google Shopping Feed Audit</a>',
       "      </div>",
       "    </div>",
       '    <div class="footer-group footer-support-column">',

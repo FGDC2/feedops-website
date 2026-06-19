@@ -12,7 +12,7 @@
   <meta name="geo.position" content="-34.9285;138.6007">
   <meta name="ICBM" content="-34.9285, 138.6007">
   <link rel="canonical" href="https://feedops.com/book-live-demo/">
-  <link rel="alternate" href="https://feedops.com/book-live-demo/" hreflang="en-au">
+  <link rel="alternate" href="https://feedops.com/book-live-demo/" hreflang="en-AU">
   <link rel="alternate" href="https://feedops.com/book-live-demo/" hreflang="x-default">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_AU">
@@ -212,6 +212,10 @@
       box-sizing: border-box;
     }
 
+    html {
+      overflow-x: hidden;
+    }
+
     body {
       margin: 0;
       color: var(--ink);
@@ -219,6 +223,7 @@
         linear-gradient(135deg, rgba(28, 140, 111, .08), transparent 34%),
         #fbfcff;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      overflow-x: hidden;
     }
 
     a {
@@ -693,6 +698,7 @@
         width: 100%;
         margin: -18px auto 42px;
       }
+
     }
 
     @media (max-width: 560px) {
@@ -763,7 +769,7 @@
         <div class="intro-copy">
           <p class="kicker">Feed strategy call</p>
           <h1 id="booking-title">Book a demo</h1>
-          <p>A short <strong>feed strategy call</strong> to understand your current feed setup, show the relevant parts of FeedOps, and decide whether there is a useful next step.</p>
+          <p>Book a demo for a short <strong>feed strategy call</strong> to understand your current feed setup, show the relevant parts of FeedOps, and decide whether there is a useful next step.</p>
         </div>
 
         <div class="steps">
@@ -899,12 +905,12 @@
       <div class="footer-group">
         <div class="footer-heading">Platform</div>
         <div class="footer-column">
-          <a href="../">Expert</a>
-          <a href="../product-feed-management/">Executive</a>
-          <a href="../shopping-feed-agency/">Agency</a>
-          <a href="../pricing/">Pricing</a>
-          <a href="../book-live-demo/">Strategy Call</a>
-          <a href="../free-google-shopping-feed-audit/">Google Feed Audit</a>
+          <a href="../">Product Feed Optimisation</a>
+          <a href="../product-feed-management/">Product Feed Management</a>
+          <a href="../shopping-feed-agency/">Shopping Feed Agency</a>
+          <a href="../pricing/">Pricing Model</a>
+          <a href="../book-live-demo/">Book a demo</a>
+          <a href="../free-google-shopping-feed-audit/">Google Shopping Feed Audit</a>
         </div>
       </div>
       <div class="footer-group">
@@ -925,69 +931,8 @@
   </footer>
   </div>
 
-  <script>
-    document.querySelector("[data-history-back]").addEventListener("click", function(event) {
-      if (window.history.length > 1 && document.referrer) {
-        event.preventDefault();
-        window.history.back();
-      }
-    });
-
-    window.addEventListener("message", function(event) {
-      if (event.origin === "https://meetings.hubspot.com" && event.data.meetingBookSucceeded) {
-        var contact = event.data.meetingsPayload.bookingResponse.postResponse.contact || {};
-        window.referralJS = window.referralJS || {};
-        window.referralJS.conversion = {
-          debug: "false",
-          parameters: {
-            firstname: contact.firstName,
-            lastname: contact.lastName,
-            email: contact.email
-          }
-        };
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: "meeting_booked",
-          meeting_name: "feed_strategy_call",
-          meeting_source: "hubspot",
-          email: contact.email
-        });
-      }
-    });
-
-    document.querySelectorAll(".meetings-iframe-container").forEach(function(container) {
-      var markLoaded = function() {
-        container.classList.add("is-loaded");
-        container.setAttribute("aria-busy", "false");
-      };
-
-      var watchForIframe = function() {
-        var iframe = container.querySelector("iframe");
-        if (!iframe) {
-          return;
-        }
-
-        iframe.addEventListener("load", markLoaded, { once: true });
-        setTimeout(markLoaded, 900);
-      };
-
-      watchForIframe();
-
-      var observer = new MutationObserver(watchForIframe);
-      observer.observe(container, { childList: true, subtree: true });
-    });
-  </script>
-  <script>
-    window.referralJS = window.referralJS || {};
-    window.referralJS.scriptConfig = {
-      parameters: {
-        src: "//feedops.referralrock.com/ReferralSdk/referral.js",
-        transactionKey: "7301c474-c959-4e64-9114-a9bde03e3465"
-      }
-    };
-    (function(f,r,n,d,b,y){b=f.createElement(r),y=f.getElementsByTagName(r)[0];b.async=1;b.src=n+"?referrer="+encodeURIComponent(window.location.origin+window.location.pathname).replace(/[!'()*]/g,escape);b.id="RR_DIVID_V5";b.setAttribute("transactionKey",window.referralJS.scriptConfig.parameters.transactionKey);y.parentNode.insertBefore(b,y)})(document,"script",window.referralJS.scriptConfig.parameters.src);
-  </script>
-  <script src="../assets/static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+  <script src="../assets/static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js" defer></script>
+  <script src="../book-live-demo.js?v=20260619" defer></script>
   <script src="/cookie-consent.js" defer></script>
 
   <style id="feedops-mode-bar-standard">
@@ -1107,6 +1052,6 @@
     }
   </style>
   <script src="../header-standard.js?v=20260619-utility-links" data-site-root="../" defer></script>
-  <script src="../footer-standard.js?v=20260618-shopping-feed-explainer" data-site-root="../" defer></script>
+  <script src="../footer-standard.js?v=20260619-google-shopping-feed-audit" data-site-root="../" defer></script>
 </body>
 </html>
