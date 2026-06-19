@@ -23,13 +23,13 @@ function relativeReference(fromFile, targetFromSiteRoot) {
 
 function repairHtml(html, file) {
   let output = html;
-  const localHomeAsset = relativeReference(file, "_assets/feedops.com/index.html");
+  const localHomeAsset = relativeReference(file, "assets/feedops.com/index.html");
   const localHomePage = relativeReference(file, "index.html");
 
   output = output.replaceAll(localHomeAsset, localHomePage);
 
   for (const root of ["wp-content", "wp-includes"]) {
-    const assetRoot = `${relativeReference(file, `_assets/feedops.com/${root}/`)}/`;
+    const assetRoot = `${relativeReference(file, `assets/feedops.com/${root}/`)}/`;
     output = output.replaceAll(`./index.html${root}/`, assetRoot);
     output = output.replaceAll(`../index.html${root}/`, assetRoot);
   }

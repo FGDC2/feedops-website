@@ -10,8 +10,8 @@
 
   function currentMode() {
     var path = cleanPath(window.location.pathname);
-    if (path === "/executive/") return "executive";
-    if (path === "/agency/") return "agency";
+    if (path === "/product-feed-management/") return "executive";
+    if (path === "/shopping-feed-agency/") return "agency";
     return "expert";
   }
 
@@ -27,20 +27,20 @@
         ["FAQ", "#seo-faq", "seo-faq"]
       ],
       executive: [
-        ["Opportunity", "executive/#opportunity", "opportunity"],
-        ["Accountability", "executive/#accountability", "accountability"],
-        ["Responsibility", "executive/#responsibility", "responsibility"],
-        ["Architecture", "executive/#architecture", "architecture"],
-        ["Channels", "executive/#channels", "channels"],
-        ["Pricing", "executive/#fit", "fit"]
+        ["Opportunity", "product-feed-management/#opportunity", "opportunity"],
+        ["Accountability", "product-feed-management/#accountability", "accountability"],
+        ["Responsibility", "product-feed-management/#responsibility", "responsibility"],
+        ["Architecture", "product-feed-management/#architecture", "architecture"],
+        ["Channels", "product-feed-management/#channels", "channels"],
+        ["Pricing", "product-feed-management/#fit", "fit"]
       ],
       agency: [
-        ["Model", "agency/#model", "model"],
-        ["Issues", "agency/#feed-problems", "feed-problems"],
-        ["Roles", "agency/#roles", "roles"],
-        ["Process", "agency/#process", "process"],
-        ["Partner", "agency/#partner-model", "partner-model"],
-        ["FAQ", "agency/#agency-faq", "agency-faq"]
+        ["Model", "shopping-feed-agency/#model", "model"],
+        ["Issues", "shopping-feed-agency/#feed-problems", "feed-problems"],
+        ["Roles", "shopping-feed-agency/#roles", "roles"],
+        ["Process", "shopping-feed-agency/#process", "process"],
+        ["Partner", "shopping-feed-agency/#partner-model", "partner-model"],
+        ["FAQ", "shopping-feed-agency/#agency-faq", "agency-faq"]
       ]
     };
 
@@ -62,22 +62,23 @@
       '      <div class="feedops-mode-controls">',
       '        <div class="feedops-mode-options">',
       '          <a class="feedops-mode-option" data-feedops-mode="expert" href="' + href("") + '">Performance expert</a>',
-      '          <a class="feedops-mode-option" data-feedops-mode="executive" href="' + href("executive/") + '">Executive mode</a>',
-      '          <a class="feedops-mode-option" data-feedops-mode="agency" href="' + href("agency/") + '">Media agency</a>',
+      '          <a class="feedops-mode-option" data-feedops-mode="executive" href="' + href("product-feed-management/") + '">Executive mode</a>',
+      '          <a class="feedops-mode-option" data-feedops-mode="agency" href="' + href("shopping-feed-agency/") + '">Media agency</a>',
       "        </div>",
+      '        <a class="feedops-mode-link" href="' + href("contact-us/") + '">Contact</a>',
       '        <a class="feedops-mode-login" href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
       "      </div>",
       "    </div>",
       "  </div>",
       '  <nav class="feedops-nav" aria-label="Main navigation">',
       '    <a class="feedops-logo" href="' + href("") + '" aria-label="FeedOps home">',
-      '      <img src="' + href("_assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo_Final-2-4.png") + '" alt="FeedOps">',
+      '      <img src="' + href("assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4.png") + '" alt="FeedOps">',
       "    </a>",
       '    <div class="feedops-nav-links" aria-label="Primary links">',
       standardNavLinks(),
       "    </div>",
       '    <div class="feedops-nav-actions">',
-      '      <a class="feedops-nav-cta" href="' + href("book-live-demo/") + '">Book a feed strategy call</a>',
+      '      <a class="feedops-nav-cta" href="' + href("book-live-demo/") + '">Book a demo</a>',
       "    </div>",
       "  </nav>",
       "</header>"

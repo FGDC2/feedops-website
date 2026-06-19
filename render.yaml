@@ -7,6 +7,18 @@ services:
     autoDeployTrigger: commit
     routes:
       - type: redirect
+        source: /executive
+        destination: /product-feed-management/
+      - type: redirect
+        source: /executive/*
+        destination: /product-feed-management/
+      - type: redirect
+        source: /agency
+        destination: /shopping-feed-agency/
+      - type: redirect
+        source: /agency/*
+        destination: /shopping-feed-agency/
+      - type: redirect
         source: /admin
         destination: /
       - type: redirect

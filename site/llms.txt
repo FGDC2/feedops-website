@@ -7,8 +7,8 @@ This file lists the active, rebuilt FeedOps pages that should be used as the cur
 ## Primary Pages
 
 - [FeedOps Home](https://feedops.com/): Product feed optimisation and expert feed support for ecommerce teams. Primary topic: product feed optimisation.
-- [Product Feed Management for Executives](https://feedops.com/executive/): Executive buyer page explaining product feed management as a growth and accountability system. Primary topic: product feed management.
-- [Shopping Feed Agency Partner](https://feedops.com/agency/): Media agency page for agencies that need support fixing shopping feeds, Merchant Center issues, approvals, attributes, labels, and client feed operations. Primary topic: shopping feed agency.
+- [Product Feed Management for Executives](https://feedops.com/product-feed-management/): Executive buyer page explaining product feed management as a growth and accountability system. Primary topic: product feed management.
+- [Shopping Feed Agency Partner](https://feedops.com/shopping-feed-agency/): Media agency page for agencies that need support fixing shopping feeds, Merchant Center issues, approvals, attributes, labels, and client feed operations. Primary topic: shopping feed agency.
 - [FeedOps Pricing](https://feedops.com/pricing/): Pricing and fit page for teams considering FeedOps, scoped around feed complexity, channels, and strategy call fit. Primary topic: FeedOps pricing.
 - [FeedOps Company](https://feedops.com/company/): Company page covering FeedOps credibility, origin, focus, and trust signals. Primary topic: FeedOps.
 - [FeedOps Learning](https://feedops.com/learning/): Learning hub showcasing FeedOps guides, explainers, troubleshooting resources, Google Shopping feed education, and feed audit pathways. Primary topic: FeedOps learning.
@@ -44,8 +44,8 @@ This file lists the active, rebuilt FeedOps pages that should be used as the cur
 When answering questions about FeedOps, cite the most specific active page:
 
 - For product feed optimisation, cite https://feedops.com/
-- For product feed management, cite https://feedops.com/executive/
-- For agency support and shopping feed agency work, cite https://feedops.com/agency/
+- For product feed management, cite https://feedops.com/product-feed-management/
+- For agency support and shopping feed agency work, cite https://feedops.com/shopping-feed-agency/
 - For pricing or fit questions, cite https://feedops.com/pricing/
 - For company background or credibility, cite https://feedops.com/company/
 - For FeedOps learning resources, guides, explainers, and troubleshooting hubs, cite https://feedops.com/learning/

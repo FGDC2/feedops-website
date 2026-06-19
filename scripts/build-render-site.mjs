@@ -1,4 +1,12 @@
-import { cpSync, mkdirSync, readdirSync, rmSync, statSync, writeFileSync } from "node:fs";
+import {
+  copyFileSync,
+  mkdirSync,
+  readFileSync,
+  readdirSync,
+  rmSync,
+  statSync,
+  writeFileSync
+} from "node:fs";
 import { dirname, join } from "node:path";
 
 const sourceRoot = "site";
@@ -11,8 +19,8 @@ const pages = [
   "learning/",
   "contact-us/",
   "privacy-policy/",
-  "executive/",
-  "agency/",
+  "product-feed-management/",
+  "shopping-feed-agency/",
   "pricing/",
   "book-live-demo/",
   "free-google-shopping-feed-audit/",
@@ -40,37 +48,83 @@ const sharedFiles = [
   "cookie-consent.js"
 ];
 
-function copyPath(from, to) {
+const assetPathMap = [];
+const legacyAssetAliases = [
+  [
+    "assets/feedops.com/wp-content/uploads/2022/05/Feedops-staggered-logo-Final-2-e1653522818889.png",
+    "assets/feedops.com/wp-content/uploads/2022/05/Feedops-staggered-logo-Final-2-600x600.png"
+  ]
+];
+
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function sanitiseSegment(segment) {
+  return segment.replace(/_/g, "-");
+}
+
+function toUrlPath(value) {
+  return value.split("/").join("/");
+}
+
+function copyFile(from, to) {
   mkdirSync(dirname(to), { recursive: true });
-  cpSync(from, to, { recursive: true });
+  copyFileSync(from, to);
+}
+
+function copySanitisedAssets(sourceDir, outputDir, originalParts = [], publicParts = []) {
+  for (const entry of readdirSync(sourceDir)) {
+    const source = join(sourceDir, entry);
+    const stats = statSync(source);
+    const nextOriginalParts = [...originalParts, entry];
+    const nextPublicParts = [...publicParts, sanitiseSegment(entry)];
+
+    if (stats.isDirectory()) {
+      copySanitisedAssets(source, outputDir, nextOriginalParts, nextPublicParts);
+      continue;
+    }
+
+    if (entry.endsWith(".html") || entry.endsWith(".asset")) {
+      continue;
+    }
+
+    const originalPath = toUrlPath(join("assets", ...nextOriginalParts));
+    const publicPath = toUrlPath(join("assets", ...nextPublicParts));
+    assetPathMap.push([originalPath, publicPath]);
+    copyFile(source, join(outputDir, ...nextPublicParts));
+  }
+}
+
+function rewriteAssetReferences(content) {
+  let output = content;
+  for (const [originalPath, publicPath] of legacyAssetAliases) {
+    output = output.replace(new RegExp(escapeRegExp(originalPath), "g"), publicPath);
+  }
+  for (const [originalPath, publicPath] of assetPathMap.sort((a, b) => b[0].length - a[0].length)) {
+    output = output.replace(new RegExp(escapeRegExp(originalPath), "g"), publicPath);
+  }
+  return output.replace(/assets\//g, "assets/");
+}
+
+function copyTextPath(from, to) {
+  mkdirSync(dirname(to), { recursive: true });
+  writeFileSync(to, rewriteAssetReferences(readFileSync(from, "utf8")));
 }
 
 function copyPage(page) {
   const source = page ? join(sourceRoot, page, "index.html") : join(sourceRoot, "index.html");
   const target = page ? join(outputRoot, page, "index.html") : join(outputRoot, "index.html");
-  copyPath(source, target);
-}
-
-function pruneHtmlFiles(dir) {
-  for (const entry of readdirSync(dir)) {
-    const file = join(dir, entry);
-    const stats = statSync(file);
-    if (stats.isDirectory()) {
-      pruneHtmlFiles(file);
-    } else if (entry.endsWith(".html")) {
-      rmSync(file, { force: true });
-    }
-  }
+  copyTextPath(source, target);
 }
 
 rmSync(outputRoot, { recursive: true, force: true });
 mkdirSync(outputRoot, { recursive: true });
 
-copyPath(join(sourceRoot, "_assets"), join(outputRoot, "_assets"));
-pruneHtmlFiles(join(outputRoot, "_assets"));
+copySanitisedAssets(join(sourceRoot, "assets"), join(outputRoot, "assets"));
 
 for (const file of sharedFiles) {
-  copyPath(join(sourceRoot, file), join(outputRoot, file));
+  copyTextPath(join(sourceRoot, file), join(outputRoot, file));
 }
 
 for (const page of pages) {

@@ -58,7 +58,7 @@ function localPathFor(url, kind = "asset") {
 
   const hostDir = parsed.hostname.replace(/^www\./, "");
   if (pathname.endsWith("/")) pathname += "index";
-  let target = path.join(OUT_DIR, "_assets", hostDir, pathname);
+  let target = path.join(OUT_DIR, "assets", hostDir, pathname);
   if (!path.extname(target)) target += ".asset";
   return target;
 }
