@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Product Feed Optimisation + Expert Feed Management | FeedOps</title>
-  <meta name="description" content="Australian-led product feed management and product feed optimisation with expert support, audits, AI enrichment, and fixes.">
+  <meta name="description" content="AI product feed management and product feed optimisation with expert support, audits, AI enrichment, and fixes.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://feedops.com/">
   <link rel="alternate" hreflang="en-AU" href="https://feedops.com/">
@@ -34,8 +34,8 @@
           "logo": {
             "@type": "ImageObject",
             "@id": "https://feedops.com/#logo",
-            "url": "https://feedops.com/wp-content/uploads/2022/05/Feedops-staggered-logo_Final-2-e1653522818889.png",
-            "contentUrl": "https://feedops.com/wp-content/uploads/2022/05/Feedops-staggered-logo_Final-2-e1653522818889.png",
+            "url": "https://feedops.com/assets/feedops.com/wp-content/uploads/2022/05/Feedops-staggered-logo-Final-2-e1653522818889.png",
+            "contentUrl": "https://feedops.com/assets/feedops.com/wp-content/uploads/2022/05/Feedops-staggered-logo-Final-2-e1653522818889.png",
             "caption": "FeedOps"
           },
           "sameAs": [
@@ -64,7 +64,7 @@
           "@id": "https://feedops.com/#webpage",
           "url": "https://feedops.com/",
           "name": "Product Feed Optimisation + Expert Feed Management | FeedOps",
-          "description": "FeedOps is an Australian-led product feed management and product feed optimisation system with platform access, expert support, automated updates, feed rules, feed audits, AI enrichment, order sync alerts, and fixes.",
+          "description": "FeedOps is an AI product feed management and product feed optimisation system with platform access, expert support, automated updates, feed rules, feed audits, AI enrichment, order sync alerts, and fixes.",
           "isPartOf": {
             "@id": "https://feedops.com/#website"
           },
@@ -1886,6 +1886,7 @@
     #channels,
     #workflow,
     #audit-preview,
+    #aeo-answers,
     #seo-faq {
       scroll-margin-top: 110px;
     }
@@ -2062,6 +2063,36 @@
       font-size: 14px;
     }
 
+    .aeo-answer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .aeo-answer {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 14px 34px rgba(17, 24, 39, .06);
+    }
+
+    .aeo-answer h3 {
+      margin: 0;
+      color: #101820;
+      font-size: 19px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .aeo-answer p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
     .faq-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2202,6 +2233,7 @@
       .workflow-grid,
       .proof-metrics,
       .proof-story,
+      .aeo-answer-grid,
       .faq-grid {
         grid-template-columns: 1fr;
       }
@@ -2442,13 +2474,14 @@
             <a class="mode-option" href="product-feed-management/">Executive mode</a>
             <a class="mode-option" href="shopping-feed-agency/">Media agency</a>
           </div>
+          <a class="mode-login" href="contact-us/">Contact</a>
           <a class="mode-login" href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>
         </div>
       </div>
     </div>
     <nav class="nav" aria-label="Main navigation">
       <a class="logo" href="./" aria-label="FeedOps home">
-        <img src="./assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4.png" alt="FeedOps - product feed optimisation" title="FeedOps - product feed optimisation">
+        <img src="./assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4.png" alt="FeedOps logo - header logo for product feed optimisation on Home" title="FeedOps logo - header logo for product feed optimisation on Home">
       </a>
       <div class="nav-links" aria-label="Primary links">
         <a href="#agent">System</a>
@@ -2469,7 +2502,7 @@
     <section class="hero">
       <div class="hero-inner">
         <div>
-          <h1>Australian-led product feed optimisation, backed by feed experts.</h1>
+          <h1>AI product feed optimisation, backed by feed experts.</h1>
           <p class="hero-copy">FeedOps combines proprietary feed management software with live <strong>product feed optimisation</strong> for Australian ecommerce teams, while supporting global shopping, marketplace, paid social, and AI discovery channels.</p>
           <div class="hero-actions" id="strategy-call">
             <a class="button primary" href="book-live-demo/">Book a demo</a>
@@ -2793,7 +2826,7 @@
         <div class="call-steps" aria-label="What happens on the feed strategy call">
           <div class="call-step"><span>1</span><div><strong>Understand your current workflow</strong><p>We talk through your product data, channels, internal process, agency involvement, and where feed work is handled today.</p></div></div>
           <div class="call-step"><span>2</span><div><strong>Walk through the platform</strong><p>We show the parts of FeedOps that are relevant to your setup and explain how the platform and team can support your workflow.</p></div></div>
-          <div class="call-step"><span>3</span><div><strong>Discuss fit and next steps</strong><p>If FeedOps looks useful for your brand, we can talk through the right way to start and what the next step would look like.</p></div></div>
+          <div class="call-step"><span>3</span><div><strong>Discuss fit and next steps</strong><p>If FeedOps looks useful for you and your needs, we can talk through the right way to start and what the next step would look like.</p></div></div>
         </div>
       </div>
     </section>
@@ -2847,16 +2880,16 @@
           </div>
         </div>
         <div class="proof-logo-strip" aria-label="Selected FeedOps customers and partners">
-          <div class="proof-logo"><img src="./assets/feedops.com/wp-content/uploads/2025/07/logo-1.svg" alt="Amart - product feed optimisation" title="Amart - product feed optimisation"></div>
-          <div class="proof-logo"><img src="./assets/feedops.com/wp-content/uploads/2025/07/logo.svg" alt="Sportsgirl - product feed optimisation" title="Sportsgirl - product feed optimisation"></div>
-          <div class="proof-logo"><img src="./assets/feedops.com/wp-content/uploads/2025/07/logo-2.svg" alt="Sussan - product feed optimisation" title="Sussan - product feed optimisation"></div>
-          <div class="proof-logo"><img src="./assets/feedops.com/wp-content/uploads/2025/07/Screenshot-2025-07-30-at-9.04.33-AM.png" alt="Nude Lucy - product feed optimisation" title="Nude Lucy - product feed optimisation"></div>
-          <div class="proof-logo"><img src="./assets/feedops.com/wp-content/uploads/2025/07/W-Co-Logo-Black-Checkout-600px-da244886-1cbe-4c77-8726-551f32092a75.webp" alt="White &amp; Co. - product feed optimisation" title="White &amp; Co. - product feed optimisation"></div>
-          <div class="proof-logo"><img src="./assets/feedops.com/wp-content/uploads/2025/07/Screenshot-2025-07-30-at-9.16.22-AM.png" alt="Glue Store - product feed optimisation" title="Glue Store - product feed optimisation"></div>
-          <div class="proof-logo"><img src="./assets/feedops.com/wp-content/uploads/2025/07/spp-logo-250x50-1708928977--12655.webp" alt="SuperPharmacyPlus - product feed optimisation" title="SuperPharmacyPlus - product feed optimisation"></div>
-          <div class="proof-logo"><img src="./assets/feedops.com/wp-content/uploads/2025/07/rqmedia-logo.jpeg" alt="RQMedia - product feed optimisation" title="RQMedia - product feed optimisation"></div>
-          <div class="proof-logo"><img src="./assets/feedops.com/wp-content/uploads/2025/07/LocaliQ-new-logo.jpg" alt="LocaliQ - product feed optimisation" title="LocaliQ - product feed optimisation"></div>
-          <div class="proof-logo"><img src="./assets/feedops.com/wp-content/uploads/2025/07/thryv-main-logo-color-au.png" alt="Thryv - product feed optimisation" title="Thryv - product feed optimisation"></div>
+          <div class="proof-logo"><img src="./assets/feedops.com/wp-content/uploads/2025/07/logo-1.svg" alt="Amart - customer proof logo 1 for product feed optimisation on Home" title="Amart - customer proof logo 1 for product feed optimisation on Home"></div>
+          <div class="proof-logo"><img src="./assets/feedops.com/wp-content/uploads/2025/07/logo.svg" alt="Sportsgirl - customer proof logo 2 for product feed optimisation on Home" title="Sportsgirl - customer proof logo 2 for product feed optimisation on Home"></div>
+          <div class="proof-logo"><img src="./assets/feedops.com/wp-content/uploads/2025/07/logo-2.svg" alt="Sussan - customer proof logo 3 for product feed optimisation on Home" title="Sussan - customer proof logo 3 for product feed optimisation on Home"></div>
+          <div class="proof-logo"><img src="./assets/feedops.com/wp-content/uploads/2025/07/Screenshot-2025-07-30-at-9.04.33-AM.png" alt="Nude Lucy - customer proof logo 4 for product feed optimisation on Home" title="Nude Lucy - customer proof logo 4 for product feed optimisation on Home"></div>
+          <div class="proof-logo"><img src="./assets/feedops.com/wp-content/uploads/2025/07/W-Co-Logo-Black-Checkout-600px-da244886-1cbe-4c77-8726-551f32092a75.webp" alt="White &amp; Co. - customer proof logo 5 for product feed optimisation on Home" title="White &amp; Co. - customer proof logo 5 for product feed optimisation on Home"></div>
+          <div class="proof-logo"><img src="./assets/feedops.com/wp-content/uploads/2025/07/Screenshot-2025-07-30-at-9.16.22-AM.png" alt="Glue Store - customer proof logo 6 for product feed optimisation on Home" title="Glue Store - customer proof logo 6 for product feed optimisation on Home"></div>
+          <div class="proof-logo"><img src="./assets/feedops.com/wp-content/uploads/2025/07/spp-logo-250x50-1708928977--12655.webp" alt="SuperPharmacyPlus - customer proof logo 7 for product feed optimisation on Home" title="SuperPharmacyPlus - customer proof logo 7 for product feed optimisation on Home"></div>
+          <div class="proof-logo"><img src="./assets/feedops.com/wp-content/uploads/2025/07/rqmedia-logo.jpeg" alt="RQMedia - customer proof logo 8 for product feed optimisation on Home" title="RQMedia - customer proof logo 8 for product feed optimisation on Home"></div>
+          <div class="proof-logo"><img src="./assets/feedops.com/wp-content/uploads/2025/07/LocaliQ-new-logo.jpg" alt="LocaliQ - customer proof logo 9 for product feed optimisation on Home" title="LocaliQ - customer proof logo 9 for product feed optimisation on Home"></div>
+          <div class="proof-logo"><img src="./assets/feedops.com/wp-content/uploads/2025/07/thryv-main-logo-color-au.png" alt="Thryv - customer proof logo 10 for product feed optimisation on Home" title="Thryv - customer proof logo 10 for product feed optimisation on Home"></div>
         </div>
       </div>
     </section>
@@ -2871,6 +2904,29 @@
           <div class="fit-point media"><strong>Active media spend</strong><span>When product data affects Shopping, paid social, local inventory, or marketplace performance.</span></div>
           <div class="fit-point catalogue"><strong>Growing catalogue complexity</strong><span>When variants, categories, attributes, markets, and destinations are getting harder to manage.</span></div>
           <div class="fit-point ownership"><strong>Shared ownership</strong><span>When ecommerce, agencies, developers, and channel teams all touch the feed but no one fully owns it.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="aeo-answers" aria-labelledby="aeo-answers-title">
+      <div class="section-inner">
+        <p class="section-kicker">Quick answers</p>
+        <h2 id="aeo-answers-title">Product feed optimisation in plain terms.</h2>
+        <p class="section-lede">Product feed optimisation improves ecommerce product data so shopping channels, marketplaces, paid social platforms, local inventory systems, and AI discovery surfaces can better understand, approve, match, and display products.</p>
+
+        <div class="aeo-answer-grid">
+          <article class="aeo-answer">
+            <h3>What is product feed optimisation?</h3>
+            <p>Product feed optimisation is the process of improving titles, attributes, categories, labels, availability, and other product data so products perform better across feed-based channels.</p>
+          </article>
+          <article class="aeo-answer">
+            <h3>Why does product feed optimisation matter?</h3>
+            <p>Better product feeds help channels understand what each product is, reduce preventable errors, improve eligibility, and give campaigns cleaner data for matching, testing, and scaling.</p>
+          </article>
+          <article class="aeo-answer">
+            <h3>How does FeedOps improve product feeds?</h3>
+            <p>FeedOps improves product feeds with audits, feed rules, AI enrichment, expert support, and ongoing product feed management across Google Shopping, PMax, paid social, marketplaces, and AI discovery.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -2951,7 +3007,7 @@
           <meta itemprop="encodingFormat" content="image/png">
           <meta itemprop="width" content="1672">
           <meta itemprop="height" content="941">
-          <img src="./assets/ai-product-feed-optimisation.png" width="1672" height="941" loading="lazy" decoding="async" alt="AI product feed optimisation workflow showing raw product data enriched by AI and published to Google Shopping, Shopify, Amazon, Meta Catalog, and more channels" itemprop="contentUrl" title="AI product feed optimisation workflow showing raw product data enriched by AI and published to Google Shopping, Shopify, Amazon, Meta Catalog, and more channels">
+          <img src="./assets/ai-product-feed-optimisation.png" width="1672" height="941" loading="lazy" decoding="async" itemprop="contentUrl" alt="AI product feed optimisation workflow - page image 12 for product feed optimisation on Home" title="AI product feed optimisation workflow - page image 12 for product feed optimisation on Home">
           <span class="sr-only" itemprop="caption">AI product feed optimisation: enrich, optimise, validate, and publish better product data to every channel.</span>
         </figure>
         <p class="section-lede visual-proof-lede">Use it yourself, work with guided support, or ask FeedOps to manage it for you. Automated updates. Feed rules. Order sync alerts and fixes. Product approval support. Feed audits. AI enrichment. Structured experiments across every media channel and marketplace.</p>
@@ -2965,7 +3021,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <a href="./" aria-label="FeedOps home">
-          <img src="assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4.png" alt="FeedOps - product feed optimisation" title="FeedOps - product feed optimisation">
+          <img src="assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4.png" alt="FeedOps logo - footer logo 1 for product feed optimisation on Home" title="FeedOps logo - footer logo 1 for product feed optimisation on Home">
         </a>
         <p>Product feed optimisation software, feed strategy, and expert support for ecommerce teams.</p>
       </div>
@@ -2982,10 +3038,10 @@
       <div class="footer-group">
         <div class="footer-heading">Platform</div>
         <div class="footer-column">
-          <a href="">Expert</a>
-          <a href="product-feed-management/">Executive</a>
-          <a href="shopping-feed-agency/">Agency</a>
-          <a href="pricing/">Pricing</a>
+          <a href="">Product Feed Optimisation</a>
+          <a href="product-feed-management/">Product Feed Management</a>
+          <a href="shopping-feed-agency/">Shopping Feed Agency</a>
+          <a href="pricing/">Pricing Model</a>
           <a href="book-live-demo/">Strategy Call</a>
           <a href="free-google-shopping-feed-audit/">Google Feed Audit</a>
         </div>

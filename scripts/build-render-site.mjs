@@ -45,7 +45,10 @@ const sharedFiles = [
   "header-standard.js",
   "footer-standard.css",
   "footer-standard.js",
-  "cookie-consent.js"
+  "cookie-consent.js",
+  "sitemap.xml",
+  "robots.txt",
+  "llms.txt"
 ];
 
 const assetPathMap = [];
@@ -130,43 +133,5 @@ for (const file of sharedFiles) {
 for (const page of pages) {
   copyPage(page);
 }
-
-const sitemapUrls = pages
-  .map((page) => `  <url><loc>${origin}/${page}</loc></url>`)
-  .join("\n");
-
-writeFileSync(
-  join(outputRoot, "sitemap.xml"),
-  [
-    '<?xml version="1.0" encoding="UTF-8"?>',
-    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    sitemapUrls,
-    "</urlset>",
-    ""
-  ].join("\n")
-);
-
-writeFileSync(
-  join(outputRoot, "robots.txt"),
-  [
-    "# FeedOps robots.txt",
-    "User-agent: *",
-    "Allow: /",
-    "",
-    "Sitemap: https://feedops.com/sitemap.xml",
-    ""
-  ].join("\n")
-);
-
-writeFileSync(
-  join(outputRoot, "llms.txt"),
-  [
-    "# FeedOps",
-    "",
-    "## Public Pages",
-    ...pages.map((page) => `- ${origin}/${page}`),
-    ""
-  ].join("\n")
-);
 
 console.log(`Built ${outputRoot} with ${pages.length} public pages.`);

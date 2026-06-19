@@ -7,6 +7,8 @@
   <meta name="description" content="Australian-led shopping feed agency partner for media teams fixing product issues, approvals, and Google or Meta feeds.">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://feedops.com/shopping-feed-agency/">
+  <link rel="alternate" hreflang="en-AU" href="https://feedops.com/shopping-feed-agency/">
+  <link rel="alternate" hreflang="x-default" href="https://feedops.com/shopping-feed-agency/">
   <meta property="og:locale" content="en_AU">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Shopping Feed Agency Partner for Media Agencies | FeedOps">
@@ -208,12 +210,17 @@
       box-sizing: border-box;
     }
 
+    html {
+      overflow-x: hidden;
+    }
+
     body {
       margin: 0;
       color: var(--ink);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--surface);
       line-height: 1.5;
+      overflow-x: hidden;
     }
 
     a {
@@ -826,6 +833,36 @@
       line-height: 1.55;
     }
 
+    .aeo-answer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .aeo-answer {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 14px 34px rgba(17, 24, 39, .06);
+    }
+
+    .aeo-answer h3 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 19px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .aeo-answer p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
     .problem-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1310,6 +1347,7 @@
       .executive-points,
       .executive-summary,
       .problem-grid,
+      .aeo-answer-grid,
       .working-model,
       .role-grid,
       .process-steps,
@@ -1462,7 +1500,7 @@
     </div>
     <nav class="nav" aria-label="Main navigation">
       <a class="logo" href="../" aria-label="FeedOps home">
-        <img src="../assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4.png" alt="FeedOps - shopping feed agency" title="FeedOps - shopping feed agency">
+        <img src="../assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4.png" alt="FeedOps logo - header logo for shopping feed agency on Shopping Feed Agency" title="FeedOps logo - header logo for shopping feed agency on Shopping Feed Agency">
       </a>
       <div class="nav-links" aria-label="Primary links">
         <a href="#model">Model</a>
@@ -1582,6 +1620,28 @@
             </div>
           </div>
         </aside>
+      </div>
+    </section>
+
+    <section class="page-section" id="aeo-answers" aria-labelledby="aeo-answers-title">
+      <div class="section-inner">
+        <p class="section-kicker">Quick answers</p>
+        <h2 class="section-heading" id="aeo-answers-title">Shopping feed agency in plain terms.</h2>
+        <p class="section-lede">FeedOps supports media agencies when product feeds, Merchant Center blockers, or catalogue data problems are limiting campaign performance.</p>
+        <div class="aeo-answer-grid">
+          <article class="aeo-answer">
+            <h3>What is a shopping feed agency?</h3>
+            <p>A shopping feed agency helps improve the product data, feed rules, attributes, labels, and channel setup used by Google Shopping, PMax, paid social, and marketplaces.</p>
+          </article>
+          <article class="aeo-answer">
+            <h3>Who is this shopping feed agency page for?</h3>
+            <p>This page is for media agencies and ecommerce teams that need specialist feed support without replacing the agency relationship or media strategy.</p>
+          </article>
+          <article class="aeo-answer">
+            <h3>How does FeedOps help agencies?</h3>
+            <p>FeedOps runs feed audits, diagnoses Merchant Center and catalogue issues, applies feed fixes, supports AI enrichment, and keeps agencies and clients aligned on the next step.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -1805,7 +1865,7 @@
           <meta itemprop="encodingFormat" content="image/svg+xml">
           <meta itemprop="width" content="1934">
           <meta itemprop="height" content="813">
-          <img src="../assets/shopping-feed-agency.svg" width="1934" height="813" loading="lazy" decoding="async" alt="Shopping feed agency workflow showing agency introduction, feed diagnosis, execution, reporting, partner tools, and partner terms" itemprop="contentUrl" title="Shopping feed agency workflow showing agency introduction, feed diagnosis, execution, reporting, partner tools, and partner terms">
+          <img src="../assets/shopping-feed-agency.svg" width="1934" height="813" loading="lazy" decoding="async" itemprop="contentUrl" alt="Shopping feed agency workflow - page image 2 for shopping feed agency on Shopping Feed Agency" title="Shopping feed agency workflow - page image 2 for shopping feed agency on Shopping Feed Agency">
         </figure>
         <p class="section-lede">Start with one client, one messy feed problem, or one Merchant Center issue that keeps slowing down Shopping, PMax, Meta, or feed-led campaigns. FeedOps works with the agency and client to diagnose the blocker, execute the feed work, and keep everyone aligned.</p>
         <a class="button primary" href="../book-live-demo/">Book a demo</a>
@@ -1818,7 +1878,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <a href="../" aria-label="FeedOps home">
-          <img src="../assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4.png" alt="FeedOps - shopping feed agency" title="FeedOps - shopping feed agency">
+          <img src="../assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4.png" alt="FeedOps logo - footer logo 1 for shopping feed agency on Shopping Feed Agency" title="FeedOps logo - footer logo 1 for shopping feed agency on Shopping Feed Agency">
         </a>
         <p>Product feed optimisation software, feed strategy, and expert support for ecommerce teams.</p>
       </div>
@@ -1835,11 +1895,11 @@
       <div class="footer-group">
         <div class="footer-heading">Platform</div>
         <div class="footer-column">
-          <a href="../">Expert</a>
-          <a href="../product-feed-management/">Executive</a>
-          <a href="./">Agency</a>
-          <a href="../pricing/">Pricing</a>
-          <a href="../book-live-demo/">Strategy Call</a>
+          <a href="../">Product Feed Optimisation</a>
+          <a href="../product-feed-management/">Product Feed Management</a>
+          <a href="./">Shopping Feed Agency</a>
+          <a href="../pricing/">Pricing Model</a>
+          <a href="../book-live-demo/">Book a demo</a>
           <a href="../free-google-shopping-feed-audit/">Google Feed Audit</a>
         </div>
       </div>
