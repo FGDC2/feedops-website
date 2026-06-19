@@ -2,6 +2,13 @@ services:
   - type: web
     name: feedops-website
     runtime: static
-    buildCommand: rm -rf render-site && mkdir -p render-site && cp -R site/. render-site && rm -rf render-site/admin
+    buildCommand: node scripts/build-render-site.mjs
     staticPublishPath: ./render-site
     autoDeployTrigger: commit
+    routes:
+      - type: redirect
+        source: /admin
+        destination: /
+      - type: redirect
+        source: /admin/*
+        destination: /
