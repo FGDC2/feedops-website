@@ -16,12 +16,12 @@
   <meta property="og:description" content="Get a Free Google Shopping Feed Audit to uncover product data issues, missing attributes, visibility gaps, and Merchant Center feed problems.">
   <meta property="og:url" content="https://feedops.com/free-google-shopping-feed-audit/">
   <meta property="og:site_name" content="FeedOps">
-  <meta property="og:image" content="https://feedops.com/wp-content/uploads/2026/03/google-shopping-feed-audit.png">
+  <meta property="og:image" content="https://feedops.com/assets/feedops.com/wp-content/uploads/2026/03/google-shopping-feed-audit.png">
   <meta property="og:image:alt" content="Google Shopping feed audit dashboard from FeedOps">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Free Google Shopping Feed Audit | FeedOps">
   <meta name="twitter:description" content="Get a Free Google Shopping Feed Audit to find product data gaps, weak feed signals, and missed Shopping opportunities.">
-  <meta name="twitter:image" content="https://feedops.com/wp-content/uploads/2026/03/google-shopping-feed-audit.png">
+  <meta name="twitter:image" content="https://feedops.com/assets/feedops.com/wp-content/uploads/2026/03/google-shopping-feed-audit.png">
   <link rel="icon" href="../assets/feedops.com/wp-content/uploads/2022/05/Feedops-staggered-logo-Final-2-60x60.png" sizes="32x32">
   <script type="application/ld+json">
     {
@@ -35,7 +35,7 @@
                 "url": "https://feedops.com/",
                 "logo": {
                     "@type": "ImageObject",
-                    "url": "https://feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4.png"
+                    "url": "https://feedops.com/assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4.png"
                 },
                 "areaServed": {
                     "@type": "Country",
@@ -47,8 +47,13 @@
                     "Google Merchant Center",
                     "Performance Max",
                     "free listings",
+                    "product feeds",
+                    "feed rules",
+                    "feed audits",
                     "product data quality",
-                    "AI product data enrichment"
+                    "AI product data enrichment",
+                    "paid social catalogues",
+                    "marketplaces"
                 ],
                 "sameAs": [
                     "https://www.facebook.com/feedops",
@@ -93,13 +98,13 @@
                     }
                 ],
                 "datePublished": "2026-06-17",
-                "dateModified": "2026-06-17",
+                "dateModified": "2026-06-19",
                 "inLanguage": "en-AU"
             },
             {
                 "@type": "ImageObject",
                 "@id": "https://feedops.com/free-google-shopping-feed-audit/#primaryimage",
-                "url": "https://feedops.com/wp-content/uploads/2026/03/google-shopping-feed-audit.png",
+                "url": "https://feedops.com/assets/feedops.com/wp-content/uploads/2026/03/google-shopping-feed-audit.png",
                 "caption": "Google Shopping feed audit dashboard from FeedOps"
             },
             {
@@ -125,7 +130,7 @@
                     "priceCurrency": "AUD",
                     "availability": "https://schema.org/InStock"
                 },
-                "description": "A Free Google Shopping Feed Audit for Google Merchant Center product data. It uses standard Merchant Center access plus reporting and insights permissions and does not require Google Ads access."
+                "description": "An Australian-led Free Google Shopping Feed Audit for Google Merchant Center product data, product feeds, feed rules, feed audits, AI enrichment opportunities, paid social catalogues, marketplaces, Shopping, and Performance Max readiness. It uses standard Merchant Center access plus reporting and insights permissions and does not require Google Ads access."
             },
             {
                 "@type": "FAQPage",
@@ -382,6 +387,7 @@
 
     html {
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     body {
@@ -390,6 +396,7 @@
       background: #fbfcff;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.5;
+      overflow-x: hidden;
     }
 
     a {
@@ -698,6 +705,30 @@
       border-block: 1px solid var(--line);
     }
 
+    .outcome-section {
+      background: #fff;
+      border-top: 1px solid var(--line);
+    }
+
+    .outcome-section .card {
+      border-top: 3px solid var(--green);
+    }
+
+    .outcome-note {
+      margin-top: 18px;
+      padding: 20px 24px;
+      border: 1px solid rgba(28, 140, 111, .28);
+      border-radius: 8px;
+      background: #f7fcfa;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.58;
+    }
+
+    .outcome-note strong {
+      color: var(--green-dark);
+    }
+
     .section-heading {
       max-width: 760px;
       margin-bottom: 28px;
@@ -714,6 +745,36 @@
       color: var(--muted);
       font-size: 18px;
       line-height: 1.58;
+    }
+
+    .aeo-answer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .aeo-answer {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 16px 40px rgba(17, 24, 39, .05);
+    }
+
+    .aeo-answer h3 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 20px;
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    .aeo-answer p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.52;
     }
 
     .grid {
@@ -982,7 +1043,8 @@
         grid-template-columns: 1fr;
       }
 
-      .grid {
+      .grid,
+      .aeo-answer-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1111,6 +1173,30 @@
       </div>
     </section>
 
+    <section class="section" id="aeo-answers" aria-labelledby="aeo-answers-title">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="kicker">Quick answers</p>
+          <h2 id="aeo-answers-title">Free Google Shopping feed audit in plain terms.</h2>
+          <p>An Australian-led audit from FeedOps helps ecommerce teams and agencies understand product feed health before issues limit Google Shopping, PMax, paid social, or marketplace performance.</p>
+        </div>
+        <div class="aeo-answer-grid">
+          <article class="aeo-answer">
+            <h3>What is a Free Google Shopping Feed Audit?</h3>
+            <p>A Free Google Shopping Feed Audit checks Merchant Center product data, product feeds, missing attributes, visibility gaps, and feed quality signals that can affect Shopping and free listings.</p>
+          </article>
+          <article class="aeo-answer">
+            <h3>Who is the audit for?</h3>
+            <p>The audit is for ecommerce teams, retailers, brands, and agencies that want a clearer view of product data health without replacing their current feed provider.</p>
+          </article>
+          <article class="aeo-answer">
+            <h3>How does FeedOps use the audit?</h3>
+            <p>FeedOps uses feed audits, feed rules, and AI enrichment signals to identify product data fixes for Google Shopping, Merchant Center, PMax, paid social catalogues, and marketplaces.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="checks">
       <div class="section-inner">
         <div class="section-heading">
@@ -1147,6 +1233,31 @@
             </ul>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="section outcome-section" id="business-outcomes">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="kicker">Business outcomes</p>
+          <h2>Turn feed quality into clearer commercial decisions.</h2>
+          <p>A feed audit should not only find technical issues. It should help you decide which product data fixes can improve eligibility, visibility, traffic quality, and the way shoppers discover products through categories, filters, and AI-assisted shopping experiences.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>Protect eligible revenue</h3>
+            <p>Missing identifiers, weak images, incorrect availability, poor titles, and category issues can stop products from showing properly or make them less competitive. The audit helps prioritise the items most likely to affect paid Shopping, free listings, PMax, and other feed-led revenue paths.</p>
+          </article>
+          <article class="card">
+            <h3>Strengthen category and filter matching</h3>
+            <p>Google Shopping experiences rely on product type, Google product category, brand, colour, size, material, gender, price, availability, and other attributes to support category pages and shopper filters. The audit highlights where product feeds are too thin for confident matching.</p>
+          </article>
+          <article class="card">
+            <h3>Improve AI enrichment readiness</h3>
+            <p>AI enrichment works best when the source data is specific, consistent, and complete. FeedOps looks for attributes that can support richer titles, descriptions, product groupings, feed rules, paid social catalogues, marketplaces, and future AI flows without inventing details that are not in the catalogue.</p>
+          </article>
+        </div>
+        <p class="outcome-note"><strong>The practical outcome:</strong> your team can separate cosmetic feed cleanup from commercial feed work. Instead of fixing every warning equally, the Free Google Shopping Feed Audit helps show which product data issues may influence approval health, category confidence, filter coverage, shopper relevance, and the product-level signals that media teams need before increasing spend. That makes the audit easier to use in planning, budget conversations, agency reviews, seasonal channel forecasts, and merchandising prioritisation.</p>
       </div>
     </section>
 
@@ -1354,11 +1465,11 @@
       <div class="footer-group">
         <div class="footer-heading">Platform</div>
         <div class="footer-column">
-          <a href="../">Expert</a>
-          <a href="../product-feed-management/">Executive</a>
-          <a href="../shopping-feed-agency/">Agency</a>
-          <a href="../pricing/">Pricing</a>
-          <a href="../book-live-demo/">Strategy Call</a>
+          <a href="../">Product Feed Optimisation</a>
+          <a href="../product-feed-management/">Product Feed Management</a>
+          <a href="../shopping-feed-agency/">Shopping Feed Agency</a>
+          <a href="../pricing/">Pricing Model</a>
+          <a href="../book-live-demo/">Book a demo</a>
           <a href="./">Free Google Shopping Feed Audit</a>
         </div>
       </div>
@@ -1379,18 +1490,8 @@
     </div>
   </footer>
 
-  <script src="https://js.hsforms.net/forms/embed/v2.js"></script>
-  <script>
-    window.addEventListener("load", function() {
-      if (window.hbspt && window.hbspt.forms) {
-        window.hbspt.forms.create({
-          portalId: "20083726",
-          formId: "34103a8f-c0af-4b86-9400-feb31017b795",
-          target: "#audit-hubspot-form"
-        });
-      }
-    });
-  </script>
+  <script src="https://js.hsforms.net/forms/embed/v2.js" defer></script>
+  <script src="../free-google-shopping-feed-audit.js?v=20260619" defer></script>
   <script src="/cookie-consent.js" defer></script>
   <script src="../header-standard.js?v=20260619-utility-links" data-site-root="../" defer></script>
   <script src="../footer-standard.js?v=20260618-shopping-feed-explainer" data-site-root="../" defer></script>

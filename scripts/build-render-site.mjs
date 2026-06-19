@@ -46,6 +46,7 @@ const sharedFiles = [
   "footer-standard.css",
   "footer-standard.js",
   "cookie-consent.js",
+  "free-google-shopping-feed-audit.js",
   "sitemap.xml",
   "robots.txt",
   "llms.txt"
