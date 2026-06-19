@@ -364,9 +364,14 @@
                 <span>Unknown page</span>
                 <span class="attribute-status">OK</span>
               </div>
+              <div class="attribute-row">
+                <span>Source</span>
+                <span id="diagnostic-source">Direct / unknown</span>
+                <span class="attribute-status">Check</span>
+              </div>
               <div class="attribute-row missing">
                 <span>Link</span>
-                <span>Missing URL</span>
+                <span id="diagnostic-url">Missing URL</span>
                 <span class="attribute-status">Error</span>
               </div>
               <div class="attribute-row">
@@ -393,5 +398,26 @@
   <script src="cookie-consent.js" defer></script>
   <script src="header-standard.js?v=20260620-mobile-menu" data-site-root="" defer></script>
   <script src="footer-standard.js?v=20260619-google-shopping-feed-audit" data-site-root="" defer></script>
+  <script>
+    (() => {
+      const source = document.getElementById("diagnostic-source");
+      const url = document.getElementById("diagnostic-url");
+      const requestedUrl = window.location.protocol === "file:"
+        ? "/missing-page/"
+        : `${window.location.pathname}${window.location.search}`;
+
+      url.textContent = requestedUrl || "Missing URL";
+
+      if (!document.referrer) return;
+
+      try {
+        const referrer = new URL(document.referrer);
+        const host = referrer.hostname.replace(/^www\./, "");
+        source.textContent = host.includes("google.") ? "Google" : host;
+      } catch {
+        source.textContent = "Referrer detected";
+      }
+    })();
+  </script>
 </body>
 </html>
