@@ -2,6 +2,6 @@ services:
   - type: web
     name: feedops-website
     runtime: static
-    buildCommand: echo "Static site ready"
-    staticPublishPath: ./site
+    buildCommand: rm -rf render-site && mkdir -p render-site && cp -R site/. render-site && rm -rf render-site/admin
+    staticPublishPath: ./render-site
     autoDeployTrigger: commit
