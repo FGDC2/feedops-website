@@ -17,7 +17,7 @@
       '  <div class="footer-inner">',
       '    <div class="footer-brand">',
       '      <a href="' + href("") + '" aria-label="FeedOps home">',
-      '        <img src="' + href("assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4-300x110.png") + '" alt="FeedOps">',
+      '        <img src="' + href("assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4-300x110.png") + '" alt="FeedOps" width="300" height="110">',
       "      </a>",
       "      <p>Product feed optimisation software, feed strategy, and expert support for ecommerce teams.</p>",
       '      <a class="footer-cta" href="' + href("book-live-demo/") + '">',
