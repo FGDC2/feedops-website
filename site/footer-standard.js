@@ -51,7 +51,7 @@
       '        <a href="' + href("product-feed-management/") + '">Product Feed Management</a>',
       '        <a href="' + href("shopping-feed-agency/") + '">Shopping Feed Agency</a>',
       '        <a href="' + href("pricing/") + '">Pricing Model</a>',
-      '        <a href="' + href("book-live-demo/") + '">Strategy Call</a>',
+      '        <a href="' + href("book-live-demo/") + '">Book a demo</a>',
       '        <a href="' + href("free-google-shopping-feed-audit/") + '">Google Shopping Feed Audit</a>',
       "      </div>",
       "    </div>",
