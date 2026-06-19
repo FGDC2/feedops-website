@@ -26,7 +26,8 @@
   grid-template-columns: minmax(360px, 1.35fr) minmax(240px, .9fr) minmax(240px, .9fr) minmax(110px, .45fr) minmax(110px, .45fr);
   grid-template-areas:
     "brand company platform support support"
-    "guides explainers troubleshooting comparisons comparisons";
+    "guides explainers troubleshooting learning learning"
+    "comparisons . . . .";
   column-gap: 28px;
   row-gap: 36px;
   width: min(1180px, calc(100% - 144px));
@@ -64,6 +65,41 @@
 
 #feedops-standard-footer .footer-comparison-column {
   grid-area: comparisons;
+}
+
+#feedops-standard-footer .footer-learning-cta {
+  grid-area: learning;
+  align-self: start;
+  display: grid;
+  gap: 4px;
+  min-height: 64px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 202, 40, .38);
+  border-radius: 8px;
+  background: rgba(255, 202, 40, .10);
+  color: #ffffff;
+  text-decoration: none;
+  transition: background .18s ease, border-color .18s ease, transform .18s ease;
+}
+
+#feedops-standard-footer .footer-learning-cta span {
+  color: rgba(255, 255, 255, .70);
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+#feedops-standard-footer .footer-learning-cta strong {
+  color: #ffca28;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+#feedops-standard-footer .footer-learning-cta:hover {
+  border-color: #ffca28;
+  background: rgba(255, 202, 40, .16);
+  transform: translateY(-1px);
 }
 
 #feedops-standard-footer .footer-brand img {
@@ -136,7 +172,7 @@
 
 #feedops-standard-footer .footer-column a {
   color: rgba(255, 255, 255, .78);
-  font-size: 14px;
+  font-size: 13.5px;
   line-height: 1.2;
   text-decoration: none;
   transition: color .18s ease, transform .18s ease;
@@ -166,6 +202,7 @@ footer.site-footer:not(#feedops-standard-footer) {
       "support support"
       "guides guides"
       "explainers troubleshooting"
+      "learning learning"
       "comparisons comparisons";
   }
 
@@ -190,6 +227,7 @@ footer.site-footer:not(#feedops-standard-footer) {
       "guides"
       "explainers"
       "troubleshooting"
+      "learning"
       "comparisons";
   }
 
