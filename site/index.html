@@ -446,6 +446,58 @@
       white-space: nowrap;
     }
 
+    .mode-switch {
+      border-bottom: 1px solid #d8dee8;
+      background: #f4f6f9;
+    }
+
+    .mode-inner {
+      min-height: 42px;
+      color: #2d3748;
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .mode-label {
+      color: #536072;
+      font-weight: 950;
+      letter-spacing: .12em;
+    }
+
+    .mode-options {
+      grid-template-columns: repeat(3, minmax(150px, 1fr));
+      gap: 0;
+    }
+
+    .mode-option {
+      min-width: 150px;
+      min-height: 32px;
+      padding: 0 16px;
+      color: #2d3748;
+      font-weight: 850;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    .mode-login {
+      min-height: 32px;
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+      color: #2d3748;
+      font-size: 13px;
+      font-weight: 850;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    .mode-option:hover,
+    .mode-option.active,
+    .mode-login:hover {
+      background: transparent;
+      color: #176e58;
+    }
+
     .nav {
       width: min(1180px, calc(100% - 40px));
       height: 76px;
