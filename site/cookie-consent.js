@@ -22,6 +22,12 @@
     document.cookie = cookieName + "=" + encodeURIComponent(choice) + "; Max-Age=15552000; Path=/; SameSite=Lax";
   }
 
+  function loadGoogleTagManager() {
+    if (window.FeedOpsGTM && typeof window.FeedOpsGTM.load === "function") {
+      window.FeedOpsGTM.load();
+    }
+  }
+
   function injectStyles() {
     if (document.getElementById("feedops-cookie-styles")) return;
 
@@ -177,6 +183,9 @@
 
   function closeBanner(banner, choice) {
     storeChoice(choice);
+    if (choice === "accepted") {
+      loadGoogleTagManager();
+    }
     updateConfirmation(banner, choice);
     window.setTimeout(function () {
       banner.classList.add("is-hiding");
@@ -216,7 +225,13 @@
   }
 
   function init() {
-    if (!previewMode && getStoredChoice()) return;
+    var storedChoice = getStoredChoice();
+    if (!previewMode && storedChoice) {
+      if (storedChoice === "accepted") {
+        loadGoogleTagManager();
+      }
+      return;
+    }
     injectStyles();
     buildBanner();
   }
