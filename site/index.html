@@ -548,6 +548,14 @@
       gap: 16px;
     }
 
+    .menu-toggle {
+      display: none;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
     .nav-login {
       color: #313946;
       font-size: 14px;
@@ -2269,6 +2277,10 @@
     }
 
     @media (max-width: 960px) {
+      .mode-switch {
+        display: none;
+      }
+
       .mode-inner {
         width: min(100% - 28px, 1180px);
       }
@@ -2282,7 +2294,126 @@
       }
 
       .nav-actions {
-        gap: 10px;
+        display: none;
+      }
+
+      .menu-toggle {
+        width: 44px;
+        min-width: 44px;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border: 0;
+        border-radius: 999px;
+        background: transparent;
+        color: #172232;
+        font: inherit;
+        cursor: pointer;
+      }
+
+      .menu-toggle:focus-visible {
+        outline: 3px solid rgba(28, 140, 111, .24);
+        outline-offset: 2px;
+      }
+
+      .menu-toggle-bars {
+        width: 20px;
+        display: grid;
+        gap: 4px;
+      }
+
+      .menu-toggle-bars span {
+        display: block;
+        height: 2px;
+        border-radius: 999px;
+        background: currentColor;
+      }
+
+      .mobile-menu {
+        display: block;
+        padding: 0 14px 16px;
+        background: #fff;
+      }
+
+      .mobile-menu[hidden] {
+        display: none;
+      }
+
+      .mobile-panel {
+        display: grid;
+        gap: 16px;
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 18px 44px rgba(17, 24, 39, .10);
+      }
+
+      .mobile-label {
+        color: #536072;
+        font-size: 12px;
+        font-weight: 950;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+      }
+
+      .mobile-modes,
+      .mobile-links,
+      .mobile-utility {
+        display: grid;
+        gap: 8px;
+      }
+
+      .mobile-modes {
+        padding: 4px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      .mobile-modes .mode-option,
+      .mobile-links a,
+      .mobile-utility a {
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 7px;
+        color: #2d3748;
+        font-size: 14px;
+        font-weight: 850;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      .mobile-modes .mode-option {
+        width: 100%;
+        min-width: 0;
+      }
+
+      .mobile-modes .mode-option:first-child,
+      .mobile-links a:hover,
+      .mobile-utility a:hover {
+        background: #eef8f4;
+        color: #176e58;
+      }
+
+      .mobile-utility {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .mobile-cta {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background: var(--yellow);
+        color: #101820;
+        font-size: 14px;
+        font-weight: 950;
       }
 
       .hero {
@@ -2574,7 +2705,34 @@
       <div class="nav-actions">
         <a class="nav-cta" href="book-live-demo/">Book a demo</a>
       </div>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="menu-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
     </nav>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <div class="mobile-panel">
+        <div class="mobile-label">Explore FeedOps as</div>
+        <div class="mobile-modes">
+          <a class="mode-option" href="./">Performance expert</a>
+          <a class="mode-option" href="product-feed-management/">Executive mode</a>
+          <a class="mode-option" href="shopping-feed-agency/">Media agency</a>
+        </div>
+        <div class="mobile-links" aria-label="Mobile primary links">
+          <a href="#agent">System</a>
+          <a href="#operations">Operations</a>
+          <a href="#sources">Sources</a>
+          <a href="#channels">Channels</a>
+          <a href="#workflow">Playbook</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#seo-faq">FAQ</a>
+        </div>
+        <div class="mobile-utility">
+          <a href="contact-us/">Contact</a>
+          <a href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>
+        </div>
+        <a class="mobile-cta" href="book-live-demo/">Book a demo</a>
+      </div>
+    </div>
   </header>
 
   <main>
@@ -3270,5 +3428,34 @@
       }
     }
   </style>
+  <script>
+    (function () {
+      var button = document.querySelector(".menu-toggle");
+      var menu = document.querySelector("#mobile-menu");
+      if (!button || !menu) return;
+
+      function setOpen(open) {
+        button.setAttribute("aria-expanded", open ? "true" : "false");
+        button.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        menu.toggleAttribute("hidden", !open);
+      }
+
+      setOpen(false);
+
+      button.addEventListener("click", function () {
+        setOpen(button.getAttribute("aria-expanded") !== "true");
+      });
+
+      menu.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          setOpen(false);
+        });
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") setOpen(false);
+      });
+    })();
+  </script>
 </body>
 </html>
