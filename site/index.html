@@ -2286,6 +2286,362 @@
       color: #8392a5;
     }
 
+    /* Standard FeedOps header */
+    header.site-header,
+    .mode-switch[aria-label="Choose FeedOps page mode"] {
+      display: none !important;
+    }
+
+    #feedops-standard-header.feedops-header {
+      display: block !important;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #d8dee8;
+      background: #ffffff;
+      backdrop-filter: blur(14px);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      overflow-x: hidden;
+    }
+
+    #feedops-standard-header a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    #feedops-standard-header .feedops-mode-switch {
+      border-bottom: 1px solid #d8dee8;
+      background: #f4f6f9;
+    }
+
+    #feedops-standard-header .feedops-mode-inner {
+      width: min(1180px, calc(100% - 40px));
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 18px;
+      margin: 0 auto;
+      padding: 6px 0;
+    }
+
+    #feedops-standard-header .feedops-mode-label {
+      color: #536072;
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    #feedops-standard-header .feedops-mode-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    #feedops-standard-header .feedops-mode-options {
+      display: inline-grid;
+      grid-template-columns: repeat(3, minmax(148px, 1fr));
+      padding: 4px;
+      border: 1px solid #d8dee8;
+      border-radius: 999px;
+      background: #ffffff;
+      box-shadow: 0 10px 28px rgba(17, 24, 39, .06);
+    }
+
+    #feedops-standard-header .feedops-mode-option {
+      min-width: 148px;
+      min-height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 16px;
+      border-radius: 999px;
+      color: #2d3748;
+      font-size: 12px;
+      font-weight: 850;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    #feedops-standard-header .feedops-mode-option:hover,
+    #feedops-standard-header .feedops-mode-option.is-active {
+      background: #eef8f4;
+      color: #176e58;
+    }
+
+    #feedops-standard-header .feedops-mode-option.is-active {
+      box-shadow: inset 0 0 0 1px rgba(28, 140, 111, .22);
+    }
+
+    #feedops-standard-header .feedops-mode-link,
+    #feedops-standard-header .feedops-mode-login {
+      min-height: 32px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      border-bottom: 2px solid transparent;
+      color: #2d3748;
+      font-size: 13px;
+      font-weight: 950;
+      white-space: nowrap;
+    }
+
+    #feedops-standard-header .feedops-mode-link:hover,
+    #feedops-standard-header .feedops-mode-link:focus-visible,
+    #feedops-standard-header .feedops-mode-login:hover,
+    #feedops-standard-header .feedops-mode-login:focus-visible {
+      border-bottom-color: #176e58;
+      color: #176e58;
+      outline: none;
+    }
+
+    #feedops-standard-header .feedops-nav {
+      width: min(1180px, calc(100% - 198px));
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      margin: 0 auto;
+      background: #ffffff;
+    }
+
+    #feedops-standard-header .feedops-logo {
+      display: flex;
+      align-items: center;
+      width: 142px;
+      flex: 0 0 auto;
+    }
+
+    #feedops-standard-header .feedops-logo img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+
+    #feedops-standard-header .feedops-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      color: #313946;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    #feedops-standard-header .feedops-nav-links a:hover {
+      color: #176e58;
+    }
+
+    #feedops-standard-header .feedops-nav-links a.is-active {
+      color: #176e58;
+      font-weight: 850;
+    }
+
+    #feedops-standard-header .feedops-nav-actions {
+      display: flex;
+      align-items: center;
+    }
+
+    #feedops-standard-header .feedops-menu-toggle {
+      display: none;
+    }
+
+    #feedops-standard-header .feedops-nav-cta {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 18px;
+      border-radius: 8px;
+      background: #ffca28;
+      color: #111111;
+      font-size: 14px;
+      font-weight: 950;
+      box-shadow: 0 12px 30px rgba(254, 207, 38, .28);
+    }
+
+    #feedops-standard-header .feedops-nav-cta.is-active {
+      box-shadow:
+        inset 0 0 0 2px rgba(16, 24, 32, .18),
+        0 12px 30px rgba(254, 207, 38, .28);
+    }
+
+    #feedops-standard-header .feedops-mobile-menu {
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      #feedops-standard-header .feedops-mode-inner,
+      #feedops-standard-header .feedops-nav {
+        width: min(100% - 40px, 1180px);
+        flex-wrap: wrap;
+      }
+
+      #feedops-standard-header .feedops-nav {
+        height: auto;
+        padding: 14px 0;
+      }
+
+      #feedops-standard-header .feedops-nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 16px 22px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      #feedops-standard-header {
+        overflow: visible;
+      }
+
+      #feedops-standard-header .feedops-mode-switch {
+        display: none;
+      }
+
+      #feedops-standard-header .feedops-nav {
+        width: min(100% - 28px, 1180px);
+        min-height: 72px;
+        flex-wrap: nowrap;
+        padding: 12px 0;
+      }
+
+      #feedops-standard-header .feedops-logo {
+        width: 126px;
+      }
+
+      #feedops-standard-header .feedops-nav-links,
+      #feedops-standard-header .feedops-nav-actions {
+        display: none;
+      }
+
+      #feedops-standard-header .feedops-menu-toggle {
+        width: 44px;
+        min-width: 44px;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border: 0;
+        border-radius: 999px;
+        background: transparent;
+        color: #172232;
+        font: inherit;
+        cursor: pointer;
+      }
+
+      #feedops-standard-header .feedops-menu-toggle:focus-visible {
+        outline: 3px solid rgba(28, 140, 111, .24);
+        outline-offset: 2px;
+      }
+
+      #feedops-standard-header .feedops-menu-toggle-bars {
+        width: 20px;
+        display: grid;
+        gap: 4px;
+      }
+
+      #feedops-standard-header .feedops-menu-toggle-bars span {
+        display: block;
+        height: 2px;
+        border-radius: 999px;
+        background: #172232;
+      }
+
+      #feedops-standard-header .feedops-mobile-menu {
+        display: block;
+        border-top: 1px solid #d8dee8;
+        background: #f4f6f9;
+      }
+
+      #feedops-standard-header .feedops-mobile-menu[hidden] {
+        display: none;
+      }
+
+      #feedops-standard-header .feedops-mobile-panel {
+        width: min(100% - 28px, 1180px);
+        display: grid;
+        gap: 16px;
+        margin: 0 auto;
+        padding: 16px 0 18px;
+      }
+
+      #feedops-standard-header .feedops-mobile-label {
+        color: #536072;
+        font-size: 12px;
+        font-weight: 950;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+      }
+
+      #feedops-standard-header .feedops-mobile-modes {
+        display: grid;
+        gap: 6px;
+        padding: 4px;
+        border: 1px solid #d8dee8;
+        border-radius: 8px;
+        background: #ffffff;
+        box-shadow: 0 10px 28px rgba(17, 24, 39, .06);
+      }
+
+      #feedops-standard-header .feedops-mobile-modes .feedops-mode-option {
+        width: 100%;
+        min-width: 0;
+        border-radius: 6px;
+      }
+
+      #feedops-standard-header .feedops-mobile-links {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      #feedops-standard-header .feedops-mobile-links a,
+      #feedops-standard-header .feedops-mobile-utility a {
+        min-height: 42px;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        border: 1px solid #d8dee8;
+        border-radius: 8px;
+        background: #ffffff;
+        color: #2d3748;
+        font-size: 14px;
+        font-weight: 850;
+      }
+
+      #feedops-standard-header .feedops-mobile-links a.is-active {
+        border-color: rgba(28, 140, 111, .34);
+        background: #eef8f4;
+        color: #176e58;
+      }
+
+      #feedops-standard-header .feedops-mobile-utility {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      #feedops-standard-header .feedops-mobile-cta {
+        min-height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background: #ffca28;
+        color: #111111;
+        font-size: 14px;
+        font-weight: 950;
+        box-shadow: 0 12px 30px rgba(254, 207, 38, .28);
+      }
+    }
+
+
+    /* Standard FeedOps footer */
     #feedops-standard-footer.site-footer {
       position: relative;
       width: 100%;
@@ -2863,63 +3219,63 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KR4TR7B"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-<header class="site-header">
-    <div class="mode-switch" aria-label="Choose FeedOps page mode">
-      <div class="mode-inner">
-        <div class="mode-label">Choose your view</div>
-        <div class="mode-controls">
-          <div class="mode-options">
-            <a class="mode-option" href="./">Performance expert</a>
-            <a class="mode-option" href="product-feed-management/">Executive mode</a>
-            <a class="mode-option" href="shopping-feed-agency/">Media agency</a>
+  <header id="feedops-standard-header" class="feedops-header">
+    <div class="feedops-mode-switch" aria-label="Choose FeedOps page mode">
+      <div class="feedops-mode-inner">
+        <div class="feedops-mode-label">Explore FeedOps as</div>
+        <div class="feedops-mode-controls">
+          <div class="feedops-mode-options">
+            <a class="feedops-mode-option is-active" data-feedops-mode="expert" aria-current="page" href="">Performance expert</a>
+            <a class="feedops-mode-option" data-feedops-mode="executive" href="product-feed-management/">Executive mode</a>
+            <a class="feedops-mode-option" data-feedops-mode="agency" href="shopping-feed-agency/">Media agency</a>
           </div>
-          <a class="mode-login" href="contact-us/">Contact</a>
-          <a class="mode-login" href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>
+          <a class="feedops-mode-link" href="contact-us/">Contact</a>
+          <a class="feedops-mode-login" href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>
         </div>
       </div>
     </div>
-    <nav class="nav" aria-label="Main navigation">
-      <a class="logo" href="./" aria-label="FeedOps home">
-        <img src="./assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4-300x110.png" alt="FeedOps logo - header logo for product feed optimisation on Home" title="FeedOps logo - header logo for product feed optimisation on Home" width="300" height="110">
+    <nav class="feedops-nav" aria-label="Main navigation">
+      <a class="feedops-logo" href="" aria-label="FeedOps home">
+        <img src="assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4-300x110.png" alt="FeedOps" width="300" height="110">
       </a>
-      <div class="nav-links" aria-label="Primary links">
-        <a href="#agent">System</a>
-        <a href="#operations">Operations</a>
-        <a href="#sources">Sources</a>
-        <a href="#channels">Channels</a>
-        <a href="#workflow">Playbook</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#seo-faq">FAQ</a>
-      </div>
-      <div class="nav-actions">
-        <a class="nav-cta" href="book-live-demo/">Book a demo</a>
-      </div>
-      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-        <span class="menu-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      <button class="feedops-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="feedops-mobile-menu">
+        <span class="feedops-menu-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
       </button>
+      <div class="feedops-nav-links" aria-label="Primary links">
+        <a data-feedops-section="agent" href="#agent">System</a>
+        <a data-feedops-section="operations" href="#operations">Operations</a>
+        <a data-feedops-section="sources" href="#sources">Sources</a>
+        <a data-feedops-section="channels" href="#channels">Channels</a>
+        <a data-feedops-section="workflow" href="#workflow">Playbook</a>
+        <a data-feedops-section="pricing" href="#pricing">Pricing</a>
+        <a data-feedops-section="seo-faq" href="#seo-faq">FAQ</a>
+      </div>
+      <div class="feedops-nav-actions">
+        <a class="feedops-nav-cta" href="book-live-demo/">Book a demo</a>
+      </div>
     </nav>
-    <div class="mobile-menu" id="mobile-menu" hidden>
-      <div class="mobile-panel">
-        <div class="mobile-label">Explore FeedOps as</div>
-        <div class="mobile-modes">
-          <a class="mode-option" href="./">Performance expert</a>
-          <a class="mode-option" href="product-feed-management/">Executive mode</a>
-          <a class="mode-option" href="shopping-feed-agency/">Media agency</a>
+    <div class="feedops-mobile-menu" id="feedops-mobile-menu" hidden>
+      <div class="feedops-mobile-panel">
+        <div class="feedops-mobile-label">Explore FeedOps as</div>
+        <div class="feedops-mobile-modes">
+          <a class="feedops-mode-option is-active" data-feedops-mode="expert" aria-current="page" href="">Performance expert</a>
+          <a class="feedops-mode-option" data-feedops-mode="executive" href="product-feed-management/">Executive mode</a>
+          <a class="feedops-mode-option" data-feedops-mode="agency" href="shopping-feed-agency/">Media agency</a>
         </div>
-        <div class="mobile-links" aria-label="Mobile primary links">
-          <a href="#agent">System</a>
-          <a href="#operations">Operations</a>
-          <a href="#sources">Sources</a>
-          <a href="#channels">Channels</a>
-          <a href="#workflow">Playbook</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#seo-faq">FAQ</a>
+        <div class="feedops-mobile-links" aria-label="Mobile primary links">
+          <a data-feedops-section="agent" href="#agent">System</a>
+          <a data-feedops-section="operations" href="#operations">Operations</a>
+          <a data-feedops-section="sources" href="#sources">Sources</a>
+          <a data-feedops-section="channels" href="#channels">Channels</a>
+          <a data-feedops-section="workflow" href="#workflow">Playbook</a>
+          <a data-feedops-section="pricing" href="#pricing">Pricing</a>
+          <a data-feedops-section="seo-faq" href="#seo-faq">FAQ</a>
         </div>
-        <div class="mobile-utility">
+        <div class="feedops-mobile-utility">
           <a href="contact-us/">Contact</a>
           <a href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>
         </div>
-        <a class="mobile-cta" href="book-live-demo/">Book a demo</a>
+        <a class="feedops-mobile-cta" href="book-live-demo/">Book a demo</a>
       </div>
     </div>
   </header>
@@ -3523,139 +3879,11 @@
       </div>
     </div>
   </footer>
-  <style>
-    @media (min-width: 981px) {
-      .mode-switch { background: #f4f6f9; border-bottom: 1px solid var(--line); }
-      .mode-inner { min-height: 56px; justify-content: flex-end; gap: 18px; }
-      .mode-label { color: #536072; font-weight: 950; letter-spacing: .12em; }
-      .mode-controls { gap: 12px; margin-left: 0; }
-      .mode-option { min-width: 150px; min-height: 36px; color: #2d3748; font-weight: 850; text-decoration: none; }
-      .mode-option:hover,
-      .mode-option.active { background: #eef8f4; color: #176e58; }
-    }
-  </style>
   <script src="/cookie-consent.js" defer></script>
-
-  <style id="feedops-mode-bar-standard">
-    .mode-switch {
-      border-bottom: 1px solid #d8dee8 !important;
-      background: #f4f6f9 !important;
-    }
-
-    .mode-inner {
-      width: min(1180px, calc(100% - 40px)) !important;
-      min-height: 42px !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      gap: 18px !important;
-      margin: 0 auto !important;
-      color: #2d3748 !important;
-      font-size: 13px !important;
-      font-weight: 850 !important;
-    }
-
-    .mode-label {
-      color: #536072 !important;
-      font-size: 12px !important;
-      font-weight: 950 !important;
-      letter-spacing: .12em !important;
-      text-transform: uppercase !important;
-      white-space: nowrap !important;
-    }
-
-    .mode-controls {
-      display: flex !important;
-      align-items: center !important;
-      gap: 14px !important;
-      margin-left: auto !important;
-    }
-
-    .mode-options {
-      display: inline-grid !important;
-      grid-template-columns: repeat(3, minmax(150px, 1fr)) !important;
-      gap: 0 !important;
-      padding: 4px !important;
-      border: 1px solid #d8dee8 !important;
-      border-radius: 999px !important;
-      background: #fff !important;
-      box-shadow: 0 10px 28px rgba(17, 24, 39, .06) !important;
-    }
-
-    .mode-option {
-      min-width: 150px !important;
-      min-height: 32px !important;
-      display: inline-flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      padding: 0 16px !important;
-      border-radius: 999px !important;
-      background: transparent !important;
-      color: #2d3748 !important;
-      font-size: 13px !important;
-      font-weight: 850 !important;
-      line-height: 1 !important;
-      text-align: center !important;
-      text-decoration: none !important;
-      white-space: nowrap !important;
-    }
-
-    .mode-option:hover {
-      background: #eef8f4 !important;
-      color: #176e58 !important;
-    }
-
-    .mode-login {
-      min-height: 32px !important;
-      display: inline-flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      padding: 0 !important;
-      border-radius: 0 !important;
-      background: transparent !important;
-      color: #2d3748 !important;
-      font-size: 13px !important;
-      font-weight: 850 !important;
-      line-height: 1 !important;
-      text-decoration: none !important;
-      white-space: nowrap !important;
-    }
-
-    .mode-login:hover {
-      background: transparent !important;
-      color: #176e58 !important;
-    }
-
-    @media (max-width: 760px) {
-      .mode-inner {
-        width: min(100% - 28px, 1180px) !important;
-        align-items: flex-start !important;
-        flex-direction: column !important;
-        padding: 10px 0 !important;
-      }
-
-      .mode-controls {
-        width: 100% !important;
-        align-items: flex-start !important;
-        flex-direction: column !important;
-        margin-left: 0 !important;
-      }
-
-      .mode-options {
-        width: 100% !important;
-        grid-template-columns: 1fr !important;
-        border-radius: 8px !important;
-      }
-
-      .mode-option {
-        width: 100% !important;
-      }
-    }
-  </style>
   <script>
     (function () {
-      var button = document.querySelector(".menu-toggle");
-      var menu = document.querySelector("#mobile-menu");
+      var button = document.querySelector(".feedops-menu-toggle");
+      var menu = document.querySelector("#feedops-mobile-menu");
       if (!button || !menu) return;
 
       function setOpen(open) {
