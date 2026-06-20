@@ -84,6 +84,10 @@ const rootHtmlFiles = [
   "404.html"
 ];
 
+const rootStaticFiles = [
+  "favicon.ico"
+];
+
 const assetPathMap = [];
 const legacyAssetAliases = [
   [
@@ -334,6 +338,10 @@ for (const file of sharedFiles) {
 
 for (const file of rootHtmlFiles) {
   copyTextPath(join(sourceRoot, file), join(outputRoot, file), injectGoogleTagManager);
+}
+
+for (const file of rootStaticFiles) {
+  copyFile(join(sourceRoot, file), join(outputRoot, file));
 }
 
 for (const page of pages) {
