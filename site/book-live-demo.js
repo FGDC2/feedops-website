@@ -64,8 +64,9 @@
       iframe.loading = "lazy";
       iframe.setAttribute("data-hs-ignore", "true");
       iframe.style.minWidth = "312px";
-      iframe.style.minHeight = "900px";
-      iframe.style.height = "900px";
+      iframe.style.minHeight = "1080px";
+      iframe.style.height = "1080px";
+      iframe.style.marginTop = "-180px";
       iframe.style.borderWidth = "0";
       iframe.addEventListener("load", markLoaded, { once: true });
       window.setTimeout(markLoaded, 900);
