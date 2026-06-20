@@ -60,12 +60,12 @@
       iframe.src = container.getAttribute("data-src");
       iframe.title = "Book a FeedOps demo calendar";
       iframe.width = "100%";
-      iframe.height = "980";
+      iframe.height = "1150";
       iframe.loading = "lazy";
       iframe.setAttribute("data-hs-ignore", "true");
       iframe.style.minWidth = "312px";
-      iframe.style.minHeight = "980px";
-      iframe.style.height = "980px";
+      iframe.style.minHeight = "1150px";
+      iframe.style.height = "1150px";
       iframe.style.borderWidth = "0";
       iframe.addEventListener("load", markLoaded, { once: true });
       window.setTimeout(markLoaded, 900);
