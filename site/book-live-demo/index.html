@@ -491,6 +491,14 @@
       transition: opacity .24s ease, visibility .24s ease;
     }
 
+    .meetings-iframe-container:not(.is-loading) .calendar-loading {
+      position: relative;
+      min-height: 700px;
+      align-content: center;
+      justify-items: center;
+      text-align: center;
+    }
+
     .meetings-iframe-container.is-loaded .calendar-loading {
       opacity: 0;
       visibility: hidden;
@@ -506,6 +514,14 @@
       border-bottom: 1px solid #eef1f5;
     }
 
+    .meetings-iframe-container:not(.is-loading) .calendar-loading-header {
+      max-width: 430px;
+      padding-bottom: 0;
+      border-bottom: 0;
+      flex-direction: column;
+      justify-content: center;
+    }
+
     .calendar-loading-title {
       display: grid;
       gap: 6px;
@@ -517,10 +533,43 @@
       line-height: 1.2;
     }
 
+    .meetings-iframe-container:not(.is-loading) .calendar-loading-title strong {
+      font-size: 30px;
+      line-height: 1.08;
+    }
+
     .calendar-loading-title span {
       color: var(--muted);
       font-size: 13px;
       line-height: 1.4;
+    }
+
+    .meetings-iframe-container:not(.is-loading) .calendar-loading-title span {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .calendar-load-button {
+      min-height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 18px;
+      padding: 0 22px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--yellow);
+      color: #111;
+      box-shadow: 0 12px 24px rgba(254, 207, 38, .25);
+      cursor: pointer;
+      font: inherit;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .calendar-load-button:hover,
+    .calendar-load-button:focus-visible {
+      background: #f2bd05;
     }
 
     .calendar-spinner {
@@ -531,6 +580,12 @@
       border-radius: 999px;
       animation: calendar-spin .85s linear infinite;
       flex: 0 0 auto;
+    }
+
+    .meetings-iframe-container:not(.is-loading) .calendar-spinner,
+    .meetings-iframe-container:not(.is-loading) .calendar-placeholder-grid,
+    .meetings-iframe-container:not(.is-loading) .calendar-placeholder-times {
+      display: none;
     }
 
     .calendar-placeholder-grid {
@@ -766,28 +821,68 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KR4TR7B"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-<div class="mode-switch" aria-label="Explore FeedOps as">
-    <div class="mode-inner">
-      <div class="mode-label">Explore FeedOps as</div>
-      <div class="mode-controls">
-        <div class="mode-options">
-          <a class="mode-option" href="../">Performance expert</a>
-          <a class="mode-option" href="../product-feed-management/">Executive mode</a>
-          <a class="mode-option" href="../shopping-feed-agency/">Media agency</a>
+<header id="feedops-standard-header" class="feedops-header">
+    <div class="feedops-mode-switch" aria-label="Explore FeedOps as">
+      <div class="feedops-mode-inner">
+        <div class="feedops-mode-label">Explore FeedOps as</div>
+        <div class="feedops-mode-controls">
+          <div class="feedops-mode-options">
+            <a class="feedops-mode-option" data-feedops-mode="expert" href="../">Performance expert</a>
+            <a class="feedops-mode-option" data-feedops-mode="executive" href="../product-feed-management/">Executive mode</a>
+            <a class="feedops-mode-option" data-feedops-mode="agency" href="../shopping-feed-agency/">Media agency</a>
+          </div>
+          <a class="feedops-mode-link" href="../contact-us/">Contact</a>
+          <a class="feedops-mode-login" href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>
         </div>
-        <a class="mode-login" href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>
       </div>
     </div>
-  </div>
+    <nav class="feedops-nav" aria-label="Main navigation">
+      <a class="feedops-logo" href="../" aria-label="FeedOps home">
+        <img src="../assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4-300x110.png" alt="FeedOps" width="300" height="110">
+      </a>
+      <button class="feedops-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="feedops-mobile-menu">
+        <span class="feedops-menu-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+      <div class="feedops-nav-links" aria-label="Primary links">
+        <a data-feedops-section="agent" href="../#agent">System</a>
+        <a data-feedops-section="operations" href="../#operations">Operations</a>
+        <a data-feedops-section="sources" href="../#sources">Sources</a>
+        <a data-feedops-section="channels" href="../#channels">Channels</a>
+        <a data-feedops-section="workflow" href="../#workflow">Playbook</a>
+        <a data-feedops-section="pricing" href="../#pricing">Pricing</a>
+        <a data-feedops-section="seo-faq" href="../#seo-faq">FAQ</a>
+      </div>
+      <div class="feedops-nav-actions">
+        <a class="feedops-nav-cta" href="../book-live-demo/">Book a demo</a>
+      </div>
+    </nav>
+    <div class="feedops-mobile-menu" id="feedops-mobile-menu" hidden>
+      <div class="feedops-mobile-panel">
+        <div class="feedops-mobile-label">Explore FeedOps as</div>
+        <div class="feedops-mobile-modes">
+          <a class="feedops-mode-option" data-feedops-mode="expert" href="../">Performance expert</a>
+          <a class="feedops-mode-option" data-feedops-mode="executive" href="../product-feed-management/">Executive mode</a>
+          <a class="feedops-mode-option" data-feedops-mode="agency" href="../shopping-feed-agency/">Media agency</a>
+        </div>
+        <div class="feedops-mobile-links" aria-label="Mobile primary links">
+          <a data-feedops-section="agent" href="../#agent">System</a>
+          <a data-feedops-section="operations" href="../#operations">Operations</a>
+          <a data-feedops-section="sources" href="../#sources">Sources</a>
+          <a data-feedops-section="channels" href="../#channels">Channels</a>
+          <a data-feedops-section="workflow" href="../#workflow">Playbook</a>
+          <a data-feedops-section="pricing" href="../#pricing">Pricing</a>
+          <a data-feedops-section="seo-faq" href="../#seo-faq">FAQ</a>
+        </div>
+        <div class="feedops-mobile-utility">
+          <a href="../contact-us/">Contact</a>
+          <a href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>
+        </div>
+        <a class="feedops-mobile-cta" href="../book-live-demo/">Book a demo</a>
+      </div>
+    </div>
+  </header>
 
   <div class="page">
-    <header class="topbar">
-      <a class="logo" href="../" aria-label="FeedOps home">
-        <img src="../assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4-300x110.png" alt="FeedOps logo - header logo for product feed demo on Book A Demo" title="FeedOps logo - header logo for product feed demo on Book A Demo" width="300" height="110">
-      </a>
-      <a class="topbar-link" href="../" data-history-back>Back to FeedOps</a>
-    </header>
-
     <main class="booking-layout">
       <section class="intro-panel" aria-labelledby="booking-title">
         <div class="intro-copy">
@@ -831,12 +926,13 @@
             <p>Availability is shown in your local time zone.</p>
           </div>
         </div>
-        <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/frank333/book-live-demo-?uuid=88384a9f-0c63-4f92-a6fb-beb143a54386&embed=true" aria-busy="true">
+        <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/frank333/book-live-demo-?uuid=88384a9f-0c63-4f92-a6fb-beb143a54386&embed=true" aria-busy="false">
           <div class="calendar-loading" aria-live="polite">
             <div class="calendar-loading-header">
               <div class="calendar-loading-title">
-                <strong>Loading available times</strong>
-                <span>The calendar can take a few seconds to appear.</span>
+                <strong>Ready to choose a time?</strong>
+                <span>Load the live FeedOps calendar when you are ready to book. Availability opens in your local time zone.</span>
+                <button class="calendar-load-button" type="button" data-load-calendar>Show available times</button>
               </div>
               <div class="calendar-spinner" aria-hidden="true"></div>
             </div>
@@ -955,8 +1051,7 @@
   </footer>
   </div>
 
-  <script src="../assets/static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js" defer></script>
-  <script src="../book-live-demo.js?v=20260619" defer></script>
+  <script src="../book-live-demo.js?v=20260620-defer-calendar" defer></script>
   <script src="/cookie-consent.js" defer></script>
 
   <style id="feedops-mode-bar-standard">
