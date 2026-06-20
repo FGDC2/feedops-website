@@ -466,7 +466,7 @@
 
     .meetings-iframe-container {
       position: relative;
-      min-height: 700px;
+      min-height: 860px;
       border: 1px solid #eef1f5;
       border-radius: 8px;
       overflow: hidden;
@@ -476,7 +476,7 @@
     .meetings-iframe-container iframe {
       display: block;
       width: 100% !important;
-      min-height: 700px;
+      min-height: 860px;
     }
 
     .calendar-loading {
@@ -493,7 +493,7 @@
 
     .meetings-iframe-container:not(.is-loading) .calendar-loading {
       position: relative;
-      min-height: 700px;
+      min-height: 860px;
       align-content: center;
       justify-items: center;
       text-align: center;
@@ -809,7 +809,7 @@
 
       .meetings-iframe-container,
       .meetings-iframe-container iframe {
-        min-height: 720px;
+        min-height: 780px;
       }
     }
   </style>
@@ -926,13 +926,12 @@
             <p>Availability is shown in your local time zone.</p>
           </div>
         </div>
-        <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/frank333/book-live-demo-?uuid=88384a9f-0c63-4f92-a6fb-beb143a54386&embed=true" aria-busy="false">
+        <div class="meetings-iframe-container is-loading" data-src="https://meetings.hubspot.com/frank333/book-live-demo-?uuid=88384a9f-0c63-4f92-a6fb-beb143a54386&embed=true" aria-busy="true" data-auto-load-calendar>
           <div class="calendar-loading" aria-live="polite">
             <div class="calendar-loading-header">
               <div class="calendar-loading-title">
-                <strong>Ready to choose a time?</strong>
-                <span>Load the live FeedOps calendar when you are ready to book. Availability opens in your local time zone.</span>
-                <button class="calendar-load-button" type="button" data-load-calendar>Show available times</button>
+                <strong>Loading available times</strong>
+                <span>The live FeedOps calendar is opening in your local time zone.</span>
               </div>
               <div class="calendar-spinner" aria-hidden="true"></div>
             </div>
@@ -1051,7 +1050,7 @@
   </footer>
   </div>
 
-  <script src="../book-live-demo.js?v=20260620-defer-calendar" defer></script>
+  <script src="../book-live-demo.js?v=20260620-auto-calendar" defer></script>
   <script src="/cookie-consent.js" defer></script>
 
   <style id="feedops-mode-bar-standard">
