@@ -62,7 +62,7 @@
   function standardHeader() {
     return [
       '<header id="feedops-standard-header" class="feedops-header">',
-      '  <div class="feedops-mode-switch" aria-label="Choose FeedOps page mode">',
+      '  <div class="feedops-mode-switch" aria-label="Explore FeedOps as">',
       '    <div class="feedops-mode-inner">',
       '      <div class="feedops-mode-label">Explore FeedOps as</div>',
       '      <div class="feedops-mode-controls">',
@@ -210,7 +210,7 @@
     document.querySelectorAll([
       "#feedops-standard-header",
       "header.site-header",
-      ".mode-switch[aria-label='Choose FeedOps page mode']"
+      ".mode-switch[aria-label='Explore FeedOps as']"
     ].join(",")).forEach(function (node) {
       node.remove();
     });
