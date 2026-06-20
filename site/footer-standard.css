@@ -167,10 +167,13 @@
 
 #feedops-standard-footer .footer-column {
   display: grid;
-  gap: 6px;
+  gap: 4px;
 }
 
 #feedops-standard-footer .footer-column a {
+  min-height: 24px;
+  display: flex;
+  align-items: center;
   color: rgba(255, 255, 255, .78);
   font-size: 13.5px;
   line-height: 1.2;

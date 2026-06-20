@@ -153,9 +153,25 @@ function injectGoogleTagManager(content) {
   return output;
 }
 
+function minifyCss(css) {
+  return css
+    .replace(/\/\*[\s\S]*?\*\//g, "")
+    .replace(/\s+/g, " ")
+    .replace(/\s*([{}:;,>+~])\s*/g, "$1")
+    .replace(/;}/g, "}")
+    .trim();
+}
+
+function minifyInlineStyles(content) {
+  return content.replace(/<style([^>]*)>([\s\S]*?)<\/style>/gi, function (_match, attributes, css) {
+    if (!css.trim()) return `<style${attributes}></style>`;
+    return `<style${attributes}>${minifyCss(css)}</style>`;
+  });
+}
+
 function copyTextPath(from, to, transform = (content) => content) {
   mkdirSync(dirname(to), { recursive: true });
-  writeFileSync(to, rewriteAssetReferences(transform(readFileSync(from, "utf8"))));
+  writeFileSync(to, minifyInlineStyles(rewriteAssetReferences(transform(readFileSync(from, "utf8")))));
 }
 
 function copyPage(page) {

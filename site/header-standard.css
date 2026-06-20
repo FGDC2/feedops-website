@@ -1,8 +1,3 @@
-header.site-header,
-.mode-switch[aria-label="Explore FeedOps as"] {
-  display: none !important;
-}
-
 #feedops-standard-header.feedops-header {
   display: block !important;
   position: sticky;
