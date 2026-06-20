@@ -2245,6 +2245,16 @@
       line-height: 1.55;
     }
 
+    .footer-heading {
+      margin: 0 0 14px;
+      color: #ffca28;
+      font-size: 13px;
+      font-weight: 950;
+      line-height: 1.2;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
     .footer-column h2 {
       margin: 0 0 14px;
       color: #fff;
@@ -2274,6 +2284,149 @@
       padding-top: 22px;
       border-top: 1px solid rgba(255,255,255,.12);
       color: #8392a5;
+    }
+
+    #feedops-standard-footer.site-footer {
+      position: relative;
+      width: 100%;
+      margin: 0;
+      box-sizing: border-box;
+      padding: 62px 24px 54px;
+      border-top: 0;
+    }
+
+    #feedops-standard-footer.site-footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 100vw;
+      height: 4px;
+      transform: translateX(-50%);
+      background: #ffca28;
+    }
+
+    #feedops-standard-footer .footer-inner {
+      display: grid;
+      grid-template-columns: minmax(360px, 1.35fr) minmax(240px, .9fr) minmax(240px, .9fr) minmax(110px, .45fr) minmax(110px, .45fr);
+      grid-template-areas:
+        "brand company platform support support"
+        "guides explainers troubleshooting learning learning"
+        "comparisons . . . .";
+      column-gap: 28px;
+      row-gap: 36px;
+      width: min(1180px, calc(100% - 144px));
+      margin: 0 auto;
+    }
+
+    #feedops-standard-footer .footer-brand { grid-area: brand; align-self: start; }
+    #feedops-standard-footer .footer-company-column { grid-area: company; }
+    #feedops-standard-footer .footer-platform-column { grid-area: platform; }
+    #feedops-standard-footer .footer-support-column { grid-area: support; }
+    #feedops-standard-footer .footer-brand-guides { grid-area: guides; align-self: start; }
+    #feedops-standard-footer .footer-explainers-column { grid-area: explainers; }
+    #feedops-standard-footer .footer-troubleshooting-column { grid-area: troubleshooting; }
+    #feedops-standard-footer .footer-comparison-column { grid-area: comparisons; }
+
+    #feedops-standard-footer .footer-brand img {
+      display: block;
+      width: 148px;
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 18px;
+      filter: brightness(0) invert(1);
+    }
+
+    #feedops-standard-footer .footer-brand p {
+      max-width: 315px;
+      margin: 0;
+      color: rgba(255, 255, 255, .72);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    #feedops-standard-footer .footer-heading {
+      margin: 0 0 14px;
+      color: #ffca28;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    #feedops-standard-footer .footer-column {
+      display: grid;
+      gap: 6px;
+    }
+
+    #feedops-standard-footer .footer-column a {
+      color: rgba(255, 255, 255, .78);
+      font-size: 13.5px;
+      line-height: 1.2;
+      text-decoration: none;
+      transition: color .18s ease, transform .18s ease;
+    }
+
+    #feedops-standard-footer .footer-column a:hover {
+      color: #ffffff;
+      transform: translateX(2px);
+    }
+
+    #feedops-standard-footer .footer-cta,
+    #feedops-standard-footer .footer-learning-cta {
+      display: grid;
+      gap: 4px;
+      border: 1px solid rgba(255, 202, 40, .42);
+      border-radius: 8px;
+      background: rgba(255, 202, 40, .10);
+      color: #ffffff;
+      text-decoration: none;
+      transition: background .18s ease, border-color .18s ease, transform .18s ease;
+    }
+
+    #feedops-standard-footer .footer-cta {
+      max-width: 315px;
+      min-height: 76px;
+      margin-top: 20px;
+      padding: 14px 16px;
+    }
+
+    #feedops-standard-footer .footer-learning-cta {
+      grid-area: learning;
+      align-self: start;
+      min-height: 64px;
+      padding: 12px 14px;
+      border-color: rgba(255, 202, 40, .38);
+    }
+
+    #feedops-standard-footer .footer-cta span,
+    #feedops-standard-footer .footer-learning-cta span {
+      color: rgba(255, 255, 255, .72);
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    #feedops-standard-footer .footer-learning-cta span {
+      font-size: 11px;
+    }
+
+    #feedops-standard-footer .footer-cta strong,
+    #feedops-standard-footer .footer-learning-cta strong {
+      color: #ffca28;
+      font-size: 15px;
+      line-height: 1.25;
+    }
+
+    #feedops-standard-footer .footer-learning-cta strong {
+      font-size: 14px;
+    }
+
+    #feedops-standard-footer .footer-cta:hover,
+    #feedops-standard-footer .footer-learning-cta:hover {
+      border-color: #ffca28;
+      background: rgba(255, 202, 40, .16);
+      transform: translateY(-1px);
     }
 
     @media (max-width: 960px) {
@@ -2487,6 +2640,23 @@
         grid-row: auto;
       }
 
+      #feedops-standard-footer .footer-inner {
+        width: min(100%, 680px);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas:
+          "brand brand"
+          "company platform"
+          "support support"
+          "guides guides"
+          "explainers troubleshooting"
+          "learning learning"
+          "comparisons comparisons";
+      }
+
+      #feedops-standard-footer .footer-brand {
+        grid-column: 1 / -1;
+      }
+
     }
 
     @media (min-width: 700px) and (max-width: 960px) {
@@ -2664,6 +2834,25 @@
 
       .site-footer {
         padding-top: 42px;
+      }
+
+      #feedops-standard-footer.site-footer {
+        padding: 44px 20px;
+      }
+
+      #feedops-standard-footer .footer-inner {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "brand"
+          "company"
+          "platform"
+          "support"
+          "guides"
+          "explainers"
+          "troubleshooting"
+          "learning"
+          "comparisons";
       }
 
     }
@@ -3254,25 +3443,38 @@
   </main>
 
   
-  <footer class="site-footer">
+  <footer id="feedops-standard-footer" class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
         <a href="./" aria-label="FeedOps home">
           <img src="assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4-300x110.png" alt="FeedOps logo - footer logo 1 for product feed optimisation on Home" title="FeedOps logo - footer logo 1 for product feed optimisation on Home" width="300" height="110">
         </a>
         <p>Product feed optimisation software, feed strategy, and expert support for ecommerce teams.</p>
+        <a class="footer-cta" href="book-live-demo/">
+          <span>Book a demo</span>
+          <strong>See a clearer feed plan</strong>
+        </a>
       </div>
-      <div class="footer-group">
+      <div class="footer-brand-guides">
+        <div class="footer-heading">Guides</div>
+        <div class="footer-column">
+          <a href="guide/google-shopping-feed-optimization-guide/">Google Shopping Feed Optimization</a>
+          <a href="guide/google-shopping-ads-management/">Google Shopping Ads Management</a>
+          <a href="guide/google-local-inventory-ads-performance-max/">Google Local Inventory Ads Performance Max</a>
+          <a href="google-shopping-product-title-optimization/">Google Shopping Title Optimization</a>
+          <a href="feedops/google-shopping-free-listings/">Google Shopping Free Listings</a>
+        </div>
+      </div>
+      <div class="footer-group footer-company-column">
         <div class="footer-heading">Company</div>
         <div class="footer-column">
           <a href="./">Home</a>
           <a href="company/">Company</a>
-                    <a href="learning/">Learning</a>
-<a href="contact-us/">Contact</a>
+          <a href="learning/">Learning</a>
           <a href="privacy-policy/">Privacy</a>
         </div>
       </div>
-      <div class="footer-group">
+      <div class="footer-group footer-platform-column">
         <div class="footer-heading">Platform</div>
         <div class="footer-column">
           <a href="">Product Feed Optimisation</a>
@@ -3280,21 +3482,43 @@
           <a href="shopping-feed-agency/">Shopping Feed Agency</a>
           <a href="pricing/">Pricing Model</a>
           <a href="book-live-demo/">Book a demo</a>
-          <a href="free-google-shopping-feed-audit/">Google Feed Audit</a>
+          <a href="free-google-shopping-feed-audit/">Google Shopping Feed Audit</a>
         </div>
       </div>
-      <div class="footer-group">
-        <div class="footer-heading">Guides</div>
-        <div class="footer-column">
-          <a href="google-shopping-product-title-optimization/">Google Shopping Title Optimization</a>
-          <a href="/feedops/google-shopping-free-listings/">Google Shopping Free Listings Guide</a>
-        </div>
-      </div>
-      <div class="footer-group">
+      <div class="footer-group footer-support-column">
         <div class="footer-heading">Support</div>
         <div class="footer-column">
+          <a href="faq/">FAQ</a>
           <a href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>
+          <a href="contact-us/">Contact</a>
           <a href="https://kb.feedops.com/knowledge" target="_blank" rel="noopener">Help Docs</a>
+        </div>
+      </div>
+      <div class="footer-group footer-explainers-column">
+        <div class="footer-heading">Explainers</div>
+        <div class="footer-column">
+          <a href="what-is-a-google-shopping-feed/">Google Shopping Feed</a>
+          <a href="google-shopping-graph-explained/">Google Shopping Graph</a>
+          <a href="product-type-google-shopping/">Product Type Google Shopping</a>
+          <a href="google-product-category/">Google Product Category</a>
+        </div>
+      </div>
+      <div class="footer-group footer-troubleshooting-column">
+        <div class="footer-heading">Troubleshooting</div>
+        <div class="footer-column">
+          <a href="google-merchant-center-errors/">Google Merchant Center Errors</a>
+          <a href="google-shopping-ads-not-showing/">Google Shopping Ads Not Showing</a>
+        </div>
+      </div>
+      <a class="footer-learning-cta" href="learning/">
+        <span>Feed guides and explainers</span>
+        <strong>View Learning Hub</strong>
+      </a>
+      <div class="footer-group footer-comparison-column">
+        <div class="footer-heading">Compare Us</div>
+        <div class="footer-column">
+          <a href="feedonomics-alternative-competitor/">Feedonomics Alternative</a>
+          <a href="intelligent-reach-alternative/">Intelligent Reach Alternative</a>
         </div>
       </div>
     </div>
