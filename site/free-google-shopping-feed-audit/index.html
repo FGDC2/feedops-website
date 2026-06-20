@@ -864,6 +864,78 @@
       margin-top: 18px;
     }
 
+    .audit-form-loader {
+      display: grid;
+      gap: 14px;
+      min-height: 280px;
+      padding: 22px;
+      border: 1px solid rgba(28, 140, 111, .22);
+      border-radius: 8px;
+      background: linear-gradient(135deg, rgba(255, 202, 40, .16), transparent 42%), #f8fafc;
+    }
+
+    .audit-form-loader.is-hidden {
+      display: none;
+    }
+
+    .audit-form-loader h3 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .audit-form-loader p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .audit-form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .audit-form-button {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 18px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--yellow);
+      color: #111;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 950;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(255, 202, 40, .22);
+    }
+
+    .audit-form-link {
+      color: #176e58;
+      font-size: 14px;
+      font-weight: 900;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .form-panel.is-loading .hbspt-form::before {
+      content: "Loading audit form...";
+      display: block;
+      padding: 14px;
+      border: 1px solid rgba(28, 140, 111, .22);
+      border-radius: 8px;
+      background: #eef8f4;
+      color: #176e58;
+      font-size: 14px;
+      font-weight: 900;
+    }
+
     .privacy-note {
       margin-top: 12px;
       color: #667085;
@@ -1179,7 +1251,7 @@
           </div>
         </div>
         <div class="hero-card" aria-label="FeedOps audit preview">
-          <img src="../assets/feedops.com/wp-content/uploads/2026/03/google-shopping-feed-audit-1024x685.png" alt="Free Google Shopping Feed Audit dashboard from FeedOps - page visual for free Google Shopping feed audit on Free Google Shopping Feed Audit" title="Free Google Shopping Feed Audit dashboard from FeedOps - page visual for free Google Shopping feed audit on Free Google Shopping Feed Audit">
+          <img src="../assets/feedops.com/wp-content/uploads/2026/03/google-shopping-feed-audit-760w.jpg" alt="Free Google Shopping Feed Audit dashboard from FeedOps - page visual for free Google Shopping feed audit on Free Google Shopping Feed Audit" title="Free Google Shopping Feed Audit dashboard from FeedOps - page visual for free Google Shopping feed audit on Free Google Shopping Feed Audit" width="760" height="508" fetchpriority="high" decoding="async">
           <div class="audit-summary">
             <div class="score-row">
               <span>Attribute completeness</span>
@@ -1324,6 +1396,14 @@
         <aside class="form-panel" aria-label="Free Google Shopping feed audit form">
           <h2>Get your Free Google Shopping Feed Audit</h2>
           <p>Tell us where to send setup details. After this, we will explain how to grant standard Google Merchant Center access plus reporting and insights permissions so the audit can run.</p>
+          <div class="audit-form-loader" id="audit-form-loader">
+            <h3>Load the audit form when you are ready.</h3>
+            <p>To keep this page fast, the secure HubSpot form loads only when you choose to open it.</p>
+            <div class="audit-form-actions">
+              <button class="audit-form-button" type="button" id="load-audit-form">Load audit form</button>
+              <a class="audit-form-link" href="../book-live-demo/">Book a demo instead</a>
+            </div>
+          </div>
           <div class="hbspt-form" id="audit-hubspot-form"></div>
           <p class="privacy-note">The audit is read-only. FeedOps needs standard Merchant Center access plus reporting and insights permissions, but the audit does not make changes to Google Merchant Center or require Google Ads access.</p>
         </aside>
@@ -1493,8 +1573,7 @@
     </div>
   </footer>
 
-  <script src="https://js.hsforms.net/forms/embed/v2.js" defer></script>
-  <script src="../free-google-shopping-feed-audit.js?v=20260619" defer></script>
+  <script src="../free-google-shopping-feed-audit.js?v=20260620-deferred-form" defer></script>
   <script src="/cookie-consent.js" defer></script>
   <script src="../header-standard.js?v=20260620-mobile-menu" data-site-root="../" defer></script>
   <script src="../footer-standard.js?v=20260619-google-shopping-feed-audit" data-site-root="../" defer></script>
