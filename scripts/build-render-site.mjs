@@ -169,15 +169,158 @@ function minifyInlineStyles(content) {
   });
 }
 
+function stabiliseSharedHeaderStyles(content) {
+  return content.replace(
+    /<link rel="preload" href="([^"]*header-standard\.css[^"]*)" as="style" onload="this\.onload=null;this\.rel='stylesheet'"><noscript><link rel="stylesheet" href="\1"><\/noscript>/g,
+    '<link rel="stylesheet" href="$1">'
+  );
+}
+
+function inlineSharedHeaderStyles(content) {
+  if (content.includes('id="feedops-standard-header-css"')) return content;
+  const headerCss = minifyCss(readFileSync(join(sourceRoot, "header-standard.css"), "utf8"));
+  const inlineHeaderCss = `<style id="feedops-standard-header-css">${headerCss}</style>`;
+  const output = content.replace(
+    /<link rel="stylesheet" href="[^"]*header-standard\.css[^"]*">\s*/g,
+    inlineHeaderCss
+  );
+  if (output !== content) return output;
+  return content.replace(/<\/head>/i, `  ${inlineHeaderCss}\n</head>`);
+}
+
+function injectHeaderStabilityStyles(content) {
+  if (content.includes('id="feedops-header-stability"')) return content;
+  const stabilityStyles = [
+    '<style id="feedops-header-stability">',
+    'header.site-header{min-height:146px!important}',
+    'header.site-header .mode-inner{min-height:56px!important;padding:6px 0!important}',
+    '@media(max-width:620px){header.site-header{min-height:73px!important}header.site-header .mode-switch{display:none!important}header.site-header .nav{min-height:72px!important;height:auto!important;padding:12px 0!important}header.site-header .nav-links,header.site-header .nav-actions{display:none!important}}',
+    '</style>'
+  ].join("");
+  return content.replace(/<\/head>/i, `  ${stabilityStyles}\n</head>`);
+}
+
+function pageDepth(page) {
+  return page ? page.replace(/\/$/, "").split("/").length : 0;
+}
+
+function pageRoot(page) {
+  return "../".repeat(pageDepth(page));
+}
+
+function pageMode(page) {
+  if (page === "product-feed-management/") return "executive";
+  if (page === "shopping-feed-agency/") return "agency";
+  return "expert";
+}
+
+function navItems(mode) {
+  const items = {
+    expert: [
+      ["System", "#agent", "agent"],
+      ["Operations", "#operations", "operations"],
+      ["Sources", "#sources", "sources"],
+      ["Channels", "#channels", "channels"],
+      ["Playbook", "#workflow", "workflow"],
+      ["Pricing", "#pricing", "pricing"],
+      ["FAQ", "#seo-faq", "seo-faq"]
+    ],
+    executive: [
+      ["Opportunity", "product-feed-management/#opportunity", "opportunity"],
+      ["Accountability", "product-feed-management/#accountability", "accountability"],
+      ["Responsibility", "product-feed-management/#responsibility", "responsibility"],
+      ["Architecture", "product-feed-management/#architecture", "architecture"],
+      ["Channels", "product-feed-management/#channels", "channels"],
+      ["Pricing", "product-feed-management/#fit", "fit"]
+    ],
+    agency: [
+      ["Model", "shopping-feed-agency/#model", "model"],
+      ["Issues", "shopping-feed-agency/#feed-problems", "feed-problems"],
+      ["Roles", "shopping-feed-agency/#roles", "roles"],
+      ["Process", "shopping-feed-agency/#process", "process"],
+      ["Partner", "shopping-feed-agency/#partner-model", "partner-model"],
+      ["FAQ", "shopping-feed-agency/#agency-faq", "agency-faq"]
+    ]
+  };
+  return items[mode] || items.expert;
+}
+
+function standardHeaderForPage(page) {
+  const root = pageRoot(page);
+  const mode = pageMode(page);
+  const href = (path) => `${root}${path}`;
+  const active = (name) => name === mode ? " is-active" : "";
+  const modeCurrent = (name) => name === mode ? ' aria-current="page"' : "";
+  const navLinks = navItems(mode).map(([label, url, section]) =>
+    `      <a data-feedops-section="${section}" href="${href(url)}">${label}</a>`
+  ).join("");
+  return [
+    '<header id="feedops-standard-header" class="feedops-header">',
+    '  <div class="feedops-mode-switch" aria-label="Explore FeedOps as">',
+    '    <div class="feedops-mode-inner">',
+    '      <div class="feedops-mode-label">Explore FeedOps as</div>',
+    '      <div class="feedops-mode-controls">',
+    '        <div class="feedops-mode-options">',
+    `          <a class="feedops-mode-option${active("expert")}" data-feedops-mode="expert" href="${href("")}"${modeCurrent("expert")}>Performance expert</a>`,
+    `          <a class="feedops-mode-option${active("executive")}" data-feedops-mode="executive" href="${href("product-feed-management/")}"${modeCurrent("executive")}>Executive mode</a>`,
+    `          <a class="feedops-mode-option${active("agency")}" data-feedops-mode="agency" href="${href("shopping-feed-agency/")}"${modeCurrent("agency")}>Media agency</a>`,
+    '        </div>',
+    `        <a class="feedops-mode-link" href="${href("contact-us/")}">Contact</a>`,
+    '        <a class="feedops-mode-login" href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
+    '      </div>',
+    '    </div>',
+    '  </div>',
+    '  <nav class="feedops-nav" aria-label="Main navigation">',
+    `    <a class="feedops-logo" href="${href("")}" aria-label="FeedOps home">`,
+    `      <img src="${href("assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4-300x110.png")}" alt="FeedOps" width="300" height="110">`,
+    '    </a>',
+    '    <button class="feedops-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="feedops-mobile-menu">',
+    '      <span class="feedops-menu-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>',
+    '    </button>',
+    '    <div class="feedops-nav-links" aria-label="Primary links">',
+    navLinks,
+    '    </div>',
+    '    <div class="feedops-nav-actions">',
+    `      <a class="feedops-nav-cta" href="${href("book-live-demo/")}">Book a demo</a>`,
+    '    </div>',
+    '  </nav>',
+    '  <div class="feedops-mobile-menu" id="feedops-mobile-menu" hidden>',
+    '    <div class="feedops-mobile-panel">',
+    '      <div class="feedops-mobile-label">Explore FeedOps as</div>',
+    '      <div class="feedops-mobile-modes">',
+    `        <a class="feedops-mode-option${active("expert")}" data-feedops-mode="expert" href="${href("")}"${modeCurrent("expert")}>Performance expert</a>`,
+    `        <a class="feedops-mode-option${active("executive")}" data-feedops-mode="executive" href="${href("product-feed-management/")}"${modeCurrent("executive")}>Executive mode</a>`,
+    `        <a class="feedops-mode-option${active("agency")}" data-feedops-mode="agency" href="${href("shopping-feed-agency/")}"${modeCurrent("agency")}>Media agency</a>`,
+    '      </div>',
+    '      <div class="feedops-mobile-links" aria-label="Mobile primary links">',
+    navLinks,
+    '      </div>',
+    '      <div class="feedops-mobile-utility">',
+    `        <a href="${href("contact-us/")}">Contact</a>`,
+    '        <a href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
+    '      </div>',
+    `      <a class="feedops-mobile-cta" href="${href("book-live-demo/")}">Book a demo</a>`,
+    '    </div>',
+    '  </div>',
+    '</header>'
+  ].join("\n");
+}
+
+function installStandardHeaderMarkup(content, page) {
+  if (!content.includes("<body")) return content;
+  if (content.includes('id="feedops-standard-header"')) return content;
+  return content.replace(/<header class="site-header">[\s\S]*?<\/header>/i, standardHeaderForPage(page));
+}
+
 function copyTextPath(from, to, transform = (content) => content) {
   mkdirSync(dirname(to), { recursive: true });
-  writeFileSync(to, minifyInlineStyles(rewriteAssetReferences(transform(readFileSync(from, "utf8")))));
+  writeFileSync(to, minifyInlineStyles(injectHeaderStabilityStyles(inlineSharedHeaderStyles(stabiliseSharedHeaderStyles(rewriteAssetReferences(transform(readFileSync(from, "utf8"))))))));
 }
 
 function copyPage(page) {
   const source = page ? join(sourceRoot, page, "index.html") : join(sourceRoot, "index.html");
   const target = page ? join(outputRoot, page, "index.html") : join(outputRoot, "index.html");
-  copyTextPath(source, target, injectGoogleTagManager);
+  copyTextPath(source, target, (content) => installStandardHeaderMarkup(injectGoogleTagManager(content), page));
 }
 
 rmSync(outputRoot, { recursive: true, force: true });
