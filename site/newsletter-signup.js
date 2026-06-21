@@ -37,6 +37,7 @@
       portalId: "20083726",
       formId: "99ef4288-0f9a-401c-8487-57ef5a3331ca",
       region: "na1",
+      inlineMessage: "Success - thanks for subscribing. You are on the FeedOps newsletter list.",
       target: "#" + targetId
     });
   }
