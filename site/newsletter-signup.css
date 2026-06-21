@@ -141,15 +141,3 @@
 .newsletter-modal-form .hs-button {
   margin-top: 6px;
 }
-
-.newsletter-modal-form .submitted-message {
-  margin: 0;
-  padding: 14px 16px;
-  border: 1px solid #bfe4d7;
-  border-radius: 8px;
-  background: #edf8f3;
-  color: #176e58;
-  font-size: 16px;
-  font-weight: 850;
-  line-height: 1.45;
-}
