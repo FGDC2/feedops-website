@@ -3,6 +3,8 @@
 
 User-agent: *
 Allow: /
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
 
 # Explicitly allow common AI and LLM crawlers.
 User-agent: GPTBot
@@ -17,6 +19,9 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: claude-web
+Allow: /
+
 User-agent: ClaudeBot
 Allow: /
 
@@ -27,6 +32,9 @@ User-agent: anthropic-ai
 Allow: /
 
 User-agent: Google-Extended
+Allow: /
+
+User-agent: facebookexternalhit
 Allow: /
 
 User-agent: Googlebot

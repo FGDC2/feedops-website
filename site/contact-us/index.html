@@ -537,65 +537,6 @@
       display: block;
     }
 
-    .form-loader {
-      display: grid;
-      gap: 14px;
-      padding: 22px;
-      border: 1px solid rgba(28, 140, 111, .22);
-      border-radius: 8px;
-      background: linear-gradient(135deg, rgba(255, 202, 40, .16), transparent 42%), #fff;
-    }
-
-    .form-loader h3 {
-      margin: 0;
-      color: var(--ink);
-      font-size: 20px;
-      line-height: 1.2;
-    }
-
-    .form-loader p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.5;
-    }
-
-    .form-loader.is-hidden {
-      display: none;
-    }
-
-    .form-loader-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .load-form-button {
-      min-height: 46px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 18px;
-      border: 0;
-      border-radius: 8px;
-      background: var(--yellow);
-      color: var(--ink);
-      font: inherit;
-      font-size: 14px;
-      font-weight: 950;
-      cursor: pointer;
-      box-shadow: 0 10px 24px rgba(255, 202, 40, .22);
-    }
-
-    .form-loader-link {
-      color: #176e58;
-      font-size: 14px;
-      font-weight: 900;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
     .hubspot-form-shell.is-loading::before {
       content: "Loading contact form...";
       display: block;
@@ -1000,15 +941,7 @@
           <h2>How can we help?</h2>
           <p>Send a short note, or use one of the faster paths below if you already know what you need.</p>
 
-          <div class="contact-form hubspot-form-shell">
-            <div class="form-loader" id="contact-form-loader">
-              <h3>Load the contact form when you need it.</h3>
-              <p>To keep this page fast, the secure HubSpot form loads only when you choose to open it.</p>
-              <div class="form-loader-actions">
-                <button class="load-form-button" type="button" id="load-contact-form">Load contact form</button>
-                <a class="form-loader-link" href="../book-live-demo/">Book a demo instead</a>
-              </div>
-            </div>
+          <div class="contact-form hubspot-form-shell is-loading">
             <div id="hubspot-contact-form"></div>
             <p class="form-note">For urgent client support, use the client help option on the left.</p>
           </div>
@@ -1067,8 +1000,6 @@
 
   <script>
     (function () {
-      var loadButton = document.getElementById("load-contact-form");
-      var loader = document.getElementById("contact-form-loader");
       var shell = document.querySelector(".hubspot-form-shell");
       var target = document.getElementById("hubspot-contact-form");
       var loaded = false;
@@ -1080,17 +1011,12 @@
           formId: "f6011325-2fe8-4cbf-8640-ba2ef4d67e00",
           target: "#hubspot-contact-form"
         });
-        if (loader) loader.classList.add("is-hidden");
         if (shell) shell.classList.remove("is-loading");
       }
 
       function loadHubSpotForm() {
         if (loaded) return;
         loaded = true;
-        if (loadButton) {
-          loadButton.disabled = true;
-          loadButton.textContent = "Loading form...";
-        }
         if (shell) shell.classList.add("is-loading");
         if (window.hbspt && window.hbspt.forms) {
           createForm();
@@ -1104,9 +1030,7 @@
         document.head.appendChild(script);
       }
 
-      if (loadButton) {
-        loadButton.addEventListener("click", loadHubSpotForm);
-      }
+      loadHubSpotForm();
     })();
   </script>
   <style>
