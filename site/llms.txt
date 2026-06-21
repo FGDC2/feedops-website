@@ -13,7 +13,7 @@ This file lists the active, rebuilt FeedOps pages that should be used as the cur
 - [FeedOps Company](https://feedops.com/company/): Company page covering FeedOps credibility, origin, focus, and trust signals. Primary topic: FeedOps.
 - [FeedOps Learning](https://feedops.com/learning/): Learning hub showcasing FeedOps guides, explainers, troubleshooting resources, Google Shopping feed education, and feed audit pathways. Primary topic: FeedOps learning.
 - [FeedOps Questions](https://feedops.com/faq/): FAQ hub answering common FeedOps questions about the company, platform, pricing, free audits, learning resources, guides, explainers, troubleshooting, support, and fit. Primary topic: FeedOps questions.
-- [Contact FeedOps](https://feedops.com/contact-us/): Contact page for sales, support, and demo and support pathways. Primary topic: contact FeedOps.
+- [Contact FeedOps](https://feedops.com/contact_us/): Contact page for sales, support, and demo and support pathways. Primary topic: contact FeedOps.
 - [Book a Product Feed Demo](https://feedops.com/book-live-demo/): Primary conversion page for teams that want a product feed review, demo, pricing fit, or next step. Primary topic: Book a demo.
 - [Free Google Shopping Feed Audit](https://feedops.com/free-google-shopping-feed-audit/): Free automated audit for Google Merchant Center product data, visibility gaps, missing attributes, zombie products, and Shopping feed health. Requires standard Google Merchant Center access with report permissions. Primary topic: free Google Shopping feed audit.
 
