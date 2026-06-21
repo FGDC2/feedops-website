@@ -391,6 +391,11 @@
       padding: 26px 32px 32px;
     }
 
+    .intro-panel .support-card {
+      margin: 0 32px 32px;
+      box-shadow: none;
+    }
+
     .steps h2 {
       margin: 0 0 16px;
       font-size: 20px;
@@ -466,8 +471,8 @@
 
     .meetings-iframe-container {
       position: relative;
-      height: 720px;
-      min-height: 720px;
+      height: 1040px;
+      min-height: 1040px;
       border: 1px solid #eef1f5;
       border-radius: 8px;
       overflow: hidden;
@@ -480,7 +485,7 @@
       left: 0;
       display: block;
       width: 100% !important;
-      min-height: 1080px;
+      min-height: 1240px;
     }
 
     .calendar-loading {
@@ -652,11 +657,9 @@
       text-underline-offset: 3px;
     }
 
-    .support-section {
-      display: grid;
-      grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
-      gap: 18px;
-      margin: -20px 0 46px;
+    .scheduler-panel .support-card {
+      margin-top: 26px;
+      box-shadow: none;
     }
 
     .support-card {
@@ -771,13 +774,6 @@
         width: 100%;
       }
 
-      .support-section {
-        grid-template-columns: 1fr;
-        max-width: 720px;
-        width: 100%;
-        margin: -18px auto 42px;
-      }
-
     }
 
     @media (max-width: 560px) {
@@ -813,8 +809,8 @@
 
       .meetings-iframe-container,
       .meetings-iframe-container iframe {
-        height: 760px;
-        min-height: 760px;
+        height: 980px;
+        min-height: 980px;
       }
     }
   </style>
@@ -922,6 +918,17 @@
             </div>
           </div>
         </div>
+
+        <article class="support-card">
+          <p class="kicker">Good fit</p>
+          <h2>A demo is useful when feed issues are slowing growth.</h2>
+          <p>Book a demo if product data, disapprovals, missing attributes, custom labels, Merchant Center issues, or unclear ownership are blocking Shopping, PMax, Meta, marketplace, or feed-led campaigns.</p>
+          <ul class="fit-list">
+            <li>Ecommerce teams with messy catalogue data or frequent product changes</li>
+            <li>Executives who need a clearer feed operating model before investing</li>
+            <li>Media agencies that need specialist feed support for a client</li>
+          </ul>
+        </article>
       </section>
 
       <section class="scheduler-panel" aria-labelledby="scheduler-title">
@@ -972,40 +979,27 @@
           </div>
         </div>
         <p class="booking-fallback">If the scheduler does not load, <a href="https://meetings.hubspot.com/frank333/book-live-demo-?uuid=88384a9f-0c63-4f92-a6fb-beb143a54386" target="_blank" rel="noopener">open the booking page in a new tab</a>.</p>
+
+        <article class="support-card">
+          <p class="kicker">Questions</p>
+          <h2>Product feed demo FAQs</h2>
+          <div class="mini-faq">
+            <details open>
+              <summary>What is a product feed demo?</summary>
+              <p>A short fit conversation where FeedOps reviews your product feed setup, channel blockers, catalogue data, and the next steps that may improve Shopping, PMax, Meta, marketplace, or feed-led performance.</p>
+            </details>
+            <details>
+              <summary>Who should book one?</summary>
+              <p>Ecommerce teams, executives, and media agencies dealing with messy catalogue data, product disapprovals, missing attributes, custom labels, pricing questions, or feed work that is slowing campaign growth.</p>
+            </details>
+            <details>
+              <summary>Is it just a sales demo?</summary>
+              <p>No. The call can include a short FeedOps platform walkthrough where it helps, but the main purpose is to understand the feed problem, commercial blocker, working model, and whether FeedOps is the right fit.</p>
+            </details>
+          </div>
+        </article>
       </section>
     </main>
-
-    <section class="support-section" aria-label="Product feed demo details">
-      <article class="support-card">
-        <p class="kicker">Good fit</p>
-        <h2>A demo is useful when feed issues are slowing growth.</h2>
-        <p>Book a demo if product data, disapprovals, missing attributes, custom labels, Merchant Center issues, or unclear ownership are blocking Shopping, PMax, Meta, marketplace, or feed-led campaigns.</p>
-        <ul class="fit-list">
-          <li>Ecommerce teams with messy catalogue data or frequent product changes</li>
-          <li>Executives who need a clearer feed operating model before investing</li>
-          <li>Media agencies that need specialist feed support for a client</li>
-        </ul>
-      </article>
-
-      <article class="support-card">
-        <p class="kicker">Questions</p>
-        <h2>Product feed demo FAQs</h2>
-        <div class="mini-faq">
-          <details open>
-            <summary>What is a product feed demo?</summary>
-            <p>A short fit conversation where FeedOps reviews your product feed setup, channel blockers, catalogue data, and the next steps that may improve Shopping, PMax, Meta, marketplace, or feed-led performance.</p>
-          </details>
-          <details>
-            <summary>Who should book one?</summary>
-            <p>Ecommerce teams, executives, and media agencies dealing with messy catalogue data, product disapprovals, missing attributes, custom labels, pricing questions, or feed work that is slowing campaign growth.</p>
-          </details>
-          <details>
-            <summary>Is it just a sales demo?</summary>
-            <p>No. The call can include a short FeedOps platform walkthrough where it helps, but the main purpose is to understand the feed problem, commercial blocker, working model, and whether FeedOps is the right fit.</p>
-          </details>
-        </div>
-      </article>
-    </section>
 
     
   <footer class="site-footer">
@@ -1055,7 +1049,7 @@
   </footer>
   </div>
 
-  <script src="../book-live-demo.js?v=20260620-calendar-crop" defer></script>
+  <script src="../book-live-demo.js?v=20260621-calendar-height" defer></script>
   <script src="/cookie-consent.js" defer></script>
 
   <style id="feedops-mode-bar-standard">

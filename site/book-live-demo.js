@@ -38,6 +38,9 @@
     });
 
     loadReferralScript();
+    window.setTimeout(function () {
+      window.location.href = "/book-live-demo/meeting-booked/";
+    }, 600);
   });
 
   document.querySelectorAll(".meetings-iframe-container").forEach(function (container) {
@@ -60,12 +63,12 @@
       iframe.src = container.getAttribute("data-src");
       iframe.title = "Book a FeedOps demo calendar";
       iframe.width = "100%";
-      iframe.height = "900";
+      iframe.height = "1240";
       iframe.loading = "lazy";
       iframe.setAttribute("data-hs-ignore", "true");
       iframe.style.minWidth = "312px";
-      iframe.style.minHeight = "1080px";
-      iframe.style.height = "1080px";
+      iframe.style.minHeight = "1240px";
+      iframe.style.height = "1240px";
       iframe.style.marginTop = "-180px";
       iframe.style.borderWidth = "0";
       iframe.addEventListener("load", markLoaded, { once: true });
