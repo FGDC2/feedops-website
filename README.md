@@ -17,9 +17,14 @@ http://127.0.0.1:4173/
 ## Imported files
 
 - `site/` contains the local website copy.
+- `marketing/` contains marketing planning and reference material that can inform later website updates.
 - `site/_assets/` contains downloaded CSS, JavaScript, images, fonts, and other page assets.
 - `scripts/import-site.mjs` imports/crawls the public site.
 - `scripts/fix-local-links.mjs` repairs local WordPress links after an import pass.
+
+## Publishing boundary
+
+The temporary public admin pages have been removed from `site/admin/`. Marketing and planning work should stay outside `site/` unless it is intentionally being turned into a public website change.
 
 ## Current import status
 
