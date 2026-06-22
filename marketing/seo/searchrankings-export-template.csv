@@ -1,2 +1,0 @@
-date,keyword,target_page,serp_market,search_intent,priority,current_rank,previous_rank,best_rank,ranking_url,competitor_urls,source,notes
-2026-06-22,example keyword,/example-page/,Australia,commercial,high,12,15,12,https://feedops.com/example-page/,"https://competitor.example/page-a; https://competitor.example/page-b",SearchRankings.com,Replace this sample row with the SearchRankings export
