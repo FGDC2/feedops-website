@@ -10,6 +10,7 @@ import {
 import { dirname, join } from "node:path";
 
 const sourceRoot = "site";
+const legacyArchiveRoot = "archive/legacy-pages/site";
 const outputRoot = "render-site";
 const origin = "https://feedops.com";
 const gtmContainerId = "GTM-KR4TR7B";
@@ -141,6 +142,27 @@ function discoverPublicPages(directory = sourceRoot, page = "") {
     }
 
     if (entry === "index.html" && isPublicPagePath(page)) {
+      pages.push(page);
+    }
+  }
+
+  return pages.sort();
+}
+
+function discoverLegacyArchivePages(directory = legacyArchiveRoot, page = "") {
+  if (!statSync(directory, { throwIfNoEntry: false })?.isDirectory()) return [];
+  const pages = [];
+
+  for (const entry of readdirSync(directory)) {
+    const source = join(directory, entry);
+    const stats = statSync(source);
+
+    if (stats.isDirectory()) {
+      pages.push(...discoverLegacyArchivePages(source, `${page}${entry}/`));
+      continue;
+    }
+
+    if (entry === "index.html") {
       pages.push(page);
     }
   }
@@ -328,6 +350,40 @@ function copyPage(page) {
   copyTextPath(source, target, (content) => installStandardHeaderMarkup(injectGoogleTagManager(content), page));
 }
 
+function legacyArchivePageHtml(page) {
+  const path = `/${page}`;
+  const title = "Page archived - FeedOps";
+  return `<!doctype html>
+<html lang="en">
+<head>
+  ${gtmHeadSnippet}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>${title}</title>
+  <style>
+    body{font-family:Arial,sans-serif;margin:0;color:#111827;background:#fff}
+    main{max-width:720px;margin:12vh auto;padding:0 24px;line-height:1.55}
+    a{color:#0f4c81}
+  </style>
+</head>
+<body>
+  ${gtmBodySnippet}
+  <main>
+    <h1>This page has been archived</h1>
+    <p>The old page at <code>${path}</code> is no longer part of the public FeedOps site.</p>
+    <p><a href="/">Go to FeedOps</a></p>
+  </main>
+</body>
+</html>`;
+}
+
+function writeLegacyArchivePage(page) {
+  const target = join(outputRoot, page, "index.html");
+  mkdirSync(dirname(target), { recursive: true });
+  writeFileSync(target, minifyInlineStyles(legacyArchivePageHtml(page)));
+}
+
 rmSync(outputRoot, { recursive: true, force: true });
 mkdirSync(outputRoot, { recursive: true });
 
@@ -351,4 +407,10 @@ for (const page of pages) {
   copyPage(page);
 }
 
-console.log(`Built ${outputRoot} with ${pages.length} public pages.`);
+const legacyArchivePages = discoverLegacyArchivePages();
+
+for (const page of legacyArchivePages) {
+  writeLegacyArchivePage(page);
+}
+
+console.log(`Built ${outputRoot} with ${pages.length} public pages and ${legacyArchivePages.length} archived page tombstones.`);
