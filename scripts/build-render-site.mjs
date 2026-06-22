@@ -40,33 +40,6 @@ const gtmBodySnippet = `<!-- Google Tag Manager (noscript) -->
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->`;
 
-const pages = [
-  "",
-  "company/",
-  "learning/",
-  "contact_us/",
-  "privacy-policy/",
-  "product-feed-management/",
-  "shopping-feed-agency/",
-  "pricing/",
-  "book-live-demo/",
-  "free-google-shopping-feed-audit/",
-  "faq/",
-  "guide/google-shopping-feed-optimization-guide/",
-  "guide/google-shopping-ads-management/",
-  "guide/google-local-inventory-ads-performance-max/",
-  "google-shopping-product-title-optimization/",
-  "feedops/google-shopping-free-listings/",
-  "what-is-a-google-shopping-feed/",
-  "google-shopping-graph-explained/",
-  "product-type-google-shopping/",
-  "google-product-category/",
-  "google-merchant-center-errors/",
-  "google-shopping-ads-not-showing/",
-  "feedonomics-alternative-competitor/",
-  "intelligent-reach-alternative/"
-];
-
 const sharedFiles = [
   "header-standard.css",
   "header-standard.js",
@@ -147,10 +120,38 @@ function rewriteAssetReferences(content) {
   return output.replace(/assets\//g, "assets/");
 }
 
+function isPublicPagePath(page) {
+  const firstSegment = page.replace(/\/$/, "").split("/")[0];
+  return !["admin", "assets", "cdn-cgi"].includes(firstSegment);
+}
+
+function discoverPublicPages(directory = sourceRoot, page = "") {
+  const pages = [];
+
+  for (const entry of readdirSync(directory)) {
+    const source = join(directory, entry);
+    const stats = statSync(source);
+
+    if (stats.isDirectory()) {
+      const nextPage = `${page}${entry}/`;
+      if (isPublicPagePath(nextPage)) {
+        pages.push(...discoverPublicPages(source, nextPage));
+      }
+      continue;
+    }
+
+    if (entry === "index.html" && isPublicPagePath(page)) {
+      pages.push(page);
+    }
+  }
+
+  return pages.sort();
+}
+
 function injectGoogleTagManager(content) {
   let output = content
-    .replace(/\n?\s*<!-- Google Tag Manager -->[\s\S]*?<!-- End Google Tag Manager -->\s*/g, "\n")
-    .replace(/\n?\s*<!-- Google Tag Manager \(noscript\) -->[\s\S]*?<!-- End Google Tag Manager \(noscript\) -->\s*/g, "\n");
+    .replace(/\n?\s*<!-- Google Tag Manager[\s\S]*?<!-- End Google Tag Manager[\s\S]*?-->\s*/g, "\n")
+    .replace(/\n?\s*<!-- Google Tag Manager \(noscript\)[\s\S]*?<!-- End Google Tag Manager \(noscript\)[\s\S]*?-->\s*/g, "\n");
 
   output = output.replace(/<head>/i, `<head>\n  ${gtmHeadSnippet}`);
   output = output.replace(/<body([^>]*)>/i, `<body$1>\n  ${gtmBodySnippet}`);
@@ -343,6 +344,8 @@ for (const file of rootHtmlFiles) {
 for (const file of rootStaticFiles) {
   copyFile(join(sourceRoot, file), join(outputRoot, file));
 }
+
+const pages = discoverPublicPages();
 
 for (const page of pages) {
   copyPage(page);

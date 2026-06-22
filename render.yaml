@@ -1,7 +1,8 @@
 services:
   - type: web
-    name: feedops-website
-    runtime: node
+    name: feedops-website-static
+    runtime: static
     buildCommand: node scripts/build-render-site.mjs
-    startCommand: node scripts/serve-render-site.mjs
+    staticPublishPath: render-site
     autoDeployTrigger: commit
+    renderSubdomainPolicy: disabled
