@@ -1,9 +1,12 @@
 (function () {
   var script = document.currentScript;
-  var root = script && script.dataset ? script.dataset.siteRoot || "" : "";
+  var root = script && script.dataset ? script.dataset.siteRoot || "/" : "/";
   window.feedopsInstallStandardFooter = installFooter;
 
   function href(path) {
+    if (root === "/" || /^https?:\/\//.test(root)) {
+      return root + path;
+    }
     return root + path;
   }
 

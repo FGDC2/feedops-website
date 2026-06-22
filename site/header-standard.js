@@ -1,10 +1,13 @@
 (function () {
   var script = document.currentScript;
-  var root = script && script.dataset ? script.dataset.siteRoot || "" : "";
+  var root = script && script.dataset ? script.dataset.siteRoot || "/" : "/";
   var expertDefaultEverywhere = !!(script && script.src && (script.src.indexOf("menu-default") !== -1 || script.src.indexOf("mode-nav") !== -1));
   window.feedopsInstallStandardHeader = installHeader;
 
   function href(path) {
+    if (root === "/" || /^https?:\/\//.test(root)) {
+      return root + path;
+    }
     return root + path;
   }
 
