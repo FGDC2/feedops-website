@@ -40,14 +40,6 @@ const gtmBodySnippet = `<!-- Google Tag Manager (noscript) -->
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->`;
 
-const renderHostRedirectSnippet = `<script>
-    (function () {
-      if (window.location.hostname === "feedops-website.onrender.com") {
-        window.location.replace("https://feedops.com" + window.location.pathname + window.location.search + window.location.hash);
-      }
-    })();
-  </script>`;
-
 const pages = [
   "",
   "company/",
@@ -160,7 +152,7 @@ function injectGoogleTagManager(content) {
     .replace(/\n?\s*<!-- Google Tag Manager -->[\s\S]*?<!-- End Google Tag Manager -->\s*/g, "\n")
     .replace(/\n?\s*<!-- Google Tag Manager \(noscript\) -->[\s\S]*?<!-- End Google Tag Manager \(noscript\) -->\s*/g, "\n");
 
-  output = output.replace(/<head>/i, `<head>\n  ${renderHostRedirectSnippet}\n  ${gtmHeadSnippet}`);
+  output = output.replace(/<head>/i, `<head>\n  ${gtmHeadSnippet}`);
   output = output.replace(/<body([^>]*)>/i, `<body$1>\n  ${gtmBodySnippet}`);
   return output;
 }

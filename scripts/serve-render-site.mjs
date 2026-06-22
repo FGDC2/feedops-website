@@ -3,6 +3,7 @@ import { createServer } from "node:http";
 import { extname, join, normalize, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
+const currentFile = fileURLToPath(import.meta.url);
 const rootDir = resolve(fileURLToPath(new URL("../render-site/", import.meta.url)));
 const port = Number(process.env.PORT || 10000);
 const host = process.env.HOST || undefined;
@@ -29,6 +30,12 @@ const pathRedirects = [
   [/^\/agency(?:\/|$)/, "/shopping-feed-agency/"],
   [/^\/admin(?:\/|$)/, "/"]
 ];
+
+export function canonicalRedirectForHost(hostname, requestPath) {
+  if (String(hostname || "").toLowerCase() !== renderHost) return null;
+  const requestUrl = new URL(requestPath || "/", canonicalOrigin);
+  return new URL(`${requestUrl.pathname}${requestUrl.search}`, canonicalOrigin).href;
+}
 
 function getHost(request) {
   return String(request.headers.host || "").split(":")[0].toLowerCase();
@@ -77,11 +84,12 @@ function serveFile(request, response, filePath) {
   createReadStream(filePath).pipe(response);
 }
 
-createServer((request, response) => {
+export const server = createServer((request, response) => {
   const requestUrl = new URL(request.url || "/", canonicalOrigin);
+  const canonicalRedirect = canonicalRedirectForHost(getHost(request), request.url || "/");
 
-  if (getHost(request) === renderHost) {
-    redirect(response, new URL(`${requestUrl.pathname}${requestUrl.search}`, canonicalOrigin).href);
+  if (canonicalRedirect) {
+    redirect(response, canonicalRedirect);
     return;
   }
 
@@ -101,6 +109,10 @@ createServer((request, response) => {
 
   response.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
   response.end("Not found");
-}).listen(port, host, () => {
-  console.log(`Serving ${rootDir} on port ${port}`);
 });
+
+if (process.argv[1] === currentFile) {
+  server.listen(port, host, () => {
+    console.log(`Serving ${rootDir} on port ${port}`);
+  });
+}
