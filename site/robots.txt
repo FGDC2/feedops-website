@@ -4,6 +4,7 @@
 User-agent: *
 Allow: /
 Disallow: /wp-admin/
+Disallow: /audit-flow-preview/
 Allow: /wp-admin/admin-ajax.php
 
 # Explicitly allow common AI and LLM crawlers.

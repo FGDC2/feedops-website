@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FeedOps Audit Flow Pixel Copy</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="password-gate" data-password-gate aria-label="Password required">
+    <form class="password-card" data-password-form>
+      <div class="password-logo">feedops<span></span></div>
+      <h1>Audit flow preview</h1>
+      <p>Enter the preview password to continue.</p>
+      <label for="preview-password">Password</label>
+      <input id="preview-password" data-password-input type="password" autocomplete="current-password" autofocus>
+      <p class="password-error" data-password-error hidden>Incorrect password. Please try again.</p>
+      <button type="submit">Open preview</button>
+    </form>
+  </section>
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M6 4h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="M10 4v16"/></symbol>
+    <symbol id="icon-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.4 2.4 3.6 5.4 3.6 9S14.4 18.6 12 21M12 3C9.6 5.4 8.4 8.4 8.4 12S9.6 18.6 12 21"/></symbol>
+    <symbol id="icon-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="M5 15l.8 2.2L8 18l-2.2.8L5 21l-.8-2.2L2 18l2.2-.8L5 15ZM19 3l.8 2.2L22 6l-2.2.8L19 9l-.8-2.2L16 6l2.2-.8L19 3Z"/></symbol>
+    <symbol id="icon-edit" viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M6 16l1-4 9-9 4 4-9 9-4 1Z"/><path d="M14 5l4 4"/></symbol>
+    <symbol id="icon-flow" viewBox="0 0 24 24"><path d="M12 4v5M6 20v-4a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v4"/><circle cx="12" cy="4" r="2"/><circle cx="6" cy="20" r="2"/><circle cx="18" cy="20" r="2"/></symbol>
+    <symbol id="icon-alert" viewBox="0 0 24 24"><path d="M12 3l10 18H2L12 3Z"/><path d="M12 9v5M12 18h.01"/></symbol>
+    <symbol id="icon-box" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></symbol>
+    <symbol id="icon-tag" viewBox="0 0 24 24"><path d="M20 13l-7 7L4 11V4h7l9 9Z"/><circle cx="8" cy="8" r="1.5"/></symbol>
+    <symbol id="icon-refresh" viewBox="0 0 24 24"><path d="M20 6v5h-5"/><path d="M4 18v-5h5"/><path d="M19 11a7 7 0 0 0-12-4M5 13a7 7 0 0 0 12 4"/></symbol>
+    <symbol id="icon-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v6h6M12 7v5l3 2"/></symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></symbol>
+    <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+    <symbol id="icon-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+  </svg>
+  <main class="prototype" data-step="landing" aria-label="FeedOps audit flow prototype">
+    <section class="frame" data-screen="landing">
+      <img src="figma/01-landing.png?v=3" alt="Audit flow landing screen">
+      <header class="live-site-header" aria-hidden="true">
+        <div class="audience-bar">
+          <span>Explore FeedOps as</span>
+          <strong>Performance expert</strong>
+          <b>Executive mode</b>
+          <b>Media agency</b>
+          <a href="https://feedops.com/contact-us/">Contact</a>
+          <a href="https://app.feedops.com/">Login</a>
+        </div>
+        <div class="website-nav">
+          <div class="footer-logo nav-logo">feedops<span></span></div>
+          <nav>
+            <a href="https://feedops.com/#system">System</a>
+            <a href="https://feedops.com/#operations">Operations</a>
+            <a href="https://feedops.com/#sources">Sources</a>
+            <a href="https://feedops.com/#channels">Channels</a>
+            <a href="https://feedops.com/#playbook">Playbook</a>
+            <a href="https://feedops.com/pricing/">Pricing</a>
+            <a href="https://feedops.com/faq/">FAQ</a>
+          </nav>
+          <a class="demo-link" href="https://feedops.com/book-live-demo/">Book a demo</a>
+        </div>
+      </header>
+      <footer class="live-site-footer" aria-hidden="true">
+        <div>
+          <div class="footer-logo">feedops<span></span></div>
+          <p>Product feed optimisation software, feed strategy, and expert support for ecommerce teams.</p>
+          <a class="footer-cta" href="https://feedops.com/book-live-demo/">Book a demo</a>
+          <a class="footer-cta footer-cta-secondary" href="https://feedops.com/book-live-demo/">See a clearer feed plan</a>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <a href="https://feedops.com/">Home</a>
+          <a href="https://feedops.com/company/">Company</a>
+          <a href="https://feedops.com/learning/">Learning</a>
+          <a href="https://feedops.com/privacy-policy/">Privacy</a>
+        </div>
+        <div>
+          <h3>Platform</h3>
+          <a href="https://feedops.com/">Product Feed Optimisation</a>
+          <a href="https://feedops.com/product-feed-management/">Product Feed Management</a>
+          <a href="https://feedops.com/shopping-feed-agency/">Shopping Feed Agency</a>
+          <a href="https://feedops.com/pricing/">Pricing Model</a>
+        </div>
+        <div>
+          <h3>Support</h3>
+          <a href="https://feedops.com/faq/">FAQ</a>
+          <a href="https://app.feedops.com/">Login</a>
+          <a href="https://feedops.com/contact-us/">Contact</a>
+          <a href="https://support.feedops.com/">Help Docs</a>
+        </div>
+      </footer>
+      <div class="landing-reassurance" aria-hidden="true">
+        <p>Read-only API access only. FeedOps employees cannot log in to your Merchant Center.</p>
+        <p>Access is used only to run the audit.</p>
+      </div>
+      <button class="hotspot landing-cta" data-go="account" aria-label="Run my free audit now"></button>
+    </section>
+
+    <section class="frame" data-screen="connect">
+      <img src="figma/02-connect.png?v=3" alt="Connect Google Merchant Center screen">
+      <div class="flow-step flow-step-connect" aria-hidden="true">
+        <span>Step 2 of 2</span>
+        <strong>Connect Merchant Center</strong>
+      </div>
+      <div class="connect-reassurance" aria-hidden="true">
+        <p>Read-only access. Used to calculate visibility metrics from impressions and clicks.</p>
+        <p>No feed or campaign changes.</p>
+        <a href="https://feedops.com/google-shopping-feed-audit-access/" target="_blank" rel="noopener">What does FeedOps access?</a>
+      </div>
+      <button class="hotspot connect-merchant" data-go="google" aria-label="Connect Google Merchant Center"></button>
+    </section>
+
+    <section class="frame" data-screen="google">
+      <img src="figma/03-google.png?v=3" alt="Google sign-in consent screen">
+      <button class="hotspot google-cancel" data-go="connect" aria-label="Cancel"></button>
+      <button class="hotspot google-continue" data-go="merchant" aria-label="Continue"></button>
+    </section>
+
+    <section class="frame" data-screen="merchant">
+      <img src="figma/04-merchant.png?v=3" alt="Select Merchant Center screen">
+      <div class="merchant-reassurance" aria-hidden="true">
+        <p>We only access the website you select for this audit.</p>
+        <p>Other sites in your account are not used.</p>
+        <a href="https://feedops.com/google-shopping-feed-audit-access/" target="_blank" rel="noopener">What does FeedOps access?</a>
+      </div>
+      <button class="hotspot merchant-select" data-go="merchant-open" aria-label="Open merchant selector"></button>
+    </section>
+
+    <section class="frame" data-screen="merchant-open">
+      <img src="figma/05-merchant-open.png?v=3" alt="Merchant Center dropdown screen">
+      <div class="merchant-reassurance" aria-hidden="true">
+        <p>We only access the website you select for this audit.</p>
+        <p>Other sites in your account are not used.</p>
+        <a href="https://feedops.com/google-shopping-feed-audit-access/" target="_blank" rel="noopener">What does FeedOps access?</a>
+      </div>
+      <button class="hotspot merchant-option" data-go="merchant-selected" aria-label="Select second store"></button>
+    </section>
+
+    <section class="frame" data-screen="merchant-selected">
+      <img src="figma/06-merchant-selected.png?v=3" alt="Selected Merchant account screen">
+      <div class="merchant-reassurance" aria-hidden="true">
+        <p>We only access the website you select for this audit.</p>
+        <p>Other sites in your account are not used.</p>
+        <a href="https://feedops.com/google-shopping-feed-audit-access/" target="_blank" rel="noopener">What does FeedOps access?</a>
+      </div>
+      <button class="hotspot merchant-continue" data-go="ready" aria-label="Continue"></button>
+    </section>
+
+    <section class="frame" data-screen="account">
+      <div class="account-plain-screen" aria-hidden="true">
+        <div class="account-logo">feedops<span></span></div>
+        <div class="audit-silhouette">
+          <div class="silhouette-free-badge">100% free</div>
+          <div class="silhouette-header"></div>
+          <div class="silhouette-card silhouette-score">
+            <div class="silhouette-ring"></div>
+            <div class="silhouette-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="silhouette-card silhouette-summary">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="silhouette-card silhouette-table">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="account-form-card">
+          <div class="flow-step flow-step-card">
+            <span>Step 1 of 2</span>
+            <strong>Contact details</strong>
+          </div>
+          <h2>Where should we send your audit?</h2>
+          <p>We will email your audit results and help if setup needs attention.</p>
+          <p class="next-step-note">Next: connect Google Merchant Center to run the audit.</p>
+          <label>Full name</label>
+          <div class="form-field">John Smith</div>
+          <label>Work email</label>
+          <div class="form-field form-field-wide">john@example.com</div>
+          <label>Company</label>
+          <div class="form-field form-field-wide">xyz.com</div>
+          <label>Mobile phone</label>
+          <div class="form-field form-field-wide">67121231212</div>
+          <label>Business type</label>
+          <div class="account-type-grid" role="radiogroup" aria-label="Business type">
+            <div class="account-type-card">
+              <span></span>
+              Retailer / brand
+            </div>
+            <div class="account-type-card">
+              <span></span>
+              Agency
+            </div>
+          </div>
+          <div class="account-button-rewrite">Continue to connect Merchant Center</div>
+          <p class="account-access-note">FeedOps uses read-only API access to run the audit. Employees cannot log in to your Merchant Center.</p>
+          <a class="account-access-link" href="https://feedops.com/google-shopping-feed-audit-access/" target="_blank" rel="noopener">What does FeedOps access?</a>
+          <p class="account-reassurance">You can remove FeedOps access from Google Merchant Center at any time.</p>
+        </div>
+      </div>
+      <button class="hotspot create-account" data-go="connect" aria-label="Continue to connect Merchant Center"></button>
+    </section>
+
+    <section class="frame" data-screen="ready">
+      <div class="audit-live-screen" aria-hidden="true">
+        <header>
+          <svg class="audit-menu-icon"><use href="#icon-menu"></use></svg>
+          <div class="audit-logo">feedops<span></span></div>
+          <div class="audit-site-pill">gluestore.com.au</div>
+          <div class="audit-user">
+            <strong>Frank Grasso</strong>
+            <span>frank@feedops.com</span>
+          </div>
+          <div class="audit-avatar">FG</div>
+        </header>
+        <aside>
+          <strong class="app-info"><svg><use href="#icon-sparkle"></use></svg>Playbook<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">You are viewing the free audit workspace. Contact us for the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></strong>
+          <span class="app-locked"><svg><use href="#icon-edit"></use></svg>Products Data<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Product management is available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
+          <span class="app-locked"><svg><use href="#icon-flow"></use></svg>Feed rules<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Feed rule editing is available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
+          <span class="app-locked"><svg><use href="#icon-alert"></use></svg>Alerts<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Alerts are available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
+          <span class="app-locked"><svg><use href="#icon-box"></use></svg>Orders <em>Beta</em><svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Orders are available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
+          <div class="audit-sidebar-bottom">
+            <span class="app-locked">Website settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Settings are available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
+            <span class="app-locked">Account settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Account settings are available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
+            <a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a>
+          </div>
+        </aside>
+        <main>
+          <div class="audit-topline">
+            <div class="audit-playbook-title">
+              <h2>Playbook</h2>
+              <button class="app-locked"><svg><use href="#icon-tag"></use></svg>Google<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Channel switching is available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></button>
+              <span>New Playbook experience (Beta)</span>
+              <a href="#">Leave feedback</a>
+              <button class="wireframe-toggle" data-go="error">Wireframe: error state</button>
+            </div>
+            <div class="audit-ai-actions">
+              <p>0 AI credits available</p>
+              <button class="app-locked">AI Settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">AI settings are available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></button>
+            </div>
+          </div>
+          <div class="audit-tabs">
+            <span class="app-locked">Enrich with AI<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">AI enrichment is available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
+            <strong>Feed Audit</strong>
+          </div>
+          <div class="audit-notice">We're generating a new audit, which may take time depending on your feed size. We'll email you at frank@feedops.com when it's done.</div>
+          <div class="audit-title-row">
+            <h1>Google Shopping Feed Audit</h1>
+            <div class="audit-actions">
+              <button><svg><use href="#icon-refresh"></use></svg>Run New Audit</button>
+              <button><svg><use href="#icon-history"></use></svg>View Past Audits</button>
+              <button class="audit-download"><svg><use href="#icon-download"></use></svg>Download Audit</button>
+            </div>
+          </div>
+          <section class="audit-grid">
+            <article class="audit-panel audit-visibility">
+              <h3>Visibility Rate <svg><use href="#icon-info"></use></svg></h3>
+              <div class="audit-ring"><strong>18%</strong></div>
+              <div class="audit-trend good">+29.2%</div>
+              <p>vs previous period</p>
+              <div class="audit-filter">All Traffic</div>
+            </article>
+            <article class="audit-panel audit-score-row">
+              <h3>Improve These Metrics to Boost Visibility Rate</h3>
+              <div><b>Account Compliance <svg><use href="#icon-info"></use></svg></b><strong>97.0%</strong><i><svg><use href="#icon-chevron"></use></svg></i></div>
+              <div><b>Product Approval <svg><use href="#icon-info"></use></svg></b><strong>99.9%</strong></div>
+              <div><b>Attribute Completeness <svg><use href="#icon-info"></use></svg></b><strong>74.2%</strong><i><svg><use href="#icon-chevron"></use></svg></i></div>
+            </article>
+            <article class="audit-panel audit-table">
+              <h3>Feed Performance Overview</h3>
+              <div class="audit-table-row audit-table-head"><b>Metric</b><span>Product Count</span><em>% of Feed</em></div>
+              <div class="audit-table-row"><b>Total Products in Feed</b><span>30.16k</span><em>100.0%</em></div>
+              <div class="audit-table-row"><b>Products with Impressions</b><span>5.52k</span><em>18.3%</em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+              <div class="audit-table-row"><b>Products with Clicks</b><span>5.41k</span><em>17.9%</em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+              <div class="audit-table-row"><b>Products with Conversions</b><span>24</span><em>0.1%</em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+            </article>
+            <article class="audit-panel audit-segments">
+              <h3>Metrics from 14 March to 12 April, 2026</h3>
+              <div class="audit-table-row audit-table-head"><b>Segment</b><span>Product Count</span><em>% of Feed</em></div>
+              <div class="audit-table-row"><b>Impressions, 0 Clicks</b><span>271</span><em>0.9%</em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+              <div class="audit-table-row"><b>No Impressions</b><span>24.64k</span><em>81.7%</em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+              <div class="audit-table-row"><b>High Impressions, Low Clicks</b><span></span><em></em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+            </article>
+          </section>
+        </main>
+      </div>
+    </section>
+
+    <section class="frame" data-screen="error">
+      <div class="audit-live-screen audit-error-screen" aria-hidden="true">
+        <header>
+          <svg class="audit-menu-icon"><use href="#icon-menu"></use></svg>
+          <div class="audit-logo">feedops<span></span></div>
+          <div class="audit-site-pill">gluestore.com.au</div>
+          <div class="audit-user">
+            <strong>Frank Grasso</strong>
+            <span>frank@feedops.com</span>
+          </div>
+          <div class="audit-avatar">FG</div>
+        </header>
+        <aside>
+          <strong class="app-info"><svg><use href="#icon-sparkle"></use></svg>Playbook<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">You are viewing the free audit workspace. Contact us for the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></strong>
+          <span class="app-locked"><svg><use href="#icon-edit"></use></svg>Products Data<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Product management is available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
+          <span class="app-locked"><svg><use href="#icon-flow"></use></svg>Feed rules<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Feed rule editing is available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
+          <span class="app-locked"><svg><use href="#icon-alert"></use></svg>Alerts<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Alerts are available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
+          <span class="app-locked"><svg><use href="#icon-box"></use></svg>Orders <em>Beta</em><svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Orders are available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
+          <div class="audit-sidebar-bottom">
+            <span class="app-locked">Website settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Settings are available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
+            <span class="app-locked">Account settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Account settings are available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
+            <a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a>
+          </div>
+        </aside>
+        <main>
+          <div class="audit-topline">
+            <div class="audit-playbook-title">
+              <h2>Playbook</h2>
+              <button class="app-locked"><svg><use href="#icon-tag"></use></svg>Google<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Channel switching is available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></button>
+              <span>New Playbook experience (Beta)</span>
+              <a href="#">Leave feedback</a>
+              <button class="wireframe-toggle wireframe-toggle-error" data-go="ready">Wireframe: success state</button>
+            </div>
+            <div class="audit-ai-actions">
+              <p>0 AI credits available</p>
+              <button class="app-locked">AI Settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">AI settings are available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></button>
+            </div>
+          </div>
+          <div class="audit-tabs">
+            <span class="app-locked">Enrich with AI<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">AI enrichment is available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
+            <strong>Feed Audit</strong>
+          </div>
+          <div class="audit-notice audit-notice-error">We could not generate the audit for gluestore.com.au. Please check that FeedOps has report/view permissions in Google Merchant Center. This is the most common reason an audit fails. <a href="https://feedops.com/google-shopping-feed-audit-access/#minimum-access-required" target="_blank" rel="noopener">Learn how to check permissions</a></div>
+          <div class="audit-title-row">
+            <h1>Google Shopping Feed Audit</h1>
+            <div class="audit-actions">
+              <button><svg><use href="#icon-refresh"></use></svg>Run New Audit</button>
+              <button><svg><use href="#icon-history"></use></svg>View Past Audits</button>
+              <button class="audit-download"><svg><use href="#icon-download"></use></svg>Download Audit</button>
+            </div>
+          </div>
+          <section class="audit-grid audit-grid-silhouette">
+            <article class="audit-panel audit-visibility">
+              <h3>Visibility Rate <svg><use href="#icon-info"></use></svg></h3>
+              <div class="audit-ring"><strong>--</strong></div>
+              <div class="audit-trend">Pending</div>
+              <p>audit not generated</p>
+              <div class="audit-filter">All Traffic</div>
+            </article>
+            <article class="audit-panel audit-score-row">
+              <h3>Improve These Metrics to Boost Visibility Rate</h3>
+              <div><b>Account Compliance <svg><use href="#icon-info"></use></svg></b><strong>--</strong><i><svg><use href="#icon-chevron"></use></svg></i></div>
+              <div><b>Product Approval <svg><use href="#icon-info"></use></svg></b><strong>--</strong></div>
+              <div><b>Attribute Completeness <svg><use href="#icon-info"></use></svg></b><strong>--</strong><i><svg><use href="#icon-chevron"></use></svg></i></div>
+            </article>
+            <article class="audit-panel audit-table">
+              <h3>Feed Performance Overview</h3>
+              <div class="audit-table-row audit-table-head"><b>Metric</b><span>Product Count</span><em>% of Feed</em></div>
+              <div class="audit-table-row"><b>Total Products in Feed</b><span></span><em></em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+              <div class="audit-table-row"><b>Products with Impressions</b><span></span><em></em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+              <div class="audit-table-row"><b>Products with Clicks</b><span></span><em></em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+            </article>
+            <article class="audit-panel audit-segments">
+              <h3>Metrics unavailable</h3>
+              <div class="audit-table-row audit-table-head"><b>Segment</b><span>Product Count</span><em>% of Feed</em></div>
+              <div class="audit-table-row"><b>Impressions, 0 Clicks</b><span></span><em></em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+              <div class="audit-table-row"><b>No Impressions</b><span></span><em></em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+              <div class="audit-table-row"><b>High Impressions, Low Clicks</b><span></span><em></em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+            </article>
+          </section>
+        </main>
+      </div>
+    </section>
+
+    <button class="hotspot prototype-prev" data-prev aria-label="Previous prototype screen"></button>
+    <button class="hotspot prototype-next" data-next aria-label="Next prototype screen"></button>
+    <button class="hotspot prototype-restart" data-go="landing" aria-label="Restart prototype"></button>
+  </main>
+
+  <nav class="flow-controls" aria-label="Prototype navigation">
+    <button data-prev aria-label="Previous screen">‹</button>
+    <span id="step-label">Landing</span>
+    <button data-next aria-label="Next screen">›</button>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
