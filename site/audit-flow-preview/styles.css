@@ -1017,16 +1017,16 @@ button.app-locked .info-mini,
 
 .lock-tooltip {
   position: absolute;
-  left: calc(100% + .7vw);
+  left: calc(100% + .22vw);
   top: 50%;
   z-index: 30;
-  width: 14.6vw;
-  padding: .82vw .9vw;
+  width: 18.8vw;
+  padding: .9vw;
   border: 1px solid #dbe1e8;
   border-radius: .55vw;
-  background: #111827;
-  color: #ffffff;
-  box-shadow: 0 18px 42px rgba(16, 24, 40, .22);
+  background: #ffffff;
+  color: #263241;
+  box-shadow: 0 18px 46px rgba(16, 24, 40, .2);
   font-size: clamp(7px, .62vw, 12px);
   font-weight: 650;
   line-height: 1.35;
@@ -1043,22 +1043,60 @@ button.app-locked .info-mini,
   top: 50%;
   width: .8vw;
   height: .8vw;
-  background: #111827;
+  border-left: 1px solid #dbe1e8;
+  border-bottom: 1px solid #dbe1e8;
+  background: #ffffff;
   transform: translateY(-50%) rotate(45deg);
+}
+
+.lock-tooltip::after {
+  content: "";
+  position: absolute;
+  left: -.85vw;
+  top: 0;
+  width: .9vw;
+  height: 100%;
+}
+
+.tooltip-title,
+.tooltip-copy {
+  display: block;
+}
+
+.tooltip-title {
+  margin-bottom: .3vw;
+  color: #101820;
+  font-size: clamp(8px, .72vw, 14px);
+  font-weight: 900;
+}
+
+.tooltip-copy {
+  color: #536072;
+  font-weight: 650;
+}
+
+.tooltip-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45vw;
+  margin-top: .7vw;
 }
 
 .lock-tooltip a {
   display: block;
-  margin-top: .55vw;
-  color: #8fd7ff;
-  font-weight: 850;
-  text-decoration: underline;
-  text-underline-offset: .16em;
+  padding: .38vw .52vw;
+  border: 1px solid #dbe1e8;
+  border-radius: .34vw;
+  background: #f8fafc;
+  color: #176e58;
+  font-weight: 900;
+  text-decoration: none;
 }
 
 .app-locked:hover .lock-tooltip,
 .app-info:hover .lock-tooltip {
   opacity: 1;
+  pointer-events: auto;
   transform: translateY(-50%) translateX(0);
 }
 
@@ -1068,7 +1106,7 @@ button.app-locked .info-mini,
 .audit-table-row .lock-tooltip,
 .audit-filter .lock-tooltip {
   left: 50%;
-  top: calc(100% + .7vw);
+  top: calc(100% + .22vw);
   transform: translateX(-50%) translateY(-.35vw);
 }
 
@@ -1080,6 +1118,17 @@ button.app-locked .info-mini,
   left: 50%;
   top: -.38vw;
   transform: translateX(-50%) rotate(45deg);
+}
+
+.audit-ai-actions .lock-tooltip::after,
+.audit-tabs .lock-tooltip::after,
+.audit-score-row .lock-tooltip::after,
+.audit-table-row .lock-tooltip::after,
+.audit-filter .lock-tooltip::after {
+  left: 0;
+  top: -.85vw;
+  width: 100%;
+  height: .9vw;
 }
 
 .audit-ai-actions .app-locked:hover .lock-tooltip,

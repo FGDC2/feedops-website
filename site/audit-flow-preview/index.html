@@ -1025,16 +1025,16 @@ button.app-locked .info-mini,
 
 .lock-tooltip {
   position: absolute;
-  left: calc(100% + .7vw);
+  left: calc(100% + .22vw);
   top: 50%;
   z-index: 30;
-  width: 14.6vw;
-  padding: .82vw .9vw;
+  width: 18.8vw;
+  padding: .9vw;
   border: 1px solid #dbe1e8;
   border-radius: .55vw;
-  background: #111827;
-  color: #ffffff;
-  box-shadow: 0 18px 42px rgba(16, 24, 40, .22);
+  background: #ffffff;
+  color: #263241;
+  box-shadow: 0 18px 46px rgba(16, 24, 40, .2);
   font-size: clamp(7px, .62vw, 12px);
   font-weight: 650;
   line-height: 1.35;
@@ -1051,22 +1051,60 @@ button.app-locked .info-mini,
   top: 50%;
   width: .8vw;
   height: .8vw;
-  background: #111827;
+  border-left: 1px solid #dbe1e8;
+  border-bottom: 1px solid #dbe1e8;
+  background: #ffffff;
   transform: translateY(-50%) rotate(45deg);
+}
+
+.lock-tooltip::after {
+  content: "";
+  position: absolute;
+  left: -.85vw;
+  top: 0;
+  width: .9vw;
+  height: 100%;
+}
+
+.tooltip-title,
+.tooltip-copy {
+  display: block;
+}
+
+.tooltip-title {
+  margin-bottom: .3vw;
+  color: #101820;
+  font-size: clamp(8px, .72vw, 14px);
+  font-weight: 900;
+}
+
+.tooltip-copy {
+  color: #536072;
+  font-weight: 650;
+}
+
+.tooltip-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45vw;
+  margin-top: .7vw;
 }
 
 .lock-tooltip a {
   display: block;
-  margin-top: .55vw;
-  color: #8fd7ff;
-  font-weight: 850;
-  text-decoration: underline;
-  text-underline-offset: .16em;
+  padding: .38vw .52vw;
+  border: 1px solid #dbe1e8;
+  border-radius: .34vw;
+  background: #f8fafc;
+  color: #176e58;
+  font-weight: 900;
+  text-decoration: none;
 }
 
 .app-locked:hover .lock-tooltip,
 .app-info:hover .lock-tooltip {
   opacity: 1;
+  pointer-events: auto;
   transform: translateY(-50%) translateX(0);
 }
 
@@ -1076,7 +1114,7 @@ button.app-locked .info-mini,
 .audit-table-row .lock-tooltip,
 .audit-filter .lock-tooltip {
   left: 50%;
-  top: calc(100% + .7vw);
+  top: calc(100% + .22vw);
   transform: translateX(-50%) translateY(-.35vw);
 }
 
@@ -1088,6 +1126,17 @@ button.app-locked .info-mini,
   left: 50%;
   top: -.38vw;
   transform: translateX(-50%) rotate(45deg);
+}
+
+.audit-ai-actions .lock-tooltip::after,
+.audit-tabs .lock-tooltip::after,
+.audit-score-row .lock-tooltip::after,
+.audit-table-row .lock-tooltip::after,
+.audit-filter .lock-tooltip::after {
+  left: 0;
+  top: -.85vw;
+  width: 100%;
+  height: .9vw;
 }
 
 .audit-ai-actions .app-locked:hover .lock-tooltip,
@@ -1599,7 +1648,7 @@ button.app-locked .info-mini,
   </svg>
   <main class="prototype" data-step="landing" aria-label="FeedOps audit flow prototype">
     <section class="frame" data-screen="landing">
-      <img src="../assets/audit-flow-preview/01-landing.png?v=3" alt="Audit flow landing screen">
+      <img src="figma/01-landing.png?v=3" alt="Audit flow landing screen">
       <header class="live-site-header" aria-hidden="true">
         <div class="audience-bar">
           <span>Explore FeedOps as</span>
@@ -1660,7 +1709,7 @@ button.app-locked .info-mini,
     </section>
 
     <section class="frame" data-screen="connect">
-      <img src="../assets/audit-flow-preview/02-connect.png?v=3" alt="Connect Google Merchant Center screen">
+      <img src="figma/02-connect.png?v=3" alt="Connect Google Merchant Center screen">
       <div class="flow-step flow-step-connect" aria-hidden="true">
         <span>Step 2 of 2</span>
         <strong>Connect Merchant Center</strong>
@@ -1674,13 +1723,13 @@ button.app-locked .info-mini,
     </section>
 
     <section class="frame" data-screen="google">
-      <img src="../assets/audit-flow-preview/03-google.png?v=3" alt="Google sign-in consent screen">
+      <img src="figma/03-google.png?v=3" alt="Google sign-in consent screen">
       <button class="hotspot google-cancel" data-go="connect" aria-label="Cancel"></button>
       <button class="hotspot google-continue" data-go="merchant" aria-label="Continue"></button>
     </section>
 
     <section class="frame" data-screen="merchant">
-      <img src="../assets/audit-flow-preview/04-merchant.png?v=3" alt="Select Merchant Center screen">
+      <img src="figma/04-merchant.png?v=3" alt="Select Merchant Center screen">
       <div class="merchant-reassurance" aria-hidden="true">
         <p>We only access the website you select for this audit.</p>
         <p>Other sites in your account are not used.</p>
@@ -1690,7 +1739,7 @@ button.app-locked .info-mini,
     </section>
 
     <section class="frame" data-screen="merchant-open">
-      <img src="../assets/audit-flow-preview/05-merchant-open.png?v=3" alt="Merchant Center dropdown screen">
+      <img src="figma/05-merchant-open.png?v=3" alt="Merchant Center dropdown screen">
       <div class="merchant-reassurance" aria-hidden="true">
         <p>We only access the website you select for this audit.</p>
         <p>Other sites in your account are not used.</p>
@@ -1700,7 +1749,7 @@ button.app-locked .info-mini,
     </section>
 
     <section class="frame" data-screen="merchant-selected">
-      <img src="../assets/audit-flow-preview/06-merchant-selected.png?v=3" alt="Selected Merchant account screen">
+      <img src="figma/06-merchant-selected.png?v=3" alt="Selected Merchant account screen">
       <div class="merchant-reassurance" aria-hidden="true">
         <p>We only access the website you select for this audit.</p>
         <p>Other sites in your account are not used.</p>
@@ -1784,14 +1833,14 @@ button.app-locked .info-mini,
           <div class="audit-avatar">FG</div>
         </header>
         <aside>
-          <strong class="app-info"><svg><use href="#icon-sparkle"></use></svg>Playbook<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">You are viewing the free audit workspace. Contact us for the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></strong>
-          <span class="app-locked"><svg><use href="#icon-edit"></use></svg>Products Data<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Product management is available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
-          <span class="app-locked"><svg><use href="#icon-flow"></use></svg>Feed rules<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Feed rule editing is available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
-          <span class="app-locked"><svg><use href="#icon-alert"></use></svg>Alerts<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Alerts are available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
-          <span class="app-locked"><svg><use href="#icon-box"></use></svg>Orders <em>Beta</em><svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Orders are available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
+          <strong class="app-info"><svg><use href="#icon-sparkle"></use></svg>Playbook<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Playbook</span><span class="tooltip-copy">The control center for running audits and improving product feed performance.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#playbook" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></strong>
+          <span class="app-locked"><svg><use href="#icon-edit"></use></svg>Products Data<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Product Data</span><span class="tooltip-copy">View, filter, import, export, and edit the data being served to each channel.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#product-data" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
+          <span class="app-locked"><svg><use href="#icon-flow"></use></svg>Feed rules<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Feed Rules</span><span class="tooltip-copy">Automate feed logic with conditions and actions across one or many channels.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#feed-rules" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
+          <span class="app-locked"><svg><use href="#icon-alert"></use></svg>Alerts<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Alerts</span><span class="tooltip-copy">Get notified about product approvals, disapprovals, feed issues, order errors, and sync problems.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#alerts" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
+          <span class="app-locked"><svg><use href="#icon-box"></use></svg>Orders <em>Beta</em><svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Orders</span><span class="tooltip-copy">Track marketplace order status and unblock processing or mismatch issues.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#orders" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
           <div class="audit-sidebar-bottom">
-            <span class="app-locked">Website settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Settings are available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
-            <span class="app-locked">Account settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Account settings are available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
+            <span class="app-locked">Website settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Connections</span><span class="tooltip-copy">Manage shopping cart credentials, API settings, mappings, schedules, and category inclusion.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#connections" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
+            <span class="app-locked">Account settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Account Settings</span><span class="tooltip-copy">Add websites, manage users, and update account details on paid plans.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#account-settings" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
             <a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a>
           </div>
         </aside>
@@ -1799,18 +1848,18 @@ button.app-locked .info-mini,
           <div class="audit-topline">
             <div class="audit-playbook-title">
               <h2>Playbook</h2>
-              <button class="app-locked"><svg><use href="#icon-tag"></use></svg>Google<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Channel switching is available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></button>
+              <button class="app-locked"><svg><use href="#icon-tag"></use></svg>Google<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Connected Channels</span><span class="tooltip-copy">Add or remove media, marketplace, and feed destinations depending on your plan.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#connected-channels" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></button>
               <span>New Playbook experience (Beta)</span>
               <a href="#">Leave feedback</a>
               <button class="wireframe-toggle" data-go="error">Wireframe: error state</button>
             </div>
             <div class="audit-ai-actions">
               <p>0 AI credits available</p>
-              <button class="app-locked">AI Settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">AI settings are available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></button>
+              <button class="app-locked">AI Settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">AI Settings</span><span class="tooltip-copy">Customize agents for each brand, category, country, language, and attribute.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#ai-settings" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></button>
             </div>
           </div>
           <div class="audit-tabs">
-            <span class="app-locked">Enrich with AI<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">AI enrichment is available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
+            <span class="app-locked">Enrich with AI<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Enrich with AI</span><span class="tooltip-copy">Use custom agents to enrich variants, product types, titles, and missing attributes at scale.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#enrich-with-ai" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
             <strong>Feed Audit</strong>
           </div>
           <div class="audit-notice">We're generating a new audit, which may take time depending on your feed size. We'll email you at frank@feedops.com when it's done.</div>
@@ -1869,14 +1918,14 @@ button.app-locked .info-mini,
           <div class="audit-avatar">FG</div>
         </header>
         <aside>
-          <strong class="app-info"><svg><use href="#icon-sparkle"></use></svg>Playbook<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">You are viewing the free audit workspace. Contact us for the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></strong>
-          <span class="app-locked"><svg><use href="#icon-edit"></use></svg>Products Data<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Product management is available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
-          <span class="app-locked"><svg><use href="#icon-flow"></use></svg>Feed rules<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Feed rule editing is available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
-          <span class="app-locked"><svg><use href="#icon-alert"></use></svg>Alerts<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Alerts are available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
-          <span class="app-locked"><svg><use href="#icon-box"></use></svg>Orders <em>Beta</em><svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Orders are available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
+          <strong class="app-info"><svg><use href="#icon-sparkle"></use></svg>Playbook<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Playbook</span><span class="tooltip-copy">The control center for running audits and improving product feed performance.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#playbook" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></strong>
+          <span class="app-locked"><svg><use href="#icon-edit"></use></svg>Products Data<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Product Data</span><span class="tooltip-copy">View, filter, import, export, and edit the data being served to each channel.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#product-data" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
+          <span class="app-locked"><svg><use href="#icon-flow"></use></svg>Feed rules<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Feed Rules</span><span class="tooltip-copy">Automate feed logic with conditions and actions across one or many channels.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#feed-rules" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
+          <span class="app-locked"><svg><use href="#icon-alert"></use></svg>Alerts<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Alerts</span><span class="tooltip-copy">Get notified about product approvals, disapprovals, feed issues, order errors, and sync problems.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#alerts" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
+          <span class="app-locked"><svg><use href="#icon-box"></use></svg>Orders <em>Beta</em><svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Orders</span><span class="tooltip-copy">Track marketplace order status and unblock processing or mismatch issues.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#orders" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
           <div class="audit-sidebar-bottom">
-            <span class="app-locked">Website settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Settings are available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
-            <span class="app-locked">Account settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Account settings are available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
+            <span class="app-locked">Website settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Connections</span><span class="tooltip-copy">Manage shopping cart credentials, API settings, mappings, schedules, and category inclusion.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#connections" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
+            <span class="app-locked">Account settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Account Settings</span><span class="tooltip-copy">Add websites, manage users, and update account details on paid plans.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#account-settings" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
             <a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a>
           </div>
         </aside>
@@ -1884,18 +1933,18 @@ button.app-locked .info-mini,
           <div class="audit-topline">
             <div class="audit-playbook-title">
               <h2>Playbook</h2>
-              <button class="app-locked"><svg><use href="#icon-tag"></use></svg>Google<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">Channel switching is available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></button>
+              <button class="app-locked"><svg><use href="#icon-tag"></use></svg>Google<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Connected Channels</span><span class="tooltip-copy">Add or remove media, marketplace, and feed destinations depending on your plan.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#connected-channels" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></button>
               <span>New Playbook experience (Beta)</span>
               <a href="#">Leave feedback</a>
               <button class="wireframe-toggle wireframe-toggle-error" data-go="ready">Wireframe: success state</button>
             </div>
             <div class="audit-ai-actions">
               <p>0 AI credits available</p>
-              <button class="app-locked">AI Settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">AI settings are available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></button>
+              <button class="app-locked">AI Settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">AI Settings</span><span class="tooltip-copy">Customize agents for each brand, category, country, language, and attribute.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#ai-settings" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></button>
             </div>
           </div>
           <div class="audit-tabs">
-            <span class="app-locked">Enrich with AI<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip">AI enrichment is available in the full FeedOps app.<a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span>
+            <span class="app-locked">Enrich with AI<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Enrich with AI</span><span class="tooltip-copy">Use custom agents to enrich variants, product types, titles, and missing attributes at scale.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#enrich-with-ai" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
             <strong>Feed Audit</strong>
           </div>
           <div class="audit-notice audit-notice-error">We could not generate the audit for gluestore.com.au. Please check that FeedOps has report/view permissions in Google Merchant Center. This is the most common reason an audit fails. <a href="https://feedops.com/google-shopping-feed-audit-access/#minimum-access-required" target="_blank" rel="noopener">Learn how to check permissions</a></div>

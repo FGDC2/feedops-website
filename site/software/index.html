@@ -49,6 +49,10 @@
       width: min(1180px, calc(100% - 40px));
       margin: 0 auto;
       padding: 88px 0 96px;
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(420px, .8fr);
+      gap: 52px;
+      align-items: center;
     }
 
     .software-kicker {
@@ -91,17 +95,562 @@
       text-decoration: none;
       box-shadow: 0 12px 30px rgba(254, 207, 38, .28);
     }
+
+    .software-preview {
+      min-height: 460px;
+      padding: 26px;
+      border: 1px solid #d8dee8;
+      border-radius: 8px;
+      background: #ffffff;
+      box-shadow: 0 22px 58px rgba(17, 24, 39, .10);
+    }
+
+    .preview-top {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid #e3e8ef;
+    }
+
+    .preview-metric {
+      padding: 16px;
+      border: 1px solid #e3e8ef;
+      border-radius: 8px;
+      background: #fbfcff;
+    }
+
+    .preview-metric span,
+    .preview-table-head {
+      color: #667085;
+      font-size: 12px;
+      font-weight: 850;
+    }
+
+    .preview-metric strong {
+      display: block;
+      margin-top: 10px;
+      color: #101820;
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .preview-table {
+      margin-top: 22px;
+      border: 1px solid #e3e8ef;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .preview-table-title {
+      margin: 0;
+      padding: 16px 18px;
+      font-size: 17px;
+    }
+
+    .preview-row {
+      display: grid;
+      grid-template-columns: 1.25fr .65fr .65fr;
+      gap: 16px;
+      align-items: center;
+      padding: 14px 18px;
+      border-top: 1px solid #edf0f4;
+      color: #253142;
+      font-size: 14px;
+      font-weight: 720;
+    }
+
+    .preview-table-head {
+      background: #f8fafc;
+      color: #667085;
+    }
+
+    .software-section {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 86px 0;
+      border-top: 1px solid #d8dee8;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr);
+      gap: 54px;
+      align-items: start;
+    }
+
+    .section-kicker {
+      margin: 0 0 12px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .software-section h2 {
+      margin: 0;
+      max-width: 520px;
+      color: var(--ink);
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 1.04;
+      letter-spacing: -.03em;
+    }
+
+    .section-lead {
+      margin: 22px 0 0;
+      max-width: 520px;
+      color: #394252;
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    .playbook-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .playbook-agent {
+      padding: 24px;
+      border: 1px solid #d8dee8;
+      border-radius: 8px;
+      background: #ffffff;
+      box-shadow: 0 14px 34px rgba(17, 24, 39, .06);
+    }
+
+    .playbook-agent.featured {
+      display: grid;
+      grid-template-columns: minmax(0, .95fr) minmax(360px, 1.05fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    .screenshot-placeholder {
+      min-height: 220px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 22px;
+      border: 1px dashed #b9c4d2;
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(32, 169, 87, .08), transparent 34%),
+        linear-gradient(180deg, #fbfcff, #f3f6fa);
+      color: #536072;
+      text-align: center;
+    }
+
+    .screenshot-placeholder span {
+      display: block;
+      color: #101820;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .screenshot-placeholder small {
+      display: block;
+      margin-top: 6px;
+      color: #667085;
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    .playbook-agent h3 {
+      margin: 0 0 10px;
+      color: var(--ink);
+      font-size: 22px;
+      line-height: 1.18;
+    }
+
+    .playbook-agent p {
+      margin: 0;
+      color: #4a5568;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .agent-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .agent-tags span {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: #eef8f4;
+      color: #176e58;
+      font-size: 12px;
+      font-weight: 850;
+    }
+
+    .software-info {
+      width: min(1180px, calc(100% - 40px));
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin: 0 auto;
+      padding: 22px 24px;
+      border: 1px solid #d8dee8;
+      border-radius: 8px;
+      background: #fbfcff;
+    }
+
+    .software-info p {
+      max-width: 700px;
+      margin: 0;
+      color: #394252;
+      font-size: 15px;
+      line-height: 1.5;
+      font-weight: 720;
+    }
+
+    .software-info-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .software-info-actions a {
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 14px;
+      border: 1px solid #d8dee8;
+      border-radius: 8px;
+      background: #ffffff;
+      color: #176e58;
+      font-size: 13px;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    @media (max-width: 900px) {
+      .software-hero,
+      .section-grid,
+      .playbook-agent.featured {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .software-hero {
+        padding: 56px 0 72px;
+      }
+
+      .preview-top {
+        grid-template-columns: 1fr;
+      }
+
+      .preview-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .software-section {
+        padding: 58px 0;
+      }
+    }
   </style>
 </head>
 <body>
   <header class="site-header"></header>
 
   <main>
-    <section class="software-hero">
-      <p class="software-kicker">Software</p>
-      <h1>Feed optimization software for feed excellence</h1>
-      <p class="software-lead">FeedOps software gives ecommerce teams the tools required to audit, manage, and improve product feed performance.</p>
-      <a class="software-cta" href="../book-live-demo/">Book a demo</a>
+    <section class="software-hero" id="feed-optimization-software">
+      <div>
+        <p class="software-kicker">Software</p>
+        <h1>Feed optimization software for feed excellence</h1>
+        <p class="software-lead">FeedOps software gives ecommerce teams the tools required to audit, manage, and improve product feed performance.</p>
+        <a class="software-cta" href="../book-live-demo/">Book a demo</a>
+      </div>
+
+      <aside class="software-preview" aria-label="FeedOps software preview">
+        <div class="preview-top">
+          <div class="preview-metric"><span>Visibility Rate</span><strong>76%</strong></div>
+          <div class="preview-metric"><span>Product Approval</span><strong>99%</strong></div>
+          <div class="preview-metric"><span>Feed Issues</span><strong>18</strong></div>
+        </div>
+        <div class="preview-table">
+          <h2 class="preview-table-title">Feed Performance Overview</h2>
+          <div class="preview-row preview-table-head"><span>Metric</span><span>Products</span><span>Status</span></div>
+          <div class="preview-row"><span>Products with impressions</span><span>9,450</span><span>Review</span></div>
+          <div class="preview-row"><span>Products with clicks</span><span>5,410</span><span>Improve</span></div>
+          <div class="preview-row"><span>Products with conversions</span><span>240</span><span>Track</span></div>
+          <div class="preview-row"><span>Products missing visibility</span><span>430</span><span>Fix</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="software-info" aria-label="Software information">
+      <p>The Playbook is the main software workflow for auditing, enriching, and improving product feed performance.</p>
+      <div class="software-info-actions">
+        <a href="#playbook">View Playbook section</a>
+        <a href="../contact_us/">Contact sales</a>
+      </div>
+    </section>
+
+    <section class="software-section" id="playbook">
+      <div class="section-grid">
+        <div>
+          <p class="section-kicker">Playbook</p>
+          <h2>The control center for improving your product feed.</h2>
+          <p class="section-lead">The FeedOps Playbook brings audit data, AI enrichment, and feed optimization agents into one workflow so teams can see what is holding performance back and act on it.</p>
+        </div>
+
+        <div class="playbook-list">
+          <article class="playbook-agent" id="feed-audit">
+            <div class="screenshot-placeholder" aria-label="Placeholder for Feed Audit screenshot">
+              <div><span>Feed Audit screenshot</span><small>Placeholder image</small></div>
+            </div>
+            <h3>Feed Audit</h3>
+            <p>Start with a feed audit that measures visibility rate and highlights the metrics most likely to improve performance, including account compliance, product approval, and attribute completeness. Attribute completeness shows which missing or weak product attributes are limiting visibility, searchability, and discoverability.</p>
+            <div class="agent-tags" aria-label="Feed Audit metrics">
+              <span>Visibility rate</span>
+              <span>Account compliance</span>
+              <span>Product approval</span>
+              <span>Attribute completeness</span>
+            </div>
+          </article>
+
+          <article class="playbook-agent" id="enrich-with-ai">
+            <div class="screenshot-placeholder" aria-label="Placeholder for Enrich with AI screenshot">
+              <div><span>Enrich with AI screenshot</span><small>Placeholder image</small></div>
+            </div>
+            <h3>Enrich with AI</h3>
+            <p>Use custom AI agents to enrich missing variant information such as size, material, and colour, complete product categorization, and rewrite product titles. Each agent has its own AI settings, including language, target country, and attribute-specific instructions.</p>
+            <div class="agent-tags" aria-label="Enrich with AI capabilities">
+              <span>Variant enrichment</span>
+              <span>Product types</span>
+              <span>Long-tail keywords</span>
+              <span>AI title rewriting</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="software-section" id="ai-settings">
+      <div class="section-grid">
+        <div>
+          <p class="section-kicker">AI Settings</p>
+          <h2>Custom agents for every brand and category.</h2>
+          <p class="section-lead">FeedOps AI settings let teams customize how each agent enriches product data, so the output can match the brand, market, category, and commercial goal.</p>
+        </div>
+
+        <article class="playbook-agent featured">
+          <div>
+            <h3>Fully customizable AI enrichment</h3>
+            <p>Each custom agent can be tuned for brand voice, target country, language, category rules, attribute requirements, and specific instructions. If a large language model can interpret, rewrite, classify, extract, or enrich product data, FeedOps can help apply that work across the feed at scale.</p>
+            <div class="agent-tags" aria-label="AI Settings capabilities">
+              <span>Brand voice</span>
+              <span>Category rules</span>
+              <span>Target country</span>
+              <span>Attribute instructions</span>
+            </div>
+          </div>
+          <div class="screenshot-placeholder" aria-label="Placeholder for AI Settings screenshot">
+            <div><span>AI Settings screenshot</span><small>Placeholder image</small></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="software-section" id="product-data">
+      <div class="section-grid">
+        <div>
+          <p class="section-kicker">Product Data</p>
+          <h2>See and manage the product data each channel receives.</h2>
+          <p class="section-lead">Product Data is the most universal part of FeedOps: simple enough to check what is available and in stock, powerful enough to manage product data at scale.</p>
+        </div>
+
+        <article class="playbook-agent featured">
+          <div>
+            <h3>Visualize, edit, import, and export product data</h3>
+            <p>Use Product Data to filter products, inspect what is being served to a specific channel, make single product edits, apply bulk edits, import updates, export data, and choose between manual or automated changes. Feed rules are one option, not the only way to improve the feed.</p>
+            <div class="agent-tags" aria-label="Product Data capabilities">
+              <span>Channel views</span>
+              <span>Bulk edits</span>
+              <span>Single edits</span>
+              <span>Import and export</span>
+              <span>Manual edits</span>
+              <span>Automated edits</span>
+            </div>
+          </div>
+          <div class="screenshot-placeholder" aria-label="Placeholder for Product Data screenshot">
+            <div><span>Product Data screenshot</span><small>Placeholder image</small></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="software-section" id="feed-rules">
+      <div class="section-grid">
+        <div>
+          <p class="section-kicker">Feed Rules</p>
+          <h2>The automation engine for product feed logic.</h2>
+          <p class="section-lead">Feed Rules turn repeatable feed decisions into automated conditions and actions across one or many channels.</p>
+        </div>
+
+        <article class="playbook-agent featured">
+          <div>
+            <h3>Automate what changes, where it goes, and when it applies</h3>
+            <p>Use Feed Rules to control what is in stock, what is excluded, what is sent to each channel, and how product data is augmented. Build title templates, apply structured categorization, and automate feed logic wherever a condition and action can describe the change.</p>
+            <div class="agent-tags" aria-label="Feed Rules capabilities">
+              <span>Conditions and actions</span>
+              <span>One or many channels</span>
+              <span>Stock logic</span>
+              <span>Channel exclusions</span>
+              <span>Title templates</span>
+              <span>Structured categorization</span>
+            </div>
+          </div>
+          <div class="screenshot-placeholder" aria-label="Placeholder for Feed Rules screenshot">
+            <div><span>Feed Rules screenshot</span><small>Placeholder image</small></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="software-section" id="orders">
+      <div class="section-grid">
+        <div>
+          <p class="section-kicker">Orders</p>
+          <h2>Track marketplace orders and unblock processing issues.</h2>
+          <p class="section-lead">Orders gives ecommerce teams a clear view of current and recent marketplace orders, including what has processed, what is processing, and what needs attention.</p>
+        </div>
+
+        <article class="playbook-agent featured">
+          <div>
+            <h3>See order status and fix mismatches</h3>
+            <p>Use Orders to review current orders and the last 30 days of order activity, identify orders that have not processed, and find mismatches that may be stopping orders from flowing through. FeedOps gives teams tools to help diagnose, fix, and unblock order issues before they create operational drag.</p>
+            <div class="agent-tags" aria-label="Orders capabilities">
+              <span>Current orders</span>
+              <span>30-day order history</span>
+              <span>Processing status</span>
+              <span>Failed orders</span>
+              <span>Mismatch fixes</span>
+              <span>Marketplace order flow</span>
+            </div>
+          </div>
+          <div class="screenshot-placeholder" aria-label="Placeholder for Orders screenshot">
+            <div><span>Orders screenshot</span><small>Placeholder image</small></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="software-section" id="alerts">
+      <div class="section-grid">
+        <div>
+          <p class="section-kicker">Alerts</p>
+          <h2>Know when product, channel, or order issues need attention.</h2>
+          <p class="section-lead">Alerts help ecommerce teams monitor feed health, approval status, channel errors, marketplace order issues, and sync problems.</p>
+        </div>
+
+        <article class="playbook-agent featured">
+          <div>
+            <h3>Notifications for feed and marketplace problems</h3>
+            <p>Use Alerts to see when products are approved or disapproved in a channel, when feed information needs attention, or when marketplace orders, shipping, or sync processes are blocked for any reason.</p>
+            <div class="agent-tags" aria-label="Alerts capabilities">
+              <span>Product approvals</span>
+              <span>Product disapprovals</span>
+              <span>Feed issues</span>
+              <span>Order errors</span>
+              <span>Shipping sync</span>
+              <span>Marketplace blocks</span>
+            </div>
+          </div>
+          <div class="screenshot-placeholder" aria-label="Placeholder for Alerts screenshot">
+            <div><span>Alerts screenshot</span><small>Placeholder image</small></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="software-section" id="connections">
+      <div class="section-grid">
+        <div>
+          <p class="section-kicker">Connections</p>
+          <h2>Manage shopping cart connections and feed configuration.</h2>
+          <p class="section-lead">Connections helps teams check credentials, review API configuration, control mappings, and manage how product data is sent from the ecommerce platform into FeedOps.</p>
+        </div>
+
+        <article class="playbook-agent featured">
+          <div>
+            <h3>Configure mappings, schedules, and categories</h3>
+            <p>Use Connections to check shopping cart credentials, update API configuration, change automated attribute mappings, set feed download schedules, and bulk select or deselect categories that should be included in the feed.</p>
+            <div class="agent-tags" aria-label="Connections capabilities">
+              <span>Connection credentials</span>
+              <span>API configuration</span>
+              <span>Attribute mappings</span>
+              <span>Feed schedule</span>
+              <span>Category selection</span>
+              <span>Bulk include/exclude</span>
+            </div>
+          </div>
+          <div class="screenshot-placeholder" aria-label="Placeholder for Connections screenshot">
+            <div><span>Connections screenshot</span><small>Placeholder image</small></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="software-section" id="connected-channels">
+      <div class="section-grid">
+        <div>
+          <p class="section-kicker">Connected Channels</p>
+          <h2>Add and manage the channels your feed supports.</h2>
+          <p class="section-lead">Connected Channels lets teams control where product data is sent, with available channels depending on the FeedOps plan and channel setup.</p>
+        </div>
+
+        <article class="playbook-agent featured">
+          <div>
+            <h3>Connect media, marketplace, and feed destinations</h3>
+            <p>Add or remove channels as needed, including media channels such as Google, Meta, and Microsoft, marketplace channels such as eBay, Amazon, Bunnings, and Kogan, and other feed destinations used for shopping, remarketing, affiliate, and product discovery workflows.</p>
+            <div class="agent-tags" aria-label="Connected Channels capabilities">
+              <span>Add channels</span>
+              <span>Remove channels</span>
+              <span>Media channels</span>
+              <span>Marketplaces</span>
+              <span>Shopping feeds</span>
+              <span>Plan-based access</span>
+            </div>
+          </div>
+          <div class="screenshot-placeholder" aria-label="Placeholder for Connected Channels screenshot">
+            <div><span>Connected Channels screenshot</span><small>Placeholder image</small></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="software-section" id="account-settings">
+      <div class="section-grid">
+        <div>
+          <p class="section-kicker">Account Settings</p>
+          <h2>Manage websites, users, and account details.</h2>
+          <p class="section-lead">Once you are on a paid plan, FeedOps gives you the settings needed to manage the account behind your product feed workflows.</p>
+        </div>
+
+        <article class="playbook-agent featured">
+          <div>
+            <h3>Control access and account setup</h3>
+            <p>Add websites, manage users, and update account details when your business, team, or feed setup changes.</p>
+            <div class="agent-tags" aria-label="Account Settings capabilities">
+              <span>Add a website</span>
+              <span>Manage users</span>
+              <span>Account details</span>
+              <span>Paid plan access</span>
+            </div>
+          </div>
+          <div class="screenshot-placeholder" aria-label="Placeholder for Account Settings screenshot">
+            <div><span>Account Settings screenshot</span><small>Placeholder image</small></div>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
 
