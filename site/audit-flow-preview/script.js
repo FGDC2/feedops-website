@@ -18,11 +18,19 @@ const passwordError = document.querySelector("[data-password-error]");
 
 function unlockPreview() {
   passwordGate.classList.add("is-unlocked");
-  sessionStorage.setItem("feedopsAuditPreviewUnlocked", "true");
+  try {
+    sessionStorage.setItem("feedopsAuditPreviewUnlocked", "true");
+  } catch (error) {
+    // The preview should still open if browser storage is unavailable.
+  }
 }
 
-if (sessionStorage.getItem("feedopsAuditPreviewUnlocked") === "true") {
-  unlockPreview();
+try {
+  if (sessionStorage.getItem("feedopsAuditPreviewUnlocked") === "true") {
+    unlockPreview();
+  }
+} catch (error) {
+  // Ignore storage failures in local preview contexts.
 }
 
 passwordForm.addEventListener("submit", (event) => {
