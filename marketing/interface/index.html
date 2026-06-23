@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FeedOps SEO Insight Engine</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div>
+        <p class="eyebrow">SE Rankings source of truth</p>
+        <h1>Google Australia Desktop Rankings</h1>
+        <p class="subhead">Goal: move every tracked keyword into the top 3.</p>
+      </div>
+      <div class="source">
+        <span>Last read</span>
+        <strong>22 Jun 2026</strong>
+      </div>
+    </header>
+
+    <section class="metrics" aria-label="Ranking summary">
+      <article>
+        <span>Tracked keywords</span>
+        <strong>24</strong>
+      </article>
+      <article>
+        <span>Top 10</span>
+        <strong>16</strong>
+      </article>
+      <article>
+        <span>Top 3</span>
+        <strong>11</strong>
+      </article>
+      <article class="attention">
+        <span>Need attention</span>
+        <strong>13</strong>
+      </article>
+    </section>
+
+    <section class="insight">
+      <h2>What needs attention now</h2>
+      <p>The fastest wins are keywords ranking 4-10. The biggest commercial gaps are product feed management, shopping feed agency, and product feed optimisation.</p>
+    </section>
+
+    <section class="toolbar">
+      <button class="is-active" data-filter="all">All</button>
+      <button data-filter="attention">Needs attention</button>
+      <button data-filter="quick-win">Quick wins</button>
+      <button data-filter="top-3">Top 3</button>
+    </section>
+
+    <section class="panel">
+      <table>
+        <thead>
+          <tr>
+            <th>Keyword</th>
+            <th>Rank</th>
+            <th>Previous</th>
+            <th>Search Vol.</th>
+            <th>Status</th>
+            <th>Insight</th>
+          </tr>
+        </thead>
+        <tbody id="rankings-body"></tbody>
+      </table>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
