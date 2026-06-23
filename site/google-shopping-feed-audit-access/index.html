@@ -158,6 +158,72 @@
       background: #fffaf0;
     }
 
+    .instruction-panel {
+      margin-top: 30px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+    }
+
+    .instruction-panel h3 {
+      margin: 0 0 14px;
+      font-size: 26px;
+      line-height: 1.18;
+    }
+
+    .instruction-panel ol {
+      margin: 0;
+      padding-left: 22px;
+      color: #2d3748;
+    }
+
+    .instruction-panel li {
+      margin: 9px 0;
+    }
+
+    .access-table-wrap {
+      margin-top: 26px;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    .access-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 780px;
+    }
+
+    .access-table th,
+    .access-table td {
+      padding: 18px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .access-table th {
+      background: #edf3f8;
+      color: #253142;
+      font-size: 14px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .access-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .access-table strong {
+      color: var(--ink);
+    }
+
+    .minimum-access {
+      background: #f0fbf7;
+    }
+
     .actions {
       display: flex;
       flex-wrap: wrap;
@@ -290,6 +356,52 @@
         <div class="callout">
           <strong>You stay in control.</strong>
           <p>Access can be removed from Google Merchant Center at any time. The audit does not require a credit card, does not require Google Ads access, and does not commit you to becoming a FeedOps customer.</p>
+        </div>
+        <div class="instruction-panel">
+          <p class="kicker">Minimum access required</p>
+          <h3>Granting FeedOps access to Google Merchant Center</h3>
+          <p>For the free audit, FeedOps only needs <strong>Performance and Insights</strong> access, also known as a reporting-focused role. This lets the audit read reporting data, analyze health metrics, and identify optimization opportunities without changing your product data.</p>
+          <ol>
+            <li>Log in to your Google Merchant Center account.</li>
+            <li>Click the gear icon for settings in the top right-hand corner.</li>
+            <li>Select <strong>People and access</strong> or <strong>Access and services</strong>.</li>
+            <li>Click <strong>Add person</strong> or <strong>Add user</strong>.</li>
+            <li>Enter the FeedOps email address provided by your FeedOps contact, then click <strong>Next</strong>.</li>
+            <li>Choose the access role that matches your service level below.</li>
+            <li>Click <strong>Add user</strong> to send the invitation.</li>
+          </ol>
+          <div class="access-table-wrap">
+            <table class="access-table">
+              <thead>
+                <tr>
+                  <th>Service level</th>
+                  <th>Required access role</th>
+                  <th>What this enables FeedOps to do</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="minimum-access">
+                  <td><strong>Audit Only</strong></td>
+                  <td>Performance and Insights / Reporting Manager</td>
+                  <td>Read report data, analyze feed health metrics, and identify optimization opportunities without changing any feed data.</td>
+                </tr>
+                <tr>
+                  <td><strong>Trial Tier</strong></td>
+                  <td>Standard Access</td>
+                  <td>Publish and update product data. If your existing solution stays active during the trial, FeedOps can use a supplemental feed. Otherwise, FeedOps may connect directly via the Merchant API to manage optimizations.</td>
+                </tr>
+                <tr>
+                  <td><strong>Fully Managed Feed Service</strong></td>
+                  <td>Admin Access</td>
+                  <td>Proactively manage and fix Merchant Center errors, resolve account suspensions, support conversion tracking, manage Google Ads account linking, and complete advanced Merchant API developer registrations.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout">
+            <strong>What happens next?</strong>
+            <p>After you click <strong>Add user</strong>, Google emails an automated invitation to FeedOps. Access will show as pending until FeedOps accepts it. Please notify your FeedOps contact once the invite is sent so the audit or service setup can begin.</p>
+          </div>
         </div>
       </div>
     </section>
