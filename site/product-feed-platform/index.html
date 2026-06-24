@@ -21,7 +21,7 @@
   <meta name="twitter:description" content="FeedOps is a product feed platform for e-commerce teams and media agencies that need to audit, enrich, automate, and improve product data across shopping channels and marketplaces.">
   <meta name="twitter:image" content="https://feedops.com/assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4.png">
   <link rel="icon" href="../assets/feedops.com/wp-content/uploads/2022/05/Feedops-staggered-logo-Final-2-60x60.png" sizes="32x32">
-  <link rel="stylesheet" href="../header-standard.css?v=20260624-utility-active">
+  <link rel="stylesheet" href="../header-standard.css?v=20260624-platform-hero">
   <link rel="stylesheet" href="../footer-standard.css?v=20260619-google-shopping-feed-audit">
   <script type="application/ld+json">
     {
@@ -39,12 +39,12 @@
             "name": "FeedOps",
             "url": "https://feedops.com/"
           },
-          "description": "FeedOps is a product feed platform for e-commerce teams and media agencies that supports feed audits, AI enrichment, AI settings, product data management, feed rules, orders, alerts, connections, and connected channels.",
+          "description": "FeedOps is a product feed platform for e-commerce teams and media agencies that supports feed audits, AI enrichment, AI settings, product data control, feed rules, orders, alerts, connections, and connected channels.",
           "featureList": [
             "Product feed audits",
             "AI product data enrichment",
             "AI settings",
-            "Product data management",
+            "Product data control",
             "Feed rules",
             "Marketplace order monitoring",
             "Feed alerts",
@@ -93,7 +93,7 @@
           "@type": "ImageObject",
           "@id": "https://feedops.com/product-feed-platform/#alerts-image",
           "name": "FeedOps product feed platform - alerts",
-          "description": "FeedOps product feed platform alerts dashboard showing alert status, triggered alerts, OK statuses, add alert controls, and alert management actions.",
+          "description": "FeedOps product feed platform alerts dashboard showing alert status, triggered alerts, OK statuses, add alert controls, and alert action controls.",
           "contentUrl": "https://feedops.com/assets/product-feed-platform/feedops-product-feed-platform-alerts.png",
           "caption": "FeedOps product feed platform - alerts",
           "width": 1786,
@@ -160,7 +160,7 @@
               "name": "Can teams review product feed changes before they go live?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "FeedOps gives teams product data views, manual edits, automated edits, imports, exports, and queue controls so changes can be reviewed and managed before updated product data is sent through feed workflows."
+                "text": "FeedOps gives teams product data views, manual edits, automated edits, imports, exports, and queue controls so changes can be reviewed and approved before updated product data is sent through feed workflows."
               }
             },
             {
@@ -199,13 +199,19 @@
     }
 
     .software-hero {
-      width: min(1180px, calc(100% - 40px));
-      margin: 0 auto;
+      width: 100%;
+      margin: 0;
       padding: 88px 0 96px;
+      padding-inline: max(20px, calc((100% - 1180px) / 2));
+      position: relative;
+      overflow: hidden;
       display: grid;
       grid-template-columns: minmax(0, .9fr) minmax(420px, .8fr);
       gap: 52px;
       align-items: center;
+      background:
+        linear-gradient(120deg, rgba(254, 207, 38, .18), transparent 28%),
+        linear-gradient(160deg, #ffffff 0%, #f6f8fb 58%, #eef5f2 100%);
     }
 
     .software-kicker {
@@ -1131,6 +1137,15 @@
       line-height: 1.55;
     }
 
+    .software-action-note {
+      max-width: 560px;
+      margin: 16px 0 0;
+      color: #4a5568;
+      font-size: 15px;
+      line-height: 1.55;
+      font-weight: 720;
+    }
+
     @media (max-width: 900px) {
       .software-hero,
       .section-grid,
@@ -1165,7 +1180,7 @@
 
     @media (max-width: 620px) {
       .software-hero {
-        padding: 56px 0 72px;
+        padding-block: 56px 72px;
       }
 
       .preview-top {
@@ -1196,15 +1211,16 @@
   <header class="site-header"></header>
 
   <main>
-    <section class="software-hero" id="feed-optimization-software">
+    <section class="software-hero" id="product-feed-platform-software">
       <div>
         <p class="software-kicker">Product Feed Platform</p>
         <h1>Improve feed performance with a product feed platform</h1>
-        <p class="software-lead">FeedOps gives e-commerce teams and media agencies a <strong class="keyword-highlight">product feed platform</strong> to audit, manage, enrich, and improve product feed performance across shopping channels and marketplaces.</p>
+        <p class="software-lead">FeedOps gives e-commerce teams and media agencies a <strong class="keyword-highlight">product feed platform</strong> to audit, control, enrich, and improve product feed performance across shopping channels and marketplaces.</p>
         <div class="software-actions">
           <a class="software-cta" href="../book-live-demo/">Book a demo</a>
           <a class="software-secondary" href="#playbook">Explore the platform</a>
         </div>
+        <p class="software-action-note">A practical fit conversation with a feed-gap review and a short platform walkthrough where it helps.</p>
       </div>
 
       <aside class="software-preview" aria-label="FeedOps product feed platform preview">
@@ -1223,7 +1239,7 @@
           <div class="preview-row"><span class="preview-capability"><span class="preview-dot">AI</span>Enrich with AI</span><span class="preview-use">Improve product data</span><span class="preview-status">Included</span></div>
           <div class="preview-row"><span class="preview-capability"><span class="preview-dot">R</span>Feed Rules</span><span class="preview-use">Automate feed logic</span><span class="preview-status">Included</span></div>
           <div class="preview-row"><span class="preview-capability"><span class="preview-dot">O</span>Orders and Alerts</span><span class="preview-use">Monitor issues</span><span class="preview-status supported">Supported</span></div>
-          <div class="preview-row"><span class="preview-capability"><span class="preview-dot">C</span>Connected Channels</span><span class="preview-use">Manage destinations</span><span class="preview-status supported">Supported</span></div>
+          <div class="preview-row"><span class="preview-capability"><span class="preview-dot">C</span>Connected Channels</span><span class="preview-use">Control destinations</span><span class="preview-status supported">Supported</span></div>
         </div>
       </aside>
     </section>
@@ -1231,8 +1247,8 @@
     <section class="software-section playbook-section" id="playbook">
       <header class="playbook-header">
         <p class="section-kicker">Playbook</p>
-        <h2>The control center for product feed audits, enrichment, and optimisation.</h2>
-        <p class="section-lead">The FeedOps Playbook brings audit data, AI enrichment, and feed optimisation agents into one workflow so teams can see what is holding performance back, choose the right action, and improve product feed performance with a repeatable process.</p>
+        <h2>The control center for product feed audits, enrichment, and feed improvement.</h2>
+        <p class="section-lead">The FeedOps Playbook brings audit data, AI enrichment, and feed improvement agents into one workflow so teams can see what is holding performance back, choose the right action, and improve product feed performance with a repeatable process.</p>
       </header>
 
       <div class="playbook-flow">
@@ -1373,7 +1389,7 @@
         <div class="product-screenshot" aria-label="FeedOps product feed platform alerts interface preview">
           <img
             src="../assets/product-feed-platform/feedops-product-feed-platform-alerts.png"
-            alt="FeedOps product feed platform alerts dashboard showing alert status, triggered alerts, OK statuses, add alert controls, and alert management actions"
+            alt="FeedOps product feed platform alerts dashboard showing alert status, triggered alerts, OK statuses, add alert controls, and alert action controls"
             title="FeedOps product feed platform - alerts"
             loading="lazy"
             decoding="async"
@@ -1401,8 +1417,8 @@
       <div class="section-grid">
         <div>
           <p class="section-kicker">Connections</p>
-          <h2>Manage shopping cart connections and feed configuration.</h2>
-          <p class="section-lead">Connections helps teams check credentials, review API configuration, control mappings, manage feed download schedules, and control how product data is sent from the ecommerce platform into FeedOps, including bulk category inclusion or exclusion. See the <a href="../product-feed-management/#channels">supported channels</a>.</p>
+          <h2>Review shopping cart connections and feed configuration.</h2>
+          <p class="section-lead">Connections helps teams check credentials, review API configuration, control mappings, set feed download schedules, and control how product data is sent from the ecommerce platform into FeedOps, including bulk category inclusion or exclusion. See the <a href="../#channels">supported channels</a>.</p>
           <div class="agent-tags" aria-label="Connections capabilities">
             <span>Connection credentials</span>
             <span>API configuration</span>
@@ -1441,7 +1457,7 @@
 
         <div>
           <p class="section-kicker">Connected Channels</p>
-          <h2>Add and manage the media, marketplace, and feed destinations your product data supports.</h2>
+          <h2>Add and control the media, marketplace, and feed destinations your product data supports.</h2>
           <p class="section-lead">Connected Channels lets teams control where product data is sent, with available channels depending on the FeedOps plan and channel setup. Add or remove destinations for shopping, remarketing, affiliate, marketplace, and product discovery workflows.</p>
           <div class="agent-tags" aria-label="Connected Channels capabilities">
             <span>Add channels</span>
@@ -1458,11 +1474,11 @@
     <section class="software-section accent-section" id="account-settings">
       <div class="account-summary">
         <p class="section-kicker">Account Settings</p>
-        <h2>Manage websites, users, and account details behind your feed workflows.</h2>
-        <p class="section-lead">Once you are on a paid plan, Account Settings gives teams the controls needed to add websites, manage users, and update account details when the business, team, or feed setup changes.</p>
+        <h2>Update websites, users, and account details behind your feed workflows.</h2>
+        <p class="section-lead">Once you are on a paid plan, Account Settings gives teams the controls needed to add websites, invite users, and update account details when the business, team, or feed setup changes.</p>
         <div class="agent-tags" aria-label="Account Settings capabilities">
           <span>Add a website</span>
-          <span>Manage users</span>
+          <span>User access</span>
           <span>Account details</span>
           <span>Paid plan access</span>
         </div>
@@ -1502,6 +1518,6 @@
   </main>
 
   <script src="../header-standard.js?v=20260624-utility-active-final" data-site-root="../" defer></script>
-  <script src="../footer-standard.js?v=20260619-google-shopping-feed-audit" data-site-root="../" defer></script>
+  <script src="../footer-standard.js?v=20260624-footer-explore" data-site-root="../" defer></script>
 </body>
 </html>
