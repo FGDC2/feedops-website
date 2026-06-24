@@ -1,6 +1,7 @@
 (function () {
   var script = document.currentScript;
   var root = script && script.dataset ? script.dataset.siteRoot || "/" : "/";
+  var forcedMode = script && script.dataset ? script.dataset.headerMode || "" : "";
   var expertDefaultEverywhere = !!(script && script.src && (script.src.indexOf("menu-default") !== -1 || script.src.indexOf("mode-nav") !== -1));
   window.feedopsInstallStandardHeader = installHeader;
 
@@ -15,6 +16,7 @@
   }
 
   function currentMode() {
+    if (forcedMode) return forcedMode;
     var path = cleanPath(window.location.pathname);
     if (path === "/product-feed-platform/" || path === "/software/" || path.indexOf("/product-feed-platform/") !== -1 || path.indexOf("/software/") !== -1) return "platform";
     if (path === "/contact_us/" || path.indexOf("/contact_us/") !== -1) return "utility";
