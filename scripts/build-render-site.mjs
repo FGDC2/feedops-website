@@ -236,12 +236,26 @@ function pageRoot(page) {
 }
 
 function pageMode(page) {
+  if (page === "product-feed-platform/" || page === "software/") return "platform";
+  if (page === "contact_us/" || (page || "").startsWith("contact_us/")) return "utility";
   if (page === "product-feed-management/") return "executive";
   if (page === "shopping-feed-agency/") return "agency";
   return "expert";
 }
 
-function navItems(mode) {
+function navItems(mode, page = "") {
+  if (page === "product-feed-platform/" || page === "software/") {
+    return [
+      ["Playbook", "#playbook", "playbook"],
+      ["AI Settings", "#ai-settings", "ai-settings"],
+      ["Product Data", "#product-data", "product-data"],
+      ["Feed Rules", "#feed-rules", "feed-rules"],
+      ["Orders", "#orders", "orders"],
+      ["Alerts", "#alerts", "alerts"],
+      ["Channels", "#connected-channels", "connected-channels"]
+    ];
+  }
+
   const items = {
     expert: [
       ["System", "#agent", "agent"],
@@ -275,10 +289,14 @@ function navItems(mode) {
 function standardHeaderForPage(page) {
   const root = pageRoot(page);
   const mode = pageMode(page);
-  const href = (path) => `${root}${path}`;
+  const href = (path) => path.startsWith("#") ? path : `${root}${path}`;
   const active = (name) => name === mode ? " is-active" : "";
   const modeCurrent = (name) => name === mode ? ' aria-current="page"' : "";
-  const navLinks = navItems(mode).map(([label, url, section]) =>
+  const platformActive = mode === "platform" ? " is-active" : "";
+  const platformCurrent = mode === "platform" ? ' aria-current="page"' : "";
+  const contactActive = mode === "utility" ? " is-active" : "";
+  const contactCurrent = mode === "utility" ? ' aria-current="page"' : "";
+  const navLinks = navItems(mode, page).map(([label, url, section]) =>
     `      <a data-feedops-section="${section}" href="${href(url)}">${label}</a>`
   ).join("");
   return [
@@ -292,7 +310,8 @@ function standardHeaderForPage(page) {
     `          <a class="feedops-mode-option${active("executive")}" data-feedops-mode="executive" href="${href("product-feed-management/")}"${modeCurrent("executive")}>Executive mode</a>`,
     `          <a class="feedops-mode-option${active("agency")}" data-feedops-mode="agency" href="${href("shopping-feed-agency/")}"${modeCurrent("agency")}>Media agency</a>`,
     '        </div>',
-    `        <a class="feedops-mode-link" href="${href("contact_us/")}">Contact</a>`,
+    `        <a class="feedops-mode-link${platformActive}" data-feedops-platform-link href="${href("product-feed-platform/")}"${platformCurrent}>Platform</a>`,
+    `        <a class="feedops-mode-link${contactActive}" data-feedops-contact-link href="${href("contact_us/")}"${contactCurrent}>Contact</a>`,
     '        <a class="feedops-mode-login" href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
     '      </div>',
     '    </div>',
@@ -323,7 +342,8 @@ function standardHeaderForPage(page) {
     navLinks,
     '      </div>',
     '      <div class="feedops-mobile-utility">',
-    `        <a href="${href("contact_us/")}">Contact</a>`,
+    `        <a class="${platformActive.trim()}" data-feedops-platform-link href="${href("product-feed-platform/")}"${platformCurrent}>Platform</a>`,
+    `        <a class="${contactActive.trim()}" data-feedops-contact-link href="${href("contact_us/")}"${contactCurrent}>Contact</a>`,
     '        <a href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
     '      </div>',
     `      <a class="feedops-mobile-cta" href="${href("book-live-demo/")}">Book a demo</a>`,
