@@ -17,6 +17,7 @@
   function currentMode() {
     var path = cleanPath(window.location.pathname);
     if (path === "/product-feed-platform/" || path === "/software/" || path.indexOf("/product-feed-platform/") !== -1 || path.indexOf("/software/") !== -1) return "platform";
+    if (path === "/contact_us/" || path.indexOf("/contact_us/") !== -1) return "utility";
     if (path === "/product-feed-management/") return "executive";
     if (path === "/shopping-feed-agency/") return "agency";
     return "expert";
@@ -64,7 +65,7 @@
       ]
     };
 
-    return items[mode || "expert"];
+    return items[mode] || items.expert;
   }
 
   function standardNavLinks() {
@@ -92,7 +93,7 @@
       '          <a class="feedops-mode-option" data-feedops-mode="agency" href="' + href("shopping-feed-agency/") + '">Media agency</a>',
       "        </div>",
       '        <a class="feedops-mode-link" data-feedops-platform-link href="' + href("product-feed-platform/") + '">Platform</a>',
-      '        <a class="feedops-mode-link" href="' + href("contact_us/") + '">Contact</a>',
+      '        <a class="feedops-mode-link" data-feedops-contact-link href="' + href("contact_us/") + '">Contact</a>',
       '        <a class="feedops-mode-login" href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
       "      </div>",
       "    </div>",
@@ -124,7 +125,7 @@
       "      </div>",
       '      <div class="feedops-mobile-utility">',
       '        <a data-feedops-platform-link href="' + href("product-feed-platform/") + '">Platform</a>',
-      '        <a href="' + href("contact_us/") + '">Contact</a>',
+      '        <a data-feedops-contact-link href="' + href("contact_us/") + '">Contact</a>',
       '        <a href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
       "      </div>",
       '      <a class="feedops-mobile-cta" href="' + href("book-live-demo/") + '">Book a demo</a>',
@@ -182,6 +183,16 @@
       var isPlatformActive = path === "/product-feed-platform/" || path === "/software/";
       link.classList.toggle("is-active", isPlatformActive);
       if (isPlatformActive) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+
+    header.querySelectorAll("[data-feedops-contact-link]").forEach(function (link) {
+      var isContactActive = path === "/contact_us/" || path.indexOf("/contact_us/") !== -1;
+      link.classList.toggle("is-active", isContactActive);
+      if (isContactActive) {
         link.setAttribute("aria-current", "page");
       } else {
         link.removeAttribute("aria-current");
