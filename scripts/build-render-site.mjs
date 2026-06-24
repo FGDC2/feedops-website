@@ -238,9 +238,27 @@ function pageRoot(page) {
 function pageMode(page) {
   if (page === "product-feed-platform/" || page === "software/") return "platform";
   if (page === "contact_us/" || (page || "").startsWith("contact_us/")) return "utility";
+  if (isLearningContentPage(page)) return "utility";
   if (page === "product-feed-management/") return "executive";
   if (page === "shopping-feed-agency/") return "agency";
   return "expert";
+}
+
+function isLearningContentPage(page = "") {
+  return page.startsWith("guide/") ||
+    page.startsWith("feedops/google-shopping-free-listings/") ||
+    [
+      "what-is-a-google-shopping-feed/",
+      "google-shopping-graph-explained/",
+      "product-type-google-shopping/",
+      "google-product-category/",
+      "google-merchant-center-errors/",
+      "google-shopping-ads-not-showing/",
+      "google-shopping-product-title-optimization/",
+      "faq/",
+      "feedonomics-alternative-competitor/",
+      "intelligent-reach-alternative/"
+    ].includes(page);
 }
 
 function navItems(mode, page = "") {
@@ -257,6 +275,7 @@ function navItems(mode, page = "") {
   }
 
   const items = {
+    utility: [],
     expert: [
       ["System", "#agent", "agent"],
       ["Operations", "#operations", "operations"],
@@ -294,8 +313,9 @@ function standardHeaderForPage(page) {
   const modeCurrent = (name) => name === mode ? ' aria-current="page"' : "";
   const platformActive = mode === "platform" ? " is-active" : "";
   const platformCurrent = mode === "platform" ? ' aria-current="page"' : "";
-  const contactActive = mode === "utility" ? " is-active" : "";
-  const contactCurrent = mode === "utility" ? ' aria-current="page"' : "";
+  const isContactPage = page === "contact_us/" || (page || "").startsWith("contact_us/");
+  const contactActive = isContactPage ? " is-active" : "";
+  const contactCurrent = isContactPage ? ' aria-current="page"' : "";
   const navLinks = navItems(mode, page).map(([label, url, section]) =>
     `      <a data-feedops-section="${section}" href="${href(url)}">${label}</a>`
   ).join("");

@@ -18,9 +18,25 @@
     var path = cleanPath(window.location.pathname);
     if (path === "/product-feed-platform/" || path === "/software/" || path.indexOf("/product-feed-platform/") !== -1 || path.indexOf("/software/") !== -1) return "platform";
     if (path === "/contact_us/" || path.indexOf("/contact_us/") !== -1) return "utility";
+    if (isLearningContentPath(path)) return "utility";
     if (path === "/product-feed-management/") return "executive";
     if (path === "/shopping-feed-agency/") return "agency";
     return "expert";
+  }
+
+  function isLearningContentPath(path) {
+    return path.indexOf("/guide/") === 0 ||
+      path.indexOf("/feedops/google-shopping-free-listings/") === 0 ||
+      path === "/what-is-a-google-shopping-feed/" ||
+      path === "/google-shopping-graph-explained/" ||
+      path === "/product-type-google-shopping/" ||
+      path === "/google-product-category/" ||
+      path === "/google-merchant-center-errors/" ||
+      path === "/google-shopping-ads-not-showing/" ||
+      path === "/google-shopping-product-title-optimization/" ||
+      path === "/faq/" ||
+      path === "/feedonomics-alternative-competitor/" ||
+      path === "/intelligent-reach-alternative/";
   }
 
   function navItems(mode) {
@@ -38,6 +54,7 @@
     }
 
     var items = {
+      utility: [],
       expert: [
         ["System", "#agent", "agent"],
         ["Operations", "#operations", "operations"],
