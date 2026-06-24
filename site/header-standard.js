@@ -16,6 +16,7 @@
 
   function currentMode() {
     var path = cleanPath(window.location.pathname);
+    if (path === "/product-feed-platform/" || path === "/software/" || path.indexOf("/product-feed-platform/") !== -1 || path.indexOf("/software/") !== -1) return "platform";
     if (path === "/product-feed-management/") return "executive";
     if (path === "/shopping-feed-agency/") return "agency";
     return "expert";
