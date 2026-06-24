@@ -5,6 +5,9 @@
   window.feedopsInstallStandardHeader = installHeader;
 
   function href(path) {
+    if (path && path.charAt(0) === "#") {
+      return path;
+    }
     if (root === "/" || /^https?:\/\//.test(root)) {
       return root + path;
     }
@@ -19,6 +22,19 @@
   }
 
   function navItems(mode) {
+    var path = cleanPath(window.location.pathname);
+    if (path === "/product-feed-platform/" || path === "/software/" || path.indexOf("/product-feed-platform/") !== -1 || path.indexOf("/software/") !== -1) {
+      return [
+        ["Playbook", "#playbook", "playbook"],
+        ["AI Settings", "#ai-settings", "ai-settings"],
+        ["Product Data", "#product-data", "product-data"],
+        ["Feed Rules", "#feed-rules", "feed-rules"],
+        ["Orders", "#orders", "orders"],
+        ["Alerts", "#alerts", "alerts"],
+        ["Channels", "#connected-channels", "connected-channels"],
+      ];
+    }
+
     var items = {
       expert: [
         ["System", "#agent", "agent"],
@@ -74,6 +90,7 @@
       '          <a class="feedops-mode-option" data-feedops-mode="executive" href="' + href("product-feed-management/") + '">Executive mode</a>',
       '          <a class="feedops-mode-option" data-feedops-mode="agency" href="' + href("shopping-feed-agency/") + '">Media agency</a>',
       "        </div>",
+      '        <a class="feedops-mode-link" data-feedops-platform-link href="' + href("product-feed-platform/") + '">Platform</a>',
       '        <a class="feedops-mode-link" href="' + href("contact_us/") + '">Contact</a>',
       '        <a class="feedops-mode-login" href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
       "      </div>",
@@ -105,6 +122,7 @@
       mobileNavLinks(),
       "      </div>",
       '      <div class="feedops-mobile-utility">',
+      '        <a data-feedops-platform-link href="' + href("product-feed-platform/") + '">Platform</a>',
       '        <a href="' + href("contact_us/") + '">Contact</a>',
       '        <a href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
       "      </div>",
@@ -158,6 +176,16 @@
         cta.removeAttribute("aria-current");
       }
     }
+
+    header.querySelectorAll("[data-feedops-platform-link]").forEach(function (link) {
+      var isPlatformActive = path === "/product-feed-platform/" || path === "/software/";
+      link.classList.toggle("is-active", isPlatformActive);
+      if (isPlatformActive) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
 
     var mobileCta = header.querySelector(".feedops-mobile-cta");
     if (mobileCta) {

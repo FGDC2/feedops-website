@@ -108,6 +108,7 @@ body {
 
 #feedops-standard-header .feedops-mode-link:hover,
 #feedops-standard-header .feedops-mode-link:focus-visible,
+#feedops-standard-header .feedops-mode-link.is-active,
 #feedops-standard-header .feedops-mode-login:hover,
 #feedops-standard-header .feedops-mode-login:focus-visible {
   border-bottom-color: #176e58;
