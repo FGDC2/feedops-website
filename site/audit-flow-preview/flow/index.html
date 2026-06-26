@@ -1,0 +1,2225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FeedOps Audit Flow Pixel Copy</title>
+  <meta name="robots" content="noindex, nofollow">
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      if (!params.has("step")) {
+        window.location.replace("../");
+      }
+    })();
+  </script>
+  <style>
+:root {
+  --frame-width: 1280;
+  --frame-height: 720;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.icon-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.password-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #f6f8fb;
+}
+
+.password-gate.is-unlocked {
+  display: none;
+}
+
+.password-card {
+  width: min(420px, 100%);
+  padding: 34px;
+  border: 1px solid #dfe5ed;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 24px 70px rgba(16, 24, 40, .12);
+  color: #30343b;
+}
+
+.password-logo {
+  margin-bottom: 24px;
+  font-size: 36px;
+  font-weight: 300;
+}
+
+.password-logo span::after {
+  content: "...";
+  color: #f5b51b;
+  font-weight: 700;
+  letter-spacing: -.08em;
+}
+
+.password-card h1 {
+  margin: 0 0 8px;
+  font-size: 26px;
+  line-height: 1.15;
+}
+
+.password-card p {
+  margin: 0 0 18px;
+  color: #536072;
+}
+
+.password-card label {
+  display: block;
+  margin-bottom: 8px;
+  color: #30343b;
+  font-weight: 800;
+}
+
+.password-card input {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid #cfd8e3;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.password-card input:focus {
+  border-color: #20a957;
+  outline: 3px solid rgba(32, 169, 87, .16);
+}
+
+.password-card .password-error {
+  margin: 10px 0 0;
+  color: #b42318;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.password-card button {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 18px;
+  border: 0;
+  border-radius: 8px;
+  background: #20a957;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.prototype {
+  min-height: 100vh;
+  display: grid;
+  place-items: start center;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.prototype[data-step="landing"] {
+  display: block;
+  overflow: visible;
+}
+
+.frame {
+  position: relative;
+  display: none;
+  width: 100vw;
+  aspect-ratio: 1280 / 720;
+  margin: 0 auto;
+}
+
+.prototype[data-step="landing"] [data-screen="landing"],
+.prototype[data-step="connect"] [data-screen="connect"],
+.prototype[data-step="google"] [data-screen="google"],
+.prototype[data-step="merchant"] [data-screen="merchant"],
+.prototype[data-step="merchant-open"] [data-screen="merchant-open"],
+.prototype[data-step="merchant-selected"] [data-screen="merchant-selected"],
+.prototype[data-step="account"] [data-screen="account"],
+.prototype[data-step="ready"] [data-screen="ready"],
+.prototype[data-step="error"] [data-screen="error"] {
+  display: block;
+}
+
+.prototype[data-step="landing"] [data-screen="landing"] {
+  width: 100vw;
+  height: 100vh;
+  aspect-ratio: auto;
+}
+
+.prototype[data-step="landing"] .prototype-prev,
+.prototype[data-step="landing"] .prototype-next,
+.prototype[data-step="landing"] .prototype-restart {
+  display: none;
+}
+
+.frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.live-site-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 15.5%;
+  display: grid;
+  grid-template-rows: 42% 58%;
+  background: #ffffff;
+  box-shadow: 0 1px 7px rgba(16, 24, 40, .12);
+}
+
+.audience-bar,
+.website-nav {
+  display: flex;
+  align-items: center;
+  color: #101820;
+}
+
+.audience-bar {
+  justify-content: center;
+  gap: 1.2vw;
+  border-bottom: 1px solid #d9dee6;
+  background: #f7f8fb;
+  font-size: clamp(8px, .76vw, 15px);
+  font-weight: 800;
+}
+
+.audience-bar span {
+  color: #3c4652;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.audience-bar strong,
+.audience-bar b {
+  min-width: 8.2vw;
+  padding: .62vw 1.25vw;
+  border-radius: 999px;
+  text-align: center;
+}
+
+.audience-bar strong {
+  border: 1px solid #c8e4dd;
+  background: #eaf7f3;
+  color: #177263;
+}
+
+.audience-bar b {
+  font-weight: 800;
+}
+
+.audience-bar a {
+  font-weight: 900;
+}
+
+.website-nav {
+  justify-content: center;
+  gap: 7vw;
+  border-bottom: 1px solid #dde2e8;
+  background: #ffffff;
+}
+
+.website-nav nav {
+  display: flex;
+  gap: 2.25vw;
+  align-items: center;
+  font-size: clamp(9px, .83vw, 16px);
+  font-weight: 900;
+}
+
+.website-nav .demo-link {
+  display: grid;
+  place-items: center;
+  min-width: 7.3vw;
+  min-height: 2.9vw;
+  border: 0;
+  border-radius: .42vw;
+  background: #ffc928;
+  color: #111720;
+  font-size: clamp(9px, .85vw, 17px);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.nav-logo {
+  margin: 0;
+  color: #30343b !important;
+  font-size: clamp(20px, 2vw, 40px);
+  font-weight: 300;
+}
+
+.live-site-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  height: 18.8%;
+  padding: 2.2% 21% 1.8%;
+  display: grid;
+  grid-template-columns: 1.35fr .75fr 1fr .75fr;
+  gap: 4.5%;
+  border-top: .35vw solid #f4be22;
+  background: #111720;
+  color: #ffffff;
+  font-size: clamp(7px, .58vw, 12px);
+  line-height: 1.25;
+}
+
+.live-site-footer h3 {
+  margin: 0 0 .6vw;
+  color: #ffd34e;
+  font-size: clamp(7px, .62vw, 12px);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.live-site-footer p,
+.live-site-footer a {
+  display: block;
+  margin: 0 0 .4vw;
+  color: #e7ecf2;
+  text-decoration: none;
+}
+
+.live-site-footer .footer-cta {
+  display: block;
+  width: 78%;
+  margin-top: .6vw;
+  padding: .48vw .8vw;
+  border: 1px solid rgba(255, 211, 78, .45);
+  border-radius: .35vw;
+  color: #ffffff;
+}
+
+.live-site-footer .footer-cta-secondary {
+  margin-top: 0;
+  border-top: 0;
+  color: #ffd34e;
+}
+
+.footer-logo {
+  margin-bottom: .8vw;
+  color: #ffffff;
+  font-size: clamp(15px, 1.55vw, 31px);
+  font-weight: 300;
+  line-height: 1;
+}
+
+.footer-logo span::after {
+  content: "...";
+  color: #f5b51b;
+  font-weight: 700;
+  letter-spacing: -.08em;
+}
+
+.hotspot {
+  position: absolute;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hotspot:focus-visible {
+  outline: 2px solid #1a73e8;
+  outline-offset: 2px;
+}
+
+.landing-cta {
+  left: 8.1%;
+  top: 62.7%;
+  width: 24.8%;
+  height: 6.3%;
+}
+
+.landing-reassurance {
+  position: absolute;
+  left: 17.2%;
+  top: 76.6%;
+  z-index: 3;
+  width: 28%;
+  display: grid;
+  gap: .35vw;
+  color: #4d5963;
+  font-size: clamp(7px, .7vw, 13px);
+  line-height: 1.25;
+}
+
+.landing-reassurance p {
+  margin: 0;
+}
+
+.audit-site-page {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #fbfcff;
+  color: #101820;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+.audit-site-page .live-site-header {
+  height: 18.2%;
+}
+
+.audit-site-hero {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 18.2%;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr);
+  gap: 4.2%;
+  align-items: center;
+  padding: 4.3% 7.9% 5%;
+  border-bottom: 1px solid #d8dee8;
+  background:
+    linear-gradient(135deg, rgba(28, 140, 111, .10), transparent 34%),
+    linear-gradient(180deg, #fff 0%, #f6f9fd 100%);
+}
+
+.audit-site-kicker {
+  margin: 0 0 .9vw;
+  color: #176e58;
+  font-size: clamp(8px, .75vw, 13px);
+  font-weight: 950;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.audit-site-hero h1 {
+  margin: 0 0 1.25vw;
+  max-width: 45vw;
+  color: #101820;
+  font-size: clamp(32px, 4.3vw, 58px);
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
+.audit-site-copy {
+  max-width: 45vw;
+  margin: 0 0 1.55vw;
+  color: #536072;
+  font-size: clamp(13px, 1.32vw, 19px);
+  line-height: 1.58;
+}
+
+.audit-site-actions {
+  display: flex;
+  gap: .9vw;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.audit-site-button {
+  min-height: 3vw;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.1vw;
+  border: 1px solid transparent;
+  border-radius: .55vw;
+  background: #fecf26;
+  color: #111;
+  font-size: clamp(10px, .95vw, 15px);
+  font-weight: 950;
+  box-shadow: 0 8px 18px rgba(254, 207, 38, .22);
+}
+
+.audit-site-button.secondary {
+  border-color: #d8dee8;
+  background: #ffffff;
+  color: #243041;
+  box-shadow: none;
+}
+
+.audit-site-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7vw 1.4vw;
+  margin-top: 1.55vw;
+}
+
+.audit-site-trust span {
+  display: inline-flex;
+  align-items: center;
+  color: #344054;
+  font-size: clamp(8px, .85vw, 13px);
+  font-weight: 850;
+}
+
+.audit-site-trust span::before {
+  content: "";
+  width: .55vw;
+  height: .55vw;
+  flex: 0 0 auto;
+  margin-right: .55vw;
+  border-radius: 999px;
+  background: #1c8c6f;
+}
+
+.audit-site-card {
+  overflow: hidden;
+  border: 1px solid #d8dee8;
+  border-radius: .65vw;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(17, 24, 39, .08);
+}
+
+.audit-site-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.audit-site-summary {
+  display: grid;
+  gap: .8vw;
+  padding: 1.3vw;
+  border-top: 1px solid #d8dee8;
+}
+
+.audit-site-score {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1vw;
+  align-items: center;
+  color: #344054;
+  font-size: clamp(9px, .9vw, 14px);
+  font-weight: 850;
+}
+
+.audit-site-bar {
+  height: .62vw;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #eef2f7;
+}
+
+.audit-site-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #1c8c6f;
+}
+
+.connect-merchant {
+  left: 33.9%;
+  top: 36.9%;
+  width: 32.2%;
+  height: 7.2%;
+}
+
+.flow-step {
+  display: grid;
+  gap: .28vw;
+  color: #30343b;
+}
+
+.flow-step::before {
+  content: "";
+  width: 100%;
+  height: .32vw;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #20a957 0 50%, #e2e7ee 50% 100%);
+}
+
+.flow-step span {
+  width: max-content;
+  padding: .28vw .62vw;
+  border: 1px solid #dbe5e1;
+  border-radius: 999px;
+  background: #effaf5;
+  color: #167348;
+  font-size: clamp(7px, .62vw, 12px);
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.flow-step strong {
+  font-size: clamp(9px, .76vw, 14px);
+  line-height: 1.2;
+}
+
+.flow-step-connect {
+  position: absolute;
+  left: 50%;
+  top: 20.8%;
+  z-index: 3;
+  width: auto;
+  transform: translateX(-50%);
+  justify-items: center;
+  text-align: center;
+}
+
+.flow-step-connect::before {
+  content: none;
+}
+
+.flow-step-connect span {
+  padding: .34vw .78vw;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, .08);
+}
+
+.flow-step-connect strong {
+  display: none;
+}
+
+.connect-reassurance,
+.merchant-reassurance {
+  position: absolute;
+  z-index: 2;
+  width: 24%;
+  display: grid;
+  justify-items: center;
+  gap: .45vw;
+  color: #4d5963;
+  font-size: clamp(8px, .78vw, 15px);
+  text-align: center;
+}
+
+.connect-reassurance {
+  left: 38%;
+  top: 43.8%;
+}
+
+.merchant-reassurance {
+  left: 38%;
+  top: 47.3%;
+}
+
+.connect-reassurance p,
+.merchant-reassurance p {
+  margin: 0;
+}
+
+.connect-reassurance a,
+.merchant-reassurance a {
+  border: 0;
+  background: transparent;
+  color: #176b83;
+  font: inherit;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: .18em;
+  cursor: pointer;
+}
+
+.access-dialog {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  width: min(31vw, 420px);
+  padding: 1.8vw 2vw;
+  border: 1px solid #dfe4e8;
+  border-radius: .7vw;
+  background: #ffffff;
+  box-shadow: 0 20px 45px rgba(16, 24, 40, .18);
+  color: #101820;
+}
+
+.access-dialog h2 {
+  margin: 0 0 1vw;
+  font-size: clamp(15px, 1.3vw, 24px);
+}
+
+.access-dialog ul {
+  margin: 0 0 1.3vw;
+  padding-left: 1.2vw;
+  color: #3c4652;
+  font-size: clamp(10px, .9vw, 16px);
+  line-height: 1.55;
+}
+
+.access-dialog button {
+  width: 100%;
+  min-height: 2.8vw;
+  border: 0;
+  border-radius: .4vw;
+  background: #20a957;
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.google-cancel {
+  left: 51.6%;
+  top: 57.9%;
+  width: 12.4%;
+  height: 5.2%;
+}
+
+.google-continue {
+  left: 64.3%;
+  top: 57.9%;
+  width: 12.4%;
+  height: 5.2%;
+}
+
+.merchant-select {
+  left: 29.9%;
+  top: 30.1%;
+  width: 42.2%;
+  height: 5.6%;
+}
+
+.merchant-option {
+  left: 32.4%;
+  top: 38.1%;
+  width: 35.9%;
+  height: 4.1%;
+}
+
+.merchant-continue {
+  left: 47.8%;
+  top: 37.2%;
+  width: 10.2%;
+  height: 7.4%;
+}
+
+.account-plain-screen {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  padding-top: 13.4%;
+  background: #f7f9fc;
+  color: #30343b;
+}
+
+.account-plain-screen::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 11.8%;
+  border-bottom: 1px solid #edf0f3;
+  background: #ffffff;
+}
+
+.account-logo {
+  position: absolute;
+  left: 3.15%;
+  top: 4.3%;
+  z-index: 2;
+  font-size: clamp(22px, 2.55vw, 50px);
+  font-weight: 300;
+}
+
+.account-logo span::after {
+  content: "...";
+  color: #f5b51b;
+  font-weight: 700;
+  letter-spacing: -.08em;
+}
+
+.audit-silhouette {
+  position: absolute;
+  left: 54%;
+  top: 26%;
+  z-index: 1;
+  width: 28%;
+  height: 42%;
+  border: 1px solid rgba(203, 213, 225, .7);
+  border-radius: .9vw;
+  background: rgba(255, 255, 255, .55);
+  box-shadow: 0 22px 70px rgba(16, 24, 40, .06);
+  opacity: .72;
+}
+
+.audit-silhouette::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, rgba(247, 249, 252, .18), rgba(247, 249, 252, .78));
+  backdrop-filter: blur(.4px);
+}
+
+.silhouette-free-badge {
+  position: absolute;
+  right: 6%;
+  top: 7%;
+  z-index: 1;
+  padding: .32vw .68vw;
+  border: 1px solid rgba(32, 169, 87, .24);
+  border-radius: 999px;
+  background: rgba(239, 250, 245, .82);
+  color: #177348;
+  font-size: clamp(7px, .58vw, 11px);
+  font-weight: 850;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 18px rgba(16, 24, 40, .06);
+}
+
+.silhouette-header {
+  position: absolute;
+  left: 5.5%;
+  top: 7%;
+  width: 54%;
+  height: 2.4vw;
+  border-radius: .45vw;
+  background: #e8edf3;
+}
+
+.silhouette-card {
+  position: absolute;
+  border: 1px solid #dfe5ed;
+  border-radius: .65vw;
+  background: #ffffff;
+}
+
+.silhouette-score {
+  left: 5.5%;
+  top: 23%;
+  width: 42%;
+  height: 42%;
+}
+
+.silhouette-ring {
+  position: absolute;
+  left: 12%;
+  top: 17%;
+  width: 4.9vw;
+  height: 4.9vw;
+  border: .58vw solid #e5ebf1;
+  border-top-color: #20a957;
+  border-radius: 999px;
+  opacity: .8;
+}
+
+.silhouette-lines {
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: 12%;
+  display: grid;
+  gap: .42vw;
+}
+
+.silhouette-summary {
+  right: 5.5%;
+  top: 23%;
+  width: 41%;
+  height: 42%;
+  display: grid;
+  align-content: center;
+  gap: .65vw;
+  padding: 1vw;
+}
+
+.silhouette-table {
+  left: 5.5%;
+  right: 5.5%;
+  bottom: 7%;
+  height: 21%;
+  display: grid;
+  align-content: center;
+  gap: .52vw;
+  padding: .85vw 1vw;
+}
+
+.silhouette-lines span,
+.silhouette-summary span,
+.silhouette-table span {
+  display: block;
+  height: .42vw;
+  border-radius: 999px;
+  background: #dbe3ec;
+}
+
+.silhouette-summary span:nth-child(1),
+.silhouette-table span:nth-child(1) {
+  width: 82%;
+}
+
+.silhouette-summary span:nth-child(2),
+.silhouette-table span:nth-child(2) {
+  width: 64%;
+}
+
+.silhouette-summary span:nth-child(3),
+.silhouette-table span:nth-child(3) {
+  width: 72%;
+}
+
+.silhouette-table span:nth-child(4) {
+  width: 54%;
+}
+
+.account-form-card {
+  position: relative;
+  z-index: 2;
+  width: 31.8%;
+  margin-inline: auto;
+  padding: 1.25vw 1.85vw 1.35vw;
+  border: 1px solid #dfe5ed;
+  border-radius: .72vw;
+  background: #ffffff;
+  box-shadow: 0 20px 55px rgba(16, 24, 40, .08);
+}
+
+.flow-step-card {
+  margin-bottom: .82vw;
+}
+
+.flow-step-card::before {
+  height: .24vw;
+}
+
+.flow-step-card span {
+  padding: .22vw .54vw;
+}
+
+.account-form-card h2 {
+  margin: 0 0 .52vw;
+  font-size: clamp(15px, 1.05vw, 21px);
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+.account-form-card p {
+  margin: 0 0 .7vw;
+  color: #4d5963;
+  font-size: clamp(9px, .72vw, 14px);
+  line-height: 1.38;
+}
+
+.account-form-card .next-step-note {
+  margin-bottom: .82vw;
+  padding: .58vw .72vw;
+  border: 1px solid #dcefe7;
+  border-radius: .42vw;
+  background: #f3fbf7;
+  color: #176b4f;
+  font-size: clamp(8px, .62vw, 12px);
+  font-weight: 750;
+}
+
+.account-form-card label {
+  display: block;
+  margin: .48vw 0 .22vw;
+  color: #4b5563;
+  font-size: clamp(8px, .62vw, 12px);
+  font-weight: 700;
+}
+
+.account-form-card label span {
+  font-weight: 500;
+}
+
+.form-field {
+  height: 2.45vw;
+  display: flex;
+  align-items: center;
+  padding: 0 .82vw;
+  border: 1px solid #e3e7ed;
+  border-radius: .42vw;
+  color: #9aa3af;
+  font-size: clamp(9px, .72vw, 14px);
+}
+
+.form-field-wide {
+  width: 100%;
+}
+
+.account-type-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .72vw;
+}
+
+.account-type-card {
+  min-height: 2.85vw;
+  display: flex;
+  align-items: center;
+  gap: .52vw;
+  padding: .62vw .78vw;
+  border: 1px solid #e3e7ed;
+  border-radius: .42vw;
+  color: #30343b;
+  font-size: clamp(8px, .66vw, 13px);
+  font-weight: 700;
+}
+
+.account-type-card span {
+  width: .82vw;
+  height: .82vw;
+  flex: 0 0 auto;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  background: #ffffff;
+}
+
+.account-reassurance {
+  margin: .18vw 0 0 !important;
+  font-size: clamp(7px, .56vw, 11px) !important;
+  line-height: 1.3 !important;
+  text-align: center;
+}
+
+.account-access-note {
+  margin: .58vw 0 .18vw !important;
+  color: #4d5963 !important;
+  font-size: clamp(7px, .58vw, 11px) !important;
+  line-height: 1.28 !important;
+  text-align: center;
+}
+
+.account-access-link {
+  display: block;
+  margin-bottom: .18vw;
+  color: #176b83;
+  font-size: clamp(7px, .58vw, 11px);
+  font-weight: 800;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: .18em;
+}
+
+.account-button-rewrite {
+  height: 2.8vw;
+  display: grid;
+  place-items: center;
+  border-radius: .45vw;
+  background: #20a957;
+  color: #ffffff;
+  font-size: clamp(9px, .72vw, 14px);
+  font-weight: 700;
+}
+
+.create-account {
+  left: 36%;
+  top: 74.6%;
+  z-index: 4;
+  width: 28%;
+  height: 5%;
+}
+
+.audit-live-screen {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border: 1px solid #dbe1e8;
+  background: #f5f7fa;
+  color: #1f2933;
+  font-size: clamp(8px, .72vw, 14px);
+}
+
+.audit-live-screen header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 6.5%;
+  display: flex;
+  align-items: center;
+  gap: 1.5vw;
+  padding: 0 1.6vw;
+  border-bottom: 1px solid #dbe1e8;
+  background: #ffffff;
+}
+
+.audit-menu-icon {
+  width: 1.1vw;
+  height: 1.1vw;
+  color: #111827;
+}
+
+.audit-logo {
+  font-size: clamp(18px, 1.65vw, 32px);
+  font-weight: 300;
+}
+
+.audit-logo span::after {
+  content: "...";
+  color: #f5b51b;
+  font-weight: 700;
+  letter-spacing: -.08em;
+}
+
+.audit-site-pill {
+  min-width: 8vw;
+  padding: .48vw .8vw;
+  border: 1px solid #dce2ea;
+  border-radius: .34vw;
+  background: #ffffff;
+  font-weight: 650;
+}
+
+.audit-site-pill::after {
+  content: "";
+  display: inline-block;
+  margin-left: .8vw;
+  border-left: .24vw solid transparent;
+  border-right: .24vw solid transparent;
+  border-top: .32vw solid #111827;
+  vertical-align: middle;
+}
+
+.audit-user {
+  margin-left: auto;
+  display: grid;
+  justify-items: end;
+  gap: .1vw;
+}
+
+.audit-user strong {
+  font-size: clamp(7px, .62vw, 12px);
+}
+
+.audit-user span {
+  font-size: clamp(7px, .58vw, 11px);
+}
+
+.audit-avatar {
+  width: 2.2vw;
+  height: 2.2vw;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: #276f1f;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.audit-live-screen aside {
+  position: absolute;
+  left: 0;
+  top: 6.5%;
+  bottom: 0;
+  width: 14.4%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25vw;
+  padding: 2vw 1.4vw;
+  border-right: 1px solid #dbe1e8;
+  background: #ffffff;
+  color: #3f4a57;
+}
+
+.audit-live-screen aside b,
+.audit-live-screen aside strong,
+.audit-live-screen aside > span {
+  display: flex;
+  align-items: center;
+  gap: .75vw;
+  min-height: 1.65vw;
+}
+
+.audit-live-screen aside svg {
+  width: 1.2vw;
+  height: 1.2vw;
+  color: #6b7280;
+}
+
+.audit-live-screen aside strong {
+  color: #126db3;
+}
+
+.audit-live-screen aside strong svg {
+  color: #3478f6;
+}
+
+.audit-live-screen aside em {
+  margin-left: .3vw;
+  padding: .2vw .45vw;
+  border-radius: .32vw;
+  background: #f1ddff;
+  color: #7b1fc7;
+  font-style: normal;
+  font-size: clamp(7px, .54vw, 10px);
+  font-weight: 800;
+}
+
+.app-locked,
+.app-info {
+  position: relative;
+  cursor: help;
+}
+
+.app-locked:not(button) {
+  color: #5d6673;
+}
+
+.app-locked .info-mini,
+.app-info .info-mini {
+  width: .9vw;
+  height: .9vw;
+  margin-left: auto;
+  color: #3478f6;
+  stroke-width: 2.2;
+}
+
+button.app-locked .info-mini,
+.audit-filter.app-locked .info-mini {
+  width: .78vw;
+  height: .78vw;
+  margin-left: .45vw;
+  color: #3478f6;
+  vertical-align: -.12vw;
+}
+
+.lock-tooltip {
+  position: absolute;
+  left: calc(100% + .22vw);
+  top: 50%;
+  z-index: 30;
+  width: 18.8vw;
+  padding: .9vw;
+  border: 1px solid #dbe1e8;
+  border-radius: .55vw;
+  background: #ffffff;
+  color: #263241;
+  box-shadow: 0 18px 46px rgba(16, 24, 40, .2);
+  font-size: clamp(7px, .62vw, 12px);
+  font-weight: 650;
+  line-height: 1.35;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%) translateX(-.35vw);
+  transition: opacity .15s ease, transform .15s ease;
+}
+
+.lock-tooltip::before {
+  content: "";
+  position: absolute;
+  left: -.42vw;
+  top: 50%;
+  width: .8vw;
+  height: .8vw;
+  border-left: 1px solid #dbe1e8;
+  border-bottom: 1px solid #dbe1e8;
+  background: #ffffff;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.lock-tooltip::after {
+  content: "";
+  position: absolute;
+  left: -.85vw;
+  top: 0;
+  width: .9vw;
+  height: 100%;
+}
+
+.tooltip-title,
+.tooltip-copy {
+  display: block;
+}
+
+.tooltip-title {
+  margin-bottom: .3vw;
+  color: #101820;
+  font-size: clamp(8px, .72vw, 14px);
+  font-weight: 900;
+}
+
+.tooltip-copy {
+  color: #536072;
+  font-weight: 650;
+}
+
+.tooltip-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45vw;
+  margin-top: .7vw;
+}
+
+.lock-tooltip a {
+  display: block;
+  padding: .38vw .52vw;
+  border: 1px solid #dbe1e8;
+  border-radius: .34vw;
+  background: #f8fafc;
+  color: #176e58;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.app-locked:hover .lock-tooltip,
+.app-info:hover .lock-tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-50%) translateX(0);
+}
+
+.audit-ai-actions .lock-tooltip,
+.audit-tabs .lock-tooltip,
+.audit-score-row .lock-tooltip,
+.audit-table-row .lock-tooltip,
+.audit-filter .lock-tooltip {
+  left: 50%;
+  top: calc(100% + .22vw);
+  transform: translateX(-50%) translateY(-.35vw);
+}
+
+.audit-ai-actions .lock-tooltip::before,
+.audit-tabs .lock-tooltip::before,
+.audit-score-row .lock-tooltip::before,
+.audit-table-row .lock-tooltip::before,
+.audit-filter .lock-tooltip::before {
+  left: 50%;
+  top: -.38vw;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.audit-ai-actions .lock-tooltip::after,
+.audit-tabs .lock-tooltip::after,
+.audit-score-row .lock-tooltip::after,
+.audit-table-row .lock-tooltip::after,
+.audit-filter .lock-tooltip::after {
+  left: 0;
+  top: -.85vw;
+  width: 100%;
+  height: .9vw;
+}
+
+.audit-ai-actions .app-locked:hover .lock-tooltip,
+.audit-tabs .app-locked:hover .lock-tooltip,
+.audit-score-row .app-locked:hover .lock-tooltip,
+.audit-table-row.app-locked:hover .lock-tooltip,
+.audit-filter.app-locked:hover .lock-tooltip {
+  transform: translateX(-50%) translateY(0);
+}
+
+.audit-sidebar-bottom {
+  margin-top: auto;
+  display: grid;
+  gap: 0;
+  border-top: 1px solid #edf0f4;
+}
+
+.audit-sidebar-bottom span,
+.audit-sidebar-bottom a {
+  padding: .8vw 0;
+  border-bottom: 1px solid #edf0f4;
+  color: inherit;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.audit-live-screen main {
+  position: absolute;
+  left: 14.4%;
+  top: 6.5%;
+  right: 0;
+  bottom: 0;
+  padding: .9vw 1vw 1.2vw;
+}
+
+.audit-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: .8vw;
+}
+
+.audit-playbook-title {
+  display: flex;
+  align-items: center;
+  gap: .9vw;
+}
+
+.audit-topline h2 {
+  margin: 0;
+  font-size: clamp(14px, 1.2vw, 23px);
+}
+
+.audit-playbook-title button {
+  min-height: 2.5vw;
+  padding: 0 1.2vw;
+  border: 1px solid #dbe1e8;
+  border-radius: .38vw;
+  background: #ffffff;
+  font: inherit;
+  font-weight: 700;
+}
+
+.audit-playbook-title button svg {
+  width: 1.1vw;
+  height: 1.1vw;
+  margin-right: .5vw;
+  color: #3478f6;
+  vertical-align: -.22vw;
+}
+
+.audit-playbook-title span {
+  padding: .34vw .65vw;
+  border-radius: .35vw;
+  background: #f1ddff;
+  color: #7b1fc7;
+  font-weight: 800;
+}
+
+.audit-playbook-title a {
+  color: #006df0;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.wireframe-toggle {
+  min-height: 1.85vw;
+  padding: 0 .62vw;
+  border: 1px dashed #94a3b8;
+  border-radius: .34vw;
+  background: #fff;
+  color: #64748b;
+  font: inherit;
+  font-size: clamp(7px, .54vw, 10px);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.wireframe-toggle-error {
+  border-color: #f1a8a8;
+  color: #b42318;
+}
+
+.audit-topline p {
+  margin: 0;
+  color: #2467b4;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.audit-ai-actions {
+  display: flex;
+  align-items: center;
+  gap: .8vw;
+}
+
+.audit-ai-actions button {
+  min-height: 2.1vw;
+  padding: 0 1vw;
+  border: 1px solid #dbe1e8;
+  border-radius: .38vw;
+  background: #ffffff;
+  color: #2467b4;
+  font: inherit;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.audit-tabs {
+  display: flex;
+  align-items: end;
+  height: 2.9vw;
+}
+
+.audit-tabs span,
+.audit-tabs strong {
+  min-width: 9.5vw;
+  padding: .85vw 1vw;
+  border: 1px solid #dbe1e8;
+  border-bottom: 0;
+  border-radius: .72vw .72vw 0 0;
+  background: #f2f5f8;
+  text-align: center;
+}
+
+.audit-tabs strong {
+  background: #ffffff;
+}
+
+.audit-notice {
+  padding: .9vw 1vw;
+  border: 1px solid #a7d7c7;
+  border-radius: .38vw;
+  background: #eaf8f2;
+  font-weight: 700;
+}
+
+.audit-notice-error {
+  border-color: #f6b6b6;
+  background: #fff1f1;
+  color: #9f1d1d;
+}
+
+.audit-notice-error a {
+  color: #7f1d1d;
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: .15em;
+}
+
+.audit-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: .9vw 0 .7vw;
+}
+
+.audit-title-row h1 {
+  margin: 0;
+  font-size: clamp(14px, 1.15vw, 22px);
+}
+
+.audit-actions {
+  display: flex;
+  align-items: center;
+  gap: .45vw;
+}
+
+.audit-actions button {
+  min-height: 2vw;
+  padding: 0 .72vw;
+  border: 1px solid #dbe1e8;
+  border-radius: .34vw;
+  background: #ffffff;
+  color: #5c6674;
+  font: inherit;
+  font-size: clamp(7px, .58vw, 11px);
+  font-weight: 750;
+}
+
+.audit-actions button svg {
+  width: .9vw;
+  height: .9vw;
+  margin-right: .38vw;
+  color: #6b7280;
+  vertical-align: -.17vw;
+}
+
+.audit-actions .audit-download {
+  border-color: transparent;
+  background: #20a957;
+  color: #ffffff;
+}
+
+.audit-actions .audit-download svg {
+  color: #ffffff;
+}
+
+.audit-grid {
+  display: grid;
+  grid-template-columns: .82fr 2.35fr;
+  gap: .8vw;
+}
+
+.audit-panel {
+  border: 1px solid #dbe1e8;
+  border-radius: .62vw;
+  background: #ffffff;
+}
+
+.audit-panel h3 {
+  margin: 0;
+  padding: .9vw 1vw;
+  font-size: clamp(9px, .78vw, 15px);
+}
+
+.audit-panel h3 svg,
+.audit-score-row b svg {
+  width: .75vw;
+  height: .75vw;
+  color: #94a3b8;
+  vertical-align: -.12vw;
+}
+
+.audit-visibility {
+  min-height: 13.9vw;
+  position: relative;
+  grid-row: span 2;
+}
+
+.audit-ring {
+  width: 6.3vw;
+  height: 6.3vw;
+  display: grid;
+  place-items: center;
+  margin: .8vw auto .45vw;
+  border: .65vw solid #e5e9ef;
+  border-left-color: #ff424d;
+  border-radius: 999px;
+}
+
+.audit-ring strong {
+  font-size: clamp(18px, 1.55vw, 30px);
+}
+
+.audit-trend {
+  width: max-content;
+  margin: 0 auto .35vw;
+  padding: .25vw .5vw;
+  border-radius: .35vw;
+  background: #d4f8e5;
+  color: #0b954d;
+  font-weight: 900;
+}
+
+.audit-visibility p {
+  margin: 0 0 1.6vw;
+  color: #6b7280;
+  text-align: center;
+}
+
+.audit-filter {
+  width: max-content;
+  margin: 0 auto;
+  padding: .45vw 1vw;
+  border: 1px solid #e1e7ee;
+  border-radius: .34vw;
+  font-weight: 700;
+}
+
+.audit-score-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .55vw;
+  padding: 1.8vw .8vw .75vw;
+  position: relative;
+}
+
+.audit-score-row h3 {
+  position: absolute;
+  left: .9vw;
+  top: .72vw;
+  padding: 0;
+}
+
+.audit-score-row div {
+  position: relative;
+  min-height: 5.2vw;
+  padding: .9vw;
+  border: 1px solid #e1e7ee;
+  border-radius: .48vw;
+}
+
+.audit-score-row div strong {
+  display: block;
+  margin-top: 1.1vw;
+  font-size: clamp(18px, 1.45vw, 28px);
+}
+
+.audit-score-row i {
+  position: absolute;
+  right: .8vw;
+  bottom: .8vw;
+  width: 1.8vw;
+  height: 1.8vw;
+  display: grid;
+  place-items: center;
+  border-radius: .32vw;
+  background: #e7f1ff;
+  color: #0072f5;
+}
+
+.audit-score-row i svg {
+  width: .85vw;
+  height: .85vw;
+}
+
+.audit-table,
+.audit-segments {
+  min-height: 13vw;
+}
+
+.audit-table-row {
+  display: grid;
+  grid-template-columns: 1.15fr .75fr .6fr 1.7vw;
+  gap: 1vw;
+  align-items: center;
+  padding: .68vw 1vw;
+  border-top: 1px solid #edf0f4;
+}
+
+.audit-table-row span,
+.audit-table-row em {
+  font-style: normal;
+}
+
+.audit-table-row i {
+  width: 1.8vw;
+  height: 1.8vw;
+  display: grid;
+  place-items: center;
+  border-radius: .32vw;
+  background: #e7f1ff;
+  color: #0072f5;
+  font-style: normal;
+}
+
+.audit-table-row i svg {
+  width: .85vw;
+  height: .85vw;
+}
+
+.audit-table-head {
+  color: #6b7280;
+  background: #f8fafc;
+  font-weight: 800;
+}
+
+.audit-error-screen .audit-grid-silhouette {
+  position: relative;
+  opacity: .48;
+  filter: grayscale(.65);
+}
+
+.audit-error-screen .audit-grid-silhouette::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: .62vw;
+  background: rgba(245, 247, 250, .34);
+  pointer-events: none;
+}
+
+.audit-error-screen .audit-ring {
+  border-color: #e5e9ef;
+}
+
+.audit-error-screen .audit-trend {
+  background: #edf2f7;
+  color: #64748b;
+}
+
+.audit-error-screen .audit-table-row span:empty,
+.audit-error-screen .audit-table-row em:empty {
+  height: .48vw;
+  border-radius: 999px;
+  background: #dbe3ec;
+}
+
+.retry {
+  left: 42.5%;
+  top: 64%;
+  width: 14.9%;
+  height: 6.3%;
+}
+
+.prototype-prev,
+.prototype-next,
+.prototype-restart {
+  position: fixed;
+  z-index: 20;
+}
+
+.prototype-prev {
+  left: 46.8%;
+  bottom: 2.2%;
+  width: 2.2%;
+  height: 4.8%;
+}
+
+.prototype-next {
+  left: 49.4%;
+  bottom: 2.2%;
+  width: 2.2%;
+  height: 4.8%;
+}
+
+.prototype-restart {
+  right: .8%;
+  bottom: 1.9%;
+  width: 7.8%;
+  height: 4.7%;
+}
+
+.flow-controls {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  z-index: 10;
+  transform: translateX(-50%);
+  display: none;
+  align-items: center;
+  gap: 8px;
+  min-height: 50px;
+  padding: 8px;
+  border-radius: 999px;
+  background: rgba(31, 33, 37, .9);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+  color: #ffffff;
+}
+
+.flow-controls button {
+  width: 36px;
+  height: 32px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+#step-label {
+  min-width: 130px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+  <section class="password-gate" data-password-gate aria-label="Password required">
+    <form class="password-card" data-password-form>
+      <div class="password-logo">feedops<span></span></div>
+      <h1>Audit flow preview</h1>
+      <p>Enter the preview password to continue.</p>
+      <label for="preview-password">Password</label>
+      <input id="preview-password" data-password-input type="password" autocomplete="current-password" autofocus>
+      <p class="password-error" data-password-error hidden>Incorrect password. Please try again.</p>
+      <button type="submit">Open preview</button>
+    </form>
+  </section>
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M6 4h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="M10 4v16"/></symbol>
+    <symbol id="icon-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.4 2.4 3.6 5.4 3.6 9S14.4 18.6 12 21M12 3C9.6 5.4 8.4 8.4 8.4 12S9.6 18.6 12 21"/></symbol>
+    <symbol id="icon-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="M5 15l.8 2.2L8 18l-2.2.8L5 21l-.8-2.2L2 18l2.2-.8L5 15ZM19 3l.8 2.2L22 6l-2.2.8L19 9l-.8-2.2L16 6l2.2-.8L19 3Z"/></symbol>
+    <symbol id="icon-edit" viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M6 16l1-4 9-9 4 4-9 9-4 1Z"/><path d="M14 5l4 4"/></symbol>
+    <symbol id="icon-flow" viewBox="0 0 24 24"><path d="M12 4v5M6 20v-4a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v4"/><circle cx="12" cy="4" r="2"/><circle cx="6" cy="20" r="2"/><circle cx="18" cy="20" r="2"/></symbol>
+    <symbol id="icon-alert" viewBox="0 0 24 24"><path d="M12 3l10 18H2L12 3Z"/><path d="M12 9v5M12 18h.01"/></symbol>
+    <symbol id="icon-box" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></symbol>
+    <symbol id="icon-tag" viewBox="0 0 24 24"><path d="M20 13l-7 7L4 11V4h7l9 9Z"/><circle cx="8" cy="8" r="1.5"/></symbol>
+    <symbol id="icon-refresh" viewBox="0 0 24 24"><path d="M20 6v5h-5"/><path d="M4 18v-5h5"/><path d="M19 11a7 7 0 0 0-12-4M5 13a7 7 0 0 0 12 4"/></symbol>
+    <symbol id="icon-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v6h6M12 7v5l3 2"/></symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></symbol>
+    <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+    <symbol id="icon-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+  </svg>
+  <main class="prototype" data-step="account" aria-label="FeedOps audit flow prototype">
+    <section class="frame" data-screen="connect">
+      <img src="../../assets/audit-flow-preview/02-connect.png?v=3" alt="Connect Google Merchant Center screen">
+      <div class="flow-step flow-step-connect" aria-hidden="true">
+        <span>Step 2 of 2</span>
+        <strong>Connect Merchant Center</strong>
+      </div>
+      <div class="connect-reassurance" aria-hidden="true">
+        <p>Read-only access. Used to calculate visibility metrics from impressions and clicks.</p>
+        <p>No feed or campaign changes.</p>
+        <a href="https://feedops.com/google-shopping-feed-audit-access/" target="_blank" rel="noopener">What does FeedOps access?</a>
+      </div>
+      <button class="hotspot connect-merchant" data-go="google" aria-label="Connect Google Merchant Center"></button>
+    </section>
+
+    <section class="frame" data-screen="google">
+      <img src="../../assets/audit-flow-preview/03-google.png?v=3" alt="Google sign-in consent screen">
+      <button class="hotspot google-cancel" data-go="connect" aria-label="Cancel"></button>
+      <button class="hotspot google-continue" data-go="merchant" aria-label="Continue"></button>
+    </section>
+
+    <section class="frame" data-screen="merchant">
+      <img src="../../assets/audit-flow-preview/04-merchant.png?v=3" alt="Select Merchant Center screen">
+      <div class="merchant-reassurance" aria-hidden="true">
+        <p>We only access the website you select for this audit.</p>
+        <p>Other sites in your account are not used.</p>
+        <a href="https://feedops.com/google-shopping-feed-audit-access/" target="_blank" rel="noopener">What does FeedOps access?</a>
+      </div>
+      <button class="hotspot merchant-select" data-go="merchant-open" aria-label="Open merchant selector"></button>
+    </section>
+
+    <section class="frame" data-screen="merchant-open">
+      <img src="../../assets/audit-flow-preview/05-merchant-open.png?v=3" alt="Merchant Center dropdown screen">
+      <div class="merchant-reassurance" aria-hidden="true">
+        <p>We only access the website you select for this audit.</p>
+        <p>Other sites in your account are not used.</p>
+        <a href="https://feedops.com/google-shopping-feed-audit-access/" target="_blank" rel="noopener">What does FeedOps access?</a>
+      </div>
+      <button class="hotspot merchant-option" data-go="merchant-selected" aria-label="Select second store"></button>
+    </section>
+
+    <section class="frame" data-screen="merchant-selected">
+      <img src="../../assets/audit-flow-preview/06-merchant-selected.png?v=3" alt="Selected Merchant account screen">
+      <div class="merchant-reassurance" aria-hidden="true">
+        <p>We only access the website you select for this audit.</p>
+        <p>Other sites in your account are not used.</p>
+        <a href="https://feedops.com/google-shopping-feed-audit-access/" target="_blank" rel="noopener">What does FeedOps access?</a>
+      </div>
+      <button class="hotspot merchant-continue" data-go="ready" aria-label="Continue"></button>
+    </section>
+
+    <section class="frame" data-screen="account">
+      <div class="account-plain-screen" aria-hidden="true">
+        <div class="account-logo">feedops<span></span></div>
+        <div class="audit-silhouette">
+          <div class="silhouette-free-badge">100% free</div>
+          <div class="silhouette-header"></div>
+          <div class="silhouette-card silhouette-score">
+            <div class="silhouette-ring"></div>
+            <div class="silhouette-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="silhouette-card silhouette-summary">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="silhouette-card silhouette-table">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="account-form-card">
+          <div class="flow-step flow-step-card">
+            <span>Step 1 of 2</span>
+            <strong>Contact details</strong>
+          </div>
+          <h2>Where should we send your audit?</h2>
+          <p>We will email your audit results and help if setup needs attention.</p>
+          <p class="next-step-note">Next: connect Google Merchant Center to run the audit.</p>
+          <label>Full name</label>
+          <div class="form-field">John Smith</div>
+          <label>Work email</label>
+          <div class="form-field form-field-wide">john@example.com</div>
+          <label>Company</label>
+          <div class="form-field form-field-wide">xyz.com</div>
+          <label>Mobile phone</label>
+          <div class="form-field form-field-wide">67121231212</div>
+          <label>Business type</label>
+          <div class="account-type-grid" role="radiogroup" aria-label="Business type">
+            <div class="account-type-card">
+              <span></span>
+              Retailer / brand
+            </div>
+            <div class="account-type-card">
+              <span></span>
+              Agency
+            </div>
+          </div>
+          <div class="account-button-rewrite">Continue to connect Merchant Center</div>
+          <p class="account-access-note">FeedOps uses read-only API access to run the audit. Employees cannot log in to your Merchant Center.</p>
+          <a class="account-access-link" href="https://feedops.com/google-shopping-feed-audit-access/" target="_blank" rel="noopener">What does FeedOps access?</a>
+          <p class="account-reassurance">You can remove FeedOps access from Google Merchant Center at any time.</p>
+        </div>
+      </div>
+      <button class="hotspot create-account" data-go="connect" aria-label="Continue to connect Merchant Center"></button>
+    </section>
+
+    <section class="frame" data-screen="ready">
+      <div class="audit-live-screen" aria-hidden="true">
+        <header>
+          <svg class="audit-menu-icon"><use href="#icon-menu"></use></svg>
+          <div class="audit-logo">feedops<span></span></div>
+          <div class="audit-site-pill">gluestore.com.au</div>
+          <div class="audit-user">
+            <strong>Frank Grasso</strong>
+            <span>frank@feedops.com</span>
+          </div>
+          <div class="audit-avatar">FG</div>
+        </header>
+        <aside>
+          <strong class="app-info"><svg><use href="#icon-sparkle"></use></svg>Playbook<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Playbook</span><span class="tooltip-copy">The control center for running audits and improving product feed performance.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#playbook" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span></strong>
+          <span class="app-locked"><svg><use href="#icon-edit"></use></svg>Products Data<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Product Data</span><span class="tooltip-copy">View, filter, import, export, and edit the data being served to each channel.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#product-data" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
+          <span class="app-locked"><svg><use href="#icon-flow"></use></svg>Feed rules<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Feed Rules</span><span class="tooltip-copy">Automate feed logic with conditions and actions across one or many channels.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#feed-rules" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
+          <span class="app-locked"><svg><use href="#icon-alert"></use></svg>Alerts<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Alerts</span><span class="tooltip-copy">Get notified about product approvals, disapprovals, feed issues, order errors, and sync problems.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#alerts" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
+          <span class="app-locked"><svg><use href="#icon-box"></use></svg>Orders <em>Beta</em><svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Orders</span><span class="tooltip-copy">Track marketplace order status and unblock processing or mismatch issues.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#orders" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
+          <div class="audit-sidebar-bottom">
+            <span class="app-locked">Website settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Connections</span><span class="tooltip-copy">Manage shopping cart credentials, API settings, mappings, schedules, and category inclusion.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#connections" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
+            <span class="app-locked">Account settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Account Settings</span><span class="tooltip-copy">Add websites, manage users, and update account details on paid plans.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#account-settings" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
+            <a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a>
+          </div>
+        </aside>
+        <main>
+          <div class="audit-topline">
+            <div class="audit-playbook-title">
+              <h2>Playbook</h2>
+              <button class="app-locked"><svg><use href="#icon-tag"></use></svg>Google<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Connected Channels</span><span class="tooltip-copy">Add or remove media, marketplace, and feed destinations depending on your plan.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#connected-channels" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span></button>
+              <span>New Playbook experience (Beta)</span>
+              <a href="#">Leave feedback</a>
+              <button class="wireframe-toggle" data-go="error">Wireframe: error state</button>
+            </div>
+            <div class="audit-ai-actions">
+              <p>0 AI credits available</p>
+              <button class="app-locked">AI Settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">AI Settings</span><span class="tooltip-copy">Customize agents for each brand, category, country, language, and attribute.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#ai-settings" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span></button>
+            </div>
+          </div>
+          <div class="audit-tabs">
+            <span class="app-locked">Enrich with AI<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Enrich with AI</span><span class="tooltip-copy">Use custom agents to enrich variants, product types, titles, and missing attributes at scale.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#enrich-with-ai" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
+            <strong>Feed Audit</strong>
+          </div>
+          <div class="audit-notice">We're generating a new audit, which may take time depending on your feed size. We'll email you at frank@feedops.com when it's done.</div>
+          <div class="audit-title-row">
+            <h1>Google Shopping Feed Audit</h1>
+            <div class="audit-actions">
+              <button><svg><use href="#icon-refresh"></use></svg>Run New Audit</button>
+              <button><svg><use href="#icon-history"></use></svg>View Past Audits</button>
+              <button class="audit-download"><svg><use href="#icon-download"></use></svg>Download Audit</button>
+            </div>
+          </div>
+          <section class="audit-grid">
+            <article class="audit-panel audit-visibility">
+              <h3>Visibility Rate <svg><use href="#icon-info"></use></svg></h3>
+              <div class="audit-ring"><strong>18%</strong></div>
+              <div class="audit-trend good">+29.2%</div>
+              <p>vs previous period</p>
+              <div class="audit-filter">All Traffic</div>
+            </article>
+            <article class="audit-panel audit-score-row">
+              <h3>Improve These Metrics to Boost Visibility Rate</h3>
+              <div><b>Account Compliance <svg><use href="#icon-info"></use></svg></b><strong>97.0%</strong><i><svg><use href="#icon-chevron"></use></svg></i></div>
+              <div><b>Product Approval <svg><use href="#icon-info"></use></svg></b><strong>99.9%</strong></div>
+              <div><b>Attribute Completeness <svg><use href="#icon-info"></use></svg></b><strong>74.2%</strong><i><svg><use href="#icon-chevron"></use></svg></i></div>
+            </article>
+            <article class="audit-panel audit-table">
+              <h3>Feed Performance Overview</h3>
+              <div class="audit-table-row audit-table-head"><b>Metric</b><span>Product Count</span><em>% of Feed</em></div>
+              <div class="audit-table-row"><b>Total Products in Feed</b><span>30.16k</span><em>100.0%</em></div>
+              <div class="audit-table-row"><b>Products with Impressions</b><span>5.52k</span><em>18.3%</em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+              <div class="audit-table-row"><b>Products with Clicks</b><span>5.41k</span><em>17.9%</em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+              <div class="audit-table-row"><b>Products with Conversions</b><span>24</span><em>0.1%</em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+            </article>
+            <article class="audit-panel audit-segments">
+              <h3>Metrics from 14 March to 12 April, 2026</h3>
+              <div class="audit-table-row audit-table-head"><b>Segment</b><span>Product Count</span><em>% of Feed</em></div>
+              <div class="audit-table-row"><b>Impressions, 0 Clicks</b><span>271</span><em>0.9%</em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+              <div class="audit-table-row"><b>No Impressions</b><span>24.64k</span><em>81.7%</em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+              <div class="audit-table-row"><b>High Impressions, Low Clicks</b><span></span><em></em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+            </article>
+          </section>
+        </main>
+      </div>
+    </section>
+
+    <section class="frame" data-screen="error">
+      <div class="audit-live-screen audit-error-screen" aria-hidden="true">
+        <header>
+          <svg class="audit-menu-icon"><use href="#icon-menu"></use></svg>
+          <div class="audit-logo">feedops<span></span></div>
+          <div class="audit-site-pill">gluestore.com.au</div>
+          <div class="audit-user">
+            <strong>Frank Grasso</strong>
+            <span>frank@feedops.com</span>
+          </div>
+          <div class="audit-avatar">FG</div>
+        </header>
+        <aside>
+          <strong class="app-info"><svg><use href="#icon-sparkle"></use></svg>Playbook<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Playbook</span><span class="tooltip-copy">The control center for running audits and improving product feed performance.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#playbook" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span></strong>
+          <span class="app-locked"><svg><use href="#icon-edit"></use></svg>Products Data<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Product Data</span><span class="tooltip-copy">View, filter, import, export, and edit the data being served to each channel.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#product-data" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
+          <span class="app-locked"><svg><use href="#icon-flow"></use></svg>Feed rules<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Feed Rules</span><span class="tooltip-copy">Automate feed logic with conditions and actions across one or many channels.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#feed-rules" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
+          <span class="app-locked"><svg><use href="#icon-alert"></use></svg>Alerts<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Alerts</span><span class="tooltip-copy">Get notified about product approvals, disapprovals, feed issues, order errors, and sync problems.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#alerts" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
+          <span class="app-locked"><svg><use href="#icon-box"></use></svg>Orders <em>Beta</em><svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Orders</span><span class="tooltip-copy">Track marketplace order status and unblock processing or mismatch issues.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#orders" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
+          <div class="audit-sidebar-bottom">
+            <span class="app-locked">Website settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Connections</span><span class="tooltip-copy">Manage shopping cart credentials, API settings, mappings, schedules, and category inclusion.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#connections" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
+            <span class="app-locked">Account settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Account Settings</span><span class="tooltip-copy">Add websites, manage users, and update account details on paid plans.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#account-settings" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
+            <a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a>
+          </div>
+        </aside>
+        <main>
+          <div class="audit-topline">
+            <div class="audit-playbook-title">
+              <h2>Playbook</h2>
+              <button class="app-locked"><svg><use href="#icon-tag"></use></svg>Google<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Connected Channels</span><span class="tooltip-copy">Add or remove media, marketplace, and feed destinations depending on your plan.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#connected-channels" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span></button>
+              <span>New Playbook experience (Beta)</span>
+              <a href="#">Leave feedback</a>
+              <button class="wireframe-toggle wireframe-toggle-error" data-go="ready">Wireframe: success state</button>
+            </div>
+            <div class="audit-ai-actions">
+              <p>0 AI credits available</p>
+              <button class="app-locked">AI Settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">AI Settings</span><span class="tooltip-copy">Customize agents for each brand, category, country, language, and attribute.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#ai-settings" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span></button>
+            </div>
+          </div>
+          <div class="audit-tabs">
+            <span class="app-locked">Enrich with AI<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Enrich with AI</span><span class="tooltip-copy">Use custom agents to enrich variants, product types, titles, and missing attributes at scale.</span><span class="tooltip-actions"><a href="https://feedops.com/software/#enrich-with-ai" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
+            <strong>Feed Audit</strong>
+          </div>
+          <div class="audit-notice audit-notice-error">We could not generate the audit for gluestore.com.au. Please check that FeedOps has report/view permissions in Google Merchant Center. This is the most common reason an audit fails. <a href="https://feedops.com/google-shopping-feed-audit-access/#minimum-access-required" target="_blank" rel="noopener">Learn how to check permissions</a></div>
+          <div class="audit-title-row">
+            <h1>Google Shopping Feed Audit</h1>
+            <div class="audit-actions">
+              <button><svg><use href="#icon-refresh"></use></svg>Run New Audit</button>
+              <button><svg><use href="#icon-history"></use></svg>View Past Audits</button>
+              <button class="audit-download"><svg><use href="#icon-download"></use></svg>Download Audit</button>
+            </div>
+          </div>
+          <section class="audit-grid audit-grid-silhouette">
+            <article class="audit-panel audit-visibility">
+              <h3>Visibility Rate <svg><use href="#icon-info"></use></svg></h3>
+              <div class="audit-ring"><strong>--</strong></div>
+              <div class="audit-trend">Pending</div>
+              <p>audit not generated</p>
+              <div class="audit-filter">All Traffic</div>
+            </article>
+            <article class="audit-panel audit-score-row">
+              <h3>Improve These Metrics to Boost Visibility Rate</h3>
+              <div><b>Account Compliance <svg><use href="#icon-info"></use></svg></b><strong>--</strong><i><svg><use href="#icon-chevron"></use></svg></i></div>
+              <div><b>Product Approval <svg><use href="#icon-info"></use></svg></b><strong>--</strong></div>
+              <div><b>Attribute Completeness <svg><use href="#icon-info"></use></svg></b><strong>--</strong><i><svg><use href="#icon-chevron"></use></svg></i></div>
+            </article>
+            <article class="audit-panel audit-table">
+              <h3>Feed Performance Overview</h3>
+              <div class="audit-table-row audit-table-head"><b>Metric</b><span>Product Count</span><em>% of Feed</em></div>
+              <div class="audit-table-row"><b>Total Products in Feed</b><span></span><em></em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+              <div class="audit-table-row"><b>Products with Impressions</b><span></span><em></em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+              <div class="audit-table-row"><b>Products with Clicks</b><span></span><em></em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+            </article>
+            <article class="audit-panel audit-segments">
+              <h3>Metrics unavailable</h3>
+              <div class="audit-table-row audit-table-head"><b>Segment</b><span>Product Count</span><em>% of Feed</em></div>
+              <div class="audit-table-row"><b>Impressions, 0 Clicks</b><span></span><em></em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+              <div class="audit-table-row"><b>No Impressions</b><span></span><em></em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+              <div class="audit-table-row"><b>High Impressions, Low Clicks</b><span></span><em></em><i><svg><use href="#icon-chevron"></use></svg></i></div>
+            </article>
+          </section>
+        </main>
+      </div>
+    </section>
+
+    <button class="hotspot prototype-prev" data-prev aria-label="Previous prototype screen"></button>
+    <button class="hotspot prototype-next" data-next aria-label="Next prototype screen"></button>
+    <button class="hotspot prototype-restart" data-go="landing" aria-label="Restart prototype"></button>
+  </main>
+
+  <nav class="flow-controls" aria-label="Prototype navigation">
+    <button data-prev aria-label="Previous screen">‹</button>
+    <span id="step-label">Landing</span>
+    <button data-next aria-label="Next screen">›</button>
+  </nav>
+
+  <script>
+const steps = [
+  ["landing", "Landing"],
+  ["account", "Contact Details"],
+  ["connect", "Connect"],
+  ["google", "Google Consent"],
+  ["merchant", "Select Merchant"],
+  ["merchant-open", "Merchant Menu"],
+  ["merchant-selected", "Selected Account"],
+  ["ready", "All Set"],
+  ["error", "Error"]
+];
+
+const previewPassword = "feedops123";
+const passwordGate = document.querySelector("[data-password-gate]");
+const passwordForm = document.querySelector("[data-password-form]");
+const passwordInput = document.querySelector("[data-password-input]");
+const passwordError = document.querySelector("[data-password-error]");
+
+function unlockPreview() {
+  passwordGate.classList.add("is-unlocked");
+  try {
+    sessionStorage.setItem("feedopsAuditPreviewUnlocked", "true");
+  } catch (error) {
+    // The preview should still open if browser storage is unavailable.
+  }
+}
+
+try {
+  if (sessionStorage.getItem("feedopsAuditPreviewUnlocked") === "true") {
+    unlockPreview();
+  }
+} catch (error) {
+  // Ignore storage failures in local preview contexts.
+}
+
+passwordForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  if (passwordInput.value === previewPassword) {
+    unlockPreview();
+    return;
+  }
+
+  passwordError.hidden = false;
+  passwordInput.select();
+});
+
+const stage = document.querySelector(".prototype");
+const label = document.getElementById("step-label");
+
+function setStep(step) {
+  stage.dataset.step = step;
+  const current = steps.find((item) => item[0] === step);
+  label.textContent = current ? current[1] : step;
+}
+
+const requestedStep = new URLSearchParams(window.location.search).get("step");
+if (requestedStep && steps.some((item) => item[0] === requestedStep)) {
+  setStep(requestedStep);
+} else {
+  setStep("account");
+}
+
+function currentIndex() {
+  return Math.max(0, steps.findIndex((item) => item[0] === stage.dataset.step));
+}
+
+document.addEventListener("click", (event) => {
+  const target = event.target.closest("[data-go]");
+  if (target) {
+    setStep(target.dataset.go);
+  }
+});
+
+window.addEventListener("message", (event) => {
+  if (event.data && event.data.feedopsAuditStep) {
+    setStep(event.data.feedopsAuditStep);
+  }
+});
+
+document.querySelector("[data-prev]").addEventListener("click", () => {
+  const index = currentIndex();
+  setStep(steps[Math.max(0, index - 1)][0]);
+});
+
+document.querySelector("[data-next]").addEventListener("click", () => {
+  const index = currentIndex();
+  setStep(steps[Math.min(steps.length - 1, index + 1)][0]);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowLeft") {
+    document.querySelector("[data-prev]").click();
+  }
+
+  if (event.key === "ArrowRight") {
+    document.querySelector("[data-next]").click();
+  }
+});
+
+</script>
+</body>
+</html>

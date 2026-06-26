@@ -1,1767 +1,2276 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-AU">
 <head>
-  <meta charset="utf-8">
+  <!-- Google Tag Manager -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: "feedops_consent_default", analytics_storage: "denied", ad_storage: "denied" });
+    window.FeedOpsGTM = window.FeedOpsGTM || {
+      id: "GTM-KR4TR7B",
+      loaded: false,
+      load: function () {
+        if (this.loaded) return;
+        this.loaded = true;
+        window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var firstScript = document.getElementsByTagName("script")[0];
+        var gtmScript = document.createElement("script");
+        gtmScript.async = true;
+        gtmScript.src = "https://www.googletagmanager.com/gtm.js?id=" + this.id;
+        firstScript.parentNode.insertBefore(gtmScript, firstScript);
+      }
+    };
+  </script>
+  <!-- End Google Tag Manager -->
+<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FeedOps Audit Flow Pixel Copy</title>
-  <meta name="robots" content="noindex, nofollow">
+  <title>Free Google Shopping Feed Audit | FeedOps</title>
+  <meta name="description" content="Get instant access to a free, fully automated Google Shopping Feed Audit to find product data issues, missing attributes, and Merchant Center problems.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="FeedOps">
+  <link rel="canonical" href="https://feedops.com/free-google-shopping-feed-audit/">
+  <link rel="alternate" href="https://feedops.com/free-google-shopping-feed-audit/" hreflang="en-AU">
+  <link rel="alternate" href="https://feedops.com/free-google-shopping-feed-audit/" hreflang="x-default">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Google Shopping Feed Audit | FeedOps">
+  <meta property="og:description" content="Get instant access to a free, fully automated Google Shopping Feed Audit to uncover product data issues, missing attributes, visibility gaps, and Merchant Center feed problems.">
+  <meta property="og:url" content="https://feedops.com/free-google-shopping-feed-audit/">
+  <meta property="og:site_name" content="FeedOps">
+  <meta property="og:image" content="https://feedops.com/assets/feedops.com/wp-content/uploads/2026/03/google-shopping-feed-audit.png">
+  <meta property="og:image:alt" content="Google Shopping feed audit dashboard from FeedOps">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Google Shopping Feed Audit | FeedOps">
+  <meta name="twitter:description" content="Get instant access to a free, fully automated Google Shopping Feed Audit to find product data gaps, weak feed signals, and missed Shopping opportunities.">
+  <meta name="twitter:image" content="https://feedops.com/assets/feedops.com/wp-content/uploads/2026/03/google-shopping-feed-audit.png">
+  <link rel="icon" href="../assets/feedops.com/wp-content/uploads/2022/05/Feedops-staggered-logo-Final-2-60x60.png" sizes="32x32">
+  <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://feedops.com/#organization",
+                "name": "FeedOps",
+                "legalName": "FeedOps Pty Ltd",
+                "url": "https://feedops.com/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://feedops.com/assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4.png"
+                },
+                "areaServed": {
+                    "@type": "Country",
+                    "name": "Australia"
+                },
+                "knowsAbout": [
+                    "Google Shopping feed audit",
+                    "product feed optimisation",
+                    "Google Merchant Center",
+                    "Performance Max",
+                    "free listings",
+                    "product feeds",
+                    "feed rules",
+                    "feed audits",
+                    "product data quality",
+                    "AI product data enrichment",
+                    "paid social catalogues",
+                    "marketplaces"
+                ],
+                "sameAs": [
+                    "https://www.facebook.com/feedops",
+                    "https://www.linkedin.com/company/feedops/",
+                    "https://www.youtube.com/@feedops"
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://feedops.com/#website",
+                "url": "https://feedops.com/",
+                "name": "FeedOps",
+                "publisher": {
+                    "@id": "https://feedops.com/#organization"
+                },
+                "inLanguage": "en-AU"
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://feedops.com/free-google-shopping-feed-audit/#webpage",
+                "url": "https://feedops.com/free-google-shopping-feed-audit/",
+                "name": "Free Google Shopping Feed Audit | FeedOps",
+                "description": "Get instant access to a free, fully automated Google Shopping Feed Audit to find product data issues, missing attributes, low-visibility products, and feed gaps that may limit Shopping and Performance Max results.",
+                "isPartOf": {
+                    "@id": "https://feedops.com/#website"
+                },
+                "about": {
+                    "@id": "https://feedops.com/free-google-shopping-feed-audit/#service"
+                },
+                "primaryImageOfPage": {
+                    "@id": "https://feedops.com/free-google-shopping-feed-audit/#primaryimage"
+                },
+                "breadcrumb": {
+                    "@id": "https://feedops.com/free-google-shopping-feed-audit/#breadcrumb"
+                },
+                "mainEntity": [
+                    {
+                        "@id": "https://feedops.com/free-google-shopping-feed-audit/#service"
+                    },
+                    {
+                        "@id": "https://feedops.com/free-google-shopping-feed-audit/#faq"
+                    }
+                ],
+                "datePublished": "2026-06-17",
+                "dateModified": "2026-06-19",
+                "inLanguage": "en-AU"
+            },
+            {
+                "@type": "ImageObject",
+                "@id": "https://feedops.com/free-google-shopping-feed-audit/#primaryimage",
+                "url": "https://feedops.com/assets/feedops.com/wp-content/uploads/2026/03/google-shopping-feed-audit.png",
+                "caption": "Google Shopping feed audit dashboard from FeedOps"
+            },
+            {
+                "@type": "Service",
+                "@id": "https://feedops.com/free-google-shopping-feed-audit/#service",
+                "name": "Free Google Shopping Feed Audit",
+                "serviceType": "Google Shopping feed audit",
+                "provider": {
+                    "@id": "https://feedops.com/#organization"
+                },
+                "areaServed": {
+                    "@type": "Country",
+                    "name": "Australia"
+                },
+                "audience": {
+                    "@type": "Audience",
+                    "audienceType": "Ecommerce teams, retailers, brands, and agencies"
+                },
+                "category": "Product feed optimisation",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "AUD",
+                    "availability": "https://schema.org/InStock"
+                },
+                "description": "An Australian-led Free Google Shopping Feed Audit for Google Merchant Center product data, product feeds, feed rules, feed audits, AI enrichment opportunities, paid social catalogues, marketplaces, Shopping, and Performance Max readiness. It uses standard Merchant Center access plus reporting and insights permissions and does not require Google Ads access."
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://feedops.com/free-google-shopping-feed-audit/#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Is the Google Shopping feed audit free?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. The Google Shopping feed audit is free to use. You create access with a work email, connect Merchant Center, and the automated audit starts without a manual review step."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is the audit fully automated?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Once access is set up, the audit reviews Google Merchant Center product data automatically and surfaces product data issues at scale."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do I need to become a FeedOps customer?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No. You do not need to become a FeedOps customer to use the audit. If you later want help fixing feed issues, that can be discussed separately."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do I need to replace my current feed provider?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No. You can keep your current feed provider and still use the audit to understand product data issues."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do I need to connect Google Ads?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No. The audit uses Google Merchant Center product data and does not require a Google Ads connection."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What Google Merchant Center access does FeedOps need?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "FeedOps needs standard Google Merchant Center access plus reporting and insights permissions. This lets the audit read product data plus impression and click signals needed to assess feed health and generate visibility metrics without changing your product data."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Why does FeedOps need report permissions?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Report permissions allow the audit to read product-level signals such as impressions and clicks. FeedOps uses those signals to generate visibility metrics and identify products that may need attention."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Does the audit make changes to Merchant Center?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No. The audit is read-only. It does not make changes to your Merchant Center account, product data, pricing, shipping, campaigns, or settings."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Who is the audit for?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "The audit is for ecommerce teams, retailers, brands, and agencies that want a clearer view of product data health in Google Shopping."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can agencies use the audit?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Agencies can use the audit across multiple client accounts. Contact FeedOps and we can set up an agency login for running audits across multiple clients."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can retailers and brands use the audit?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Retailers and brands can use the audit to understand catalogue health, product visibility, and product data issues across their Merchant Center account."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I run more than one audit?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. You get a login and can rerun audits as often as you need, so you can compare progress over time."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I use the audit on more than one website?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. The audit can be used across multiple websites or Merchant Center accounts when access is set up for each account."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I invite my team?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Relevant team members and stakeholders can be invited so they can review audit results and prioritise fixes."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I keep a history of past audits?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. The audit workflow is designed so you can review previous results and compare progress over time."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What does the audit check?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "The audit checks signals such as visibility, products with impressions but no clicks, products with no impressions, attribute completeness, and product data gaps that may affect paid Shopping and free listings."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What are zombie products?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Zombie products are products that receive impressions but do not receive clicks. They may be visible, but they are not attracting enough shopper interest."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What does no impressions and no clicks mean?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No impressions and no clicks means a product is not being seen or clicked. This can point to weak product data, missing attributes, relevance issues, or visibility problems."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What is attribute completeness?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Attribute completeness shows whether important product data fields are present and complete. Missing or weak attributes can reduce visibility, relevance, and product matching."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Does the audit help with free listings as well as ads?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Feed quality can affect both paid Shopping activity and free listings because both depend on Google understanding product data accurately."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Will the audit tell me what is holding my product data back?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. The audit is designed to help identify weak signals, missing data, low-visibility products, and missed opportunities in your product feed."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do I need technical skills to use it?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No. The audit is designed to be simple to access and easy to understand. FeedOps can guide the setup process."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What happens after I submit the form?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "After you submit your details, you get access to the audit workflow. You connect the Merchant Center account you want audited, grant the required permissions, and the automated audit starts."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Will FeedOps contact me after I sign up?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. FeedOps may contact you to help set up access or support your use of the audit, but you are not required to upgrade."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Does using the audit commit me to anything?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No. Using the audit does not commit you to becoming a FeedOps customer or changing your feed setup."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What happens if I want FeedOps to help fix the issues?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "If you want help after reviewing the audit, FeedOps can discuss the right plan, support model, or product feed demo for fixing the issues."
+                        }
+                    }
+                ],
+                "inLanguage": "en-AU"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://feedops.com/free-google-shopping-feed-audit/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://feedops.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Free Google Shopping Feed Audit",
+                        "item": "https://feedops.com/free-google-shopping-feed-audit/"
+                    }
+                ]
+            }
+        ]
+    }
+  </script>
   <style>
-:root {
-  --frame-width: 1280;
-  --frame-height: 720;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  min-height: 100%;
-  background: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.icon-sprite {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-
-svg {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.password-gate {
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  display: grid;
-  place-items: center;
-  padding: 24px;
-  background: #f6f8fb;
-}
-
-.password-gate.is-unlocked {
-  display: none;
-}
-
-.password-card {
-  width: min(420px, 100%);
-  padding: 34px;
-  border: 1px solid #dfe5ed;
-  border-radius: 14px;
-  background: #ffffff;
-  box-shadow: 0 24px 70px rgba(16, 24, 40, .12);
-  color: #30343b;
-}
-
-.password-logo {
-  margin-bottom: 24px;
-  font-size: 36px;
-  font-weight: 300;
-}
-
-.password-logo span::after {
-  content: "...";
-  color: #f5b51b;
-  font-weight: 700;
-  letter-spacing: -.08em;
-}
-
-.password-card h1 {
-  margin: 0 0 8px;
-  font-size: 26px;
-  line-height: 1.15;
-}
-
-.password-card p {
-  margin: 0 0 18px;
-  color: #536072;
-}
-
-.password-card label {
-  display: block;
-  margin-bottom: 8px;
-  color: #30343b;
-  font-weight: 800;
-}
-
-.password-card input {
-  width: 100%;
-  height: 48px;
-  padding: 0 14px;
-  border: 1px solid #cfd8e3;
-  border-radius: 8px;
-  font: inherit;
-}
-
-.password-card input:focus {
-  border-color: #20a957;
-  outline: 3px solid rgba(32, 169, 87, .16);
-}
-
-.password-card .password-error {
-  margin: 10px 0 0;
-  color: #b42318;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.password-card button {
-  width: 100%;
-  min-height: 48px;
-  margin-top: 18px;
-  border: 0;
-  border-radius: 8px;
-  background: #20a957;
-  color: #ffffff;
-  font: inherit;
-  font-weight: 900;
-  cursor: pointer;
-}
-
-.prototype {
-  min-height: 100vh;
-  display: grid;
-  place-items: start center;
-  overflow: hidden;
-  background: #ffffff;
-}
-
-.frame {
-  position: relative;
-  display: none;
-  width: 100vw;
-  aspect-ratio: 1280 / 720;
-  margin: 0 auto;
-}
-
-.prototype[data-step="landing"] [data-screen="landing"],
-.prototype[data-step="connect"] [data-screen="connect"],
-.prototype[data-step="google"] [data-screen="google"],
-.prototype[data-step="merchant"] [data-screen="merchant"],
-.prototype[data-step="merchant-open"] [data-screen="merchant-open"],
-.prototype[data-step="merchant-selected"] [data-screen="merchant-selected"],
-.prototype[data-step="account"] [data-screen="account"],
-.prototype[data-step="ready"] [data-screen="ready"],
-.prototype[data-step="error"] [data-screen="error"] {
-  display: block;
-}
-
-.frame img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  user-select: none;
-  -webkit-user-drag: none;
-}
-
-.live-site-header {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 2;
-  width: 100%;
-  height: 15.5%;
-  display: grid;
-  grid-template-rows: 42% 58%;
-  background: #ffffff;
-  box-shadow: 0 1px 7px rgba(16, 24, 40, .12);
-}
-
-.audience-bar,
-.website-nav {
-  display: flex;
-  align-items: center;
-  color: #101820;
-}
-
-.audience-bar {
-  justify-content: center;
-  gap: 1.2vw;
-  border-bottom: 1px solid #d9dee6;
-  background: #f7f8fb;
-  font-size: clamp(8px, .76vw, 15px);
-  font-weight: 800;
-}
-
-.audience-bar span {
-  color: #3c4652;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-}
-
-.audience-bar strong,
-.audience-bar b {
-  min-width: 8.2vw;
-  padding: .62vw 1.25vw;
-  border-radius: 999px;
-  text-align: center;
-}
-
-.audience-bar strong {
-  border: 1px solid #c8e4dd;
-  background: #eaf7f3;
-  color: #177263;
-}
-
-.audience-bar b {
-  font-weight: 800;
-}
-
-.audience-bar a {
-  font-weight: 900;
-}
-
-.website-nav {
-  justify-content: center;
-  gap: 7vw;
-  border-bottom: 1px solid #dde2e8;
-  background: #ffffff;
-}
-
-.website-nav nav {
-  display: flex;
-  gap: 2.25vw;
-  align-items: center;
-  font-size: clamp(9px, .83vw, 16px);
-  font-weight: 900;
-}
-
-.website-nav .demo-link {
-  display: grid;
-  place-items: center;
-  min-width: 7.3vw;
-  min-height: 2.9vw;
-  border: 0;
-  border-radius: .42vw;
-  background: #ffc928;
-  color: #111720;
-  font-size: clamp(9px, .85vw, 17px);
-  font-weight: 900;
-  text-decoration: none;
-}
-
-.nav-logo {
-  margin: 0;
-  color: #30343b !important;
-  font-size: clamp(20px, 2vw, 40px);
-  font-weight: 300;
-}
-
-.live-site-footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 2;
-  width: 100%;
-  height: 18.8%;
-  padding: 2.2% 21% 1.8%;
-  display: grid;
-  grid-template-columns: 1.35fr .75fr 1fr .75fr;
-  gap: 4.5%;
-  border-top: .35vw solid #f4be22;
-  background: #111720;
-  color: #ffffff;
-  font-size: clamp(7px, .58vw, 12px);
-  line-height: 1.25;
-}
-
-.live-site-footer h3 {
-  margin: 0 0 .6vw;
-  color: #ffd34e;
-  font-size: clamp(7px, .62vw, 12px);
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-
-.live-site-footer p,
-.live-site-footer a {
-  display: block;
-  margin: 0 0 .4vw;
-  color: #e7ecf2;
-  text-decoration: none;
-}
-
-.live-site-footer .footer-cta {
-  display: block;
-  width: 78%;
-  margin-top: .6vw;
-  padding: .48vw .8vw;
-  border: 1px solid rgba(255, 211, 78, .45);
-  border-radius: .35vw;
-  color: #ffffff;
-}
-
-.live-site-footer .footer-cta-secondary {
-  margin-top: 0;
-  border-top: 0;
-  color: #ffd34e;
-}
-
-.footer-logo {
-  margin-bottom: .8vw;
-  color: #ffffff;
-  font-size: clamp(15px, 1.55vw, 31px);
-  font-weight: 300;
-  line-height: 1;
-}
-
-.footer-logo span::after {
-  content: "...";
-  color: #f5b51b;
-  font-weight: 700;
-  letter-spacing: -.08em;
-}
-
-.hotspot {
-  position: absolute;
-  border: 0;
-  border-radius: 4px;
-  background: transparent;
-  cursor: pointer;
-}
-
-.hotspot:focus-visible {
-  outline: 2px solid #1a73e8;
-  outline-offset: 2px;
-}
-
-.landing-cta {
-  left: 17.2%;
-  top: 70.5%;
-  width: 13.2%;
-  height: 4.8%;
-}
-
-.landing-reassurance {
-  position: absolute;
-  left: 17.2%;
-  top: 76.6%;
-  z-index: 3;
-  width: 28%;
-  display: grid;
-  gap: .35vw;
-  color: #4d5963;
-  font-size: clamp(7px, .7vw, 13px);
-  line-height: 1.25;
-}
-
-.landing-reassurance p {
-  margin: 0;
-}
-
-.connect-merchant {
-  left: 33.9%;
-  top: 36.9%;
-  width: 32.2%;
-  height: 7.2%;
-}
-
-.flow-step {
-  display: grid;
-  gap: .28vw;
-  color: #30343b;
-}
-
-.flow-step::before {
-  content: "";
-  width: 100%;
-  height: .32vw;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #20a957 0 50%, #e2e7ee 50% 100%);
-}
-
-.flow-step span {
-  width: max-content;
-  padding: .28vw .62vw;
-  border: 1px solid #dbe5e1;
-  border-radius: 999px;
-  background: #effaf5;
-  color: #167348;
-  font-size: clamp(7px, .62vw, 12px);
-  font-weight: 900;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-
-.flow-step strong {
-  font-size: clamp(9px, .76vw, 14px);
-  line-height: 1.2;
-}
-
-.flow-step-connect {
-  position: absolute;
-  left: 50%;
-  top: 20.8%;
-  z-index: 3;
-  width: auto;
-  transform: translateX(-50%);
-  justify-items: center;
-  text-align: center;
-}
-
-.flow-step-connect::before {
-  content: none;
-}
-
-.flow-step-connect span {
-  padding: .34vw .78vw;
-  box-shadow: 0 6px 18px rgba(16, 24, 40, .08);
-}
-
-.flow-step-connect strong {
-  display: none;
-}
-
-.connect-reassurance,
-.merchant-reassurance {
-  position: absolute;
-  z-index: 2;
-  width: 24%;
-  display: grid;
-  justify-items: center;
-  gap: .45vw;
-  color: #4d5963;
-  font-size: clamp(8px, .78vw, 15px);
-  text-align: center;
-}
-
-.connect-reassurance {
-  left: 38%;
-  top: 43.8%;
-}
-
-.merchant-reassurance {
-  left: 38%;
-  top: 47.3%;
-}
-
-.connect-reassurance p,
-.merchant-reassurance p {
-  margin: 0;
-}
-
-.connect-reassurance a,
-.merchant-reassurance a {
-  border: 0;
-  background: transparent;
-  color: #176b83;
-  font: inherit;
-  font-weight: 800;
-  text-decoration: underline;
-  text-underline-offset: .18em;
-  cursor: pointer;
-}
-
-.access-dialog {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 3;
-  transform: translate(-50%, -50%);
-  width: min(31vw, 420px);
-  padding: 1.8vw 2vw;
-  border: 1px solid #dfe4e8;
-  border-radius: .7vw;
-  background: #ffffff;
-  box-shadow: 0 20px 45px rgba(16, 24, 40, .18);
-  color: #101820;
-}
-
-.access-dialog h2 {
-  margin: 0 0 1vw;
-  font-size: clamp(15px, 1.3vw, 24px);
-}
-
-.access-dialog ul {
-  margin: 0 0 1.3vw;
-  padding-left: 1.2vw;
-  color: #3c4652;
-  font-size: clamp(10px, .9vw, 16px);
-  line-height: 1.55;
-}
-
-.access-dialog button {
-  width: 100%;
-  min-height: 2.8vw;
-  border: 0;
-  border-radius: .4vw;
-  background: #20a957;
-  color: #ffffff;
-  font-weight: 800;
-  cursor: pointer;
-}
-
-.google-cancel {
-  left: 51.6%;
-  top: 57.9%;
-  width: 12.4%;
-  height: 5.2%;
-}
-
-.google-continue {
-  left: 64.3%;
-  top: 57.9%;
-  width: 12.4%;
-  height: 5.2%;
-}
-
-.merchant-select {
-  left: 29.9%;
-  top: 30.1%;
-  width: 42.2%;
-  height: 5.6%;
-}
-
-.merchant-option {
-  left: 32.4%;
-  top: 38.1%;
-  width: 35.9%;
-  height: 4.1%;
-}
-
-.merchant-continue {
-  left: 47.8%;
-  top: 37.2%;
-  width: 10.2%;
-  height: 7.4%;
-}
-
-.account-plain-screen {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  display: grid;
-  justify-items: center;
-  align-content: start;
-  padding-top: 13.4%;
-  background: #f7f9fc;
-  color: #30343b;
-}
-
-.account-plain-screen::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  height: 11.8%;
-  border-bottom: 1px solid #edf0f3;
-  background: #ffffff;
-}
-
-.account-logo {
-  position: absolute;
-  left: 3.15%;
-  top: 4.3%;
-  z-index: 2;
-  font-size: clamp(22px, 2.55vw, 50px);
-  font-weight: 300;
-}
-
-.account-logo span::after {
-  content: "...";
-  color: #f5b51b;
-  font-weight: 700;
-  letter-spacing: -.08em;
-}
-
-.audit-silhouette {
-  position: absolute;
-  left: 54%;
-  top: 26%;
-  z-index: 1;
-  width: 28%;
-  height: 42%;
-  border: 1px solid rgba(203, 213, 225, .7);
-  border-radius: .9vw;
-  background: rgba(255, 255, 255, .55);
-  box-shadow: 0 22px 70px rgba(16, 24, 40, .06);
-  opacity: .72;
-}
-
-.audit-silhouette::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: linear-gradient(90deg, rgba(247, 249, 252, .18), rgba(247, 249, 252, .78));
-  backdrop-filter: blur(.4px);
-}
-
-.silhouette-free-badge {
-  position: absolute;
-  right: 6%;
-  top: 7%;
-  z-index: 1;
-  padding: .32vw .68vw;
-  border: 1px solid rgba(32, 169, 87, .24);
-  border-radius: 999px;
-  background: rgba(239, 250, 245, .82);
-  color: #177348;
-  font-size: clamp(7px, .58vw, 11px);
-  font-weight: 850;
-  letter-spacing: .03em;
-  text-transform: uppercase;
-  box-shadow: 0 8px 18px rgba(16, 24, 40, .06);
-}
-
-.silhouette-header {
-  position: absolute;
-  left: 5.5%;
-  top: 7%;
-  width: 54%;
-  height: 2.4vw;
-  border-radius: .45vw;
-  background: #e8edf3;
-}
-
-.silhouette-card {
-  position: absolute;
-  border: 1px solid #dfe5ed;
-  border-radius: .65vw;
-  background: #ffffff;
-}
-
-.silhouette-score {
-  left: 5.5%;
-  top: 23%;
-  width: 42%;
-  height: 42%;
-}
-
-.silhouette-ring {
-  position: absolute;
-  left: 12%;
-  top: 17%;
-  width: 4.9vw;
-  height: 4.9vw;
-  border: .58vw solid #e5ebf1;
-  border-top-color: #20a957;
-  border-radius: 999px;
-  opacity: .8;
-}
-
-.silhouette-lines {
-  position: absolute;
-  left: 12%;
-  right: 12%;
-  bottom: 12%;
-  display: grid;
-  gap: .42vw;
-}
-
-.silhouette-summary {
-  right: 5.5%;
-  top: 23%;
-  width: 41%;
-  height: 42%;
-  display: grid;
-  align-content: center;
-  gap: .65vw;
-  padding: 1vw;
-}
-
-.silhouette-table {
-  left: 5.5%;
-  right: 5.5%;
-  bottom: 7%;
-  height: 21%;
-  display: grid;
-  align-content: center;
-  gap: .52vw;
-  padding: .85vw 1vw;
-}
-
-.silhouette-lines span,
-.silhouette-summary span,
-.silhouette-table span {
-  display: block;
-  height: .42vw;
-  border-radius: 999px;
-  background: #dbe3ec;
-}
-
-.silhouette-summary span:nth-child(1),
-.silhouette-table span:nth-child(1) {
-  width: 82%;
-}
-
-.silhouette-summary span:nth-child(2),
-.silhouette-table span:nth-child(2) {
-  width: 64%;
-}
-
-.silhouette-summary span:nth-child(3),
-.silhouette-table span:nth-child(3) {
-  width: 72%;
-}
-
-.silhouette-table span:nth-child(4) {
-  width: 54%;
-}
-
-.account-form-card {
-  position: relative;
-  z-index: 2;
-  width: 31.8%;
-  margin-inline: auto;
-  padding: 1.25vw 1.85vw 1.35vw;
-  border: 1px solid #dfe5ed;
-  border-radius: .72vw;
-  background: #ffffff;
-  box-shadow: 0 20px 55px rgba(16, 24, 40, .08);
-}
-
-.flow-step-card {
-  margin-bottom: .82vw;
-}
-
-.flow-step-card::before {
-  height: .24vw;
-}
-
-.flow-step-card span {
-  padding: .22vw .54vw;
-}
-
-.account-form-card h2 {
-  margin: 0 0 .52vw;
-  font-size: clamp(15px, 1.05vw, 21px);
-  font-weight: 650;
-  line-height: 1.2;
-}
-
-.account-form-card p {
-  margin: 0 0 .7vw;
-  color: #4d5963;
-  font-size: clamp(9px, .72vw, 14px);
-  line-height: 1.38;
-}
-
-.account-form-card .next-step-note {
-  margin-bottom: .82vw;
-  padding: .58vw .72vw;
-  border: 1px solid #dcefe7;
-  border-radius: .42vw;
-  background: #f3fbf7;
-  color: #176b4f;
-  font-size: clamp(8px, .62vw, 12px);
-  font-weight: 750;
-}
-
-.account-form-card label {
-  display: block;
-  margin: .48vw 0 .22vw;
-  color: #4b5563;
-  font-size: clamp(8px, .62vw, 12px);
-  font-weight: 700;
-}
-
-.account-form-card label span {
-  font-weight: 500;
-}
-
-.form-field {
-  height: 2.45vw;
-  display: flex;
-  align-items: center;
-  padding: 0 .82vw;
-  border: 1px solid #e3e7ed;
-  border-radius: .42vw;
-  color: #9aa3af;
-  font-size: clamp(9px, .72vw, 14px);
-}
-
-.form-field-wide {
-  width: 100%;
-}
-
-.account-type-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: .72vw;
-}
-
-.account-type-card {
-  min-height: 2.85vw;
-  display: flex;
-  align-items: center;
-  gap: .52vw;
-  padding: .62vw .78vw;
-  border: 1px solid #e3e7ed;
-  border-radius: .42vw;
-  color: #30343b;
-  font-size: clamp(8px, .66vw, 13px);
-  font-weight: 700;
-}
-
-.account-type-card span {
-  width: .82vw;
-  height: .82vw;
-  flex: 0 0 auto;
-  border: 1px solid #cbd5e1;
-  border-radius: 999px;
-  background: #ffffff;
-}
-
-.account-reassurance {
-  margin: .18vw 0 0 !important;
-  font-size: clamp(7px, .56vw, 11px) !important;
-  line-height: 1.3 !important;
-  text-align: center;
-}
-
-.account-access-note {
-  margin: .58vw 0 .18vw !important;
-  color: #4d5963 !important;
-  font-size: clamp(7px, .58vw, 11px) !important;
-  line-height: 1.28 !important;
-  text-align: center;
-}
-
-.account-access-link {
-  display: block;
-  margin-bottom: .18vw;
-  color: #176b83;
-  font-size: clamp(7px, .58vw, 11px);
-  font-weight: 800;
-  text-align: center;
-  text-decoration: underline;
-  text-underline-offset: .18em;
-}
-
-.account-button-rewrite {
-  height: 2.8vw;
-  display: grid;
-  place-items: center;
-  border-radius: .45vw;
-  background: #20a957;
-  color: #ffffff;
-  font-size: clamp(9px, .72vw, 14px);
-  font-weight: 700;
-}
-
-.create-account {
-  left: 36%;
-  top: 74.6%;
-  z-index: 4;
-  width: 28%;
-  height: 5%;
-}
-
-.audit-live-screen {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  border: 1px solid #dbe1e8;
-  background: #f5f7fa;
-  color: #1f2933;
-  font-size: clamp(8px, .72vw, 14px);
-}
-
-.audit-live-screen header {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  height: 6.5%;
-  display: flex;
-  align-items: center;
-  gap: 1.5vw;
-  padding: 0 1.6vw;
-  border-bottom: 1px solid #dbe1e8;
-  background: #ffffff;
-}
-
-.audit-menu-icon {
-  width: 1.1vw;
-  height: 1.1vw;
-  color: #111827;
-}
-
-.audit-logo {
-  font-size: clamp(18px, 1.65vw, 32px);
-  font-weight: 300;
-}
-
-.audit-logo span::after {
-  content: "...";
-  color: #f5b51b;
-  font-weight: 700;
-  letter-spacing: -.08em;
-}
-
-.audit-site-pill {
-  min-width: 8vw;
-  padding: .48vw .8vw;
-  border: 1px solid #dce2ea;
-  border-radius: .34vw;
-  background: #ffffff;
-  font-weight: 650;
-}
-
-.audit-site-pill::after {
-  content: "";
-  display: inline-block;
-  margin-left: .8vw;
-  border-left: .24vw solid transparent;
-  border-right: .24vw solid transparent;
-  border-top: .32vw solid #111827;
-  vertical-align: middle;
-}
-
-.audit-user {
-  margin-left: auto;
-  display: grid;
-  justify-items: end;
-  gap: .1vw;
-}
-
-.audit-user strong {
-  font-size: clamp(7px, .62vw, 12px);
-}
-
-.audit-user span {
-  font-size: clamp(7px, .58vw, 11px);
-}
-
-.audit-avatar {
-  width: 2.2vw;
-  height: 2.2vw;
-  display: grid;
-  place-items: center;
-  border-radius: 999px;
-  background: #276f1f;
-  color: #ffffff;
-  font-weight: 800;
-}
-
-.audit-live-screen aside {
-  position: absolute;
-  left: 0;
-  top: 6.5%;
-  bottom: 0;
-  width: 14.4%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25vw;
-  padding: 2vw 1.4vw;
-  border-right: 1px solid #dbe1e8;
-  background: #ffffff;
-  color: #3f4a57;
-}
-
-.audit-live-screen aside b,
-.audit-live-screen aside strong,
-.audit-live-screen aside > span {
-  display: flex;
-  align-items: center;
-  gap: .75vw;
-  min-height: 1.65vw;
-}
-
-.audit-live-screen aside svg {
-  width: 1.2vw;
-  height: 1.2vw;
-  color: #6b7280;
-}
-
-.audit-live-screen aside strong {
-  color: #126db3;
-}
-
-.audit-live-screen aside strong svg {
-  color: #3478f6;
-}
-
-.audit-live-screen aside em {
-  margin-left: .3vw;
-  padding: .2vw .45vw;
-  border-radius: .32vw;
-  background: #f1ddff;
-  color: #7b1fc7;
-  font-style: normal;
-  font-size: clamp(7px, .54vw, 10px);
-  font-weight: 800;
-}
-
-.app-locked,
-.app-info {
-  position: relative;
-  cursor: help;
-}
-
-.app-locked:not(button) {
-  color: #5d6673;
-}
-
-.app-locked .info-mini,
-.app-info .info-mini {
-  width: .9vw;
-  height: .9vw;
-  margin-left: auto;
-  color: #3478f6;
-  stroke-width: 2.2;
-}
-
-button.app-locked .info-mini,
-.audit-filter.app-locked .info-mini {
-  width: .78vw;
-  height: .78vw;
-  margin-left: .45vw;
-  color: #3478f6;
-  vertical-align: -.12vw;
-}
-
-.lock-tooltip {
-  position: absolute;
-  left: calc(100% + .22vw);
-  top: 50%;
-  z-index: 30;
-  width: 18.8vw;
-  padding: .9vw;
-  border: 1px solid #dbe1e8;
-  border-radius: .55vw;
-  background: #ffffff;
-  color: #263241;
-  box-shadow: 0 18px 46px rgba(16, 24, 40, .2);
-  font-size: clamp(7px, .62vw, 12px);
-  font-weight: 650;
-  line-height: 1.35;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-50%) translateX(-.35vw);
-  transition: opacity .15s ease, transform .15s ease;
-}
-
-.lock-tooltip::before {
-  content: "";
-  position: absolute;
-  left: -.42vw;
-  top: 50%;
-  width: .8vw;
-  height: .8vw;
-  border-left: 1px solid #dbe1e8;
-  border-bottom: 1px solid #dbe1e8;
-  background: #ffffff;
-  transform: translateY(-50%) rotate(45deg);
-}
-
-.lock-tooltip::after {
-  content: "";
-  position: absolute;
-  left: -.85vw;
-  top: 0;
-  width: .9vw;
-  height: 100%;
-}
-
-.tooltip-title,
-.tooltip-copy {
-  display: block;
-}
-
-.tooltip-title {
-  margin-bottom: .3vw;
-  color: #101820;
-  font-size: clamp(8px, .72vw, 14px);
-  font-weight: 900;
-}
-
-.tooltip-copy {
-  color: #536072;
-  font-weight: 650;
-}
-
-.tooltip-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .45vw;
-  margin-top: .7vw;
-}
-
-.lock-tooltip a {
-  display: block;
-  padding: .38vw .52vw;
-  border: 1px solid #dbe1e8;
-  border-radius: .34vw;
-  background: #f8fafc;
-  color: #176e58;
-  font-weight: 900;
-  text-decoration: none;
-}
-
-.app-locked:hover .lock-tooltip,
-.app-info:hover .lock-tooltip {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(-50%) translateX(0);
-}
-
-.audit-ai-actions .lock-tooltip,
-.audit-tabs .lock-tooltip,
-.audit-score-row .lock-tooltip,
-.audit-table-row .lock-tooltip,
-.audit-filter .lock-tooltip {
-  left: 50%;
-  top: calc(100% + .22vw);
-  transform: translateX(-50%) translateY(-.35vw);
-}
-
-.audit-ai-actions .lock-tooltip::before,
-.audit-tabs .lock-tooltip::before,
-.audit-score-row .lock-tooltip::before,
-.audit-table-row .lock-tooltip::before,
-.audit-filter .lock-tooltip::before {
-  left: 50%;
-  top: -.38vw;
-  transform: translateX(-50%) rotate(45deg);
-}
-
-.audit-ai-actions .lock-tooltip::after,
-.audit-tabs .lock-tooltip::after,
-.audit-score-row .lock-tooltip::after,
-.audit-table-row .lock-tooltip::after,
-.audit-filter .lock-tooltip::after {
-  left: 0;
-  top: -.85vw;
-  width: 100%;
-  height: .9vw;
-}
-
-.audit-ai-actions .app-locked:hover .lock-tooltip,
-.audit-tabs .app-locked:hover .lock-tooltip,
-.audit-score-row .app-locked:hover .lock-tooltip,
-.audit-table-row.app-locked:hover .lock-tooltip,
-.audit-filter.app-locked:hover .lock-tooltip {
-  transform: translateX(-50%) translateY(0);
-}
-
-.audit-sidebar-bottom {
-  margin-top: auto;
-  display: grid;
-  gap: 0;
-  border-top: 1px solid #edf0f4;
-}
-
-.audit-sidebar-bottom span,
-.audit-sidebar-bottom a {
-  padding: .8vw 0;
-  border-bottom: 1px solid #edf0f4;
-  color: inherit;
-  font-weight: 650;
-  text-decoration: none;
-}
-
-.audit-live-screen main {
-  position: absolute;
-  left: 14.4%;
-  top: 6.5%;
-  right: 0;
-  bottom: 0;
-  padding: .9vw 1vw 1.2vw;
-}
-
-.audit-topline {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: .8vw;
-}
-
-.audit-playbook-title {
-  display: flex;
-  align-items: center;
-  gap: .9vw;
-}
-
-.audit-topline h2 {
-  margin: 0;
-  font-size: clamp(14px, 1.2vw, 23px);
-}
-
-.audit-playbook-title button {
-  min-height: 2.5vw;
-  padding: 0 1.2vw;
-  border: 1px solid #dbe1e8;
-  border-radius: .38vw;
-  background: #ffffff;
-  font: inherit;
-  font-weight: 700;
-}
-
-.audit-playbook-title button svg {
-  width: 1.1vw;
-  height: 1.1vw;
-  margin-right: .5vw;
-  color: #3478f6;
-  vertical-align: -.22vw;
-}
-
-.audit-playbook-title span {
-  padding: .34vw .65vw;
-  border-radius: .35vw;
-  background: #f1ddff;
-  color: #7b1fc7;
-  font-weight: 800;
-}
-
-.audit-playbook-title a {
-  color: #006df0;
-  font-weight: 800;
-  text-decoration: none;
-}
-
-.wireframe-toggle {
-  min-height: 1.85vw;
-  padding: 0 .62vw;
-  border: 1px dashed #94a3b8;
-  border-radius: .34vw;
-  background: #fff;
-  color: #64748b;
-  font: inherit;
-  font-size: clamp(7px, .54vw, 10px);
-  font-weight: 800;
-  cursor: pointer;
-}
-
-.wireframe-toggle-error {
-  border-color: #f1a8a8;
-  color: #b42318;
-}
-
-.audit-topline p {
-  margin: 0;
-  color: #2467b4;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.audit-ai-actions {
-  display: flex;
-  align-items: center;
-  gap: .8vw;
-}
-
-.audit-ai-actions button {
-  min-height: 2.1vw;
-  padding: 0 1vw;
-  border: 1px solid #dbe1e8;
-  border-radius: .38vw;
-  background: #ffffff;
-  color: #2467b4;
-  font: inherit;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.audit-tabs {
-  display: flex;
-  align-items: end;
-  height: 2.9vw;
-}
-
-.audit-tabs span,
-.audit-tabs strong {
-  min-width: 9.5vw;
-  padding: .85vw 1vw;
-  border: 1px solid #dbe1e8;
-  border-bottom: 0;
-  border-radius: .72vw .72vw 0 0;
-  background: #f2f5f8;
-  text-align: center;
-}
-
-.audit-tabs strong {
-  background: #ffffff;
-}
-
-.audit-notice {
-  padding: .9vw 1vw;
-  border: 1px solid #a7d7c7;
-  border-radius: .38vw;
-  background: #eaf8f2;
-  font-weight: 700;
-}
-
-.audit-notice-error {
-  border-color: #f6b6b6;
-  background: #fff1f1;
-  color: #9f1d1d;
-}
-
-.audit-notice-error a {
-  color: #7f1d1d;
-  font-weight: 900;
-  text-decoration: underline;
-  text-underline-offset: .15em;
-}
-
-.audit-title-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: .9vw 0 .7vw;
-}
-
-.audit-title-row h1 {
-  margin: 0;
-  font-size: clamp(14px, 1.15vw, 22px);
-}
-
-.audit-actions {
-  display: flex;
-  align-items: center;
-  gap: .45vw;
-}
-
-.audit-actions button {
-  min-height: 2vw;
-  padding: 0 .72vw;
-  border: 1px solid #dbe1e8;
-  border-radius: .34vw;
-  background: #ffffff;
-  color: #5c6674;
-  font: inherit;
-  font-size: clamp(7px, .58vw, 11px);
-  font-weight: 750;
-}
-
-.audit-actions button svg {
-  width: .9vw;
-  height: .9vw;
-  margin-right: .38vw;
-  color: #6b7280;
-  vertical-align: -.17vw;
-}
-
-.audit-actions .audit-download {
-  border-color: transparent;
-  background: #20a957;
-  color: #ffffff;
-}
-
-.audit-actions .audit-download svg {
-  color: #ffffff;
-}
-
-.audit-grid {
-  display: grid;
-  grid-template-columns: .82fr 2.35fr;
-  gap: .8vw;
-}
-
-.audit-panel {
-  border: 1px solid #dbe1e8;
-  border-radius: .62vw;
-  background: #ffffff;
-}
-
-.audit-panel h3 {
-  margin: 0;
-  padding: .9vw 1vw;
-  font-size: clamp(9px, .78vw, 15px);
-}
-
-.audit-panel h3 svg,
-.audit-score-row b svg {
-  width: .75vw;
-  height: .75vw;
-  color: #94a3b8;
-  vertical-align: -.12vw;
-}
-
-.audit-visibility {
-  min-height: 13.9vw;
-  position: relative;
-  grid-row: span 2;
-}
-
-.audit-ring {
-  width: 6.3vw;
-  height: 6.3vw;
-  display: grid;
-  place-items: center;
-  margin: .8vw auto .45vw;
-  border: .65vw solid #e5e9ef;
-  border-left-color: #ff424d;
-  border-radius: 999px;
-}
-
-.audit-ring strong {
-  font-size: clamp(18px, 1.55vw, 30px);
-}
-
-.audit-trend {
-  width: max-content;
-  margin: 0 auto .35vw;
-  padding: .25vw .5vw;
-  border-radius: .35vw;
-  background: #d4f8e5;
-  color: #0b954d;
-  font-weight: 900;
-}
-
-.audit-visibility p {
-  margin: 0 0 1.6vw;
-  color: #6b7280;
-  text-align: center;
-}
-
-.audit-filter {
-  width: max-content;
-  margin: 0 auto;
-  padding: .45vw 1vw;
-  border: 1px solid #e1e7ee;
-  border-radius: .34vw;
-  font-weight: 700;
-}
-
-.audit-score-row {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: .55vw;
-  padding: 1.8vw .8vw .75vw;
-  position: relative;
-}
-
-.audit-score-row h3 {
-  position: absolute;
-  left: .9vw;
-  top: .72vw;
-  padding: 0;
-}
-
-.audit-score-row div {
-  position: relative;
-  min-height: 5.2vw;
-  padding: .9vw;
-  border: 1px solid #e1e7ee;
-  border-radius: .48vw;
-}
-
-.audit-score-row div strong {
-  display: block;
-  margin-top: 1.1vw;
-  font-size: clamp(18px, 1.45vw, 28px);
-}
-
-.audit-score-row i {
-  position: absolute;
-  right: .8vw;
-  bottom: .8vw;
-  width: 1.8vw;
-  height: 1.8vw;
-  display: grid;
-  place-items: center;
-  border-radius: .32vw;
-  background: #e7f1ff;
-  color: #0072f5;
-}
-
-.audit-score-row i svg {
-  width: .85vw;
-  height: .85vw;
-}
-
-.audit-table,
-.audit-segments {
-  min-height: 13vw;
-}
-
-.audit-table-row {
-  display: grid;
-  grid-template-columns: 1.15fr .75fr .6fr 1.7vw;
-  gap: 1vw;
-  align-items: center;
-  padding: .68vw 1vw;
-  border-top: 1px solid #edf0f4;
-}
-
-.audit-table-row span,
-.audit-table-row em {
-  font-style: normal;
-}
-
-.audit-table-row i {
-  width: 1.8vw;
-  height: 1.8vw;
-  display: grid;
-  place-items: center;
-  border-radius: .32vw;
-  background: #e7f1ff;
-  color: #0072f5;
-  font-style: normal;
-}
-
-.audit-table-row i svg {
-  width: .85vw;
-  height: .85vw;
-}
-
-.audit-table-head {
-  color: #6b7280;
-  background: #f8fafc;
-  font-weight: 800;
-}
-
-.audit-error-screen .audit-grid-silhouette {
-  position: relative;
-  opacity: .48;
-  filter: grayscale(.65);
-}
-
-.audit-error-screen .audit-grid-silhouette::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: .62vw;
-  background: rgba(245, 247, 250, .34);
-  pointer-events: none;
-}
-
-.audit-error-screen .audit-ring {
-  border-color: #e5e9ef;
-}
-
-.audit-error-screen .audit-trend {
-  background: #edf2f7;
-  color: #64748b;
-}
-
-.audit-error-screen .audit-table-row span:empty,
-.audit-error-screen .audit-table-row em:empty {
-  height: .48vw;
-  border-radius: 999px;
-  background: #dbe3ec;
-}
-
-.retry {
-  left: 42.5%;
-  top: 64%;
-  width: 14.9%;
-  height: 6.3%;
-}
-
-.prototype-prev,
-.prototype-next,
-.prototype-restart {
-  position: fixed;
-  z-index: 20;
-}
-
-.prototype-prev {
-  left: 46.8%;
-  bottom: 2.2%;
-  width: 2.2%;
-  height: 4.8%;
-}
-
-.prototype-next {
-  left: 49.4%;
-  bottom: 2.2%;
-  width: 2.2%;
-  height: 4.8%;
-}
-
-.prototype-restart {
-  right: .8%;
-  bottom: 1.9%;
-  width: 7.8%;
-  height: 4.7%;
-}
-
-.flow-controls {
-  position: fixed;
-  left: 50%;
-  bottom: 18px;
-  z-index: 10;
-  transform: translateX(-50%);
-  display: none;
-  align-items: center;
-  gap: 8px;
-  min-height: 50px;
-  padding: 8px;
-  border-radius: 999px;
-  background: rgba(31, 33, 37, .9);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
-  color: #ffffff;
-}
-
-.flow-controls button {
-  width: 36px;
-  height: 32px;
-  border: 0;
-  border-radius: 999px;
-  background: transparent;
-  color: #ffffff;
-  font-size: 24px;
-  line-height: 1;
-  cursor: pointer;
-}
-
-#step-label {
-  min-width: 130px;
-  text-align: center;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-</style>
+    :root {
+      --green: #1c8c6f;
+      --green-dark: #176e58;
+      --yellow: #fecf26;
+      --blue: #244f8f;
+      --ink: #101820;
+      --muted: #536072;
+      --line: #d8dee8;
+      --soft: #f4f7fb;
+      --shadow: 0 18px 45px rgba(17, 24, 39, .08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #fbfcff;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, .94);
+      backdrop-filter: blur(14px);
+    }
+
+    #feedops-standard-header .feedops-audit-subnav {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      white-space: nowrap;
+    }
+
+    #feedops-standard-header .feedops-audit-subnav-label {
+      color: #536072;
+      font-size: 14px;
+      font-weight: 850;
+    }
+
+    .mode-switch {
+      background: #f4f6f9;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .mode-inner,
+    .nav,
+    .section-inner,
+    .footer-inner {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .mode-inner {
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 18px;
+      color: #4b5565;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .mode-label {
+      color: #536072;
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .mode-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .mode-options {
+      display: inline-grid;
+      grid-template-columns: repeat(3, minmax(150px, 1fr));
+      align-items: center;
+      padding: 4px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      box-shadow: 0 10px 28px rgba(17, 24, 39, .06);
+    }
+
+    .mode-option {
+      min-width: 150px;
+      min-height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 14px;
+      border-radius: 999px;
+      color: #2d3748;
+      font-size: 13px;
+      font-weight: 850;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .mode-login {
+      min-height: 32px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      color: #2d3748;
+      font-size: 13px;
+      font-weight: 850;
+      white-space: nowrap;
+    }
+
+    .mode-option:hover,
+    .mode-login:hover {
+      background: #eef8f4;
+      color: var(--green-dark);
+    }
+
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      width: 142px;
+      flex: 0 0 auto;
+    }
+
+    .logo img {
+      display: block;
+      width: 100%;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      color: #313946;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .nav-links a:hover {
+      color: var(--green-dark);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-cta,
+    .button {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 18px;
+      border-radius: 8px;
+      background: var(--yellow);
+      color: #111;
+      font-weight: 950;
+      box-shadow: 0 12px 30px rgba(254, 207, 38, .28);
+    }
+
+    .button.secondary {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: #243041;
+      box-shadow: none;
+    }
+
+    .hero {
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 12% 42%, rgba(28, 140, 111, .10), transparent 30%),
+        radial-gradient(circle at 88% 22%, rgba(254, 207, 38, .18), transparent 28%),
+        linear-gradient(180deg, #fbfdfc 0%, #f7fafc 100%);
+    }
+
+    .hero-inner {
+      width: min(1280px, calc(100% - 56px));
+      min-height: auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr);
+      gap: clamp(42px, 4.2vw, 64px);
+      align-items: center;
+      justify-items: stretch;
+      margin: 0 auto;
+      padding: clamp(72px, 7vw, 104px) 0 clamp(78px, 7.5vw, 112px);
+      text-align: left;
+    }
+
+    .hero-brand {
+      display: inline-flex;
+      align-items: center;
+      width: 154px;
+      margin-bottom: 72px;
+    }
+
+    .hero-brand img {
+      width: 100%;
+      height: auto;
+    }
+
+    .kicker {
+      margin: 0 0 12px;
+      color: var(--green-dark);
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin: 0 0 clamp(18px, 1.25vw, 24px);
+      max-width: 650px;
+      font-size: clamp(32px, 4.3vw, 58px);
+      line-height: 1.04;
+      letter-spacing: 0;
+    }
+
+    .hero-title-accent {
+      color: inherit;
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      margin: 0 0 clamp(22px, 1.55vw, 30px);
+      color: var(--muted);
+      font-size: clamp(15px, 1.32vw, 19px);
+      line-height: 1.58;
+    }
+
+    .hero-copy strong {
+      color: inherit;
+      font-weight: 500;
+    }
+
+    .hero-scope-line {
+      max-width: 610px;
+      margin: -22px 0 30px;
+      color: var(--green-dark);
+      font-size: 13px;
+      font-weight: 950;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .hero-scope-line span {
+      color: #6b7280;
+      font-weight: 850;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: clamp(12px, .9vw, 16px);
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .hero-actions .button {
+      min-height: clamp(44px, 3vw, 52px);
+      padding: 0 clamp(18px, 1.1vw, 24px);
+      border-radius: clamp(7px, .55vw, 9px);
+      font-size: clamp(13px, .95vw, 15px);
+      font-weight: 950;
+      box-shadow: 0 8px 18px rgba(254, 207, 38, .22);
+    }
+
+    .trust-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: clamp(8px, .7vw, 10px) clamp(16px, 1.4vw, 22px);
+      margin-top: clamp(22px, 1.55vw, 30px);
+      justify-content: flex-start;
+    }
+
+    .trust-item {
+      display: inline-flex;
+      align-items: center;
+      color: #344054;
+      font-size: clamp(11px, .85vw, 13px);
+      font-weight: 850;
+      line-height: 1.25;
+    }
+
+    .trust-item::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      flex: 0 0 auto;
+      margin-right: 8px;
+      border-radius: 999px;
+      background: var(--green);
+    }
+
+    .hero-card {
+      position: relative;
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 24px 70px rgba(17, 24, 39, .12);
+      overflow: hidden;
+    }
+
+    .audit-eval-panel {
+      padding: clamp(22px, 2vw, 28px);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(28, 140, 111, .08), transparent 42%),
+        linear-gradient(135deg, #ffffff 0%, #fffaf0 100%);
+      box-shadow: 0 24px 70px rgba(17, 24, 39, .12);
+    }
+
+    .audit-eval-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(10px, 1vw, 16px);
+      margin-bottom: clamp(18px, 1.55vw, 24px);
+    }
+
+    .audit-eval-stat {
+      min-height: 104px;
+      display: grid;
+      align-content: space-between;
+      gap: 10px;
+      padding: clamp(14px, 1.15vw, 18px);
+      border: 1px solid #cfe2d8;
+      border-radius: 7px;
+      background:
+        radial-gradient(circle at 88% 10%, rgba(28, 140, 111, .12), transparent 34%),
+        rgba(255, 255, 255, .82);
+      box-shadow: 0 10px 28px rgba(16, 24, 40, .045);
+    }
+
+    .audit-eval-stat:nth-child(2) {
+      border-color: #d6ccff;
+      background:
+        radial-gradient(circle at 88% 10%, rgba(124, 92, 255, .13), transparent 34%),
+        rgba(255, 255, 255, .82);
+    }
+
+    .audit-eval-stat:nth-child(3) {
+      border-color: #f4d7ad;
+      background:
+        radial-gradient(circle at 88% 10%, rgba(245, 164, 0, .14), transparent 34%),
+        rgba(255, 255, 255, .82);
+    }
+
+    .audit-eval-stat-top {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .audit-eval-stat-icon {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border-radius: 8px;
+      background: #e7f7ef;
+      color: #16a05c;
+      font-size: 15px;
+      font-weight: 950;
+    }
+
+    .audit-eval-stat:nth-child(2) .audit-eval-stat-icon {
+      background: #eee8ff;
+      color: #7c5cff;
+    }
+
+    .audit-eval-stat:nth-child(3) .audit-eval-stat-icon {
+      background: #fff1dc;
+      color: #b76a00;
+    }
+
+    .audit-eval-stat span {
+      display: block;
+      color: #657187;
+      font-size: clamp(11px, .78vw, 13px);
+      font-weight: 760;
+      line-height: 1.2;
+    }
+
+    .audit-eval-stat strong {
+      display: block;
+      color: var(--ink);
+      font-size: clamp(17px, 1.35vw, 22px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .audit-eval-stat small {
+      display: block;
+      color: #667085;
+      font-size: 12px;
+      font-weight: 760;
+      line-height: 1.3;
+    }
+
+    .audit-eval-table {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .audit-eval-intro {
+      padding: clamp(18px, 1.6vw, 24px);
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 250, 240, .58);
+    }
+
+    .audit-eval-intro h3 {
+      margin: 0 0 6px;
+      color: var(--ink);
+      font-size: clamp(18px, 1.28vw, 21px);
+      font-weight: 850;
+      line-height: 1.2;
+    }
+
+    .audit-eval-intro p {
+      max-width: 430px;
+      margin: 0;
+      color: #536072;
+      font-size: clamp(13px, .88vw, 14px);
+      font-weight: 800;
+      line-height: 1.45;
+    }
+
+    .audit-eval-head,
+    .audit-eval-row {
+      display: grid;
+      grid-template-columns: 1.05fr 1.2fr auto;
+      gap: 16px;
+      align-items: center;
+      padding: 14px 18px;
+    }
+
+    .audit-eval-head {
+      background: #f6f8fb;
+      color: #667085;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .audit-eval-row {
+      position: relative;
+      min-height: 66px;
+      border-top: 1px solid #edf1f6;
+      color: #344054;
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .audit-eval-row::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 12px;
+      bottom: 12px;
+      width: 4px;
+      border-radius: 999px;
+      background: var(--green);
+    }
+
+    .audit-eval-row:nth-child(4)::before {
+      background: #7c5cff;
+    }
+
+    .audit-eval-row:nth-child(5)::before {
+      background: #f5a400;
+    }
+
+    .audit-eval-row:nth-child(6)::before {
+      background: #5470d8;
+    }
+
+    .audit-eval-capability {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      font-weight: 950;
+    }
+
+    .audit-eval-icon {
+      width: 32px;
+      height: 32px;
+      display: inline-grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border-radius: 8px;
+      background: #e7f7ef;
+      color: #16a05c;
+      font-size: 16px;
+      font-weight: 950;
+    }
+
+    .audit-eval-row:nth-child(4) .audit-eval-icon {
+      background: #eee8ff;
+      color: #7c5cff;
+    }
+
+    .audit-eval-row:nth-child(5) .audit-eval-icon {
+      background: #fff1dc;
+      color: #b76a00;
+    }
+
+    .audit-eval-row:nth-child(6) .audit-eval-icon {
+      background: #eaf0ff;
+      color: #4263d6;
+    }
+
+    .audit-eval-status {
+      display: inline-flex;
+      min-width: 82px;
+      min-height: 32px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #bce1cf;
+      border-radius: 999px;
+      background: #eaf8f0;
+      color: #176e58;
+      font-size: 12px;
+      font-weight: 950;
+    }
+
+    .hero-preview-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 38px;
+      padding: 0 16px;
+      border-bottom: 1px solid var(--line);
+      background: #ffffff;
+      color: #4b5565;
+      font-size: 13px;
+      font-weight: 850;
+      text-align: left;
+    }
+
+    .browser-dots {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .browser-dots span {
+      width: 11px;
+      height: 11px;
+      border-radius: 999px;
+      background: #ff5f57;
+    }
+
+    .browser-dots span:nth-child(2) {
+      background: #ffbd2e;
+    }
+
+    .browser-dots span:nth-child(3) {
+      background: #28c840;
+    }
+
+    .browser-address {
+      min-width: 260px;
+      max-width: 360px;
+      flex: 0 1 360px;
+      display: grid;
+      place-items: center;
+      min-height: 24px;
+      border-radius: 7px;
+      background: #f2f4f7;
+      color: #667085;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .browser-more {
+      color: #111827;
+      font-size: 22px;
+      line-height: 1;
+      letter-spacing: .08em;
+    }
+
+    .hero-card img {
+      width: 100%;
+      height: auto;
+      max-height: min(62vh, 560px);
+      object-fit: cover;
+      object-position: left top;
+    }
+
+    .audit-summary {
+      display: grid;
+      gap: 12px;
+      padding: 20px;
+      border-top: 1px solid var(--line);
+    }
+
+    .score-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      align-items: center;
+      color: #344054;
+      font-size: 14px;
+      font-weight: 850;
+    }
+
+    .score-bar {
+      height: 9px;
+      border-radius: 999px;
+      background: #eef2f7;
+      overflow: hidden;
+    }
+
+    .score-bar span {
+      display: block;
+      height: 100%;
+      border-radius: inherit;
+      background: var(--green);
+    }
+
+    .section {
+      padding: 72px 0;
+    }
+
+    .section.soft {
+      background: var(--soft);
+      border-block: 1px solid var(--line);
+    }
+
+    .audit-layout {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 0 64px;
+    }
+
+    .audit-nav {
+      position: static;
+      z-index: 20;
+      display: grid;
+      gap: 8px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .96);
+      box-shadow: 0 18px 48px rgba(17, 24, 39, .12);
+      backdrop-filter: blur(12px);
+    }
+
+    .audit-nav.is-fixed {
+      position: fixed;
+      top: 136px;
+      width: 240px;
+    }
+
+    .audit-nav span {
+      margin-bottom: 6px;
+      color: #667085;
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .audit-nav a {
+      padding: 9px 10px;
+      border-radius: 6px;
+      color: #354052;
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .audit-nav a:hover,
+    .audit-nav a.audit-nav-cta {
+      background: #eef8f4;
+      color: var(--green-dark);
+    }
+
+    .audit-nav a.audit-nav-cta {
+      margin-top: 6px;
+      border: 1px solid rgba(28, 140, 111, .22);
+    }
+
+    .audit-content {
+      min-width: 0;
+      display: grid;
+      gap: 0;
+    }
+
+    .audit-content section,
+    .audit-content article[id] {
+      scroll-margin-top: 122px;
+    }
+
+    .audit-content .section {
+      padding: 0;
+    }
+
+    .audit-content #checks {
+      padding: 0;
+      margin-inline: calc(50% - 50vw);
+      background:
+        radial-gradient(circle at 12% 18%, rgba(32, 169, 87, .16), transparent 34%),
+        radial-gradient(circle at 86% 10%, rgba(255, 202, 40, .13), transparent 30%),
+        linear-gradient(135deg, #effaf5 0%, #f7fbf3 48%, #eef7f2 100%);
+    }
+
+    .audit-content #checks .section-inner {
+      width: min(1180px, calc(100% - 40px));
+      padding: clamp(28px, 5vw, 56px);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(32, 169, 87, .06), rgba(255, 202, 40, .05) 42%, rgba(64, 87, 201, .025) 100%),
+        rgba(255, 255, 255, .28);
+    }
+
+    .audit-content .section.soft {
+      background: transparent;
+      border: 0;
+    }
+
+    .audit-content .section-inner {
+      width: 100%;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 12px;
+      font-size: clamp(30px, 3.4vw, 42px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.58;
+    }
+
+    .visibility-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(180px, .42fr);
+      gap: clamp(28px, 4vw, 52px);
+      align-items: start;
+      padding: clamp(22px, 3vw, 40px) 0 clamp(30px, 4vw, 48px);
+      border-bottom: 1px solid rgba(28, 140, 111, .18);
+    }
+
+    .visibility-intro .section-heading {
+      margin-bottom: 0;
+    }
+
+    .visibility-visual {
+      padding: 0;
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+      justify-self: end;
+      width: min(100%, 230px);
+    }
+
+    .visibility-visual img {
+      width: 100%;
+      border: 1px solid rgba(216, 222, 232, .82);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 22px 58px rgba(17, 24, 39, .13);
+      transform: rotate(-.6deg);
+      transform-origin: center right;
+    }
+
+    .audit-check-subsection {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(420px, 1fr);
+      gap: clamp(32px, 5vw, 64px);
+      align-items: center;
+      margin-top: 0;
+      padding: clamp(34px, 5vw, 62px) 0;
+      border-bottom: 1px solid rgba(28, 140, 111, .18);
+    }
+
+    .audit-check-subsection.is-reversed {
+      grid-template-columns: minmax(420px, 1fr) minmax(0, 1fr);
+    }
+
+    .audit-check-subsection.is-reversed .audit-check-copy {
+      order: 2;
+    }
+
+    .audit-check-copy h3 {
+      margin: 0 0 14px;
+      color: var(--ink);
+      font-size: clamp(24px, 2.2vw, 32px);
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    .audit-check-copy p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.62;
+    }
+
+    .audit-check-media-placeholder {
+      min-height: 260px;
+      display: grid;
+      place-items: center;
+      border: 1px dashed #cbd5e1;
+      border-radius: 8px;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(28, 140, 111, .08), transparent 34%),
+        linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+      color: #667085;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      box-shadow: 0 18px 44px rgba(17, 24, 39, .06);
+    }
+
+    .audit-check-image {
+      width: 100%;
+      border: 1px solid rgba(216, 222, 232, .82);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 22px 58px rgba(17, 24, 39, .13);
+      transform: rotate(.6deg);
+      transform-origin: center left;
+    }
+
+    .audit-check-summary {
+      padding: clamp(34px, 5vw, 62px) 0 0;
+    }
+
+    .audit-check-summary h3 {
+      max-width: 640px;
+      margin: 0 0 22px;
+      color: var(--ink);
+      font-size: clamp(24px, 2.2vw, 32px);
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    .audit-check-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .audit-check-summary-card {
+      padding: 20px;
+      border: 1px solid rgba(216, 222, 232, .78);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .76);
+      box-shadow: 0 12px 28px rgba(17, 24, 39, .05);
+    }
+
+    .audit-check-summary-card h4 {
+      margin: 0 0 8px;
+      color: var(--ink);
+      font-size: 17px;
+      line-height: 1.2;
+    }
+
+    .audit-check-summary-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .aeo-answer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .aeo-answer {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 16px 40px rgba(17, 24, 39, .05);
+    }
+
+    .aeo-answer h3 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 20px;
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    .aeo-answer p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.52;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 16px 40px rgba(17, 24, 39, .05);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+      line-height: 1.15;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .card a {
+      color: var(--green-dark);
+      font-weight: 850;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .card ul,
+    .check-list {
+      display: grid;
+      gap: 10px;
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .card li,
+    .check-list li {
+      display: grid;
+      grid-template-columns: 10px 1fr;
+      gap: 10px;
+    }
+
+    .card li::before,
+    .check-list li::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      margin-top: 8px;
+      border-radius: 999px;
+      background: var(--green);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(360px, 1.1fr);
+      gap: 36px;
+      align-items: start;
+    }
+
+    .form-panel {
+      position: sticky;
+      top: 126px;
+      z-index: 2;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    #audit-form {
+      position: relative;
+      min-height: 100vh;
+      margin-inline: calc(50% - 50vw);
+      scroll-margin-top: 0;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 70% 32%, rgba(32, 169, 87, .08), transparent 34%),
+        radial-gradient(circle at 84% 18%, rgba(255, 202, 40, .11), transparent 30%),
+        linear-gradient(135deg, #f6f9fc 0%, #eef4f7 100%);
+    }
+
+    .form-only {
+      position: relative;
+      min-height: 100vh;
+      display: grid;
+      justify-items: center;
+      align-items: start;
+      padding: clamp(28px, 4vw, 52px) 20px clamp(52px, 6vw, 84px);
+    }
+
+    .form-only .form-panel {
+      position: static;
+      width: min(100%, 560px);
+    }
+
+    .form-audit-silhouette {
+      position: absolute;
+      left: 52%;
+      top: 44%;
+      width: min(46vw, 620px);
+      height: min(42vw, 520px);
+      min-height: 360px;
+      border: 1px solid rgba(203, 213, 225, .72);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .46);
+      box-shadow: 0 26px 80px rgba(16, 24, 40, .08);
+      opacity: .7;
+      transform: translateY(-50%);
+    }
+
+    .form-audit-silhouette::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(90deg, rgba(247, 249, 252, .08), rgba(247, 249, 252, .82));
+      backdrop-filter: blur(.8px);
+    }
+
+    .form-audit-silhouette .silhouette-free-badge {
+      position: absolute;
+      right: 6%;
+      top: 7%;
+      z-index: 1;
+      padding: 6px 12px;
+      border: 1px solid rgba(32, 169, 87, .24);
+      border-radius: 999px;
+      background: rgba(239, 250, 245, .82);
+      color: #177348;
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+      box-shadow: 0 8px 18px rgba(16, 24, 40, .06);
+    }
+
+    .form-audit-silhouette .silhouette-header {
+      position: absolute;
+      left: 5.5%;
+      top: 7%;
+      width: 54%;
+      height: 34px;
+      border-radius: 8px;
+      background: #e8edf3;
+    }
+
+    .form-audit-silhouette .silhouette-card {
+      position: absolute;
+      border: 1px solid #dfe5ed;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+
+    .form-audit-silhouette .silhouette-score {
+      left: 5.5%;
+      top: 23%;
+      width: 42%;
+      height: 42%;
+    }
+
+    .form-audit-silhouette .silhouette-ring {
+      position: absolute;
+      left: 12%;
+      top: 17%;
+      width: 76px;
+      height: 76px;
+      border: 9px solid #e5ebf1;
+      border-top-color: #20a957;
+      border-radius: 999px;
+      opacity: .8;
+    }
+
+    .form-audit-silhouette .silhouette-lines {
+      position: absolute;
+      left: 12%;
+      right: 12%;
+      bottom: 12%;
+      display: grid;
+      gap: 8px;
+    }
+
+    .form-audit-silhouette .silhouette-summary {
+      right: 5.5%;
+      top: 23%;
+      width: 41%;
+      height: 42%;
+      display: grid;
+      align-content: center;
+      gap: 10px;
+      padding: 18px;
+    }
+
+    .form-audit-silhouette .silhouette-table {
+      left: 5.5%;
+      right: 5.5%;
+      bottom: 7%;
+      height: 21%;
+      display: grid;
+      align-content: center;
+      gap: 8px;
+      padding: 14px 18px;
+    }
+
+    .form-audit-silhouette .silhouette-lines span,
+    .form-audit-silhouette .silhouette-summary span,
+    .form-audit-silhouette .silhouette-table span {
+      display: block;
+      height: 7px;
+      border-radius: 999px;
+      background: #dbe3ec;
+    }
+
+    .form-audit-silhouette .silhouette-summary span:nth-child(1),
+    .form-audit-silhouette .silhouette-table span:nth-child(1) {
+      width: 82%;
+    }
+
+    .form-audit-silhouette .silhouette-summary span:nth-child(2),
+    .form-audit-silhouette .silhouette-table span:nth-child(2) {
+      width: 64%;
+    }
+
+    .form-audit-silhouette .silhouette-summary span:nth-child(3),
+    .form-audit-silhouette .silhouette-table span:nth-child(3) {
+      width: 72%;
+    }
+
+    .form-audit-silhouette .silhouette-table span:nth-child(4) {
+      width: 54%;
+    }
+
+
+    .form-panel h2 {
+      margin-bottom: 10px;
+      font-size: 30px;
+      line-height: 1.1;
+    }
+
+    .form-panel p {
+      color: var(--muted);
+    }
+
+    .hbspt-form {
+      min-height: 380px;
+      margin-top: 18px;
+    }
+
+    .audit-form-loader {
+      display: grid;
+      gap: 14px;
+      min-height: 280px;
+      padding: 22px;
+      border: 1px solid rgba(28, 140, 111, .22);
+      border-radius: 8px;
+      background: linear-gradient(135deg, rgba(255, 202, 40, .16), transparent 42%), #f8fafc;
+    }
+
+    .audit-form-loader.is-hidden {
+      display: none;
+    }
+
+    .audit-form-loader h3 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .audit-form-loader p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .audit-form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .audit-form-button {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 18px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--yellow);
+      color: #111;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 950;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(255, 202, 40, .22);
+    }
+
+    .audit-form-link {
+      color: #176e58;
+      font-size: 14px;
+      font-weight: 900;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .form-panel.is-loading .hbspt-form::before {
+      content: "Loading audit form...";
+      display: block;
+      padding: 14px;
+      border: 1px solid rgba(28, 140, 111, .22);
+      border-radius: 8px;
+      background: #eef8f4;
+      color: #176e58;
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .front-audit-step {
+      display: grid;
+      gap: 14px;
+    }
+
+    .front-progress {
+      height: 5px;
+      border-radius: 999px;
+      background: #e7edf4;
+      overflow: hidden;
+    }
+
+    .front-progress span {
+      display: block;
+      width: 50%;
+      height: 100%;
+      border-radius: inherit;
+      background: var(--green);
+    }
+
+    .front-step-pill {
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 11px;
+      border: 1px solid #cfeee0;
+      border-radius: 999px;
+      background: #eefaf4;
+      color: #176e58;
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .front-audit-step h3 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 24px;
+      line-height: 1.12;
+    }
+
+    .front-audit-step > p {
+      margin: -4px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .front-next-note {
+      padding: 12px 14px;
+      border: 1px solid #d7efe4;
+      border-radius: 8px;
+      background: #f3fbf7;
+      color: #176e58 !important;
+      font-size: 13px !important;
+      font-weight: 850;
+    }
+
+    .front-form-grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    .front-field label,
+    .front-business-label {
+      display: block;
+      margin-bottom: 6px;
+      color: #445066;
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .front-field input {
+      width: 100%;
+      min-height: 46px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      color: #1f2937;
+      font: inherit;
+      font-size: 14px;
+    }
+
+    .front-field input::placeholder {
+      color: #98a2b3;
+    }
+
+    .front-business-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .front-business-card {
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      color: #202938;
+      font-size: 14px;
+      font-weight: 850;
+      cursor: pointer;
+    }
+
+    .front-business-card input {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--green);
+    }
+
+    .front-submit {
+      width: 100%;
+      min-height: 52px;
+      margin-top: 2px;
+      border-radius: 8px;
+      background: #20a957;
+      color: #fff;
+      box-shadow: 0 12px 30px rgba(32, 169, 87, .20);
+    }
+
+    .privacy-note {
+      margin-top: 12px;
+      color: #667085;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .privacy-note a {
+      color: #176e58;
+      font-weight: 900;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .access-card {
+      border-color: rgba(28, 140, 111, .38);
+      background: #f7fcfa;
+    }
+
+    .next-card {
+      margin-bottom: 16px;
+    }
+
+    .access-card strong {
+      color: var(--green-dark);
+    }
+
+    .mini-steps {
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .mini-step {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .mini-step span {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: var(--yellow);
+      color: #111;
+      font-weight: 950;
+    }
+
+    .mini-step p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .mini-step strong {
+      display: block;
+      color: var(--ink);
+      margin-bottom: 3px;
+    }
+
+    #faq {
+      padding: clamp(58px, 6vw, 86px) 0;
+      background:
+        radial-gradient(circle at 14% 14%, rgba(32, 169, 87, .08), transparent 30%),
+        linear-gradient(180deg, #ffffff 0%, #f7fafc 100%);
+    }
+
+    #faq .section-inner {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    #faq .section-heading {
+      max-width: 760px;
+      margin: 0 auto 30px;
+      text-align: center;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 10px;
+      width: min(880px, 100%);
+      margin: 0 auto;
+    }
+
+    .faq-list details {
+      overflow: hidden;
+      border: 1px solid rgba(216, 222, 232, .9);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 12px 30px rgba(16, 24, 32, .045);
+    }
+
+    .faq-list details[open] {
+      border-color: rgba(28, 140, 111, .24);
+      box-shadow: 0 16px 38px rgba(16, 24, 32, .065);
+    }
+
+    .faq-list summary {
+      position: relative;
+      cursor: pointer;
+      padding: 18px 54px 18px 20px;
+      color: var(--ink);
+      font-weight: 900;
+      list-style: none;
+    }
+
+    .faq-list summary::after {
+      content: "+";
+      position: absolute;
+      top: 50%;
+      right: 18px;
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: #eef8f4;
+      color: var(--green-dark);
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1;
+      transform: translateY(-50%);
+    }
+
+    .faq-list details[open] summary::after {
+      content: "−";
+    }
+
+    .faq-list summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-list details p {
+      max-width: 760px;
+      padding: 0 20px 20px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.58;
+    }
+
+    .faq-list details p a {
+      color: var(--green-dark);
+      font-weight: 850;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .site-footer {
+      background: #0f1720;
+      color: #d8dee8;
+      padding: 46px 0 34px;
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: minmax(250px, 1.2fr) repeat(4, minmax(130px, .8fr));
+      gap: 30px;
+      align-items: start;
+    }
+
+    .footer-brand img {
+      width: 136px;
+      height: auto;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-brand p {
+      max-width: 310px;
+      margin: 16px 0 0;
+      color: #b8c1ce;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .footer-heading {
+      margin: 0 0 12px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 950;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .footer-column {
+      display: grid;
+      gap: 9px;
+    }
+
+    .footer-column a {
+      color: #b8c1ce;
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    .footer-column a:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 980px) {
+      .mode-inner,
+      .nav,
+      .hero-inner,
+      .audit-layout,
+      .section-inner,
+      .footer-inner {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .mode-inner,
+      .mode-controls,
+      .nav {
+        flex-wrap: wrap;
+      }
+
+      .mode-controls {
+        width: 100%;
+      }
+
+      .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 16px 22px;
+      }
+
+      .hero-inner,
+      .audit-layout,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .audit-nav {
+        position: static;
+      }
+
+      .audit-nav.is-fixed {
+        position: static;
+        width: auto;
+      }
+
+      .grid,
+      .aeo-answer-grid,
+      .visibility-intro,
+      .audit-check-subsection,
+      .audit-check-subsection.is-reversed,
+      .audit-check-summary-grid,
+      .front-business-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .audit-check-subsection.is-reversed .audit-check-copy {
+        order: 0;
+      }
+
+      .audit-content {
+        grid-column: auto;
+      }
+
+      .form-panel {
+        position: static;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .nav-cta {
+        display: none;
+      }
+
+      .mode-label {
+        width: 100%;
+      }
+
+      .mode-controls {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .mode-options {
+        width: 100%;
+        grid-template-columns: 1fr;
+        border-radius: 8px;
+      }
+
+      .mode-option {
+        width: 100%;
+        min-width: 0;
+        border-radius: 6px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .section {
+        padding: 54px 0;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <link rel="preload" href="../footer-standard.css?v=20260620-fixed-footer-columns" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="../footer-standard.css?v=20260620-fixed-footer-columns"></noscript>
+  <link rel="stylesheet" href="../header-standard.css?v=20260624-platform-hero">
 </head>
 <body>
-  <section class="password-gate" data-password-gate aria-label="Password required">
-    <form class="password-card" data-password-form>
-      <div class="password-logo">feedops<span></span></div>
-      <h1>Audit flow preview</h1>
-      <p>Enter the preview password to continue.</p>
-      <label for="preview-password">Password</label>
-      <input id="preview-password" data-password-input type="password" autocomplete="current-password" autofocus>
-      <p class="password-error" data-password-error hidden>Incorrect password. Please try again.</p>
-      <button type="submit">Open preview</button>
-    </form>
-  </section>
-  <svg class="icon-sprite" aria-hidden="true">
-    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M6 4h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="M10 4v16"/></symbol>
-    <symbol id="icon-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.4 2.4 3.6 5.4 3.6 9S14.4 18.6 12 21M12 3C9.6 5.4 8.4 8.4 8.4 12S9.6 18.6 12 21"/></symbol>
-    <symbol id="icon-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="M5 15l.8 2.2L8 18l-2.2.8L5 21l-.8-2.2L2 18l2.2-.8L5 15ZM19 3l.8 2.2L22 6l-2.2.8L19 9l-.8-2.2L16 6l2.2-.8L19 3Z"/></symbol>
-    <symbol id="icon-edit" viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M6 16l1-4 9-9 4 4-9 9-4 1Z"/><path d="M14 5l4 4"/></symbol>
-    <symbol id="icon-flow" viewBox="0 0 24 24"><path d="M12 4v5M6 20v-4a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v4"/><circle cx="12" cy="4" r="2"/><circle cx="6" cy="20" r="2"/><circle cx="18" cy="20" r="2"/></symbol>
-    <symbol id="icon-alert" viewBox="0 0 24 24"><path d="M12 3l10 18H2L12 3Z"/><path d="M12 9v5M12 18h.01"/></symbol>
-    <symbol id="icon-box" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></symbol>
-    <symbol id="icon-tag" viewBox="0 0 24 24"><path d="M20 13l-7 7L4 11V4h7l9 9Z"/><circle cx="8" cy="8" r="1.5"/></symbol>
-    <symbol id="icon-refresh" viewBox="0 0 24 24"><path d="M20 6v5h-5"/><path d="M4 18v-5h5"/><path d="M19 11a7 7 0 0 0-12-4M5 13a7 7 0 0 0 12 4"/></symbol>
-    <symbol id="icon-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v6h6M12 7v5l3 2"/></symbol>
-    <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></symbol>
-    <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
-    <symbol id="icon-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
-  </svg>
-  <main class="prototype" data-step="landing" aria-label="FeedOps audit flow prototype">
-    <section class="frame" data-screen="landing">
-      <img src="../assets/audit-flow-preview/01-landing.png?v=3" alt="Audit flow landing screen">
-      <header class="live-site-header" aria-hidden="true">
-        <div class="audience-bar">
-          <span>Explore FeedOps as</span>
-          <strong>Performance expert</strong>
-          <b>Executive mode</b>
-          <b>Media agency</b>
-          <a href="https://feedops.com/contact-us/">Contact</a>
-          <a href="https://app.feedops.com/">Login</a>
-        </div>
-        <div class="website-nav">
-          <div class="footer-logo nav-logo">feedops<span></span></div>
-          <nav>
-            <a href="https://feedops.com/#system">System</a>
-            <a href="https://feedops.com/#operations">Operations</a>
-            <a href="https://feedops.com/#sources">Sources</a>
-            <a href="https://feedops.com/#channels">Channels</a>
-            <a href="https://feedops.com/#playbook">Playbook</a>
-            <a href="https://feedops.com/pricing/">Pricing</a>
-            <a href="https://feedops.com/faq/">FAQ</a>
-          </nav>
-          <a class="demo-link" href="https://feedops.com/book-live-demo/">Book a demo</a>
-        </div>
-      </header>
-      <footer class="live-site-footer" aria-hidden="true">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KR4TR7B"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+<header class="site-header"></header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
         <div>
-          <div class="footer-logo">feedops<span></span></div>
-          <p>Product feed optimisation software, feed strategy, and expert support for ecommerce teams.</p>
-          <a class="footer-cta" href="https://feedops.com/book-live-demo/">Book a demo</a>
-          <a class="footer-cta footer-cta-secondary" href="https://feedops.com/book-live-demo/">See a clearer feed plan</a>
+          <h1>Free Google Shopping Feed Audit Software</h1>
+          <p class="hero-copy">Get instant access to a 100% free, <strong>fully automated Google Shopping Feed Audit</strong>. See where weak titles, missing attributes, incomplete product types, and approval issues reduce visibility.</p>
+          <div class="hero-actions">
+            <a class="button" href="#audit-form">Start my free automated audit</a>
+            <a class="button secondary" href="#checks">See what it checks</a>
+          </div>
+          <div class="trust-list" aria-label="Audit trust points">
+            <div class="trust-item">100% free</div>
+            <div class="trust-item">Instant access after setup</div>
+            <div class="trust-item">No manual review step</div>
+            <div class="trust-item">No feed edits</div>
+            <div class="trust-item">No Google Ads access</div>
+          </div>
         </div>
-        <div>
-          <h3>Company</h3>
-          <a href="https://feedops.com/">Home</a>
-          <a href="https://feedops.com/company/">Company</a>
-          <a href="https://feedops.com/learning/">Learning</a>
-          <a href="https://feedops.com/privacy-policy/">Privacy</a>
+        <div class="audit-eval-panel" aria-label="Google Shopping feed audit placeholder table">
+          <div class="audit-eval-stats" aria-hidden="true">
+            <div class="audit-eval-stat">
+              <div class="audit-eval-stat-top">
+                <span class="audit-eval-stat-icon">✓</span>
+                <span>Audit access</span>
+              </div>
+              <strong>Read-only</strong>
+              <small>No feed edits</small>
+            </div>
+            <div class="audit-eval-stat">
+              <div class="audit-eval-stat-top">
+                <span class="audit-eval-stat-icon">◎</span>
+                <span>Review areas</span>
+              </div>
+              <strong>8+ checks</strong>
+              <small>Visibility, approval, attributes</small>
+            </div>
+            <div class="audit-eval-stat">
+              <div class="audit-eval-stat-top">
+                <span class="audit-eval-stat-icon">↻</span>
+                <span>Runs</span>
+              </div>
+              <strong>Unlimited</strong>
+              <small>Rerun when needed</small>
+            </div>
+          </div>
+          <div class="audit-eval-table">
+            <div class="audit-eval-intro">
+              <h3>What the automated audit checks</h3>
+              <p>A practical view of the product feed signals that affect Google Shopping visibility, matching, approvals, and clicks.</p>
+            </div>
+            <div class="audit-eval-head" aria-hidden="true">
+              <span>Area</span>
+              <span>What it checks</span>
+              <span>Status</span>
+            </div>
+            <div class="audit-eval-row">
+              <span class="audit-eval-capability"><span class="audit-eval-icon" aria-hidden="true">✓</span>Visibility rate</span>
+              <span>Products being seen and clicked</span>
+              <span class="audit-eval-status">Included</span>
+            </div>
+            <div class="audit-eval-row">
+              <span class="audit-eval-capability"><span class="audit-eval-icon" aria-hidden="true">●</span>Account compliance</span>
+              <span>Programs, eligibility, and account signals</span>
+              <span class="audit-eval-status">Included</span>
+            </div>
+            <div class="audit-eval-row">
+              <span class="audit-eval-capability"><span class="audit-eval-icon" aria-hidden="true">↗</span>Product approval</span>
+              <span>Shopping Ads, Free Listings, Display Ads</span>
+              <span class="audit-eval-status">Included</span>
+            </div>
+            <div class="audit-eval-row">
+              <span class="audit-eval-capability"><span class="audit-eval-icon" aria-hidden="true">◆</span>Attributes</span>
+              <span>Titles, product types, variants, and identifiers</span>
+              <span class="audit-eval-status">Included</span>
+            </div>
+          </div>
         </div>
-        <div>
-          <h3>Platform</h3>
-          <a href="https://feedops.com/">Product Feed Optimisation</a>
-          <a href="https://feedops.com/product-feed-management/">Product Feed Management</a>
-          <a href="https://feedops.com/shopping-feed-agency/">Shopping Feed Agency</a>
-          <a href="https://feedops.com/pricing/">Pricing Model</a>
+      </div>
+    </section>
+
+    <div class="audit-layout">
+      <div class="audit-content">
+    <section class="section" id="checks">
+      <div class="section-inner">
+        <div class="visibility-intro">
+          <div class="section-heading">
+            <p class="kicker">What it checks</p>
+            <h2>Are your products being seen and clicked?</h2>
+            <p>For your products to sell, they first need to be visible in Google Shopping. Once they are visible, they need to earn clicks. The audit looks at Google Merchant Center independently of Google Ads, so you can see whether product visibility and click signals are being held back by the feed itself.</p>
+          </div>
+          <div class="visibility-visual" aria-label="Visibility rate example">
+            <img src="../assets/audit-flow/visibility-rate-card.png" alt="Visibility Rate card showing 24 percent">
+          </div>
         </div>
-        <div>
-          <h3>Support</h3>
-          <a href="https://feedops.com/faq/">FAQ</a>
-          <a href="https://app.feedops.com/">Login</a>
-          <a href="https://feedops.com/contact-us/">Contact</a>
-          <a href="https://support.feedops.com/">Help Docs</a>
+        <div class="audit-check-subsection is-reversed">
+          <div class="audit-check-copy">
+            <h3>Account compliance is the on or off switch for product visibility.</h3>
+            <p>If your Merchant Center account is not compliant, products can be disapproved or the account can be suspended, which means visibility stops before media performance even has a chance. The audit checks the compliance signals that can affect whether products are eligible to show, and it also helps confirm that the programs you are eligible for are turned on so your products can appear in the places Google makes available.</p>
+          </div>
+          <div>
+            <img class="audit-check-image" src="../assets/audit-flow/feedops-free-google-shopping-feed-audit-compliance.png" alt="FeedOps Free Google Shopping Feed Audit - compliance" title="FeedOps Free Google Shopping Feed Audit - compliance">
+          </div>
         </div>
-      </footer>
-      <div class="landing-reassurance" aria-hidden="true">
-        <p>Read-only API access only. FeedOps employees cannot log in to your Merchant Center.</p>
-        <p>Access is used only to run the audit.</p>
+        <div class="audit-check-subsection">
+          <div class="audit-check-copy">
+            <h3>If products are not approved, they cannot be seen.</h3>
+            <p>Product approval shows which products are eligible for each Google surface, including Shopping ads, free listings, and display ads. The audit separates approval by channel so you can see where important products are blocked, where issues need attention, and whether the products that matter most are actually able to appear where shoppers can find them.</p>
+          </div>
+          <div>
+            <img class="audit-check-image" src="../assets/audit-flow/feedops-free-google-shopping-feed-audit-product-approval.png" alt="FeedOps Free Google Shopping Feed Audit - product approval by Shopping ads, free listings, and display ads" title="FeedOps Free Google Shopping Feed Audit - product approval">
+          </div>
+        </div>
+        <div class="audit-check-subsection is-reversed">
+          <div class="audit-check-copy">
+            <h3>If attributes are incomplete, Google has less context for what you sell.</h3>
+            <p>Attributes help Google understand, classify, match, and recommend your products across search, free listings, ads, and conversational commerce. The audit highlights weak or missing titles, product types, identifiers, variants, colours, sizes, materials, weights, and other product details that can limit visibility, searchability, and discoverability.</p>
+          </div>
+          <div>
+            <img class="audit-check-image" src="../assets/audit-flow/feedops-free-google-shopping-feed-audit-attribute-completeness.png" alt="FeedOps Free Google Shopping Feed Audit - attribute completeness for titles, product types, variants, and product attributes" title="FeedOps Free Google Shopping Feed Audit - attribute completeness">
+          </div>
+        </div>
+        <div class="audit-check-summary">
+          <h3>Other measures help you see what is working, what is being ignored, and what to do next.</h3>
+          <div class="audit-check-summary-grid">
+            <article class="audit-check-summary-card">
+              <h4>Products with impressions</h4>
+              <p>See which products Google is already showing, so you can understand what is driving visibility.</p>
+            </article>
+            <article class="audit-check-summary-card">
+              <h4>Products with clicks</h4>
+              <p>Find which visible products are actually earning traffic and shopper attention.</p>
+            </article>
+            <article class="audit-check-summary-card">
+              <h4>Zombie products</h4>
+              <p>Spot products that get impressions but no clicks, so ignored products can be prioritised for review.</p>
+            </article>
+            <article class="audit-check-summary-card">
+              <h4>Download and rerun</h4>
+              <p>Download the audit data to a Google Sheet, rerun audits as often as needed, and view past audits.</p>
+            </article>
+          </div>
+        </div>
       </div>
-      <button class="hotspot landing-cta" data-go="account" aria-label="Run my free audit now"></button>
     </section>
 
-    <section class="frame" data-screen="connect">
-      <img src="../assets/audit-flow-preview/02-connect.png?v=3" alt="Connect Google Merchant Center screen">
-      <div class="flow-step flow-step-connect" aria-hidden="true">
-        <span>Step 2 of 2</span>
-        <strong>Connect Merchant Center</strong>
-      </div>
-      <div class="connect-reassurance" aria-hidden="true">
-        <p>Read-only access. Used to calculate visibility metrics from impressions and clicks.</p>
-        <p>No feed or campaign changes.</p>
-        <a href="https://feedops.com/google-shopping-feed-audit-access/" target="_blank" rel="noopener">What does FeedOps access?</a>
-      </div>
-      <button class="hotspot connect-merchant" data-go="google" aria-label="Connect Google Merchant Center"></button>
-    </section>
-
-    <section class="frame" data-screen="google">
-      <img src="../assets/audit-flow-preview/03-google.png?v=3" alt="Google sign-in consent screen">
-      <button class="hotspot google-cancel" data-go="connect" aria-label="Cancel"></button>
-      <button class="hotspot google-continue" data-go="merchant" aria-label="Continue"></button>
-    </section>
-
-    <section class="frame" data-screen="merchant">
-      <img src="../assets/audit-flow-preview/04-merchant.png?v=3" alt="Select Merchant Center screen">
-      <div class="merchant-reassurance" aria-hidden="true">
-        <p>We only access the website you select for this audit.</p>
-        <p>Other sites in your account are not used.</p>
-        <a href="https://feedops.com/google-shopping-feed-audit-access/" target="_blank" rel="noopener">What does FeedOps access?</a>
-      </div>
-      <button class="hotspot merchant-select" data-go="merchant-open" aria-label="Open merchant selector"></button>
-    </section>
-
-    <section class="frame" data-screen="merchant-open">
-      <img src="../assets/audit-flow-preview/05-merchant-open.png?v=3" alt="Merchant Center dropdown screen">
-      <div class="merchant-reassurance" aria-hidden="true">
-        <p>We only access the website you select for this audit.</p>
-        <p>Other sites in your account are not used.</p>
-        <a href="https://feedops.com/google-shopping-feed-audit-access/" target="_blank" rel="noopener">What does FeedOps access?</a>
-      </div>
-      <button class="hotspot merchant-option" data-go="merchant-selected" aria-label="Select second store"></button>
-    </section>
-
-    <section class="frame" data-screen="merchant-selected">
-      <img src="../assets/audit-flow-preview/06-merchant-selected.png?v=3" alt="Selected Merchant account screen">
-      <div class="merchant-reassurance" aria-hidden="true">
-        <p>We only access the website you select for this audit.</p>
-        <p>Other sites in your account are not used.</p>
-        <a href="https://feedops.com/google-shopping-feed-audit-access/" target="_blank" rel="noopener">What does FeedOps access?</a>
-      </div>
-      <button class="hotspot merchant-continue" data-go="ready" aria-label="Continue"></button>
-    </section>
-
-    <section class="frame" data-screen="account">
-      <div class="account-plain-screen" aria-hidden="true">
-        <div class="account-logo">feedops<span></span></div>
-        <div class="audit-silhouette">
+    <section class="section" id="audit-form">
+      <div class="section-inner form-only">
+        <div class="form-audit-silhouette" aria-hidden="true">
           <div class="silhouette-free-badge">100% free</div>
           <div class="silhouette-header"></div>
           <div class="silhouette-card silhouette-score">
@@ -1784,312 +2293,275 @@ button.app-locked .info-mini,
             <span></span>
           </div>
         </div>
-        <div class="account-form-card">
-          <div class="flow-step flow-step-card">
-            <span>Step 1 of 2</span>
-            <strong>Contact details</strong>
-          </div>
-          <h2>Where should we send your audit?</h2>
-          <p>We will email your audit results and help if setup needs attention.</p>
-          <p class="next-step-note">Next: connect Google Merchant Center to run the audit.</p>
-          <label>Full name</label>
-          <div class="form-field">John Smith</div>
-          <label>Work email</label>
-          <div class="form-field form-field-wide">john@example.com</div>
-          <label>Company</label>
-          <div class="form-field form-field-wide">xyz.com</div>
-          <label>Mobile phone</label>
-          <div class="form-field form-field-wide">67121231212</div>
-          <label>Business type</label>
-          <div class="account-type-grid" role="radiogroup" aria-label="Business type">
-            <div class="account-type-card">
-              <span></span>
-              Retailer / brand
+        <aside class="form-panel" aria-label="Free Google Shopping feed audit form">
+          <form class="front-audit-step" id="hubspot-form-34103a8f-c0af-4b86-9400-feb31017b795" data-hubspot-form-id="34103a8f-c0af-4b86-9400-feb31017b795">
+            <div class="front-progress" aria-hidden="true"><span></span></div>
+            <span class="front-step-pill">Step 1 of 2</span>
+            <h3>Where should we send your audit?</h3>
+            <p>We will email your audit results and help if setup needs attention.</p>
+            <p class="front-next-note">Next: connect Google Merchant Center to run the audit.</p>
+            <div class="front-form-grid">
+              <div class="front-field">
+                <label for="front-full-name">Full name</label>
+                <input id="front-full-name" name="full_name" type="text" placeholder="John Smith">
+              </div>
+              <div class="front-field">
+                <label for="front-work-email">Work email</label>
+                <input id="front-work-email" name="email" type="email" placeholder="john@example.com">
+              </div>
+              <div class="front-field">
+                <label for="front-company">Company</label>
+                <input id="front-company" name="company" type="text" placeholder="xyz.com">
+              </div>
+              <div class="front-field">
+                <label for="front-mobile-phone">Mobile phone</label>
+                <input id="front-mobile-phone" name="mobile_phone" type="tel" placeholder="67121231212">
+              </div>
             </div>
-            <div class="account-type-card">
-              <span></span>
-              Agency
+            <div>
+              <span class="front-business-label">Business type</span>
+              <div class="front-business-grid" role="radiogroup" aria-label="Business type">
+                <label class="front-business-card">
+                  <input type="radio" name="business_type" value="retailer_brand">
+                  Retailer / brand
+                </label>
+                <label class="front-business-card">
+                  <input type="radio" name="business_type" value="agency">
+                  Agency
+                </label>
+              </div>
             </div>
-          </div>
-          <div class="account-button-rewrite">Continue to connect Merchant Center</div>
-          <p class="account-access-note">FeedOps uses read-only API access to run the audit. Employees cannot log in to your Merchant Center.</p>
-          <a class="account-access-link" href="https://feedops.com/google-shopping-feed-audit-access/" target="_blank" rel="noopener">What does FeedOps access?</a>
-          <p class="account-reassurance">You can remove FeedOps access from Google Merchant Center at any time.</p>
+            <a class="button audit-form-button front-submit" href="flow/?step=connect">Sign up with Google and connect Merchant Center</a>
+          </form>
+          <p class="privacy-note">The audit uses read-only Merchant Center API access plus reporting and insights permissions. FeedOps employees cannot log in to your Merchant Center, and the audit does not change products, pricing, shipping, campaigns, or settings. <a href="https://feedops.com/google-shopping-feed-audit-access/" target="_blank" rel="noopener">What does FeedOps access?</a></p>
+        </aside>
+      </div>
+    </section>
+
+
+    <section class="section soft" id="faq">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="kicker">FAQ</p>
+          <h2>Questions about the Free Google Shopping Feed Audit.</h2>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>Is the Free Google Shopping Feed Audit really free?</summary>
+            <p>Yes. The Free Google Shopping Feed Audit is free to use. You enter your details, connect Merchant Center, and the automated audit starts.</p>
+          </details>
+          <details>
+            <summary>Is the audit fully automated?</summary>
+            <p>Yes. Once access is set up, the audit reviews Google Merchant Center product data automatically and surfaces product data issues at scale.</p>
+          </details>
+          <details>
+            <summary>Do I need to become a FeedOps customer?</summary>
+            <p>No. You do not need to become a FeedOps customer to use the audit. If you later want help fixing feed issues, that can be discussed separately.</p>
+          </details>
+          <details>
+            <summary>Do I need to replace my current feed provider?</summary>
+            <p>No. You can keep your current feed provider and still use the audit to understand product data issues.</p>
+          </details>
+          <details>
+            <summary>Do I need to connect Google Ads?</summary>
+            <p>No. The audit uses Google Merchant Center product data and does not require a Google Ads connection.</p>
+          </details>
+          <details>
+            <summary>What Google Merchant Center access does FeedOps need?</summary>
+            <p>FeedOps needs standard Google Merchant Center access plus reporting and insights permissions. This lets the audit read product data plus impression and click signals needed to assess feed health and generate visibility metrics without changing your product data. <a href="https://feedops.com/google-shopping-feed-audit-access/">What does FeedOps access for the audit?</a></p>
+          </details>
+          <details>
+            <summary>Why does FeedOps need report permissions?</summary>
+            <p>Report permissions allow the audit to read product-level signals such as impressions and clicks. FeedOps uses those signals to generate visibility metrics and identify products that may need attention.</p>
+          </details>
+          <details>
+            <summary>Does the audit make changes to Merchant Center?</summary>
+            <p>No. The audit is read-only. It does not make changes to your Merchant Center account, product data, pricing, shipping, campaigns, or settings.</p>
+          </details>
+          <details>
+            <summary>Who is the audit for?</summary>
+            <p>The audit is for ecommerce teams, retailers, brands, and agencies that want a clearer view of product data health in Google Shopping.</p>
+          </details>
+          <details>
+            <summary>Can agencies use the audit?</summary>
+            <p>Yes. Agencies can use the audit across multiple client accounts. <a href="https://feedops.com/contact-us/">Contact FeedOps</a> and we can set up an agency login for running audits across multiple clients.</p>
+          </details>
+          <details>
+            <summary>Can retailers and brands use the audit?</summary>
+            <p>Yes. Retailers and brands can use the audit to understand catalogue health, product visibility, and product data issues across their Merchant Center account.</p>
+          </details>
+          <details>
+            <summary>Can I run more than one audit?</summary>
+            <p>Yes. You get a login and can rerun audits as often as you need, so you can compare progress over time.</p>
+          </details>
+          <details>
+            <summary>Can I use the audit on more than one website?</summary>
+            <p>Yes. The audit can be used across multiple websites or Merchant Center accounts when access is set up for each account.</p>
+          </details>
+          <details>
+            <summary>Can I invite my team?</summary>
+            <p>Yes. Relevant team members and stakeholders can be invited so they can review audit results and prioritise fixes.</p>
+          </details>
+          <details>
+            <summary>Can I keep a history of past audits?</summary>
+            <p>Yes. The audit workflow is designed so you can review previous results and compare progress over time.</p>
+          </details>
+          <details>
+            <summary>What does the audit check?</summary>
+            <p>The audit checks signals such as visibility, products with impressions but no clicks, products with no impressions, attribute completeness, and product data gaps that may affect paid Shopping and free listings.</p>
+          </details>
+          <details>
+            <summary>What are zombie products?</summary>
+            <p>Zombie products are products that receive impressions but do not receive clicks. They may be visible, but they are not attracting enough shopper interest.</p>
+          </details>
+          <details>
+            <summary>What does no impressions and no clicks mean?</summary>
+            <p>No impressions and no clicks means a product is not being seen or clicked. This can point to weak product data, missing attributes, relevance issues, or visibility problems.</p>
+          </details>
+          <details>
+            <summary>What is attribute completeness?</summary>
+            <p>Attribute completeness shows whether important product data fields are present and complete. Missing or weak attributes can reduce visibility, relevance, and product matching.</p>
+          </details>
+          <details>
+            <summary>Does the audit help with free listings as well as ads?</summary>
+            <p>Yes. Feed quality can affect both paid Shopping activity and free listings because both depend on Google understanding product data accurately.</p>
+          </details>
+          <details>
+            <summary>Will the audit tell me what is holding my product data back?</summary>
+            <p>Yes. The audit is designed to help identify weak signals, missing data, low-visibility products, and missed opportunities in your product feed.</p>
+          </details>
+          <details>
+            <summary>Do I need technical skills to use it?</summary>
+            <p>No. The audit is designed to be simple to access and easy to understand. FeedOps can guide the setup process.</p>
+          </details>
+          <details>
+            <summary>What happens after I submit the form?</summary>
+            <p>You get access to the audit workflow, connect the Merchant Center account you want audited, and the automated audit starts. We use your details to email audit updates and help if setup needs attention.</p>
+          </details>
+          <details>
+            <summary>Will FeedOps contact me after I sign up?</summary>
+            <p>Yes. FeedOps may contact you to help set up access or support your use of the audit, but you are not required to upgrade.</p>
+          </details>
+          <details>
+            <summary>Does using the audit commit me to anything?</summary>
+            <p>No. Using the audit does not commit you to becoming a FeedOps customer or changing your feed setup.</p>
+          </details>
+          <details>
+            <summary>What happens if I want FeedOps to help fix the issues?</summary>
+            <p>If you want help after reviewing the audit, FeedOps can discuss the right plan, support model, or product feed demo for fixing the issues.</p>
+          </details>
         </div>
       </div>
-      <button class="hotspot create-account" data-go="connect" aria-label="Continue to connect Merchant Center"></button>
     </section>
-
-    <section class="frame" data-screen="ready">
-      <div class="audit-live-screen" aria-hidden="true">
-        <header>
-          <svg class="audit-menu-icon"><use href="#icon-menu"></use></svg>
-          <div class="audit-logo">feedops<span></span></div>
-          <div class="audit-site-pill">gluestore.com.au</div>
-          <div class="audit-user">
-            <strong>Frank Grasso</strong>
-            <span>frank@feedops.com</span>
-          </div>
-          <div class="audit-avatar">FG</div>
-        </header>
-        <aside>
-          <strong class="app-info"><svg><use href="#icon-sparkle"></use></svg>Playbook<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Playbook</span><span class="tooltip-copy">The control center for running audits and improving product feed performance.</span><span class="tooltip-actions"><a href="https://feedops.com/product-feed-platform/#playbook" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></strong>
-          <span class="app-locked"><svg><use href="#icon-edit"></use></svg>Products Data<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Product Data</span><span class="tooltip-copy">View, filter, import, export, and edit the data being served to each channel.</span><span class="tooltip-actions"><a href="https://feedops.com/product-feed-platform/#product-data" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
-          <span class="app-locked"><svg><use href="#icon-flow"></use></svg>Feed rules<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Feed Rules</span><span class="tooltip-copy">Automate feed logic with conditions and actions across one or many channels.</span><span class="tooltip-actions"><a href="https://feedops.com/product-feed-platform/#feed-rules" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
-          <span class="app-locked"><svg><use href="#icon-alert"></use></svg>Alerts<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Alerts</span><span class="tooltip-copy">Get notified about product approvals, disapprovals, feed issues, order errors, and sync problems.</span><span class="tooltip-actions"><a href="https://feedops.com/product-feed-platform/#alerts" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
-          <span class="app-locked"><svg><use href="#icon-box"></use></svg>Orders <em>Beta</em><svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Orders</span><span class="tooltip-copy">Track marketplace order status and unblock processing or mismatch issues.</span><span class="tooltip-actions"><a href="https://feedops.com/product-feed-platform/#orders" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
-          <div class="audit-sidebar-bottom">
-            <span class="app-locked">Website settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Connections</span><span class="tooltip-copy">Manage shopping cart credentials, API settings, mappings, schedules, and category inclusion.</span><span class="tooltip-actions"><a href="https://feedops.com/product-feed-platform/#connections" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
-            <span class="app-locked">Account settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Account Settings</span><span class="tooltip-copy">Add websites, manage users, and update account details on paid plans.</span><span class="tooltip-actions"><a href="https://feedops.com/product-feed-platform/#account-settings" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
-            <a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a>
-          </div>
-        </aside>
-        <main>
-          <div class="audit-topline">
-            <div class="audit-playbook-title">
-              <h2>Playbook</h2>
-              <button class="app-locked"><svg><use href="#icon-tag"></use></svg>Google<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Connected Channels</span><span class="tooltip-copy">Add or remove media, marketplace, and feed destinations depending on your plan.</span><span class="tooltip-actions"><a href="https://feedops.com/product-feed-platform/#connected-channels" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></button>
-              <span>New Playbook experience (Beta)</span>
-              <a href="#">Leave feedback</a>
-              <button class="wireframe-toggle" data-go="error">Wireframe: error state</button>
-            </div>
-            <div class="audit-ai-actions">
-              <p>0 AI credits available</p>
-              <button class="app-locked">AI Settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">AI Settings</span><span class="tooltip-copy">Customize agents for each brand, category, country, language, and attribute.</span><span class="tooltip-actions"><a href="https://feedops.com/product-feed-platform/#ai-settings" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></button>
-            </div>
-          </div>
-          <div class="audit-tabs">
-            <span class="app-locked">Enrich with AI<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Enrich with AI</span><span class="tooltip-copy">Use custom agents to enrich variants, product types, titles, and missing attributes at scale.</span><span class="tooltip-actions"><a href="https://feedops.com/product-feed-platform/#enrich-with-ai" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
-            <strong>Feed Audit</strong>
-          </div>
-          <div class="audit-notice">We're generating a new audit, which may take time depending on your feed size. We'll email you at frank@feedops.com when it's done.</div>
-          <div class="audit-title-row">
-            <h1>Google Shopping Feed Audit</h1>
-            <div class="audit-actions">
-              <button><svg><use href="#icon-refresh"></use></svg>Run New Audit</button>
-              <button><svg><use href="#icon-history"></use></svg>View Past Audits</button>
-              <button class="audit-download"><svg><use href="#icon-download"></use></svg>Download Audit</button>
-            </div>
-          </div>
-          <section class="audit-grid">
-            <article class="audit-panel audit-visibility">
-              <h3>Visibility Rate <svg><use href="#icon-info"></use></svg></h3>
-              <div class="audit-ring"><strong>18%</strong></div>
-              <div class="audit-trend good">+29.2%</div>
-              <p>vs previous period</p>
-              <div class="audit-filter">All Traffic</div>
-            </article>
-            <article class="audit-panel audit-score-row">
-              <h3>Improve These Metrics to Boost Visibility Rate</h3>
-              <div><b>Account Compliance <svg><use href="#icon-info"></use></svg></b><strong>97.0%</strong><i><svg><use href="#icon-chevron"></use></svg></i></div>
-              <div><b>Product Approval <svg><use href="#icon-info"></use></svg></b><strong>99.9%</strong></div>
-              <div><b>Attribute Completeness <svg><use href="#icon-info"></use></svg></b><strong>74.2%</strong><i><svg><use href="#icon-chevron"></use></svg></i></div>
-            </article>
-            <article class="audit-panel audit-table">
-              <h3>Feed Performance Overview</h3>
-              <div class="audit-table-row audit-table-head"><b>Metric</b><span>Product Count</span><em>% of Feed</em></div>
-              <div class="audit-table-row"><b>Total Products in Feed</b><span>30.16k</span><em>100.0%</em></div>
-              <div class="audit-table-row"><b>Products with Impressions</b><span>5.52k</span><em>18.3%</em><i><svg><use href="#icon-chevron"></use></svg></i></div>
-              <div class="audit-table-row"><b>Products with Clicks</b><span>5.41k</span><em>17.9%</em><i><svg><use href="#icon-chevron"></use></svg></i></div>
-              <div class="audit-table-row"><b>Products with Conversions</b><span>24</span><em>0.1%</em><i><svg><use href="#icon-chevron"></use></svg></i></div>
-            </article>
-            <article class="audit-panel audit-segments">
-              <h3>Metrics from 14 March to 12 April, 2026</h3>
-              <div class="audit-table-row audit-table-head"><b>Segment</b><span>Product Count</span><em>% of Feed</em></div>
-              <div class="audit-table-row"><b>Impressions, 0 Clicks</b><span>271</span><em>0.9%</em><i><svg><use href="#icon-chevron"></use></svg></i></div>
-              <div class="audit-table-row"><b>No Impressions</b><span>24.64k</span><em>81.7%</em><i><svg><use href="#icon-chevron"></use></svg></i></div>
-              <div class="audit-table-row"><b>High Impressions, Low Clicks</b><span></span><em></em><i><svg><use href="#icon-chevron"></use></svg></i></div>
-            </article>
-          </section>
-        </main>
       </div>
-    </section>
-
-    <section class="frame" data-screen="error">
-      <div class="audit-live-screen audit-error-screen" aria-hidden="true">
-        <header>
-          <svg class="audit-menu-icon"><use href="#icon-menu"></use></svg>
-          <div class="audit-logo">feedops<span></span></div>
-          <div class="audit-site-pill">gluestore.com.au</div>
-          <div class="audit-user">
-            <strong>Frank Grasso</strong>
-            <span>frank@feedops.com</span>
-          </div>
-          <div class="audit-avatar">FG</div>
-        </header>
-        <aside>
-          <strong class="app-info"><svg><use href="#icon-sparkle"></use></svg>Playbook<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Playbook</span><span class="tooltip-copy">The control center for running audits and improving product feed performance.</span><span class="tooltip-actions"><a href="https://feedops.com/product-feed-platform/#playbook" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></strong>
-          <span class="app-locked"><svg><use href="#icon-edit"></use></svg>Products Data<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Product Data</span><span class="tooltip-copy">View, filter, import, export, and edit the data being served to each channel.</span><span class="tooltip-actions"><a href="https://feedops.com/product-feed-platform/#product-data" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
-          <span class="app-locked"><svg><use href="#icon-flow"></use></svg>Feed rules<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Feed Rules</span><span class="tooltip-copy">Automate feed logic with conditions and actions across one or many channels.</span><span class="tooltip-actions"><a href="https://feedops.com/product-feed-platform/#feed-rules" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
-          <span class="app-locked"><svg><use href="#icon-alert"></use></svg>Alerts<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Alerts</span><span class="tooltip-copy">Get notified about product approvals, disapprovals, feed issues, order errors, and sync problems.</span><span class="tooltip-actions"><a href="https://feedops.com/product-feed-platform/#alerts" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
-          <span class="app-locked"><svg><use href="#icon-box"></use></svg>Orders <em>Beta</em><svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Orders</span><span class="tooltip-copy">Track marketplace order status and unblock processing or mismatch issues.</span><span class="tooltip-actions"><a href="https://feedops.com/product-feed-platform/#orders" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
-          <div class="audit-sidebar-bottom">
-            <span class="app-locked">Website settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Connections</span><span class="tooltip-copy">Manage shopping cart credentials, API settings, mappings, schedules, and category inclusion.</span><span class="tooltip-actions"><a href="https://feedops.com/product-feed-platform/#connections" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
-            <span class="app-locked">Account settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Account Settings</span><span class="tooltip-copy">Add websites, manage users, and update account details on paid plans.</span><span class="tooltip-actions"><a href="https://feedops.com/product-feed-platform/#account-settings" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
-            <a href="https://feedops.com/contact-us/" target="_blank" rel="noopener">Contact us</a>
-          </div>
-        </aside>
-        <main>
-          <div class="audit-topline">
-            <div class="audit-playbook-title">
-              <h2>Playbook</h2>
-              <button class="app-locked"><svg><use href="#icon-tag"></use></svg>Google<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Connected Channels</span><span class="tooltip-copy">Add or remove media, marketplace, and feed destinations depending on your plan.</span><span class="tooltip-actions"><a href="https://feedops.com/product-feed-platform/#connected-channels" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></button>
-              <span>New Playbook experience (Beta)</span>
-              <a href="#">Leave feedback</a>
-              <button class="wireframe-toggle wireframe-toggle-error" data-go="ready">Wireframe: success state</button>
-            </div>
-            <div class="audit-ai-actions">
-              <p>0 AI credits available</p>
-              <button class="app-locked">AI Settings<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">AI Settings</span><span class="tooltip-copy">Customize agents for each brand, category, country, language, and attribute.</span><span class="tooltip-actions"><a href="https://feedops.com/product-feed-platform/#ai-settings" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></button>
-            </div>
-          </div>
-          <div class="audit-tabs">
-            <span class="app-locked">Enrich with AI<svg class="info-mini"><use href="#icon-info"></use></svg><span class="lock-tooltip"><span class="tooltip-title">Enrich with AI</span><span class="tooltip-copy">Use custom agents to enrich variants, product types, titles, and missing attributes at scale.</span><span class="tooltip-actions"><a href="https://feedops.com/product-feed-platform/#enrich-with-ai" target="_blank" rel="noopener">Learn more</a><a href="https://feedops.com/contact_us/" target="_blank" rel="noopener">Contact us</a></span></span></span>
-            <strong>Feed Audit</strong>
-          </div>
-          <div class="audit-notice audit-notice-error">We could not generate the audit for gluestore.com.au. Please check that FeedOps has report/view permissions in Google Merchant Center. This is the most common reason an audit fails. <a href="https://feedops.com/google-shopping-feed-audit-access/#minimum-access-required" target="_blank" rel="noopener">Learn how to check permissions</a></div>
-          <div class="audit-title-row">
-            <h1>Google Shopping Feed Audit</h1>
-            <div class="audit-actions">
-              <button><svg><use href="#icon-refresh"></use></svg>Run New Audit</button>
-              <button><svg><use href="#icon-history"></use></svg>View Past Audits</button>
-              <button class="audit-download"><svg><use href="#icon-download"></use></svg>Download Audit</button>
-            </div>
-          </div>
-          <section class="audit-grid audit-grid-silhouette">
-            <article class="audit-panel audit-visibility">
-              <h3>Visibility Rate <svg><use href="#icon-info"></use></svg></h3>
-              <div class="audit-ring"><strong>--</strong></div>
-              <div class="audit-trend">Pending</div>
-              <p>audit not generated</p>
-              <div class="audit-filter">All Traffic</div>
-            </article>
-            <article class="audit-panel audit-score-row">
-              <h3>Improve These Metrics to Boost Visibility Rate</h3>
-              <div><b>Account Compliance <svg><use href="#icon-info"></use></svg></b><strong>--</strong><i><svg><use href="#icon-chevron"></use></svg></i></div>
-              <div><b>Product Approval <svg><use href="#icon-info"></use></svg></b><strong>--</strong></div>
-              <div><b>Attribute Completeness <svg><use href="#icon-info"></use></svg></b><strong>--</strong><i><svg><use href="#icon-chevron"></use></svg></i></div>
-            </article>
-            <article class="audit-panel audit-table">
-              <h3>Feed Performance Overview</h3>
-              <div class="audit-table-row audit-table-head"><b>Metric</b><span>Product Count</span><em>% of Feed</em></div>
-              <div class="audit-table-row"><b>Total Products in Feed</b><span></span><em></em><i><svg><use href="#icon-chevron"></use></svg></i></div>
-              <div class="audit-table-row"><b>Products with Impressions</b><span></span><em></em><i><svg><use href="#icon-chevron"></use></svg></i></div>
-              <div class="audit-table-row"><b>Products with Clicks</b><span></span><em></em><i><svg><use href="#icon-chevron"></use></svg></i></div>
-            </article>
-            <article class="audit-panel audit-segments">
-              <h3>Metrics unavailable</h3>
-              <div class="audit-table-row audit-table-head"><b>Segment</b><span>Product Count</span><em>% of Feed</em></div>
-              <div class="audit-table-row"><b>Impressions, 0 Clicks</b><span></span><em></em><i><svg><use href="#icon-chevron"></use></svg></i></div>
-              <div class="audit-table-row"><b>No Impressions</b><span></span><em></em><i><svg><use href="#icon-chevron"></use></svg></i></div>
-              <div class="audit-table-row"><b>High Impressions, Low Clicks</b><span></span><em></em><i><svg><use href="#icon-chevron"></use></svg></i></div>
-            </article>
-          </section>
-        </main>
-      </div>
-    </section>
-
-    <button class="hotspot prototype-prev" data-prev aria-label="Previous prototype screen"></button>
-    <button class="hotspot prototype-next" data-next aria-label="Next prototype screen"></button>
-    <button class="hotspot prototype-restart" data-go="landing" aria-label="Restart prototype"></button>
+    </div>
   </main>
 
-  <nav class="flow-controls" aria-label="Prototype navigation">
-    <button data-prev aria-label="Previous screen">‹</button>
-    <span id="step-label">Landing</span>
-    <button data-next aria-label="Next screen">›</button>
-  </nav>
+  
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="https://feedops.com/" aria-label="FeedOps home">
+          <img src="../assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4-300x110.png" alt="FeedOps logo - footer logo 1 for free Google Shopping feed audit on Free Google Shopping Feed Audit" title="FeedOps logo - footer logo 1 for free Google Shopping feed audit on Free Google Shopping Feed Audit" width="300" height="110">
+        </a>
+        <p>Product feed optimisation software, feed strategy, and expert support for ecommerce teams.</p>
+      </div>
+      <div class="footer-group">
+        <div class="footer-heading">Company</div>
+        <div class="footer-column">
+          <a href="https://feedops.com/">Home</a>
+          <a href="https://feedops.com/company/">Company</a>
+                    <a href="https://feedops.com/learning/">Learning</a>
+<a href="https://feedops.com/contact-us/">Contact</a>
+          <a href="https://feedops.com/privacy-policy/">Privacy</a>
+        </div>
+      </div>
+      <div class="footer-group">
+        <div class="footer-heading">Platform</div>
+        <div class="footer-column">
+          <a href="https://feedops.com/">Product Feed Optimisation</a>
+          <a href="https://feedops.com/product-feed-management/">Product Feed Management</a>
+          <a href="https://feedops.com/shopping-feed-agency/">Shopping Feed Agency</a>
+          <a href="https://feedops.com/pricing/">Pricing Model</a>
+          <a href="https://feedops.com/book-live-demo/">Book a demo</a>
+          <a href="./">Free Google Shopping Feed Audit</a>
+        </div>
+      </div>
+      <div class="footer-group">
+        <div class="footer-heading">Guides</div>
+        <div class="footer-column">
+          <a href="https://feedops.com/google-shopping-product-title-optimization/">Google Shopping Title Optimization</a>
+          <a href="https://feedops.com/feedops/google-shopping-free-listings/">Google Shopping Free Listings Guide</a>
+        </div>
+      </div>
+      <div class="footer-group">
+        <div class="footer-heading">Support</div>
+        <div class="footer-column">
+          <a href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>
+          <a href="https://kb.feedops.com/knowledge" target="_blank" rel="noopener">Help Docs</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
+  <script src="../free-google-shopping-feed-audit.js?v=20260620-deferred-form" defer></script>
+  <script src="../cookie-consent.js" defer></script>
+  <script src="../header-standard.js?v=20260624-utility-active-final" data-site-root="../" defer></script>
+  <script src="../footer-standard.js?v=20260624-footer-explore" data-site-root="../" defer></script>
   <script>
-const steps = [
-  ["landing", "Landing"],
-  ["account", "Contact Details"],
-  ["connect", "Connect"],
-  ["google", "Google Consent"],
-  ["merchant", "Select Merchant"],
-  ["merchant-open", "Merchant Menu"],
-  ["merchant-selected", "Selected Account"],
-  ["ready", "All Set"],
-  ["error", "Error"]
-];
+    function clearAuditPageHeaderLinks() {
+      var desktopLinks = document.querySelector("#feedops-standard-header .feedops-nav-links");
+      var mobileLinks = document.querySelector("#feedops-standard-header .feedops-mobile-links");
+      if (desktopLinks) desktopLinks.innerHTML = "";
+      if (mobileLinks) mobileLinks.innerHTML = "";
+    }
 
-const previewPassword = "feedops123";
-const passwordGate = document.querySelector("[data-password-gate]");
-const passwordForm = document.querySelector("[data-password-form]");
-const passwordInput = document.querySelector("[data-password-input]");
-const passwordError = document.querySelector("[data-password-error]");
+    function updateAuditPageHeaderCta() {
+      var desktopCta = document.querySelector("#feedops-standard-header .feedops-nav-cta");
+      var mobileCta = document.querySelector("#feedops-standard-header .feedops-mobile-cta");
+      [desktopCta, mobileCta].forEach(function (cta) {
+        if (!cta) return;
+        cta.textContent = "Start Free Audit";
+        cta.setAttribute("href", "#audit-form");
+      });
+    }
 
-function unlockPreview() {
-  passwordGate.classList.add("is-unlocked");
-  try {
-    sessionStorage.setItem("feedopsAuditPreviewUnlocked", "true");
-  } catch (error) {
-    // The preview should still open if browser storage is unavailable.
-  }
-}
+    document.addEventListener("DOMContentLoaded", function () {
+      clearAuditPageHeaderLinks();
+      updateAuditPageHeaderCta();
+      window.setTimeout(clearAuditPageHeaderLinks, 150);
+      window.setTimeout(updateAuditPageHeaderCta, 150);
+      var auditNav = document.querySelector(".audit-nav");
+      var auditLayout = document.querySelector(".audit-layout");
+      var updateAuditNavPosition = function () {
+        if (!auditNav || !auditLayout || window.matchMedia("(max-width: 980px)").matches) {
+          if (auditNav) {
+            auditNav.classList.remove("is-fixed");
+            auditNav.style.left = "";
+            auditNav.style.top = "";
+          }
+          return;
+        }
+        var header = document.querySelector("#feedops-standard-header");
+        var headerBottom = header ? header.getBoundingClientRect().bottom : 0;
+        var topOffset = Math.max(headerBottom + 14, 92);
+        var layoutRect = auditLayout.getBoundingClientRect();
+        var navHeight = auditNav.offsetHeight;
+        var shouldFix = layoutRect.top <= topOffset && layoutRect.bottom > topOffset + navHeight + 24;
+        auditNav.classList.toggle("is-fixed", shouldFix);
+        if (shouldFix) {
+          auditNav.style.left = layoutRect.left + "px";
+          auditNav.style.top = topOffset + "px";
+        } else {
+          auditNav.style.left = "";
+          auditNav.style.top = "";
+        }
+      };
+      updateAuditNavPosition();
+      window.addEventListener("scroll", updateAuditNavPosition, { passive: true });
+      window.addEventListener("resize", updateAuditNavPosition);
+    });
 
-try {
-  if (sessionStorage.getItem("feedopsAuditPreviewUnlocked") === "true") {
-    unlockPreview();
-  }
-} catch (error) {
-  // Ignore storage failures in local preview contexts.
-}
-
-passwordForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  if (passwordInput.value === previewPassword) {
-    unlockPreview();
-    return;
-  }
-
-  passwordError.hidden = false;
-  passwordInput.select();
-});
-
-const stage = document.querySelector(".prototype");
-const label = document.getElementById("step-label");
-
-function setStep(step) {
-  stage.dataset.step = step;
-  const current = steps.find((item) => item[0] === step);
-  label.textContent = current ? current[1] : step;
-}
-
-function currentIndex() {
-  return Math.max(0, steps.findIndex((item) => item[0] === stage.dataset.step));
-}
-
-document.addEventListener("click", (event) => {
-  const target = event.target.closest("[data-go]");
-  if (target) {
-    setStep(target.dataset.go);
-  }
-});
-
-document.querySelector("[data-prev]").addEventListener("click", () => {
-  const index = currentIndex();
-  setStep(steps[Math.max(0, index - 1)][0]);
-});
-
-document.querySelector("[data-next]").addEventListener("click", () => {
-  const index = currentIndex();
-  setStep(steps[Math.min(steps.length - 1, index + 1)][0]);
-});
-
-document.addEventListener("keydown", (event) => {
-  if (event.key === "ArrowLeft") {
-    document.querySelector("[data-prev]").click();
-  }
-
-  if (event.key === "ArrowRight") {
-    document.querySelector("[data-next]").click();
-  }
-});
-
-setStep("landing");
-
-</script>
+  </script>
 </body>
 </html>
