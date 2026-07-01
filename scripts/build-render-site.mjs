@@ -239,6 +239,7 @@ function pageMode(page) {
   if (page === "product-feed-platform/" || page === "software/") return "platform";
   if (page === "contact_us/" || (page || "").startsWith("contact_us/")) return "utility";
   if (page === "404.html") return "utility";
+  if (page === "terms-of-service/") return "utility";
   if (isLearningContentPage(page)) return "utility";
   if (page === "product-feed-management/") return "executive";
   if (page === "shopping-feed-agency/") return "agency";

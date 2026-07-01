@@ -46,6 +46,11 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://feedops.com/terms-of-service/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://feedops.com/meta-data-deletion-instructions/</loc>
     <lastmod>2026-06-22</lastmod>
     <priority>0.3</priority>

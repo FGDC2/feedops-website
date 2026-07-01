@@ -46,6 +46,7 @@
       '        <a href="' + href("company/") + '">Company</a>',
       '        <a href="' + href("learning/") + '">Learning</a>',
       '        <a href="' + href("privacy-policy/") + '">Privacy</a>',
+      '        <a href="' + href("terms-of-service/") + '">Terms</a>',
       "      </div>",
       "    </div>",
       '    <div class="footer-group footer-platform-column">',

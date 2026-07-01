@@ -21,6 +21,7 @@
     if (path === "/product-feed-platform/" || path === "/software/" || path.indexOf("/product-feed-platform/") !== -1 || path.indexOf("/software/") !== -1) return "platform";
     if (path === "/contact_us/" || path.indexOf("/contact_us/") !== -1) return "utility";
     if (path === "/404.html") return "utility";
+    if (path === "/terms-of-service/") return "utility";
     if (isLearningContentPath(path)) return "utility";
     if (path === "/product-feed-management/") return "executive";
     if (path === "/shopping-feed-agency/") return "agency";
