@@ -219,7 +219,7 @@ function injectHeaderStabilityStyles(content) {
   if (content.includes('id="feedops-header-stability"')) return content;
   const stabilityStyles = [
     '<style id="feedops-header-stability">',
-    'header.site-header{min-height:146px!important}',
+    'header.site-header{min-height:134px!important}',
     'header.site-header .mode-inner{min-height:56px!important;padding:6px 0!important}',
     '@media(max-width:620px){header.site-header{min-height:73px!important}header.site-header .mode-switch{display:none!important}header.site-header .nav{min-height:72px!important;height:auto!important;padding:12px 0!important}header.site-header .nav-links,header.site-header .nav-actions{display:none!important}}',
     '</style>'
@@ -240,10 +240,24 @@ function pageMode(page) {
   if (page === "contact_us/" || (page || "").startsWith("contact_us/")) return "utility";
   if (page === "404.html") return "utility";
   if (page === "terms-of-service/") return "utility";
+  if (isUtilityPage(page)) return "utility";
   if (isLearningContentPage(page)) return "utility";
   if (page === "product-feed-management/") return "executive";
   if (page === "shopping-feed-agency/") return "agency";
   return "expert";
+}
+
+function isUtilityPage(page = "") {
+  return [
+    "company/",
+    "learning/",
+    "privacy-policy/",
+    "pricing/",
+    "book-live-demo/",
+    "free-google-shopping-feed-audit/",
+    "google-shopping-feed-audit-access/",
+    "contact-us/"
+  ].includes(page) || page.startsWith("contact-us/");
 }
 
 function isLearningContentPage(page = "") {

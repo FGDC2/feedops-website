@@ -19,6 +19,7 @@
     if (forcedMode) return forcedMode;
     var path = cleanPath(window.location.pathname);
     if (path === "/product-feed-platform/" || path === "/software/" || path.indexOf("/product-feed-platform/") !== -1 || path.indexOf("/software/") !== -1) return "platform";
+    if (isUtilityPath(path)) return "utility";
     if (path === "/contact_us/" || path.indexOf("/contact_us/") !== -1) return "utility";
     if (path === "/404.html") return "utility";
     if (path === "/terms-of-service/") return "utility";
@@ -41,6 +42,18 @@
       path === "/faq/" ||
       path === "/feedonomics-alternative-competitor/" ||
       path === "/intelligent-reach-alternative/";
+  }
+
+  function isUtilityPath(path) {
+    return path === "/company/" ||
+      path === "/learning/" ||
+      path === "/privacy-policy/" ||
+      path === "/pricing/" ||
+      path === "/book-live-demo/" ||
+      path === "/free-google-shopping-feed-audit/" ||
+      path === "/google-shopping-feed-audit-access/" ||
+      path === "/contact-us/" ||
+      path.indexOf("/contact-us/") === 0;
   }
 
   function navItems(mode) {
