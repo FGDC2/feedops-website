@@ -316,7 +316,7 @@
       margin-top: 14px;
     }
 
-    .visual-strip span {
+    .visual-strip a {
       display: block;
       min-height: 46px;
       border-radius: 7px;
@@ -327,6 +327,14 @@
       font-weight: 850;
       color: #344255;
       text-align: center;
+      text-decoration: none;
+    }
+
+    .visual-strip a:hover,
+    .visual-strip a:focus-visible {
+      border-color: rgba(28, 140, 111, .34);
+      color: #176e58;
+      outline: none;
     }
 
     .section {
@@ -548,9 +556,9 @@
         <div class="hero-visual" aria-label="FeedOps Learning resource visual">
           <img src="../assets/feedops.com/wp-content/uploads/2026/06/feedops-learning-hub-product-feed-education.png" width="1672" height="941" alt="FeedOps Learning Hub visual for product feed education resources - page image 2 for FeedOps learning on Learning Hub" title="FeedOps Learning Hub visual for product feed education resources - page image 2 for FeedOps learning on Learning Hub">
           <div class="visual-strip" aria-label="Learning categories">
-            <span>Guides</span>
-            <span>Explainers</span>
-            <span>Troubleshooting</span>
+            <a href="#guides">Guides</a>
+            <a href="#explainers">Explainers</a>
+            <a href="#troubleshooting">Troubleshooting</a>
           </div>
         </div>
       </div>
