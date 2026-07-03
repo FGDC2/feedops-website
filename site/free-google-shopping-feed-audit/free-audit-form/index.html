@@ -507,6 +507,7 @@
       }
 
       .audit-hubspot-shell .hs-button {
+        position: relative;
         width: 100%;
         min-height: 48px;
         display: inline-flex;
@@ -526,10 +527,39 @@
         box-shadow: 0 16px 30px rgba(35, 174, 86, 0.24);
       }
 
+      .audit-hubspot-shell.is-submit-armed .hs-button,
+      .audit-hubspot-shell.is-submitting .hs-button {
+        cursor: wait;
+        opacity: 0.96;
+      }
+
+      .audit-hubspot-shell.is-submit-armed .hs-button::before,
+      .audit-hubspot-shell.is-submitting .hs-button::before {
+        content: '';
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        border-top-color: #ffffff;
+        border-radius: 999px;
+        animation: audit-button-spin 0.8s linear infinite;
+      }
+
       .audit-hubspot-shell .hs-button::after {
         content: '\2192';
         font-size: 18px;
         line-height: 1;
+      }
+
+      .audit-hubspot-shell.is-submit-armed .hs-button::after,
+      .audit-hubspot-shell.is-submitting .hs-button::after {
+        content: '';
+      }
+
+      @keyframes audit-button-spin {
+        to {
+          transform: rotate(360deg);
+        }
       }
 
       .privacy-row {
@@ -1168,12 +1198,75 @@
         var shell = document.querySelector('.audit-hubspot-shell');
         var target = document.getElementById('audit-hubspot-form');
         var loaded = false;
+        var submitStateTimer = null;
 
         function setPlaceholder(field, value) {
           if (!field) return;
           if (!field.getAttribute('placeholder')) {
             field.setAttribute('placeholder', value);
           }
+        }
+
+        function getForm() {
+          return target ? target.querySelector('form') : null;
+        }
+
+        function getSubmitButton() {
+          var form = getForm();
+          return form ? form.querySelector('.hs-button') : null;
+        }
+
+        function clearSubmitStateTimer() {
+          if (submitStateTimer) {
+            window.clearTimeout(submitStateTimer);
+            submitStateTimer = null;
+          }
+        }
+
+        function setSubmitButtonState(label, disabled) {
+          var button = getSubmitButton();
+          if (!button) return;
+
+          if (!button.dataset.defaultLabel) {
+            button.dataset.defaultLabel =
+              button.textContent.trim() || 'Save and continue';
+          }
+
+          button.textContent = label || button.dataset.defaultLabel;
+          button.disabled = !!disabled;
+          button.setAttribute('aria-busy', disabled ? 'true' : 'false');
+        }
+
+        function clearSubmitState() {
+          clearSubmitStateTimer();
+          if (shell) {
+            shell.classList.remove('is-submit-armed');
+            shell.classList.remove('is-submitting');
+          }
+          setSubmitButtonState(null, false);
+        }
+
+        function armSubmitState() {
+          clearSubmitStateTimer();
+          if (shell) {
+            shell.classList.add('is-submit-armed');
+            shell.classList.remove('is-submitting');
+          }
+          setSubmitButtonState('Saving...', true);
+          submitStateTimer = window.setTimeout(function () {
+            if (shell && !shell.classList.contains('is-submitting')) {
+              clearSubmitState();
+            }
+          }, 2400);
+        }
+
+        function setSubmittingState() {
+          clearSubmitStateTimer();
+          if (shell) {
+            shell.classList.add('is-submit-armed');
+            shell.classList.add('is-submitting');
+          }
+          setSubmitButtonState('Saving...', true);
         }
 
         function normaliseBusinessField(form) {
@@ -1231,7 +1324,7 @@
         }
 
         function prepareFormStyling() {
-          var form = target ? target.querySelector('form') : null;
+          var form = getForm();
           if (!form) return;
 
           if (!form.dataset.auditPrepared) {
@@ -1271,6 +1364,28 @@
               }
             });
           }
+
+          if (!form.dataset.auditSubmitBound) {
+            form.dataset.auditSubmitBound = 'true';
+
+            form.addEventListener('click', function (event) {
+              if (event.target.closest('.hs-button')) {
+                armSubmitState();
+              }
+            });
+
+            form.addEventListener('input', function () {
+              if (shell && !shell.classList.contains('is-submitting')) {
+                clearSubmitState();
+              }
+            });
+
+            form.addEventListener('change', function () {
+              if (shell && !shell.classList.contains('is-submitting')) {
+                clearSubmitState();
+              }
+            });
+          }
         }
 
         function createForm() {
@@ -1281,9 +1396,15 @@
             formId: '34103a8f-c0af-4b86-9400-feb31017b795',
             target: '#audit-hubspot-form',
             submitText: 'Save and continue',
+            onBeforeFormSubmit: function () {
+              setSubmittingState();
+            },
             onFormReady: function () {
               if (shell) shell.classList.remove('is-loading');
               prepareFormStyling();
+            },
+            onFormSubmitted: function () {
+              setSubmittingState();
             },
           });
         }
