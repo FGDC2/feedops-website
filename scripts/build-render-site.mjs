@@ -86,6 +86,28 @@ function copyFile(from, to) {
   copyFileSync(from, to);
 }
 
+function copyStaticTree(sourceDir, outputDir, options = {}) {
+  const { skipHtml = false } = options;
+  if (!statSync(sourceDir, { throwIfNoEntry: false })?.isDirectory()) return;
+
+  for (const entry of readdirSync(sourceDir)) {
+    const source = join(sourceDir, entry);
+    const target = join(outputDir, entry);
+    const stats = statSync(source);
+
+    if (stats.isDirectory()) {
+      copyStaticTree(source, target, options);
+      continue;
+    }
+
+    if (skipHtml && entry.endsWith(".html")) {
+      continue;
+    }
+
+    copyFile(source, target);
+  }
+}
+
 function copySanitisedAssets(sourceDir, outputDir, originalParts = [], publicParts = []) {
   for (const entry of readdirSync(sourceDir)) {
     const source = join(sourceDir, entry);
@@ -406,5 +428,7 @@ const pages = discoverPublicPages();
 for (const page of pages) {
   copyPage(page);
 }
+
+copyStaticTree(join(sourceRoot, "help"), join(outputRoot, "help"), { skipHtml: true });
 
 console.log(`Built ${outputRoot} with ${pages.length} public pages.`);
