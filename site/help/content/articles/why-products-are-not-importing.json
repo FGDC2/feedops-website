@@ -1,0 +1,19 @@
+{
+  "id": "why-products-are-not-importing",
+  "title": "Why products are not importing",
+  "slug": "why-products-are-not-importing",
+  "category": "Feed ingestion",
+  "excerpt": "Find the common reasons products are not appearing after a connection is added.",
+  "tags": [
+    "feed ingestion",
+    "product feed",
+    "importing",
+    "attributes"
+  ],
+  "status": "published",
+  "author": "FeedOps",
+  "createdAt": "2026-07-07T00:00:00.000Z",
+  "updatedAt": "2026-07-07T00:00:00.000Z",
+  "publishedAt": "2026-07-07T00:00:00.000Z",
+  "content": "If products are not importing, start with the connection and source data.\n\n## Common causes\n\n- The source platform has not granted product data permissions.\n- Products are unpublished, archived or excluded from the selected sales channel.\n- Required attributes are missing from the source data.\n- The first import is still processing.\n\n## What to do next\n\nCheck the connection status, review import logs and confirm at least one active product is available in the source platform."
+}

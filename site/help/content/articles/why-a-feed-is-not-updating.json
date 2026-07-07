@@ -1,0 +1,19 @@
+{
+  "id": "why-a-feed-is-not-updating",
+  "title": "Why a feed is not updating",
+  "slug": "why-a-feed-is-not-updating",
+  "category": "Feed ingestion",
+  "excerpt": "Troubleshoot product feeds that appear stale or have stopped updating.",
+  "tags": [
+    "feed ingestion",
+    "product feed",
+    "updating",
+    "troubleshoot connections"
+  ],
+  "status": "published",
+  "author": "FeedOps",
+  "createdAt": "2026-07-07T00:00:00.000Z",
+  "updatedAt": "2026-07-07T00:00:00.000Z",
+  "publishedAt": "2026-07-07T00:00:00.000Z",
+  "content": "Feeds can stop updating when the source connection changes or an import is blocked.\n\n## Check the feed status\n\n- Confirm the source connection is still active.\n- Review the most recent import time.\n- Check for permission or authentication warnings.\n- Confirm product data has changed in the source platform.\n\n## Next step\n\nReconnect the source if permissions changed, then run another import."
+}

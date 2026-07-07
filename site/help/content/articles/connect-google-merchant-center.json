@@ -1,0 +1,19 @@
+{
+  "id": "connect-google-merchant-center",
+  "title": "Connect Google Merchant Center",
+  "slug": "connect-google-merchant-center",
+  "category": "Connect your store",
+  "excerpt": "Connect Google Merchant Center and confirm FeedOps has the right account access.",
+  "tags": [
+    "google merchant center",
+    "google merchant centre",
+    "permissions",
+    "product feed"
+  ],
+  "status": "published",
+  "author": "FeedOps",
+  "createdAt": "2026-07-07T00:00:00.000Z",
+  "updatedAt": "2026-07-07T00:00:00.000Z",
+  "publishedAt": "2026-07-07T00:00:00.000Z",
+  "content": "Connect Google Merchant Center when you want FeedOps to manage product feed workflows for Google.\n\n## Requirements\n\n- A Google account with access to the Merchant Center account.\n- Permission to manage product data and feeds.\n- The correct Merchant Center account ID.\n\n## Steps\n\n- Open Connections in FeedOps.\n- Select Google Merchant Center.\n- Sign in with Google.\n- Choose the correct Merchant Center account.\n- Confirm FeedOps can read and manage product data."
+}
