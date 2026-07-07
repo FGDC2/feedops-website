@@ -1,0 +1,19 @@
+{
+  "id": "connect-shopify",
+  "title": "Connect Shopify.",
+  "slug": "connect-shopify",
+  "category": "Connect your store",
+  "excerpt": "Connect a Shopify store so FeedOps can start importing product data.",
+  "tags": [
+    "shopify",
+    "connect store",
+    "product feed",
+    "ecommerce"
+  ],
+  "status": "published",
+  "author": "FeedOps",
+  "createdAt": "2026-07-07T00:00:00.000Z",
+  "updatedAt": "2026-07-07T00:00:00.000Z",
+  "publishedAt": "2026-07-07T00:00:00.000Z",
+  "content": "Use this checklist when connecting Shopify to FeedOps.\n\n## Before you start\n\n- Confirm you have admin access to the Shopify store.\n- Make sure product, inventory and collection permissions are available.\n- Keep your FeedOps workspace open in another tab.\n\n## Connect the store\n\n- Open Connections in FeedOps.\n- Choose Shopify.\n- Approve the requested store permissions.\n- Return to FeedOps and start the first product import.\n\n## After connection\n\nCheck that products, variants, prices and availability are importing as expected."
+}

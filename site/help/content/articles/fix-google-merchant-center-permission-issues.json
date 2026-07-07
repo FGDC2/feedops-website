@@ -1,0 +1,19 @@
+{
+  "id": "fix-google-merchant-center-permission-issues",
+  "title": "Fix Google Merchant Center permission issues",
+  "slug": "fix-google-merchant-center-permission-issues",
+  "category": "Troubleshoot connections",
+  "excerpt": "Resolve common permission problems when connecting Google Merchant Center.",
+  "tags": [
+    "google merchant center",
+    "google merchant centre",
+    "permissions",
+    "troubleshoot connections"
+  ],
+  "status": "published",
+  "author": "FeedOps",
+  "createdAt": "2026-07-07T00:00:00.000Z",
+  "updatedAt": "2026-07-07T00:00:00.000Z",
+  "publishedAt": "2026-07-07T00:00:00.000Z",
+  "content": "Permission issues usually mean the signed-in Google user cannot grant FeedOps the access it needs.\n\n## Check access\n\n- Confirm the user is added to the Merchant Center account.\n- Confirm the account is not a duplicate or old Merchant Center profile.\n- Ask an admin to grant product data and feed management access.\n\n## Reconnect\n\nAfter permissions are corrected, disconnect Google Merchant Center in FeedOps and connect it again."
+}

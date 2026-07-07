@@ -1,0 +1,111 @@
+[
+  {
+    "id": "connect-shopify",
+    "title": "Connect Shopify.",
+    "slug": "connect-shopify",
+    "category": "Connect your store",
+    "excerpt": "Connect a Shopify store so FeedOps can start importing product data.",
+    "tags": [
+      "shopify",
+      "connect store",
+      "product feed",
+      "ecommerce"
+    ],
+    "status": "published",
+    "author": "FeedOps",
+    "createdAt": "2026-07-07T00:00:00.000Z",
+    "updatedAt": "2026-07-07T00:00:00.000Z",
+    "publishedAt": "2026-07-07T00:00:00.000Z"
+  },
+  {
+    "id": "connect-google-merchant-center",
+    "title": "Connect Google Merchant Center",
+    "slug": "connect-google-merchant-center",
+    "category": "Connect your store",
+    "excerpt": "Connect Google Merchant Center and confirm FeedOps has the right account access.",
+    "tags": [
+      "google merchant center",
+      "google merchant centre",
+      "permissions",
+      "product feed"
+    ],
+    "status": "published",
+    "author": "FeedOps",
+    "createdAt": "2026-07-07T00:00:00.000Z",
+    "updatedAt": "2026-07-07T00:00:00.000Z",
+    "publishedAt": "2026-07-07T00:00:00.000Z"
+  },
+  {
+    "id": "connect-meta",
+    "title": "Connect Meta",
+    "slug": "connect-meta",
+    "category": "Connect your store",
+    "excerpt": "Connect Meta catalog access for FeedOps product feed workflows.",
+    "tags": [
+      "meta",
+      "catalog",
+      "facebook",
+      "permissions",
+      "product feed"
+    ],
+    "status": "published",
+    "author": "FeedOps",
+    "createdAt": "2026-07-07T00:00:00.000Z",
+    "updatedAt": "2026-07-07T00:00:00.000Z",
+    "publishedAt": "2026-07-07T00:00:00.000Z"
+  },
+  {
+    "id": "fix-google-merchant-center-permission-issues",
+    "title": "Fix Google Merchant Center permission issues",
+    "slug": "fix-google-merchant-center-permission-issues",
+    "category": "Troubleshoot connections",
+    "excerpt": "Resolve common permission problems when connecting Google Merchant Center.",
+    "tags": [
+      "google merchant center",
+      "google merchant centre",
+      "permissions",
+      "troubleshoot connections"
+    ],
+    "status": "published",
+    "author": "FeedOps",
+    "createdAt": "2026-07-07T00:00:00.000Z",
+    "updatedAt": "2026-07-07T00:00:00.000Z",
+    "publishedAt": "2026-07-07T00:00:00.000Z"
+  },
+  {
+    "id": "why-products-are-not-importing",
+    "title": "Why products are not importing",
+    "slug": "why-products-are-not-importing",
+    "category": "Feed ingestion",
+    "excerpt": "Find the common reasons products are not appearing after a connection is added.",
+    "tags": [
+      "feed ingestion",
+      "product feed",
+      "importing",
+      "attributes"
+    ],
+    "status": "published",
+    "author": "FeedOps",
+    "createdAt": "2026-07-07T00:00:00.000Z",
+    "updatedAt": "2026-07-07T00:00:00.000Z",
+    "publishedAt": "2026-07-07T00:00:00.000Z"
+  },
+  {
+    "id": "why-a-feed-is-not-updating",
+    "title": "Why a feed is not updating",
+    "slug": "why-a-feed-is-not-updating",
+    "category": "Feed ingestion",
+    "excerpt": "Troubleshoot product feeds that appear stale or have stopped updating.",
+    "tags": [
+      "feed ingestion",
+      "product feed",
+      "updating",
+      "troubleshoot connections"
+    ],
+    "status": "published",
+    "author": "FeedOps",
+    "createdAt": "2026-07-07T00:00:00.000Z",
+    "updatedAt": "2026-07-07T00:00:00.000Z",
+    "publishedAt": "2026-07-07T00:00:00.000Z"
+  }
+]

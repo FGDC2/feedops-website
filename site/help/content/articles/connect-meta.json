@@ -1,0 +1,20 @@
+{
+  "id": "connect-meta",
+  "title": "Connect Meta",
+  "slug": "connect-meta",
+  "category": "Connect your store",
+  "excerpt": "Connect Meta catalog access for FeedOps product feed workflows.",
+  "tags": [
+    "meta",
+    "catalog",
+    "facebook",
+    "permissions",
+    "product feed"
+  ],
+  "status": "published",
+  "author": "FeedOps",
+  "createdAt": "2026-07-07T00:00:00.000Z",
+  "updatedAt": "2026-07-07T00:00:00.000Z",
+  "publishedAt": "2026-07-07T00:00:00.000Z",
+  "content": "Connect Meta when your product catalog needs to sync with Meta commerce surfaces.\n\n## Before connecting\n\n- Confirm you can access the right Meta Business account.\n- Check that you have catalog management permissions.\n- Make sure the catalog is connected to the correct business assets.\n\n## Steps\n\n- Open FeedOps Connections.\n- Choose Meta.\n- Approve the requested business and catalog permissions.\n- Select the catalog FeedOps should manage."
+}
