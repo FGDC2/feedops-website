@@ -41,6 +41,114 @@ const defaultHomeConfig = {
     "why-a-feed-is-not-updating"
   ]
 };
+const shopifyArticleOverride = {
+  title: "Connect Shopify with a custom app",
+  excerpt: "Use this guide to connect your Shopify store to FeedOps.",
+  contentFormat: "html",
+  content: `
+    <blockquote><p>Shopify previously called this a private app. Shopify now uses the term custom app for store-specific integrations.</p></blockquote>
+    <h2>Before you start</h2>
+    <ul>
+      <li>Confirm you can log in to Shopify as the store owner or as a staff member with permission to manage apps.</li>
+      <li>Keep FeedOps open in another tab so you can return to the connection screen.</li>
+      <li>Choose a time when a store admin is available, because Shopify may ask you to approve the app installation.</li>
+    </ul>
+    <h2>What this connection does</h2>
+    <ul>
+      <li>Allows FeedOps to read the product data needed to import and maintain your product feed.</li>
+      <li>Helps FeedOps keep product, variant, inventory, collection, and availability data up to date.</li>
+      <li>Lets FeedOps check whether products are available for feed processing.</li>
+    </ul>
+    <h2>What FeedOps does not need</h2>
+    <ul>
+      <li>FeedOps does not need your Shopify password.</li>
+      <li>FeedOps does not need payment, theme, or customer write permissions.</li>
+      <li>FeedOps does not need permission to change orders or checkout settings.</li>
+    </ul>
+    <h2>Step 1: Log in to Shopify</h2>
+    <ol>
+      <li>Go to your Shopify admin.</li>
+      <li>Sign in to the store you want to connect to FeedOps.</li>
+    </ol>
+    <h2>Step 2: Open Shopify settings</h2>
+    <ol>
+      <li>In Shopify, go to the bottom-left corner of the admin screen.</li>
+      <li>Select Settings.</li>
+    </ol>
+    <h2>Step 3: Open Apps and sales channels</h2>
+    <ol>
+      <li>In Settings, choose Apps and sales channels.</li>
+      <li>Confirm you are managing the correct Shopify store.</li>
+    </ol>
+    <h2>Step 4: Open the Dev Dashboard</h2>
+    <ol>
+      <li>Open the Shopify Dev Dashboard or app development area.</li>
+      <li>If app development is disabled, ask the store owner to enable it.</li>
+    </ol>
+    <h2>Step 5: Create the custom app</h2>
+    <ol>
+      <li>Create a new custom app for FeedOps.</li>
+      <li>Name the app FeedOps so it is easy to recognise later.</li>
+    </ol>
+    <h2>Step 6: Create an app version</h2>
+    <ol>
+      <li>Create the first app version for the custom app.</li>
+      <li>Use the version to review and confirm the permissions before installing the app.</li>
+    </ol>
+    <h2>Step 7: Add the required permissions</h2>
+    <ol>
+      <li>Add only the permissions requested by FeedOps.</li>
+      <li>These are usually read permissions for products, variants, collections, inventory, and locations.</li>
+      <li>Do not add write permissions unless FeedOps specifically asks for them.</li>
+    </ol>
+    <h2>Step 8: Install the app</h2>
+    <ol>
+      <li>Review the permissions.</li>
+      <li>Install the custom app in Shopify.</li>
+      <li>Copy the access token shown by Shopify and keep it secure.</li>
+    </ol>
+    <h2>Step 9: Return to FeedOps</h2>
+    <ol>
+      <li>Go back to FeedOps.</li>
+      <li>Paste the Shopify store URL and access token into the Shopify connection screen.</li>
+      <li>Save the connection.</li>
+    </ol>
+    <h2>Step 10: Confirm products are importing</h2>
+    <ol>
+      <li>Start the first import or wait for FeedOps to begin processing.</li>
+      <li>Check that products, variants, prices, inventory, and availability appear as expected.</li>
+    </ol>
+    <h2>Troubleshooting</h2>
+    <ul>
+      <li>If Shopify rejects the token, confirm the token was copied from the correct custom app.</li>
+      <li>If products do not import, review the app permissions and confirm products are active in Shopify.</li>
+      <li>If the app development area is unavailable, ask the Shopify store owner to enable custom app development.</li>
+    </ul>
+    <h2>Security notes</h2>
+    <ul>
+      <li>Treat the Shopify access token like a password.</li>
+      <li>Only share the token through the secure FeedOps connection screen.</li>
+      <li>You can uninstall or revoke the custom app in Shopify if access ever needs to be removed.</li>
+    </ul>
+    <h2>Need help?</h2>
+    <p>If you are unsure which permissions to select, open chat and we can help you check the setup.</p>
+  `
+};
+const sourceLinks = [
+  ["Shopify", "connect-shopify"],
+  ["BigCommerce", ""],
+  ["WooCommerce", ""],
+  ["Magento 2", ""],
+  ["Salesforce Commerce Cloud", ""],
+  ["Other sources", ""]
+];
+const topLevelHelpCategories = [
+  "Connect channels",
+  "Product data",
+  "Feeds",
+  "Troubleshooting",
+  "Account & billing"
+];
 
 let articles = [];
 let homeConfig = cloneDefaultHomeConfig();
@@ -49,13 +157,15 @@ window.addEventListener("hashchange", renderRoute);
 searchInput.addEventListener("input", renderArticleList);
 searchForm.addEventListener("submit", handleSearchSubmit);
 document.addEventListener("click", handleSearchShortcut);
+document.addEventListener("click", handleChatOpen);
+document.addEventListener("click", handleArticleAnchorClick);
 
 load();
 
 async function load() {
   try {
     const [articleData, homeData] = await Promise.all([fetchArticles(), fetchHomeConfig()]);
-    articles = articleData;
+    articles = articleData.map(applyArticleDisplayOverrides);
     homeConfig = homeData;
     applyHeadConfig();
     renderQuickLinks();
@@ -109,22 +219,74 @@ function renderArticleList() {
 
 async function renderArticle(slug) {
   try {
-    const article = await fetchArticle(slug);
+    const article = applyArticleDisplayOverrides(await fetchArticle(slug));
+    const preparedArticle = prepareArticleBody(article);
     document.body.classList.add("article-active");
     document.title = `${article.title} | ${homeConfig.head.title}`;
     setMetaDescription(article.excerpt || homeConfig.head.description);
     app.innerHTML = `
-      <article class="article-page">
-        <a class="back-link" href="#/">Back to articles</a>
-        <p class="article-meta"><span>${escapeHtml(article.category)}</span><span>${formatDate(article.updatedAt)}</span></p>
-        <h2>${escapeHtml(article.title)}</h2>
-        <p>${escapeHtml(article.excerpt || "")}</p>
-        <div class="article-body">${renderArticleContent(article)}</div>
-      </article>
+      <div class="article-layout">
+        ${renderArticleSidebar(article.slug)}
+        <article class="article-page">
+          <p class="article-meta"><span>${escapeHtml(article.category)}</span><span>${formatDate(article.updatedAt)}</span></p>
+          <h1 class="article-title">${escapeHtml(article.title)}</h1>
+          <p class="article-intro">${escapeHtml(article.excerpt || "")}</p>
+          <div class="article-body">${preparedArticle.html}</div>
+          ${article.slug === "connect-shopify" ? renderArticleChatCta() : ""}
+        </article>
+        ${renderArticleToc(preparedArticle.toc)}
+      </div>
     `;
   } catch {
     app.innerHTML = '<div class="empty">Article not found.</div>';
   }
+}
+
+function renderArticleSidebar(activeSlug) {
+  return `
+    <aside class="article-sidebar" aria-label="Help Center categories">
+      <nav class="help-category-tree">
+        <p class="tree-heading">In this section</p>
+        <a class="tree-link" href="#/">All articles</a>
+        <div class="tree-group">
+          <p class="tree-category">Connect your store</p>
+          <ul>
+            ${sourceLinks.map(([label, slug]) => `
+              <li>
+                <a class="${slug && slug === activeSlug ? "active" : ""}" href="${slug ? `#/article/${encodeURIComponent(slug)}` : "#/"}" ${slug ? "" : `data-search="${escapeAttribute(label)}"`}>${escapeHtml(label)}</a>
+              </li>
+            `).join("")}
+          </ul>
+        </div>
+        ${topLevelHelpCategories.map((label) => `
+          <a class="tree-link" href="#/" data-search="${escapeAttribute(label)}">${escapeHtml(label)}</a>
+        `).join("")}
+      </nav>
+      <div class="sidebar-support-card">
+        <strong>Need help?</strong>
+        <button type="button" data-open-chat>Open chat</button>
+      </div>
+    </aside>
+  `;
+}
+
+function renderArticleToc(items) {
+  return `
+    <aside class="article-toc" aria-label="On this page">
+      <h2>On this page</h2>
+      <nav>
+        ${items.map((item) => `<a href="#${escapeAttribute(item.id)}" data-article-anchor="${escapeAttribute(item.id)}">${escapeHtml(item.label)}</a>`).join("")}
+      </nav>
+    </aside>
+  `;
+}
+
+function renderArticleChatCta() {
+  return `
+    <p class="article-chat-action">
+      <button type="button" data-open-chat>Open chat</button>
+    </p>
+  `;
 }
 
 function renderDocLink(article) {
@@ -202,6 +364,35 @@ function handleSearchShortcut(event) {
   searchInput.focus();
 }
 
+function handleChatOpen(event) {
+  const trigger = event.target.closest("[data-open-chat]");
+  if (!trigger) return;
+  event.preventDefault();
+  openChatSupport();
+}
+
+function handleArticleAnchorClick(event) {
+  const link = event.target.closest("[data-article-anchor]");
+  if (!link) return;
+  const section = document.getElementById(link.dataset.articleAnchor);
+  if (!section) return;
+  event.preventDefault();
+  section.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function openChatSupport() {
+  const hubspotWidget = window.HubSpotConversations?.widget;
+  if (hubspotWidget?.open) {
+    hubspotWidget.open();
+    return;
+  }
+  if (hubspotWidget?.load) {
+    hubspotWidget.load({ widgetOpen: true });
+    return;
+  }
+  window.location.href = "https://feedops.com/contact_us/";
+}
+
 async function fetchArticles() {
   const path = staticMode ? "./content/articles.json" : `${apiBase}/api/help/articles`;
   const response = await fetch(path);
@@ -230,6 +421,22 @@ async function fetchArticle(slug) {
   if (!response.ok) throw new Error("The article is unavailable.");
   const data = await response.json();
   return data.article || data;
+}
+
+function applyArticleDisplayOverrides(article) {
+  if (article?.slug !== "connect-shopify" || !usesDefaultShopifyArticle(article)) return article;
+  return { ...article, ...shopifyArticleOverride };
+}
+
+function usesDefaultShopifyArticle(article) {
+  const title = String(article?.title || "").trim();
+  const content = String(article?.content || "");
+  const hasUpdatedExample = title === shopifyArticleOverride.title
+    && content.includes("Step 10: Confirm products are importing");
+  if (hasUpdatedExample) return false;
+  return title === "Connect Shopify."
+    || title === "Connect Shopify"
+    || content.includes("Use this checklist when connecting Shopify to FeedOps.");
 }
 
 function normalizeHomeConfig(config = {}) {
@@ -356,6 +563,38 @@ function renderArticleContent(article) {
     return sanitizeRichHtml(content);
   }
   return renderMarkdown(content);
+}
+
+function prepareArticleBody(article) {
+  const wrapper = document.createElement("div");
+  wrapper.innerHTML = renderArticleContent(article);
+  const usedIds = new Set();
+  const toc = [];
+  wrapper.querySelectorAll("h2").forEach((heading) => {
+    const label = heading.textContent.trim();
+    if (!label) return;
+    const id = articleAnchorId(label, usedIds);
+    heading.id = id;
+    toc.push({ id, label });
+  });
+  return { html: wrapper.innerHTML, toc };
+}
+
+function articleAnchorId(value, usedIds) {
+  const base = String(value || "")
+    .toLowerCase()
+    .trim()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "") || "section";
+  let id = base;
+  let counter = 2;
+  while (usedIds.has(id)) {
+    id = `${base}-${counter}`;
+    counter += 1;
+  }
+  usedIds.add(id);
+  return id;
 }
 
 function sanitizeRichHtml(html) {
