@@ -219,6 +219,7 @@ async function renderArticle(slug) {
         ${renderArticleToc(preparedArticle.toc)}
       </div>
     `;
+    recordArticleView(article.slug);
   } catch {
     app.innerHTML = '<div class="empty">Article not found.</div>';
   }
@@ -544,6 +545,12 @@ async function fetchArticle(slug) {
   if (!response.ok) throw new Error("The article is unavailable.");
   const data = await response.json();
   return data.article || data;
+}
+
+function recordArticleView(slug) {
+  if (!slug || staticMode) return;
+  const path = `${apiBase}/api/help/articles/${encodeURIComponent(slug)}/view`;
+  fetch(path, { method: "POST", keepalive: true }).catch(() => {});
 }
 
 function applyArticleDisplayOverrides(article) {
