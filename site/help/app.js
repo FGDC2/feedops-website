@@ -4,10 +4,12 @@ const searchForm = document.querySelector("#searchForm");
 const searchInput = document.querySelector("#searchInput");
 const staticMode = window.FEEDOPS_HELP_MODE === "static";
 const apiBase = window.FEEDOPS_HELP_API_BASE || "";
+const helpBasePath = getHelpBasePath();
 const defaultHeadConfig = {
   gtmId: "GTM-KR4TR7B",
   title: "FeedOps Help Center",
-  description: "Find FeedOps help articles for connecting stores, importing product data and troubleshooting feed issues."
+  description: "Find FeedOps help articles for connecting stores, importing product data and troubleshooting feed issues.",
+  robots: "noindex, nofollow"
 };
 const defaultHomeConfig = {
   head: { ...defaultHeadConfig },
@@ -138,12 +140,14 @@ const shopifyArticleOverride = {
 let articles = [];
 let homeConfig = cloneDefaultHomeConfig();
 
-window.addEventListener("hashchange", renderRoute);
+window.addEventListener("popstate", renderRoute);
+window.addEventListener("hashchange", handleLegacyHashRoute);
 searchInput.addEventListener("input", renderArticleList);
 searchForm.addEventListener("submit", handleSearchSubmit);
 document.addEventListener("click", handleSearchShortcut);
 document.addEventListener("click", handleArticleAnchorClick);
 document.addEventListener("click", handleArticleMenuToggle);
+document.addEventListener("click", handleInternalNavigation);
 
 load();
 
@@ -154,21 +158,23 @@ async function load() {
     homeConfig = homeData;
     applyHeadConfig();
     renderQuickLinks();
-    renderRoute();
+    if (!redirectLegacyHashRoute()) renderRoute();
   } catch (error) {
     app.innerHTML = `<div class="empty">Unable to load help articles. ${escapeHtml(error.message)}</div>`;
   }
 }
 
 async function renderRoute() {
-  const [route, slug] = parseHash();
-  if (route === "article" && slug) {
-    await renderArticle(slug);
+  const articleSlug = currentArticleSlug();
+  if (articleSlug) {
+    redirectLegacyArticlePath(articleSlug);
+    await renderArticle(articleSlug);
     return;
   }
   document.body.classList.remove("article-active");
   document.title = homeConfig.head.title;
   setMetaDescription(homeConfig.head.description);
+  setMetaRobots(homeConfig.head.robots);
   renderArticleList();
 }
 
@@ -209,6 +215,7 @@ async function renderArticle(slug) {
     document.body.classList.add("article-active");
     document.title = `${article.title} | ${homeConfig.head.title}`;
     setMetaDescription(article.excerpt || homeConfig.head.description);
+    setMetaRobots(homeConfig.head.robots);
     app.innerHTML = `
       ${renderArticleHero(article, preparedArticle)}
       <div class="article-layout">
@@ -230,9 +237,9 @@ function renderArticleHero(article, preparedArticle) {
     <section class="article-hero" aria-labelledby="articleHeroTitle">
       <div class="article-hero-inner">
         <nav class="article-breadcrumbs" aria-label="Article breadcrumb">
-          <a href="#/">Help Center</a>
+          <a href="${homePath()}">Help Center</a>
           <span aria-hidden="true">/</span>
-          <a href="#/" data-search="${escapeAttribute(category)}">${escapeHtml(category)}</a>
+          <a href="${homePath()}" data-search="${escapeAttribute(category)}">${escapeHtml(category)}</a>
           <span aria-hidden="true">/</span>
           <span>${escapeHtml(article.title)}</span>
         </nav>
@@ -265,14 +272,14 @@ function renderArticleSidebar(activeArticle) {
       <div id="articleMenuContent" class="article-menu-content">
         <nav class="help-category-tree">
           <p class="tree-heading">In this section</p>
-          <a class="tree-link" href="#/">All articles</a>
+          <a class="tree-link" href="${homePath()}">All articles</a>
           ${categoryGroups.map((group) => `
             <div class="tree-group">
               <p class="tree-category">${escapeHtml(group.category)}</p>
               <ul>
                 ${group.articles.map((article) => `
                   <li>
-                    <a class="${article.slug === activeArticle.slug ? "active" : ""}" href="#/article/${encodeURIComponent(article.slug)}">${escapeHtml(article.title)}</a>
+                    <a class="${article.slug === activeArticle.slug ? "active" : ""}" href="${articlePath(article.slug)}">${escapeHtml(article.title)}</a>
                   </li>
                 `).join("")}
               </ul>
@@ -317,7 +324,7 @@ function renderArticleToc(items) {
 
 function renderDocLink(article) {
   return `
-    <a class="doc-link" href="#/article/${encodeURIComponent(article.slug)}">
+    <a class="doc-link" href="${articlePath(article.slug)}">
       <svg aria-hidden="true" viewBox="0 0 24 24">
         <path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8Z" />
         <path d="M14 3v5h5" />
@@ -333,7 +340,7 @@ function renderQuickLinks() {
 
 function renderQuickLink(category) {
   return `
-    <a class="quick-link" href="#/" data-search="${escapeAttribute(category.search || category.title)}">
+    <a class="quick-link" href="${homePath()}" data-search="${escapeAttribute(category.search || category.title)}">
       <span class="quick-icon" aria-hidden="true">
         ${renderCategoryIcon(category.icon)}
       </span>
@@ -370,8 +377,8 @@ function popularArticles() {
 
 function handleSearchSubmit(event) {
   event.preventDefault();
-  if (window.location.hash.startsWith("#/article/")) {
-    window.location.hash = "#/";
+  if (isArticleRoute()) {
+    navigateTo(homePath());
     return;
   }
   renderArticleList();
@@ -382,8 +389,8 @@ function handleSearchShortcut(event) {
   if (!link) return;
   event.preventDefault();
   searchInput.value = link.dataset.search || "";
-  if (window.location.hash.startsWith("#/article/")) {
-    window.location.hash = "#/";
+  if (isArticleRoute()) {
+    navigateTo(homePath());
     return;
   }
   renderArticleList();
@@ -416,8 +423,22 @@ function handleArticleMenuToggle(event) {
   sidebarToggle?.setAttribute("aria-expanded", "false");
 }
 
+function handleInternalNavigation(event) {
+  if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  const link = event.target.closest("a[href]");
+  if (!link || link.target || link.hasAttribute("download")) return;
+
+  const url = new URL(link.href, window.location.href);
+  if (url.origin !== window.location.origin) return;
+  if (!url.pathname.startsWith(helpBasePath)) return;
+  if (url.hash && url.pathname === window.location.pathname && !url.hash.startsWith("#/")) return;
+
+  event.preventDefault();
+  navigateTo(`${url.pathname}${url.search}`);
+}
+
 async function fetchArticles() {
-  const path = staticMode ? "./content/articles.json" : `${apiBase}/api/help/articles`;
+  const path = staticMode ? `${helpBasePath}content/articles.json` : `${apiBase}/api/help/articles`;
   const response = await fetch(path);
   if (!response.ok) throw new Error("The article index is unavailable.");
   const data = await response.json();
@@ -425,7 +446,7 @@ async function fetchArticles() {
 }
 
 async function fetchHomeConfig() {
-  const path = staticMode ? "./content/home.json" : `${apiBase}/api/help/home`;
+  const path = staticMode ? `${helpBasePath}content/home.json` : `${apiBase}/api/help/home`;
   try {
     const response = await fetch(path);
     if (!response.ok) throw new Error("The Help Center homepage config is unavailable.");
@@ -438,7 +459,7 @@ async function fetchHomeConfig() {
 
 async function fetchArticle(slug) {
   const path = staticMode
-    ? `./content/articles/${encodeURIComponent(slug)}.json`
+    ? `${helpBasePath}content/articles/${encodeURIComponent(slug)}.json`
     : `${apiBase}/api/help/articles/${encodeURIComponent(slug)}`;
   const response = await fetch(path);
   if (!response.ok) throw new Error("The article is unavailable.");
@@ -483,7 +504,8 @@ function normalizeHeadConfig(head = {}) {
   return {
     gtmId: normalizeGtmId(head.gtmId) || defaultHeadConfig.gtmId,
     title: String(head.title || "").trim() || defaultHeadConfig.title,
-    description: String(head.description || "").trim() || defaultHeadConfig.description
+    description: String(head.description || "").trim() || defaultHeadConfig.description,
+    robots: String(head.robots || "").trim() || defaultHeadConfig.robots
   };
 }
 
@@ -495,16 +517,25 @@ function normalizeGtmId(value) {
 function applyHeadConfig() {
   document.title = homeConfig.head.title;
   setMetaDescription(homeConfig.head.description);
+  setMetaRobots(homeConfig.head.robots);
 }
 
 function setMetaDescription(description) {
-  let tag = document.querySelector('meta[name="description"]');
+  setMetaTag("description", description);
+}
+
+function setMetaRobots(robots) {
+  setMetaTag("robots", robots || defaultHeadConfig.robots);
+}
+
+function setMetaTag(name, content) {
+  let tag = document.querySelector(`meta[name="${name}"]`);
   if (!tag) {
     tag = document.createElement("meta");
-    tag.setAttribute("name", "description");
+    tag.setAttribute("name", name);
     document.head.append(tag);
   }
-  tag.setAttribute("content", description);
+  tag.setAttribute("content", content);
 }
 
 function normalizeHomeCategory(category) {
@@ -523,9 +554,81 @@ function cloneDefaultHomeConfig() {
   return JSON.parse(JSON.stringify(defaultHomeConfig));
 }
 
-function parseHash() {
-  const parts = window.location.hash.replace(/^#\/?/, "").split("/").filter(Boolean);
-  return parts;
+function handleLegacyHashRoute() {
+  redirectLegacyHashRoute();
+}
+
+function redirectLegacyHashRoute() {
+  if (!window.location.hash.startsWith("#/")) return false;
+  const [route, slug] = parseHashRoute();
+  const nextPath = route === "article" && slug
+    ? articlePath(slug)
+    : homePath();
+  window.history.replaceState({}, "", `${nextPath}${window.location.search}`);
+  renderRoute();
+  return true;
+}
+
+function redirectLegacyArticlePath(slug) {
+  const [route] = parseRoute();
+  if (route !== "article") return false;
+  const nextPath = `${articlePath(slug)}${window.location.search}`;
+  if (`${window.location.pathname}${window.location.search}` !== nextPath) {
+    window.history.replaceState({}, "", nextPath);
+  }
+  return true;
+}
+
+function parseRoute() {
+  const path = window.location.pathname;
+  const relative = path.startsWith(helpBasePath)
+    ? path.slice(helpBasePath.length)
+    : path.replace(/^\/+/, "");
+  return relative
+    .replace(/\/+$/, "")
+    .split("/")
+    .filter(Boolean)
+    .map((part) => decodeURIComponent(part));
+}
+
+function parseHashRoute() {
+  return window.location.hash
+    .replace(/^#\/?/, "")
+    .split("/")
+    .filter(Boolean)
+    .map((part) => decodeURIComponent(part));
+}
+
+function isArticleRoute() {
+  return Boolean(currentArticleSlug());
+}
+
+function navigateTo(path) {
+  if (`${window.location.pathname}${window.location.search}` !== path) {
+    window.history.pushState({}, "", path);
+  }
+  renderRoute();
+  window.scrollTo({ top: 0 });
+}
+
+function homePath() {
+  return helpBasePath;
+}
+
+function articlePath(slug) {
+  return `${helpBasePath}${encodeURIComponent(slug)}`;
+}
+
+function currentArticleSlug() {
+  const [route, slug] = parseRoute();
+  if (route === "article") return slug || "";
+  if (["assets", "content", "uploads"].includes(route)) return "";
+  return route || "";
+}
+
+function getHelpBasePath() {
+  const match = window.location.pathname.match(/^(.*?\/help)(?:\/|$)/);
+  return match ? `${match[1]}/` : "/";
 }
 
 function renderMarkdown(markdown) {
@@ -671,7 +774,12 @@ function sanitizeRichHtml(html) {
     const href = element.getAttribute("href") || "";
     const src = element.getAttribute("src") || "";
     const alt = element.getAttribute("alt") || "";
+    const calloutType = normalizeCalloutType(element.getAttribute("data-callout"));
     element.getAttributeNames().forEach((name) => element.removeAttribute(name));
+
+    if (tag === "blockquote" && calloutType) {
+      element.setAttribute("data-callout", calloutType);
+    }
 
     if (tag === "a" && isSafeLink(href)) {
       element.setAttribute("href", href);
@@ -687,6 +795,11 @@ function sanitizeRichHtml(html) {
 
     if (tag === "img") element.remove();
   }
+}
+
+function normalizeCalloutType(value) {
+  const type = String(value || "").trim().toLowerCase();
+  return ["info", "warning"].includes(type) ? type : "";
 }
 
 function looksLikeHtml(value) {
@@ -709,11 +822,9 @@ function formatDate(value) {
 }
 
 function formatUpdatedLabel(value) {
-  if (!value) return "Updated recently";
+  if (!value) return "";
   const updated = new Date(value);
-  if (Number.isNaN(updated.getTime())) return "Updated recently";
-  const elapsedDays = Math.floor((Date.now() - updated.getTime()) / 86400000);
-  if (elapsedDays <= 45) return "Updated recently";
+  if (Number.isNaN(updated.getTime())) return "";
   return `Updated ${formatDate(value)}`;
 }
 

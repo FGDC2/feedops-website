@@ -335,6 +335,12 @@ h1 {
   padding: 1.8rem 5vw 2.35rem;
 }
 
+.article-hero ::selection,
+.article-page ::selection {
+  background: rgba(245, 158, 11, 0.32);
+  color: inherit;
+}
+
 .article-hero-inner {
   margin: 0 auto;
   max-width: 780px;
@@ -362,7 +368,7 @@ h1 {
 }
 
 .article-hero h1 {
-  font-size: clamp(40px, 4.3vw, 60px);
+  font-size: clamp(28px, 3vw, 42px);
   letter-spacing: 0;
   line-height: 1.02;
   margin: 0 0 0.85rem;
@@ -517,7 +523,6 @@ h1 {
 .tree-group a.active {
   background: #fff7ed;
   border-left: 3px solid var(--accent);
-  font-weight: 900;
   padding-left: 0.7rem;
 }
 
@@ -613,11 +618,17 @@ h1 {
 
 .article-body blockquote {
   background: #fff7ed;
-  border-left: 4px solid var(--accent);
-  border-radius: 7px;
-  color: #3f4144;
+  border: 0;
+  border-left: 4px solid #f59e0b;
+  border-radius: 8px;
+  color: var(--ink);
   margin: 0 0 2.2rem;
   padding: 1rem 1.15rem;
+}
+
+.article-body blockquote[data-callout="warning"] {
+  background: #fef2f2;
+  border-left-color: #dc2626;
 }
 
 .article-body blockquote p:last-child {

@@ -6,3 +6,7 @@ services:
     staticPublishPath: render-site
     autoDeployTrigger: commit
     renderSubdomainPolicy: disabled
+    routes:
+      - type: rewrite
+        source: /help/*
+        destination: /help/index.html
