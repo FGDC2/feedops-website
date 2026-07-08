@@ -206,7 +206,8 @@ h1 {
 .quick-links {
   display: grid;
   gap: clamp(1.4rem, 3.6vw, 3.2rem);
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 372px));
+  justify-content: center;
   margin-bottom: 4.75rem;
 }
 
@@ -437,7 +438,8 @@ h1 {
 @media (max-width: 1340px) {
   .quick-links {
     gap: 3.2rem 3.6rem;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 372px));
+    justify-content: center;
   }
 
   .quick-link {
@@ -493,6 +495,10 @@ h1 {
 
   .home-shell {
     padding-top: 2.6rem;
+  }
+
+  .quick-links {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .quick-link {
