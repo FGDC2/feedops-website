@@ -159,6 +159,7 @@ searchForm.addEventListener("submit", handleSearchSubmit);
 document.addEventListener("click", handleSearchShortcut);
 document.addEventListener("click", handleChatOpen);
 document.addEventListener("click", handleArticleAnchorClick);
+document.addEventListener("click", handleArticleMenuToggle);
 
 load();
 
@@ -245,26 +246,32 @@ async function renderArticle(slug) {
 function renderArticleSidebar(activeSlug) {
   return `
     <aside class="article-sidebar" aria-label="Help Center categories">
-      <nav class="help-category-tree">
-        <p class="tree-heading">In this section</p>
-        <a class="tree-link" href="#/">All articles</a>
-        <div class="tree-group">
-          <p class="tree-category">Connect your store</p>
-          <ul>
-            ${sourceLinks.map(([label, slug]) => `
-              <li>
-                <a class="${slug && slug === activeSlug ? "active" : ""}" href="${slug ? `#/article/${encodeURIComponent(slug)}` : "#/"}" ${slug ? "" : `data-search="${escapeAttribute(label)}"`}>${escapeHtml(label)}</a>
-              </li>
-            `).join("")}
-          </ul>
+      <button class="article-menu-toggle" type="button" aria-expanded="false" aria-controls="articleMenuContent">
+        <span class="hamburger-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Menu</span>
+      </button>
+      <div id="articleMenuContent" class="article-menu-content">
+        <nav class="help-category-tree">
+          <p class="tree-heading">In this section</p>
+          <a class="tree-link" href="#/">All articles</a>
+          <div class="tree-group">
+            <p class="tree-category">Connect your store</p>
+            <ul>
+              ${sourceLinks.map(([label, slug]) => `
+                <li>
+                  <a class="${slug && slug === activeSlug ? "active" : ""}" href="${slug ? `#/article/${encodeURIComponent(slug)}` : "#/"}" ${slug ? "" : `data-search="${escapeAttribute(label)}"`}>${escapeHtml(label)}</a>
+                </li>
+              `).join("")}
+            </ul>
+          </div>
+          ${topLevelHelpCategories.map((label) => `
+            <a class="tree-link" href="#/" data-search="${escapeAttribute(label)}">${escapeHtml(label)}</a>
+          `).join("")}
+        </nav>
+        <div class="sidebar-support-card">
+          <strong>Need help?</strong>
+          <button type="button" data-open-chat>Open chat</button>
         </div>
-        ${topLevelHelpCategories.map((label) => `
-          <a class="tree-link" href="#/" data-search="${escapeAttribute(label)}">${escapeHtml(label)}</a>
-        `).join("")}
-      </nav>
-      <div class="sidebar-support-card">
-        <strong>Need help?</strong>
-        <button type="button" data-open-chat>Open chat</button>
       </div>
     </aside>
   `;
@@ -378,6 +385,23 @@ function handleArticleAnchorClick(event) {
   if (!section) return;
   event.preventDefault();
   section.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function handleArticleMenuToggle(event) {
+  const toggle = event.target.closest(".article-menu-toggle");
+  if (toggle) {
+    const sidebar = toggle.closest(".article-sidebar");
+    const isOpen = sidebar?.classList.toggle("open") || false;
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    return;
+  }
+
+  const articleMenuLink = event.target.closest(".article-sidebar .article-menu-content a");
+  if (!articleMenuLink) return;
+  const sidebar = articleMenuLink.closest(".article-sidebar");
+  const sidebarToggle = sidebar?.querySelector(".article-menu-toggle");
+  sidebar?.classList.remove("open");
+  sidebarToggle?.setAttribute("aria-expanded", "false");
 }
 
 function openChatSupport() {
