@@ -215,7 +215,7 @@ h1 {
   color: var(--ink);
   display: grid;
   gap: 1.35rem;
-  grid-template-columns: 112px minmax(0, 1fr) 28px;
+  grid-template-columns: 84px minmax(0, 1fr) 28px;
   min-height: 118px;
   text-decoration: none;
 }
@@ -225,19 +225,19 @@ h1 {
   background: #fff5e8;
   border-radius: 999px;
   display: inline-flex;
-  height: 112px;
+  height: 84px;
   justify-content: center;
-  width: 112px;
+  width: 84px;
 }
 
 .quick-icon svg {
   fill: none;
-  height: 54px;
+  height: 41px;
   stroke: var(--accent);
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 1.8;
-  width: 54px;
+  width: 41px;
 }
 
 .quick-copy {
@@ -282,7 +282,7 @@ h1 {
 }
 
 .section-heading h2 {
-  font-size: clamp(24px, 2.4vw, 34px);
+  font-size: 30px;
   line-height: 1.08;
   margin: 0 0 0.35rem;
 }
@@ -330,7 +330,7 @@ h1 {
 }
 
 .article-page h2 {
-  font-size: clamp(31px, 4vw, 48px);
+  font-size: 30px;
   line-height: 1.04;
   margin: 0 0 1rem;
 }
@@ -356,6 +356,10 @@ h1 {
 .article-body h3 {
   color: var(--ink);
   margin: 1.6rem 0 0.5rem;
+}
+
+.article-body h2 {
+  font-size: 30px;
 }
 
 .article-body ul,
@@ -437,7 +441,7 @@ h1 {
   }
 
   .quick-link {
-    grid-template-columns: 112px minmax(0, 1fr) 28px;
+    grid-template-columns: 84px minmax(0, 1fr) 28px;
     min-height: 132px;
   }
 }
@@ -494,18 +498,18 @@ h1 {
   .quick-link {
     align-items: flex-start;
     gap: 1rem;
-    grid-template-columns: 74px minmax(0, 1fr) 24px;
+    grid-template-columns: 56px minmax(0, 1fr) 24px;
     min-height: 0;
   }
 
   .quick-icon {
-    height: 74px;
-    width: 74px;
+    height: 56px;
+    width: 56px;
   }
 
   .quick-icon svg {
-    height: 36px;
-    width: 36px;
+    height: 27px;
+    width: 27px;
   }
 
   .quick-copy strong {
