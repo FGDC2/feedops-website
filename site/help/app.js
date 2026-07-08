@@ -3,6 +3,8 @@ const searchForm = document.querySelector("#searchForm");
 const searchInput = document.querySelector("#searchInput");
 const staticMode = window.FEEDOPS_HELP_MODE === "static";
 const apiBase = window.FEEDOPS_HELP_API_BASE || "";
+const defaultTitle = "FeedOps Help Center";
+const defaultDescription = "Find FeedOps help articles for connecting stores, importing product data and troubleshooting feed issues.";
 const popularSlugs = [
   "connect-shopify",
   "fix-google-merchant-center-permission-issues",
@@ -37,7 +39,8 @@ async function renderRoute() {
     return;
   }
   document.body.classList.remove("article-active");
-  document.title = "FeedOps Help";
+  document.title = defaultTitle;
+  setMetaDescription(defaultDescription);
   renderArticleList();
 }
 
@@ -75,7 +78,8 @@ async function renderArticle(slug) {
   try {
     const article = await fetchArticle(slug);
     document.body.classList.add("article-active");
-    document.title = `${article.title} | FeedOps Help`;
+    document.title = `${article.title} | ${defaultTitle}`;
+    setMetaDescription(article.excerpt || defaultDescription);
     app.innerHTML = `
       <article class="article-page">
         <a class="back-link" href="#/">Back to articles</a>
@@ -88,6 +92,16 @@ async function renderArticle(slug) {
   } catch {
     app.innerHTML = '<div class="empty">Article not found.</div>';
   }
+}
+
+function setMetaDescription(description) {
+  let tag = document.querySelector('meta[name="description"]');
+  if (!tag) {
+    tag = document.createElement("meta");
+    tag.setAttribute("name", "description");
+    document.head.append(tag);
+  }
+  tag.setAttribute("content", description);
 }
 
 function renderDocLink(article) {
