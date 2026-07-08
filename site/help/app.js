@@ -210,12 +210,10 @@ async function renderArticle(slug) {
     document.title = `${article.title} | ${homeConfig.head.title}`;
     setMetaDescription(article.excerpt || homeConfig.head.description);
     app.innerHTML = `
+      ${renderArticleHero(article, preparedArticle)}
       <div class="article-layout">
         ${renderArticleSidebar(article)}
         <article class="article-page">
-          <p class="article-meta"><span>${escapeHtml(article.category)}</span><span>${formatDate(article.updatedAt)}</span></p>
-          <h1 class="article-title">${escapeHtml(article.title)}</h1>
-          <p class="article-intro">${escapeHtml(article.excerpt || "")}</p>
           <div class="article-body">${preparedArticle.html}</div>
         </article>
         ${renderArticleToc(preparedArticle.toc)}
@@ -224,6 +222,36 @@ async function renderArticle(slug) {
   } catch {
     app.innerHTML = '<div class="empty">Article not found.</div>';
   }
+}
+
+function renderArticleHero(article, preparedArticle) {
+  const category = article.category || "Help articles";
+  return `
+    <section class="article-hero" aria-labelledby="articleHeroTitle">
+      <div class="article-hero-inner">
+        <nav class="article-breadcrumbs" aria-label="Article breadcrumb">
+          <a href="#/">Help Center</a>
+          <span aria-hidden="true">/</span>
+          <a href="#/" data-search="${escapeAttribute(category)}">${escapeHtml(category)}</a>
+          <span aria-hidden="true">/</span>
+          <span>${escapeHtml(article.title)}</span>
+        </nav>
+        <h1 id="articleHeroTitle">${escapeHtml(article.title)}</h1>
+        <p>${escapeHtml(article.excerpt || "")}</p>
+        <div class="article-hero-meta" aria-label="Article details">
+          <span>
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 7v5l3 2" />
+            </svg>
+            ${estimateReadTime(preparedArticle.text)} min read
+          </span>
+          <span class="article-meta-divider" aria-hidden="true"></span>
+          <span>${formatUpdatedLabel(article.updatedAt)}</span>
+        </div>
+      </div>
+    </section>
+  `;
 }
 
 function renderArticleSidebar(activeArticle) {
@@ -572,7 +600,7 @@ function prepareArticleBody(article) {
     heading.id = id;
     toc.push({ id, label });
   });
-  return { html: wrapper.innerHTML, toc };
+  return { html: wrapper.innerHTML, text: wrapper.textContent || "", toc };
 }
 
 function articleAnchorId(value, usedIds) {
@@ -678,6 +706,20 @@ function isSafeImageSrc(value) {
 function formatDate(value) {
   if (!value) return "";
   return new Intl.DateTimeFormat("en-AU", { dateStyle: "medium" }).format(new Date(value));
+}
+
+function formatUpdatedLabel(value) {
+  if (!value) return "Updated recently";
+  const updated = new Date(value);
+  if (Number.isNaN(updated.getTime())) return "Updated recently";
+  const elapsedDays = Math.floor((Date.now() - updated.getTime()) / 86400000);
+  if (elapsedDays <= 45) return "Updated recently";
+  return `Updated ${formatDate(value)}`;
+}
+
+function estimateReadTime(text) {
+  const words = String(text || "").trim().split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.ceil(words / 220));
 }
 
 function escapeHtml(value) {
