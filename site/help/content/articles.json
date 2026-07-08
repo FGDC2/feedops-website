@@ -1,10 +1,30 @@
 [
   {
+    "id": "connect-meta",
+    "title": "Connect Meta",
+    "slug": "connect-meta",
+    "category": "Connect your store",
+    "excerpt": "Connect Meta catalog access for FeedOps product feed workflows.",
+    "tags": [
+      "meta",
+      "catalog",
+      "facebook",
+      "permissions",
+      "product feed"
+    ],
+    "status": "published",
+    "author": "FeedOps",
+    "createdAt": "2026-07-07T00:00:00.000Z",
+    "updatedAt": "2026-07-08T01:45:30.901Z",
+    "publishedAt": "2026-07-08T01:45:30.901Z",
+    "contentFormat": "html"
+  },
+  {
     "id": "connect-shopify",
-    "title": "Connect Shopify.",
+    "title": "Connect Shopify with a custom app",
     "slug": "connect-shopify",
     "category": "Connect your store",
-    "excerpt": "Connect a Shopify store so FeedOps can start importing product data.",
+    "excerpt": "Use this guide to connect your Shopify store to FeedOps.",
     "tags": [
       "shopify",
       "connect store",
@@ -14,8 +34,9 @@
     "status": "published",
     "author": "FeedOps",
     "createdAt": "2026-07-07T00:00:00.000Z",
-    "updatedAt": "2026-07-07T00:00:00.000Z",
-    "publishedAt": "2026-07-07T00:00:00.000Z"
+    "updatedAt": "2026-07-08T00:00:00.000Z",
+    "publishedAt": "2026-07-07T00:00:00.000Z",
+    "contentFormat": "html"
   },
   {
     "id": "connect-google-merchant-center",
@@ -26,25 +47,6 @@
     "tags": [
       "google merchant center",
       "google merchant centre",
-      "permissions",
-      "product feed"
-    ],
-    "status": "published",
-    "author": "FeedOps",
-    "createdAt": "2026-07-07T00:00:00.000Z",
-    "updatedAt": "2026-07-07T00:00:00.000Z",
-    "publishedAt": "2026-07-07T00:00:00.000Z"
-  },
-  {
-    "id": "connect-meta",
-    "title": "Connect Meta",
-    "slug": "connect-meta",
-    "category": "Connect your store",
-    "excerpt": "Connect Meta catalog access for FeedOps product feed workflows.",
-    "tags": [
-      "meta",
-      "catalog",
-      "facebook",
       "permissions",
       "product feed"
     ],

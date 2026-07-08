@@ -428,37 +428,6 @@ h1 {
   padding-left: 0.7rem;
 }
 
-.sidebar-support-card {
-  border-top: 1px solid var(--line);
-  display: grid;
-  gap: 0.8rem;
-  margin-top: 2rem;
-  padding-top: 1.2rem;
-}
-
-.sidebar-support-card strong {
-  font-size: 1.02rem;
-}
-
-.sidebar-support-card button,
-.article-chat-action button {
-  background: var(--accent);
-  border: 0;
-  border-radius: 6px;
-  color: #111418;
-  cursor: pointer;
-  font: inherit;
-  font-weight: 900;
-  justify-self: start;
-  padding: 0.72rem 1rem;
-}
-
-.sidebar-support-card button:hover,
-.article-chat-action button:hover {
-  background: var(--accent-dark);
-  color: #fff;
-}
-
 .article-page {
   background: transparent;
   border-radius: 0;
@@ -573,10 +542,6 @@ h1 {
   font-size: 0.9rem;
   line-height: 1.45;
   margin-top: 0.55rem;
-}
-
-.article-chat-action {
-  margin: -0.2rem 0 0;
 }
 
 .article-toc {

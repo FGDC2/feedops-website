@@ -131,24 +131,9 @@ const shopifyArticleOverride = {
       <li>You can uninstall or revoke the custom app in Shopify if access ever needs to be removed.</li>
     </ul>
     <h2>Need help?</h2>
-    <p>If you are unsure which permissions to select, open chat and we can help you check the setup.</p>
+    <p>If you are unsure which permissions to select, contact FeedOps support and we can help you check the setup.</p>
   `
 };
-const sourceLinks = [
-  ["Shopify", "connect-shopify"],
-  ["BigCommerce", ""],
-  ["WooCommerce", ""],
-  ["Magento 2", ""],
-  ["Salesforce Commerce Cloud", ""],
-  ["Other sources", ""]
-];
-const topLevelHelpCategories = [
-  "Connect channels",
-  "Product data",
-  "Feeds",
-  "Troubleshooting",
-  "Account & billing"
-];
 
 let articles = [];
 let homeConfig = cloneDefaultHomeConfig();
@@ -157,7 +142,6 @@ window.addEventListener("hashchange", renderRoute);
 searchInput.addEventListener("input", renderArticleList);
 searchForm.addEventListener("submit", handleSearchSubmit);
 document.addEventListener("click", handleSearchShortcut);
-document.addEventListener("click", handleChatOpen);
 document.addEventListener("click", handleArticleAnchorClick);
 document.addEventListener("click", handleArticleMenuToggle);
 
@@ -227,13 +211,12 @@ async function renderArticle(slug) {
     setMetaDescription(article.excerpt || homeConfig.head.description);
     app.innerHTML = `
       <div class="article-layout">
-        ${renderArticleSidebar(article.slug)}
+        ${renderArticleSidebar(article)}
         <article class="article-page">
           <p class="article-meta"><span>${escapeHtml(article.category)}</span><span>${formatDate(article.updatedAt)}</span></p>
           <h1 class="article-title">${escapeHtml(article.title)}</h1>
           <p class="article-intro">${escapeHtml(article.excerpt || "")}</p>
           <div class="article-body">${preparedArticle.html}</div>
-          ${article.slug === "connect-shopify" ? renderArticleChatCta() : ""}
         </article>
         ${renderArticleToc(preparedArticle.toc)}
       </div>
@@ -243,7 +226,8 @@ async function renderArticle(slug) {
   }
 }
 
-function renderArticleSidebar(activeSlug) {
+function renderArticleSidebar(activeArticle) {
+  const categoryGroups = articleCategoryGroups(activeArticle);
   return `
     <aside class="article-sidebar" aria-label="Help Center categories">
       <button class="article-menu-toggle" type="button" aria-expanded="false" aria-controls="articleMenuContent">
@@ -254,27 +238,42 @@ function renderArticleSidebar(activeSlug) {
         <nav class="help-category-tree">
           <p class="tree-heading">In this section</p>
           <a class="tree-link" href="#/">All articles</a>
-          <div class="tree-group">
-            <p class="tree-category">Connect your store</p>
-            <ul>
-              ${sourceLinks.map(([label, slug]) => `
-                <li>
-                  <a class="${slug && slug === activeSlug ? "active" : ""}" href="${slug ? `#/article/${encodeURIComponent(slug)}` : "#/"}" ${slug ? "" : `data-search="${escapeAttribute(label)}"`}>${escapeHtml(label)}</a>
-                </li>
-              `).join("")}
-            </ul>
-          </div>
-          ${topLevelHelpCategories.map((label) => `
-            <a class="tree-link" href="#/" data-search="${escapeAttribute(label)}">${escapeHtml(label)}</a>
+          ${categoryGroups.map((group) => `
+            <div class="tree-group">
+              <p class="tree-category">${escapeHtml(group.category)}</p>
+              <ul>
+                ${group.articles.map((article) => `
+                  <li>
+                    <a class="${article.slug === activeArticle.slug ? "active" : ""}" href="#/article/${encodeURIComponent(article.slug)}">${escapeHtml(article.title)}</a>
+                  </li>
+                `).join("")}
+              </ul>
+            </div>
           `).join("")}
         </nav>
-        <div class="sidebar-support-card">
-          <strong>Need help?</strong>
-          <button type="button" data-open-chat>Open chat</button>
-        </div>
       </div>
     </aside>
   `;
+}
+
+function articleCategoryGroups(activeArticle) {
+  const list = articles.some((article) => article.slug === activeArticle.slug)
+    ? articles
+    : [...articles, activeArticle];
+  const groups = [];
+  const byCategory = new Map();
+
+  for (const article of list) {
+    const category = String(article.category || "General").trim() || "General";
+    if (!byCategory.has(category)) {
+      const group = { category, articles: [] };
+      byCategory.set(category, group);
+      groups.push(group);
+    }
+    byCategory.get(category).articles.push(article);
+  }
+
+  return groups;
 }
 
 function renderArticleToc(items) {
@@ -285,14 +284,6 @@ function renderArticleToc(items) {
         ${items.map((item) => `<a href="#${escapeAttribute(item.id)}" data-article-anchor="${escapeAttribute(item.id)}">${escapeHtml(item.label)}</a>`).join("")}
       </nav>
     </aside>
-  `;
-}
-
-function renderArticleChatCta() {
-  return `
-    <p class="article-chat-action">
-      <button type="button" data-open-chat>Open chat</button>
-    </p>
   `;
 }
 
@@ -371,13 +362,6 @@ function handleSearchShortcut(event) {
   searchInput.focus();
 }
 
-function handleChatOpen(event) {
-  const trigger = event.target.closest("[data-open-chat]");
-  if (!trigger) return;
-  event.preventDefault();
-  openChatSupport();
-}
-
 function handleArticleAnchorClick(event) {
   const link = event.target.closest("[data-article-anchor]");
   if (!link) return;
@@ -402,19 +386,6 @@ function handleArticleMenuToggle(event) {
   const sidebarToggle = sidebar?.querySelector(".article-menu-toggle");
   sidebar?.classList.remove("open");
   sidebarToggle?.setAttribute("aria-expanded", "false");
-}
-
-function openChatSupport() {
-  const hubspotWidget = window.HubSpotConversations?.widget;
-  if (hubspotWidget?.open) {
-    hubspotWidget.open();
-    return;
-  }
-  if (hubspotWidget?.load) {
-    hubspotWidget.load({ widgetOpen: true });
-    return;
-  }
-  window.location.href = "https://feedops.com/contact_us/";
 }
 
 async function fetchArticles() {

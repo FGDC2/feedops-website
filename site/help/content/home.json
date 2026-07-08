@@ -1,0 +1,39 @@
+{
+  "head": {
+    "gtmId": "GTM-KR4TR7B",
+    "title": "FeedOps Help Center",
+    "description": "Find FeedOps help articles for connecting stores, importing product data and troubleshooting feed issues."
+  },
+  "categories": [
+    {
+      "id": "connect-your-store",
+      "title": "Connect your stores",
+      "description": "Learn how to connect your eCommerce store and start importing your products.",
+      "search": "connect store",
+      "icon": "bag"
+    },
+    {
+      "id": "feed-ingestion",
+      "title": "Feed ingestion",
+      "description": "Understand how product data is imported, processed and kept up to date.",
+      "search": "feed ingestion",
+      "icon": "download"
+    },
+    {
+      "id": "troubleshoot-connections",
+      "title": "Troubleshoot connections",
+      "description": "Fix common connection issues and get your feeds back on track.",
+      "search": "troubleshoot connections",
+      "icon": "wrench"
+    }
+  ],
+  "popularHeading": "Popular connection docs",
+  "popularDocs": [
+    "connect-shopify",
+    "fix-google-merchant-center-permission-issues",
+    "connect-google-merchant-center",
+    "why-products-are-not-importing",
+    "connect-meta",
+    "why-a-feed-is-not-updating"
+  ]
+}
