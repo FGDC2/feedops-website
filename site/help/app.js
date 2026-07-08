@@ -139,10 +139,11 @@ const shopifyArticleOverride = {
 
 let articles = [];
 let homeConfig = cloneDefaultHomeConfig();
+let activeSearchAliases = [];
 
 window.addEventListener("popstate", renderRoute);
 window.addEventListener("hashchange", handleLegacyHashRoute);
-searchInput.addEventListener("input", renderArticleList);
+searchInput.addEventListener("input", handleSearchInput);
 searchForm.addEventListener("submit", handleSearchSubmit);
 document.addEventListener("click", handleSearchShortcut);
 document.addEventListener("click", handleArticleAnchorClick);
@@ -179,19 +180,11 @@ async function renderRoute() {
 }
 
 function renderArticleList() {
-  const query = searchInput.value.trim().toLowerCase();
-  const filtered = query ? articles.filter((article) => {
-    const haystack = [
-      article.title,
-      article.excerpt,
-      article.category,
-      article.content,
-      ...(article.tags || [])
-    ]
-      .join(" ")
-      .toLowerCase();
-    return haystack.includes(query);
-  }) : popularArticles();
+  const query = searchInput.value.trim();
+  const searchTerms = searchQueriesFor(query);
+  const filtered = searchTerms.length
+    ? articles.filter((article) => searchTerms.some((term) => articleMatchesSearch(article, term)))
+    : popularArticles();
 
   app.innerHTML = `
     <div class="section-heading">
@@ -340,7 +333,7 @@ function renderQuickLinks() {
 
 function renderQuickLink(category) {
   return `
-    <a class="quick-link" href="${homePath()}" data-search="${escapeAttribute(category.search || category.title)}">
+    <a class="quick-link" href="${homePath()}" data-search="${escapeAttribute(category.title || category.search)}" data-search-aliases="${escapeAttribute(searchAliasesForCategory(category).join("|"))}">
       <span class="quick-icon" aria-hidden="true">
         ${renderCategoryIcon(category.icon)}
       </span>
@@ -367,6 +360,88 @@ function renderCategoryIcon(icon) {
   return icons[icon] || icons.document;
 }
 
+function handleSearchInput() {
+  activeSearchAliases = [];
+  renderArticleList();
+}
+
+function articleMatchesSearch(article, query) {
+  const normalizedQuery = normalizeSearchText(query);
+  if (!normalizedQuery) return true;
+
+  const haystackText = normalizeSearchText([
+    article.title,
+    article.excerpt,
+    article.category,
+    article.content,
+    ...(article.tags || [])
+  ].join(" "));
+
+  if (haystackText.includes(normalizedQuery)) return true;
+
+  const haystackTokens = new Set(tokenizeSearchText(haystackText));
+  const queryTokens = tokenizeSearchText(normalizedQuery);
+  if (!queryTokens.length) return true;
+
+  return queryTokens.every((queryToken) => tokenMatchesSearch(haystackTokens, queryToken));
+}
+
+function searchQueriesFor(query) {
+  if (!String(query || "").trim()) return [];
+  const terms = [query, ...activeSearchAliases]
+    .map((term) => String(term || "").trim())
+    .filter(Boolean);
+  return [...new Set(terms)];
+}
+
+function searchAliasesForCategory(category) {
+  const title = String(category?.title || "").trim();
+  const search = String(category?.search || "").trim();
+  if (!search || normalizeSearchText(search) === normalizeSearchText(title)) return [];
+  return [search];
+}
+
+function normalizeSearchText(value) {
+  return String(value || "")
+    .replace(/<[^>]*>/g, " ")
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .replace(/\s+/g, " ");
+}
+
+function tokenizeSearchText(value) {
+  return normalizeSearchText(value)
+    .split(" ")
+    .map(normalizeSearchToken)
+    .filter(Boolean);
+}
+
+function normalizeSearchToken(token) {
+  const value = String(token || "").trim();
+  if (value.length <= 3) return value;
+  return value
+    .replace(/ies$/, "y")
+    .replace(/sses$/, "ss")
+    .replace(/(?:ing|ed|es|s)$/, "");
+}
+
+function tokenMatchesSearch(haystackTokens, queryToken) {
+  for (const token of haystackTokens) {
+    if (
+      token === queryToken ||
+      token.startsWith(queryToken) ||
+      queryToken.startsWith(token)
+    ) {
+      return true;
+    }
+  }
+  return false;
+}
+
 function popularArticles() {
   const bySlug = new Map(articles.map((article) => [article.slug, article]));
   const popularSlugs = Array.isArray(homeConfig.popularDocs) ? homeConfig.popularDocs : [];
@@ -389,6 +464,10 @@ function handleSearchShortcut(event) {
   if (!link) return;
   event.preventDefault();
   searchInput.value = link.dataset.search || "";
+  activeSearchAliases = String(link.dataset.searchAliases || "")
+    .split("|")
+    .map((term) => term.trim())
+    .filter(Boolean);
   if (isArticleRoute()) {
     navigateTo(homePath());
     return;
