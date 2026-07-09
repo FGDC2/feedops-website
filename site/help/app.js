@@ -215,6 +215,7 @@ async function renderArticle(slug) {
         ${renderArticleSidebar(article)}
         <article class="article-page">
           <div class="article-body">${preparedArticle.html}</div>
+          ${renderRelatedDoc(article)}
         </article>
         ${renderArticleToc(preparedArticle.toc)}
       </div>
@@ -325,6 +326,21 @@ function renderDocLink(article) {
       </svg>
       <span>${escapeHtml(article.title)}</span>
     </a>
+  `;
+}
+
+function renderRelatedDoc(article) {
+  const slug = String(article?.relatedDocSlug || "").trim();
+  if (!slug || slug === article.slug) return "";
+  const related = articles.find((candidate) => candidate.slug === slug);
+  if (!related) return "";
+  const displayArticle = applyArticleDisplayOverrides(related);
+  return `
+    <aside class="related-doc" aria-labelledby="relatedDocTitle">
+      <p>Related doc</p>
+      <a id="relatedDocTitle" href="${articlePath(displayArticle.slug)}">${escapeHtml(displayArticle.title)}</a>
+      ${displayArticle.excerpt ? `<span>${escapeHtml(displayArticle.excerpt)}</span>` : ""}
+    </aside>
   `;
 }
 
