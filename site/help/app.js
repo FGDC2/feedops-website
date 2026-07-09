@@ -215,7 +215,7 @@ async function renderArticle(slug) {
         ${renderArticleSidebar(article)}
         <article class="article-page">
           <div class="article-body">${preparedArticle.html}</div>
-          ${renderRelatedDoc(article)}
+          ${renderRelatedDocs(article)}
         </article>
         ${renderArticleToc(preparedArticle.toc)}
       </div>
@@ -329,19 +329,36 @@ function renderDocLink(article) {
   `;
 }
 
-function renderRelatedDoc(article) {
-  const slug = String(article?.relatedDocSlug || "").trim();
-  if (!slug || slug === article.slug) return "";
-  const related = articles.find((candidate) => candidate.slug === slug);
-  if (!related) return "";
-  const displayArticle = applyArticleDisplayOverrides(related);
+function renderRelatedDocs(article) {
+  const relatedArticles = relatedDocSlugsForArticle(article)
+    .map((slug) => articles.find((candidate) => candidate.slug === slug))
+    .filter(Boolean)
+    .map(applyArticleDisplayOverrides);
+  if (!relatedArticles.length) return "";
   return `
-    <aside class="related-doc" aria-labelledby="relatedDocTitle">
-      <p>Related doc</p>
-      <a id="relatedDocTitle" href="${articlePath(displayArticle.slug)}">${escapeHtml(displayArticle.title)}</a>
-      ${displayArticle.excerpt ? `<span>${escapeHtml(displayArticle.excerpt)}</span>` : ""}
+    <aside class="related-docs" aria-labelledby="relatedDocsTitle">
+      <h2 id="relatedDocsTitle">Related articles</h2>
+      <div class="related-doc-list">
+        ${relatedArticles.map((related) => `
+          <a class="related-doc-link" href="${articlePath(related.slug)}">
+            <strong>${escapeHtml(related.title)}</strong>
+            ${related.excerpt ? `<span>${escapeHtml(related.excerpt)}</span>` : ""}
+          </a>
+        `).join("")}
+      </div>
     </aside>
   `;
+}
+
+function relatedDocSlugsForArticle(article = {}) {
+  const values = Array.isArray(article.relatedDocSlugs) ? [...article.relatedDocSlugs] : [];
+  if (article.relatedDocSlug) values.push(article.relatedDocSlug);
+  const seen = new Set();
+  return values.map((value) => String(value || "").trim()).filter((slug) => {
+    if (!slug || slug === article.slug || seen.has(slug)) return false;
+    seen.add(slug);
+    return true;
+  });
 }
 
 function renderQuickLinks() {
