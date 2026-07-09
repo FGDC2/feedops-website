@@ -205,6 +205,7 @@ async function renderArticle(slug) {
   try {
     const article = applyArticleDisplayOverrides(await fetchArticle(slug));
     const preparedArticle = prepareArticleBody(article);
+    const relatedDocsHtml = await renderRelatedDocs(article);
     document.body.classList.add("article-active");
     document.title = `${article.title} | ${homeConfig.head.title}`;
     setMetaDescription(article.excerpt || homeConfig.head.description);
@@ -215,7 +216,7 @@ async function renderArticle(slug) {
         ${renderArticleSidebar(article)}
         <article class="article-page">
           <div class="article-body">${preparedArticle.html}</div>
-          ${renderRelatedDocs(article)}
+          ${relatedDocsHtml}
         </article>
         ${renderArticleToc(preparedArticle.toc)}
       </div>
@@ -329,11 +330,8 @@ function renderDocLink(article) {
   `;
 }
 
-function renderRelatedDocs(article) {
-  const relatedArticles = relatedDocSlugsForArticle(article)
-    .map((slug) => articles.find((candidate) => candidate.slug === slug))
-    .filter(Boolean)
-    .map(applyArticleDisplayOverrides);
+async function renderRelatedDocs(article) {
+  const relatedArticles = await relatedArticlesForArticle(article);
   if (!relatedArticles.length) return "";
   return `
     <aside class="related-docs" aria-labelledby="relatedDocsTitle">
@@ -348,6 +346,20 @@ function renderRelatedDocs(article) {
       </div>
     </aside>
   `;
+}
+
+async function relatedArticlesForArticle(article = {}) {
+  const relatedSlugs = relatedDocSlugsForArticle(article);
+  const relatedArticles = await Promise.all(relatedSlugs.map(async (slug) => {
+    const indexedArticle = articles.find((candidate) => candidate.slug === slug);
+    if (indexedArticle) return indexedArticle;
+    try {
+      return await fetchArticle(slug);
+    } catch {
+      return null;
+    }
+  }));
+  return relatedArticles.filter(Boolean).map(applyArticleDisplayOverrides);
 }
 
 function relatedDocSlugsForArticle(article = {}) {
