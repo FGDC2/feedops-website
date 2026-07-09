@@ -754,7 +754,12 @@ function currentArticleSlug() {
   const [route, slug] = parseRoute();
   if (route === "article") return slug || "";
   if (["assets", "content", "uploads"].includes(route)) return "";
-  return route || "";
+  return route || queryArticleSlug();
+}
+
+function queryArticleSlug() {
+  const params = new URLSearchParams(window.location.search);
+  return String(params.get("doc") || params.get("article") || "").trim();
 }
 
 function getHelpBasePath() {
