@@ -911,7 +911,7 @@ function formatUpdatedLabel(value) {
   if (!value) return "";
   const updated = new Date(value);
   if (Number.isNaN(updated.getTime())) return "";
-  return `Updated ${formatDate(value)}`;
+  return formatDate(value);
 }
 
 function estimateReadTime(text) {
