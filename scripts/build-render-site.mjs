@@ -1,5 +1,6 @@
 import {
   copyFileSync,
+  existsSync,
   mkdirSync,
   readFileSync,
   readdirSync,
@@ -13,6 +14,7 @@ const sourceRoot = "site";
 const outputRoot = "render-site";
 const origin = "https://feedops.com";
 const gtmContainerId = "GTM-KR4TR7B";
+const helpArticlesApi = "https://ops.feedops.com/api/help/articles";
 
 const gtmHeadSnippet = `<!-- Google Tag Manager -->
   <script>
@@ -406,6 +408,61 @@ function copyPage(page) {
   copyTextPath(source, target, (content) => installStandardHeaderMarkup(injectGoogleTagManager(content), page));
 }
 
+function localHelpContentSlugs() {
+  const articlesPath = join(sourceRoot, "help", "content", "articles.json");
+  if (!existsSync(articlesPath)) return [];
+
+  try {
+    const data = JSON.parse(readFileSync(articlesPath, "utf8"));
+    const articles = Array.isArray(data) ? data : data.articles;
+    return (articles || [])
+      .map((article) => String(article?.slug || "").trim())
+      .filter(Boolean);
+  } catch {
+    return [];
+  }
+}
+
+async function liveHelpArticleSlugs() {
+  try {
+    const response = await fetch(helpArticlesApi, {
+      headers: {
+        origin
+      }
+    });
+    if (!response.ok) throw new Error(`Help articles API returned ${response.status}`);
+    const data = await response.json();
+    return (data.articles || [])
+      .map((article) => String(article?.slug || "").trim())
+      .filter(Boolean);
+  } catch (error) {
+    console.warn(`Could not fetch live Help article slugs. Falling back to local content. ${error?.message || error}`);
+    return [];
+  }
+}
+
+async function createHelpArticleFallbackPages() {
+  const helpShellPath = join(outputRoot, "help", "index.html");
+  if (!existsSync(helpShellPath)) return 0;
+
+  const helpShell = readFileSync(helpShellPath, "utf8");
+  const slugs = new Set([
+    ...localHelpContentSlugs(),
+    ...(await liveHelpArticleSlugs())
+  ]);
+
+  for (const slug of slugs) {
+    const slugPage = join(outputRoot, "help", slug, "index.html");
+    const legacySlugPage = join(outputRoot, "help", "article", slug, "index.html");
+    mkdirSync(dirname(slugPage), { recursive: true });
+    mkdirSync(dirname(legacySlugPage), { recursive: true });
+    writeFileSync(slugPage, helpShell);
+    writeFileSync(legacySlugPage, helpShell);
+  }
+
+  return slugs.size;
+}
+
 rmSync(outputRoot, { recursive: true, force: true });
 mkdirSync(outputRoot, { recursive: true });
 
@@ -431,4 +488,6 @@ for (const page of pages) {
 
 copyStaticTree(join(sourceRoot, "help"), join(outputRoot, "help"), { skipHtml: true });
 
-console.log(`Built ${outputRoot} with ${pages.length} public pages.`);
+const helpFallbackPageCount = await createHelpArticleFallbackPages();
+
+console.log(`Built ${outputRoot} with ${pages.length} public pages and ${helpFallbackPageCount} Help article fallback pages.`);
