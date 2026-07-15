@@ -15,11 +15,20 @@ const outputRoot = "render-site";
 const origin = "https://feedops.com";
 const gtmContainerId = "GTM-KR4TR7B";
 const helpArticlesApi = "https://ops.feedops.com/api/help/articles";
+const cookieConsentEnabled = false;
 
 const gtmHeadSnippet = `<!-- Google Tag Manager -->
   <script>
+    window.FeedOpsTrackingConfig = window.FeedOpsTrackingConfig || {
+      cookieConsentEnabled: ${cookieConsentEnabled}
+    };
+    var feedOpsConsentEnabled = !!window.FeedOpsTrackingConfig.cookieConsentEnabled;
     window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: "feedops_consent_default", analytics_storage: "denied", ad_storage: "denied" });
+    window.dataLayer.push({
+      event: "feedops_consent_default",
+      analytics_storage: feedOpsConsentEnabled ? "denied" : "granted",
+      ad_storage: feedOpsConsentEnabled ? "denied" : "granted"
+    });
     window.FeedOpsGTM = window.FeedOpsGTM || {
       id: "${gtmContainerId}",
       loaded: false,
@@ -34,6 +43,9 @@ const gtmHeadSnippet = `<!-- Google Tag Manager -->
         firstScript.parentNode.insertBefore(gtmScript, firstScript);
       }
     };
+    if (!feedOpsConsentEnabled) {
+      window.FeedOpsGTM.load();
+    }
   </script>
   <!-- End Google Tag Manager -->`;
 
