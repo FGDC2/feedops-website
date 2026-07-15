@@ -1,6 +1,8 @@
 (function () {
   var storageKey = "feedops_cookie_choice_v1";
   var cookieName = "feedops_cookie_choice";
+  var config = window.FeedOpsTrackingConfig || {};
+  var consentEnabled = !!config.cookieConsentEnabled;
   var previewMode = window.location.search.indexOf("cookie-preview=1") !== -1;
 
   function getStoredChoice() {
@@ -225,6 +227,10 @@
   }
 
   function init() {
+    if (!consentEnabled && !previewMode) {
+      return;
+    }
+
     var storedChoice = getStoredChoice();
     if (!previewMode && storedChoice) {
       if (storedChoice === "accepted") {
