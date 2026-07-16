@@ -3,22 +3,11 @@
 <head>
   <!-- Google Tag Manager -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: "feedops_consent_default", analytics_storage: "denied", ad_storage: "denied" });
-    window.FeedOpsGTM = window.FeedOpsGTM || {
-      id: "GTM-KR4TR7B",
-      loaded: false,
-      load: function () {
-        if (this.loaded) return;
-        this.loaded = true;
-        window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var firstScript = document.getElementsByTagName("script")[0];
-        var gtmScript = document.createElement("script");
-        gtmScript.async = true;
-        gtmScript.src = "https://www.googletagmanager.com/gtm.js?id=" + this.id;
-        firstScript.parentNode.insertBefore(gtmScript, firstScript);
-      }
-    };
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+    new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+    "https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,"script","dataLayer","GTM-KR4TR7B");
   </script>
   <!-- End Google Tag Manager -->
 <meta charset="utf-8">
@@ -411,6 +400,6 @@
     <section class="section final-cta"><div class="section-inner"><div><p class="kicker">Next step</p><h2>Find out whether the problem is feed, Merchant Center, or campaign structure.</h2><p>If Google Shopping ads are not showing, start with product eligibility and feed quality before changing every campaign setting. A feed audit gives you a cleaner first read on the products that are blocked, weak, missing signals, or unlikely to show.</p></div><a class="button" href="../free-google-shopping-feed-audit/">Start a free audit</a></div></section>
   </main>
   <script src="../header-standard.js?v=20260624-no-learning-submenu" data-site-root="../" defer></script>
-  <script src="../footer-standard.js?v=20260627-terms-link" data-site-root="../" defer></script>
+  <script src="../footer-standard.js?v=20260716-help-docs-link" data-site-root="../" defer></script>
 </body>
 </html>

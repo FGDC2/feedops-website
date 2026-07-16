@@ -59,7 +59,6 @@ const sharedFiles = [
   "header-standard.js",
   "footer-standard.css",
   "footer-standard.js",
-  "cookie-consent.js",
   "free-google-shopping-feed-audit.js",
   "book-live-demo.js",
   "sitemap.xml",
@@ -122,12 +121,24 @@ function copyStaticTree(sourceDir, outputDir, options = {}) {
   }
 }
 
+function shouldSkipCookieConsentAsset(parts) {
+  const path = toUrlPath(parts.join("/")).toLowerCase();
+  return path.includes("cookie-consent") ||
+    path.includes("gdpr-cookie-compliance") ||
+    path.includes("moove-gdpr") ||
+    path.includes("moove_gdpr");
+}
+
 function copySanitisedAssets(sourceDir, outputDir, originalParts = [], publicParts = []) {
   for (const entry of readdirSync(sourceDir)) {
     const source = join(sourceDir, entry);
     const stats = statSync(source);
     const nextOriginalParts = [...originalParts, entry];
     const nextPublicParts = [...publicParts, sanitiseSegment(entry)];
+
+    if (shouldSkipCookieConsentAsset(nextOriginalParts)) {
+      continue;
+    }
 
     if (stats.isDirectory()) {
       copySanitisedAssets(source, outputDir, nextOriginalParts, nextPublicParts);
@@ -185,13 +196,27 @@ function discoverPublicPages(directory = sourceRoot, page = "") {
 }
 
 function injectGoogleTagManager(content) {
-  let output = content
+  let output = stripCookieConsent(content)
     .replace(/\n?\s*<!-- Google Tag Manager[\s\S]*?<!-- End Google Tag Manager[\s\S]*?-->\s*/g, "\n")
     .replace(/\n?\s*<!-- Google Tag Manager \(noscript\)[\s\S]*?<!-- End Google Tag Manager \(noscript\)[\s\S]*?-->\s*/g, "\n");
 
   output = output.replace(/<head>/i, `<head>\n  ${gtmHeadSnippet}`);
   output = output.replace(/<body([^>]*)>/i, `<body$1>\n  ${gtmBodySnippet}`);
   return output;
+}
+
+function stripCookieConsent(content) {
+  return content
+    .replace(/\n?\s*<script\s+src=["'][^"']*cookie-consent\.js[^"']*["']\s+defer><\/script>\s*/gi, "\n")
+    .replace(/\n?\s*<link[^>]*moove[_-]gdpr[^>]*>\s*/gi, "\n")
+    .replace(/\n?\s*<link[^>]*gdpr-cookie-compliance[^>]*>\s*/gi, "\n")
+    .replace(/\n?\s*<style[^>]*moove[_-]gdpr[^>]*>[\s\S]*?<\/style>\s*/gi, "\n")
+    .replace(/\n?\s*<aside[^>]*id=["']moove_gdpr_cookie_info_bar["'][\s\S]*?<!--\s*#moove_gdpr_cookie_info_bar\s*-->\s*/gi, "\n")
+    .replace(/\n?\s*<aside[^>]*id=["']moove_gdpr_cookie_info_bar["'][\s\S]*?<\/aside>\s*/gi, "\n")
+    .replace(/\n?\s*<dialog[^>]*id=["']moove_gdpr_cookie_modal["'][\s\S]*?<!--\s*#moove_gdpr_cookie_modal\s*-->\s*/gi, "\n")
+    .replace(/\n?\s*<dialog[^>]*id=["']moove_gdpr_cookie_modal["'][\s\S]*?<\/dialog>\s*/gi, "\n")
+    .replace(/\n?\s*<button[^>]*id=["']moove_gdpr_save_popup_settings_button["'][\s\S]*?<\/button>\s*/gi, "\n")
+    .replace(/\n?\s*<script[^>]*(?:moove[_-]gdpr|gdpr-cookie-compliance)[^>]*>[\s\S]*?<\/script>\s*/gi, "\n");
 }
 
 function minifyCss(css) {
@@ -411,7 +436,13 @@ function installStandardHeaderMarkup(content, page) {
 
 function copyTextPath(from, to, transform = (content) => content) {
   mkdirSync(dirname(to), { recursive: true });
-  writeFileSync(to, minifyInlineStyles(injectHeaderStabilityStyles(inlineSharedHeaderStyles(stabiliseSharedHeaderStyles(rewriteAssetReferences(transform(readFileSync(from, "utf8"))))))));
+  const transformed = transform(readFileSync(from, "utf8"));
+  const cleaned = stripCookieConsent(transformed);
+  const withAssets = rewriteAssetReferences(cleaned);
+  const withStableHeader = stabiliseSharedHeaderStyles(withAssets);
+  const withInlineHeader = inlineSharedHeaderStyles(withStableHeader);
+  const withHeaderStability = injectHeaderStabilityStyles(withInlineHeader);
+  writeFileSync(to, minifyInlineStyles(withHeaderStability));
 }
 
 function copyPage(page) {

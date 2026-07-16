@@ -487,7 +487,7 @@ transform: translateY(-500px); /adjust this value to the height of your header/
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../assets/kb.feedops.com/knowledge.asset">
+											<a href="/help/">
 
 											<span class="elementor-icon-list-text">Help Center</span>
 											</a>

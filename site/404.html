@@ -3,22 +3,11 @@
 <head>
   <!-- Google Tag Manager -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: "feedops_consent_default", analytics_storage: "denied", ad_storage: "denied" });
-    window.FeedOpsGTM = window.FeedOpsGTM || {
-      id: "GTM-KR4TR7B",
-      loaded: false,
-      load: function () {
-        if (this.loaded) return;
-        this.loaded = true;
-        window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var firstScript = document.getElementsByTagName("script")[0];
-        var gtmScript = document.createElement("script");
-        gtmScript.async = true;
-        gtmScript.src = "https://www.googletagmanager.com/gtm.js?id=" + this.id;
-        firstScript.parentNode.insertBefore(gtmScript, firstScript);
-      }
-    };
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+    new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+    "https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,"script","dataLayer","GTM-KR4TR7B");
   </script>
   <!-- End Google Tag Manager -->
 <meta charset="utf-8">
@@ -353,7 +342,7 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KR4TR7B"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <header class="site-header"></header>
+<header class="site-header"></header>
   <main>
     <section class="not-found">
       <div class="not-found-inner">
@@ -420,10 +409,8 @@
     </section>
   </main>
   <footer class="site-footer"></footer>
-
-  <script src="/cookie-consent.js" defer></script>
-  <script src="/header-standard.js?v=20260624-404-utility-header" data-site-root="/" data-header-mode="utility" defer></script>
-  <script src="/footer-standard.js?v=20260627-terms-link" data-site-root="/" defer></script>
+<script src="/header-standard.js?v=20260624-404-utility-header" data-site-root="/" data-header-mode="utility" defer></script>
+  <script src="/footer-standard.js?v=20260716-help-docs-link" data-site-root="/" defer></script>
   <script>
     (() => {
       const source = document.getElementById("diagnostic-source");

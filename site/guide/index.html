@@ -3,25 +3,14 @@
 <head>
   <!-- Google Tag Manager -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: "feedops_consent_default", analytics_storage: "denied", ad_storage: "denied" });
-    window.FeedOpsGTM = window.FeedOpsGTM || {
-      id: "GTM-KR4TR7B",
-      loaded: false,
-      load: function () {
-        if (this.loaded) return;
-        this.loaded = true;
-        window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var firstScript = document.getElementsByTagName("script")[0];
-        var gtmScript = document.createElement("script");
-        gtmScript.async = true;
-        gtmScript.src = "https://www.googletagmanager.com/gtm.js?id=" + this.id;
-        firstScript.parentNode.insertBefore(gtmScript, firstScript);
-      }
-    };
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+    new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+    "https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,"script","dataLayer","GTM-KR4TR7B");
   </script>
   <!-- End Google Tag Manager -->
-	<meta charset="UTF-8">
+<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="../assets/gmpg.org/xfn/11.asset">
 	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
@@ -94,66 +83,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel='stylesheet' id='base-desktop-css' href='../assets/feedops.com/wp-content/uploads/elementor/css/base-desktop.css' type='text/css' media='all' />
 <link rel='stylesheet' id='elementor-post-732-css' href='../assets/feedops.com/wp-content/uploads/elementor/css/post-732.css' type='text/css' media='all' />
 <link rel='stylesheet' id='elementor-post-2822-css' href='../assets/feedops.com/wp-content/uploads/elementor/css/post-2822.css' type='text/css' media='all' />
-<link rel='stylesheet' id='moove_gdpr_frontend-css' href='../assets/feedops.com/wp-content/plugins/gdpr-cookie-compliance/dist/styles/gdpr-main-nf.css' type='text/css' media='all' />
-<style id='moove_gdpr_frontend-inline-css' type='text/css'>
-				#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton.moove-gdpr-infobar-reject-btn, 
-				#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton.moove-gdpr-infobar-reject-btn {
-					background-color: transparent;
-					box-shadow: inset 0 0 0 1px currentColor;
-					opacity: .7;
-					color: #202020;
-				}
-
-				#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton.moove-gdpr-infobar-reject-btn:hover, 
-				#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton.moove-gdpr-infobar-reject-btn:hover {
-					background-color: #202020;
-					box-shadow: none;
-					color: #fff;
-					opacity: 1;
-				}
-
-				#moove_gdpr_cookie_info_bar:not(.gdpr-full-screen-infobar).moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton.moove-gdpr-infobar-reject-btn, #moove_gdpr_cookie_info_bar:not(.gdpr-full-screen-infobar).moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton.moove-gdpr-infobar-reject-btn {
-					background-color: transparent;
-					box-shadow: inset 0 0 0 1px currentColor;
-					opacity: .7;
-					color: #fff;
-				}
-
-				#moove_gdpr_cookie_info_bar:not(.gdpr-full-screen-infobar).moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton.moove-gdpr-infobar-reject-btn:hover, #moove_gdpr_cookie_info_bar:not(.gdpr-full-screen-infobar).moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton.moove-gdpr-infobar-reject-btn:hover {
-					box-shadow: none;
-					opacity: 1;
-					color: #202020;
-					background-color: #fff;
-				}
-							#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main h3.tab-title, 
-				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main span.tab-title,
-				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a, 
-				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button,
-				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content .moove-gdpr-branding-cnt a,
-				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder a.mgbutton, 
-				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder button.mgbutton,
-				#moove_gdpr_cookie_modal .cookie-switch .cookie-slider:after, 
-				#moove_gdpr_cookie_modal .cookie-switch .slider:after, 
-				#moove_gdpr_cookie_modal .switch .cookie-slider:after, 
-				#moove_gdpr_cookie_modal .switch .slider:after,
-				#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content p, 
-				#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content p a,
-				#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton, 
-				#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton,
-				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main .moove-gdpr-tab-main-content h1, 
-				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main .moove-gdpr-tab-main-content h2, 
-				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main .moove-gdpr-tab-main-content h3, 
-				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main .moove-gdpr-tab-main-content h4, 
-				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main .moove-gdpr-tab-main-content h5, 
-				#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main .moove-gdpr-tab-main-content h6,
-				#moove_gdpr_cookie_modal .moove-gdpr-modal-content.moove_gdpr_modal_theme_v2 .moove-gdpr-modal-title .tab-title,
-				#moove_gdpr_cookie_modal .moove-gdpr-modal-content.moove_gdpr_modal_theme_v2 .moove-gdpr-tab-main h3.tab-title, 
-				#moove_gdpr_cookie_modal .moove-gdpr-modal-content.moove_gdpr_modal_theme_v2 .moove-gdpr-tab-main span.tab-title,
-				#moove_gdpr_cookie_modal .moove-gdpr-modal-content.moove_gdpr_modal_theme_v2 .moove-gdpr-branding-cnt a {
-					font-weight: inherit				}
-			#moove_gdpr_cookie_modal,#moove_gdpr_cookie_info_bar,.gdpr_cookie_settings_shortcode_content{font-family:inherit}#moove_gdpr_save_popup_settings_button{background-color:#373737;color:#fff}#moove_gdpr_save_popup_settings_button:hover{background-color:#000}#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton,#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton{background-color:#fecf26}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder a.mgbutton,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder button.mgbutton,.gdpr_cookie_settings_shortcode_content .gdpr-shr-button.button-green{background-color:#fecf26;border-color:#fecf26}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder a.mgbutton:hover,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder button.mgbutton:hover,.gdpr_cookie_settings_shortcode_content .gdpr-shr-button.button-green:hover{background-color:#fff;color:#fecf26}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close span.gdpr-icon{background-color:#fecf26;border:1px solid #fecf26}#moove_gdpr_cookie_info_bar span.moove-gdpr-infobar-allow-all.focus-g,#moove_gdpr_cookie_info_bar span.moove-gdpr-infobar-allow-all:focus,#moove_gdpr_cookie_info_bar button.moove-gdpr-infobar-allow-all.focus-g,#moove_gdpr_cookie_info_bar button.moove-gdpr-infobar-allow-all:focus,#moove_gdpr_cookie_info_bar span.moove-gdpr-infobar-reject-btn.focus-g,#moove_gdpr_cookie_info_bar span.moove-gdpr-infobar-reject-btn:focus,#moove_gdpr_cookie_info_bar button.moove-gdpr-infobar-reject-btn.focus-g,#moove_gdpr_cookie_info_bar button.moove-gdpr-infobar-reject-btn:focus,#moove_gdpr_cookie_info_bar span.change-settings-button.focus-g,#moove_gdpr_cookie_info_bar span.change-settings-button:focus,#moove_gdpr_cookie_info_bar button.change-settings-button.focus-g,#moove_gdpr_cookie_info_bar button.change-settings-button:focus{-webkit-box-shadow:0 0 1px 3px #fecf26;-moz-box-shadow:0 0 1px 3px #fecf26;box-shadow:0 0 1px 3px #fecf26}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close i:hover,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close span.gdpr-icon:hover,#moove_gdpr_cookie_info_bar span[data-href]>u.change-settings-button{color:#fecf26}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li.menu-item-selected a span.gdpr-icon,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li.menu-item-selected button span.gdpr-icon{color:inherit}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a span.gdpr-icon,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button span.gdpr-icon{color:inherit}#moove_gdpr_cookie_modal .gdpr-acc-link{line-height:0;font-size:0;color:transparent;position:absolute}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close:hover i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main .moove-gdpr-tab-main-content a:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content span.change-settings-button:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.change-settings-button:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content u.change-settings-button:hover,#moove_gdpr_cookie_info_bar span[data-href]>u.change-settings-button,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content span.change-settings-button.focus-g,span.change-settings-button:focus,button.change-settings-button.focus-g,button.change-settings-button:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content u.change-settings-button.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content u.change-settings-button:focus{color:#fecf26}#moove_gdpr_cookie_modal .moove-gdpr-branding.focus-g span,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main a.focus-g,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main .gdpr-cd-details-toggle.focus-g{color:#fecf26}#moove_gdpr_cookie_modal.gdpr_lightbox-hide{display:none}
-/*# sourceURL=moove_gdpr_frontend-inline-css */
-</style>
 <link rel='stylesheet' id='elementor-gf-local-roboto-css' href='../assets/feedops.com/wp-content/uploads/elementor/google-fonts/css/roboto.css' type='text/css' media='all' />
 <link rel='stylesheet' id='elementor-gf-local-robotoslab-css' href='../assets/feedops.com/wp-content/uploads/elementor/google-fonts/css/robotoslab.css' type='text/css' media='all' />
 <link rel='stylesheet' id='elementor-gf-local-inter-css' href='../assets/feedops.com/wp-content/uploads/elementor/google-fonts/css/inter.css' type='text/css' media='all' />
@@ -456,7 +385,7 @@ transform: translateY(-500px); /adjust this value to the height of your header/
 											</a>
 									</li>
 								<li class="elementor-icon-list-item">
-											<a href="../assets/kb.feedops.com/knowledge.asset">
+											<a href="/help/">
 
 											<span class="elementor-icon-list-text">Help Center</span>
 											</a>
@@ -576,35 +505,7 @@ transform: translateY(-500px); /adjust this value to the height of your header/
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/hello-elementor/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
 <!--copyscapeskip-->
-	<aside id="moove_gdpr_cookie_info_bar" class="moove-gdpr-info-bar-hidden moove-gdpr-align-center moove-gdpr-dark-scheme gdpr_infobar_postion_bottom_left" aria-label="GDPR Cookie Banner" style="display: none;">
-	<div class="moove-gdpr-info-bar-container">
-		<div class="moove-gdpr-info-bar-content">
-		
-<div class="moove-gdpr-cookie-notice">
-  <p>We use cookies to improve your experience, personalize content, target advertising, and analyze traffic.</p>
-				<button class="moove-gdpr-infobar-close-btn gdpr-content-close-btn" aria-label="Close GDPR Cookie Banner">
-					<span class="gdpr-sr-only">Close GDPR Cookie Banner</span>
-					<i class="moovegdpr-arrow-close"></i>
-				</button>
-			</div>
-<!--  .moove-gdpr-cookie-notice -->
-		
-<div class="moove-gdpr-button-holder">
-			<button class="mgbutton moove-gdpr-infobar-allow-all gdpr-fbo-0" aria-label="Accept all" >Accept all</button>
-						<button class="mgbutton moove-gdpr-infobar-reject-btn gdpr-fbo-1 "  aria-label="Reject all">Reject all</button>
-							<button class="moove-gdpr-infobar-close-btn gdpr-fbo-3" aria-label="Close GDPR Cookie Banner" >
-					<span class="gdpr-sr-only">Close GDPR Cookie Banner</span>
-					<i class="moovegdpr-arrow-close"></i>
-				</button>
-			</div>
-<!--  .button-container -->
-		</div>
-		<!-- moove-gdpr-info-bar-content -->
-	</div>
-	<!-- moove-gdpr-info-bar-container -->
-	</aside>
-	<!-- #moove_gdpr_cookie_info_bar -->
-	<!--/copyscapeskip-->
+<!--/copyscapeskip-->
 			<script>
 				const lazyloadRunObserver = () => {
 					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
@@ -659,24 +560,8 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 <script type="text/javascript" src="../assets/feedops.com/wp-content/plugins/elementor/assets/js/frontend.min.js" id="elementor-frontend-js"></script>
 <script type="text/javascript" src="../assets/feedops.com/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js" id="smartmenus-js"></script>
 <script type="text/javascript" src="../assets/feedops.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js" id="e-sticky-js"></script>
-<script type="text/javascript" id="moove_gdpr_frontend-js-extra">
-/* <![CDATA[ */
-var moove_frontend_gdpr_scripts = {"ajaxurl":"https://feedops.com/wp-admin/admin-ajax.php","post_id":"5433","plugin_dir":"https://feedops.com/wp-content/plugins/gdpr-cookie-compliance","show_icons":"all","is_page":"","ajax_cookie_removal":"false","strict_init":"2","enabled_default":{"strict":1,"third_party":0,"advanced":0,"performance":0,"preference":0},"geo_location":"false","force_reload":"false","is_single":"","hide_save_btn":"false","current_user":"0","cookie_expiration":"365","script_delay":"15000","close_btn_action":"1","close_btn_rdr":"","scripts_defined":"{\"cache\":true,\"header\":\"\",\"body\":\"\",\"footer\":\"\",\"thirdparty\":{\"header\":\"\",\"body\":\"\",\"footer\":\"\"},\"strict\":{\"header\":\"\",\"body\":\"\",\"footer\":\"\"},\"advanced\":{\"header\":\"\",\"body\":\"\",\"footer\":\"\"}}","gdpr_scor":"true","wp_lang":"","wp_consent_api":"false","gdpr_nonce":"401b61f9ac"};
-//# sourceURL=moove_gdpr_frontend-js-extra
-/* ]]> */
-</script>
-<script type="text/javascript" src="../assets/feedops.com/wp-content/plugins/gdpr-cookie-compliance/dist/scripts/main.js" id="moove_gdpr_frontend-js"></script>
-<script type="text/javascript" id="moove_gdpr_frontend-js-after">
-/* <![CDATA[ */
-var gdpr_consent__strict = "false"
-var gdpr_consent__thirdparty = "false"
-var gdpr_consent__advanced = "false"
-var gdpr_consent__performance = "false"
-var gdpr_consent__preference = "false"
-var gdpr_consent__cookies = ""
-//# sourceURL=moove_gdpr_frontend-js-after
-/* ]]> */
-</script>
+
+
 <script type="text/javascript" defer src="../assets/js.hsforms.net/forms/embed/v2.js" id="leadin-forms-v2-js"></script>
 <script type="text/javascript" defer src="../assets/js.hsforms.net/forms/embed/20083726.js" id="leadin-forms-v4-js"></script>
 <script type="text/javascript" src="../assets/feedops.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js" id="elementor-pro-webpack-runtime-js"></script>
@@ -826,117 +711,7 @@ function customResize(_t){
     
 	<!--copyscapeskip-->
 	<!-- V1 -->
-	<dialog id="moove_gdpr_cookie_modal" class="gdpr_lightbox-hide" aria-modal="true" aria-label="GDPR Settings Screen">
-	<div class="moove-gdpr-modal-content moove-clearfix logo-position-left moove_gdpr_modal_theme_v1">
-		    
-		<button class="moove-gdpr-modal-close" autofocus aria-label="Close GDPR Cookie Settings">
-			<span class="gdpr-sr-only">Close GDPR Cookie Settings</span>
-			<span class="gdpr-icon moovegdpr-arrow-close"></span>
-		</button>
-				<div class="moove-gdpr-modal-left-content">
-		
-<div class="moove-gdpr-company-logo-holder">
-	<img src="../assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4-300x110.png" alt="FeedOps Logo"   width="300"  height="110"  class="img-responsive" />
-</div>
-<!--  .moove-gdpr-company-logo-holder -->
-		<ul id="moove-gdpr-menu">
-			
-<li class="menu-item-on menu-item-privacy_overview menu-item-selected">
-	<button data-href="#privacy_overview" class="moove-gdpr-tab-nav" aria-label="Privacy Overview">
-	<span class="gdpr-nav-tab-title">Privacy Overview</span>
-	</button>
-</li>
-
-	<li class="menu-item-strict-necessary-cookies menu-item-off">
-	<button data-href="#strict-necessary-cookies" class="moove-gdpr-tab-nav" aria-label="Strictly Necessary Cookies">
-		<span class="gdpr-nav-tab-title">Strictly Necessary Cookies</span>
-	</button>
-	</li>
-
-
-
-
-
-		</ul>
-		
-<div class="moove-gdpr-branding-cnt">
-			<a href="../assets/wordpress.org/plugins/gdpr-cookie-compliance/index.asset" rel="noopener noreferrer" target="_blank" class='moove-gdpr-branding'>Powered by&nbsp; <span>GDPR Cookie Compliance</span></a>
-		</div>
-<!--  .moove-gdpr-branding -->
-		</div>
-		<!--  .moove-gdpr-modal-left-content -->
-		<div class="moove-gdpr-modal-right-content">
-		<div class="moove-gdpr-modal-title">
-			 
-		</div>
-		<!-- .moove-gdpr-modal-ritle -->
-		<div class="main-modal-content">
-
-			<div class="moove-gdpr-tab-content">
-			
-<div id="privacy_overview" class="moove-gdpr-tab-main">
-		<span class="tab-title">Privacy Overview</span>
-		<div class="moove-gdpr-tab-main-content">
-	<p>This website uses cookies so that we can provide you with the best user experience possible. Cookie information is stored in your browser and performs functions such as recognising you when you return to our website and helping our team to understand which sections of the website you find most interesting and useful.</p>
-		</div>
-	<!--  .moove-gdpr-tab-main-content -->
-
-</div>
-<!-- #privacy_overview -->
-			
-  <div id="strict-necessary-cookies" class="moove-gdpr-tab-main" style="display:none">
-    <span class="tab-title">Strictly Necessary Cookies</span>
-    <div class="moove-gdpr-tab-main-content">
-      <p>Strictly Necessary Cookie should be enabled at all times so that we can save your preferences for cookie settings.</p>
-      <div class="moove-gdpr-status-bar ">
-        <div class="gdpr-cc-form-wrap">
-          <div class="gdpr-cc-form-fieldset">
-            <label class="cookie-switch" for="moove_gdpr_strict_cookies">    
-              <span class="gdpr-sr-only">Enable or Disable Cookies</span>        
-              <input type="checkbox" aria-label="Strictly Necessary Cookies"  value="check" name="moove_gdpr_strict_cookies" id="moove_gdpr_strict_cookies">
-              <span class="cookie-slider cookie-round gdpr-sr" data-text-enable="Enabled" data-text-disabled="Disabled">
-                <span class="gdpr-sr-label">
-                  <span class="gdpr-sr-enable">Enabled</span>
-                  <span class="gdpr-sr-disable">Disabled</span>
-                </span>
-              </span>
-            </label>
-          </div>
-          <!-- .gdpr-cc-form-fieldset -->
-        </div>
-        <!-- .gdpr-cc-form-wrap -->
-      </div>
-      <!-- .moove-gdpr-status-bar -->
-                                              
-    </div>
-    <!--  .moove-gdpr-tab-main-content -->
-  </div>
-  <!-- #strict-necesarry-cookies -->
-			
-			
-									
-			</div>
-			<!--  .moove-gdpr-tab-content -->
-		</div>
-		<!--  .main-modal-content -->
-		<div class="moove-gdpr-modal-footer-content">
-			<div class="moove-gdpr-button-holder">
-						<button class="mgbutton moove-gdpr-modal-allow-all button-visible" aria-label="Enable All">Enable All</button>
-								<button class="mgbutton moove-gdpr-modal-save-settings button-visible" aria-label="Save Settings">Save Settings</button>
-				</div>
-<!--  .moove-gdpr-button-holder -->
-		</div>
-		<!--  .moove-gdpr-modal-footer-content -->
-		</div>
-		<!--  .moove-gdpr-modal-right-content -->
-
-		<div class="moove-clearfix"></div>
-
-	</div>
-	<!--  .moove-gdpr-modal-content -->
-	</dialog>
-	<!-- #moove_gdpr_cookie_modal -->
-	<!--/copyscapeskip-->
+<!--/copyscapeskip-->
             <script type="text/javascript">
                 var images = new Array()
                 function preload() {
@@ -948,9 +723,7 @@ function customResize(_t){
                 preload("https://feedops.com/wp-content/uploads/2023/03/FeedOps-Product-Feed-Management-Software.png"
 )
             </script>
-            
-  <script src="/cookie-consent.js" defer></script>
-  <script src="../header-standard.js?v=20260624-utility-active-final" data-site-root="../" defer></script>
-  <script src="../footer-standard.js?v=20260627-terms-link" data-site-root="../" defer></script>
+<script src="../header-standard.js?v=20260624-utility-active-final" data-site-root="../" defer></script>
+  <script src="../footer-standard.js?v=20260716-help-docs-link" data-site-root="../" defer></script>
 </body>
 </html>

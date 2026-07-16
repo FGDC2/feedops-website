@@ -252,10 +252,4 @@
       document.cookie = cookieName + "=; Max-Age=0; Path=/; SameSite=Lax";
     }
   };
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
-  } else {
-    init();
-  }
 })();

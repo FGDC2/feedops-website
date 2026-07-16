@@ -66,7 +66,7 @@
       '        <a href="' + href("faq/") + '">FAQ</a>',
       "        " + externalLink("https://app.feedops.com/feed_ops/sign_in", "Login"),
       '        <a href="' + href("contact_us/") + '">Contact</a>',
-      "        " + externalLink("https://kb.feedops.com/knowledge", "Help Docs"),
+      '        <a href="' + href("help/") + '">Help Docs</a>',
       "      </div>",
       "    </div>",
       '    <div class="footer-group footer-explainers-column">',
