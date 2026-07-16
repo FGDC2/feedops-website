@@ -26,6 +26,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://feedops.com/author/frank-grasso/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
     <loc>https://feedops.com/learning/</loc>
     <lastmod>2026-06-18</lastmod>
     <priority>0.7</priority>
