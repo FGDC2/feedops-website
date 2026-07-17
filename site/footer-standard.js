@@ -73,6 +73,7 @@
       '      <div class="footer-heading">Explainers</div>',
       '      <div class="footer-column">',
       '        <a href="' + href("what-is-a-google-shopping-feed/") + '">Google Shopping Feed</a>',
+      '        <a href="' + href("google-product-highlights/") + '">Google Product Highlights</a>',
       '        <a href="' + href("google-shopping-graph-explained/") + '">Google Shopping Graph</a>',
       '        <a href="' + href("product-type-google-shopping/") + '">Product Type Google Shopping</a>',
       '        <a href="' + href("google-product-category/") + '">Google Product Category</a>',

@@ -3,6 +3,7 @@
 
 User-agent: *
 Allow: /
+Allow: /google-product-highlights/
 Disallow: /wp-admin/
 Disallow: /audit-flow-preview/
 Allow: /wp-admin/admin-ajax.php

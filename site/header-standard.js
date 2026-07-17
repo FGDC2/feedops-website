@@ -33,6 +33,7 @@
     return path.indexOf("/guide/") === 0 ||
       path.indexOf("/feedops/google-shopping-free-listings/") === 0 ||
       path === "/what-is-a-google-shopping-feed/" ||
+      path.indexOf("/google-product-highlights/") !== -1 ||
       path === "/google-shopping-graph-explained/" ||
       path === "/product-type-google-shopping/" ||
       path === "/google-product-category/" ||
