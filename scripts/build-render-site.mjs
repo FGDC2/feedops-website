@@ -16,6 +16,7 @@ const origin = "https://feedops.com";
 const gtmContainerId = "GTM-KR4TR7B";
 const helpArticlesApi = "https://ops.feedops.com/api/help/articles";
 const cookieConsentEnabled = false;
+const redirectsFile = "redirects.json";
 
 const gtmHeadSnippet = `<!-- Google Tag Manager -->
   <script>
@@ -193,6 +194,18 @@ function discoverPublicPages(directory = sourceRoot, page = "") {
   }
 
   return pages.sort();
+}
+
+function configuredRedirectSourcePaths() {
+  if (!existsSync(redirectsFile)) return new Set();
+  try {
+    const payload = JSON.parse(readFileSync(redirectsFile, "utf8"));
+    return new Set((payload.redirects || [])
+      .filter((redirect) => Number(redirect.status) === 301)
+      .map((redirect) => new URL(String(redirect.source || "/"), origin).pathname.replace(/\/+$/, "") || "/"));
+  } catch (error) {
+    throw new Error(`Could not read ${redirectsFile}: ${error?.message || error}`);
+  }
 }
 
 function injectGoogleTagManager(content) {
@@ -523,7 +536,11 @@ for (const file of rootStaticFiles) {
   copyFile(join(sourceRoot, file), join(outputRoot, file));
 }
 
-const pages = discoverPublicPages();
+const redirectSourcePaths = configuredRedirectSourcePaths();
+const pages = discoverPublicPages().filter((page) => {
+  const route = new URL(`/${page}`, origin).pathname.replace(/\/+$/, "") || "/";
+  return !redirectSourcePaths.has(route);
+});
 
 for (const page of pages) {
   copyPage(page);
@@ -533,4 +550,4 @@ copyStaticTree(join(sourceRoot, "help"), join(outputRoot, "help"), { skipHtml: t
 
 const helpFallbackPageCount = await createHelpArticleFallbackPages();
 
-console.log(`Built ${outputRoot} with ${pages.length} public pages and ${helpFallbackPageCount} Help article fallback pages.`);
+console.log(`Built ${outputRoot} with ${pages.length} public pages, ${redirectSourcePaths.size} server-side redirects, and ${helpFallbackPageCount} Help article fallback pages.`);

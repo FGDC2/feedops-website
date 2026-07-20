@@ -2,162 +2,174 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://feedops.com/</loc>
-    <lastmod>2026-06-14</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://feedops.com/product-feed-management/</loc>
-    <lastmod>2026-06-16</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feedops.com/shopping-feed-agency/</loc>
-    <lastmod>2026-06-16</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feedops.com/pricing/</loc>
-    <lastmod>2026-06-16</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://feedops.com/company/</loc>
-    <lastmod>2026-06-14</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://feedops.com/author/frank-grasso/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://feedops.com/learning/</loc>
-    <lastmod>2026-06-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://feedops.com/faq/</loc>
-    <lastmod>2026-06-18</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://feedops.com/contact_us/</loc>
-    <lastmod>2026-06-14</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://feedops.com/privacy-policy/</loc>
-    <lastmod>2026-06-16</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://feedops.com/terms-of-service/</loc>
-    <lastmod>2026-06-27</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://feedops.com/meta-data-deletion-instructions/</loc>
-    <lastmod>2026-06-22</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://feedops.com/meta-integration-terms/</loc>
-    <lastmod>2026-06-22</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://feedops.com/bigcommerce-app-store/terms/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <priority>0.3</priority>
+    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
     <loc>https://feedops.com/amazon-mfn/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <priority>0.5</priority>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/audit-flow-preview/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/audit-flow-preview/flow/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/bigcommerce-app-store/terms/</loc>
+    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
     <loc>https://feedops.com/book-live-demo/</loc>
-    <lastmod>2026-06-16</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
-    <loc>https://feedops.com/free-google-shopping-feed-audit/</loc>
-    <lastmod>2026-06-17</lastmod>
-    <priority>0.8</priority>
+    <loc>https://feedops.com/book-live-demo/meeting-booked/</loc>
+    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
-    <loc>https://feedops.com/google-shopping-product-title-optimization/</loc>
-    <lastmod>2026-06-17</lastmod>
-    <priority>0.8</priority>
+    <loc>https://feedops.com/company/</loc>
+    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
-    <loc>https://feedops.com/google-merchant-center-errors/</loc>
-    <lastmod>2026-06-18</lastmod>
-    <priority>0.8</priority>
+    <loc>https://feedops.com/contact_us/</loc>
+    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
-    <loc>https://feedops.com/google-shopping-ads-not-showing/</loc>
-    <lastmod>2026-06-18</lastmod>
-    <priority>0.8</priority>
+    <loc>https://feedops.com/contact_us/thanks-for-reaching-out/</loc>
+    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
-    <loc>https://feedops.com/what-is-a-google-shopping-feed/</loc>
-    <lastmod>2026-06-18</lastmod>
-    <priority>0.7</priority>
+    <loc>https://feedops.com/contact-us/</loc>
+    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
-    <loc>https://feedops.com/google-product-highlights/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <priority>0.7</priority>
+    <loc>https://feedops.com/contact-us/thanks-for-reaching-out/</loc>
+    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
-    <loc>https://feedops.com/google-shopping-graph-explained/</loc>
-    <lastmod>2026-06-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://feedops.com/product-type-google-shopping/</loc>
-    <lastmod>2026-06-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://feedops.com/google-product-category/</loc>
-    <lastmod>2026-06-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://feedops.com/guide/google-shopping-feed-optimization-guide/</loc>
-    <lastmod>2026-06-17</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feedops.com/guide/google-shopping-ads-management/</loc>
-    <lastmod>2026-06-19</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feedops.com/guide/google-local-inventory-ads-performance-max/</loc>
-    <lastmod>2026-06-18</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://feedops.com/feedops/google-shopping-free-listings/</loc>
-    <lastmod>2026-06-17</lastmod>
-    <priority>0.8</priority>
+    <loc>https://feedops.com/faq/</loc>
+    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
     <loc>https://feedops.com/feedonomics-alternative-competitor/</loc>
-    <lastmod>2026-06-18</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/feedops/google-shopping-free-listings/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/free-google-shopping-feed-audit/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/free-google-shopping-feed-audit/audit-request-received/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/free-google-shopping-feed-audit/free-audit-form/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/free-google-shopping-feed-audit/google-shopping-audit-terms/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/google-merchant-center-errors/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/google-product-category/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/google-product-highlights/</loc>
+    <lastmod>2026-07-17</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/google-shopping-ads-not-showing/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/google-shopping-feed-audit-access/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/google-shopping-graph-explained/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/google-shopping-product-title-optimization/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/guide/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/guide/google-local-inventory-ads-performance-max/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/guide/google-shopping-ads-management/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/guide/google-shopping-feed-optimization-guide/</loc>
+    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
     <loc>https://feedops.com/intelligent-reach-alternative/</loc>
-    <lastmod>2026-06-18</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
-    <loc>https://feedops.com/help/</loc>
-    <lastmod>2026-07-08</lastmod>
-    <priority>0.7</priority>
+    <loc>https://feedops.com/learning/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/meta-data-deletion-instructions/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/meta-integration-terms/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/pricing/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/privacy-policy/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/product-feed-management/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/product-feed-platform/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/product-type-google-shopping/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/shopping-feed-agency/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/software/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/terms-of-service/</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://feedops.com/what-is-a-google-shopping-feed/</loc>
+    <lastmod>2026-07-15</lastmod>
   </url>
 </urlset>

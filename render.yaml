@@ -7,6 +7,29 @@ services:
     autoDeployTrigger: commit
     renderSubdomainPolicy: disabled
     routes:
-      - type: rewrite
+      # BEGIN WEBSITE CMS 301 REDIRECTS
+      - type: redirect
+        source: /5-most-common-google-merchant-center-errors-and-how-to-fix-them/
+        destination: /google-merchant-center-errors/
+      - type: redirect
+        source: /audit-flow-preview/flow/
+        destination: /free-google-shopping-feed-audit/free-audit-form/
+      - type: redirect
+        source: /contact-us/
+        destination: /contact_us/thanks-for-reaching-out/
+      - type: redirect
+        source: /contact-us/thanks-for-reaching-out/
+        destination: /contact_us/thanks-for-reaching-out/
+      - type: redirect
+        source: /google-announces-new-product-data-specification-requirements-what-are-they-and-why/
+        destination: /google-merchant-center-errors/
+      - type: redirect
+        source: /software/
+        destination: /product-feed-platform/
+      - type: redirect
+        source: /watch-video-schema-generator/
+        destination: /free-google-shopping-feed-audit/free-audit-form/
+      # END WEBSITE CMS 301 REDIRECTS
+- type: rewrite
         source: /help/*
         destination: /help/index.html
