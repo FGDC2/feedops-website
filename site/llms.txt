@@ -16,7 +16,7 @@ This file lists the active, rebuilt FeedOps pages that should be used as the cur
 - [Contact FeedOps](https://feedops.com/contact_us/): Contact page for sales, support, and demo and support pathways. Primary topic: contact FeedOps.
 - [Book a Product Feed Demo](https://feedops.com/book-live-demo/): Primary conversion page for teams that want a product feed review, demo, pricing fit, or next step. Primary topic: Book a demo.
 - [Free Google Shopping Feed Audit](https://feedops.com/free-google-shopping-feed-audit/): Free automated audit for Google Merchant Center product data, visibility gaps, missing attributes, zombie products, and Shopping feed health. Requires standard Google Merchant Center access with report permissions. Primary topic: free Google Shopping feed audit.
-- [Black Friday Google Shopping Readiness](https://feedops.com/black-friday/): Promotional landing page for eligible retailers to prepare Google Shopping and local product visibility before peak demand, with up to three free FeedOps services. Primary topic: Black Friday Google Shopping readiness.
+- [Black Friday Google Shopping Readiness](https://feedops.com/black-friday/): Australian-retailer-only promotional landing page for preparing Google Shopping and local product visibility before peak demand, with up to three free FeedOps services. Primary topic: Black Friday Google Shopping readiness.
 
 ## Current Guide Pages
 
