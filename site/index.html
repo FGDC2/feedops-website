@@ -32,7 +32,7 @@
   <meta name="twitter:image" content="https://feedops.com/assets/ai-product-feed-optimisation.png">
   <link rel="icon" href="./assets/feedops.com/wp-content/uploads/2022/05/Feedops-staggered-logo-Final-2-60x60.png" sizes="32x32">
   <link rel="stylesheet" href="header-standard.css?v=20260702-no-header-gap">
-  <link rel="stylesheet" href="footer-standard.css?v=20260723-free-trafficshopping-feed-audit">
+  <link rel="stylesheet" href="footer-standard.css?v=20260723-free-traffic-grid-fix">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -2314,10 +2314,10 @@
 
     #feedops-standard-footer .footer-inner {
       display: grid;
-      grid-template-columns: minmax(360px, 1.35fr) minmax(240px, .9fr) minmax(240px, .9fr) minmax(110px, .45fr) minmax(110px, .45fr);
+      grid-template-columns: minmax(280px, 1.35fr) minmax(180px, .9fr) minmax(180px, .9fr) minmax(0, .45fr) minmax(0, .45fr);
       grid-template-areas:
         "brand company platform support support"
-        "guides explainers troubleshooting learning learning"
+        "guides explainers troubleshooting free-traffic free-traffic"
         "comparisons . . . .";
       column-gap: 28px;
       row-gap: 36px;
@@ -2332,6 +2332,7 @@
     #feedops-standard-footer .footer-brand-guides { grid-area: guides; align-self: start; }
     #feedops-standard-footer .footer-explainers-column { grid-area: explainers; }
     #feedops-standard-footer .footer-troubleshooting-column { grid-area: troubleshooting; }
+    #feedops-standard-footer .footer-free-traffic-column { grid-area: free-traffic; }
     #feedops-standard-footer .footer-comparison-column { grid-area: comparisons; }
 
     #feedops-standard-footer .footer-brand img {
@@ -2381,8 +2382,7 @@
       transform: translateX(2px);
     }
 
-    #feedops-standard-footer .footer-cta,
-    #feedops-standard-footer .footer-learning-cta {
+    #feedops-standard-footer .footer-cta {
       display: grid;
       gap: 4px;
       border: 1px solid rgba(255, 202, 40, .42);
@@ -2400,39 +2400,20 @@
       padding: 14px 16px;
     }
 
-    #feedops-standard-footer .footer-learning-cta {
-      grid-area: learning;
-      align-self: start;
-      min-height: 64px;
-      padding: 12px 14px;
-      border-color: rgba(255, 202, 40, .38);
-    }
-
-    #feedops-standard-footer .footer-cta span,
-    #feedops-standard-footer .footer-learning-cta span {
+    #feedops-standard-footer .footer-cta span {
       color: rgba(255, 255, 255, .72);
       font-size: 12px;
       font-weight: 800;
       line-height: 1.2;
     }
 
-    #feedops-standard-footer .footer-learning-cta span {
-      font-size: 11px;
-    }
-
-    #feedops-standard-footer .footer-cta strong,
-    #feedops-standard-footer .footer-learning-cta strong {
+    #feedops-standard-footer .footer-cta strong {
       color: #ffca28;
       font-size: 15px;
       line-height: 1.25;
     }
 
-    #feedops-standard-footer .footer-learning-cta strong {
-      font-size: 14px;
-    }
-
-    #feedops-standard-footer .footer-cta:hover,
-    #feedops-standard-footer .footer-learning-cta:hover {
+    #feedops-standard-footer .footer-cta:hover {
       border-color: #ffca28;
       background: rgba(255, 202, 40, .16);
       transform: translateY(-1px);
@@ -2658,7 +2639,7 @@
           "support support"
           "guides guides"
           "explainers troubleshooting"
-          "learning learning"
+          "free-traffic free-traffic"
           "comparisons comparisons";
       }
 
@@ -2860,7 +2841,7 @@
           "guides"
           "explainers"
           "troubleshooting"
-          "learning"
+          "free-traffic"
           "comparisons";
       }
 
@@ -3462,10 +3443,13 @@
           <a href="google-shopping-ads-not-showing/">Google Shopping Ads Not Showing</a>
         </div>
       </div>
-      <a class="footer-learning-cta" href="learning/">
-        <span>Feed guides and explainers</span>
-        <strong>View Learning Hub</strong>
-      </a>
+      <div class="footer-group footer-free-traffic-column">
+        <div class="footer-heading">Free Traffic</div>
+        <div class="footer-column">
+          <a href="feedops/google-shopping-free-listings/">Google Shopping Free Listings</a>
+          <a href="google-free-local-product-listings/">Google Free Local Product Listings</a>
+        </div>
+      </div>
       <div class="footer-group footer-comparison-column">
         <div class="footer-heading">Compare Us</div>
         <div class="footer-column">
@@ -3476,6 +3460,6 @@
     </div>
   </footer>
 <script src="header-standard.js?v=20260624-utility-active-final" data-site-root="" defer></script>
-  <script src="footer-standard.js?v=20260723-free-traffics-link" data-site-root="" defer></script>
+  <script src="footer-standard.js?v=20260723-free-traffic-grid-fix" data-site-root="" defer></script>
 </body>
 </html>
