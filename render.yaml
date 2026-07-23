@@ -15,6 +15,9 @@ services:
         source: /audit-flow-preview/flow/
         destination: /free-google-shopping-feed-audit/free-audit-form/
       - type: redirect
+        source: /black-friday-tactics/
+        destination: /black-friday/
+      - type: redirect
         source: /contact-us/
         destination: /contact_us/thanks-for-reaching-out/
       - type: redirect

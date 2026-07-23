@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-20T01:05:41.225Z",
+  "updatedAt": "2026-07-24T00:00:00.000Z",
   "redirects": [
     {
       "source": "/5-most-common-google-merchant-center-errors-and-how-to-fix-them/",
@@ -13,6 +13,12 @@
       "destination": "/free-google-shopping-feed-audit/free-audit-form/",
       "status": 301,
       "updatedAt": "2026-07-17T09:45:15.386Z"
+    },
+    {
+      "source": "/black-friday-tactics/",
+      "destination": "/black-friday/",
+      "status": 301,
+      "updatedAt": "2026-07-24T00:00:00.000Z"
     },
     {
       "source": "/contact-us/",

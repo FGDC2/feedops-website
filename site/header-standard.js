@@ -2,6 +2,10 @@
   var script = document.currentScript;
   var root = script && script.dataset ? script.dataset.siteRoot || "/" : "/";
   var forcedMode = script && script.dataset ? script.dataset.headerMode || "" : "";
+  var navCtaLabel = script && script.dataset ? script.dataset.navCtaLabel || "Book a demo" : "Book a demo";
+  var navCtaPath = script && script.dataset ? script.dataset.navCtaPath || "book-live-demo/" : "book-live-demo/";
+  var navSecondaryCtaLabel = script && script.dataset ? script.dataset.navSecondaryCtaLabel || "" : "";
+  var navSecondaryCtaPath = script && script.dataset ? script.dataset.navSecondaryCtaPath || "" : "";
   var expertDefaultEverywhere = !!(script && script.src && (script.src.indexOf("menu-default") !== -1 || script.src.indexOf("mode-nav") !== -1));
   window.feedopsInstallStandardHeader = installHeader;
 
@@ -144,7 +148,8 @@
       standardNavLinks(),
       "    </div>",
       '    <div class="feedops-nav-actions">',
-      '      <a class="feedops-nav-cta" href="' + href("book-live-demo/") + '">Book a demo</a>',
+      navSecondaryCtaLabel && navSecondaryCtaPath ? '      <a class="feedops-nav-secondary-cta" href="' + href(navSecondaryCtaPath) + '">' + navSecondaryCtaLabel + "</a>" : "",
+      '      <a class="feedops-nav-cta" href="' + href(navCtaPath) + '">' + navCtaLabel + "</a>",
       "    </div>",
       "  </nav>",
       '  <div class="feedops-mobile-menu" id="feedops-mobile-menu" hidden>',
@@ -163,7 +168,8 @@
       '        <a data-feedops-contact-link href="' + href("contact_us/") + '">Contact</a>',
       '        <a href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
       "      </div>",
-      '      <a class="feedops-mobile-cta" href="' + href("book-live-demo/") + '">Book a demo</a>',
+      navSecondaryCtaLabel && navSecondaryCtaPath ? '      <a class="feedops-mobile-secondary-cta" href="' + href(navSecondaryCtaPath) + '">' + navSecondaryCtaLabel + "</a>" : "",
+      '      <a class="feedops-mobile-cta" href="' + href(navCtaPath) + '">' + navCtaLabel + "</a>",
       "    </div>",
       "  </div>",
       "</header>"

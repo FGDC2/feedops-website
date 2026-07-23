@@ -373,11 +373,15 @@ function navItems(mode, page = "") {
   return items[mode] || items.expert;
 }
 
-function standardHeaderForPage(page) {
+function standardHeaderForPage(page, options = {}) {
   const root = pageRoot(page);
   const mode = pageMode(page);
   const href = (path) => path.startsWith("#") ? path : `${root}${path}`;
   const active = (name) => name === mode ? " is-active" : "";
+  const navCtaLabel = options.navCtaLabel || "Book a demo";
+  const navCtaPath = options.navCtaPath || "book-live-demo/";
+  const navSecondaryCtaLabel = options.navSecondaryCtaLabel || "";
+  const navSecondaryCtaPath = options.navSecondaryCtaPath || "";
   const modeCurrent = (name) => name === mode ? ' aria-current="page"' : "";
   const platformActive = mode === "platform" ? " is-active" : "";
   const platformCurrent = mode === "platform" ? ' aria-current="page"' : "";
@@ -415,7 +419,8 @@ function standardHeaderForPage(page) {
     navLinks,
     '    </div>',
     '    <div class="feedops-nav-actions">',
-    `      <a class="feedops-nav-cta" href="${href("book-live-demo/")}">Book a demo</a>`,
+    navSecondaryCtaLabel && navSecondaryCtaPath ? `      <a class="feedops-nav-secondary-cta" href="${href(navSecondaryCtaPath)}">${navSecondaryCtaLabel}</a>` : "",
+    `      <a class="feedops-nav-cta" href="${href(navCtaPath)}">${navCtaLabel}</a>`,
     '    </div>',
     '  </nav>',
     '  <div class="feedops-mobile-menu" id="feedops-mobile-menu" hidden>',
@@ -434,7 +439,8 @@ function standardHeaderForPage(page) {
     `        <a class="${contactActive.trim()}" data-feedops-contact-link href="${href("contact_us/")}"${contactCurrent}>Contact</a>`,
     '        <a href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
     '      </div>',
-    `      <a class="feedops-mobile-cta" href="${href("book-live-demo/")}">Book a demo</a>`,
+    navSecondaryCtaLabel && navSecondaryCtaPath ? `      <a class="feedops-mobile-secondary-cta" href="${href(navSecondaryCtaPath)}">${navSecondaryCtaLabel}</a>` : "",
+    `      <a class="feedops-mobile-cta" href="${href(navCtaPath)}">${navCtaLabel}</a>`,
     '    </div>',
     '  </div>',
     '</header>'
@@ -444,7 +450,15 @@ function standardHeaderForPage(page) {
 function installStandardHeaderMarkup(content, page) {
   if (!content.includes("<body")) return content;
   if (content.includes('id="feedops-standard-header"')) return content;
-  return content.replace(/<header class="site-header">[\s\S]*?<\/header>/i, standardHeaderForPage(page));
+  const scriptTag = content.match(/<script\b[^>]*\bsrc="[^"]*header-standard\.js[^"]*"[^>]*>/i)?.[0] || "";
+  const navCtaLabel = scriptTag.match(/\bdata-nav-cta-label="([^"]*)"/i)?.[1] || "";
+  const navCtaPath = scriptTag.match(/\bdata-nav-cta-path="([^"]*)"/i)?.[1] || "";
+  const navSecondaryCtaLabel = scriptTag.match(/\bdata-nav-secondary-cta-label="([^"]*)"/i)?.[1] || "";
+  const navSecondaryCtaPath = scriptTag.match(/\bdata-nav-secondary-cta-path="([^"]*)"/i)?.[1] || "";
+  return content.replace(
+    /<header class="site-header">[\s\S]*?<\/header>/i,
+    standardHeaderForPage(page, { navCtaLabel, navCtaPath, navSecondaryCtaLabel, navSecondaryCtaPath })
+  );
 }
 
 function copyTextPath(from, to, transform = (content) => content) {
