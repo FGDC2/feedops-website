@@ -1,255 +1,72 @@
 (function () {
   var script = document.currentScript;
   var root = script && script.dataset ? script.dataset.siteRoot || "/" : "/";
-  var forcedMode = script && script.dataset ? script.dataset.headerMode || "" : "";
-  var navCtaLabel = script && script.dataset ? script.dataset.navCtaLabel || "Book a demo" : "Book a demo";
-  var navCtaPath = script && script.dataset ? script.dataset.navCtaPath || "book-live-demo/" : "book-live-demo/";
-  var navSecondaryCtaLabel = script && script.dataset ? script.dataset.navSecondaryCtaLabel || "" : "";
-  var navSecondaryCtaPath = script && script.dataset ? script.dataset.navSecondaryCtaPath || "" : "";
-  var expertDefaultEverywhere = !!(script && script.src && (script.src.indexOf("menu-default") !== -1 || script.src.indexOf("mode-nav") !== -1));
   window.feedopsInstallStandardHeader = installHeader;
 
   function href(path) {
-    if (path && path.charAt(0) === "#") {
-      return path;
-    }
-    if (root === "/" || /^https?:\/\//.test(root)) {
-      return root + path;
-    }
+    if (root === "/" || /^https?:\/\//.test(root)) return root + path;
     return root + path;
   }
 
-  function currentMode() {
-    if (forcedMode) return forcedMode;
-    var path = cleanPath(window.location.pathname);
-    if (path === "/product-feed-platform/" || path === "/software/" || path.indexOf("/product-feed-platform/") !== -1 || path.indexOf("/software/") !== -1) return "platform";
-    if (isUtilityPath(path)) return "utility";
-    if (path === "/contact_us/" || path.indexOf("/contact_us/") !== -1) return "utility";
-    if (path === "/404.html") return "utility";
-    if (path === "/terms-of-service/") return "utility";
-    if (isLearningContentPath(path)) return "utility";
-    if (path === "/product-feed-management/") return "executive";
-    if (path === "/shopping-feed-agency/") return "agency";
-    return "expert";
+  function calendarIcon() {
+    return '<svg class="feedops-cta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v3M17 3v3M4.5 9h15M6 5h12a2 2 0 0 1 2 2v12H4V7a2 2 0 0 1 2-2Z"/></svg>';
   }
 
-  function isLearningContentPath(path) {
-    return path.indexOf("/guide/") === 0 ||
-      path.indexOf("/feedops/google-shopping-free-listings/") === 0 ||
-      path === "/what-is-a-google-shopping-feed/" ||
-      path.indexOf("/google-product-highlights/") !== -1 ||
-      path === "/google-shopping-graph-explained/" ||
-      path === "/product-type-google-shopping/" ||
-      path === "/google-product-category/" ||
-      path === "/google-merchant-center-errors/" ||
-      path === "/google-shopping-ads-not-showing/" ||
-      path === "/google-shopping-product-title-optimization/" ||
-      path === "/faq/" ||
-      path === "/feedonomics-alternative-competitor/" ||
-      path === "/intelligent-reach-alternative/";
+  function sparkleIcon() {
+    return '<svg class="feedops-cta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c.7 4.7 2.7 6.7 7.4 7.4-4.7.7-6.7 2.7-7.4 7.4-.7-4.7-2.7-6.7-7.4-7.4C9.3 8.7 11.3 6.7 12 2Z"/><path d="M19 16c.3 2 1.2 2.9 3 3.2-1.8.3-2.7 1.2-3 3.1-.3-1.9-1.2-2.8-3-3.1 1.8-.3 2.7-1.2 3-3.2Z"/></svg>';
   }
 
-  function isUtilityPath(path) {
-    return path === "/company/" ||
-      path === "/learning/" ||
-      path === "/privacy-policy/" ||
-      path === "/pricing/" ||
-      path === "/book-live-demo/" ||
-      path === "/free-google-shopping-feed-audit/" ||
-      path === "/google-shopping-feed-audit-access/" ||
-      path === "/contact-us/" ||
-      path.indexOf("/contact-us/") === 0;
+  function desktopMenu() {
+    return [
+      '<div class="feedops-desktop-menu" aria-label="Primary links">',
+      '  <a class="feedops-nav-link" href="' + href("product-feed-platform/") + '">Platform</a>',
+      '  <a class="feedops-nav-link" href="' + href("learning/") + '">Learning</a>',
+      '  <a class="feedops-nav-link" href="' + href("pricing/") + '">Pricing</a>',
+      '  <a class="feedops-nav-link" href="' + href("company/") + '">About</a>',
+      '  <a class="feedops-nav-link feedops-nav-login" href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
+      '</div>'
+    ].join("");
   }
 
-  function navItems(mode) {
-    var path = cleanPath(window.location.pathname);
-    if (path === "/product-feed-platform/" || path === "/software/" || path.indexOf("/product-feed-platform/") !== -1 || path.indexOf("/software/") !== -1) {
-      return [
-        ["Playbook", "#playbook", "playbook"],
-        ["AI Settings", "#ai-settings", "ai-settings"],
-        ["Product Data", "#product-data", "product-data"],
-        ["Feed Rules", "#feed-rules", "feed-rules"],
-        ["Orders", "#orders", "orders"],
-        ["Alerts", "#alerts", "alerts"],
-        ["Channels", "#connected-channels", "connected-channels"],
-      ];
-    }
-
-    var items = {
-      utility: [],
-      expert: [
-        ["System", "#agent", "agent"],
-        ["Operations", "#operations", "operations"],
-        ["Sources", "#sources", "sources"],
-        ["Channels", "#channels", "channels"],
-        ["Playbook", "#workflow", "workflow"],
-        ["Pricing", "#pricing", "pricing"],
-        ["FAQ", "#seo-faq", "seo-faq"]
-      ],
-      executive: [
-        ["Opportunity", "product-feed-management/#opportunity", "opportunity"],
-        ["Accountability", "product-feed-management/#accountability", "accountability"],
-        ["Responsibility", "product-feed-management/#responsibility", "responsibility"],
-        ["Architecture", "product-feed-management/#architecture", "architecture"],
-        ["Channels", "product-feed-management/#channels", "channels"],
-        ["Pricing", "product-feed-management/#fit", "fit"]
-      ],
-      agency: [
-        ["Model", "shopping-feed-agency/#model", "model"],
-        ["Issues", "shopping-feed-agency/#feed-problems", "feed-problems"],
-        ["Roles", "shopping-feed-agency/#roles", "roles"],
-        ["Process", "shopping-feed-agency/#process", "process"],
-        ["Partner", "shopping-feed-agency/#partner-model", "partner-model"],
-        ["FAQ", "shopping-feed-agency/#agency-faq", "agency-faq"]
-      ]
-    };
-
-    return items[mode] || items.expert;
-  }
-
-  function standardNavLinks() {
-    return navItems(currentMode()).map(function (item) {
-      return '      <a data-feedops-section="' + item[2] + '" href="' + href(item[1]) + '">' + item[0] + '</a>';
-    }).join("");
-  }
-
-  function mobileNavLinks() {
-    return navItems(currentMode()).map(function (item) {
-      return '      <a data-feedops-section="' + item[2] + '" href="' + href(item[1]) + '">' + item[0] + '</a>';
-    }).join("");
+  function mobileMenu() {
+    return [
+      '<div class="feedops-mobile-menu" id="feedops-mobile-menu" hidden>',
+      '  <div class="feedops-mobile-panel">',
+      '    <div class="feedops-global-mobile-links">',
+      '      <a href="' + href("product-feed-platform/") + '">Platform</a>',
+      '      <a href="' + href("learning/") + '">Learning</a>',
+      '      <a href="' + href("pricing/") + '">Pricing</a>',
+      '      <a href="' + href("company/") + '">About</a>',
+      '      <a href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
+      '    </div>',
+      '    <div class="feedops-mobile-actions">',
+      '      <a class="feedops-demo-cta" href="' + href("book-live-demo/") + '">' + calendarIcon() + '<span>Book a demo</span></a>',
+      '      <a class="feedops-audit-cta" href="' + href("free-google-shopping-feed-audit/") + '">' + sparkleIcon() + '<span>Get Free Feed Audit</span></a>',
+      '    </div>',
+      '  </div>',
+      '</div>'
+    ].join("");
   }
 
   function standardHeader() {
     return [
       '<header id="feedops-standard-header" class="feedops-header">',
-      '  <div class="feedops-mode-switch" aria-label="Explore FeedOps as">',
-      '    <div class="feedops-mode-inner">',
-      '      <div class="feedops-mode-label">Explore FeedOps as</div>',
-      '      <div class="feedops-mode-controls">',
-      '        <div class="feedops-mode-options">',
-      '          <a class="feedops-mode-option" data-feedops-mode="expert" href="' + href("") + '">Performance expert</a>',
-      '          <a class="feedops-mode-option" data-feedops-mode="executive" href="' + href("product-feed-management/") + '">Executive mode</a>',
-      '          <a class="feedops-mode-option" data-feedops-mode="agency" href="' + href("shopping-feed-agency/") + '">Media agency</a>',
-      "        </div>",
-      '        <a class="feedops-mode-link" data-feedops-platform-link href="' + href("product-feed-platform/") + '">Platform</a>',
-      '        <a class="feedops-mode-link" data-feedops-contact-link href="' + href("contact_us/") + '">Contact</a>',
-      '        <a class="feedops-mode-login" href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
-      "      </div>",
-      "    </div>",
-      "  </div>",
       '  <nav class="feedops-nav" aria-label="Main navigation">',
       '    <a class="feedops-logo" href="' + href("") + '" aria-label="FeedOps home">',
       '      <img src="' + href("assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4-300x110.png") + '" alt="FeedOps" width="300" height="110">',
-      "    </a>",
+      '    </a>',
+      desktopMenu(),
+      '    <div class="feedops-nav-actions">',
+      '      <a class="feedops-demo-cta" href="' + href("book-live-demo/") + '">' + calendarIcon() + '<span>Book a demo</span></a>',
+      '      <a class="feedops-audit-cta" href="' + href("free-google-shopping-feed-audit/") + '">' + sparkleIcon() + '<span>Get Free Feed Audit</span></a>',
+      '    </div>',
       '    <button class="feedops-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="feedops-mobile-menu">',
       '      <span class="feedops-menu-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>',
-      "    </button>",
-      '    <div class="feedops-nav-links" aria-label="Primary links">',
-      standardNavLinks(),
-      "    </div>",
-      '    <div class="feedops-nav-actions">',
-      navSecondaryCtaLabel && navSecondaryCtaPath ? '      <a class="feedops-nav-secondary-cta" href="' + href(navSecondaryCtaPath) + '">' + navSecondaryCtaLabel + "</a>" : "",
-      '      <a class="feedops-nav-cta" href="' + href(navCtaPath) + '">' + navCtaLabel + "</a>",
-      "    </div>",
-      "  </nav>",
-      '  <div class="feedops-mobile-menu" id="feedops-mobile-menu" hidden>',
-      '    <div class="feedops-mobile-panel">',
-      '      <div class="feedops-mobile-label">Explore FeedOps as</div>',
-      '      <div class="feedops-mobile-modes">',
-      '        <a class="feedops-mode-option" data-feedops-mode="expert" href="' + href("") + '">Performance expert</a>',
-      '        <a class="feedops-mode-option" data-feedops-mode="executive" href="' + href("product-feed-management/") + '">Executive mode</a>',
-      '        <a class="feedops-mode-option" data-feedops-mode="agency" href="' + href("shopping-feed-agency/") + '">Media agency</a>',
-      "      </div>",
-      '      <div class="feedops-mobile-links" aria-label="Mobile primary links">',
-      mobileNavLinks(),
-      "      </div>",
-      '      <div class="feedops-mobile-utility">',
-      '        <a data-feedops-platform-link href="' + href("product-feed-platform/") + '">Platform</a>',
-      '        <a data-feedops-contact-link href="' + href("contact_us/") + '">Contact</a>',
-      '        <a href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
-      "      </div>",
-      navSecondaryCtaLabel && navSecondaryCtaPath ? '      <a class="feedops-mobile-secondary-cta" href="' + href(navSecondaryCtaPath) + '">' + navSecondaryCtaLabel + "</a>" : "",
-      '      <a class="feedops-mobile-cta" href="' + href(navCtaPath) + '">' + navCtaLabel + "</a>",
-      "    </div>",
-      "  </div>",
-      "</header>"
+      '    </button>',
+      '  </nav>',
+      mobileMenu(),
+      '</header>'
     ].join("");
-  }
-
-  function cleanPath(pathname) {
-    return (pathname || "/").replace(/\/index\.html$/, "/").replace(/\/+$/, "/");
-  }
-
-  function setActiveStates() {
-    var header = document.querySelector("#feedops-standard-header");
-    if (!header) return;
-
-    var path = cleanPath(window.location.pathname);
-    var mode = currentMode();
-
-    header.querySelectorAll("[data-feedops-mode]").forEach(function (link) {
-      var isActive = link.dataset.feedopsMode === mode;
-      link.classList.toggle("is-active", isActive);
-      if (isActive) {
-        link.setAttribute("aria-current", "page");
-      } else {
-        link.removeAttribute("aria-current");
-      }
-    });
-
-    var hash = (window.location.hash || "").replace("#", "");
-    header.querySelectorAll("[data-feedops-section]").forEach(function (link) {
-      var targetPath = cleanPath(link.pathname);
-      var isActive = path === targetPath && hash && link.dataset.feedopsSection === hash;
-      link.classList.toggle("is-active", isActive);
-      if (isActive) {
-        link.setAttribute("aria-current", "location");
-      } else {
-        link.removeAttribute("aria-current");
-      }
-    });
-
-    var cta = header.querySelector(".feedops-nav-cta");
-    if (cta) {
-      var isCtaActive = path === "/book-live-demo/";
-      cta.classList.toggle("is-active", isCtaActive);
-      if (isCtaActive) {
-        cta.setAttribute("aria-current", "page");
-      } else {
-        cta.removeAttribute("aria-current");
-      }
-    }
-
-    header.querySelectorAll("[data-feedops-platform-link]").forEach(function (link) {
-      var isPlatformActive = path === "/product-feed-platform/" || path === "/software/";
-      link.classList.toggle("is-active", isPlatformActive);
-      if (isPlatformActive) {
-        link.setAttribute("aria-current", "page");
-      } else {
-        link.removeAttribute("aria-current");
-      }
-    });
-
-    header.querySelectorAll("[data-feedops-contact-link]").forEach(function (link) {
-      var isContactActive = path === "/contact_us/" || path.indexOf("/contact_us/") !== -1;
-      link.classList.toggle("is-active", isContactActive);
-      if (isContactActive) {
-        link.setAttribute("aria-current", "page");
-      } else {
-        link.removeAttribute("aria-current");
-      }
-    });
-
-    var mobileCta = header.querySelector(".feedops-mobile-cta");
-    if (mobileCta) {
-      var isMobileCtaActive = path === "/book-live-demo/";
-      mobileCta.classList.toggle("is-active", isMobileCtaActive);
-      if (isMobileCtaActive) {
-        mobileCta.setAttribute("aria-current", "page");
-      } else {
-        mobileCta.removeAttribute("aria-current");
-      }
-    }
   }
 
   function setMenuOpen(header, open) {
@@ -263,30 +80,25 @@
     if (menu) menu.toggleAttribute("hidden", !open);
   }
 
-  function bindMobileMenu() {
+  function bindHeaderInteractions() {
     var header = document.querySelector("#feedops-standard-header");
     if (!header) return;
-
     var button = header.querySelector(".feedops-menu-toggle");
     var menu = header.querySelector(".feedops-mobile-menu");
-    if (!button || !menu) return;
 
-    setMenuOpen(header, false);
-
-    button.addEventListener("click", function () {
-      setMenuOpen(header, button.getAttribute("aria-expanded") !== "true");
-    });
-
-    menu.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        setMenuOpen(header, false);
+    if (button && menu) {
+      setMenuOpen(header, false);
+      button.addEventListener("click", function () {
+        setMenuOpen(header, button.getAttribute("aria-expanded") !== "true");
       });
-    });
+      menu.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () { setMenuOpen(header, false); });
+      });
+    }
 
     document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") {
-        setMenuOpen(header, false);
-      }
+      if (event.key !== "Escape") return;
+      setMenuOpen(header, false);
     });
   }
 
@@ -316,12 +128,9 @@
         document.body.insertAdjacentHTML("afterbegin", standardHeader());
       }
     }
-    bindMobileMenu();
-    setActiveStates();
+    bindHeaderInteractions();
     window.feedopsStandardHeaderInstalled = true;
   }
-
-  window.addEventListener("hashchange", setActiveStates);
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", installHeader);

@@ -271,15 +271,15 @@ function injectHeaderStabilityStyles(content) {
   if (content.includes('id="feedops-header-stability"')) return content;
   const stabilityStyles = [
     '<style id="feedops-header-stability">',
-    'header.site-header{min-height:134px!important}',
-    'header.site-header .mode-inner{min-height:56px!important;padding:6px 0!important}',
-    '@media(max-width:620px){header.site-header{min-height:73px!important}header.site-header .mode-switch{display:none!important}header.site-header .nav{min-height:72px!important;height:auto!important;padding:12px 0!important}header.site-header .nav-links,header.site-header .nav-actions{display:none!important}}',
+    'header.site-header{min-height:96px!important}',
+    '@media(max-width:1100px){header.site-header{min-height:78px!important}}',
     '</style>'
   ].join("");
   return content.replace(/<\/head>/i, `  ${stabilityStyles}\n</head>`);
 }
 
 function pageDepth(page) {
+  if (page && !page.includes("/")) return 0;
   return page ? page.replace(/\/$/, "").split("/").length : 0;
 }
 
@@ -373,74 +373,45 @@ function navItems(mode, page = "") {
   return items[mode] || items.expert;
 }
 
-function standardHeaderForPage(page, options = {}) {
+function standardHeaderForPage(page) {
   const root = pageRoot(page);
-  const mode = pageMode(page);
-  const href = (path) => path.startsWith("#") ? path : `${root}${path}`;
-  const active = (name) => name === mode ? " is-active" : "";
-  const navCtaLabel = options.navCtaLabel || "Book a demo";
-  const navCtaPath = options.navCtaPath || "book-live-demo/";
-  const navSecondaryCtaLabel = options.navSecondaryCtaLabel || "";
-  const navSecondaryCtaPath = options.navSecondaryCtaPath || "";
-  const modeCurrent = (name) => name === mode ? ' aria-current="page"' : "";
-  const platformActive = mode === "platform" ? " is-active" : "";
-  const platformCurrent = mode === "platform" ? ' aria-current="page"' : "";
-  const isContactPage = page === "contact_us/" || (page || "").startsWith("contact_us/");
-  const contactActive = isContactPage ? " is-active" : "";
-  const contactCurrent = isContactPage ? ' aria-current="page"' : "";
-  const navLinks = navItems(mode, page).map(([label, url, section]) =>
-    `      <a data-feedops-section="${section}" href="${href(url)}">${label}</a>`
-  ).join("");
+  const href = (path) => `${root}${path}`;
+  const calendarIcon = '<svg class="feedops-cta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v3M17 3v3M4.5 9h15M6 5h12a2 2 0 0 1 2 2v12H4V7a2 2 0 0 1 2-2Z"/></svg>';
+  const sparkleIcon = '<svg class="feedops-cta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c.7 4.7 2.7 6.7 7.4 7.4-4.7.7-6.7 2.7-7.4 7.4-.7-4.7-2.7-6.7-7.4-7.4C9.3 8.7 11.3 6.7 12 2Z"/><path d="M19 16c.3 2 1.2 2.9 3 3.2-1.8.3-2.7 1.2-3 3.1-.3-1.9-1.2-2.8-3-3.1 1.8-.3 2.7-1.2 3-3.2Z"/></svg>';
   return [
     '<header id="feedops-standard-header" class="feedops-header">',
-    '  <div class="feedops-mode-switch" aria-label="Explore FeedOps as">',
-    '    <div class="feedops-mode-inner">',
-    '      <div class="feedops-mode-label">Explore FeedOps as</div>',
-    '      <div class="feedops-mode-controls">',
-    '        <div class="feedops-mode-options">',
-    `          <a class="feedops-mode-option${active("expert")}" data-feedops-mode="expert" href="${href("")}"${modeCurrent("expert")}>Performance expert</a>`,
-    `          <a class="feedops-mode-option${active("executive")}" data-feedops-mode="executive" href="${href("product-feed-management/")}"${modeCurrent("executive")}>Executive mode</a>`,
-    `          <a class="feedops-mode-option${active("agency")}" data-feedops-mode="agency" href="${href("shopping-feed-agency/")}"${modeCurrent("agency")}>Media agency</a>`,
-    '        </div>',
-    `        <a class="feedops-mode-link${platformActive}" data-feedops-platform-link href="${href("product-feed-platform/")}"${platformCurrent}>Platform</a>`,
-    `        <a class="feedops-mode-link${contactActive}" data-feedops-contact-link href="${href("contact_us/")}"${contactCurrent}>Contact</a>`,
-    '        <a class="feedops-mode-login" href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
-    '      </div>',
-    '    </div>',
-    '  </div>',
     '  <nav class="feedops-nav" aria-label="Main navigation">',
     `    <a class="feedops-logo" href="${href("")}" aria-label="FeedOps home">`,
     `      <img src="${href("assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4-300x110.png")}" alt="FeedOps" width="300" height="110">`,
     '    </a>',
+    '    <div class="feedops-desktop-menu" aria-label="Primary links">',
+    `      <a class="feedops-nav-link" href="${href("product-feed-platform/")}">Platform</a>`,
+    `      <a class="feedops-nav-link" href="${href("learning/")}">Learning</a>`,
+    `      <a class="feedops-nav-link" href="${href("pricing/")}">Pricing</a>`,
+    `      <a class="feedops-nav-link" href="${href("company/")}">About</a>`,
+    '      <a class="feedops-nav-link feedops-nav-login" href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
+    '    </div>',
+    '    <div class="feedops-nav-actions">',
+    `      <a class="feedops-demo-cta" href="${href("book-live-demo/")}">${calendarIcon}<span>Book a demo</span></a>`,
+    `      <a class="feedops-audit-cta" href="${href("free-google-shopping-feed-audit/")}">${sparkleIcon}<span>Get Free Feed Audit</span></a>`,
+    '    </div>',
     '    <button class="feedops-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="feedops-mobile-menu">',
     '      <span class="feedops-menu-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>',
     '    </button>',
-    '    <div class="feedops-nav-links" aria-label="Primary links">',
-    navLinks,
-    '    </div>',
-    '    <div class="feedops-nav-actions">',
-    navSecondaryCtaLabel && navSecondaryCtaPath ? `      <a class="feedops-nav-secondary-cta" href="${href(navSecondaryCtaPath)}">${navSecondaryCtaLabel}</a>` : "",
-    `      <a class="feedops-nav-cta" href="${href(navCtaPath)}">${navCtaLabel}</a>`,
-    '    </div>',
     '  </nav>',
     '  <div class="feedops-mobile-menu" id="feedops-mobile-menu" hidden>',
     '    <div class="feedops-mobile-panel">',
-    '      <div class="feedops-mobile-label">Explore FeedOps as</div>',
-    '      <div class="feedops-mobile-modes">',
-    `        <a class="feedops-mode-option${active("expert")}" data-feedops-mode="expert" href="${href("")}"${modeCurrent("expert")}>Performance expert</a>`,
-    `        <a class="feedops-mode-option${active("executive")}" data-feedops-mode="executive" href="${href("product-feed-management/")}"${modeCurrent("executive")}>Executive mode</a>`,
-    `        <a class="feedops-mode-option${active("agency")}" data-feedops-mode="agency" href="${href("shopping-feed-agency/")}"${modeCurrent("agency")}>Media agency</a>`,
-    '      </div>',
-    '      <div class="feedops-mobile-links" aria-label="Mobile primary links">',
-    navLinks,
-    '      </div>',
-    '      <div class="feedops-mobile-utility">',
-    `        <a class="${platformActive.trim()}" data-feedops-platform-link href="${href("product-feed-platform/")}"${platformCurrent}>Platform</a>`,
-    `        <a class="${contactActive.trim()}" data-feedops-contact-link href="${href("contact_us/")}"${contactCurrent}>Contact</a>`,
+    '      <div class="feedops-global-mobile-links">',
+    `        <a href="${href("product-feed-platform/")}">Platform</a>`,
+    `        <a href="${href("learning/")}">Learning</a>`,
+    `        <a href="${href("pricing/")}">Pricing</a>`,
+    `        <a href="${href("company/")}">About</a>`,
     '        <a href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
     '      </div>',
-    navSecondaryCtaLabel && navSecondaryCtaPath ? `      <a class="feedops-mobile-secondary-cta" href="${href(navSecondaryCtaPath)}">${navSecondaryCtaLabel}</a>` : "",
-    `      <a class="feedops-mobile-cta" href="${href(navCtaPath)}">${navCtaLabel}</a>`,
+    '      <div class="feedops-mobile-actions">',
+    `        <a class="feedops-demo-cta" href="${href("book-live-demo/")}">${calendarIcon}<span>Book a demo</span></a>`,
+    `        <a class="feedops-audit-cta" href="${href("free-google-shopping-feed-audit/")}">${sparkleIcon}<span>Get Free Feed Audit</span></a>`,
+    '      </div>',
     '    </div>',
     '  </div>',
     '</header>'
@@ -450,15 +421,12 @@ function standardHeaderForPage(page, options = {}) {
 function installStandardHeaderMarkup(content, page) {
   if (!content.includes("<body")) return content;
   if (content.includes('id="feedops-standard-header"')) return content;
-  const scriptTag = content.match(/<script\b[^>]*\bsrc="[^"]*header-standard\.js[^"]*"[^>]*>/i)?.[0] || "";
-  const navCtaLabel = scriptTag.match(/\bdata-nav-cta-label="([^"]*)"/i)?.[1] || "";
-  const navCtaPath = scriptTag.match(/\bdata-nav-cta-path="([^"]*)"/i)?.[1] || "";
-  const navSecondaryCtaLabel = scriptTag.match(/\bdata-nav-secondary-cta-label="([^"]*)"/i)?.[1] || "";
-  const navSecondaryCtaPath = scriptTag.match(/\bdata-nav-secondary-cta-path="([^"]*)"/i)?.[1] || "";
-  return content.replace(
-    /<header class="site-header">[\s\S]*?<\/header>/i,
-    standardHeaderForPage(page, { navCtaLabel, navCtaPath, navSecondaryCtaLabel, navSecondaryCtaPath })
-  );
+  const header = standardHeaderForPage(page);
+  const placeholderPattern = /<header class="site-header">[\s\S]*?<\/header>/i;
+  if (placeholderPattern.test(content)) {
+    return content.replace(placeholderPattern, header);
+  }
+  return content.replace(/<body\b[^>]*>/i, (bodyTag) => `${bodyTag}\n${header}`);
 }
 
 function copyTextPath(from, to, transform = (content) => content) {
@@ -543,7 +511,11 @@ for (const file of sharedFiles) {
 }
 
 for (const file of rootHtmlFiles) {
-  copyTextPath(join(sourceRoot, file), join(outputRoot, file), injectGoogleTagManager);
+  copyTextPath(
+    join(sourceRoot, file),
+    join(outputRoot, file),
+    (content) => installStandardHeaderMarkup(injectGoogleTagManager(content), file)
+  );
 }
 
 for (const file of rootStaticFiles) {

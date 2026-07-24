@@ -23,10 +23,6 @@
       '        <img src="' + href("assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4-300x110.png") + '" alt="FeedOps" width="300" height="110">',
       "      </a>",
       "      <p>Product feed optimisation software, feed strategy, and expert support for ecommerce teams.</p>",
-      '      <a class="footer-cta" href="' + href("book-live-demo/") + '">',
-      '        <span>Book a demo</span>',
-      '        <strong>See a clearer feed plan</strong>',
-      "      </a>",
       "    </div>",
       '      <div class="footer-brand-guides">',
       '        <div class="footer-heading">Guides</div>',
@@ -104,6 +100,27 @@
     ].join("");
   }
 
+  function blackFridayPromo() {
+    return [
+      '<aside class="feedops-black-friday-popup" role="region" aria-label="Black Friday retailer promotion">',
+      '  <button class="feedops-black-friday-dismiss" type="button" aria-label="Dismiss Black Friday promotion">',
+      '    <span aria-hidden="true">×</span>',
+      '  </button>',
+      '  <div class="feedops-black-friday-kicker">Australian retailers only</div>',
+      '  <strong>Get Black Friday ready.</strong>',
+      '  <p>Eligible retailers can claim up to three free FeedOps services for Google Shopping and local product visibility.</p>',
+      '  <a href="' + href("black-friday/") + '">View the Black Friday deal <span aria-hidden="true">→</span></a>',
+      '</aside>'
+    ].join("");
+  }
+
+  function isBlackFridayPage() {
+    var path = (window.location.pathname || "/")
+      .replace(/\/index\.html$/, "/")
+      .replace(/\/+$/, "/");
+    return path === "/black-friday/" || path.endsWith("/site/black-friday/");
+  }
+
   function installFooter() {
     document.querySelectorAll([
       "#feedops-standard-footer",
@@ -115,6 +132,19 @@
     });
 
     document.body.insertAdjacentHTML("beforeend", standardFooter());
+    document.querySelectorAll(".feedops-black-friday-popup").forEach(function (popup) {
+      popup.remove();
+    });
+    if (!isBlackFridayPage()) {
+      document.body.insertAdjacentHTML("beforeend", blackFridayPromo());
+      var dismissButton = document.querySelector(".feedops-black-friday-dismiss");
+      if (dismissButton) {
+        dismissButton.addEventListener("click", function () {
+          var popup = dismissButton.closest(".feedops-black-friday-popup");
+          if (popup) popup.remove();
+        });
+      }
+    }
     window.feedopsStandardFooterInstalled = true;
   }
 

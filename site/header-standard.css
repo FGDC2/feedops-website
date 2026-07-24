@@ -1,24 +1,28 @@
 #feedops-standard-header.feedops-header {
   display: block !important;
   position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
+  inset: 0 0 auto;
   z-index: 1000;
-  border-bottom: 1px solid #d8dee8;
-  background: #ffffff;
-  backdrop-filter: blur(14px);
+  width: 100%;
+  border-bottom: 1px solid #e5e7eb;
+  background: rgba(255, 255, 255, .98);
+  color: #111418;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  overflow: visible;
+  box-shadow: 0 5px 18px rgba(15, 23, 32, .04);
 }
 
 html {
-  scroll-padding-top: 160px;
+  scroll-padding-top: 116px;
 }
 
 body {
-  padding-top: 134px;
+  padding-top: 96px;
+}
+
+#feedops-standard-header *,
+#feedops-standard-header *::before,
+#feedops-standard-header *::after {
+  box-sizing: border-box;
 }
 
 #feedops-standard-header a {
@@ -26,287 +30,284 @@ body {
   text-decoration: none;
 }
 
-#feedops-standard-header .feedops-mode-switch {
-  border-bottom: 1px solid #d8dee8;
-  background: #f4f6f9;
-}
-
-#feedops-standard-header .feedops-mode-inner {
-  width: min(1180px, calc(100% - 40px));
-  min-height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 18px;
-  margin: 0 auto;
-  padding: 6px 0;
-}
-
-#feedops-standard-header .feedops-mode-label {
-  color: #536072;
-  font-size: 12px;
-  font-weight: 950;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-#feedops-standard-header .feedops-mode-controls {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-#feedops-standard-header .feedops-mode-options {
-  display: inline-grid;
-  grid-template-columns: repeat(3, minmax(148px, 1fr));
-  padding: 4px;
-  border: 1px solid #d8dee8;
-  border-radius: 999px;
-  background: #ffffff;
-  box-shadow: 0 10px 28px rgba(17, 24, 39, .06);
-}
-
-#feedops-standard-header .feedops-mode-option {
-  min-width: 148px;
-  min-height: 36px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 16px;
-  border-radius: 999px;
-  color: #2d3748;
-  font-size: 12px;
-  font-weight: 850;
-  text-align: center;
-  white-space: nowrap;
-}
-
-#feedops-standard-header .feedops-mode-option:hover,
-#feedops-standard-header .feedops-mode-option.is-active {
-  background: #eef8f4;
-  color: #176e58;
-}
-
-#feedops-standard-header .feedops-mode-option.is-active {
-  box-shadow: inset 0 0 0 1px rgba(28, 140, 111, .22);
-}
-
-#feedops-standard-header .feedops-mode-link,
-#feedops-standard-header .feedops-mode-login {
-  min-height: 32px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  border-bottom: 2px solid transparent;
-  color: #2d3748;
-  font-size: 13px;
-  font-weight: 950;
-  white-space: nowrap;
-}
-
-#feedops-standard-header .feedops-mode-link:hover,
-#feedops-standard-header .feedops-mode-link:focus-visible,
-#feedops-standard-header .feedops-mode-link.is-active,
-#feedops-standard-header .feedops-mode-login:hover,
-#feedops-standard-header .feedops-mode-login:focus-visible {
-  border-bottom-color: #176e58;
-  color: #176e58;
-  outline: none;
-}
-
 #feedops-standard-header .feedops-nav {
-  width: min(1180px, calc(100% - 198px));
-  height: 76px;
+  width: min(1720px, calc(100% - 40px));
+  min-height: 96px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 28px;
+  gap: 34px;
   margin: 0 auto;
-  background: #ffffff;
 }
 
 #feedops-standard-header .feedops-logo {
+  width: 205px;
   display: flex;
-  align-items: center;
-  width: 142px;
   flex: 0 0 auto;
+  align-items: center;
 }
 
 #feedops-standard-header .feedops-logo img {
   display: block;
   width: 100%;
-  max-width: 100%;
   height: auto;
 }
 
-#feedops-standard-header .feedops-nav-links {
+#feedops-standard-header .feedops-desktop-menu {
   display: flex;
   align-items: center;
-  gap: 28px;
-  color: #313946;
-  font-size: 14px;
+  gap: clamp(28px, 3vw, 58px);
+  margin-left: 28px;
+  white-space: nowrap;
+}
+
+#feedops-standard-header .feedops-nav-group {
+  position: relative;
+}
+
+#feedops-standard-header .feedops-nav-group summary,
+#feedops-standard-header .feedops-nav-link {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #111418;
+  font-size: 16px;
   font-weight: 650;
+  cursor: pointer;
+  list-style: none;
 }
 
-#feedops-standard-header .feedops-nav-links a:hover {
-  color: #176e58;
+#feedops-standard-header .feedops-nav-group summary::-webkit-details-marker {
+  display: none;
 }
 
-#feedops-standard-header .feedops-nav-links a.is-active {
-  color: #176e58;
-  font-weight: 850;
+#feedops-standard-header .feedops-nav-group summary:hover,
+#feedops-standard-header .feedops-nav-group summary:focus-visible,
+#feedops-standard-header .feedops-nav-link:hover,
+#feedops-standard-header .feedops-nav-link:focus-visible {
+  color: #8a6800;
+}
+
+#feedops-standard-header .feedops-nav-group summary:focus-visible,
+#feedops-standard-header .feedops-nav-link:focus-visible,
+#feedops-standard-header .feedops-demo-cta:focus-visible,
+#feedops-standard-header .feedops-audit-cta:focus-visible,
+#feedops-standard-header .feedops-menu-toggle:focus-visible,
+#feedops-standard-header .feedops-dropdown a:focus-visible,
+#feedops-standard-header .feedops-mobile-group a:focus-visible,
+#feedops-standard-header .feedops-global-mobile-links a:focus-visible {
+  outline: 3px solid rgba(255, 202, 40, .5);
+  outline-offset: 3px;
+}
+
+#feedops-standard-header .feedops-nav-login {
+  margin-left: clamp(18px, 3vw, 64px);
+}
+
+#feedops-standard-header .feedops-nav-chevron {
+  width: 9px;
+  height: 9px;
+  display: inline-block;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform .16s ease;
+}
+
+#feedops-standard-header .feedops-nav-group[open] .feedops-nav-chevron {
+  transform: translateY(2px) rotate(225deg);
+}
+
+#feedops-standard-header .feedops-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: -18px;
+  width: max-content;
+  min-width: 235px;
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border: 1px solid #e1e5ea;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 22px 55px rgba(15, 23, 32, .15);
+}
+
+#feedops-standard-header .feedops-nav-group-right .feedops-dropdown {
+  right: -18px;
+  left: auto;
+}
+
+#feedops-standard-header .feedops-dropdown a {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 8px;
+  color: #27313d;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#feedops-standard-header .feedops-dropdown a:hover {
+  background: #fff8da;
+  color: #6f5400;
 }
 
 #feedops-standard-header .feedops-nav-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
+  margin-left: auto;
+  white-space: nowrap;
 }
 
-#feedops-standard-header .feedops-menu-toggle {
-  display: none;
-}
-
-#feedops-standard-header .feedops-nav-cta {
-  min-height: 46px;
+#feedops-standard-header .feedops-demo-cta,
+#feedops-standard-header .feedops-audit-cta {
+  min-height: 54px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 18px;
+  gap: 11px;
+  padding: 0 22px;
   border-radius: 8px;
+  font-size: 16px;
+  font-weight: 750;
+}
+
+#feedops-standard-header .feedops-demo-cta {
+  border: 1.5px solid #20252b;
+  background: #fff;
+  color: #111418;
+}
+
+#feedops-standard-header .feedops-audit-cta {
+  border: 1.5px solid #ffca28;
   background: #ffca28;
-  color: #111111;
-  font-size: 14px;
-  font-weight: 950;
-  box-shadow: 0 12px 30px rgba(254, 207, 38, .28);
+  color: #111418;
 }
 
-#feedops-standard-header .feedops-nav-cta.is-active {
-  box-shadow:
-    inset 0 0 0 2px rgba(16, 24, 32, .18),
-    0 12px 30px rgba(254, 207, 38, .28);
+#feedops-standard-header .feedops-demo-cta:hover {
+  background: #f6f7f8;
 }
 
-#feedops-standard-header .feedops-nav-secondary-cta {
-  min-height: 46px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 16px;
-  border: 1px solid #cfd7e3;
-  border-radius: 8px;
-  background: #ffffff;
-  color: #172232;
-  font-size: 14px;
-  font-weight: 900;
+#feedops-standard-header .feedops-audit-cta:hover {
+  border-color: #f2b900;
+  background: #f2b900;
 }
 
-#feedops-standard-header .feedops-nav-secondary-cta:hover,
-#feedops-standard-header .feedops-nav-secondary-cta:focus-visible {
-  border-color: #176e58;
-  color: #176e58;
+#feedops-standard-header .feedops-cta-icon {
+  width: 23px;
+  height: 23px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
+#feedops-standard-header .feedops-audit-cta .feedops-cta-icon {
+  fill: currentColor;
+  stroke-width: 1.35;
+}
+
+#feedops-standard-header .feedops-menu-toggle,
 #feedops-standard-header .feedops-mobile-menu {
   display: none;
 }
 
-@media (max-width: 980px) {
-  body {
-    padding-top: 147px;
-  }
-
-  #feedops-standard-header .feedops-mode-inner,
+@media (max-width: 1320px) {
   #feedops-standard-header .feedops-nav {
-    width: min(100% - 40px, 1180px);
-    flex-wrap: wrap;
-  }
-
-  #feedops-standard-header .feedops-nav {
-    height: auto;
-    padding: 14px 0;
-  }
-
-  #feedops-standard-header .feedops-nav-links {
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 16px 22px;
-  }
-}
-
-@media (max-width: 620px) {
-  html {
-    scroll-padding-top: 88px;
-  }
-
-  body {
-    padding-top: 73px;
-  }
-
-  #feedops-standard-header {
-    overflow: visible;
-  }
-
-  #feedops-standard-header .feedops-mode-switch {
-    display: none;
-  }
-
-  #feedops-standard-header .feedops-nav {
-    width: min(100% - 28px, 1180px);
-    min-height: 72px;
-    flex-wrap: nowrap;
-    padding: 12px 0;
+    gap: 22px;
   }
 
   #feedops-standard-header .feedops-logo {
-    width: 126px;
+    width: 172px;
   }
 
-  #feedops-standard-header .feedops-nav-links,
+  #feedops-standard-header .feedops-desktop-menu {
+    gap: 22px;
+    margin-left: 8px;
+  }
+
+  #feedops-standard-header .feedops-nav-login {
+    margin-left: 12px;
+  }
+
+  #feedops-standard-header .feedops-nav-group summary,
+  #feedops-standard-header .feedops-nav-link,
+  #feedops-standard-header .feedops-demo-cta,
+  #feedops-standard-header .feedops-audit-cta {
+    font-size: 14px;
+  }
+
+  #feedops-standard-header .feedops-demo-cta,
+  #feedops-standard-header .feedops-audit-cta {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 1100px) {
+  html {
+    scroll-padding-top: 98px;
+  }
+
+  body {
+    padding-top: 78px;
+  }
+
+  #feedops-standard-header .feedops-nav {
+    width: min(100% - 40px, 1720px);
+    min-height: 78px;
+    justify-content: space-between;
+  }
+
+  #feedops-standard-header .feedops-logo {
+    width: 165px;
+  }
+
+  #feedops-standard-header .feedops-desktop-menu,
   #feedops-standard-header .feedops-nav-actions {
     display: none;
   }
 
   #feedops-standard-header .feedops-menu-toggle {
-    width: 44px;
-    min-width: 44px;
-    min-height: 44px;
+    width: 46px;
+    height: 46px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 0;
-    border: 0;
-    border-radius: 999px;
-    background: transparent;
-    color: #172232;
-    font: inherit;
+    border: 1px solid #d7dce2;
+    border-radius: 8px;
+    background: #fff;
+    color: #111418;
     cursor: pointer;
   }
 
-  #feedops-standard-header .feedops-menu-toggle:focus-visible {
-    outline: 3px solid rgba(28, 140, 111, .24);
-    outline-offset: 2px;
-  }
-
   #feedops-standard-header .feedops-menu-toggle-bars {
-    width: 20px;
+    width: 21px;
     display: grid;
-    gap: 4px;
+    gap: 5px;
   }
 
   #feedops-standard-header .feedops-menu-toggle-bars span {
-    display: block;
     height: 2px;
+    display: block;
     border-radius: 999px;
-    background: #172232;
+    background: currentColor;
   }
 
   #feedops-standard-header .feedops-mobile-menu {
     display: block;
-    border-top: 1px solid #d8dee8;
-    background: #f4f6f9;
+    max-height: calc(100vh - 78px);
+    overflow-y: auto;
+    border-top: 1px solid #e1e5ea;
+    background: #fff;
+    box-shadow: 0 18px 40px rgba(15, 23, 32, .14);
   }
 
   #feedops-standard-header .feedops-mobile-menu[hidden] {
@@ -314,92 +315,92 @@ body {
   }
 
   #feedops-standard-header .feedops-mobile-panel {
-    width: min(100% - 28px, 1180px);
+    width: min(100% - 40px, 900px);
     display: grid;
-    gap: 16px;
+    gap: 24px;
     margin: 0 auto;
-    padding: 16px 0 18px;
+    padding: 24px 0 28px;
   }
 
-  #feedops-standard-header .feedops-mobile-label {
-    color: #536072;
-    font-size: 12px;
-    font-weight: 950;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-  }
-
-  #feedops-standard-header .feedops-mobile-modes {
-    display: grid;
-    gap: 6px;
-    padding: 4px;
-    border: 1px solid #d8dee8;
-    border-radius: 8px;
-    background: #ffffff;
-    box-shadow: 0 10px 28px rgba(17, 24, 39, .06);
-  }
-
-  #feedops-standard-header .feedops-mobile-modes .feedops-mode-option {
-    width: 100%;
-    min-width: 0;
-    border-radius: 6px;
-  }
-
-  #feedops-standard-header .feedops-mobile-links {
+  #feedops-standard-header .feedops-mobile-nav-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
+    gap: 22px 36px;
   }
 
-  #feedops-standard-header .feedops-mobile-links a,
-  #feedops-standard-header .feedops-mobile-utility a {
-    min-height: 42px;
+  #feedops-standard-header .feedops-global-mobile-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  #feedops-standard-header .feedops-global-mobile-links a {
+    min-height: 44px;
     display: flex;
     align-items: center;
     padding: 0 12px;
-    border: 1px solid #d8dee8;
+    border: 1px solid #e1e5ea;
     border-radius: 8px;
-    background: #ffffff;
-    color: #2d3748;
+    background: #fff;
+    color: #27313d;
     font-size: 14px;
-    font-weight: 850;
+    font-weight: 750;
   }
 
-  #feedops-standard-header .feedops-mobile-links a.is-active {
-    border-color: rgba(28, 140, 111, .34);
-    background: #eef8f4;
-    color: #176e58;
-  }
-
-  #feedops-standard-header .feedops-mobile-utility {
+  #feedops-standard-header .feedops-mobile-group {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-content: start;
     gap: 8px;
   }
 
-  #feedops-standard-header .feedops-mobile-cta {
-    min-height: 46px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    background: #ffca28;
-    color: #111111;
-    font-size: 14px;
-    font-weight: 950;
-    box-shadow: 0 12px 30px rgba(254, 207, 38, .28);
+  #feedops-standard-header .feedops-mobile-group strong {
+    margin-bottom: 2px;
+    color: #111418;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .08em;
+    text-transform: uppercase;
   }
 
-  #feedops-standard-header .feedops-mobile-secondary-cta {
-    min-height: 46px;
+  #feedops-standard-header .feedops-mobile-group a {
+    min-height: 36px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    border: 1px solid #cfd7e3;
-    border-radius: 8px;
-    background: #ffffff;
-    color: #172232;
+    color: #3d4855;
     font-size: 14px;
-    font-weight: 900;
+    font-weight: 700;
+  }
+
+  #feedops-standard-header .feedops-mobile-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 1px solid #e1e5ea;
+  }
+}
+
+@media (max-width: 620px) {
+  #feedops-standard-header .feedops-nav {
+    width: min(100% - 28px, 1720px);
+  }
+
+  #feedops-standard-header .feedops-logo {
+    width: 146px;
+  }
+
+  #feedops-standard-header .feedops-mobile-panel {
+    width: min(100% - 28px, 900px);
+  }
+
+  #feedops-standard-header .feedops-mobile-nav-grid,
+  #feedops-standard-header .feedops-global-mobile-links,
+  #feedops-standard-header .feedops-mobile-actions {
+    grid-template-columns: 1fr;
+  }
+
+  #feedops-standard-header .feedops-demo-cta,
+  #feedops-standard-header .feedops-audit-cta {
+    width: 100%;
   }
 }
