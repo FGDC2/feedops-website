@@ -72,7 +72,8 @@ const rootHtmlFiles = [
 ];
 
 const rootStaticFiles = [
-  "favicon.ico"
+  "favicon.ico",
+  "healthz"
 ];
 
 const assetPathMap = [];
