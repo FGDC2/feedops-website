@@ -121,6 +121,24 @@
     return path === "/black-friday/" || path.endsWith("/site/black-friday/");
   }
 
+  var blackFridayDismissedKey = "feedops-black-friday-dismissed";
+
+  function isBlackFridayDismissed() {
+    try {
+      return window.sessionStorage.getItem(blackFridayDismissedKey) === "true";
+    } catch (error) {
+      return false;
+    }
+  }
+
+  function rememberBlackFridayDismissal() {
+    try {
+      window.sessionStorage.setItem(blackFridayDismissedKey, "true");
+    } catch (error) {
+      // Keep the dismiss button working when browser storage is unavailable.
+    }
+  }
+
   function installFooter() {
     document.querySelectorAll([
       "#feedops-standard-footer",
@@ -135,11 +153,12 @@
     document.querySelectorAll(".feedops-black-friday-popup").forEach(function (popup) {
       popup.remove();
     });
-    if (!isBlackFridayPage()) {
+    if (!isBlackFridayPage() && !isBlackFridayDismissed()) {
       document.body.insertAdjacentHTML("beforeend", blackFridayPromo());
       var dismissButton = document.querySelector(".feedops-black-friday-dismiss");
       if (dismissButton) {
         dismissButton.addEventListener("click", function () {
+          rememberBlackFridayDismissal();
           var popup = dismissButton.closest(".feedops-black-friday-popup");
           if (popup) popup.remove();
         });
