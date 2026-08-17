@@ -41,7 +41,7 @@
       '    </div>',
       '    <div class="feedops-mobile-actions">',
       '      <a class="feedops-demo-cta" href="' + href("book-live-demo/") + '">' + calendarIcon() + '<span>Book a demo</span></a>',
-      '      <a class="feedops-audit-cta" href="' + href("free-google-shopping-feed-audit/") + '">' + sparkleIcon() + '<span>Get Free Feed Audit</span></a>',
+      '      <a class="feedops-audit-cta" href="https://feedops.com/free-google-shopping-feed-audit/free-audit-form/">' + sparkleIcon() + '<span>Get Free Feed Audit</span></a>',
       '    </div>',
       '  </div>',
       '</div>'
@@ -58,7 +58,7 @@
       desktopMenu(),
       '    <div class="feedops-nav-actions">',
       '      <a class="feedops-demo-cta" href="' + href("book-live-demo/") + '">' + calendarIcon() + '<span>Book a demo</span></a>',
-      '      <a class="feedops-audit-cta" href="' + href("free-google-shopping-feed-audit/") + '">' + sparkleIcon() + '<span>Get Free Feed Audit</span></a>',
+      '      <a class="feedops-audit-cta" href="https://feedops.com/free-google-shopping-feed-audit/free-audit-form/">' + sparkleIcon() + '<span>Get Free Feed Audit</span></a>',
       '    </div>',
       '    <button class="feedops-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="feedops-mobile-menu">',
       '      <span class="feedops-menu-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>',

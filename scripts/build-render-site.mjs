@@ -249,6 +249,11 @@ function minifyInlineStyles(content) {
   });
 }
 
+function skipsStandardHeader(content) {
+  return content.includes("data-feedops-custom-header") ||
+    content.includes("data-feedops-hide-standard-header");
+}
+
 function stabiliseSharedHeaderStyles(content) {
   return content.replace(
     /<link rel="preload" href="([^"]*header-standard\.css[^"]*)" as="style" onload="this\.onload=null;this\.rel='stylesheet'"><noscript><link rel="stylesheet" href="\1"><\/noscript>/g,
@@ -257,6 +262,7 @@ function stabiliseSharedHeaderStyles(content) {
 }
 
 function inlineSharedHeaderStyles(content) {
+  if (skipsStandardHeader(content)) return content;
   if (content.includes('id="feedops-standard-header-css"')) return content;
   const headerCss = minifyCss(readFileSync(join(sourceRoot, "header-standard.css"), "utf8"));
   const inlineHeaderCss = `<style id="feedops-standard-header-css">${headerCss}</style>`;
@@ -269,6 +275,7 @@ function inlineSharedHeaderStyles(content) {
 }
 
 function injectHeaderStabilityStyles(content) {
+  if (skipsStandardHeader(content)) return content;
   if (content.includes('id="feedops-header-stability"')) return content;
   const stabilityStyles = [
     '<style id="feedops-header-stability">',
@@ -421,6 +428,7 @@ function standardHeaderForPage(page) {
 
 function installStandardHeaderMarkup(content, page) {
   if (!content.includes("<body")) return content;
+  if (skipsStandardHeader(content)) return content;
   if (content.includes('id="feedops-standard-header"')) return content;
   const header = standardHeaderForPage(page);
   const placeholderPattern = /<header class="site-header">[\s\S]*?<\/header>/i;

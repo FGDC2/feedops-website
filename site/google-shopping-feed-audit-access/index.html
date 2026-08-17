@@ -14,10 +14,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>What FeedOps Accesses for the Google Shopping Feed Audit</title>
   <meta name="description" content="Learn what FeedOps accesses for the Google Shopping Feed Audit, including read-only Merchant Center data and reporting signals used for visibility metrics.">
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://feedops.com/google-shopping-feed-audit-access/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://feedops.com/google-shopping-feed-audit-access/#webpage",
+        "url": "https://feedops.com/google-shopping-feed-audit-access/",
+        "name": "What FeedOps Accesses for the Google Shopping Feed Audit",
+        "description": "Learn what FeedOps can see through read-only Google Merchant Center access and what the Google Shopping Feed Audit cannot access or change.",
+        "isPartOf": {
+          "@id": "https://feedops.com/#website"
+        },
+        "about": {
+          "@id": "https://feedops.com/free-google-shopping-feed-audit/#service"
+        },
+        "breadcrumb": {
+          "@id": "https://feedops.com/google-shopping-feed-audit-access/#breadcrumb"
+        },
+        "dateModified": "2026-08-17",
+        "inLanguage": "en-AU"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://feedops.com/free-google-shopping-feed-audit/#service",
+        "name": "Free Google Shopping Feed Audit",
+        "url": "https://feedops.com/free-google-shopping-feed-audit/",
+        "serviceType": "Google Shopping feed audit",
+        "provider": {
+          "@id": "https://feedops.com/#organization"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://feedops.com/google-shopping-feed-audit-access/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://feedops.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Free Google Shopping Feed Audit",
+            "item": "https://feedops.com/free-google-shopping-feed-audit/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Audit Access",
+            "item": "https://feedops.com/google-shopping-feed-audit-access/"
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://feedops.com/#website",
+        "url": "https://feedops.com/",
+        "name": "FeedOps",
+        "publisher": {
+          "@id": "https://feedops.com/#organization"
+        },
+        "inLanguage": "en-AU"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://feedops.com/#organization",
+        "name": "FeedOps",
+        "url": "https://feedops.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://feedops.com/assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4-300x110.png",
+          "width": 300,
+          "height": 110
+        },
+        "sameAs": [
+          "https://www.facebook.com/feedops",
+          "https://www.linkedin.com/company/feedops/",
+          "https://www.youtube.com/@feedops"
+        ]
+      }
+    ]
+  }
+  </script>
   <link rel="icon" href="../assets/feedops.com/wp-content/uploads/2022/05/Feedops-staggered-logo-Final-2-60x60.png" sizes="32x32">
-  <link rel="stylesheet" href="../header-standard.css?v=20260724-global-navigation-v3">
   <link rel="stylesheet" href="../footer-standard.css?v=20260724-black-friday-popup-v2">
   <style>
     :root {
@@ -43,6 +128,93 @@
 
     a {
       color: inherit;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, .97);
+      backdrop-filter: blur(14px);
+    }
+
+    .audit-header-inner {
+      width: min(1344px, calc(100% - 48px));
+      min-height: 90px;
+      display: grid;
+      grid-template-columns: minmax(180px, 1fr) auto minmax(180px, 1fr);
+      gap: 34px;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    .audit-header-logo {
+      display: inline-flex;
+      align-items: center;
+      justify-self: start;
+      text-decoration: none;
+    }
+
+    .audit-header-logo img {
+      display: block;
+      width: 178px;
+      height: auto;
+    }
+
+    .audit-header-trust {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      color: #111;
+      font-size: 15px;
+      font-weight: 650;
+      white-space: nowrap;
+    }
+
+    .audit-header-trust-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .audit-header-trust-item + .audit-header-trust-item::before {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10b981;
+      content: "";
+    }
+
+    .audit-header-cta {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      justify-self: end;
+      padding: 12px 25px;
+      border-radius: 10px;
+      background: #ffbf24;
+      box-shadow: 0 8px 18px rgba(254, 191, 36, .2);
+      color: #0b0b0b;
+      font-size: 16px;
+      font-weight: 850;
+      line-height: 1;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .audit-header-cta:hover {
+      transform: translateY(-1px);
+      background: #fecb3d;
+      box-shadow: 0 10px 22px rgba(254, 191, 36, .28);
+    }
+
+    .audit-header-cta:focus-visible {
+      outline: 3px solid rgba(28, 140, 111, .35);
+      outline-offset: 3px;
     }
 
     .access-hero,
@@ -262,6 +434,17 @@
     }
 
     @media (max-width: 820px) {
+      .audit-header-inner {
+        width: min(100% - 32px, 1180px);
+        min-height: 78px;
+        grid-template-columns: 1fr auto;
+        gap: 20px;
+      }
+
+      .audit-header-trust {
+        display: none;
+      }
+
       .access-hero,
       .grid {
         grid-template-columns: 1fr;
@@ -271,6 +454,25 @@
         padding-top: 54px;
       }
     }
+
+    @media (max-width: 520px) {
+      .audit-header-inner {
+        width: calc(100% - 24px);
+        min-height: 70px;
+        gap: 12px;
+      }
+
+      .audit-header-logo img {
+        width: 132px;
+      }
+
+      .audit-header-cta {
+        min-height: 42px;
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -278,37 +480,18 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KR4TR7B"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <header class="site-header">
-    <div class="mode-switch">
-      <div class="mode-inner">
-        <span class="mode-label">Explore FeedOps as</span>
-        <div class="mode-controls">
-          <div class="mode-options" aria-label="Audience modes">
-            <a class="mode-option is-active" href="../">Performance expert</a>
-            <a class="mode-option" href="../company/">Executive mode</a>
-            <a class="mode-option" href="../shopping-feed-agency/">Media agency</a>
-          </div>
-          <a class="mode-login" href="../contact-us/">Contact</a>
-          <a class="mode-login" href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>
-        </div>
-      </div>
-    </div>
-    <nav class="nav" aria-label="Primary navigation">
-      <a class="brand" href="../" aria-label="FeedOps home">
-        <img src="../assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4-300x110.png" alt="FeedOps" width="150" height="55">
+  <header class="site-header audit-page-header" data-feedops-custom-header>
+    <div class="audit-header-inner">
+      <a class="audit-header-logo" href="../" aria-label="FeedOps home">
+        <img src="../assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4-300x110.png" alt="FeedOps" width="300" height="110">
       </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">Menu</button>
-      <div class="nav-links" id="primary-menu">
-        <a href="../">System</a>
-        <a href="../product-feed-management/">Operations</a>
-        <a href="../what-is-a-google-shopping-feed/">Sources</a>
-        <a href="../guide/google-shopping-feed-optimization-guide/">Channels</a>
-        <a href="../free-google-shopping-feed-audit/">Playbook</a>
-        <a href="../pricing/">Pricing</a>
-        <a href="../faq/">FAQ</a>
+      <div class="audit-header-trust" aria-label="Audit trust points">
+        <span class="audit-header-trust-item">100% free</span>
+        <span class="audit-header-trust-item">Read-only</span>
+        <span class="audit-header-trust-item">No Google Ads access</span>
       </div>
-      <a class="nav-cta" href="../book-live-demo/">Book a demo</a>
-    </nav>
+      <a class="audit-header-cta" href="../free-google-shopping-feed-audit/free-audit-form/">Start free audit</a>
+    </div>
   </header>
 
   <main>
@@ -459,7 +642,6 @@
       </div>
     </div>
   </footer>
-<script src="../header-standard.js?v=20260724-global-navigation-v3" data-site-root="../" defer></script>
-  <script src="../footer-standard.js?v=20260727-black-friday-session-dismiss-v3" data-site-root="../" defer></script>
+  <script src="../footer-standard.js?v=20260817-audit-access-no-black-friday" data-site-root="../" data-hide-black-friday="true" defer></script>
 </body>
 </html>

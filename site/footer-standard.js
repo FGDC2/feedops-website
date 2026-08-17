@@ -1,6 +1,7 @@
 (function () {
   var script = document.currentScript;
   var root = script && script.dataset ? script.dataset.siteRoot || "/" : "/";
+  var hideBlackFriday = !!(script && script.dataset && script.dataset.hideBlackFriday === "true");
   window.feedopsInstallStandardFooter = installFooter;
 
   function href(path) {
@@ -153,7 +154,7 @@
     document.querySelectorAll(".feedops-black-friday-popup").forEach(function (popup) {
       popup.remove();
     });
-    if (!isBlackFridayPage() && !isBlackFridayDismissed()) {
+    if (!hideBlackFriday && !isBlackFridayPage() && !isBlackFridayDismissed()) {
       document.body.insertAdjacentHTML("beforeend", blackFridayPromo());
       var dismissButton = document.querySelector(".feedops-black-friday-dismiss");
       if (dismissButton) {

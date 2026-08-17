@@ -55,7 +55,6 @@
       href="../../assets/feedops.com/wp-content/uploads/2022/05/Feedops-staggered-logo-Final-2-60x60.png"
       sizes="32x32"
     />
-    <link rel="stylesheet" href="../../header-standard.css?v=20260724-global-navigation-v3" />
     <link rel="stylesheet" href="../../footer-standard.css?v=20260724-black-friday-popup-v2" />
     <link
       rel="stylesheet"
@@ -145,35 +144,10 @@
         min-height: 100vh;
       }
 
-      .simple-header {
-        border-bottom: 1px solid rgba(216, 226, 239, 0.85);
-        background: rgba(255, 255, 255, 0.94);
-        backdrop-filter: blur(10px);
-      }
-
       .hero-inner,
       .steps-inner {
         width: min(var(--content-width), calc(100% - 40px));
         margin: 0 auto;
-      }
-
-      .simple-header-inner {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        min-height: 68px;
-        padding: 12px 22px;
-      }
-
-      .brand-mark {
-        display: inline-flex;
-        align-items: center;
-      }
-
-      .brand-mark img {
-        width: 128px;
-        height: auto;
       }
 
       .hero {
@@ -869,15 +843,6 @@
           width: min(100% - 24px, var(--content-width));
         }
 
-        .simple-header-inner {
-          min-height: 60px;
-          padding: 10px 18px;
-        }
-
-        .brand-mark img {
-          width: 116px;
-        }
-
         .hero {
           padding: 18px 0 24px;
         }
@@ -949,7 +914,7 @@
       }
     </style>
   </head>
-  <body>
+  <body data-feedops-hide-standard-header>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KR4TR7B"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -1023,8 +988,6 @@
     </svg>
 
     <div class="site-shell">
-      <header class="site-header"></header>
-
       <main class="hero">
         <div class="hero-inner">
           <div class="hero-copy">
@@ -1397,7 +1360,6 @@
         loadHubSpotForm();
       })();
     </script>
-    <script src="../../header-standard.js?v=20260724-global-navigation-v3" data-site-root="../../" data-header-mode="utility" defer></script>
-    <script src="../../footer-standard.js?v=20260727-black-friday-session-dismiss-v3" data-site-root="../../" defer></script>
+    <script src="../../footer-standard.js?v=20260817-audit-form-no-promo" data-site-root="../../" data-hide-black-friday="true" defer></script>
 </body>
 </html>
