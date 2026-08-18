@@ -1336,6 +1336,11 @@
             },
             onFormSubmitted: function () {
               setSubmittingState();
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({
+                event: 'FeedOps_Account_Created',
+                form_source: 'hubspot'
+              });
             },
           });
         }

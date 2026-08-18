@@ -1,0 +1,13 @@
+{
+  "name": "feedops-website-tracking-tests",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:conversion:static": "node scripts/test-conversion-tracking.mjs --mode=static",
+    "test:conversion:synthetic": "ALLOW_SYNTHETIC_EVENTS=1 node scripts/test-conversion-tracking.mjs --mode=synthetic",
+    "test:conversion:live": "ALLOW_LIVE_SUBMISSION=1 node scripts/test-conversion-tracking.mjs --mode=live"
+  },
+  "devDependencies": {
+    "playwright": "^1.55.0"
+  }
+}

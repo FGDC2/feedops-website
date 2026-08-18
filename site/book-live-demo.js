@@ -31,10 +31,9 @@
 
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
-      event: "meeting_booked",
+      event: "FeedOps_Meeting_Booked",
       meeting_name: "feed_strategy_call",
-      meeting_source: "hubspot",
-      email: contact.email
+      meeting_source: "hubspot"
     });
 
     loadReferralScript();

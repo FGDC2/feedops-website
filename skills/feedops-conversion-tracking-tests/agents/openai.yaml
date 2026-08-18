@@ -1,0 +1,4 @@
+interface:
+  display_name: "FeedOps Conversion Tracking Tests"
+  short_description: "Test FeedOps HubSpot and GA4 conversions"
+  default_prompt: "Use $feedops-conversion-tracking-tests to test or repair FeedOps conversion tracking end to end."

@@ -40,3 +40,29 @@ After rerunning the importer, run:
 ```bash
 node scripts/fix-local-links.mjs
 ```
+
+## Conversion tracking tests
+
+Install the test dependency with `npm install`, then run the safe static check:
+
+```bash
+npm run test:conversion:static
+```
+
+The static check validates the website event emissions and the currently published GTM container. It will fail until all three GA4 event tags are published in GTM.
+
+Synthetic GA4 checks are opt-in because they send marked test events to the live property:
+
+```bash
+npm run test:conversion:synthetic
+```
+
+Synthetic and live browser runs use these UTM defaults: `utm_source=test-script-source`, `utm_medium=test-script-medium`, and `utm_campaign=test-script-campaign`. Override them with `--utm-source`, `--utm-medium`, and `--utm-campaign` when needed.
+
+Live checks open a browser and wait for a manually submitted, controlled test form or meeting. They require `ALLOW_LIVE_SUBMISSION=1` and a flow argument:
+
+```bash
+ALLOW_LIVE_SUBMISSION=1 node scripts/test-conversion-tracking.mjs --mode=live --flow=contact
+ALLOW_LIVE_SUBMISSION=1 node scripts/test-conversion-tracking.mjs --mode=live --flow=audit
+ALLOW_LIVE_SUBMISSION=1 node scripts/test-conversion-tracking.mjs --mode=live --flow=meeting
+```

@@ -940,7 +940,14 @@
           portalId: "20083726",
           formId: "f6011325-2fe8-4cbf-8640-ba2ef4d67e00",
           target: "#hubspot-contact-form",
-          redirectUrl: "https://feedops.com/contact_us/thanks-for-reaching-out/"
+          redirectUrl: "https://feedops.com/contact_us/thanks-for-reaching-out/",
+          onFormSubmitted: function () {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+              event: "FeedOps_Contact_Form",
+              form_source: "hubspot"
+            });
+          }
         });
         if (shell) shell.classList.remove("is-loading");
       }
