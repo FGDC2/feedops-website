@@ -1133,6 +1133,21 @@
         var auditConversionSent = false;
         var conversionState = window.__feedOpsConversionState = window.__feedOpsConversionState || {};
 
+        function claimConversion(key) {
+          var now = Date.now();
+          var storageKey = 'feedops_conversion_' + key;
+          if (conversionState[key] && now - conversionState[key] < 10000) return false;
+          try {
+            var previous = Number(window.sessionStorage.getItem(storageKey) || 0);
+            if (previous && now - previous < 10000) return false;
+            window.sessionStorage.setItem(storageKey, String(now));
+          } catch (error) {
+            // Continue with the in-memory guard when storage is unavailable.
+          }
+          conversionState[key] = now;
+          return true;
+        }
+
         function setPlaceholder(field, value) {
           if (!field) return;
           if (!field.getAttribute('placeholder')) {
@@ -1338,10 +1353,8 @@
             },
             onFormSubmitted: function () {
               setSubmittingState();
-              var now = Date.now();
-              if (auditConversionSent || (conversionState.audit && now - conversionState.audit < 5000)) return;
+              if (auditConversionSent || !claimConversion('audit')) return;
               auditConversionSent = true;
-              conversionState.audit = now;
               window.dataLayer = window.dataLayer || [];
               window.dataLayer.push({
                 event: 'FeedOps_Account_Created',

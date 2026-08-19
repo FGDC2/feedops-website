@@ -1,6 +1,21 @@
 (function () {
   var meetingConversionSent = false;
   var conversionState = window.__feedOpsConversionState = window.__feedOpsConversionState || {};
+
+  function claimConversion(key) {
+    var now = Date.now();
+    var storageKey = "feedops_conversion_" + key;
+    if (conversionState[key] && now - conversionState[key] < 10000) return false;
+    try {
+      var previous = Number(window.sessionStorage.getItem(storageKey) || 0);
+      if (previous && now - previous < 10000) return false;
+      window.sessionStorage.setItem(storageKey, String(now));
+    } catch (error) {
+      // Continue with the in-memory guard when storage is unavailable.
+    }
+    conversionState[key] = now;
+    return true;
+  }
   var backLink = document.querySelector("[data-history-back]");
   if (backLink) {
     backLink.addEventListener("click", function (event) {
@@ -15,12 +30,10 @@
     if (event.origin !== "https://meetings.hubspot.com" || !event.data.meetingBookSucceeded) {
       return;
     }
-    var now = Date.now();
-    if (meetingConversionSent || (conversionState.meeting && now - conversionState.meeting < 5000)) {
+    if (meetingConversionSent || !claimConversion("meeting")) {
       return;
     }
     meetingConversionSent = true;
-    conversionState.meeting = now;
 
     var payload = event.data.meetingsPayload || {};
     var response = payload.bookingResponse || {};

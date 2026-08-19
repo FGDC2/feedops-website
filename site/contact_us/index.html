@@ -936,6 +936,21 @@
       var contactConversionSent = false;
       var conversionState = window.__feedOpsConversionState = window.__feedOpsConversionState || {};
 
+      function claimConversion(key) {
+        var now = Date.now();
+        var storageKey = "feedops_conversion_" + key;
+        if (conversionState[key] && now - conversionState[key] < 10000) return false;
+        try {
+          var previous = Number(window.sessionStorage.getItem(storageKey) || 0);
+          if (previous && now - previous < 10000) return false;
+          window.sessionStorage.setItem(storageKey, String(now));
+        } catch (error) {
+          // Continue with the in-memory guard when storage is unavailable.
+        }
+        conversionState[key] = now;
+        return true;
+      }
+
       function createForm() {
         if (!window.hbspt || !window.hbspt.forms || !target) return;
         window.hbspt.forms.create({
@@ -944,10 +959,8 @@
           target: "#hubspot-contact-form",
           redirectUrl: "https://feedops.com/contact_us/thanks-for-reaching-out/",
           onFormSubmitted: function () {
-            var now = Date.now();
-            if (contactConversionSent || (conversionState.contact && now - conversionState.contact < 5000)) return;
+            if (contactConversionSent || !claimConversion("contact")) return;
             contactConversionSent = true;
-            conversionState.contact = now;
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
               event: "FeedOps_Contact_Form",
