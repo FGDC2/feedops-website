@@ -1,5 +1,6 @@
 (function () {
   var meetingConversionSent = false;
+  var conversionState = window.__feedOpsConversionState = window.__feedOpsConversionState || {};
   var backLink = document.querySelector("[data-history-back]");
   if (backLink) {
     backLink.addEventListener("click", function (event) {
@@ -14,10 +15,12 @@
     if (event.origin !== "https://meetings.hubspot.com" || !event.data.meetingBookSucceeded) {
       return;
     }
-    if (meetingConversionSent) {
+    var now = Date.now();
+    if (meetingConversionSent || (conversionState.meeting && now - conversionState.meeting < 5000)) {
       return;
     }
     meetingConversionSent = true;
+    conversionState.meeting = now;
 
     var payload = event.data.meetingsPayload || {};
     var response = payload.bookingResponse || {};

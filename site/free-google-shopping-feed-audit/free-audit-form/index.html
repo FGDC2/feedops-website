@@ -1131,6 +1131,7 @@
         var loaded = false;
         var submitStateTimer = null;
         var auditConversionSent = false;
+        var conversionState = window.__feedOpsConversionState = window.__feedOpsConversionState || {};
 
         function setPlaceholder(field, value) {
           if (!field) return;
@@ -1337,8 +1338,10 @@
             },
             onFormSubmitted: function () {
               setSubmittingState();
-              if (auditConversionSent) return;
+              var now = Date.now();
+              if (auditConversionSent || (conversionState.audit && now - conversionState.audit < 5000)) return;
               auditConversionSent = true;
+              conversionState.audit = now;
               window.dataLayer = window.dataLayer || [];
               window.dataLayer.push({
                 event: 'FeedOps_Account_Created',

@@ -934,6 +934,7 @@
       var target = document.getElementById("hubspot-contact-form");
       var loaded = false;
       var contactConversionSent = false;
+      var conversionState = window.__feedOpsConversionState = window.__feedOpsConversionState || {};
 
       function createForm() {
         if (!window.hbspt || !window.hbspt.forms || !target) return;
@@ -943,8 +944,10 @@
           target: "#hubspot-contact-form",
           redirectUrl: "https://feedops.com/contact_us/thanks-for-reaching-out/",
           onFormSubmitted: function () {
-            if (contactConversionSent) return;
+            var now = Date.now();
+            if (contactConversionSent || (conversionState.contact && now - conversionState.contact < 5000)) return;
             contactConversionSent = true;
+            conversionState.contact = now;
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
               event: "FeedOps_Contact_Form",
