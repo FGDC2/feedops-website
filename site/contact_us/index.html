@@ -933,6 +933,7 @@
       var shell = document.querySelector(".hubspot-form-shell");
       var target = document.getElementById("hubspot-contact-form");
       var loaded = false;
+      var contactConversionSent = false;
 
       function createForm() {
         if (!window.hbspt || !window.hbspt.forms || !target) return;
@@ -942,6 +943,8 @@
           target: "#hubspot-contact-form",
           redirectUrl: "https://feedops.com/contact_us/thanks-for-reaching-out/",
           onFormSubmitted: function () {
+            if (contactConversionSent) return;
+            contactConversionSent = true;
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
               event: "FeedOps_Contact_Form",

@@ -43,6 +43,10 @@ function pass(message) {
 }
 
 function arg(name, fallback = null) {
+  const inlinePrefix = `--${name}=`;
+  const inline = process.argv.find((value) => value.startsWith(inlinePrefix));
+  if (inline) return inline.slice(inlinePrefix.length) || fallback;
+
   const index = process.argv.indexOf(`--${name}`);
   return index === -1 ? fallback : process.argv[index + 1] || fallback;
 }
@@ -57,6 +61,10 @@ function utmTags() {
     medium: arg("utm-medium", DEFAULT_UTM.medium),
     campaign: arg("utm-campaign", DEFAULT_UTM.campaign),
   };
+}
+
+function debugSyntheticEvents() {
+  return arg("debug", "true") !== "false";
 }
 
 function pageUrl(path) {
@@ -122,9 +130,16 @@ async function staticMode() {
 }
 
 function ga4EventFromRequest(request) {
-  if (!request.url().includes("google-analytics.com/g/collect")) return null;
+  const requestUrl = new URL(request.url());
+  const isGa4Collection = requestUrl.pathname === "/g/collect" && (
+    requestUrl.hostname === "google-analytics.com" ||
+    requestUrl.hostname === "www.google-analytics.com" ||
+    requestUrl.hostname === "analytics.google.com" ||
+    requestUrl.hostname.endsWith(".doubleclick.net")
+  );
+  if (!isGa4Collection) return null;
 
-  const values = new URL(request.url()).searchParams;
+  const values = requestUrl.searchParams;
   if (request.method() === "POST" && request.postData()) {
     for (const [key, value] of new URLSearchParams(request.postData())) {
       values.set(key, value);
@@ -134,7 +149,7 @@ function ga4EventFromRequest(request) {
   return {
     measurementId: values.get("tid"),
     event: values.get("en"),
-    debugMode: values.get("ep.debug_mode"),
+    debugMode: values.get("ep.debug_mode") ?? values.get("epn.debug_mode"),
   };
 }
 
@@ -172,20 +187,29 @@ async function syntheticMode() {
       ? pass(`synthetic run retained ${queryKey}=${value}`)
       : fail(`synthetic run lost ${queryKey}=${value}`);
   }
-  await page.evaluate((events) => {
+  await page.evaluate(({ events, debug }) => {
     window.dataLayer = window.dataLayer || [];
     for (const event of events) {
-      window.dataLayer.push({ event, test_run: true, debug_mode: 1 });
+      const payload = { event, test_run: true };
+      if (debug) payload.debug_mode = true;
+      window.dataLayer.push(payload);
     }
-  }, EXPECTED_EVENTS);
+  }, { events: EXPECTED_EVENTS, debug: debugSyntheticEvents() });
   await page.waitForTimeout(5000);
   await browser.close();
+
+  pass(`synthetic events sent with debug_mode=${debugSyntheticEvents()}`);
 
   for (const event of EXPECTED_EVENTS) {
     const request = ga4Events.find((candidate) => candidate.event === event && candidate.measurementId === MEASUREMENT_ID);
     request
       ? pass(`synthetic ${event} reached GA4 ${MEASUREMENT_ID}`)
       : fail(`synthetic ${event} did not produce a GA4 request for ${MEASUREMENT_ID}`);
+    if (debugSyntheticEvents()) {
+      request?.debugMode === "true"
+        ? pass(`synthetic ${event} was marked for GA4 DebugView`)
+        : fail(`synthetic ${event} reached GA4 without a usable debug_mode=true signal`);
+    }
   }
 }
 

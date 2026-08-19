@@ -1130,6 +1130,7 @@
         var target = document.getElementById('audit-hubspot-form');
         var loaded = false;
         var submitStateTimer = null;
+        var auditConversionSent = false;
 
         function setPlaceholder(field, value) {
           if (!field) return;
@@ -1336,6 +1337,8 @@
             },
             onFormSubmitted: function () {
               setSubmittingState();
+              if (auditConversionSent) return;
+              auditConversionSent = true;
               window.dataLayer = window.dataLayer || [];
               window.dataLayer.push({
                 event: 'FeedOps_Account_Created',

@@ -1,4 +1,5 @@
 (function () {
+  var meetingConversionSent = false;
   var backLink = document.querySelector("[data-history-back]");
   if (backLink) {
     backLink.addEventListener("click", function (event) {
@@ -13,6 +14,10 @@
     if (event.origin !== "https://meetings.hubspot.com" || !event.data.meetingBookSucceeded) {
       return;
     }
+    if (meetingConversionSent) {
+      return;
+    }
+    meetingConversionSent = true;
 
     var payload = event.data.meetingsPayload || {};
     var response = payload.bookingResponse || {};
