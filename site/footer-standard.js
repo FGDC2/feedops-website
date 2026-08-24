@@ -1,7 +1,6 @@
 (function () {
   var script = document.currentScript;
   var root = script && script.dataset ? script.dataset.siteRoot || "/" : "/";
-  var hideBlackFriday = !!(script && script.dataset && script.dataset.hideBlackFriday === "true");
   window.feedopsInstallStandardFooter = installFooter;
 
   function href(path) {
@@ -101,45 +100,6 @@
     ].join("");
   }
 
-  function blackFridayPromo() {
-    return [
-      '<aside class="feedops-black-friday-popup" role="region" aria-label="Black Friday retailer promotion">',
-      '  <button class="feedops-black-friday-dismiss" type="button" aria-label="Dismiss Black Friday promotion">',
-      '    <span aria-hidden="true">×</span>',
-      '  </button>',
-      '  <div class="feedops-black-friday-kicker">Australian retailers only</div>',
-      '  <strong>Get Black Friday ready.</strong>',
-      '  <p>Eligible retailers can claim up to three free FeedOps services for Google Shopping and local product visibility.</p>',
-      '  <a href="' + href("black-friday/") + '">View the Black Friday deal <span aria-hidden="true">→</span></a>',
-      '</aside>'
-    ].join("");
-  }
-
-  function isBlackFridayPage() {
-    var path = (window.location.pathname || "/")
-      .replace(/\/index\.html$/, "/")
-      .replace(/\/+$/, "/");
-    return path === "/black-friday/" || path.endsWith("/site/black-friday/");
-  }
-
-  var blackFridayDismissedKey = "feedops-black-friday-dismissed";
-
-  function isBlackFridayDismissed() {
-    try {
-      return window.sessionStorage.getItem(blackFridayDismissedKey) === "true";
-    } catch (error) {
-      return false;
-    }
-  }
-
-  function rememberBlackFridayDismissal() {
-    try {
-      window.sessionStorage.setItem(blackFridayDismissedKey, "true");
-    } catch (error) {
-      // Keep the dismiss button working when browser storage is unavailable.
-    }
-  }
-
   function installFooter() {
     document.querySelectorAll([
       "#feedops-standard-footer",
@@ -154,17 +114,6 @@
     document.querySelectorAll(".feedops-black-friday-popup").forEach(function (popup) {
       popup.remove();
     });
-    if (!hideBlackFriday && !isBlackFridayPage() && !isBlackFridayDismissed()) {
-      document.body.insertAdjacentHTML("beforeend", blackFridayPromo());
-      var dismissButton = document.querySelector(".feedops-black-friday-dismiss");
-      if (dismissButton) {
-        dismissButton.addEventListener("click", function () {
-          rememberBlackFridayDismissal();
-          var popup = dismissButton.closest(".feedops-black-friday-popup");
-          if (popup) popup.remove();
-        });
-      }
-    }
     window.feedopsStandardFooterInstalled = true;
   }
 
