@@ -390,7 +390,7 @@ function standardHeaderForPage(page) {
     '<header id="feedops-standard-header" class="feedops-header">',
     '  <nav class="feedops-nav" aria-label="Main navigation">',
     `    <a class="feedops-logo" href="${href("")}" aria-label="FeedOps home">`,
-    `      <img src="${href("assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4-300x110.png")}" alt="FeedOps" width="300" height="110">`,
+    `      <img src="${href("assets/feedops-logo-300.webp")}" alt="FeedOps" width="300" height="110">`,
     '    </a>',
     '    <div class="feedops-desktop-menu" aria-label="Primary links">',
     `      <a class="feedops-nav-link" href="${href("product-feed-platform/")}">Platform</a>`,

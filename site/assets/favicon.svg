@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#ffffff" stroke="#d9e2ec" stroke-width="2"/>
+  <image href="./assets/feedops-logo.png" x="7" y="20.5" width="50" height="18.28" preserveAspectRatio="xMidYMid meet"/>
+</svg>

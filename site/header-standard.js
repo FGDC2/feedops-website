@@ -1,6 +1,8 @@
 (function () {
   var script = document.currentScript;
-  var root = script && script.dataset ? script.dataset.siteRoot || "/" : "/";
+  var root = script && script.dataset && Object.prototype.hasOwnProperty.call(script.dataset, "siteRoot")
+    ? script.dataset.siteRoot
+    : "/";
   window.feedopsInstallStandardHeader = installHeader;
 
   function href(path) {
@@ -53,7 +55,7 @@
       '<header id="feedops-standard-header" class="feedops-header">',
       '  <nav class="feedops-nav" aria-label="Main navigation">',
       '    <a class="feedops-logo" href="' + href("") + '" aria-label="FeedOps home">',
-      '      <img src="' + href("assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4-300x110.png") + '" alt="FeedOps" width="300" height="110">',
+      '      <img src="' + href("assets/feedops-logo-300.webp") + '" alt="FeedOps" width="300" height="110">',
       '    </a>',
       desktopMenu(),
       '    <div class="feedops-nav-actions">',

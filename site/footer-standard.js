@@ -1,6 +1,8 @@
 (function () {
   var script = document.currentScript;
-  var root = script && script.dataset ? script.dataset.siteRoot || "/" : "/";
+  var root = script && script.dataset && Object.prototype.hasOwnProperty.call(script.dataset, "siteRoot")
+    ? script.dataset.siteRoot
+    : "/";
   window.feedopsInstallStandardFooter = installFooter;
 
   function href(path) {
@@ -20,7 +22,7 @@
       '  <div class="footer-inner">',
       '    <div class="footer-brand">',
       '      <a href="' + href("") + '" aria-label="FeedOps home">',
-      '        <img src="' + href("assets/feedops.com/wp-content/uploads/2022/12/Feedops-logo-Final-2-4-300x110.png") + '" alt="FeedOps" width="300" height="110">',
+      '        <img src="' + href("assets/feedops-logo-300.webp") + '" alt="FeedOps" width="300" height="110">',
       "      </a>",
       "      <p>Product feed optimisation software, feed strategy, and expert support for ecommerce teams.</p>",
       "    </div>",
