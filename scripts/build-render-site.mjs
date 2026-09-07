@@ -541,6 +541,12 @@ for (const page of pages) {
   copyPage(page);
 }
 
+copyStaticTree(
+  join(sourceRoot, "product-feed-platform"),
+  join(outputRoot, "product-feed-platform"),
+  { skipHtml: true }
+);
+
 copyStaticTree(join(sourceRoot, "help"), join(outputRoot, "help"), { skipHtml: true });
 
 const helpFallbackPageCount = await createHelpArticleFallbackPages();
