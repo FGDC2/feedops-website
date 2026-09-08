@@ -1,0 +1,931 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+    new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+    "https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,"script","dataLayer","GTM-KR4TR7B");
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FeedOps Integrations | Connect Your Data to Every Channel</title>
+  <meta name="description" content="Connect ecommerce, ERP, PIM and supplier data to FeedOps, then distribute accurate product information across advertising, marketplaces and AI shopping.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://feedops.com/integrations/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FeedOps">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:title" content="FeedOps Integrations | Connect Your Data to Every Channel">
+  <meta property="og:description" content="Connect ecommerce, ERP, PIM and supplier data to FeedOps, then distribute accurate product information across advertising, marketplaces and AI shopping.">
+  <meta property="og:url" content="https://feedops.com/integrations/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="FeedOps Integrations | Connect Your Data to Every Channel">
+  <meta name="twitter:description" content="Connect ecommerce, ERP, PIM and supplier data to FeedOps, then distribute accurate product information across advertising, marketplaces and AI shopping.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../header-standard.css?v=20260907-integrations-nav-v1">
+  <link rel="stylesheet" href="../footer-standard.css?v=20260724-black-friday-popup-v2">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://feedops.com/integrations/#webpage",
+        "url": "https://feedops.com/integrations/",
+        "name": "FeedOps Integrations | Connect Your Data to Every Channel",
+        "description": "Connect ecommerce, ERP, PIM and supplier data to FeedOps, then distribute accurate product information across advertising, marketplaces and AI shopping.",
+        "inLanguage": "en-AU",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://feedops.com/#website",
+          "url": "https://feedops.com/",
+          "name": "FeedOps"
+        },
+        "breadcrumb": { "@id": "https://feedops.com/integrations/#breadcrumb" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://feedops.com/integrations/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "FeedOps", "item": "https://feedops.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Integrations", "item": "https://feedops.com/integrations/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://feedops.com/integrations/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can FeedOps combine data from several systems?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. FeedOps can match and merge product information from ecommerce platforms, ERP and PIM systems, suppliers, APIs, files and other sources using agreed identifiers and source-precedence rules." }
+          },
+          {
+            "@type": "Question",
+            "name": "What connection methods does FeedOps support?",
+            "acceptedAnswer": { "@type": "Answer", "text": "FeedOps supports native platform connectors, XML, CSV and TSV files, SFTP, existing feed URLs, and bespoke REST or GraphQL integrations. API push, webhooks and event-driven updates are available where the source supports them; destinations may use a direct connection or a managed scheduled feed." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can price and inventory update separately from product content?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Product information, pricing and availability can follow different processing schedules." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does FeedOps replace our ERP, PIM or ecommerce platform?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Those systems remain authoritative. FeedOps prepares and manages their data for downstream destinations." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can FeedOps build a custom connection?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Bespoke sources and destinations can be assessed and scoped when a standard connection is unavailable." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can FeedOps synchronise marketplace orders and tracking?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes, as an optional capability for supported platforms. FeedOps can send marketplace orders to an ecommerce platform and return tracking or shipping information to the marketplace." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can integrations be tested before launch?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. FeedOps supports sandbox testing so source connections, mappings, feed rules, transformed data and destination outputs can be validated before production cutover." }
+          },
+          {
+            "@type": "Question",
+            "name": "Who maintains the integrations after launch?",
+            "acceptedAnswer": { "@type": "Answer", "text": "FeedOps monitors and maintains the managed connections, feed configurations and destination requirements as part of the ongoing service." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --integrations-ink: #071436;
+      --integrations-body: #344b73;
+      --integrations-green: #0d765f;
+      --integrations-green-bright: #0fb66f;
+      --integrations-green-soft: #eaf8f2;
+      --integrations-yellow: #ffca28;
+      --integrations-line: #cfdae8;
+      --integrations-soft: #f5f8fb;
+      --integrations-white: #ffffff;
+      --integrations-shadow: 0 24px 70px rgba(7, 20, 54, .1);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 116px; }
+    body {
+      margin: 0;
+      color: var(--integrations-ink);
+      background: #fff;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+    a { color: inherit; }
+    button { font: inherit; }
+    .integrations-page { overflow: hidden; }
+    .integrations-shell { width: min(1540px, calc(100% - 96px)); margin: 0 auto; }
+    .integrations-eyebrow {
+      margin: 0 0 16px;
+      color: var(--integrations-green);
+      font-size: .8rem;
+      font-weight: 850;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    .integrations-page h1,
+    .integrations-page h2,
+    .integrations-page h3,
+    .integrations-page p { margin-top: 0; }
+    .integrations-page h1 {
+      max-width: 790px;
+      margin-bottom: 20px;
+      color: var(--integrations-ink);
+      font-size: clamp(48px, 4.25vw, 72px);
+      line-height: 1.04;
+      letter-spacing: -.048em;
+    }
+    .integrations-page h2 {
+      margin-bottom: 18px;
+      color: var(--integrations-ink);
+      font-size: clamp(2.15rem, 4vw, 3.8rem);
+      line-height: 1.02;
+      letter-spacing: -.042em;
+    }
+    .integrations-page h3 {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+      line-height: 1.25;
+    }
+    .integrations-lead {
+      max-width: 770px;
+      margin-bottom: 0;
+      color: var(--integrations-body);
+      font-size: clamp(1.05rem, 1.55vw, 1.25rem);
+      line-height: 1.65;
+    }
+    .integrations-button {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 22px;
+      border: 1px solid var(--integrations-ink);
+      border-radius: 8px;
+      color: var(--integrations-ink);
+      background: #fff;
+      font-size: .95rem;
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+    .integrations-button:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(7, 20, 54, .13); }
+    .integrations-button:focus-visible,
+    .integrations-filter:focus-visible,
+    .integrations-selector-card:focus-visible,
+    .integrations-faq summary:focus-visible {
+      outline: 3px solid rgba(255, 202, 40, .72);
+      outline-offset: 4px;
+    }
+    .integrations-button-primary { border-color: var(--integrations-yellow); background: var(--integrations-yellow); }
+    .integrations-button-primary:hover { border-color: #f2b900; background: #f2b900; }
+    .integrations-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .integrations-hero {
+      position: relative;
+      padding: 96px 0 86px;
+      background:
+        radial-gradient(circle at 86% 12%, rgba(255, 202, 40, .23), transparent 28%),
+        radial-gradient(circle at 12% 88%, rgba(15, 182, 111, .12), transparent 30%),
+        linear-gradient(135deg, #fff 0%, #f8fbfa 100%);
+    }
+    .integrations-hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.07fr) minmax(580px, .93fr);
+      gap: 62px;
+      align-items: center;
+    }
+    .integrations-hero h1 { max-width: 790px; }
+    .integrations-hero-visual {
+      overflow: visible;
+      display: grid;
+      place-items: center;
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+    .integrations-hero-visual picture {
+      width: 100%;
+      display: grid;
+      place-items: center;
+    }
+    .integrations-hero-visual img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+      border-radius: 14px;
+      object-fit: contain;
+      object-position: center;
+    }
+    .integrations-journey {
+      padding: 22px;
+      border: 1px solid var(--integrations-line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.94);
+      box-shadow: var(--integrations-shadow);
+    }
+    .integrations-journey-row {
+      display: grid;
+      grid-template-columns: 1fr 42px 1.15fr 42px 1fr;
+      align-items: stretch;
+    }
+    .integrations-journey-node {
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 22px 18px;
+      border: 1px solid var(--integrations-line);
+      border-radius: 14px;
+      background: var(--integrations-soft);
+    }
+    .integrations-journey-node.is-feedops {
+      border-color: #126750;
+      color: #fff;
+      background: linear-gradient(150deg, #0a3d32 0%, #126750 100%);
+    }
+    .integrations-journey-icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      color: var(--integrations-green);
+      background: var(--integrations-green-soft);
+    }
+    .is-feedops .integrations-journey-icon { color: #fff; background: rgba(255,255,255,.14); }
+    .integrations-journey-icon svg { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .integrations-journey-node strong { display: block; margin: 20px 0 6px; font-size: 1.04rem; }
+    .integrations-journey-node p { margin-bottom: 0; color: var(--integrations-body); font-size: .85rem; line-height: 1.5; }
+    .is-feedops p { color: rgba(255,255,255,.8); }
+    .integrations-mini-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
+    .integrations-mini-list span { padding: 5px 8px; border-radius: 999px; color: #36516d; background: #fff; font-size: .68rem; font-weight: 750; }
+    .is-feedops .integrations-mini-list span { color: #fff; background: rgba(255,255,255,.13); }
+    .integrations-journey-arrow { display: grid; place-items: center; color: var(--integrations-green-bright); font-size: 1.8rem; font-weight: 500; }
+    .integrations-selector { position: relative; z-index: 2; padding: 72px 0 28px; background: #fff; }
+    .integrations-selector-header {
+      position: relative;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 32px;
+      padding-top: 32px;
+      margin-bottom: 30px;
+    }
+    .integrations-selector-header h2 { margin-bottom: 12px; }
+    .integrations-selector-header .integrations-lead { max-width: 830px; }
+    .integrations-progress {
+      flex: 0 0 auto;
+      padding-bottom: 8px;
+      color: #63779b;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .integrations-progress span { margin: 0 7px; color: var(--integrations-green); }
+    .integrations-selector-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 46px;
+      height: 3px;
+      border-radius: 999px;
+      background: var(--integrations-green-bright);
+    }
+    .integrations-selector-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .integrations-selector-card {
+      min-height: 278px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 26px;
+      border: 1px solid var(--integrations-line);
+      border-radius: 16px;
+      color: inherit;
+      background: #fff;
+      box-shadow: none;
+      text-decoration: none;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .integrations-selector-card:hover { transform: translateY(-4px); border-color: var(--integrations-green); }
+    .integrations-selector-card h3 { margin-bottom: 10px; font-size: 1.42rem; letter-spacing: -.025em; }
+    .integrations-selector-card p { max-width: 470px; margin-bottom: 26px; color: var(--integrations-body); font-size: 1rem; line-height: 1.55; }
+    .integrations-selector-icon {
+      width: 70px;
+      height: 70px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 22px;
+      border-radius: 12px;
+      color: var(--integrations-green);
+      background: var(--integrations-green-soft);
+    }
+    .integrations-selector-card:nth-child(2) .integrations-selector-icon { background: #fff8df; }
+    .integrations-selector-icon svg { width: 36px; height: 36px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .integrations-anchor-nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 14px 0;
+      margin-top: 38px;
+      padding: 20px 0 0;
+      border-top: 1px solid var(--integrations-line);
+    }
+    .integrations-anchor-nav a {
+      padding: 0 22px;
+      color: var(--integrations-body);
+      font-size: .88rem;
+      text-decoration: none;
+    }
+    .integrations-anchor-nav a + a { border-left: 1px solid #aebbd0; }
+    .integrations-anchor-nav a:hover,
+    .integrations-anchor-nav a:focus-visible { color: var(--integrations-green); font-weight: 800; }
+    .integrations-text-link { color: var(--integrations-green); font-weight: 850; text-decoration: none; }
+    .integrations-text-link::after { content: " →"; }
+    .integrations-section { padding: 112px 0; }
+    .integrations-section.is-soft { background: var(--integrations-soft); }
+    .integrations-section-header { max-width: 820px; margin-bottom: 48px; }
+    .integrations-section-header .integrations-lead + .integrations-lead { margin-top: 14px; }
+    .integrations-card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .integrations-feature-card {
+      min-height: 250px;
+      padding: 28px;
+      border: 1px solid var(--integrations-line);
+      border-radius: 14px;
+      background: #fff;
+    }
+    .integrations-feature-icon {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 24px;
+      border-radius: 12px;
+      color: var(--integrations-green);
+      background: var(--integrations-green-soft);
+      font-weight: 900;
+    }
+    .integrations-feature-card p { margin-bottom: 0; color: var(--integrations-body); line-height: 1.65; }
+    .integrations-section-cta { margin-top: 32px; }
+    .integrations-methods-grid,
+    .integrations-layer-grid,
+    .integrations-managed-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+      gap: 64px;
+      align-items: start;
+    }
+    .integrations-method-list,
+    .integrations-managed-list,
+    .integrations-layer-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .integrations-method-list li,
+    .integrations-managed-list li,
+    .integrations-layer-list li {
+      position: relative;
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+      padding: 12px 14px 12px 40px;
+      border: 1px solid var(--integrations-line);
+      border-radius: 10px;
+      background: #fff;
+      font-size: .93rem;
+      font-weight: 700;
+    }
+    .integrations-method-list li::before,
+    .integrations-managed-list li::before,
+    .integrations-layer-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 15px;
+      color: var(--integrations-green-bright);
+      font-weight: 900;
+    }
+    .integrations-note {
+      margin-top: 20px;
+      padding: 22px;
+      border-left: 4px solid var(--integrations-green-bright);
+      color: var(--integrations-body);
+      background: linear-gradient(90deg, var(--integrations-green-soft), rgba(234,248,242,.32));
+      line-height: 1.65;
+    }
+    .integrations-layer-visual {
+      display: grid;
+      gap: 12px;
+      padding: 30px;
+      border: 1px solid var(--integrations-line);
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: var(--integrations-shadow);
+    }
+    .integrations-layer-visual div {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 18px;
+      border: 1px solid var(--integrations-line);
+      border-radius: 10px;
+      color: var(--integrations-body);
+      background: var(--integrations-soft);
+    }
+    .integrations-layer-visual div:nth-child(2) { border-color: #0d765f; color: #fff; background: var(--integrations-green); }
+    .integrations-layer-visual strong { color: var(--integrations-ink); }
+    .integrations-layer-visual div:nth-child(2) strong { color: #fff; }
+    .integrations-layer-visual b { width: 34px; color: var(--integrations-green); font-size: .78rem; letter-spacing: .08em; }
+    .integrations-layer-visual div:nth-child(2) b { color: #b9f5d8; }
+    .integrations-directory-section { padding: 112px 0; background: #fff; }
+    .integrations-directory-section.is-soft { background: var(--integrations-soft); }
+    .integrations-directory-toolbar { max-width: 760px; margin-top: 30px; }
+    .integrations-search {
+      min-height: 54px;
+      display: grid;
+      grid-template-columns: 22px minmax(0, 1fr);
+      align-items: center;
+      gap: 12px;
+      padding: 0 18px;
+      border: 1px solid var(--integrations-line);
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 8px 24px rgba(7, 20, 54, .04);
+    }
+    .integrations-search svg { width: 18px; height: 18px; fill: var(--integrations-body); }
+    .integrations-search input {
+      width: 100%;
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      color: var(--integrations-ink);
+      background: transparent;
+      font: inherit;
+      font-weight: 700;
+    }
+    .integrations-search input::placeholder { color: #66789d; opacity: 1; }
+    .integrations-search:focus-within { border-color: var(--integrations-green); box-shadow: 0 0 0 3px rgba(13, 118, 95, .12); }
+    .integrations-filters { display: flex; flex-wrap: wrap; gap: 9px; margin: 26px 0 30px; }
+    .integrations-filter {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 15px;
+      border: 1px solid var(--integrations-line);
+      border-radius: 999px;
+      color: var(--integrations-body);
+      background: #fff;
+      font-size: .86rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .integrations-filter strong { color: #64759f; font-size: .72rem; font-weight: 900; }
+    .integrations-filter[data-filter="commerce"] { color: #0f766e; }
+    .integrations-filter[data-filter="custom"] { color: #b45309; }
+    .integrations-filter[data-filter="media"] { color: #2563eb; }
+    .integrations-filter[data-filter="marketplace"] { color: #16a34a; }
+    .integrations-filter[data-filter="affiliate"] { color: #db2777; }
+    .integrations-filter[data-filter="local"] { color: #ff4b2b; }
+    .integrations-filter[data-filter="ai"] { color: #7c3aed; }
+    .integrations-filter[data-filter="other"] { color: #334155; }
+    .integrations-filter:hover { border-color: var(--integrations-green); }
+    .integrations-filter[aria-pressed="true"] { border-color: var(--integrations-green); color: #fff; background: var(--integrations-green); }
+    .integrations-filter[aria-pressed="true"] strong { color: #fff; }
+    .integrations-directory-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 13px; }
+    .integration-card {
+      min-width: 0;
+      min-height: 108px;
+      display: grid;
+      grid-template-columns: 42px minmax(0, 1fr);
+      align-items: center;
+      gap: 13px;
+      padding: 18px;
+      border: 1px solid var(--integrations-line);
+      border-radius: 12px;
+      color: var(--integrations-ink);
+      background: #fff;
+      text-decoration: none;
+    }
+    a.integration-card { transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease; }
+    a.integration-card:hover { border-color: #83b4ff; box-shadow: 0 12px 30px rgba(7, 20, 54, .08); transform: translateY(-1px); }
+    a.integration-card:focus-visible { outline: 3px solid rgba(255, 202, 40, .72); outline-offset: 3px; }
+    .integration-card[hidden] { display: none; }
+    .integration-card-name { min-width: 0; }
+    .integration-card-mark {
+      width: 34px;
+      height: 34px;
+      display: inline-flex;
+      place-items: center;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9px;
+      color: #fff;
+      background: linear-gradient(145deg, #d97706, #f59e0b);
+      font-size: .6rem;
+      font-weight: 900;
+      letter-spacing: -.01em;
+      text-transform: uppercase;
+    }
+    .integration-card-logo { width: 34px; height: 34px; display: block; border-radius: 8px; object-fit: contain; }
+    .integration-card-copy { min-width: 0; display: flex; align-items: flex-start; flex-direction: column; gap: 8px; }
+    .integration-card h3 { margin: 0; color: var(--integrations-ink); font-size: .98rem; line-height: 1.2; }
+    .integration-card-category { min-height: 25px; display: inline-flex; align-items: center; padding: 0 9px; border: 1px solid #dbe5f1; border-radius: 999px; font-size: .7rem; font-weight: 850; }
+    .integration-card-category.commerce { border-color: #99f6e4; color: #0f766e; background: #f0fdfa; }
+    .integration-card-category.custom { border-color: #fed7aa; color: #c2410c; background: #fff7ed; }
+    .integration-card-category.media { border-color: #bfdbfe; color: #1d4ed8; background: #eff6ff; }
+    .integration-card-category.marketplace { border-color: #bbf7d0; color: #15803d; background: #f0fdf4; }
+    .integration-card-category.affiliate { border-color: #fbcfe8; color: #be185d; background: #fdf2f8; }
+    .integration-card-category.local { border-color: #fed7aa; color: #c2410c; background: #fff7ed; }
+    .integration-card-category.ai { border-color: #ddd6fe; color: #6d28d9; background: #f5f3ff; }
+    .integration-card-category.other { border-color: #cbd5e1; color: #334155; background: #f8fafc; }
+    .integrations-directory-actions { display: flex; justify-content: center; margin-top: 26px; }
+    .integrations-show-more { min-height: 46px; padding: 0 22px; border: 1px solid var(--integrations-line); border-radius: 8px; color: var(--integrations-body); background: #fff; font-weight: 850; cursor: pointer; }
+    .integrations-show-more:hover { border-color: #83b4ff; background: #f8fbff; }
+    .integrations-show-more[hidden] { display: none; }
+    .integrations-empty { grid-column: 1 / -1; padding: 34px; border: 1px dashed var(--integrations-line); border-radius: 12px; color: var(--integrations-body); background: #fff; text-align: center; font-weight: 750; }
+    .integrations-custom-note { display: flex; align-items: center; gap: 16px; margin-top: 22px; padding: 20px 22px; border-left: 4px solid #d97706; border-radius: 0 12px 12px 0; color: #8a4b12; background: linear-gradient(90deg, rgba(245, 158, 11, .13), rgba(255,255,255,.7)); }
+    .integrations-custom-note[hidden] { display: none; }
+    .integrations-custom-note b { width: 38px; height: 38px; flex: 0 0 38px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; color: #fff; background: #d97706; font-size: 1.45rem; line-height: 1; }
+    .integrations-custom-note strong { display: block; margin-bottom: 3px; color: #7c2d12; }
+    .integrations-custom-note p { margin: 0; font-size: .9rem; font-weight: 700; }
+    .integrations-custom-note a { margin-left: auto; color: #7c2d12; font-size: .88rem; font-weight: 900; white-space: nowrap; }
+    .integrations-managed-panel {
+      padding: 36px;
+      border: 1px solid var(--integrations-line);
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: var(--integrations-shadow);
+    }
+    .integrations-managed-grid > div:first-child h2 { font-size: clamp(2.65rem, 4.6vw, 4.45rem); line-height: 1.03; }
+    .integrations-sync-panel h3 { margin: 0; color: var(--integrations-ink); font-size: clamp(1.55rem, 2.7vw, 2.05rem); }
+    .integrations-sync-intro { margin: 6px 0 28px; color: var(--integrations-body); font-size: 1.05rem; }
+    .integrations-sync-group + .integrations-sync-group { margin-top: 24px; }
+    .integrations-sync-group-title { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; color: var(--integrations-ink); font-size: .78rem; font-weight: 900; letter-spacing: .15em; text-transform: uppercase; }
+    .integrations-sync-group-title::after { content: ""; height: 1px; flex: 1; background: var(--integrations-line); }
+    .integrations-sync-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .integrations-sync-list.is-three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .integrations-sync-list.is-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .integrations-sync-list li { position: relative; min-height: 64px; display: flex; align-items: center; padding: 12px 14px 12px 42px; border: 1px solid var(--integrations-line); border-radius: 8px; color: var(--integrations-ink); background: #fff; font-size: .87rem; font-weight: 800; line-height: 1.2; }
+    .integrations-sync-list li::before { content: "✓"; position: absolute; left: 16px; color: var(--integrations-green-bright); font-size: 1.2rem; font-weight: 900; }
+    .integrations-custom {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 36px;
+      align-items: center;
+      margin-top: 34px;
+      padding: 34px;
+      border: 1px solid var(--integrations-line);
+      border-radius: 16px;
+      background: linear-gradient(120deg, #fff 0%, var(--integrations-green-soft) 100%);
+    }
+    .integrations-custom h2 { font-size: clamp(1.7rem, 3vw, 2.5rem); }
+    .integrations-custom p { max-width: 760px; margin-bottom: 0; color: var(--integrations-body); line-height: 1.65; }
+    .integrations-faq-section { padding: 112px 0; background: #f4f7fb; }
+    .integrations-faq-header { max-width: 740px; margin: 0 auto 42px; text-align: center; }
+    .integrations-faq { overflow: hidden; border: 1px solid var(--integrations-line); border-radius: 15px; background: #fff; }
+    .integrations-faq details + details { border-top: 1px solid var(--integrations-line); }
+    .integrations-faq summary {
+      position: relative;
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      padding: 20px 70px 20px 24px;
+      color: var(--integrations-ink);
+      font-size: 1.02rem;
+      font-weight: 850;
+      cursor: pointer;
+      list-style: none;
+    }
+    .integrations-faq summary::-webkit-details-marker { display: none; }
+    .integrations-faq summary::after { content: "+"; position: absolute; right: 26px; color: var(--integrations-green); font-size: 1.7rem; font-weight: 500; }
+    .integrations-faq details[open] summary::after { content: "−"; }
+    .integrations-faq details[open] summary { background: #fff; }
+    .integrations-faq details p { margin: 0; padding: 0 70px 26px 24px; color: var(--integrations-body); font-size: 1rem; line-height: 1.7; }
+    .integrations-final-cta { padding: 80px 0; background: #fff; }
+    .integrations-final-cta-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 36px;
+      align-items: center;
+      padding: 54px;
+      border-radius: 20px;
+      background: var(--integrations-yellow);
+    }
+    .integrations-final-cta-panel h2 { max-width: 720px; margin-bottom: 12px; font-size: clamp(2rem, 4vw, 3.3rem); }
+    .integrations-final-cta-panel p { max-width: 680px; margin-bottom: 0; color: #253352; font-size: 1.05rem; }
+    .integrations-final-cta-panel .integrations-actions { justify-content: flex-end; margin: 0; }
+    .integrations-final-cta-panel .integrations-button { background: #fff; }
+    .integrations-final-cta-panel .integrations-button-primary { border-color: var(--integrations-ink); color: #fff; background: var(--integrations-ink); }
+
+    @media (max-width: 1100px) {
+      .integrations-shell { width: min(calc(100% - 40px), 920px); }
+      .integrations-hero-grid { grid-template-columns: 1fr; }
+      .integrations-hero-visual { max-width: 760px; }
+    }
+
+    @media (max-width: 1050px) {
+      .integrations-selector-header { align-items: flex-start; flex-direction: column; }
+      .integrations-progress { padding-bottom: 0; }
+      .integrations-selector-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .integrations-selector-card:last-child { grid-column: 1 / -1; }
+      .integrations-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .integrations-directory-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .integrations-methods-grid,
+      .integrations-layer-grid,
+      .integrations-managed-grid { grid-template-columns: 1fr; gap: 40px; }
+      .integrations-final-cta-panel { grid-template-columns: 1fr; }
+      .integrations-final-cta-panel .integrations-actions { justify-content: flex-start; }
+    }
+
+    @media (max-width: 900px) and (min-width: 761px) {
+      .integrations-directory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 760px) {
+      html { scroll-padding-top: 98px; }
+      .integrations-shell { width: min(100% - 28px, 640px); }
+      .integrations-hero { padding: 68px 0 64px; }
+      .integrations-hero-grid { gap: 44px; }
+      .integrations-page h1 { font-size: clamp(38px, 12vw, 50px); }
+      .integrations-journey { padding: 16px; }
+      .integrations-journey-row { grid-template-columns: 1fr; gap: 10px; }
+      .integrations-journey-node { min-height: 0; }
+      .integrations-journey-arrow { height: 28px; transform: rotate(90deg); }
+      .integrations-selector { padding: 64px 0 24px; }
+      .integrations-selector-grid,
+      .integrations-card-grid,
+      .integrations-directory-grid { grid-template-columns: 1fr; }
+      .integrations-selector-card { min-height: 0; padding: 26px; }
+      .integrations-selector-card:last-child { grid-column: auto; }
+      .integrations-progress { white-space: normal; line-height: 1.8; }
+      .integrations-anchor-nav { align-items: stretch; flex-direction: column; }
+      .integrations-anchor-nav a { padding: 12px 0; text-align: center; }
+      .integrations-anchor-nav a + a { border-top: 1px solid var(--integrations-line); border-left: 0; }
+      .integrations-section,
+      .integrations-directory-section,
+      .integrations-faq-section { padding: 78px 0; }
+      .integrations-feature-card { min-height: 0; }
+      .integrations-method-list,
+      .integrations-managed-list,
+      .integrations-layer-list { grid-template-columns: 1fr; }
+      .integrations-directory-grid { gap: 10px; }
+      .integration-card { min-height: 128px; }
+      .integrations-custom-note { align-items: flex-start; flex-wrap: wrap; }
+      .integrations-custom-note a { width: 100%; margin-left: 54px; }
+      .integrations-sync-list.is-three,
+      .integrations-sync-list.is-two { grid-template-columns: 1fr; }
+      .integrations-custom { grid-template-columns: 1fr; padding: 26px; }
+      .integrations-final-cta { padding: 52px 0; }
+      .integrations-final-cta-panel { padding: 34px 24px; }
+      .integrations-actions { width: 100%; }
+      .integrations-actions .integrations-button { flex: 1 1 220px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KR4TR7B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header class="site-header"></header>
+
+  <main class="integrations-page">
+    <section class="integrations-hero" aria-labelledby="integrations-title">
+      <div class="integrations-shell integrations-hero-grid">
+        <div>
+          <p class="integrations-eyebrow">FeedOps integrations</p>
+          <h1 id="integrations-title">Connect the systems that hold your product data. Send it wherever it needs to go.</h1>
+          <p class="integrations-lead">FeedOps connects ecommerce platforms, ERP and PIM systems, suppliers, APIs and files, then prepares and distributes accurate product data across advertising platforms, marketplaces and emerging shopping channels.</p>
+          <div class="integrations-actions">
+            <a class="integrations-button integrations-button-primary" href="../book-live-demo/">Book a demo <span aria-hidden="true">→</span></a>
+            <a class="integrations-button" href="#integration-selector">Explore integrations <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <div class="integrations-hero-visual">
+          <picture>
+            <source srcset="../assets/feedops-integrations-hero-clean-640.png 640w, ../assets/feedops-integrations-hero-clean-1074.png 1074w, ../assets/feedops-integrations-hero-clean-1377.png 1377w" sizes="(max-width: 1100px) calc(100vw - 40px), 42vw" type="image/png">
+            <img src="../assets/feedops-integrations-hero-clean-1074.png" width="1074" height="890" alt="FeedOps integration flow connecting commerce, ERP, PIM, APIs, suppliers and files to Google, Meta, Amazon, marketplaces and other channels" fetchpriority="high" decoding="async">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <nav class="integrations-selector" id="integration-selector" aria-label="Integration page sections">
+      <div class="integrations-shell">
+        <div class="integrations-selector-header">
+          <div>
+            <h2>Find what you need</h2>
+            <p class="integrations-lead">Explore FeedOps integrations to connect your systems, reach more channels and keep your product data accurate everywhere it sells.</p>
+          </div>
+          <div class="integrations-progress" aria-label="Sources, prepare, send and grow">Sources <span>→</span> Prepare <span>→</span> Send <span>→</span> Grow</div>
+        </div>
+        <div class="integrations-selector-grid">
+          <a class="integrations-selector-card" href="#integration-directory" data-directory-filter="commerce">
+            <div>
+              <span class="integrations-selector-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span>
+              <h3>Ecommerce platforms</h3>
+              <p>FeedOps has built-in connectors for the major ecommerce platforms used by medium-to-large retailers.</p>
+            </div>
+            <span class="integrations-text-link">Browse ecommerce platforms</span>
+          </a>
+          <a class="integrations-selector-card" href="#integration-directory" data-directory-filter="media">
+            <div>
+              <span class="integrations-selector-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 13h3l9 5V6l-9 5H4zM7 13v5a2 2 0 0 0 2 2h2M19 9a5 5 0 0 1 0 6"/></svg></span>
+              <h3>Media channels</h3>
+              <p>Connect to the major advertising and social media channels that drive ecommerce revenue and product discovery.</p>
+            </div>
+            <span class="integrations-text-link">Browse media destinations</span>
+          </a>
+          <a class="integrations-selector-card" href="#integration-directory" data-directory-filter="marketplace">
+            <div>
+              <span class="integrations-selector-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 10h16M5 4h14l2 6M5 4l-2 6M8 4 7 10M12 4v6M16 4l1 6M4 13v7h16v-7M9 20v-5h6v5"/></svg></span>
+              <h3>Marketplaces</h3>
+              <p>Connect your catalogue to the marketplaces that drive sales volume and reach more ready-to-buy customers.</p>
+            </div>
+            <span class="integrations-text-link">Browse marketplaces</span>
+          </a>
+        </div>
+        <div class="integrations-anchor-nav" aria-label="Jump to integration content">
+          <a href="#integration-directory" data-directory-filter="custom">Custom integrations</a>
+          <a href="#integration-directory" data-directory-filter="affiliate">Affiliate marketing</a>
+          <a href="#integration-directory" data-directory-filter="local">Local inventory ads</a>
+          <a href="#integration-directory" data-directory-filter="ai">AI discovery</a>
+          <a href="#integration-directory" data-directory-filter="other">Other destinations</a>
+          <a href="#product-synchronisation">Product synchronisation</a>
+          <a href="#faqs">FAQs</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="integrations-directory-section is-soft" id="integration-directory" aria-labelledby="integration-directory-title">
+      <div class="integrations-shell">
+        <div class="integrations-section-header">
+          <h2 id="integration-directory-title">Explore FeedOps connections</h2>
+          <p class="integrations-lead">Browse the currently supported source and destination connections. Where a delivery method depends on the implementation, the card shows the category without making an unconfirmed technical claim.</p>
+        </div>
+        <div class="integrations-directory-toolbar">
+          <label class="integrations-search" for="integrations-search-input">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m20.4 19-4.7-4.7a7 7 0 1 0-1.4 1.4l4.7 4.7a1 1 0 0 0 1.4-1.4ZM5 10a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"/></svg>
+            <input id="integrations-search-input" type="search" placeholder="Search connections and destinations..." autocomplete="off">
+          </label>
+        </div>
+        <div class="integrations-filters" id="integrations-filters" role="group" aria-label="Filter integrations">
+          <button class="integrations-filter" type="button" data-filter="all" aria-pressed="true" aria-controls="integrations-grid">All</button>
+          <button class="integrations-filter" type="button" data-filter="sources" aria-pressed="false" aria-controls="integrations-grid">Data Sources</button>
+          <button class="integrations-filter" type="button" data-filter="advertising" aria-pressed="false" aria-controls="integrations-grid">Advertising and Social</button>
+          <button class="integrations-filter" type="button" data-filter="marketplaces" aria-pressed="false" aria-controls="integrations-grid">Marketplaces</button>
+          <button class="integrations-filter" type="button" data-filter="ai" aria-pressed="false" aria-controls="integrations-grid">AI Shopping</button>
+          <button class="integrations-filter" type="button" data-filter="local" aria-pressed="false" aria-controls="integrations-grid">Local Inventory</button>
+          <button class="integrations-filter" type="button" data-filter="affiliate" aria-pressed="false" aria-controls="integrations-grid">Affiliate and Discovery</button>
+        </div>
+        <div class="integrations-directory-grid" id="integrations-grid" aria-live="polite">
+          <article class="integration-card" data-category="sources"><div class="integration-card-name"><span class="integration-card-mark">Sh</span><h3>Shopify</h3></div><div class="integration-card-meta"><span class="integration-card-category">Data Source · Ecommerce platform</span></div></article>
+          <article class="integration-card" data-category="sources"><div class="integration-card-name"><span class="integration-card-mark">BC</span><h3>BigCommerce</h3></div><div class="integration-card-meta"><span class="integration-card-category">Data Source · Ecommerce platform</span></div></article>
+          <article class="integration-card" data-category="sources"><div class="integration-card-name"><span class="integration-card-mark">M2</span><h3>Magento 2</h3></div><div class="integration-card-meta"><span class="integration-card-category">Data Source · Ecommerce platform</span></div></article>
+          <article class="integration-card" data-category="sources"><div class="integration-card-name"><span class="integration-card-mark">WC</span><h3>WooCommerce</h3></div><div class="integration-card-meta"><span class="integration-card-category">Data Source · Ecommerce platform</span></div></article>
+          <article class="integration-card" data-category="sources"><div class="integration-card-name"><span class="integration-card-mark">SF</span><h3>Salesforce Commerce Cloud</h3></div><div class="integration-card-meta"><span class="integration-card-category">Data Source · Ecommerce platform</span></div></article>
+          <article class="integration-card" data-category="sources"><div class="integration-card-name"><span class="integration-card-mark">MP</span><h3>Maropost</h3></div><div class="integration-card-meta"><span class="integration-card-category">Data Source · Ecommerce platform</span></div></article>
+          <article class="integration-card" data-category="sources"><div class="integration-card-name"><span class="integration-card-mark">API</span><h3>REST APIs</h3></div><div class="integration-card-meta"><span class="integration-card-category">Data Source</span><span class="integration-card-classification">API connection</span></div></article>
+          <article class="integration-card" data-category="sources"><div class="integration-card-name"><span class="integration-card-mark">GQL</span><h3>GraphQL APIs</h3></div><div class="integration-card-meta"><span class="integration-card-category">Data Source</span><span class="integration-card-classification">API connection</span></div></article>
+          <article class="integration-card" data-category="sources"><div class="integration-card-name"><span class="integration-card-mark">SFTP</span><h3>SFTP</h3></div><div class="integration-card-meta"><span class="integration-card-category">Data Source</span><span class="integration-card-classification">File-based connection</span></div></article>
+          <article class="integration-card" data-category="sources"><div class="integration-card-name"><span class="integration-card-mark">XML</span><h3>XML</h3></div><div class="integration-card-meta"><span class="integration-card-category">Data Source</span><span class="integration-card-classification">File-based connection</span></div></article>
+          <article class="integration-card" data-category="sources"><div class="integration-card-name"><span class="integration-card-mark">CSV</span><h3>CSV</h3></div><div class="integration-card-meta"><span class="integration-card-category">Data Source</span><span class="integration-card-classification">File-based connection</span></div></article>
+          <article class="integration-card" data-category="sources"><div class="integration-card-name"><span class="integration-card-mark">TSV</span><h3>TSV</h3></div><div class="integration-card-meta"><span class="integration-card-category">Data Source</span><span class="integration-card-classification">File-based connection</span></div></article>
+          <article class="integration-card" data-category="sources"><div class="integration-card-name"><span class="integration-card-mark">SS</span><h3>Spreadsheets</h3></div><div class="integration-card-meta"><span class="integration-card-category">Data Source</span><span class="integration-card-classification">File-based connection</span></div></article>
+          <article class="integration-card" data-category="sources"><div class="integration-card-name"><span class="integration-card-mark">URL</span><h3>Existing feed URLs</h3></div><div class="integration-card-meta"><span class="integration-card-category">Data Source</span><span class="integration-card-classification">File-based connection</span></div></article>
+
+          <article class="integration-card" data-category="advertising"><div class="integration-card-name"><span class="integration-card-mark">G</span><h3>Google</h3></div><div class="integration-card-meta"><span class="integration-card-category">Advertising and Social</span></div></article>
+          <article class="integration-card" data-category="advertising"><div class="integration-card-name"><span class="integration-card-mark">MS</span><h3>Microsoft Advertising</h3></div><div class="integration-card-meta"><span class="integration-card-category">Advertising and Social</span></div></article>
+          <article class="integration-card" data-category="advertising"><div class="integration-card-name"><span class="integration-card-mark">M</span><h3>Meta</h3></div><div class="integration-card-meta"><span class="integration-card-category">Advertising and Social</span></div></article>
+          <article class="integration-card" data-category="advertising"><div class="integration-card-name"><span class="integration-card-mark">P</span><h3>Pinterest</h3></div><div class="integration-card-meta"><span class="integration-card-category">Advertising and Social</span></div></article>
+          <article class="integration-card" data-category="advertising"><div class="integration-card-name"><span class="integration-card-mark">TT</span><h3>TikTok</h3></div><div class="integration-card-meta"><span class="integration-card-category">Advertising and Social</span></div></article>
+          <article class="integration-card" data-category="advertising"><div class="integration-card-name"><span class="integration-card-mark">C</span><h3>Criteo</h3></div><div class="integration-card-meta"><span class="integration-card-category">Advertising and Social</span></div></article>
+          <article class="integration-card" data-category="advertising"><div class="integration-card-name"><span class="integration-card-mark">R</span><h3>Reddit</h3></div><div class="integration-card-meta"><span class="integration-card-category">Advertising and Social</span></div></article>
+
+          <article class="integration-card" data-category="ai"><div class="integration-card-name"><span class="integration-card-mark">AI</span><h3>ChatGPT</h3></div><div class="integration-card-meta"><span class="integration-card-category">AI Shopping</span></div></article>
+          <article class="integration-card" data-category="ai"><div class="integration-card-name"><span class="integration-card-mark">G AI</span><h3>Google AI shopping experiences</h3></div><div class="integration-card-meta"><span class="integration-card-category">AI Shopping · Through supported Merchant Center data</span></div></article>
+
+          <article class="integration-card" data-category="local"><div class="integration-card-name"><span class="integration-card-mark">GLI</span><h3>Google Local Inventory</h3></div><div class="integration-card-meta"><span class="integration-card-category">Local Inventory</span></div></article>
+          <article class="integration-card" data-category="local"><div class="integration-card-name"><span class="integration-card-mark">MLI</span><h3>Microsoft Local Inventory</h3></div><div class="integration-card-meta"><span class="integration-card-category">Local Inventory</span></div></article>
+
+          <article class="integration-card" data-category="marketplaces"><div class="integration-card-name"><span class="integration-card-mark">A</span><h3>Amazon</h3></div><div class="integration-card-meta"><span class="integration-card-category">Marketplace</span></div></article>
+          <article class="integration-card" data-category="marketplaces"><div class="integration-card-name"><span class="integration-card-mark">eB</span><h3>eBay</h3></div><div class="integration-card-meta"><span class="integration-card-category">Marketplace</span></div></article>
+          <article class="integration-card" data-category="marketplaces"><div class="integration-card-name"><span class="integration-card-mark">R</span><h3>Rakuten</h3></div><div class="integration-card-meta"><span class="integration-card-category">Marketplace</span></div></article>
+          <article class="integration-card" data-category="marketplaces"><div class="integration-card-name"><span class="integration-card-mark">Re</span><h3>Reebelo</h3></div><div class="integration-card-meta"><span class="integration-card-category">Marketplace</span></div></article>
+          <article class="integration-card" data-category="marketplaces"><div class="integration-card-name"><span class="integration-card-mark">B</span><h3>Bunnings</h3></div><div class="integration-card-meta"><span class="integration-card-category">Marketplace</span></div></article>
+          <article class="integration-card" data-category="marketplaces"><div class="integration-card-name"><span class="integration-card-mark">MD</span><h3>MyDeal</h3></div><div class="integration-card-meta"><span class="integration-card-category">Marketplace</span></div></article>
+          <article class="integration-card" data-category="marketplaces"><div class="integration-card-name"><span class="integration-card-mark">K</span><h3>Kogan</h3></div><div class="integration-card-meta"><span class="integration-card-category">Marketplace</span></div></article>
+          <article class="integration-card" data-category="marketplaces"><div class="integration-card-name"><span class="integration-card-mark">MS</span><h3>MySale</h3></div><div class="integration-card-meta"><span class="integration-card-category">Marketplace</span></div></article>
+          <article class="integration-card" data-category="marketplaces"><div class="integration-card-name"><span class="integration-card-mark">D</span><h3>Decathlon</h3></div><div class="integration-card-meta"><span class="integration-card-category">Marketplace</span></div></article>
+          <article class="integration-card" data-category="marketplaces"><div class="integration-card-name"><span class="integration-card-mark">I</span><h3>Idealo</h3></div><div class="integration-card-meta"><span class="integration-card-category">Marketplace</span></div></article>
+          <article class="integration-card" data-category="marketplaces"><div class="integration-card-name"><span class="integration-card-mark">JB</span><h3>JB Hi-Fi</h3></div><div class="integration-card-meta"><span class="integration-card-category">Marketplace</span></div></article>
+          <article class="integration-card" data-category="marketplaces"><div class="integration-card-name"><span class="integration-card-mark">K</span><h3>Kmart Australia</h3></div><div class="integration-card-meta"><span class="integration-card-category">Marketplace</span></div></article>
+          <article class="integration-card" data-category="marketplaces"><div class="integration-card-name"><span class="integration-card-mark">M</span><h3>Myer</h3></div><div class="integration-card-meta"><span class="integration-card-category">Marketplace</span></div></article>
+          <article class="integration-card" data-category="marketplaces"><div class="integration-card-name"><span class="integration-card-mark">Mi</span><h3>Mirakl marketplace environments</h3></div><div class="integration-card-meta"><span class="integration-card-category">Marketplace</span></div></article>
+
+          <article class="integration-card" data-category="affiliate"><div class="integration-card-name"><span class="integration-card-mark">BV</span><h3>Bazaarvoice</h3></div><div class="integration-card-meta"><span class="integration-card-category">Affiliate and Discovery</span></div></article>
+          <article class="integration-card" data-category="affiliate"><div class="integration-card-name"><span class="integration-card-mark">E</span><h3>Emarsys</h3></div><div class="integration-card-meta"><span class="integration-card-category">Affiliate and Discovery</span></div></article>
+          <article class="integration-card" data-category="affiliate"><div class="integration-card-name"><span class="integration-card-mark">L</span><h3>Lasoo</h3></div><div class="integration-card-meta"><span class="integration-card-category">Affiliate and Discovery</span></div></article>
+          <article class="integration-card" data-category="affiliate"><div class="integration-card-name"><span class="integration-card-mark">CF</span><h3>Commission Factory</h3></div><div class="integration-card-meta"><span class="integration-card-category">Affiliate and Discovery</span></div></article>
+          <article class="integration-card" data-category="affiliate"><div class="integration-card-name"><span class="integration-card-mark">CJ</span><h3>CJ Affiliate</h3></div><div class="integration-card-meta"><span class="integration-card-category">Affiliate and Discovery</span></div></article>
+          <article class="integration-card" data-category="affiliate"><div class="integration-card-name"><span class="integration-card-mark">SS</span><h3>Style Sourcebook</h3></div><div class="integration-card-meta"><span class="integration-card-category">Affiliate and Discovery</span></div></article>
+        </div>
+        <div class="integrations-directory-actions">
+          <button class="integrations-show-more" id="integrations-show-more" type="button" hidden>Show more connections</button>
+        </div>
+        <aside class="integrations-custom-note" id="integrations-custom-note" hidden>
+          <b aria-hidden="true">+</b>
+          <div><strong>Need something else?</strong><p>Any data source or channel not listed, we can build it for you.</p></div>
+          <a href="https://feedops.com/contact_us/">Contact us</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="integrations-section" id="product-synchronisation" aria-labelledby="managed-integrations-title">
+      <div class="integrations-shell">
+        <div class="integrations-managed-grid">
+          <div>
+            <p class="integrations-eyebrow">Product synchronisation</p>
+            <h2 id="managed-integrations-title">Keep product data moving from source to destination</h2>
+            <p class="integrations-lead">FeedOps keeps catalogue, price and availability data moving from your source systems to every connected channel.</p>
+            <p class="integrations-lead" style="margin-top:14px">Catalogue attributes run on an agreed schedule, from daily refreshes to multiple updates per day. Where supported by both the source and destination, price and availability can update on change and are typically processed and submitted within five minutes. Final visibility depends on the destination’s own processing time.</p>
+            <div class="integrations-section-cta"><a class="integrations-button integrations-button-primary" href="../book-live-demo/">Book a demo <span aria-hidden="true">→</span></a></div>
+          </div>
+          <div class="integrations-managed-panel integrations-sync-panel">
+            <h3>Continuous product synchronisation</h3>
+            <p class="integrations-sync-intro">Keep connected channels current as your catalogue changes.</p>
+            <div class="integrations-sync-group">
+              <div class="integrations-sync-group-title">Catalogue updates</div>
+              <ul class="integrations-sync-list is-three"><li>Scheduled catalogue refreshes</li><li>New and changed products</li><li>Destination-specific delivery</li></ul>
+            </div>
+            <div class="integrations-sync-group">
+              <div class="integrations-sync-group-title">Commercial updates</div>
+              <ul class="integrations-sync-list is-two"><li>Price updates</li><li>Availability updates</li></ul>
+            </div>
+            <div class="integrations-sync-group">
+              <div class="integrations-sync-group-title">Monitoring and approvals</div>
+              <ul class="integrations-sync-list is-three"><li>Failed-update monitoring</li><li>Merchant Center errors and disapprovals</li><li>Marketplace Seller Center approval checks</li></ul>
+            </div>
+            <div class="integrations-note">Update speed depends on the source, the connection method and how quickly each destination processes submitted data.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="integrations-faq-section" id="faqs" aria-labelledby="integrations-faq-title">
+      <div class="integrations-shell">
+        <div class="integrations-faq-header">
+          <p class="integrations-eyebrow">FAQ</p>
+          <h2 id="integrations-faq-title">Integration questions</h2>
+        </div>
+        <div class="integrations-faq">
+          <details open><summary>Can FeedOps combine data from several systems?</summary><p>Yes. FeedOps can match and merge product information from ecommerce platforms, ERP and PIM systems, suppliers, APIs, files and other sources using agreed identifiers and source-precedence rules.</p></details>
+          <details><summary>What connection methods does FeedOps support?</summary><p>FeedOps supports native platform connectors, XML, CSV and TSV files, SFTP, existing feed URLs, and bespoke REST or GraphQL integrations. API push, webhooks and event-driven updates are available where the source supports them; destinations may use a direct connection or a managed scheduled feed.</p></details>
+          <details><summary>Can price and inventory update separately from product content?</summary><p>Yes. Product information, pricing and availability can follow different processing schedules.</p></details>
+          <details><summary>Does FeedOps replace our ERP, PIM or ecommerce platform?</summary><p>No. Those systems remain authoritative. FeedOps prepares and manages their data for downstream destinations.</p></details>
+          <details><summary>Can FeedOps build a custom connection?</summary><p>Yes. Bespoke sources and destinations can be assessed and scoped when a standard connection is unavailable.</p></details>
+          <details><summary>Can FeedOps synchronise marketplace orders and tracking?</summary><p>Yes, as an optional capability for supported platforms. FeedOps can send marketplace orders to an ecommerce platform and return tracking or shipping information to the marketplace.</p></details>
+          <details><summary>Can integrations be tested before launch?</summary><p>Yes. FeedOps supports sandbox testing so source connections, mappings, feed rules, transformed data and destination outputs can be validated before production cutover.</p></details>
+          <details><summary>Who maintains the integrations after launch?</summary><p>FeedOps monitors and maintains the managed connections, feed configurations and destination requirements as part of the ongoing service.</p></details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="integrations-directory.js?v=20260908-directory-v6" defer></script>
+  <script src="../header-standard.js?v=20260907-integrations-nav-v1" data-site-root="../" defer></script>
+  <script src="../footer-standard.js?v=20260907-integrations-footer-v1" data-site-root="../" defer></script>
+</body>
+</html>

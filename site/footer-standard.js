@@ -40,6 +40,7 @@
       '      <div class="footer-column">',
       '        <a href="' + href("") + '">Home</a>',
       '        <a href="' + href("product-feed-platform/") + '">Platform</a>',
+      '        <a href="' + href("integrations/") + '">Integrations</a>',
       '        <a href="' + href("company/") + '">Company</a>',
       '        <a href="' + href("learning/") + '">Learning</a>',
       '        <a href="' + href("privacy-policy/") + '">Privacy</a>',

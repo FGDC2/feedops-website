@@ -22,6 +22,7 @@
     return [
       '<div class="feedops-desktop-menu" aria-label="Primary links">',
       '  <a class="feedops-nav-link" href="' + href("product-feed-platform/") + '">Platform</a>',
+      '  <a class="feedops-nav-link" href="' + href("integrations/") + '">Integrations</a>',
       '  <a class="feedops-nav-link" href="' + href("learning/") + '">Learning</a>',
       '  <a class="feedops-nav-link" href="' + href("pricing/") + '">Pricing</a>',
       '  <a class="feedops-nav-link" href="' + href("company/") + '">About</a>',
@@ -36,6 +37,7 @@
       '  <div class="feedops-mobile-panel">',
       '    <div class="feedops-global-mobile-links">',
       '      <a href="' + href("product-feed-platform/") + '">Platform</a>',
+      '      <a href="' + href("integrations/") + '">Integrations</a>',
       '      <a href="' + href("learning/") + '">Learning</a>',
       '      <a href="' + href("pricing/") + '">Pricing</a>',
       '      <a href="' + href("company/") + '">About</a>',
@@ -97,6 +99,23 @@
         link.addEventListener("click", function () { setMenuOpen(header, false); });
       });
     }
+
+    function normaliseNavPath(pathname) {
+      var path = String(pathname || "/").replace(/index\.html$/i, "").replace(/\/+$/, "");
+      return (path || "") + "/";
+    }
+
+    var currentPath = normaliseNavPath(window.location.pathname);
+    header.querySelectorAll('.feedops-desktop-menu a[href], .feedops-global-mobile-links a[href]').forEach(function (link) {
+      try {
+        var linkPath = normaliseNavPath(new URL(link.href, window.location.href).pathname);
+        if (linkPath === currentPath) {
+          link.setAttribute("aria-current", "page");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      } catch (_error) {}
+    });
 
     document.addEventListener("keydown", function (event) {
       if (event.key !== "Escape") return;
