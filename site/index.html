@@ -6599,7 +6599,10 @@
         const item = document.createElement("span");
         item.className = "feedops-customer-logo-item";
         const image = document.createElement("img");
-        image.src = entry.logoUrl;
+        image.src = String(entry.logoUrl || "").replace(
+          /^https:\/\/ops\.feedops\.com\/assets\/customer-logos\//,
+          "/assets/customer-logos/"
+        );
         image.alt = selectedName;
         image.referrerPolicy = "no-referrer";
         const label = document.createElement("span");
