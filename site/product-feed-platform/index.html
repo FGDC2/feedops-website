@@ -32,9 +32,9 @@
   <meta name="twitter:image" content="https://feedops.com/assets/feedops-product-data-platform-commerce-channel-workflow.png">
   <meta name="twitter:image:alt" content="FeedOps product data platform workflow connecting commerce systems to Google, Meta, Amazon and other channels">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../header-standard.css?v=20260724-global-navigation-v3">
+  <link rel="stylesheet" href="../header-standard.css?v=20260907-integrations-nav-v1">
   <link rel="stylesheet" href="../footer-standard.css?v=20260724-black-friday-popup-v2">
-  <link rel="stylesheet" href="platform-v2.min.css?v=20260907-performance-v43">
+  <link rel="stylesheet" href="platform-v2.min.css?v=20260908-scroll-v44">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -1815,6 +1815,7 @@
       const nav = document.querySelector('.platform-v2-page-nav');
       if (!nav) return;
 
+      const navInner = nav.querySelector('.platform-v2-page-nav-inner');
       const links = [...nav.querySelectorAll('a[href^="#"]')];
       const sections = links
         .map((link) => ({ link, section: document.querySelector(link.getAttribute('href')) }))
@@ -1822,7 +1823,13 @@
       let ticking = false;
       let currentLink = null;
 
-      const activate = (activeLink) => {
+      const revealLink = (activeLink) => {
+        if (!navInner || navInner.scrollWidth <= navInner.clientWidth) return;
+        const left = activeLink.offsetLeft - (navInner.clientWidth - activeLink.offsetWidth) / 2;
+        navInner.scrollTo({ left, behavior: 'smooth' });
+      };
+
+      const activate = (activeLink, shouldReveal = false) => {
         if (activeLink === currentLink) return;
         currentLink = activeLink;
         links.forEach((link) => {
@@ -1831,7 +1838,7 @@
           if (isActive) link.setAttribute('aria-current', 'location');
           else link.removeAttribute('aria-current');
         });
-        activeLink.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        if (shouldReveal) revealLink(activeLink);
       };
 
       const updateActiveLink = () => {
@@ -1853,21 +1860,57 @@
         requestAnimationFrame(updateActiveLink);
       };
 
-      links.forEach((link) => link.addEventListener('click', () => activate(link)));
+      const elementDocumentTop = (element) => {
+        let top = 0;
+        let current = element;
+
+        while (current) {
+          top += current.offsetTop || 0;
+          current = current.offsetParent;
+        }
+
+        return top;
+      };
+
+      const alignOverviewNav = (behavior = 'smooth') => {
+        const header = document.querySelector('#feedops-standard-header');
+        const headerHeight = header ? header.offsetHeight : 96;
+        const top = Math.max(0, elementDocumentTop(nav) - headerHeight);
+        window.scrollTo({ top, behavior });
+      };
+
+      links.forEach((link) => link.addEventListener('click', (event) => {
+        activate(link, true);
+        if (link.getAttribute('href') !== '#data-journey') return;
+
+        event.preventDefault();
+        window.history.pushState(null, '', '#data-journey');
+        alignOverviewNav();
+      }));
       window.addEventListener('scroll', requestUpdate, { passive: true });
       window.addEventListener('resize', requestUpdate);
       window.addEventListener('hashchange', () => {
         const hashLink = links.find((link) => link.getAttribute('href') === window.location.hash);
-        if (hashLink) activate(hashLink);
+        if (hashLink) {
+          activate(hashLink, true);
+          if (window.location.hash === '#data-journey') {
+            requestAnimationFrame(() => alignOverviewNav('auto'));
+          }
+        }
         else requestUpdate();
       });
 
       const initialHashLink = links.find((link) => link.getAttribute('href') === window.location.hash);
-      if (initialHashLink) activate(initialHashLink);
+      if (initialHashLink) {
+        activate(initialHashLink, true);
+        if (window.location.hash === '#data-journey') {
+          window.addEventListener('load', () => alignOverviewNav('auto'), { once: true });
+        }
+      }
       else requestUpdate();
     })();
   </script>
-  <script src="../header-standard.js?v=20260807-audit-form-link" data-site-root="../" defer></script>
-  <script src="../footer-standard.js?v=20260727-black-friday-session-dismiss-v3" data-site-root="../" defer></script>
+  <script src="../header-standard.js?v=20260907-integrations-nav-v1" data-site-root="../" defer></script>
+  <script src="../footer-standard.js?v=20260907-integrations-footer-v1" data-site-root="../" defer></script>
 </body>
 </html>
