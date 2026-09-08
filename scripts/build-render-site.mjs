@@ -442,7 +442,11 @@ function copyTextPath(from, to, transform = (content) => content) {
   mkdirSync(dirname(to), { recursive: true });
   const transformed = transform(readFileSync(from, "utf8"));
   const cleaned = stripCookieConsent(transformed);
-  const withAssets = rewriteAssetReferences(cleaned);
+  const withCurrentSharedAssets = cleaned
+    .replace(/header-standard\.css\?v=[^"'\s>]+/g, "header-standard.css?v=20260907-integrations-nav-v1")
+    .replace(/header-standard\.js\?v=[^"'\s>]+/g, "header-standard.js?v=20260907-integrations-nav-v1")
+    .replace(/footer-standard\.js\?v=[^"'\s>]+/g, "footer-standard.js?v=20260907-integrations-footer-v1");
+  const withAssets = rewriteAssetReferences(withCurrentSharedAssets);
   const withStableHeader = stabiliseSharedHeaderStyles(withAssets);
   const withInlineHeader = inlineSharedHeaderStyles(withStableHeader);
   const withHeaderStability = injectHeaderStabilityStyles(withInlineHeader);
