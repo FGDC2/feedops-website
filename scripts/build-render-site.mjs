@@ -547,6 +547,12 @@ copyStaticTree(
   { skipHtml: true }
 );
 
+copyStaticTree(
+  join(sourceRoot, "integrations"),
+  join(outputRoot, "integrations"),
+  { skipHtml: true }
+);
+
 copyStaticTree(join(sourceRoot, "help"), join(outputRoot, "help"), { skipHtml: true });
 
 const helpFallbackPageCount = await createHelpArticleFallbackPages();
