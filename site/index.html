@@ -34,7 +34,7 @@
   <meta name="twitter:image:alt" content="Product Feed Management &amp; Optimisation for Ecommerce Growth showing product data distributed through FeedOps to Google Shopping, Meta Ads, Amazon Listings and other marketplaces">
   <link rel="preload" as="image" href="./assets/hero/product-feed-management-ecommerce-growth-1280.webp" imagesrcset="./assets/hero/product-feed-management-ecommerce-growth-720.webp 720w, ./assets/hero/product-feed-management-ecommerce-growth-1280.webp 1280w" imagesizes="(max-width: 960px) calc(100vw - 48px), 637px" type="image/webp" fetchpriority="high">
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="header-standard.css?v=20260724-global-navigation-v3">
+  <link rel="stylesheet" href="header-standard.css?v=20260909-header-layout-v3">
   <link rel="stylesheet" href="footer-standard.css?v=20260724-black-friday-popup-v2">
   <script type="application/ld+json">
     {
@@ -6569,8 +6569,8 @@
       </div>
     </div>
   </footer>
-<script src="header-standard.js?v=20260828-performance" data-site-root="" defer></script>
-  <script src="footer-standard.js?v=20260828-performance" data-site-root="" defer></script>
+<script src="header-standard.js?v=20260909-header-layout-v3" data-site-root="" defer></script>
+  <script src="footer-standard.js?v=20260831-staging-root-path-v2" data-site-root="" defer></script>
   <script>
     document.querySelectorAll("[data-logo-carousel]").forEach((root) => {
       const viewport = root.querySelector(".feedops-logo-viewport");
@@ -6599,10 +6599,7 @@
         const item = document.createElement("span");
         item.className = "feedops-customer-logo-item";
         const image = document.createElement("img");
-        image.src = String(entry.logoUrl || "").replace(
-          /^https:\/\/ops\.feedops\.com\/assets\/customer-logos\//,
-          "/assets/customer-logos/"
-        );
+        image.src = entry.logoUrl;
         image.alt = selectedName;
         image.referrerPolicy = "no-referrer";
         const label = document.createElement("span");

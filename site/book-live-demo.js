@@ -65,10 +65,15 @@
 
   document.querySelectorAll(".meetings-iframe-container").forEach(function (container) {
     var loadButton = container.querySelector("[data-load-calendar]");
+    var loadingStartedAt = 0;
 
     function markLoaded() {
-      container.classList.add("is-loaded");
-      container.setAttribute("aria-busy", "false");
+      var minimumLoadingTime = 900;
+      var remainingTime = Math.max(0, minimumLoadingTime - (Date.now() - loadingStartedAt));
+      window.setTimeout(function () {
+        container.classList.add("is-loaded");
+        container.setAttribute("aria-busy", "false");
+      }, remainingTime);
     }
 
     function loadCalendar() {
@@ -78,6 +83,7 @@
 
       container.classList.add("is-loading");
       container.setAttribute("aria-busy", "true");
+      loadingStartedAt = Date.now();
 
       var iframe = document.createElement("iframe");
       iframe.src = container.getAttribute("data-src");
@@ -92,7 +98,6 @@
       iframe.style.marginTop = "-180px";
       iframe.style.borderWidth = "0";
       iframe.addEventListener("load", markLoaded, { once: true });
-      window.setTimeout(markLoaded, 900);
       container.appendChild(iframe);
     }
 

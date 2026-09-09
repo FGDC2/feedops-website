@@ -259,7 +259,7 @@
     }
 
     .page {
-      width: min(1240px, calc(100% - 40px));
+      width: min(920px, calc(100% - 40px));
       margin: 0 auto;
       min-height: 100vh;
       display: grid;
@@ -286,31 +286,24 @@
     }
 
     .booking-layout {
-      display: grid;
-      grid-template-columns: minmax(300px, 360px) minmax(520px, 1fr);
-      gap: 0;
-      align-items: start;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: #fff;
-      box-shadow: 0 16px 40px rgba(17, 24, 39, .07);
-      overflow: hidden;
-      margin: 18px 0 46px;
+      display: block;
+      width: 100%;
+      margin: 34px 0 56px;
     }
 
     .intro-panel,
     .scheduler-panel {
-      background: #fff;
+      background: transparent;
     }
 
     .intro-panel {
-      overflow: hidden;
-      border-right: 1px solid #eef1f5;
+      border: 0;
     }
 
     .intro-copy {
-      padding: 32px;
-      border-bottom: 1px solid #eef1f5;
+      padding: 18px 24px 28px;
+      border: 0;
+      text-align: center;
     }
 
     .kicker {
@@ -323,20 +316,20 @@
     }
 
     h1 {
-      margin: 0;
-      max-width: 520px;
+      margin: 0 auto;
+      max-width: 720px;
       color: var(--ink);
-      font-size: clamp(36px, 4.6vw, 56px);
+      font-size: clamp(38px, 5.5vw, 58px);
       line-height: 1.04;
       letter-spacing: 0;
     }
 
     .intro-copy p {
-      margin: 18px 0 0;
-      max-width: 560px;
+      margin: 16px auto 0;
+      max-width: 680px;
       color: var(--muted);
-      font-size: 16px;
-      line-height: 1.55;
+      font-size: 18px;
+      line-height: 1.6;
     }
 
     .steps {
@@ -397,7 +390,7 @@
     }
 
     .scheduler-panel {
-      padding: 24px;
+      padding: 0;
     }
 
     .meetings-iframe-container {
@@ -405,9 +398,10 @@
       height: 1040px;
       min-height: 1040px;
       border: 1px solid #eef1f5;
-      border-radius: 8px;
+      border-radius: 12px;
       overflow: hidden;
       background: #fff;
+      box-shadow: 0 18px 45px rgba(17, 24, 39, .08);
     }
 
     .meetings-iframe-container iframe {
@@ -658,16 +652,14 @@
 
     @media (max-width: 960px) {
       .booking-layout {
-        grid-template-columns: 1fr;
-        max-width: 720px;
+        max-width: 920px;
         width: 100%;
         margin: 0 auto;
         padding: 0;
       }
 
       .intro-panel {
-        border-right: 0;
-        border-bottom: 1px solid #eef1f5;
+        border: 0;
       }
 
       .intro-panel,
@@ -693,11 +685,8 @@
         flex-direction: column;
       }
 
-      .intro-copy,
-      .steps,
-      .scheduler-panel,
-      .support-card {
-        padding: 22px;
+      .intro-copy {
+        padding: 24px 0;
       }
 
       .step {
@@ -709,10 +698,14 @@
         height: 980px;
         min-height: 980px;
       }
+
+      .booking-layout {
+        margin-bottom: 40px;
+      }
     }
   </style>
   <link rel="preload" href="../footer-standard.css?v=20260724-black-friday-popup-v2" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="../footer-standard.css?v=20260724-black-friday-popup-v2"></noscript>
-  <link rel="stylesheet" href="../header-standard.css?v=20260724-global-navigation-v3">
+  <link rel="stylesheet" href="../header-standard.css?v=20260909-header-layout-v3">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -725,38 +718,9 @@
     <main class="booking-layout">
       <section class="intro-panel" aria-labelledby="booking-title">
         <div class="intro-copy">
-          <p class="kicker">Product feed demo</p>
           <h1 id="booking-title">Book a demo</h1>
-          <p>Book a demo to review your current feed setup, see the relevant parts of FeedOps, and decide whether there is a useful next step.</p>
+          <p>Choose a time below to see how FeedOps can improve your product feeds, resolve channel issues, and support your ecommerce growth.</p>
         </div>
-
-        <div class="steps">
-          <h2>What we’ll cover</h2>
-          <div class="step-list">
-            <div class="step">
-              <span class="step-number">1</span>
-              <div>
-                <strong>Understand your current workflow</strong>
-                <p>We talk through your product data, channels, internal process, agency involvement, and where feed work is handled today.</p>
-              </div>
-            </div>
-            <div class="step">
-              <span class="step-number">2</span>
-              <div>
-                <strong>Walk through the platform</strong>
-                <p>We show the parts of FeedOps that are relevant to your setup and explain how the platform and team can support your workflow.</p>
-              </div>
-            </div>
-            <div class="step">
-              <span class="step-number">3</span>
-              <div>
-                <strong>Discuss fit and next steps</strong>
-                <p>If FeedOps looks useful for you and your needs, we can talk through the right way to start and what the next step would look like.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </section>
 
       <section class="scheduler-panel" aria-label="Book a FeedOps demo">
@@ -852,7 +816,7 @@
   </footer>
   </div>
 
-  <script src="../book-live-demo.js?v=20260621-calendar-height" defer></script>
+  <script src="../book-live-demo.js?v=20260831-loading-silhouette-v2" defer></script>
 <style id="feedops-mode-bar-standard">
     .mode-switch {
       border-bottom: 1px solid #d8dee8 !important;
@@ -969,7 +933,7 @@
       }
     }
   </style>
-  <script src="../header-standard.js?v=20260807-audit-form-link" data-site-root="../" defer></script>
+  <script src="../header-standard.js?v=20260909-header-layout-v3" data-site-root="../" defer></script>
   <script src="../footer-standard.js?v=20260727-black-friday-session-dismiss-v3" data-site-root="../" defer></script>
 </body>
 </html>

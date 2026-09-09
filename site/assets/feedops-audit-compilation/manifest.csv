@@ -1,0 +1,32 @@
+order,account,category,title,status,recommended_use,path
+1,thefragranceshop.co.uk,overview,Audit overview,ready,website and slides,../feedops-entities-audit/01-audit-overview.png
+2,thefragranceshop.co.uk,history,Past audits,ready,slides,../feedops-entities-audit/02-past-audits.png
+3,thefragranceshop.co.uk,history,Legacy audit sheet,reference,product history,../feedops-entities-audit/03-legacy-audit-sheet.png
+4,thefragranceshop.co.uk,filter-menu,Visibility rate filter,ready,feature detail,../feedops-entities-audit/04-visibility-rate-filter.png
+5,thefragranceshop.co.uk,filter-menu,Average CTR filter,ready,feature detail,../feedops-entities-audit/05-average-ctr-filter.png
+6,thefragranceshop.co.uk,attribute-audit,Attribute completeness,ready,website and slides,../feedops-entities-audit/06-attribute-completeness.png
+7,thefragranceshop.co.uk,documentation,Product detail help,reference,help workflow,../feedops-entities-audit/07-product-detail-help.png
+8,thefragranceshop.co.uk,documentation,Product highlight help,reference,help workflow,../feedops-entities-audit/08-product-highlight-help.png
+9,thefragranceshop.co.uk,documentation,Product type help,reference,help workflow,../feedops-entities-audit/09-product-type-help.png
+10,emscarparts.com,overview,Expanded audit overview,ready,website and slides,../feedops-audit-emscarparts-expanded/01-audit-overview-full.png
+11,emscarparts.com,history,Expanded past audits,ready,slides,../feedops-audit-emscarparts-expanded/02-past-audits-full.png
+12,emscarparts.com,history,Expanded legacy audit sheet,reference,product history,../feedops-audit-emscarparts-expanded/03-legacy-audit-sheet-full.png
+13,emscarparts.com,filter-menu,Visibility rate menu,ready,feature detail,../feedops-audit-emscarparts-expanded/04-visibility-rate-full.png
+14,emscarparts.com,filter-menu,Average CTR menu,ready,feature detail,../feedops-audit-emscarparts-expanded/05-average-ctr-full.png
+15,emscarparts.com,attribute-audit,Attribute completeness,ready,website and slides,../feedops-audit-emscarparts-expanded/06-attribute-completeness-full.png
+16,emscarparts.com,approval,Product approval,qa,internal QA,../feedops-audit-emscarparts-expanded/07-product-approval-full.png
+17,emscarparts.com,compliance,Account compliance,qa,internal QA,../feedops-audit-emscarparts-expanded/08-account-compliance-full.png
+18,emscarparts.com,filtered-view,Products with impressions,qa,internal QA,../feedops-audit-emscarparts-expanded/09-filtered-with-impressions-full.png
+19,emscarparts.com,filtered-view,Impressions with no clicks,review,feature detail,../feedops-audit-emscarparts-expanded/10-filtered-impressions-no-clicks-full.png
+20,emscarparts.com,filtered-view,Products with no impressions,qa,internal QA,../feedops-audit-emscarparts-expanded/11-filtered-no-impressions-full.png
+21,emscarparts.com,filtered-view,Above-average CTR products,ready,website and slides,../feedops-audit-emscarparts-expanded/12-filtered-above-average-ctr-full.png
+22,emscarparts.com,filtered-view,Below-average CTR products,ready,website and slides,../feedops-audit-emscarparts-expanded/13-filtered-below-average-ctr-full.png
+23,emscarparts.com,filtered-view,Additional-image issue products,ready,website and slides,../feedops-audit-emscarparts-expanded/14-filtered-additional-image-issues-full.png
+24,emscarparts.com,traffic-view,Paid traffic,review,feature detail,../feedops-audit-emscarparts-expanded/15-paid-traffic-full.png
+25,emscarparts.com,traffic-view,Organic traffic,ready,website and slides,../feedops-audit-emscarparts-expanded/16-organic-traffic-full.png
+26,emscarparts.com,feedops-ai,Ask FeedOps AI open,ready,website and slides,../feedops-audit-emscarparts-expanded/17-ask-feedops-ai-open-full.png
+27,emscarparts.com,feedops-ai,Audit question entered,ready,slides,../feedops-audit-emscarparts-expanded/18-ask-feedops-ai-question-full.png
+28,emscarparts.com,feedops-ai,Audit response unavailable,qa,internal QA,../feedops-audit-emscarparts-expanded/19-ask-feedops-ai-response-unavailable-full.png
+29,emscarparts.com,feedops-ai,Suggested question entered,review,slides,../feedops-audit-emscarparts-expanded/20-ask-feedops-ai-suggested-question-full.png
+30,emscarparts.com,feedops-ai,Second response unavailable,qa,internal QA,../feedops-audit-emscarparts-expanded/21-ask-feedops-ai-second-response-unavailable-full.png
+

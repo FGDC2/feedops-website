@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FeedOps audit screenshot compilation</title>
+  <style>
+    :root { color-scheme: light; --ink:#111827; --muted:#667085; --line:#e4e7ec; --blue:#2563eb; --green:#16803c; --amber:#a15c00; --red:#b42318; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:#f5f7fb; color:var(--ink); font:15px/1.5 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    header { padding:52px clamp(24px,5vw,84px) 36px; color:white; background:linear-gradient(130deg,#101828 0%,#263b80 64%,#6d4ee8 100%); }
+    header p { max-width:760px; margin:10px 0 0; color:#dbe4ff; font-size:18px; }
+    h1 { margin:0; font-size:clamp(34px,5vw,62px); line-height:1.02; letter-spacing:-.04em; }
+    main { width:min(1500px,94vw); margin:34px auto 80px; }
+    nav { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:28px; }
+    nav a { padding:9px 13px; border:1px solid var(--line); border-radius:999px; background:white; color:var(--ink); text-decoration:none; }
+    section { margin:44px 0; }
+    h2 { margin:0 0 6px; font-size:28px; letter-spacing:-.025em; }
+    .intro { margin:0 0 20px; color:var(--muted); }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); gap:20px; }
+    .card { overflow:hidden; border:1px solid var(--line); border-radius:18px; background:white; box-shadow:0 10px 25px rgba(16,24,40,.06); }
+    .card img { display:block; width:100%; aspect-ratio:16/9; object-fit:cover; object-position:top left; background:#eef1f6; border-bottom:1px solid var(--line); }
+    .meta { padding:16px 17px 18px; }
+    .meta h3 { margin:0 0 8px; font-size:17px; }
+    .meta p { margin:0; color:var(--muted); }
+    .tag { display:inline-block; margin:0 6px 9px 0; padding:4px 8px; border-radius:999px; background:#ecfdf3; color:var(--green); font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; }
+    .tag.review { background:#fff7e6; color:var(--amber); }
+    .tag.qa { background:#fef3f2; color:var(--red); }
+    .tag.reference { background:#eff4ff; color:var(--blue); }
+    .wide { grid-column:1/-1; }
+    .wide img { aspect-ratio:2.35/1; }
+    footer { padding:30px; text-align:center; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FeedOps audit capture pack</h1>
+    <p>Thirty screenshots from two live Google Shopping Feed Audits, compiled for demo slides, website imagery, and internal product QA.</p>
+  </header>
+  <main>
+    <nav>
+      <a href="#shortlist">Demo shortlist</a><a href="#emscar">Expanded audit</a><a href="#fragrance">Fragrance audit</a><a href="#qa">QA evidence</a><a href="manifest.csv">Manifest CSV</a>
+    </nav>
+
+    <section id="shortlist">
+      <h2>Demo shortlist</h2>
+      <p class="intro">The strongest current candidates for slide layouts and website crops.</p>
+      <div class="grid">
+        <article class="card wide"><a href="../feedops-audit-emscarparts-expanded/01-audit-overview-full.png"><img src="../feedops-audit-emscarparts-expanded/01-audit-overview-full.png" alt="Expanded FeedOps audit overview"></a><div class="meta"><span class="tag">Ready</span><h3>Audit overview</h3><p>Best establishing screen for the audit story.</p></div></article>
+        <article class="card"><a href="../feedops-audit-emscarparts-expanded/06-attribute-completeness-full.png"><img src="../feedops-audit-emscarparts-expanded/06-attribute-completeness-full.png" alt="Attribute completeness audit"></a><div class="meta"><span class="tag">Ready</span><h3>Attribute completeness</h3><p>Detailed issue breakdown and affected-product workflow.</p></div></article>
+        <article class="card"><a href="../feedops-audit-emscarparts-expanded/12-filtered-above-average-ctr-full.png"><img src="../feedops-audit-emscarparts-expanded/12-filtered-above-average-ctr-full.png" alt="Above average CTR products"></a><div class="meta"><span class="tag">Ready</span><h3>Above-average CTR</h3><p>Strong filtered-results screen with real product rows.</p></div></article>
+        <article class="card"><a href="../feedops-audit-emscarparts-expanded/14-filtered-additional-image-issues-full.png"><img src="../feedops-audit-emscarparts-expanded/14-filtered-additional-image-issues-full.png" alt="Products with additional image issues"></a><div class="meta"><span class="tag">Ready</span><h3>Attribute-filtered products</h3><p>Connects an audit issue directly to affected inventory.</p></div></article>
+        <article class="card"><a href="../feedops-audit-emscarparts-expanded/16-organic-traffic-full.png"><img src="../feedops-audit-emscarparts-expanded/16-organic-traffic-full.png" alt="Organic traffic product view"></a><div class="meta"><span class="tag">Ready</span><h3>Organic traffic view</h3><p>Useful for performance-analysis storytelling.</p></div></article>
+        <article class="card"><a href="../feedops-audit-emscarparts-expanded/17-ask-feedops-ai-open-full.png"><img src="../feedops-audit-emscarparts-expanded/17-ask-feedops-ai-open-full.png" alt="Ask FeedOps AI panel"></a><div class="meta"><span class="tag">Ready</span><h3>Ask FeedOps AI</h3><p>Clean AI feature introduction before a question is submitted.</p></div></article>
+      </div>
+    </section>
+
+    <section id="emscar">
+      <h2>emscarparts.com expanded capture</h2>
+      <p class="intro">Twenty-one full-page captures covering overview, drill-downs, filtered tables, traffic views, and AI.</p>
+      <div class="grid">
+        <article class="card"><a href="../feedops-audit-emscarparts-expanded/02-past-audits-full.png"><img src="../feedops-audit-emscarparts-expanded/02-past-audits-full.png" alt="Past audits"></a><div class="meta"><span class="tag">Ready</span><h3>Past audits</h3></div></article>
+        <article class="card"><a href="../feedops-audit-emscarparts-expanded/04-visibility-rate-full.png"><img src="../feedops-audit-emscarparts-expanded/04-visibility-rate-full.png" alt="Visibility rate filter"></a><div class="meta"><span class="tag">Ready</span><h3>Visibility filter menu</h3></div></article>
+        <article class="card"><a href="../feedops-audit-emscarparts-expanded/05-average-ctr-full.png"><img src="../feedops-audit-emscarparts-expanded/05-average-ctr-full.png" alt="CTR filter"></a><div class="meta"><span class="tag">Ready</span><h3>CTR filter menu</h3></div></article>
+        <article class="card"><a href="../feedops-audit-emscarparts-expanded/13-filtered-below-average-ctr-full.png"><img src="../feedops-audit-emscarparts-expanded/13-filtered-below-average-ctr-full.png" alt="Below average CTR products"></a><div class="meta"><span class="tag">Ready</span><h3>Below-average CTR</h3></div></article>
+        <article class="card"><a href="../feedops-audit-emscarparts-expanded/15-paid-traffic-full.png"><img src="../feedops-audit-emscarparts-expanded/15-paid-traffic-full.png" alt="Paid traffic view"></a><div class="meta"><span class="tag review">Review</span><h3>Paid traffic</h3><p>The captured state contains no matching products.</p></div></article>
+        <article class="card"><a href="../feedops-audit-emscarparts-expanded/18-ask-feedops-ai-question-full.png"><img src="../feedops-audit-emscarparts-expanded/18-ask-feedops-ai-question-full.png" alt="FeedOps AI question"></a><div class="meta"><span class="tag">Ready</span><h3>AI question entered</h3><p>Use before showing a successful response.</p></div></article>
+      </div>
+    </section>
+
+    <section id="fragrance">
+      <h2>thefragranceshop.co.uk capture</h2>
+      <p class="intro">Nine standard viewport captures, including audit overview, history, filters, completeness, and linked documentation.</p>
+      <div class="grid">
+        <article class="card"><a href="../feedops-entities-audit/01-audit-overview.png"><img src="../feedops-entities-audit/01-audit-overview.png" alt="Fragrance shop audit overview"></a><div class="meta"><span class="tag">Ready</span><h3>Audit overview</h3></div></article>
+        <article class="card"><a href="../feedops-entities-audit/02-past-audits.png"><img src="../feedops-entities-audit/02-past-audits.png" alt="Fragrance shop audit history"></a><div class="meta"><span class="tag">Ready</span><h3>Past audit history</h3></div></article>
+        <article class="card"><a href="../feedops-entities-audit/04-visibility-rate-filter.png"><img src="../feedops-entities-audit/04-visibility-rate-filter.png" alt="Visibility rate filter"></a><div class="meta"><span class="tag">Ready</span><h3>Visibility filter</h3></div></article>
+        <article class="card"><a href="../feedops-entities-audit/05-average-ctr-filter.png"><img src="../feedops-entities-audit/05-average-ctr-filter.png" alt="Average CTR filter"></a><div class="meta"><span class="tag">Ready</span><h3>CTR filter</h3></div></article>
+        <article class="card"><a href="../feedops-entities-audit/06-attribute-completeness.png"><img src="../feedops-entities-audit/06-attribute-completeness.png" alt="Attribute completeness"></a><div class="meta"><span class="tag">Ready</span><h3>Attribute completeness</h3></div></article>
+        <article class="card"><a href="../feedops-entities-audit/07-product-detail-help.png"><img src="../feedops-entities-audit/07-product-detail-help.png" alt="Google Merchant product detail help"></a><div class="meta"><span class="tag reference">Reference</span><h3>Linked documentation</h3></div></article>
+      </div>
+    </section>
+
+    <section id="qa">
+      <h2>QA evidence</h2>
+      <p class="intro">These are preserved for investigation and should not be used in polished marketing until confirmed.</p>
+      <div class="grid">
+        <article class="card"><a href="../feedops-audit-emscarparts-expanded/07-product-approval-full.png"><img src="../feedops-audit-emscarparts-expanded/07-product-approval-full.png" alt="Product approval no issue data"></a><div class="meta"><span class="tag qa">QA</span><h3>Product Approval data unavailable</h3></div></article>
+        <article class="card"><a href="../feedops-audit-emscarparts-expanded/08-account-compliance-full.png"><img src="../feedops-audit-emscarparts-expanded/08-account-compliance-full.png" alt="Account checks unavailable"></a><div class="meta"><span class="tag qa">QA</span><h3>Account checks unavailable</h3></div></article>
+        <article class="card"><a href="../feedops-audit-emscarparts-expanded/11-filtered-no-impressions-full.png"><img src="../feedops-audit-emscarparts-expanded/11-filtered-no-impressions-full.png" alt="No impressions filter inconsistency"></a><div class="meta"><span class="tag qa">QA</span><h3>Filtered total without rows</h3></div></article>
+        <article class="card"><a href="../feedops-audit-emscarparts-expanded/19-ask-feedops-ai-response-unavailable-full.png"><img src="../feedops-audit-emscarparts-expanded/19-ask-feedops-ai-response-unavailable-full.png" alt="FeedOps AI unavailable response"></a><div class="meta"><span class="tag qa">QA</span><h3>AI audit response unavailable</h3></div></article>
+      </div>
+    </section>
+  </main>
+  <footer>FeedOps audit compilation · 30 source screenshots</footer>
+</body>
+</html>

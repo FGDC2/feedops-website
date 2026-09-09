@@ -23,10 +23,7 @@
       '<div class="feedops-desktop-menu" aria-label="Primary links">',
       '  <a class="feedops-nav-link" href="' + href("product-feed-platform/") + '">Platform</a>',
       '  <a class="feedops-nav-link" href="' + href("integrations/") + '">Integrations</a>',
-      '  <a class="feedops-nav-link" href="' + href("learning/") + '">Learning</a>',
       '  <a class="feedops-nav-link" href="' + href("pricing/") + '">Pricing</a>',
-      '  <a class="feedops-nav-link" href="' + href("company/") + '">About</a>',
-      '  <a class="feedops-nav-link feedops-nav-login" href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
       '</div>'
     ].join("");
   }
@@ -38,9 +35,7 @@
       '    <div class="feedops-global-mobile-links">',
       '      <a href="' + href("product-feed-platform/") + '">Platform</a>',
       '      <a href="' + href("integrations/") + '">Integrations</a>',
-      '      <a href="' + href("learning/") + '">Learning</a>',
       '      <a href="' + href("pricing/") + '">Pricing</a>',
-      '      <a href="' + href("company/") + '">About</a>',
       '      <a href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
       '    </div>',
       '    <div class="feedops-mobile-actions">',
@@ -61,6 +56,8 @@
       '    </a>',
       desktopMenu(),
       '    <div class="feedops-nav-actions">',
+      '      <a class="feedops-nav-link feedops-nav-login" href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
+      '      <span class="feedops-nav-divider" aria-hidden="true"></span>',
       '      <a class="feedops-demo-cta" href="' + href("book-live-demo/") + '">' + calendarIcon() + '<span>Book a demo</span></a>',
       '      <a class="feedops-audit-cta" href="https://feedops.com/free-google-shopping-feed-audit/free-audit-form/">' + sparkleIcon() + '<span>Get Free Feed Audit</span></a>',
       '    </div>',

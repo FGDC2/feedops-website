@@ -32,9 +32,9 @@
   <meta name="twitter:image" content="https://feedops.com/assets/feedops-product-data-platform-commerce-channel-workflow.png">
   <meta name="twitter:image:alt" content="FeedOps product data platform workflow connecting commerce systems to Google, Meta, Amazon and other channels">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../header-standard.css?v=20260907-integrations-nav-v1">
+  <link rel="stylesheet" href="../header-standard.css?v=20260909-header-layout-v3">
   <link rel="stylesheet" href="../footer-standard.css?v=20260724-black-friday-popup-v2">
-  <link rel="stylesheet" href="platform-v2.min.css?v=20260908-scroll-v44">
+  <link rel="stylesheet" href="platform-v2.min.css?v=20260909-anchor-offset-v45">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -1240,7 +1240,7 @@
     <nav class="platform-v2-page-nav" aria-label="On this page">
       <div class="platform-v2-page-nav-inner">
         <span>On this page</span>
-        <a class="is-active" href="#data-journey">Overview</a>
+        <a href="#data-journey">Overview</a>
         <a href="#onboarding">Onboarding</a>
         <a href="#transformation">Transformation</a>
         <a href="#ai-enrichment">AI enrichment</a>
@@ -1838,19 +1838,19 @@
           if (isActive) link.setAttribute('aria-current', 'location');
           else link.removeAttribute('aria-current');
         });
-        if (shouldReveal) revealLink(activeLink);
+        if (shouldReveal && activeLink) revealLink(activeLink);
       };
 
       const updateActiveLink = () => {
         const stickyTop = Number.parseFloat(getComputedStyle(nav).top) || 0;
         const threshold = Math.max(stickyTop + nav.offsetHeight + 24, window.innerHeight * .65);
-        let current = sections[0];
+        let current = null;
 
         sections.forEach((item) => {
           if (item.section.getBoundingClientRect().top <= threshold) current = item;
         });
 
-        if (current) activate(current.link);
+        activate(current ? current.link : null);
         ticking = false;
       };
 
@@ -1860,22 +1860,14 @@
         requestAnimationFrame(updateActiveLink);
       };
 
-      const elementDocumentTop = (element) => {
-        let top = 0;
-        let current = element;
-
-        while (current) {
-          top += current.offsetTop || 0;
-          current = current.offsetParent;
-        }
-
-        return top;
-      };
-
       const alignOverviewNav = (behavior = 'smooth') => {
         const header = document.querySelector('#feedops-standard-header');
         const headerHeight = header ? header.offsetHeight : 96;
-        const top = Math.max(0, elementDocumentTop(nav) - headerHeight);
+        const previousSection = nav.previousElementSibling;
+        const navTop = previousSection
+          ? previousSection.getBoundingClientRect().bottom + window.scrollY
+          : nav.getBoundingClientRect().top + window.scrollY;
+        const top = Math.max(0, navTop - headerHeight);
         window.scrollTo({ top, behavior });
       };
 
@@ -1910,7 +1902,7 @@
       else requestUpdate();
     })();
   </script>
-  <script src="../header-standard.js?v=20260907-integrations-nav-v1" data-site-root="../" defer></script>
+  <script src="../header-standard.js?v=20260909-header-layout-v3" data-site-root="../" defer></script>
   <script src="../footer-standard.js?v=20260907-integrations-footer-v1" data-site-root="../" defer></script>
 </body>
 </html>
