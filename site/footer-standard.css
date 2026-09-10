@@ -3,34 +3,26 @@
   width: 100%;
   margin: 0;
   box-sizing: border-box;
-  background: #101820;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(26, 45, 62, .34), transparent 46%),
+    linear-gradient(180deg, #101923 0%, #0c1620 100%);
   color: #ffffff;
-  padding: 62px 24px 54px;
+  padding: 74px 24px 46px;
   font-family: Inter, Arial, sans-serif;
   border-top: 0;
 }
 
-#feedops-standard-footer.site-footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 100vw;
-  transform: translateX(-50%);
-  height: 4px;
-  background: #ffca28;
-}
-
 #feedops-standard-footer .footer-inner {
   display: grid;
-  grid-template-columns: minmax(280px, 1.35fr) minmax(180px, .9fr) minmax(180px, .9fr) minmax(0, .45fr) minmax(0, .45fr);
+  grid-template-columns: minmax(300px, 1.45fr) repeat(4, minmax(140px, .75fr));
   grid-template-areas:
-    "brand company platform support support"
+    "brand company platform support ."
+    "divider divider divider divider divider"
     "guides explainers troubleshooting free-traffic free-traffic"
-    "comparisons . . . .";
-  column-gap: 28px;
-  row-gap: 36px;
-  width: min(1180px, calc(100% - 144px));
+    "comparisons . . . ." !important;
+  column-gap: clamp(36px, 4.5vw, 92px);
+  row-gap: 30px;
+  width: min(1740px, calc(100% - 96px));
   margin: 0 auto;
 }
 
@@ -51,6 +43,13 @@
   grid-area: support;
 }
 
+#feedops-standard-footer .footer-section-divider {
+  grid-area: divider;
+  height: 1px;
+  margin: 12px 0 14px;
+  background: rgba(255, 255, 255, .2);
+}
+
 #feedops-standard-footer .footer-brand-guides {
   grid-area: guides;
 }
@@ -68,23 +67,29 @@
 }
 
 #feedops-standard-footer .footer-comparison-column {
-  grid-area: comparisons;
+  grid-area: comparisons !important;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, .2);
 }
 
 #feedops-standard-footer .footer-brand img {
   display: block;
-  width: 148px;
+  width: 220px;
   max-width: 100%;
   height: auto;
   margin-bottom: 18px;
   filter: brightness(0) invert(1);
 }
 
+#feedops-standard-footer .footer-brand .footer-legal-column {
+  margin-top: 28px;
+}
+
 #feedops-standard-footer .footer-brand p {
-  max-width: 315px;
+  max-width: 420px;
   margin: 0;
   color: rgba(255, 255, 255, .72);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.65;
 }
 
@@ -93,9 +98,9 @@
 }
 
 #feedops-standard-footer .footer-heading {
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   color: #ffca28;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 800;
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -103,7 +108,7 @@
 
 #feedops-standard-footer .footer-column {
   display: grid;
-  gap: 4px;
+  gap: 8px;
 }
 
 #feedops-standard-footer .footer-column a {
@@ -111,8 +116,8 @@
   display: flex;
   align-items: center;
   color: rgba(255, 255, 255, .78);
-  font-size: 13.5px;
-  line-height: 1.2;
+  font-size: 15px;
+  line-height: 1.35;
   text-decoration: none;
   transition: color .18s ease, transform .18s ease;
 }
@@ -120,6 +125,16 @@
 #feedops-standard-footer .footer-column a:hover {
   color: #ffffff;
   transform: translateX(2px);
+}
+
+#feedops-standard-footer .footer-comparison-column .footer-column {
+  display: grid;
+  gap: 10px;
+}
+
+#feedops-standard-footer .footer-comparison-column .footer-column a {
+  min-height: auto;
+  color: rgba(255, 255, 255, .5);
 }
 
 footer.elementor-location-footer {
@@ -131,6 +146,20 @@ footer.site-footer:not(#feedops-standard-footer) {
   display: none !important;
 }
 
+@media (max-width: 1180px) {
+  #feedops-standard-footer .footer-inner {
+    width: min(100%, 980px);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+      "brand brand brand"
+      "company platform support"
+      "divider divider divider"
+      "guides explainers troubleshooting"
+      "free-traffic free-traffic free-traffic"
+      "comparisons . ." !important;
+  }
+}
+
 @media (max-width: 900px) {
   #feedops-standard-footer .footer-inner {
     width: min(100%, 680px);
@@ -139,10 +168,11 @@ footer.site-footer:not(#feedops-standard-footer) {
       "brand brand"
       "company platform"
       "support support"
+      "divider divider"
       "guides guides"
       "explainers troubleshooting"
       "free-traffic free-traffic"
-      "comparisons comparisons";
+      "comparisons comparisons" !important;
   }
 
   #feedops-standard-footer .footer-brand {
@@ -163,11 +193,12 @@ footer.site-footer:not(#feedops-standard-footer) {
       "company"
       "platform"
       "support"
+      "divider"
       "guides"
       "explainers"
       "troubleshooting"
       "free-traffic"
-      "comparisons";
+      "comparisons" !important;
   }
 
 }

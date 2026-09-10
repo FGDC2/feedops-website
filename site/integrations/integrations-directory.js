@@ -80,9 +80,9 @@
   var grid = document.getElementById("integrations-grid");
   var search = document.getElementById("integrations-search-input");
   var showMore = document.getElementById("integrations-show-more");
-  var customNote = document.getElementById("integrations-custom-note");
+  var directoryNote = document.getElementById("integrations-directory-note");
   var selectorLinks = Array.prototype.slice.call(document.querySelectorAll("[data-directory-filter]"));
-  if (!filters || !grid || !search || !showMore || !customNote) return;
+  if (!filters || !grid || !search || !showMore || !directoryNote) return;
 
   var state = { category: "all", expanded: false, query: "" };
 
@@ -129,7 +129,8 @@
     grid.innerHTML = visible.length ? visible.map(cardMarkup).join("") : '<p class="integrations-empty">No connections match your search.</p>';
     showMore.hidden = Boolean(query) || matches.length <= limit;
     showMore.textContent = state.expanded ? "Show fewer connections" : "Show more connections";
-    customNote.hidden = state.category !== "custom";
+    directoryNote.hidden = Boolean(query);
+    directoryNote.setAttribute("data-theme", state.category);
   }
 
   filters.addEventListener("click", function (event) {

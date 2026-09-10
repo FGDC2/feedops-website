@@ -24,6 +24,7 @@
       '  <a class="feedops-nav-link" href="' + href("product-feed-platform/") + '">Platform</a>',
       '  <a class="feedops-nav-link" href="' + href("integrations/") + '">Integrations</a>',
       '  <a class="feedops-nav-link" href="' + href("pricing/") + '">Pricing</a>',
+      '  <a class="feedops-nav-link" href="' + href("company/") + '">About</a>',
       '</div>'
     ].join("");
   }
@@ -36,6 +37,7 @@
       '      <a href="' + href("product-feed-platform/") + '">Platform</a>',
       '      <a href="' + href("integrations/") + '">Integrations</a>',
       '      <a href="' + href("pricing/") + '">Pricing</a>',
+      '      <a href="' + href("company/") + '">About</a>',
       '      <a href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
       '    </div>',
       '    <div class="feedops-mobile-actions">',

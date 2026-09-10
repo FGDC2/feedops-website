@@ -35,7 +35,7 @@
   <link rel="preload" as="image" href="./assets/hero/product-feed-management-ecommerce-growth-1280.webp" imagesrcset="./assets/hero/product-feed-management-ecommerce-growth-720.webp 720w, ./assets/hero/product-feed-management-ecommerce-growth-1280.webp 1280w" imagesizes="(max-width: 960px) calc(100vw - 48px), 637px" type="image/webp" fetchpriority="high">
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="header-standard.css?v=20260909-header-layout-v3">
-  <link rel="stylesheet" href="footer-standard.css?v=20260724-black-friday-popup-v2">
+  <link rel="stylesheet" href="footer-standard.css?v=20260910-footer-compare-v8">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -74,7 +74,7 @@
           "url": "https://feedops.com/",
           "name": "FeedOps | Turn Product Data Into Ecommerce Growth",
           "headline": "Turn Product Data Into Ecommerce Growth",
-          "description": "FeedOps combines proprietary technology, custom AI agents and dedicated feed specialists to improve product visibility, feed health and channel performance without adding operational burden to your team.",
+          "description": "FeedOps combines proprietary technology, custom AI agents and dedicated feed specialists to improve product visibility, feed health and channel performance without adding operational burden to your ecommerce and marketing teams.",
           "isPartOf": {
             "@id": "https://feedops.com/#website"
           },
@@ -2685,6 +2685,45 @@
       background: #fff1bf;
       color: #071b57;
       font-size: 30px;
+    }
+
+    .channels-callout-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: #071b57;
+      text-decoration: none;
+      transition: color .18s ease, transform .18s ease;
+    }
+
+    .channels-callout-link span {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #ffbd20;
+      font-size: 21px;
+      line-height: 1;
+      transition: background-color .18s ease, transform .18s ease;
+    }
+
+    .channels-callout-link:hover,
+    .channels-callout-link:focus-visible {
+      color: #0b7b62;
+      transform: translateY(-1px);
+    }
+
+    .channels-callout-link:hover span,
+    .channels-callout-link:focus-visible span {
+      background: #ffd05c;
+      transform: translateX(3px);
+    }
+
+    .channels-callout-link:focus-visible {
+      outline: 3px solid rgba(11, 123, 98, .25);
+      outline-offset: 5px;
+      border-radius: 6px;
     }
 
     .results-section {
@@ -5493,7 +5532,7 @@
       <div class="hero-inner">
         <div class="hero-content">
           <h1>Turn Product Data Into Ecommerce Growth</h1>
-          <p class="hero-copy">FeedOps combines proprietary technology, custom AI agents and dedicated feed specialists to improve product visibility, feed health and channel performance—without adding operational burden to your team.</p>
+          <p class="hero-copy">FeedOps combines proprietary technology, custom AI agents and dedicated feed specialists to improve product visibility, feed health and channel performance—without adding operational burden to your ecommerce and marketing teams.</p>
           <div class="hero-actions" id="strategy-call">
             <a class="button primary" href="book-live-demo/">Book a demo</a>
             <a class="button secondary" href="#workflow">See how it works</a>
@@ -5591,7 +5630,7 @@
         <div class="scale-heading">
           <p class="scale-kicker">Built to scale</p>
           <h2 id="scale-title">Built for complexity at every scale</h2>
-          <p class="scale-lede">Whether you manage thousands of products or a catalogue spanning millions of SKUs, FeedOps gives your team the technology and specialist support to keep product data accurate, optimised and ready for every channel.</p>
+          <p class="scale-lede">Whether you manage thousands of products or a catalogue spanning millions of SKUs, FeedOps gives your ecommerce and marketing teams the technology and specialist support to keep product data accurate, optimised and ready for every channel.</p>
         </div>
 
         <div class="scale-card-grid" aria-label="FeedOps product feed scale capabilities">
@@ -6000,7 +6039,7 @@
           </article>
         </div>
 
-        <div class="channels-callout"><span class="channels-callout-icon" aria-hidden="true">☆</span><span>Don’t see your channel? FeedOps can create and manage custom destination feeds for additional platforms.</span></div>
+        <div class="channels-callout"><span class="channels-callout-icon" aria-hidden="true">☆</span><a class="channels-callout-link" href="integrations/">See all our integrations <span aria-hidden="true">→</span></a></div>
       </div>
     </section>
 
@@ -6531,7 +6570,6 @@
       <div class="footer-group footer-support-column">
         <div class="footer-heading">Support</div>
         <div class="footer-column">
-          <a href="faq/">FAQ</a>
           <a href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>
           <a href="contact-us/">Contact</a>
           <a href="/help/">Help Docs</a>
@@ -6569,8 +6607,8 @@
       </div>
     </div>
   </footer>
-<script src="header-standard.js?v=20260909-header-layout-v3" data-site-root="" defer></script>
-  <script src="footer-standard.js?v=20260831-staging-root-path-v2" data-site-root="" defer></script>
+<script src="header-standard.js?v=20260910-about-nav-v4" data-site-root="" defer></script>
+  <script src="footer-standard.js?v=20260910-footer-compare-v8" data-site-root="" defer></script>
   <script>
     document.querySelectorAll("[data-logo-carousel]").forEach((root) => {
       const viewport = root.querySelector(".feedops-logo-viewport");
