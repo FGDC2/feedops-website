@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-24T00:00:00.000Z",
+  "updatedAt": "2026-09-10T00:31:00.000Z",
   "redirects": [
     {
       "source": "/5-most-common-google-merchant-center-errors-and-how-to-fix-them/",
@@ -31,6 +31,12 @@
       "destination": "/contact_us/thanks-for-reaching-out/",
       "status": 301,
       "updatedAt": "2026-07-17T00:00:00.000Z"
+    },
+    {
+      "source": "/faq/",
+      "destination": "/company/#faqs",
+      "status": 301,
+      "updatedAt": "2026-09-10T00:31:00.000Z"
     },
     {
       "source": "/google-announces-new-product-data-specification-requirements-what-are-they-and-why/",

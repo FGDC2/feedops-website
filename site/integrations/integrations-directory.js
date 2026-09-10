@@ -50,7 +50,7 @@
     { name: "Criteo", category: "media", type: "Media", url: "https://www.criteo.com/", domain: "criteo.com", keywords: "criteo advertising media retargeting" },
     { name: "Reddit", category: "media", type: "Media", url: "https://www.redditforbusiness.com/", domain: "reddit.com", keywords: "reddit advertising social" },
 
-    { name: "Lasoo", category: "marketplace", type: "Marketplace", url: "https://www.lasoo.com.au/", domain: "lasoo.com.au", keywords: "lasoo marketplace" },
+    { name: "Lasoo", category: "marketplace", type: "Marketplace", url: "https://www.lasoo.com.au/", page: "/lasoo/", domain: "lasoo.com.au", keywords: "lasoo marketplace" },
     { name: "MyDeal", category: "marketplace", type: "Marketplace", url: "https://www.mydeal.com.au/", domain: "mydeal.com.au", keywords: "my deal marketplace" },
     { name: "Decathlon", category: "marketplace", type: "Marketplace", url: "https://www.decathlon.com/", domain: "decathlon.com", keywords: "decathlon marketplace" },
     { name: "Idealo", category: "marketplace", type: "Marketplace", url: "https://www.idealo.co.uk/", domain: "idealo.co.uk", keywords: "idealo marketplace comparison shopping" },
@@ -80,9 +80,8 @@
   var grid = document.getElementById("integrations-grid");
   var search = document.getElementById("integrations-search-input");
   var showMore = document.getElementById("integrations-show-more");
-  var directoryNote = document.getElementById("integrations-directory-note");
   var selectorLinks = Array.prototype.slice.call(document.querySelectorAll("[data-directory-filter]"));
-  if (!filters || !grid || !search || !showMore || !directoryNote) return;
+  if (!filters || !grid || !search || !showMore) return;
 
   var state = { category: "all", expanded: false, query: "" };
 
@@ -104,6 +103,7 @@
 
   function cardMarkup(item) {
     var body = logoMarkup(item) + '<div class="integration-card-copy"><h3>' + escapeHtml(item.name) + '</h3><span class="integration-card-category ' + escapeHtml(item.category) + '">' + escapeHtml(item.type) + "</span></div>";
+    if (item.page) return '<a class="integration-card is-linked" href="' + escapeHtml(item.page) + '" data-category="' + escapeHtml(item.category) + '">' + body + '<span class="integration-card-chevron" aria-hidden="true">›</span></a>';
     return '<article class="integration-card" data-category="' + escapeHtml(item.category) + '">' + body + "</article>";
   }
 
@@ -123,14 +123,12 @@
       var searchable = [item.name, item.type, item.keywords, category ? category.label : ""].join(" ").toLowerCase();
       return searchable.indexOf(query) !== -1;
     });
-    var limit = state.category === "all" ? 12 : 9;
+    var limit = 8;
     var visible = query || state.expanded ? matches : matches.slice(0, limit);
 
     grid.innerHTML = visible.length ? visible.map(cardMarkup).join("") : '<p class="integrations-empty">No connections match your search.</p>';
     showMore.hidden = Boolean(query) || matches.length <= limit;
     showMore.textContent = state.expanded ? "Show fewer connections" : "Show more connections";
-    directoryNote.hidden = Boolean(query);
-    directoryNote.setAttribute("data-theme", state.category);
   }
 
   filters.addEventListener("click", function (event) {

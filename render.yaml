@@ -32,6 +32,9 @@ services:
         source: /contact-us/thanks-for-reaching-out/
         destination: /contact_us/thanks-for-reaching-out/
       - type: redirect
+        source: /faq/
+        destination: /company/#faqs
+      - type: redirect
         source: /google-announces-new-product-data-specification-requirements-what-are-they-and-why/
         destination: /google-merchant-center-errors/
       - type: redirect

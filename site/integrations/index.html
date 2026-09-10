@@ -535,6 +535,9 @@
     a.integration-card { transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease; }
     a.integration-card:hover { border-color: #83b4ff; box-shadow: 0 12px 30px rgba(7, 20, 54, .08); transform: translateY(-1px); }
     a.integration-card:focus-visible { outline: 3px solid rgba(255, 202, 40, .72); outline-offset: 3px; }
+    .integration-card.is-linked { grid-template-columns: 42px minmax(0, 1fr) auto; }
+    .integration-card-chevron { color: var(--integrations-green); font-size: 1.8rem; line-height: 1; transition: transform .18s ease; }
+    .integration-card.is-linked:hover .integration-card-chevron { transform: translateX(3px); }
     .integration-card[hidden] { display: none; }
     .integration-card-name { min-width: 0; }
     .integration-card-mark {
@@ -569,34 +572,6 @@
     .integrations-show-more:hover { border-color: #83b4ff; background: #f8fbff; }
     .integrations-show-more[hidden] { display: none; }
     .integrations-empty { grid-column: 1 / -1; padding: 34px; border: 1px dashed var(--integrations-line); border-radius: 12px; color: var(--integrations-body); background: #fff; text-align: center; font-weight: 750; }
-    .integrations-directory-note {
-      --note-accent: #0d765f;
-      --note-ink: #075b4a;
-      --note-wash: rgba(13, 118, 95, .12);
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-top: 22px;
-      padding: 20px 22px;
-      border-left: 4px solid var(--note-accent);
-      border-radius: 0 12px 12px 0;
-      color: var(--note-ink);
-      background: linear-gradient(90deg, var(--note-wash), rgba(255,255,255,.72));
-      transition: border-color .18s ease, color .18s ease, background .18s ease;
-    }
-    .integrations-directory-note[data-theme="commerce"] { --note-accent: #0f766e; --note-ink: #0b5f59; --note-wash: rgba(15, 118, 110, .12); }
-    .integrations-directory-note[data-theme="custom"] { --note-accent: #d97706; --note-ink: #8a4b12; --note-wash: rgba(245, 158, 11, .13); }
-    .integrations-directory-note[data-theme="media"] { --note-accent: #2563eb; --note-ink: #1d4ed8; --note-wash: rgba(37, 99, 235, .11); }
-    .integrations-directory-note[data-theme="marketplace"] { --note-accent: #16a34a; --note-ink: #147437; --note-wash: rgba(22, 163, 74, .11); }
-    .integrations-directory-note[data-theme="affiliate"] { --note-accent: #db2777; --note-ink: #a91d5d; --note-wash: rgba(219, 39, 119, .10); }
-    .integrations-directory-note[data-theme="local"] { --note-accent: #f0522d; --note-ink: #b9381c; --note-wash: rgba(240, 82, 45, .11); }
-    .integrations-directory-note[data-theme="ai"] { --note-accent: #7c3aed; --note-ink: #6427c7; --note-wash: rgba(124, 58, 237, .10); }
-    .integrations-directory-note[data-theme="other"] { --note-accent: #475569; --note-ink: #334155; --note-wash: rgba(71, 85, 105, .10); }
-    .integrations-directory-note[hidden] { display: none; }
-    .integrations-directory-note b { width: 38px; height: 38px; flex: 0 0 38px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; color: #fff; background: var(--note-accent); font-size: 1.45rem; line-height: 1; }
-    .integrations-directory-note strong { display: block; margin-bottom: 3px; color: var(--note-ink); }
-    .integrations-directory-note p { margin: 0; font-size: .9rem; font-weight: 700; }
-    .integrations-directory-note a { margin-left: auto; color: var(--note-ink); font-size: .88rem; font-weight: 900; white-space: nowrap; }
     .integrations-managed-panel {
       padding: 36px;
       border: 1px solid var(--integrations-line);
@@ -718,8 +693,6 @@
       .integrations-layer-list { grid-template-columns: 1fr; }
       .integrations-directory-grid { gap: 10px; }
       .integration-card { min-height: 128px; }
-      .integrations-directory-note { align-items: flex-start; flex-wrap: wrap; }
-      .integrations-directory-note a { width: 100%; margin-left: 54px; }
       .integrations-sync-list.is-three,
       .integrations-sync-list.is-two { grid-template-columns: 1fr; }
       .integrations-custom { grid-template-columns: 1fr; padding: 26px; }
@@ -814,7 +787,7 @@
       <div class="integrations-shell">
         <div class="integrations-section-header">
           <h2 id="integration-directory-title">Explore FeedOps connections</h2>
-          <p class="integrations-lead">Browse the currently supported source and destination connections.</p>
+          <p class="integrations-lead">Browse the currently supported source and destination connections. Need a connection that isn’t listed? <a class="integrations-text-link" href="/contact_us/">Contact us</a>.</p>
         </div>
         <div class="integrations-directory-toolbar">
           <label class="integrations-search" for="integrations-search-input">
@@ -878,16 +851,11 @@
 
           <article class="integration-card" data-category="affiliate"><div class="integration-card-name"><span class="integration-card-mark">BV</span><h3>Bazaarvoice</h3></div><div class="integration-card-meta"><span class="integration-card-category">Affiliate and Discovery</span></div></article>
           <article class="integration-card" data-category="affiliate"><div class="integration-card-name"><span class="integration-card-mark">E</span><h3>Emarsys</h3></div><div class="integration-card-meta"><span class="integration-card-category">Affiliate and Discovery</span></div></article>
-          <article class="integration-card" data-category="affiliate"><div class="integration-card-name"><span class="integration-card-mark">L</span><h3>Lasoo</h3></div><div class="integration-card-meta"><span class="integration-card-category">Affiliate and Discovery</span></div></article>
+          <a class="integration-card is-linked" href="/lasoo/" data-category="marketplace"><span class="integration-card-mark">L</span><div class="integration-card-copy"><h3>Lasoo</h3><span class="integration-card-category marketplace">Marketplace</span></div><span class="integration-card-chevron" aria-hidden="true">›</span></a>
           <article class="integration-card" data-category="affiliate"><div class="integration-card-name"><span class="integration-card-mark">CF</span><h3>Commission Factory</h3></div><div class="integration-card-meta"><span class="integration-card-category">Affiliate and Discovery</span></div></article>
           <article class="integration-card" data-category="affiliate"><div class="integration-card-name"><span class="integration-card-mark">CJ</span><h3>CJ Affiliate</h3></div><div class="integration-card-meta"><span class="integration-card-category">Affiliate and Discovery</span></div></article>
           <article class="integration-card" data-category="affiliate"><div class="integration-card-name"><span class="integration-card-mark">SS</span><h3>Style Sourcebook</h3></div><div class="integration-card-meta"><span class="integration-card-category">Affiliate and Discovery</span></div></article>
         </div>
-        <aside class="integrations-directory-note" id="integrations-directory-note" data-theme="all">
-          <b aria-hidden="true">+</b>
-          <div><strong>Need something else?</strong><p>Any data source or channel not listed, we can build it for you.</p></div>
-          <a href="https://feedops.com/contact_us/">Contact us</a>
-        </aside>
         <div class="integrations-directory-actions">
           <button class="integrations-show-more" id="integrations-show-more" type="button" hidden>Show more connections</button>
         </div>
@@ -946,7 +914,7 @@
 
   </main>
 
-  <script src="integrations-directory.js?v=20260910-directory-callout-v7" defer></script>
+  <script src="integrations-directory.js?v=20260910-directory-cards-v8" defer></script>
   <script src="../header-standard.js?v=20260910-about-nav-v4" data-site-root="../" defer></script>
   <script src="../footer-standard.js?v=20260910-footer-compare-v8" data-site-root="../" defer></script>
 </body>
