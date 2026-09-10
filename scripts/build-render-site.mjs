@@ -396,6 +396,7 @@ function standardHeaderForPage(page) {
     `      <a class="feedops-nav-link" href="${href("product-feed-platform/")}">Platform</a>`,
     `      <a class="feedops-nav-link" href="${href("integrations/")}">Integrations</a>`,
     `      <a class="feedops-nav-link" href="${href("pricing/")}">Pricing</a>`,
+    `      <a class="feedops-nav-link" href="${href("company/")}">About</a>`,
     '    </div>',
     '    <div class="feedops-nav-actions">',
     '      <a class="feedops-nav-link feedops-nav-login" href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
@@ -413,6 +414,7 @@ function standardHeaderForPage(page) {
     `        <a href="${href("product-feed-platform/")}">Platform</a>`,
     `        <a href="${href("integrations/")}">Integrations</a>`,
     `        <a href="${href("pricing/")}">Pricing</a>`,
+    `        <a href="${href("company/")}">About</a>`,
     '        <a href="https://app.feedops.com/feed_ops/sign_in" target="_blank" rel="noopener">Login</a>',
     '      </div>',
     '      <div class="feedops-mobile-actions">',
@@ -442,9 +444,10 @@ function copyTextPath(from, to, transform = (content) => content) {
   const transformed = transform(readFileSync(from, "utf8"));
   const cleaned = stripCookieConsent(transformed);
   const withCurrentSharedAssets = cleaned
-    .replace(/header-standard\.css\?v=[^"'\s>]+/g, "header-standard.css?v=20260909-header-layout-v3")
-    .replace(/header-standard\.js\?v=[^"'\s>]+/g, "header-standard.js?v=20260909-header-layout-v3")
-    .replace(/footer-standard\.js\?v=[^"'\s>]+/g, "footer-standard.js?v=20260907-integrations-footer-v1");
+    .replace(/header-standard\.css\?v=[^"'\s>]+/g, "header-standard.css?v=20260910-about-nav-v5")
+    .replace(/header-standard\.js\?v=[^"'\s>]+/g, "header-standard.js?v=20260910-about-nav-v5")
+    .replace(/footer-standard\.css\?v=[^"'\s>]+/g, "footer-standard.css?v=20260910-footer-layout-v9")
+    .replace(/footer-standard\.js\?v=[^"'\s>]+/g, "footer-standard.js?v=20260910-footer-layout-v9");
   const withAssets = rewriteAssetReferences(withCurrentSharedAssets);
   const withStableHeader = stabiliseSharedHeaderStyles(withAssets);
   const withInlineHeader = inlineSharedHeaderStyles(withStableHeader);
