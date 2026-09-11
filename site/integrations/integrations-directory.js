@@ -16,7 +16,7 @@
 
   var integrations = [
     { name: "Google", category: "media", type: "Media", url: "https://shopping.google.com/", domain: "google.com", keywords: "google shopping merchant center ads" },
-    { name: "Microsoft", category: "media", type: "Media", url: "https://about.ads.microsoft.com/", domain: "microsoft.com", keywords: "bing advertising shopping" },
+    { name: "Microsoft", category: "media", type: "Media", url: "https://about.ads.microsoft.com/", page: "../microsoft/", domain: "microsoft.com", keywords: "bing advertising shopping" },
     { name: "Amazon", category: "marketplace", type: "Marketplace", url: "https://sell.amazon.com.au/", domain: "amazon.com.au", keywords: "amazon seller marketplace" },
     { name: "Meta", category: "media", type: "Media", url: "https://www.facebook.com/business/tools/commerce-manager", domain: "meta.com", keywords: "facebook instagram commerce manager" },
     { name: "NetSuite / SuiteCommerce", category: "commerce", type: "Ecommerce Platform", url: "https://www.netsuite.com/portal/products/ecommerce.shtml", domain: "netsuite.com", keywords: "oracle shopping cart ecommerce" },
@@ -50,7 +50,7 @@
     { name: "Criteo", category: "media", type: "Media", url: "https://www.criteo.com/", domain: "criteo.com", keywords: "criteo advertising media retargeting" },
     { name: "Reddit", category: "media", type: "Media", url: "https://www.redditforbusiness.com/", domain: "reddit.com", keywords: "reddit advertising social" },
 
-    { name: "Lasoo", category: "marketplace", type: "Marketplace", url: "https://www.lasoo.com.au/", page: "/lasoo/", domain: "lasoo.com.au", keywords: "lasoo marketplace" },
+    { name: "Lasoo", category: "marketplace", type: "Marketplace", url: "https://www.lasoo.com.au/", page: "../lasoo/", domain: "lasoo.com.au", keywords: "lasoo marketplace" },
     { name: "MyDeal", category: "marketplace", type: "Marketplace", url: "https://www.mydeal.com.au/", domain: "mydeal.com.au", keywords: "my deal marketplace" },
     { name: "Decathlon", category: "marketplace", type: "Marketplace", url: "https://www.decathlon.com/", domain: "decathlon.com", keywords: "decathlon marketplace" },
     { name: "Idealo", category: "marketplace", type: "Marketplace", url: "https://www.idealo.co.uk/", domain: "idealo.co.uk", keywords: "idealo marketplace comparison shopping" },
@@ -103,7 +103,8 @@
 
   function cardMarkup(item) {
     var body = logoMarkup(item) + '<div class="integration-card-copy"><h3>' + escapeHtml(item.name) + '</h3><span class="integration-card-category ' + escapeHtml(item.category) + '">' + escapeHtml(item.type) + "</span></div>";
-    if (item.page) return '<a class="integration-card is-linked" href="' + escapeHtml(item.page) + '" data-category="' + escapeHtml(item.category) + '">' + body + '<span class="integration-card-chevron" aria-hidden="true">›</span></a>';
+    var page = item.page && window.location.protocol === "file:" ? item.page + "index.html" : item.page;
+    if (page) return '<a class="integration-card is-linked" href="' + escapeHtml(page) + '" data-category="' + escapeHtml(item.category) + '">' + body + '<span class="integration-card-chevron" aria-hidden="true">›</span></a>';
     return '<article class="integration-card" data-category="' + escapeHtml(item.category) + '">' + body + "</article>";
   }
 
