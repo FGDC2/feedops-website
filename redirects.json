@@ -1,7 +1,19 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-10T00:31:00.000Z",
+  "updatedAt": "2026-09-14T00:00:00.000Z",
   "redirects": [
+    {
+      "source": "/product-feed-management/",
+      "destination": "/product-feed-platform/",
+      "status": 301,
+      "updatedAt": "2026-09-14T00:00:00.000Z"
+    },
+    {
+      "source": "/shopping-feed-agency/",
+      "destination": "/contact_us/",
+      "status": 301,
+      "updatedAt": "2026-09-14T00:00:00.000Z"
+    },
     {
       "source": "/5-most-common-google-merchant-center-errors-and-how-to-fix-them/",
       "destination": "/google-merchant-center-errors/",

@@ -17,6 +17,12 @@ services:
     routes:
       # BEGIN WEBSITE CMS 301 REDIRECTS
       - type: redirect
+        source: /product-feed-management/
+        destination: /product-feed-platform/
+      - type: redirect
+        source: /shopping-feed-agency/
+        destination: /contact_us/
+      - type: redirect
         source: /5-most-common-google-merchant-center-errors-and-how-to-fix-them/
         destination: /google-merchant-center-errors/
       - type: redirect
