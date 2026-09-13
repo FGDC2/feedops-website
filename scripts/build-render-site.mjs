@@ -446,8 +446,8 @@ function copyTextPath(from, to, transform = (content) => content) {
   const withCurrentSharedAssets = cleaned
     .replace(/header-standard\.css\?v=[^"'\s>]+/g, "header-standard.css?v=20260910-about-nav-v5")
     .replace(/header-standard\.js\?v=[^"'\s>]+/g, "header-standard.js?v=20260910-about-nav-v5")
-    .replace(/footer-standard\.css\?v=[^"'\s>]+/g, "footer-standard.css?v=20260910-footer-layout-v9")
-    .replace(/footer-standard\.js\?v=[^"'\s>]+/g, "footer-standard.js?v=20260910-footer-layout-v9");
+    .replace(/footer-standard\.css\?v=[^"'\s>]+/g, "footer-standard.css?v=20260911-footer-links-v9")
+    .replace(/footer-standard\.js\?v=[^"'\s>]+/g, "footer-standard.js?v=20260911-footer-links-v9");
   const withAssets = rewriteAssetReferences(withCurrentSharedAssets);
   const withStableHeader = stabiliseSharedHeaderStyles(withAssets);
   const withInlineHeader = inlineSharedHeaderStyles(withStableHeader);
