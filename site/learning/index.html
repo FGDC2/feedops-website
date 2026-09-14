@@ -198,10 +198,35 @@
     }
 
     .hero {
-      padding: 76px 0 56px;
-      background:
-        linear-gradient(180deg, #f7fafc 0%, #ffffff 78%);
+      position: relative;
+      overflow: hidden;
+      padding: 52px 0 30px;
+      background: linear-gradient(115deg, #f7fafc 0%, #f3f8fc 60%, #eaf3fa 100%);
       border-bottom: 1px solid var(--line);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -9%;
+      border-radius: 50%;
+      background: rgba(216, 231, 243, 0.48);
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 42%;
+      height: 210%;
+      top: -145%;
+    }
+
+    .hero::after {
+      width: 28%;
+      height: 150%;
+      right: -5%;
+      bottom: -116%;
+      background: rgba(205, 224, 239, 0.42);
     }
 
     .hero-inner,
@@ -210,11 +235,9 @@
       margin: 0 auto;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
-      gap: 44px;
-      align-items: center;
+    .hero-inner {
+      position: relative;
+      z-index: 1;
     }
 
     .kicker {
@@ -258,9 +281,9 @@
     }
 
     .hero-copy {
-      max-width: 720px;
-      margin-top: 22px;
-      font-size: 20px;
+      max-width: 780px;
+      margin-top: 14px;
+      font-size: 18px;
       color: #2f3c4a;
     }
 
@@ -340,6 +363,10 @@
       padding: 74px 0;
     }
 
+    #resources {
+      padding-top: 32px;
+    }
+
     .section.soft {
       background: var(--soft);
     }
@@ -356,8 +383,57 @@
 
     .resource-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
+    }
+
+    .learning-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 0 0 30px;
+    }
+
+    .learning-tab {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: #fff;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 850;
+      cursor: pointer;
+    }
+
+    .learning-tab strong {
+      color: #64759f;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .learning-tab:hover,
+    .learning-tab:focus-visible {
+      border-color: var(--teal);
+      outline: none;
+    }
+
+    .learning-tab[aria-selected="true"] {
+      border-color: var(--teal);
+      color: #fff;
+      background: var(--teal);
+    }
+
+    .learning-tab[aria-selected="true"] strong {
+      color: #fff;
+    }
+
+    .card[hidden] {
+      display: none;
     }
 
     .feature-grid {
@@ -377,6 +453,56 @@
       background: var(--panel);
       text-decoration: none;
       box-shadow: 0 12px 28px rgba(25, 42, 62, 0.05);
+    }
+
+    .card {
+      overflow: hidden;
+    }
+
+    .card-thumbnail {
+      display: block;
+      width: calc(100% + 44px);
+      aspect-ratio: 16 / 9;
+      margin: -22px -22px 20px;
+      border-bottom: 1px solid var(--line);
+      background: var(--soft);
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .card-featured {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 400px minmax(0, 1fr);
+      grid-template-rows: auto auto 1fr auto;
+      column-gap: 28px;
+      align-items: start;
+    }
+
+    .card-featured .card-thumbnail {
+      grid-column: 1;
+      grid-row: 1 / 5;
+      width: 400px;
+      height: 200px;
+      min-height: 0;
+      aspect-ratio: auto;
+      margin: 0;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+    }
+
+    .card-featured .card-top,
+    .card-featured h3,
+    .card-featured p,
+    .card-featured .card-link {
+      grid-column: 2;
+    }
+
+    .card:not(.card-featured) p {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
     }
 
     .card:hover {
@@ -411,10 +537,26 @@
     }
 
     .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       margin-top: auto;
       padding-top: 18px;
       color: #006b5a;
       font-weight: 850;
+    }
+
+    .card-link::after {
+      content: "›";
+      font-size: 25px;
+      font-weight: 500;
+      line-height: 0.7;
+      transition: transform 160ms ease;
+    }
+
+    .card:hover .card-link::after,
+    .card:focus-visible .card-link::after {
+      transform: translateX(3px);
     }
 
     .route-panel {
@@ -487,6 +629,14 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
+      .card-featured {
+        grid-template-columns: 280px minmax(0, 1fr);
+      }
+
+      .card-featured .card-thumbnail {
+        width: 280px;
+      }
+
       h1 {
         font-size: 36px;
       }
@@ -519,6 +669,19 @@
         grid-template-columns: 1fr;
       }
 
+      .card-featured {
+        display: flex;
+      }
+
+      .card-featured .card-thumbnail {
+        width: 100%;
+        height: 180px;
+        min-height: 0;
+        aspect-ratio: auto;
+        margin: 0 0 20px;
+        border: 1px solid var(--line);
+      }
+
       .hero-actions,
       .cta-actions,
       .button {
@@ -542,37 +705,24 @@
 
   <main>
     <section class="hero">
-      <div class="hero-inner hero-grid">
-        <div>
-          <p class="kicker">FeedOps Learning</p>
-          <h1>FeedOps Learning for better Google Shopping feeds.</h1>
-          <p class="hero-copy"><strong>FeedOps Learning</strong> is the practical resource centre for ecommerce teams that need clearer product data, cleaner Google Shopping feeds, fewer Merchant Center issues, and better product-level performance.</p>
-          <div class="hero-actions">
-            <a class="button" href="#resources">Browse resources</a>
-            <a class="button secondary" href="../free-google-shopping-feed-audit/">Start a free audit</a>
-          </div>
-        </div>
-        <div class="hero-visual" aria-label="FeedOps Learning resource visual">
-          <img src="../assets/feedops.com/wp-content/uploads/2026/06/feedops-learning-hub-product-feed-education.png" width="1672" height="941" alt="FeedOps Learning Hub visual for product feed education resources - page image 2 for FeedOps learning on Learning Hub" title="FeedOps Learning Hub visual for product feed education resources - page image 2 for FeedOps learning on Learning Hub">
-          <div class="visual-strip" aria-label="Learning categories">
-            <a href="#guides">Guides</a>
-            <a href="#explainers">Explainers</a>
-            <a href="#troubleshooting">Troubleshooting</a>
-          </div>
-        </div>
+      <div class="hero-inner">
+        <p class="kicker">Resource centre</p>
+        <h1>FeedOps Learning</h1>
+        <p class="hero-copy">Practical guides, clear explainers and troubleshooting resources for better product feeds and stronger Shopping performance.</p>
       </div>
     </section>
 
     <section class="section" id="resources">
       <div class="section-inner">
-        <div class="section-heading">
-          <p class="kicker">Resource library</p>
-          <h2>Learn the parts of the feed that actually affect performance.</h2>
-          <p>The best FeedOps Learning resources are grouped by job: use guides when you need a practical workflow, explainers when you need a clean concept, and troubleshooting when something in Merchant Center is already hurting visibility.</p>
+        <div class="learning-tabs" id="learning-tabs" role="tablist" aria-label="Filter learning resources">
+          <button class="learning-tab" id="learning-tab-guides" type="button" role="tab" data-learning-filter="guides" aria-selected="true" aria-controls="learning-resources">Guides <strong>6</strong></button>
+          <button class="learning-tab" id="learning-tab-explainers" type="button" role="tab" data-learning-filter="explainers" aria-selected="false" aria-controls="learning-resources" tabindex="-1">Explainers <strong>5</strong></button>
+          <button class="learning-tab" id="learning-tab-troubleshooting" type="button" role="tab" data-learning-filter="troubleshooting" aria-selected="false" aria-controls="learning-resources" tabindex="-1">Troubleshooting <strong>2</strong></button>
         </div>
 
-        <div class="resource-grid">
-          <a class="card" id="guides" href="../guide/google-shopping-feed-optimization-guide/">
+        <div class="resource-grid" id="learning-resources" role="tabpanel" aria-labelledby="learning-tab-guides" aria-live="polite">
+          <a class="card card-featured" id="guides" data-learning-category="guides" href="../guide/google-shopping-feed-optimization-guide/">
+            <img class="card-thumbnail" src="../assets/feedops.com/wp-content/uploads/2026/06/google-shopping-feed-optimization-guide-2026.png" alt="" loading="lazy" decoding="async">
             <div class="card-top">
               <span class="tag">Guide</span>
             </div>
@@ -581,7 +731,7 @@
             <span class="card-link">Open guide</span>
           </a>
 
-          <a class="card" href="../guide/google-shopping-ads-management/">
+          <a class="card" data-learning-category="guides" href="../guide/google-shopping-ads-management/">
             <div class="card-top">
               <span class="tag">Guide</span>
             </div>
@@ -590,7 +740,7 @@
             <span class="card-link">Open guide</span>
           </a>
 
-          <a class="card" href="../guide/google-local-inventory-ads-performance-max/">
+          <a class="card" data-learning-category="guides" href="../guide/google-local-inventory-ads-performance-max/">
             <div class="card-top">
               <span class="tag">Guide</span>
             </div>
@@ -599,7 +749,7 @@
             <span class="card-link">Open guide</span>
           </a>
 
-          <a class="card" href="../google-free-local-product-listings/">
+          <a class="card" data-learning-category="guides" href="../google-free-local-product-listings/">
             <div class="card-top">
               <span class="tag">Guide</span>
             </div>
@@ -608,7 +758,7 @@
             <span class="card-link">Open guide</span>
           </a>
 
-          <a class="card" href="../google-shopping-product-title-optimization/">
+          <a class="card" data-learning-category="guides" href="../google-shopping-product-title-optimization/">
             <div class="card-top">
               <span class="tag">Guide</span>
             </div>
@@ -617,7 +767,7 @@
             <span class="card-link">Open guide</span>
           </a>
 
-          <a class="card" href="../feedops/google-shopping-free-listings/">
+          <a class="card" data-learning-category="guides" href="../feedops/google-shopping-free-listings/">
             <div class="card-top">
               <span class="tag">Guide</span>
             </div>
@@ -626,7 +776,8 @@
             <span class="card-link">Open guide</span>
           </a>
 
-          <a class="card" id="explainers" href="../what-is-a-google-shopping-feed/">
+          <a class="card card-featured" id="explainers" data-learning-category="explainers" href="../what-is-a-google-shopping-feed/">
+            <img class="card-thumbnail" src="../assets/what-is-a-google-shopping-feed-hero.png" alt="" loading="lazy" decoding="async">
             <div class="card-top">
               <span class="tag">Explainer</span>
             </div>
@@ -635,7 +786,7 @@
             <span class="card-link">Open explainer</span>
           </a>
 
-          <a class="card" href="../google-product-highlights/">
+          <a class="card" data-learning-category="explainers" href="../google-product-highlights/">
             <div class="card-top">
               <span class="tag">Explainer</span>
             </div>
@@ -644,7 +795,7 @@
             <span class="card-link">Open explainer</span>
           </a>
 
-          <a class="card" href="../google-shopping-graph-explained/">
+          <a class="card" data-learning-category="explainers" href="../google-shopping-graph-explained/">
             <div class="card-top">
               <span class="tag">Explainer</span>
             </div>
@@ -653,7 +804,7 @@
             <span class="card-link">Open explainer</span>
           </a>
 
-          <a class="card" href="../product-type-google-shopping/">
+          <a class="card" data-learning-category="explainers" href="../product-type-google-shopping/">
             <div class="card-top">
               <span class="tag">Explainer</span>
             </div>
@@ -662,7 +813,7 @@
             <span class="card-link">Open explainer</span>
           </a>
 
-          <a class="card" href="../google-product-category/">
+          <a class="card" data-learning-category="explainers" href="../google-product-category/">
             <div class="card-top">
               <span class="tag">Explainer</span>
             </div>
@@ -671,7 +822,8 @@
             <span class="card-link">Open explainer</span>
           </a>
 
-          <a class="card" id="troubleshooting" href="../google-merchant-center-errors/">
+          <a class="card card-featured" id="troubleshooting" data-learning-category="troubleshooting" href="../google-merchant-center-errors/">
+            <img class="card-thumbnail" src="../assets/google-merchant-center-errors-hero.png" alt="" loading="lazy" decoding="async">
             <div class="card-top">
               <span class="tag">Troubleshooting</span>
             </div>
@@ -680,7 +832,7 @@
             <span class="card-link">Open troubleshooting</span>
           </a>
 
-          <a class="card" href="../google-shopping-ads-not-showing/">
+          <a class="card" data-learning-category="troubleshooting" href="../google-shopping-ads-not-showing/">
             <div class="card-top">
               <span class="tag">Troubleshooting</span>
             </div>
@@ -692,88 +844,56 @@
       </div>
     </section>
 
-    <section class="section soft">
-      <div class="section-inner">
-        <div class="section-heading">
-          <p class="kicker">Where to start</p>
-          <h2>Pick the resource based on the problem in front of you.</h2>
-          <p>FeedOps Learning is built for busy operators, marketers, and agencies. Start with the question you need answered, then move into the related guides once the basics are clear.</p>
-        </div>
-
-        <div class="route-panel">
-          <div>
-            <h3>Fast paths</h3>
-            <p style="margin-top: 12px;">Use this route when you know the symptom but not the feed change behind it.</p>
-          </div>
-          <ul class="route-list">
-            <li>
-              <a href="../google-merchant-center-errors/">
-                <span><strong>Products are disapproved or not showing</strong>Start with Merchant Center errors.</span>
-                <span>Fix</span>
-              </a>
-            </li>
-            <li>
-              <a href="../guide/google-shopping-feed-optimization-guide/">
-                <span><strong>The feed feels messy or underbuilt</strong>Start with Google Shopping feed optimisation.</span>
-                <span>Guide</span>
-              </a>
-            </li>
-            <li>
-              <a href="../product-type-google-shopping/">
-                <span><strong>Campaigns need cleaner category logic</strong>Start with product type in Google Shopping.</span>
-                <span>Explain</span>
-              </a>
-            </li>
-            <li>
-              <a href="../google-shopping-product-title-optimization/">
-                <span><strong>Search relevance and CTR are weak</strong>Start with product title optimisation.</span>
-                <span>Improve</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-inner">
-        <div class="section-heading">
-          <p class="kicker">Learning themes</p>
-          <h2>FeedOps Learning follows the same product data system we use in practice.</h2>
-        </div>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <h3>Feed quality</h3>
-            <p>Titles, attributes, product types, categories, descriptions, images, pricing, and availability all shape Shopping visibility.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Merchant Center health</h3>
-            <p>Errors and warnings are rarely isolated. They usually point back to missing, stale, mismatched, or poorly mapped product data.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Campaign structure</h3>
-            <p>Better product data makes it easier to segment campaigns, compare categories, identify waste, and make product-level decisions.</p>
-          </article>
-          <article class="feature-card">
-            <h3>AI discovery</h3>
-            <p>Cleaner product data helps Google and AI shopping surfaces understand what each product is, who it suits, and when to show it.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section cta-band">
-      <div class="section-inner">
-        <p class="kicker">Free tool</p>
-        <h2>Not sure which resource matters most? Start with the feed.</h2>
-        <p>A free Google Shopping feed audit can show missing attributes, weak product types, title gaps, product visibility issues, and Merchant Center health problems before you decide which guide to use first.</p>
-        <div class="cta-actions">
-          <a class="button" href="../free-google-shopping-feed-audit/">Start a free audit</a>
-          <a class="button secondary" href="../book-live-demo/">Book a demo</a>
-        </div>
-      </div>
-    </section>
   </main>
+
+  <script>
+    (function () {
+      var tabs = Array.prototype.slice.call(document.querySelectorAll("[data-learning-filter]"));
+      var cards = Array.prototype.slice.call(document.querySelectorAll("[data-learning-category]"));
+      var panel = document.getElementById("learning-resources");
+      if (!tabs.length || !cards.length || !panel) return;
+
+      function selectCategory(category, moveFocus) {
+        var selectedTab = tabs.find(function (tab) {
+          return tab.getAttribute("data-learning-filter") === category;
+        }) || tabs[0];
+        var selectedCategory = selectedTab.getAttribute("data-learning-filter");
+
+        tabs.forEach(function (tab) {
+          var selected = tab === selectedTab;
+          tab.setAttribute("aria-selected", String(selected));
+          tab.setAttribute("tabindex", selected ? "0" : "-1");
+        });
+
+        cards.forEach(function (card) {
+          card.hidden = card.getAttribute("data-learning-category") !== selectedCategory;
+        });
+
+        panel.setAttribute("aria-labelledby", selectedTab.id);
+        if (moveFocus) selectedTab.focus();
+      }
+
+      tabs.forEach(function (tab, index) {
+        tab.addEventListener("click", function () {
+          selectCategory(tab.getAttribute("data-learning-filter"), false);
+        });
+
+        tab.addEventListener("keydown", function (event) {
+          var nextIndex = null;
+          if (event.key === "ArrowRight") nextIndex = (index + 1) % tabs.length;
+          if (event.key === "ArrowLeft") nextIndex = (index - 1 + tabs.length) % tabs.length;
+          if (event.key === "Home") nextIndex = 0;
+          if (event.key === "End") nextIndex = tabs.length - 1;
+          if (nextIndex === null) return;
+          event.preventDefault();
+          selectCategory(tabs[nextIndex].getAttribute("data-learning-filter"), true);
+        });
+      });
+
+      var initialCategory = window.location.hash.slice(1);
+      selectCategory(initialCategory || "guides", false);
+    })();
+  </script>
 
   <script src="../header-standard.js?v=20260910-about-nav-v4" data-site-root="../" defer></script>
   <script src="../footer-standard.js?v=20260911-footer-links-v9" data-site-root="../" defer></script>
