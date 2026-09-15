@@ -536,7 +536,8 @@
     a.integration-card:hover { border-color: #83b4ff; box-shadow: 0 12px 30px rgba(7, 20, 54, .08); transform: translateY(-1px); }
     a.integration-card:focus-visible { outline: 3px solid rgba(255, 202, 40, .72); outline-offset: 3px; }
     .integration-card.is-linked { grid-template-columns: 42px minmax(0, 1fr) auto; }
-    .integration-card-chevron { color: var(--integrations-green); font-size: 1.8rem; line-height: 1; transition: transform .18s ease; }
+    .integration-card-chevron { width: 30px; height: 30px; display: grid; place-items: center; color: var(--integrations-green); font-size: 1.8rem; line-height: 1; transition: transform .18s ease; }
+    .integration-card-chevron svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
     .integration-card.is-linked:hover .integration-card-chevron { transform: translateX(3px); }
     .integration-card[hidden] { display: none; }
     .integration-card-name { min-width: 0; }
@@ -831,7 +832,7 @@
           <article class="integration-card" data-category="ai"><div class="integration-card-name"><span class="integration-card-mark">AI</span><h3>ChatGPT</h3></div><div class="integration-card-meta"><span class="integration-card-category">AI Shopping</span></div></article>
           <article class="integration-card" data-category="ai"><div class="integration-card-name"><span class="integration-card-mark">G AI</span><h3>Google AI shopping experiences</h3></div><div class="integration-card-meta"><span class="integration-card-category">AI Shopping · Through supported Merchant Center data</span></div></article>
 
-          <article class="integration-card" data-category="local"><div class="integration-card-name"><span class="integration-card-mark">GLI</span><h3>Google Local Inventory</h3></div><div class="integration-card-meta"><span class="integration-card-category">Local Inventory</span></div></article>
+          <a class="integration-card is-linked" href="../google-local-inventory/" data-category="local"><span class="integration-card-mark">GLI</span><div class="integration-card-copy"><h3>Google Local Inventory</h3><span class="integration-card-category">Local Inventory</span></div><span class="integration-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="m9 5 7 7-7 7"></path></svg></span></a>
           <article class="integration-card" data-category="local"><div class="integration-card-name"><span class="integration-card-mark">MLI</span><h3>Microsoft Local Inventory</h3></div><div class="integration-card-meta"><span class="integration-card-category">Local Inventory</span></div></article>
 
           <article class="integration-card" data-category="marketplaces"><div class="integration-card-name"><span class="integration-card-mark">A</span><h3>Amazon</h3></div><div class="integration-card-meta"><span class="integration-card-category">Marketplace</span></div></article>
@@ -914,7 +915,7 @@
 
   </main>
 
-  <script src="integrations-directory.js?v=20260911-microsoft-card-v10" defer></script>
+  <script src="integrations-directory.js?v=20260915-lia-chevron-v11" defer></script>
   <script src="../header-standard.js?v=20260910-about-nav-v4" data-site-root="../" defer></script>
   <script src="../footer-standard.js?v=20260911-footer-links-v9" data-site-root="../" defer></script>
 </body>

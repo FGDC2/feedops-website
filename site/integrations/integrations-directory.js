@@ -65,7 +65,7 @@
     { name: "Rakuten", category: "affiliate", type: "Affiliate", url: "https://rakutenadvertising.com/", domain: "rakutenadvertising.com", keywords: "rakuten advertising affiliate network" },
     { name: "Impact", category: "affiliate", type: "Affiliate", url: "https://impact.com/", domain: "impact.com", keywords: "impact affiliate partnership network" },
 
-    { name: "Google Local / LIA", category: "local", type: "Local Inventory", url: "https://support.google.com/merchants/answer/14615117", domain: "google.com", keywords: "google local inventory ads lia merchant center" },
+    { name: "Google Local / LIA", category: "local", type: "Local Inventory", url: "https://support.google.com/merchants/answer/14615117", page: "../google-local-inventory/", domain: "google.com", keywords: "google local inventory ads lia merchant center" },
     { name: "Microsoft Local Inventory Ads", category: "local", type: "Local Inventory", url: "https://about.ads.microsoft.com/en/solutions/ad-products-formats/retail/shopping-campaigns-v2", domain: "microsoft.com", keywords: "microsoft bing local inventory ads lia" },
 
     { name: "ChatGPT", category: "ai", type: "AI Discovery", url: "https://chatgpt.com/", domain: "chatgpt.com", keywords: "openai chatgpt shopping ai discovery" },
@@ -104,7 +104,7 @@
   function cardMarkup(item) {
     var body = logoMarkup(item) + '<div class="integration-card-copy"><h3>' + escapeHtml(item.name) + '</h3><span class="integration-card-category ' + escapeHtml(item.category) + '">' + escapeHtml(item.type) + "</span></div>";
     var page = item.page && window.location.protocol === "file:" ? item.page + "index.html" : item.page;
-    if (page) return '<a class="integration-card is-linked" href="' + escapeHtml(page) + '" data-category="' + escapeHtml(item.category) + '">' + body + '<span class="integration-card-chevron" aria-hidden="true">›</span></a>';
+    if (page) return '<a class="integration-card is-linked" href="' + escapeHtml(page) + '" data-category="' + escapeHtml(item.category) + '">' + body + '<span class="integration-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="m9 5 7 7-7 7"></path></svg></span></a>';
     return '<article class="integration-card" data-category="' + escapeHtml(item.category) + '">' + body + "</article>";
   }
 
