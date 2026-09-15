@@ -559,6 +559,12 @@ copyStaticTree(
   { skipHtml: true }
 );
 
+copyStaticTree(
+  join(sourceRoot, "google-local-inventory"),
+  join(outputRoot, "google-local-inventory"),
+  { skipHtml: true }
+);
+
 copyStaticTree(join(sourceRoot, "help"), join(outputRoot, "help"), { skipHtml: true });
 
 const helpFallbackPageCount = await createHelpArticleFallbackPages();
