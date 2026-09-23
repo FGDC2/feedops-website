@@ -65,56 +65,86 @@
         {
           "@type": "ListItem",
           "position": 1,
+          "name": "How to Action Your Google Merchant Center Excellence Report",
+          "url": "https://feedops.com/guide/google-merchant-center-excellence-report/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
           "name": "Google Shopping Feed Optimization",
           "url": "https://feedops.com/guide/google-shopping-feed-optimization-guide/"
         },
         {
           "@type": "ListItem",
-          "position": 2,
+          "position": 3,
           "name": "Google Shopping Ads Management",
           "url": "https://feedops.com/guide/google-shopping-ads-management/"
         },
         {
           "@type": "ListItem",
-          "position": 3,
+          "position": 4,
+          "name": "Google Local Inventory Ads Performance Max",
+          "url": "https://feedops.com/guide/google-local-inventory-ads-performance-max/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Google Free Local Product Listings",
+          "url": "https://feedops.com/google-free-local-product-listings/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Google Shopping Title Optimization",
+          "url": "https://feedops.com/google-shopping-product-title-optimization/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Google Shopping Free Listings",
+          "url": "https://feedops.com/feedops/google-shopping-free-listings/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
           "name": "What Is a Shopping Feed",
           "url": "https://feedops.com/what-is-a-google-shopping-feed/"
         },
         {
           "@type": "ListItem",
-          "position": 4,
+          "position": 9,
           "name": "Google Product Highlights",
           "url": "https://feedops.com/google-product-highlights/"
         },
         {
           "@type": "ListItem",
-          "position": 5,
+          "position": 10,
           "name": "Google Shopping Graph Explained",
           "url": "https://feedops.com/google-shopping-graph-explained/"
         },
         {
           "@type": "ListItem",
-          "position": 6,
+          "position": 11,
           "name": "Product Type Google Shopping",
           "url": "https://feedops.com/product-type-google-shopping/"
         },
         {
           "@type": "ListItem",
-          "position": 7,
+          "position": 12,
+          "name": "Google Product Category",
+          "url": "https://feedops.com/google-product-category/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
           "name": "Google Merchant Center Errors",
           "url": "https://feedops.com/google-merchant-center-errors/"
         },
         {
           "@type": "ListItem",
-          "position": 8,
+          "position": 14,
           "name": "Google Shopping Ads Not Showing",
           "url": "https://feedops.com/google-shopping-ads-not-showing/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 9,
-          "name": "Google Free Local Product Listings",
-          "url": "https://feedops.com/google-free-local-product-listings/"
         }
       ]
     },
@@ -511,10 +541,18 @@
 
     .card-top {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       gap: 14px;
       margin-bottom: 18px;
+    }
+
+    .card-updated {
+      color: #657287;
+      font-size: 12px;
+      font-weight: 750;
+      white-space: nowrap;
     }
 
     .tag {
@@ -715,16 +753,27 @@
     <section class="section" id="resources">
       <div class="section-inner">
         <div class="learning-tabs" id="learning-tabs" role="tablist" aria-label="Filter learning resources">
-          <button class="learning-tab" id="learning-tab-guides" type="button" role="tab" data-learning-filter="guides" aria-selected="true" aria-controls="learning-resources">Guides <strong>6</strong></button>
+          <button class="learning-tab" id="learning-tab-guides" type="button" role="tab" data-learning-filter="guides" aria-selected="true" aria-controls="learning-resources">Guides <strong>7</strong></button>
           <button class="learning-tab" id="learning-tab-explainers" type="button" role="tab" data-learning-filter="explainers" aria-selected="false" aria-controls="learning-resources" tabindex="-1">Explainers <strong>5</strong></button>
           <button class="learning-tab" id="learning-tab-troubleshooting" type="button" role="tab" data-learning-filter="troubleshooting" aria-selected="false" aria-controls="learning-resources" tabindex="-1">Troubleshooting <strong>2</strong></button>
         </div>
 
         <div class="resource-grid" id="learning-resources" role="tabpanel" aria-labelledby="learning-tab-guides" aria-live="polite">
-          <a class="card card-featured" id="guides" data-learning-category="guides" href="../guide/google-shopping-feed-optimization-guide/">
-            <img class="card-thumbnail" src="../assets/feedops.com/wp-content/uploads/2026/06/google-shopping-feed-optimization-guide-2026.png" alt="" loading="lazy" decoding="async">
+          <a class="card card-featured" id="guides" data-learning-category="guides" href="../guide/google-merchant-center-excellence-report/">
+            <img class="card-thumbnail" src="../assets/google-merchant-center-excellence-report-guide.png" alt="" loading="lazy" decoding="async">
             <div class="card-top">
               <span class="tag">Guide</span>
+              <time class="card-updated" datetime="2026-09-23">Last updated 23 Sep 2026</time>
+            </div>
+            <h3>Merchant Center Excellence Report</h3>
+            <p>Turn Google’s MEX report into a commercially prioritised plan for approvals, targeting, impressions, clicks and growth.</p>
+            <span class="card-link">Open guide</span>
+          </a>
+
+          <a class="card" data-learning-category="guides" href="../guide/google-shopping-feed-optimization-guide/">
+            <div class="card-top">
+              <span class="tag">Guide</span>
+              <time class="card-updated" datetime="2026-06-17">Last updated 17 Jun 2026</time>
             </div>
             <h3>Google Shopping Feed Optimization</h3>
             <p>Improve product titles, attributes, product types, descriptions, Merchant Center health, and product-level monitoring.</p>
@@ -734,6 +783,7 @@
           <a class="card" data-learning-category="guides" href="../guide/google-shopping-ads-management/">
             <div class="card-top">
               <span class="tag">Guide</span>
+              <time class="card-updated" datetime="2026-06-17">Last updated 17 Jun 2026</time>
             </div>
             <h3>Google Shopping Ads Management</h3>
             <p>Connect Shopping campaign structure, feed quality, zombie products, promotions, and measurement back to product data.</p>
@@ -743,6 +793,7 @@
           <a class="card" data-learning-category="guides" href="../guide/google-local-inventory-ads-performance-max/">
             <div class="card-top">
               <span class="tag">Guide</span>
+              <time class="card-updated" datetime="2026-06-17">Last updated 17 Jun 2026</time>
             </div>
             <h3>Google Local Inventory Ads Performance Max</h3>
             <p>Set up and optimise local inventory feeds, store codes, pickup data, Merchant Center validation, and local product measurement.</p>
@@ -752,6 +803,7 @@
           <a class="card" data-learning-category="guides" href="../google-free-local-product-listings/">
             <div class="card-top">
               <span class="tag">Guide</span>
+              <time class="card-updated" datetime="2026-07-23">Last updated 23 Jul 2026</time>
             </div>
             <h3>Google Free Local Product Listings</h3>
             <p>Show nearby shoppers in-store products, prices and availability across Google's local shopping experiences without paying for advertising.</p>
@@ -761,6 +813,7 @@
           <a class="card" data-learning-category="guides" href="../google-shopping-product-title-optimization/">
             <div class="card-top">
               <span class="tag">Guide</span>
+              <time class="card-updated" datetime="2026-06-17">Last updated 17 Jun 2026</time>
             </div>
             <h3>Google Shopping Title Optimization</h3>
             <p>Use product title frameworks, examples, AI workflows, and feed QA to improve Shopping relevance and clicks.</p>
@@ -770,6 +823,7 @@
           <a class="card" data-learning-category="guides" href="../feedops/google-shopping-free-listings/">
             <div class="card-top">
               <span class="tag">Guide</span>
+              <time class="card-updated" datetime="2026-06-17">Last updated 17 Jun 2026</time>
             </div>
             <h3>Google Shopping Free Listings</h3>
             <p>Improve organic Shopping visibility with feed quality, Merchant Center checks, eligibility signals, and measurement.</p>
@@ -780,6 +834,7 @@
             <img class="card-thumbnail" src="../assets/what-is-a-google-shopping-feed-hero.png" alt="" loading="lazy" decoding="async">
             <div class="card-top">
               <span class="tag">Explainer</span>
+              <time class="card-updated" datetime="2026-06-18">Last updated 18 Jun 2026</time>
             </div>
             <h3>What Is a Shopping Feed?</h3>
             <p>Learn what a shopping feed is, what product data it contains, and how Google Shopping feeds power Merchant Center, ads, and free listings.</p>
@@ -789,6 +844,7 @@
           <a class="card" data-learning-category="explainers" href="../google-product-highlights/">
             <div class="card-top">
               <span class="tag">Explainer</span>
+              <time class="card-updated" datetime="2026-07-16">Last updated 16 Jul 2026</time>
             </div>
             <h3>Google Product Highlights</h3>
             <p>See what Product Highlights are, how to add them, and what FeedOps found when highlights were analysed across matched products.</p>
@@ -798,6 +854,7 @@
           <a class="card" data-learning-category="explainers" href="../google-shopping-graph-explained/">
             <div class="card-top">
               <span class="tag">Explainer</span>
+              <time class="card-updated" datetime="2026-06-18">Last updated 18 Jun 2026</time>
             </div>
             <h3>Google Shopping Graph</h3>
             <p>Understand how product feeds, structured data, product pages, and Merchant Center data support AI shopping discovery.</p>
@@ -807,6 +864,7 @@
           <a class="card" data-learning-category="explainers" href="../product-type-google-shopping/">
             <div class="card-top">
               <span class="tag">Explainer</span>
+              <time class="card-updated" datetime="2026-06-18">Last updated 18 Jun 2026</time>
             </div>
             <h3>Product Type Google Shopping</h3>
             <p>Learn how product_type works, why deep descriptive product types matter, and how they support long-tail Shopping relevance.</p>
@@ -816,6 +874,7 @@
           <a class="card" data-learning-category="explainers" href="../google-product-category/">
             <div class="card-top">
               <span class="tag">Explainer</span>
+              <time class="card-updated" datetime="2026-06-18">Last updated 18 Jun 2026</time>
             </div>
             <h3>Google Product Category</h3>
             <p>Separate Google's auto-assigned category taxonomy from your own product types, and know when to check or override it.</p>
@@ -826,6 +885,7 @@
             <img class="card-thumbnail" src="../assets/google-merchant-center-errors-hero.png" alt="" loading="lazy" decoding="async">
             <div class="card-top">
               <span class="tag">Troubleshooting</span>
+              <time class="card-updated" datetime="2026-06-18">Last updated 18 Jun 2026</time>
             </div>
             <h3>Google Merchant Center Errors</h3>
             <p>Fix common Merchant Center issues including GTINs, identifier_exists, price mismatch, shipping, review delays, and suspensions.</p>
@@ -835,6 +895,7 @@
           <a class="card" data-learning-category="troubleshooting" href="../google-shopping-ads-not-showing/">
             <div class="card-top">
               <span class="tag">Troubleshooting</span>
+              <time class="card-updated" datetime="2026-06-18">Last updated 18 Jun 2026</time>
             </div>
             <h3>Google Shopping Ads Not Showing</h3>
             <p>Diagnose products with no Shopping impressions across Merchant Center, Performance Max, listing groups, budgets, bids, and feed quality.</p>
