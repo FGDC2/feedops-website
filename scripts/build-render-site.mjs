@@ -60,6 +60,7 @@ const sharedFiles = [
   "header-standard.js",
   "footer-standard.css",
   "footer-standard.js",
+  "mex-guide-v18.css",
   "free-google-shopping-feed-audit.js",
   "book-live-demo.js",
   "sitemap.xml",
