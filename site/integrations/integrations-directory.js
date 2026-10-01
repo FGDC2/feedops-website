@@ -55,6 +55,7 @@
     { name: "Decathlon", category: "marketplace", type: "Marketplace", url: "https://www.decathlon.com/", domain: "decathlon.com", keywords: "decathlon marketplace" },
     { name: "Idealo", category: "marketplace", type: "Marketplace", url: "https://www.idealo.co.uk/", domain: "idealo.co.uk", keywords: "idealo marketplace comparison shopping" },
     { name: "JB Hi-Fi", category: "marketplace", type: "Marketplace", url: "https://www.jbhifi.com.au/", domain: "jbhifi.com.au", keywords: "jb hi fi marketplace" },
+    { name: "Harvey Norman", category: "marketplace", type: "Marketplace", url: "https://www.harveynorman.com.au/customer-direct-partner-program", page: "../harvey-norman/", domain: "harveynorman.com.au", keywords: "harvey norman customer direct marketplace partner" },
     { name: "Kogan", category: "marketplace", type: "Marketplace", url: "https://www.kogan.com/au/", domain: "kogan.com", keywords: "kogan marketplace" },
     { name: "Myer", category: "marketplace", type: "Marketplace", url: "https://www.myer.com.au/", domain: "myer.com.au", keywords: "myer marketplace" },
     { name: "MySale", category: "marketplace", type: "Marketplace", url: "https://www.mysale.com.au/", domain: "mysale.com.au", keywords: "my sale marketplace" },
@@ -76,14 +77,37 @@
     { name: "Confect", category: "other", type: "Other", url: "https://confect.io/", domain: "confect.io", keywords: "creative automation social ads other" }
   ];
 
+  // Largest-to-smallest editorial order. Public companies use parent-company
+  // market capitalisation; private businesses use the closest disclosed scale
+  // proxy (revenue, valuation or GMV). Non-company connection methods are
+  // ordered by ecosystem scale and adoption rather than a fictional market cap.
+  var categorySizeOrder = {
+    commerce: ["NetSuite / SuiteCommerce", "Salesforce Commerce Cloud", "Shopify", "Magento 2 / Adobe Commerce", "Wix", "WooCommerce", "BigCommerce", "Neto / Maropost Commerce Cloud", "nopCommerce", "OpenCart"],
+    custom: ["Google Sheets", "REST APIs", "GraphQL APIs", "API Push / Webhooks", "SFTP", "CSV", "XML", "TSV", "Existing Feed URLs"],
+    media: ["Google", "Microsoft", "Meta", "TikTok", "Reddit", "Pinterest", "Criteo"],
+    marketplace: ["Amazon", "Bunnings", "Kmart", "eBay", "Decathlon", "JB Hi-Fi", "Harvey Norman", "Idealo", "Myer", "Kogan", "Reebelo", "MyDeal", "MySale", "Lasoo"],
+    affiliate: ["Rakuten", "CJ Affiliate", "Impact", "Commission Factory"],
+    local: ["Microsoft Local Inventory Ads", "Google Local / LIA"],
+    ai: ["Google AI Mode", "ChatGPT"],
+    other: ["Emarsys", "Bazaarvoice", "Style Sourcebook", "Confect"]
+  };
+
+  var categoryDisplayOrder = ["commerce", "custom", "media", "marketplace", "affiliate", "local", "ai", "other"];
+
+  function sizeRank(item) {
+    var categoryRank = categoryDisplayOrder.indexOf(item.category);
+    var names = categorySizeOrder[item.category] || [];
+    var itemRank = names.indexOf(item.name);
+    return (categoryRank === -1 ? categoryDisplayOrder.length : categoryRank) * 100 + (itemRank === -1 ? names.length : itemRank);
+  }
+
   var filters = document.getElementById("integrations-filters");
   var grid = document.getElementById("integrations-grid");
   var search = document.getElementById("integrations-search-input");
-  var showMore = document.getElementById("integrations-show-more");
   var selectorLinks = Array.prototype.slice.call(document.querySelectorAll("[data-directory-filter]"));
-  if (!filters || !grid || !search || !showMore) return;
+  if (!filters || !grid || !search) return;
 
-  var state = { category: "all", expanded: false, query: "" };
+  var state = { category: "all", query: "" };
 
   function escapeHtml(value) {
     return String(value).replace(/[&<>'"]/g, function (character) {
@@ -124,38 +148,26 @@
       var searchable = [item.name, item.type, item.keywords, category ? category.label : ""].join(" ").toLowerCase();
       return searchable.indexOf(query) !== -1;
     });
-    var limit = 8;
-    var visible = query || state.expanded ? matches : matches.slice(0, limit);
-
-    grid.innerHTML = visible.length ? visible.map(cardMarkup).join("") : '<p class="integrations-empty">No connections match your search.</p>';
-    showMore.hidden = Boolean(query) || matches.length <= limit;
-    showMore.textContent = state.expanded ? "Show fewer connections" : "Show more connections";
+    matches.sort(function (left, right) { return sizeRank(left) - sizeRank(right); });
+    grid.innerHTML = matches.length ? matches.map(cardMarkup).join("") : '<p class="integrations-empty">No connections match your search.</p>';
   }
 
   filters.addEventListener("click", function (event) {
     var button = event.target.closest("button[data-filter]");
     if (!button) return;
     state.category = button.getAttribute("data-filter");
-    state.expanded = false;
     renderFilters();
     renderCards();
   });
 
   search.addEventListener("input", function () {
     state.query = search.value;
-    state.expanded = false;
-    renderCards();
-  });
-
-  showMore.addEventListener("click", function () {
-    state.expanded = !state.expanded;
     renderCards();
   });
 
   selectorLinks.forEach(function (link) {
     link.addEventListener("click", function () {
       state.category = link.getAttribute("data-directory-filter") || "all";
-      state.expanded = false;
       state.query = "";
       search.value = "";
       renderFilters();
