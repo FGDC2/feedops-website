@@ -59,10 +59,9 @@
       <div class="section-inner">
         <h2>Why conversational attributes matter.</h2>
         <p>Google describes conversational attributes as optional product data that can help AI systems and conversational agents understand your products’ specific nuances. They complement your existing Merchant Center data; they do not replace the core product specification.</p>
-        <p>Google’s <a href="https://blog.google/products-and-platforms/products/shopping/shopping-graph-explained/" target="_blank" rel="noopener">Shopping Graph explainer</a> shows why this context matters: Google uses product information such as colours, sizes, materials, reviews and availability to understand products and answer more specific shopping needs.</p>
-        <p>Google has also published a retailer example—not a full case study—where conversational attributes submitted by lululemon were incorporated 50% of the time in relevant AI Mode product recommendations during testing, providing shoppers with more precise answers. Treat this as Google-reported testing evidence, not a guaranteed performance benchmark.</p>
+        <p>Google’s <a href="https://blog.google/products-and-platforms/products/shopping/shopping-graph-explained/" target="_blank" rel="noopener">Shopping Graph</a> is their data set of the world’s shopping information. It brings together product details such as colours, sizes, materials, reviews and availability so Google Search, including AI Mode, can understand products and respond to more specific shopping needs. Conversational attributes give your products richer, more structured context to contribute to that experience alongside the information you already provide through Google Merchant Center and Google Ads.</p>
+        <p><a href="https://blog.google/products-and-platforms/products/shopping/google-shopping-updates-holiday-shopping/" target="_blank" rel="noopener">Google has published a retailer example featuring lululemon</a>, where conversational attributes were incorporated into relevant AI Mode product recommendations during testing and helped provide shoppers with more precise answers.</p>
         <p><a href="https://support.google.com/merchants/answer/17085370?hl=en" target="_blank" rel="noopener">Read Google’s conversational attributes guidance</a> for the current field definitions and submission options.</p>
-        <div class="callout"><strong>Important:</strong> richer product information can help Google understand products, but it does not guarantee rankings, traffic, inclusion, or visibility in any particular conversational experience.</div>
       </div>
     </section>
 
@@ -106,10 +105,10 @@
             <ul><li><strong>question_and_answer:</strong> product-specific questions and answers.</li><li><strong>item_group_title:</strong> a shared title for products in the same variant group.</li><li><strong>variant_option:</strong> the option represented by a particular variant.</li><li><strong>document_link:</strong> approved product documentation links.</li><li><strong>related_product:</strong> configured complementary or alternative products.</li><li><strong>popularity_rank:</strong> an agreed ranking signal with a defined scale and freshness expectation.</li></ul>
           </section>
           <section id="validation">
-            <p class="kicker">Validation first</p>
-            <h2>Safe degradation is part of the design.</h2>
-            <p>Optional conversational attributes should not make existing feed generation fail. Missing, invalid, conflicting, duplicate or out-of-range values need explicit rules. Depending on the attribute, the correct outcome may be a normalised value, a safe fallback, or omission with an audit trail.</p>
-            <ul><li>Keep output deterministic and explainable from configured source data.</li><li>Do not guess missing product facts.</li><li>Confirm URL, product identity, relationship and range checks for the relevant attribute.</li><li>Keep unresolved edge cases as review items until the mapping specification is approved.</li></ul>
+            <p class="kicker">Quality and consistency</p>
+            <h2>Keep every product detail clear and dependable.</h2>
+            <p>FeedOps validates conversational attributes against your product data so the information presented to Google is consistent, explainable and useful to shoppers. Clear rules for eligibility, formatting, relationships and product variants help you scale quality across your catalogue.</p>
+            <ul><li>Keep output consistent and explainable from the product data on your website.</li><li>Use approved product facts to create useful answers and variant details.</li><li>Confirm URL, product identity, relationship and range checks for the relevant attribute.</li><li>Use the audit to identify any remaining opportunities to improve coverage.</li></ul>
           </section>
           <section id="examples">
             <p class="kicker">Step 3 · Recheck</p>
