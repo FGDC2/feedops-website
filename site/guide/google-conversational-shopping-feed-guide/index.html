@@ -68,30 +68,31 @@
 
     <section class="section soft" id="mapping">
       <div class="section-inner">
-        <p class="kicker">Step 1 · Map first</p>
-        <h2>Start with a source-to-attribute mapping.</h2>
-        <p>Before enriching anything, map the product facts you already have to the conversational attributes you can support. This keeps the workflow grounded in your catalogue, makes gaps visible, and gives your team an approved specification to implement and review.</p>
+        <p class="kicker">Step 1 · Start with the audit</p>
+        <h2>See what to add, then map what you already have.</h2>
+        <p>Use the FeedOps audit to identify which conversational attributes are recommended but missing. Then map the product information already available on your website into those attributes before asking the playbook to enrich it.</p>
         <div class="cards">
-          <article class="card"><h3>1. Inventory</h3><p>List the source fields, product content, variant data, relationships, links and ranking signals you trust.</p></article>
-          <article class="card"><h3>2. Define rules</h3><p>Set eligibility, precedence, normalisation, fallback, duplicate, conflict and range rules for each attribute.</p></article>
-          <article class="card"><h3>3. Approve examples</h3><p>Show representative source input, mapped output and expected validation result before enrichment begins.</p></article>
+          <article class="card"><h3>1. Check recommendations</h3><p>Review the audit for conversational attributes that could improve your product data but are not yet present.</p></article>
+          <article class="card"><h3>2. Map your website data</h3><p>Map the fields you already have, including built-in platform fields and any custom fields that contain useful product or variant information.</p></article>
+          <article class="card"><h3>3. Confirm the rules</h3><p>Agree which products qualify, how values are normalised, and what happens when information is missing, duplicated or conflicting.</p></article>
         </div>
+        <p class="note">Websites connected through supported platform APIs, such as Shopify, BigCommerce and Magento, automatically provide available built-in fields. You can also map custom fields from your website.</p>
       </div>
     </section>
 
     <section class="section" id="implementation">
       <div class="section-inner layout">
-        <aside class="rail" aria-label="Guide contents"><strong>Guide contents</strong><a href="#why">Why it matters</a><a href="#mapping">Map first</a><a href="#implementation">Implementation flow</a><a href="#playbook">FeedOps playbook</a><a href="#attributes">Supported attributes</a><a href="#validation">Validation and fallbacks</a><a href="#examples">Examples and audit</a><a href="#checklist">Readiness checklist</a><a href="#related">Related FeedOps resources</a></aside>
+        <aside class="rail" aria-label="Guide contents"><strong>Guide contents</strong><a href="#why">Why it matters</a><a href="#mapping">Audit and mapping</a><a href="#implementation">Rollout procedure</a><a href="#playbook">FeedOps playbook</a><a href="#attributes">Supported attributes</a><a href="#validation">Validation and fallbacks</a><a href="#examples">Recheck the audit</a><a href="#checklist">Readiness checklist</a><a href="#related">Related FeedOps resources</a></aside>
         <article class="content">
           <section>
-            <p class="kicker">Step 2 · Implement</p>
-            <h2>Map, enrich, validate, review, then pilot.</h2>
-            <ol><li>Confirm your use case and choose the attributes that have trustworthy source data.</li><li>Complete the source-to-attribute mapping and approve the edge-case rules.</li><li>Run the FeedOps playbook to enrich the mapped product facts into structured conversational content.</li><li>Generate representative input/output examples and review them with your implementation and product stakeholders.</li><li>Run audit and regression checks before a controlled pilot.</li><li>Monitor output quality during rollout and expand only after review.</li></ol>
+            <p class="kicker">Step 2 · Roll out</p>
+            <h2>Audit, map, enrich, then check the audit again.</h2>
+            <ol><li>Review your FeedOps audit and note the conversational attributes recommended for your products.</li><li>Map the relevant built-in or custom fields from your website into those attributes.</li><li>Use the FeedOps playbook to enrich the mapped product facts into structured conversational content.</li><li>Review the generated feed output and resolve any mapping or content issues.</li><li>Recheck the FeedOps audit to confirm the recommended attributes are now present and valid.</li><li>Monitor output quality as you roll out and expand the approach across more products.</li></ol>
           </section>
           <section id="playbook">
             <p class="kicker">FeedOps playbook</p>
             <h2>Use the playbook to enrich the mapped facts.</h2>
-            <p>The playbook should make source data more useful without inventing product facts. It can identify useful questions, write concise answers from approved evidence, standardise group titles, and express variant options consistently across a product family.</p>
+            <p>Once your website data is mapped, the FeedOps playbook makes it more useful without inventing product facts. It identifies useful questions, writes concise answers from approved evidence, standardises group titles, and expresses variant options consistently across a product family.</p>
             <div class="cards">
               <article class="card"><h3>Questions and answers</h3><p>Identify the questions shoppers are likely to ask, then answer them from approved product facts, specifications, documentation or seller expertise.</p></article>
               <article class="card"><h3>Item group titles</h3><p>Create a clear shared title for a product family, preserving the group identity while keeping individual product titles and IDs intact.</p></article>
@@ -101,7 +102,7 @@
           </section>
           <section id="attributes">
             <p class="kicker">Supported attributes</p>
-            <h2>Six attributes in the initial FeedOps scope.</h2>
+            <h2>Conversational attributes you can prepare.</h2>
             <ul><li><strong>question_and_answer:</strong> product-specific questions and answers.</li><li><strong>item_group_title:</strong> a shared title for products in the same variant group.</li><li><strong>variant_option:</strong> the option represented by a particular variant.</li><li><strong>document_link:</strong> approved product documentation links.</li><li><strong>related_product:</strong> configured complementary or alternative products.</li><li><strong>popularity_rank:</strong> an agreed ranking signal with a defined scale and freshness expectation.</li></ul>
           </section>
           <section id="validation">
@@ -111,15 +112,15 @@
             <ul><li>Keep output deterministic and explainable from configured source data.</li><li>Do not guess missing product facts.</li><li>Confirm URL, product identity, relationship and range checks for the relevant attribute.</li><li>Keep unresolved edge cases as review items until the mapping specification is approved.</li></ul>
           </section>
           <section id="examples">
-            <p class="kicker">Evidence</p>
-            <h2>Use examples that show the full path.</h2>
-            <p>Each example should show source input → mapping or rule → generated attribute → validation or audit result → customer-facing explanation. Publish examples only after engineering or implementation confirms that they match the current pipeline behaviour.</p>
-            <p>Useful examples include a complete product, a variant set, a related-product relationship, a grouped product set, a ranking value, and a missing or invalid value that is safely omitted.</p>
+            <p class="kicker">Step 3 · Recheck</p>
+            <h2>Use the audit to confirm the rollout.</h2>
+            <p>When your mapped fields have been enriched by the playbook, run the FeedOps audit again. Check that the recommended conversational attributes are now present, valid and supported by the product data on your website.</p>
+            <p>If an attribute is still missing, return to the mapping step and check whether the source field is available, whether a custom field needs to be mapped, or whether the product is eligible for that attribute.</p>
           </section>
           <section id="checklist">
             <p class="kicker">Readiness checklist</p>
             <h2>Before you roll out.</h2>
-            <ul><li>Source fields and ownership are confirmed.</li><li>All six mappings have approved eligibility and fallback rules.</li><li>Representative output has passed product and implementation review.</li><li>Audit and regression evidence is available.</li><li>Pilot scope, success measures and escalation path are agreed.</li></ul>
+            <ul><li>The audit recommendations for your products are understood.</li><li>Relevant built-in and custom website fields are mapped.</li><li>Questions and answers, item group titles and variant options have been enriched from approved product data.</li><li>The generated feed output has been reviewed.</li><li>The audit has been rechecked and remaining gaps have an explanation or next step.</li></ul>
           </section>
           <section id="related">
             <p class="kicker">Keep learning</p>
