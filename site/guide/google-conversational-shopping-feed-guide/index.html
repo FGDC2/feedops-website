@@ -55,36 +55,54 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="why">
       <div class="section-inner">
-        <h2>Start with the product data you already own.</h2>
-        <p>FeedOps is designed to extend your existing product-feed workflow. The goal is not to replace your feed or invent unsupported information. It is to apply approved mappings and validation rules so eligible product context can be represented consistently and reviewed before rollout.</p>
+        <h2>Why conversational attributes matter.</h2>
+        <p>Google describes conversational attributes as optional product data that can help AI systems and conversational agents understand your products’ specific nuances. They complement your existing Merchant Center data; they do not replace the core product specification.</p>
+        <p>Google’s <a href="https://blog.google/products-and-platforms/products/shopping/shopping-graph-explained/" target="_blank" rel="noopener">Shopping Graph explainer</a> shows why this context matters: Google uses product information such as colours, sizes, materials, reviews and availability to understand products and answer more specific shopping needs.</p>
+        <p>Google has also published a retailer example—not a full case study—where conversational attributes submitted by lululemon were incorporated 50% of the time in relevant AI Mode product recommendations during testing, providing shoppers with more precise answers. Treat this as Google-reported testing evidence, not a guaranteed performance benchmark.</p>
+        <p><a href="https://support.google.com/merchants/answer/17085370?hl=en" target="_blank" rel="noopener">Read Google’s conversational attributes guidance</a> for the current field definitions and submission options.</p>
         <div class="callout"><strong>Important:</strong> richer product information can help Google understand products, but it does not guarantee rankings, traffic, inclusion, or visibility in any particular conversational experience.</div>
       </div>
     </section>
 
-    <section class="section soft" id="attributes">
+    <section class="section soft" id="mapping">
       <div class="section-inner">
-        <h2>Six attributes in the initial FeedOps scope.</h2>
+        <p class="kicker">Step 1 · Map first</p>
+        <h2>Start with a source-to-attribute mapping.</h2>
+        <p>Before enriching anything, map the product facts you already have to the conversational attributes you can support. This keeps the workflow grounded in your catalogue, makes gaps visible, and gives your team an approved specification to implement and review.</p>
         <div class="cards">
-          <article class="card"><h3>question_and_answer</h3><p>Product-specific questions and answers that add useful context.</p></article>
-          <article class="card"><h3>document_link</h3><p>Approved links to relevant product documentation or supporting content.</p></article>
-          <article class="card"><h3>related_product</h3><p>Configured relationships to complementary or alternative products.</p></article>
-          <article class="card"><h3>item_group_title</h3><p>A shared title or theme for products in the same group.</p></article>
-          <article class="card"><h3>variant_option</h3><p>The option represented by a product variant, such as size or colour.</p></article>
-          <article class="card"><h3>popularity_rank</h3><p>A configured ranking signal with an agreed scale and freshness expectation.</p></article>
+          <article class="card"><h3>1. Inventory</h3><p>List the source fields, product content, variant data, relationships, links and ranking signals you trust.</p></article>
+          <article class="card"><h3>2. Define rules</h3><p>Set eligibility, precedence, normalisation, fallback, duplicate, conflict and range rules for each attribute.</p></article>
+          <article class="card"><h3>3. Approve examples</h3><p>Show representative source input, mapped output and expected validation result before enrichment begins.</p></article>
         </div>
       </div>
     </section>
 
     <section class="section" id="implementation">
       <div class="section-inner layout">
-        <aside class="rail" aria-label="Guide contents"><strong>Guide contents</strong><a href="#attributes">Supported attributes</a><a href="#implementation">Implementation flow</a><a href="#validation">Validation and fallbacks</a><a href="#examples">Examples and audit</a><a href="#checklist">Readiness checklist</a><a href="#related">Related FeedOps resources</a></aside>
+        <aside class="rail" aria-label="Guide contents"><strong>Guide contents</strong><a href="#why">Why it matters</a><a href="#mapping">Map first</a><a href="#implementation">Implementation flow</a><a href="#playbook">FeedOps playbook</a><a href="#attributes">Supported attributes</a><a href="#validation">Validation and fallbacks</a><a href="#examples">Examples and audit</a><a href="#checklist">Readiness checklist</a><a href="#related">Related FeedOps resources</a></aside>
         <article class="content">
           <section>
-            <p class="kicker">Implementation flow</p>
-            <h2>Map, validate, review, then pilot.</h2>
-            <ol><li>Confirm your use case and choose the attributes that have trustworthy source data.</li><li>Inventory your source fields, content, links, relationships, variants and ranking inputs.</li><li>Apply the approved mapping, eligibility, precedence and fallback rules.</li><li>Generate representative input/output examples and review them with your implementation and product stakeholders.</li><li>Run audit and regression checks before a controlled pilot.</li><li>Monitor output quality during rollout and expand only after review.</li></ol>
+            <p class="kicker">Step 2 · Implement</p>
+            <h2>Map, enrich, validate, review, then pilot.</h2>
+            <ol><li>Confirm your use case and choose the attributes that have trustworthy source data.</li><li>Complete the source-to-attribute mapping and approve the edge-case rules.</li><li>Run the FeedOps playbook to enrich the mapped product facts into structured conversational content.</li><li>Generate representative input/output examples and review them with your implementation and product stakeholders.</li><li>Run audit and regression checks before a controlled pilot.</li><li>Monitor output quality during rollout and expand only after review.</li></ol>
+          </section>
+          <section id="playbook">
+            <p class="kicker">FeedOps playbook</p>
+            <h2>Use the playbook to enrich the mapped facts.</h2>
+            <p>The playbook should make source data more useful without inventing product facts. It can identify useful questions, write concise answers from approved evidence, standardise group titles, and express variant options consistently across a product family.</p>
+            <div class="cards">
+              <article class="card"><h3>Questions and answers</h3><p>Identify the questions shoppers are likely to ask, then answer them from approved product facts, specifications, documentation or seller expertise.</p></article>
+              <article class="card"><h3>Item group titles</h3><p>Create a clear shared title for a product family, preserving the group identity while keeping individual product titles and IDs intact.</p></article>
+              <article class="card"><h3>Variant options</h3><p>Normalise the option name and value for each variant—such as colour, size, memory or width—so Google can distinguish the choices within the group.</p></article>
+            </div>
+            <p>Google’s example shows these fields working together: an item group title identifies the product family, variant options describe the specific version, and question-and-answer pairs provide decision-making context.</p>
+          </section>
+          <section id="attributes">
+            <p class="kicker">Supported attributes</p>
+            <h2>Six attributes in the initial FeedOps scope.</h2>
+            <ul><li><strong>question_and_answer:</strong> product-specific questions and answers.</li><li><strong>item_group_title:</strong> a shared title for products in the same variant group.</li><li><strong>variant_option:</strong> the option represented by a particular variant.</li><li><strong>document_link:</strong> approved product documentation links.</li><li><strong>related_product:</strong> configured complementary or alternative products.</li><li><strong>popularity_rank:</strong> an agreed ranking signal with a defined scale and freshness expectation.</li></ul>
           </section>
           <section id="validation">
             <p class="kicker">Validation first</p>
