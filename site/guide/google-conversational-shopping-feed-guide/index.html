@@ -80,17 +80,17 @@
 
     <section class="section" id="implementation">
       <div class="section-inner layout">
-        <aside class="rail" aria-label="Guide contents"><strong>Guide contents</strong><a href="#why">Why it matters</a><a href="#mapping">Start with the audit</a><a href="#implementation">Map and enrich</a><a href="#playbook">FeedOps playbook</a><a href="#attributes">Supported attributes</a><a href="#validation">Quality and consistency</a><a href="#examples">Recheck the audit</a><a href="#checklist">Readiness checklist</a><a href="#related">Related FeedOps resources</a></aside>
+        <aside class="rail" aria-label="Guide contents"><strong>Guide contents</strong><a href="#why">Why it matters</a><a href="#mapping">Start with the audit</a><a href="#implementation">Map your data</a><a href="#playbook">Enrich with the playbook</a><a href="#attributes">Supported attributes</a><a href="#validation">Quality and consistency</a><a href="#examples">Recheck the audit</a><a href="#checklist">Readiness checklist</a><a href="#related">Related FeedOps resources</a></aside>
         <article class="content">
           <section>
-            <p class="kicker">Step 2 · Map and enrich</p>
-            <h2>Map your website data, then enrich it with the playbook.</h2>
+            <p class="kicker">Step 2 · Map</p>
+            <h2>Map your website data to the recommended attributes.</h2>
             <p>Websites connected through supported platform APIs, such as Shopify, BigCommerce and Magento, automatically provide available built-in fields. You can also map custom fields from your website.</p>
-            <ol><li>Map the relevant built-in or custom fields from your website into the attributes recommended by the audit.</li><li>Confirm which products qualify, how values are normalised, and how product and variant relationships should be represented.</li><li>Use the FeedOps playbook to enrich the mapped product facts into structured conversational content.</li><li>Review the generated feed output and resolve any mapping or content issues before rechecking the audit.</li></ol>
+            <ol><li>Map the relevant built-in or custom fields from your website into the attributes recommended by the audit.</li><li>Confirm which products qualify, how values are normalised, and how product and variant relationships should be represented.</li></ol>
           </section>
           <section id="playbook">
-            <p class="kicker">FeedOps playbook</p>
-            <h2>Use the playbook to enrich the mapped facts.</h2>
+            <p class="kicker">Step 3 · Enrich</p>
+            <h2>Use the FeedOps playbook to enrich the mapped facts.</h2>
             <p>Once your website data is mapped, the FeedOps playbook makes it more useful without inventing product facts. It identifies useful questions, writes concise answers from approved evidence, standardises group titles, and expresses variant options consistently across a product family.</p>
             <div class="cards">
               <article class="card"><h3>Questions and answers</h3><p>Identify the questions shoppers are likely to ask, then answer them from approved product facts, specifications, documentation or seller expertise.</p></article>
@@ -98,6 +98,7 @@
               <article class="card"><h3>Variant options</h3><p>Normalise the option name and value for each variant—such as colour, size, memory or width—so Google can distinguish the choices within the group.</p></article>
             </div>
             <p>Google’s example shows these fields working together: an item group title identifies the product family, variant options describe the specific version, and question-and-answer pairs provide decision-making context.</p>
+            <p>Review the generated feed output and resolve any mapping or content issues before rechecking the audit.</p>
           </section>
           <section id="attributes">
             <p class="kicker">Supported attributes</p>
@@ -111,7 +112,7 @@
             <ul><li>Keep output consistent and explainable from the product data on your website.</li><li>Use approved product facts to create useful answers and variant details.</li><li>Confirm URL, product identity, relationship and range checks for the relevant attribute.</li><li>Use the audit to identify any remaining opportunities to improve coverage.</li></ul>
           </section>
           <section id="examples">
-            <p class="kicker">Step 3 · Recheck</p>
+            <p class="kicker">Step 4 · Recheck</p>
             <h2>Use the audit to confirm the rollout.</h2>
             <p>When your mapped fields have been enriched by the playbook, run the FeedOps audit again. Check that the recommended conversational attributes are now present, valid and supported by the product data on your website.</p>
             <p>If an attribute is still missing, return to the mapping step and check whether the source field is available, whether a custom field needs to be mapped, or whether the product is eligible for that attribute.</p>
