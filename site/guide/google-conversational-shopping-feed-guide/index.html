@@ -87,7 +87,7 @@
         {
           "@type": "Question",
           "name": "Do I need custom fields to use conversational attributes?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. Supported platform connections such as Shopify, BigCommerce, and Magento can provide available built-in fields automatically. You can also map custom fields from your website when they contain useful product or variant information." }
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Supported platform connections such as Shopify, Magento, BigCommerce, and WooCommerce can provide available built-in fields and related-product relationships automatically. You can also map custom fields from your website when they contain useful product or variant information." }
         },
         {
           "@type": "Question",
@@ -157,16 +157,11 @@
       </div>
     </section>
 
-    <section class="section soft" id="mapping">
+    <section class="section soft" id="attributes">
       <div class="section-inner">
-        <p class="kicker">Step 1 · Start with the audit</p>
-        <h2>See which conversational attributes could improve your products.</h2>
-        <p>Use the FeedOps audit to identify which conversational attributes are recommended but missing. This gives you a practical starting point for improving the product information Google can use in Search and AI Mode.</p>
-        <div class="cards">
-          <article class="card"><h3>1. Check recommendations</h3><p>Review the audit for conversational attributes that could improve your product data but are not yet present.</p></article>
-          <article class="card"><h3>2. Choose the opportunity</h3><p>Prioritise the attributes that are most relevant to your products, variants and shoppers’ questions.</p></article>
-          <article class="card"><h3>3. Move into implementation</h3><p>Use the recommendations to decide which website fields to map and where the FeedOps playbook can add useful context.</p></article>
-        </div>
+        <p class="kicker">Supported attributes</p>
+        <h2>Conversational attributes you can prepare.</h2>
+        <ul><li><strong>question_and_answer:</strong> product-specific questions and answers.</li><li><strong>item_group_title:</strong> a shared title for products in the same variant group.</li><li><strong>variant_option:</strong> the option represented by a particular variant.</li><li><strong>document_link:</strong> approved product documentation links.</li><li><strong>related_product:</strong> native complementary or alternative product relationships from supported platforms, plus mapped custom relationships.</li><li><strong>popularity_rank:</strong> an agreed ranking signal with a defined scale and freshness expectation.</li></ul>
       </div>
     </section>
 
@@ -174,11 +169,21 @@
       <div class="section-inner layout">
         <aside class="rail" aria-label="Guide contents"><strong>Guide contents</strong><a href="#why">Why it matters</a><a href="#mapping">Start with the audit</a><a href="#data-mapping">Map your data</a><a href="#playbook">Enrich with the playbook</a><a href="#attributes">Supported attributes</a><a href="#validation">Quality and consistency</a><a href="#examples">Recheck the audit</a><a href="#checklist">Readiness checklist</a><a href="#faq">Common questions</a><a href="#related">Related FeedOps resources</a></aside>
         <article class="content">
+          <section id="mapping">
+            <p class="kicker">Step 1 · Start with the audit</p>
+            <h2>See which conversational attributes could improve your products.</h2>
+            <p>Use the FeedOps audit to identify which conversational attributes are recommended but missing. This gives you a practical starting point for improving the product information Google can use in Search and AI Mode.</p>
+            <div class="cards">
+              <article class="card"><h3>1. Check recommendations</h3><p>Review the audit for conversational attributes that could improve your product data but are not yet present.</p></article>
+              <article class="card"><h3>2. Choose the opportunity</h3><p>Prioritise the attributes that are most relevant to your products, variants and shoppers’ questions.</p></article>
+              <article class="card"><h3>3. Move into implementation</h3><p>Use the recommendations to decide which website fields to map and where the FeedOps playbook can add useful context.</p></article>
+            </div>
+          </section>
           <section id="data-mapping">
             <p class="kicker">Step 2 · Map</p>
             <h2>Map your website data to the recommended attributes.</h2>
-            <p>Websites connected through supported platform APIs, such as Shopify, BigCommerce and Magento, automatically provide available built-in fields. You can also map custom fields from your website.</p>
             <ol><li>Map the relevant built-in or custom fields from your website into the attributes recommended by the audit.</li><li>Confirm which products qualify, how values are normalised, and how product and variant relationships should be represented.</li></ol>
+            <div class="callout"><strong>Related products are supported natively.</strong> Supported platform connections can automatically provide complementary and alternative product relationships through the <code>related_product</code> field. This includes Shopify, Magento, BigCommerce, WooCommerce and more. If your relationships are stored in custom fields, FeedOps can map those too.</div>
           </section>
           <section id="playbook">
             <p class="kicker">Step 3 · Enrich</p>
@@ -191,11 +196,6 @@
             </div>
             <p>Google’s example shows these fields working together: an item group title identifies the product family, variant options describe the specific version, and question-and-answer pairs provide decision-making context.</p>
             <p>Review the generated feed output and resolve any mapping or content issues before rechecking the audit.</p>
-          </section>
-          <section id="attributes">
-            <p class="kicker">Supported attributes</p>
-            <h2>Conversational attributes you can prepare.</h2>
-            <ul><li><strong>question_and_answer:</strong> product-specific questions and answers.</li><li><strong>item_group_title:</strong> a shared title for products in the same variant group.</li><li><strong>variant_option:</strong> the option represented by a particular variant.</li><li><strong>document_link:</strong> approved product documentation links.</li><li><strong>related_product:</strong> configured complementary or alternative products.</li><li><strong>popularity_rank:</strong> an agreed ranking signal with a defined scale and freshness expectation.</li></ul>
           </section>
           <section id="validation">
             <p class="kicker">Quality and consistency</p>
@@ -220,7 +220,7 @@
             <h3>What are Google conversational attributes?</h3>
             <p>They are optional product data fields that help Google understand product nuances for conversational shopping experiences, alongside the product data you already provide through Merchant Center.</p>
             <h3>Do I need custom fields to use conversational attributes?</h3>
-            <p>No. Supported platform connections such as Shopify, BigCommerce and Magento can provide available built-in fields automatically. You can also map custom fields from your website when they contain useful product or variant information.</p>
+            <p>No. Supported platform connections such as Shopify, Magento, BigCommerce and WooCommerce can provide available built-in fields and related-product relationships automatically. You can also map custom fields from your website when they contain useful product or variant information.</p>
             <h3>Which attributes does the FeedOps playbook enrich?</h3>
             <p>The playbook can enrich question and answer content, item group titles and variant options from mapped product facts and approved product evidence.</p>
           </section>
