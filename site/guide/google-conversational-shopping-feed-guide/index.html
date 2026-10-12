@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google Conversational Shopping Feed Guide | FeedOps</title>
+  <meta name="description" content="Learn how FeedOps helps you use the audit, map website data, enrich conversational attributes, and recheck your Google Shopping feed.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="author" content="FeedOps">
+  <link rel="canonical" href="https://feedops.com/guide/google-conversational-shopping-feed-guide/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Google Conversational Shopping Feed Guide | FeedOps">
+  <meta property="og:description" content="A practical FeedOps workflow for auditing, mapping, enriching, and rechecking conversational Shopping product data.">
+  <meta property="og:url" content="https://feedops.com/guide/google-conversational-shopping-feed-guide/">
+  <meta property="og:site_name" content="FeedOps">
+  <meta property="og:locale" content="en_AU">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Google Conversational Shopping Feed Guide | FeedOps">
+  <meta name="twitter:description" content="Use the FeedOps audit, mapping, enrichment, and recheck workflow to prepare conversational Shopping product data.">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://feedops.com/guide/google-conversational-shopping-feed-guide/#article",
+      "headline": "Google Conversational Shopping Feed Guide",
+      "description": "A practical FeedOps workflow for auditing, mapping, enriching, and rechecking conversational Shopping product data.",
+      "inLanguage": "en-AU",
+      "author": { "@type": "Organization", "@id": "https://feedops.com/#organization" },
+      "publisher": { "@id": "https://feedops.com/#organization" },
+      "mainEntityOfPage": { "@id": "https://feedops.com/guide/google-conversational-shopping-feed-guide/#webpage" },
+      "about": [
+        "Google conversational Shopping",
+        "Google Merchant Center product data",
+        "question and answer attributes",
+        "item group titles",
+        "variant options"
+      ],
+      "keywords": "Google conversational Shopping, Google Merchant Center, question and answer, item group title, variant option, product feed enrichment"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://feedops.com/guide/google-conversational-shopping-feed-guide/#webpage",
+      "url": "https://feedops.com/guide/google-conversational-shopping-feed-guide/",
+      "name": "Google Conversational Shopping Feed Guide | FeedOps",
+      "description": "Learn how FeedOps helps you use the audit, map website data, enrich conversational attributes, and recheck your Google Shopping feed.",
+      "isPartOf": { "@id": "https://feedops.com/#website" },
+      "breadcrumb": { "@id": "https://feedops.com/guide/google-conversational-shopping-feed-guide/#breadcrumb" },
+      "mainEntity": [
+        { "@id": "https://feedops.com/guide/google-conversational-shopping-feed-guide/#howto" },
+        { "@id": "https://feedops.com/guide/google-conversational-shopping-feed-guide/#faq" }
+      ],
+      "inLanguage": "en-AU"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://feedops.com/guide/google-conversational-shopping-feed-guide/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://feedops.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Learning", "item": "https://feedops.com/learning/" },
+        { "@type": "ListItem", "position": 3, "name": "Guides", "item": "https://feedops.com/learning/#guides" },
+        { "@type": "ListItem", "position": 4, "name": "Conversational Shopping Feed Guide" }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://feedops.com/guide/google-conversational-shopping-feed-guide/#howto",
+      "name": "How to prepare conversational Shopping product data",
+      "description": "The FeedOps audit, mapping, enrichment, and recheck workflow for conversational Shopping product data.",
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "Start with the audit", "text": "Use the FeedOps audit to identify conversational attributes recommended but missing from your product data." },
+        { "@type": "HowToStep", "position": 2, "name": "Map your website data", "text": "Map relevant built-in or custom website fields to the attributes recommended by the audit." },
+        { "@type": "HowToStep", "position": 3, "name": "Enrich with the FeedOps playbook", "text": "Use the FeedOps playbook to enrich questions and answers, item group titles, and variant options from mapped product facts." },
+        { "@type": "HowToStep", "position": 4, "name": "Recheck the audit", "text": "Run the FeedOps audit again to confirm the recommended attributes are present and valid." }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://feedops.com/guide/google-conversational-shopping-feed-guide/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are Google conversational attributes?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Google conversational attributes are optional product data fields that help Google understand product nuances for conversational shopping experiences, alongside the product data already provided through Merchant Center." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need custom fields to use conversational attributes?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Supported platform connections such as Shopify, BigCommerce, and Magento can provide available built-in fields automatically. You can also map custom fields from your website when they contain useful product or variant information." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which conversational attributes does the FeedOps playbook enrich?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The FeedOps playbook can enrich question and answer content, item group titles, and variant options from mapped product facts and approved product evidence." }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <link rel="stylesheet" href="../../header-standard.css?v=20260910-about-nav-v4">
+  <link rel="stylesheet" href="../../footer-standard.css?v=20260911-footer-links-v9">
+  <style>
+    :root { --ink:#111827; --muted:#5b6472; --line:#d8dee8; --soft:#f4f7fb; --green:#176e58; --yellow:#fecf26; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.6; }
+    a { color:var(--green); }
+    .hero { padding:72px 20px 48px; background:linear-gradient(135deg,#f5fbf8,#fff 62%); border-bottom:1px solid var(--line); }
+    .hero-inner,.section-inner { width:min(1120px,100%); margin:0 auto; }
+    .breadcrumb { color:var(--muted); font-size:.92rem; margin-bottom:28px; }
+    .breadcrumb span { margin:0 8px; }
+    .kicker { color:var(--green); font-size:.8rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+    h1 { max-width:850px; margin:10px 0 18px; font-size:clamp(2.3rem,5vw,4.5rem); line-height:1.05; letter-spacing:-.04em; }
+    .hero-copy { max-width:780px; color:var(--muted); font-size:1.2rem; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+    .button { display:inline-block; padding:12px 18px; border-radius:7px; background:var(--green); color:#fff; font-weight:800; text-decoration:none; }
+    .button.secondary { background:#fff; color:var(--green); border:1px solid var(--green); }
+    .section { padding:58px 20px; }
+    .section.soft { background:var(--soft); }
+    .section h2 { margin-top:0; font-size:clamp(1.7rem,3vw,2.5rem); line-height:1.15; letter-spacing:-.025em; }
+    .section h3 { margin-bottom:6px; }
+    .layout { display:grid; grid-template-columns:230px minmax(0,1fr); gap:48px; align-items:start; }
+    .rail { position:sticky; top:90px; padding:18px; border:1px solid var(--line); border-radius:10px; background:#fff; }
+    .rail strong { display:block; margin-bottom:10px; }
+    .rail a { display:block; padding:5px 0; text-decoration:none; font-size:.95rem; }
+    .content section { margin-bottom:48px; scroll-margin-top:90px; }
+    .cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+    .card { padding:20px; border:1px solid var(--line); border-radius:10px; background:#fff; }
+    .card h3 { margin-top:0; }
+    .callout { padding:20px 22px; border-left:5px solid var(--yellow); background:#fffbea; }
+    li { margin:7px 0; }
+    .related { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px 28px; }
+    @media (max-width:760px) { .layout,.cards,.related { grid-template-columns:1fr; } .rail { position:static; } }
+  </style>
+</head>
+<body>
+  <header class="site-header"></header>
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../">Home</a><span aria-hidden="true">/</span><a href="../../learning/">Learning</a><span aria-hidden="true">/</span><a href="../../learning/#guides">Guides</a><span aria-hidden="true">/</span><span aria-current="page">Conversational Shopping Feed Guide</span></nav>
+        <p class="kicker">Google Shopping guide</p>
+        <h1>Prepare your product data for conversational Shopping.</h1>
+        <p class="hero-copy">Conversational shopping experiences depend on product information that Google can understand and verify. This guide explains how FeedOps can map your configured product data into validated conversational attributes while preserving reliable feed behaviour.</p>
+        <div class="actions"><a class="button" href="../../book-live-demo/">Book a practical conversation</a><a class="button secondary" href="../../free-google-shopping-feed-audit/">Start with a free audit</a></div>
+      </div>
+    </section>
+
+    <section class="section" id="why">
+      <div class="section-inner">
+        <h2>What are Google conversational attributes, and why do they matter?</h2>
+        <p>Google describes conversational attributes as optional product data that can help AI systems and conversational agents understand your products’ specific nuances. They complement your existing Merchant Center data; they do not replace the core product specification.</p>
+        <p>Google’s <a href="https://blog.google/products-and-platforms/products/shopping/shopping-graph-explained/" target="_blank" rel="noopener">Shopping Graph</a> is their data set of the world’s shopping information. It brings together product details such as colours, sizes, materials, reviews and availability so Google Search, including AI Mode, can understand products and respond to more specific shopping needs. Conversational attributes give your products richer, more structured context to contribute to that experience alongside the information you already provide through Google Merchant Center and Google Ads.</p>
+        <p><a href="https://blog.google/products-and-platforms/products/shopping/google-shopping-updates-holiday-shopping/" target="_blank" rel="noopener">Google has published a retailer example featuring lululemon</a>, where conversational attributes were incorporated into relevant AI Mode product recommendations during testing and helped provide shoppers with more precise answers.</p>
+        <p><a href="https://support.google.com/merchants/answer/17085370?hl=en" target="_blank" rel="noopener">Read Google’s conversational attributes guidance</a> for the current field definitions and submission options.</p>
+      </div>
+    </section>
+
+    <section class="section soft" id="mapping">
+      <div class="section-inner">
+        <p class="kicker">Step 1 · Start with the audit</p>
+        <h2>See which conversational attributes could improve your products.</h2>
+        <p>Use the FeedOps audit to identify which conversational attributes are recommended but missing. This gives you a practical starting point for improving the product information Google can use in Search and AI Mode.</p>
+        <div class="cards">
+          <article class="card"><h3>1. Check recommendations</h3><p>Review the audit for conversational attributes that could improve your product data but are not yet present.</p></article>
+          <article class="card"><h3>2. Choose the opportunity</h3><p>Prioritise the attributes that are most relevant to your products, variants and shoppers’ questions.</p></article>
+          <article class="card"><h3>3. Move into implementation</h3><p>Use the recommendations to decide which website fields to map and where the FeedOps playbook can add useful context.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="implementation">
+      <div class="section-inner layout">
+        <aside class="rail" aria-label="Guide contents"><strong>Guide contents</strong><a href="#why">Why it matters</a><a href="#mapping">Start with the audit</a><a href="#data-mapping">Map your data</a><a href="#playbook">Enrich with the playbook</a><a href="#attributes">Supported attributes</a><a href="#validation">Quality and consistency</a><a href="#examples">Recheck the audit</a><a href="#checklist">Readiness checklist</a><a href="#faq">Common questions</a><a href="#related">Related FeedOps resources</a></aside>
+        <article class="content">
+          <section id="data-mapping">
+            <p class="kicker">Step 2 · Map</p>
+            <h2>Map your website data to the recommended attributes.</h2>
+            <p>Websites connected through supported platform APIs, such as Shopify, BigCommerce and Magento, automatically provide available built-in fields. You can also map custom fields from your website.</p>
+            <ol><li>Map the relevant built-in or custom fields from your website into the attributes recommended by the audit.</li><li>Confirm which products qualify, how values are normalised, and how product and variant relationships should be represented.</li></ol>
+          </section>
+          <section id="playbook">
+            <p class="kicker">Step 3 · Enrich</p>
+            <h2>Use the FeedOps playbook to enrich the mapped facts.</h2>
+            <p>Once your website data is mapped, the FeedOps playbook makes it more useful without inventing product facts. It identifies useful questions, writes concise answers from approved evidence, standardises group titles, and expresses variant options consistently across a product family.</p>
+            <div class="cards">
+              <article class="card"><h3>Questions and answers</h3><p>Identify the questions shoppers are likely to ask, then answer them from approved product facts, specifications, documentation or seller expertise.</p></article>
+              <article class="card"><h3>Item group titles</h3><p>Create a clear shared title for a product family, preserving the group identity while keeping individual product titles and IDs intact.</p></article>
+              <article class="card"><h3>Variant options</h3><p>Normalise the option name and value for each variant—such as colour, size, memory or width—so Google can distinguish the choices within the group.</p></article>
+            </div>
+            <p>Google’s example shows these fields working together: an item group title identifies the product family, variant options describe the specific version, and question-and-answer pairs provide decision-making context.</p>
+            <p>Review the generated feed output and resolve any mapping or content issues before rechecking the audit.</p>
+          </section>
+          <section id="attributes">
+            <p class="kicker">Supported attributes</p>
+            <h2>Conversational attributes you can prepare.</h2>
+            <ul><li><strong>question_and_answer:</strong> product-specific questions and answers.</li><li><strong>item_group_title:</strong> a shared title for products in the same variant group.</li><li><strong>variant_option:</strong> the option represented by a particular variant.</li><li><strong>document_link:</strong> approved product documentation links.</li><li><strong>related_product:</strong> configured complementary or alternative products.</li><li><strong>popularity_rank:</strong> an agreed ranking signal with a defined scale and freshness expectation.</li></ul>
+          </section>
+          <section id="validation">
+            <p class="kicker">Quality and consistency</p>
+            <h2>Keep every product detail clear and dependable.</h2>
+            <p>FeedOps validates conversational attributes against your product data so the information presented to Google is consistent, explainable and useful to shoppers. Clear rules for eligibility, formatting, relationships and product variants help you scale quality across your catalogue.</p>
+            <ul><li>Keep output consistent and explainable from the product data on your website.</li><li>Use approved product facts to create useful answers and variant details.</li><li>Confirm URL, product identity, relationship and range checks for the relevant attribute.</li><li>Use the audit to identify any remaining opportunities to improve coverage.</li></ul>
+          </section>
+          <section id="examples">
+            <p class="kicker">Step 4 · Recheck</p>
+            <h2>Use the audit to confirm the rollout.</h2>
+            <p>When your mapped fields have been enriched by the playbook, run the FeedOps audit again. Check that the recommended conversational attributes are now present, valid and supported by the product data on your website.</p>
+            <p>If an attribute is still missing, return to the mapping step and check whether the source field is available, whether a custom field needs to be mapped, or whether the product is eligible for that attribute.</p>
+          </section>
+          <section id="checklist">
+            <p class="kicker">Readiness checklist</p>
+            <h2>Before you roll out.</h2>
+            <ul><li>The audit recommendations for your products are understood.</li><li>Relevant built-in and custom website fields are mapped.</li><li>Questions and answers, item group titles and variant options have been enriched from approved product data.</li><li>The generated feed output has been reviewed.</li><li>The audit has been rechecked and remaining gaps have an explanation or next step.</li></ul>
+          </section>
+          <section id="faq">
+            <p class="kicker">Common questions</p>
+            <h2>Conversational Shopping questions, answered.</h2>
+            <h3>What are Google conversational attributes?</h3>
+            <p>They are optional product data fields that help Google understand product nuances for conversational shopping experiences, alongside the product data you already provide through Merchant Center.</p>
+            <h3>Do I need custom fields to use conversational attributes?</h3>
+            <p>No. Supported platform connections such as Shopify, BigCommerce and Magento can provide available built-in fields automatically. You can also map custom fields from your website when they contain useful product or variant information.</p>
+            <h3>Which attributes does the FeedOps playbook enrich?</h3>
+            <p>The playbook can enrich question and answer content, item group titles and variant options from mapped product facts and approved product evidence.</p>
+          </section>
+          <section id="related">
+            <p class="kicker">Keep learning</p>
+            <h2>Related FeedOps resources.</h2>
+            <div class="related"><a href="../../google-shopping-graph-explained/">Google Shopping Graph Explained</a><a href="../../google-product-highlights/">Google Product Highlights</a><a href="../google-shopping-feed-optimization-guide/">Google Shopping Feed Optimization Guide</a><a href="../../product-feed-platform/">Product Feed Platform</a><a href="../../google-merchant-center-errors/">Google Merchant Center Errors</a><a href="../../feedops/google-shopping-free-listings/">Google Shopping Free Listings Guide</a><a href="../../free-google-shopping-feed-audit/">Free Google Shopping Feed Audit</a><a href="../../what-is-a-google-shopping-feed/">What Is a Shopping Feed?</a></div>
+          </section>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"></footer>
+  <script src="../../header-standard.js?v=20260910-about-nav-v4" data-site-root="../../" defer></script>
+  <script src="../../footer-standard.js?v=20260911-footer-links-v9" data-site-root="../../" defer></script>
+</body>
+</html>
