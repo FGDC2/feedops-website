@@ -62,6 +62,7 @@
       '    <div class="footer-brand-guides">',
       '      <div class="footer-heading">Guides</div>',
       '      <div class="footer-column">',
+      '        <a href="' + href("guide/google-conversational-shopping-feed-guide/") + '">Conversational Shopping</a>',
       '        <a href="' + href("guide/google-shopping-feed-optimization-guide/") + '">Google Shopping Feed Optimisation</a>',
       '        <a href="' + href("guide/google-shopping-ads-management/") + '">Google Shopping Ads Management</a>',
       '        <a href="' + href("guide/google-local-inventory-ads-performance-max/") + '">Google Local Inventory Ads Performance Max</a>',
