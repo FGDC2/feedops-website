@@ -60,6 +60,7 @@ const sharedFiles = [
   "header-standard.js",
   "footer-standard.css",
   "footer-standard.js",
+  "footer-standard-conversational-v10.js",
   "mex-guide-v18.css",
   "free-google-shopping-feed-audit.js",
   "book-live-demo.js",
@@ -448,7 +449,7 @@ function copyTextPath(from, to, transform = (content) => content) {
     .replace(/header-standard\.css\?v=[^"'\s>]+/g, "header-standard.css?v=20260910-about-nav-v5")
     .replace(/header-standard\.js\?v=[^"'\s>]+/g, "header-standard.js?v=20260910-about-nav-v5")
     .replace(/footer-standard\.css\?v=[^"'\s>]+/g, "footer-standard.css?v=20260911-footer-links-v9")
-    .replace(/footer-standard\.js\?v=[^"'\s>]+/g, "footer-standard.js?v=20260911-footer-links-v9");
+    .replace(/footer-standard(?:-conversational-v10)?\.js\?v=[^"'\s>]+/g, "footer-standard-conversational-v10.js?v=20261014-footer-conversational-v10");
   const withAssets = rewriteAssetReferences(withCurrentSharedAssets);
   const withStableHeader = stabiliseSharedHeaderStyles(withAssets);
   const withInlineHeader = inlineSharedHeaderStyles(withStableHeader);
