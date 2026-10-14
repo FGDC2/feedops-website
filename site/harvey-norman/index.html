@@ -276,6 +276,6 @@
     (()=>{const nav=document.querySelector('.page-nav');if(!nav)return;const links=[...nav.querySelectorAll('a[href^="#"]')];const items=links.map(link=>({link,section:document.querySelector(link.getAttribute('href'))})).filter(item=>item.section);let ticking=false;const update=()=>{const threshold=(parseFloat(getComputedStyle(nav).top)||0)+nav.offsetHeight+28;let current=null;items.forEach(item=>{if(item.section.getBoundingClientRect().top<=threshold)current=item});links.forEach(link=>link.classList.toggle('is-active',Boolean(current&&current.link===link)));ticking=false};window.addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(update)}},{passive:true});window.addEventListener('resize',update);update()})();
   </script>
   <script src="../header-standard.js?v=20260910-about-nav-v4" data-site-root="../" defer></script>
-  <script src="../footer-standard-conversational-v10.js?v=20261014-footer-conversational-v10" data-site-root="../" defer></script>
+  <script src="../footer-standard-conversational-v11.js?v=20261014-footer-conversational-v11" data-site-root="../" defer></script>
 </body>
 </html>
